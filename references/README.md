@@ -6,4 +6,5 @@ General bookmarks and reference links organized by topic.
 - [Lightning Network](lightning.md)
 - [Nostr](nostr.md)
 - [Development Tools](dev-tools.md)
+- [Starred Repos](starred.md) *(auto-synced)*
 - [Misc](misc.md)

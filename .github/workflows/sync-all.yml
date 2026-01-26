@@ -1,0 +1,194 @@
+name: Sync All Project Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync Everything
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          USERNAME="ChadFarrow"
+
+          # ========== SYNC REPOS & INDEX ==========
+          echo "Fetching repos..."
+          gh repo list $USERNAME --json name,description,primaryLanguage,updatedAt,isArchived,isFork --limit 100 > repos.json
+
+          # Generate INDEX.md
+          cat > INDEX.md << 'HEADER'
+          # GitHub Projects
+
+          *Auto-synced every 6 hours*
+
+          HEADER
+
+          # Categories
+          declare -A CATEGORIES
+          CATEGORIES["Music/Podcasting"]="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template"
+          CATEGORIES["Lightning"]="ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed"
+          CATEGORIES["Nostr"]="Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost"
+          CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page"
+          CATEGORIES["Tools"]="HGH-checker"
+
+          for category in "Music/Podcasting" "Lightning" "Nostr" "Web/Apps" "Tools"; do
+            echo "## $category" >> INDEX.md
+            for repo in ${CATEGORIES[$category]}; do
+              desc=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .description // "No description"' repos.json)
+              lang=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .primaryLanguage.name // ""' repos.json)
+              if [ -n "$lang" ]; then
+                echo "- [$repo]($repo.md) - $desc (\`$lang\`)" >> INDEX.md
+              else
+                echo "- [$repo]($repo.md) - $desc" >> INDEX.md
+              fi
+            done
+            echo "" >> INDEX.md
+          done
+
+          # Check for new repos not in categories
+          echo "## Uncategorized" >> INDEX.md
+          known_repos="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost stablekraft-app chadf-landing-page HGH-checker project-notes"
+          new_repos=$(jq -r '.[].name' repos.json | while read repo; do
+            if [[ ! " $known_repos " =~ " $repo " ]]; then
+              archived=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .isArchived' repos.json)
+              if [ "$archived" != "true" ]; then
+                echo "$repo"
+              fi
+            fi
+          done)
+
+          if [ -n "$new_repos" ]; then
+            for repo in $new_repos; do
+              desc=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .description // "No description"' repos.json)
+              echo "- [$repo](https://github.com/$USERNAME/$repo) - $desc *(NEW)*" >> INDEX.md
+            done
+          else
+            echo "*None*" >> INDEX.md
+          fi
+
+          cat >> INDEX.md << 'FOOTER'
+
+          ---
+
+          ## Quick Links
+          - [All Issues](ISSUES.md) - GitHub issues across all projects
+          - [PC2.0 Specs Reference](PC2.0-SPECS.md)
+          - [References](references/README.md) - General bookmarks & links
+          - [GitHub Profile](https://github.com/ChadFarrow)
+          FOOTER
+
+          # ========== SYNC ISSUES ==========
+          echo "Syncing issues..."
+
+          REPOS=(
+            "MSP-2.0"
+            "MSP-2.0-Desktop-App"
+            "castr.me"
+            "TRM-Lightning"
+            "ITDV-Lightning"
+            "HPM-Lightning"
+            "stablekraft-app"
+            "lnaddress-music"
+            "musicL-playlist-updater"
+            "chadf-musicl-playlists"
+            "Auto-musicL-Maker"
+            "RSS-music-site-template"
+            "Helipad-to-Nostr-BoostBot"
+            "LIT_Bot"
+            "LibreRelayBot"
+            "BoostAfterBoost"
+            "chadf-landing-page"
+            "HGH-checker"
+            "lnurl-test-feed"
+          )
+
+          cat > ISSUES.md << 'HEADER'
+          # GitHub Issues
+
+          *Auto-synced every 6 hours via GitHub Actions*
+
+          HEADER
+
+          for repo in "${REPOS[@]}"; do
+            echo "## $repo" >> ISSUES.md
+            echo "" >> ISSUES.md
+
+            open_issues=$(gh issue list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null || echo "")
+            closed_issues=$(gh issue list --repo $USERNAME/$repo --state closed --json number,title,url --jq '.[] | "- [#\(.number)](\(.url)) ✓ \(.title)"' 2>/dev/null || echo "")
+
+            if [ -n "$open_issues" ]; then
+              echo "### Open" >> ISSUES.md
+              echo "$open_issues" >> ISSUES.md
+              echo "" >> ISSUES.md
+            fi
+
+            if [ -n "$closed_issues" ]; then
+              echo "### Closed" >> ISSUES.md
+              echo "$closed_issues" >> ISSUES.md
+              echo "" >> ISSUES.md
+            fi
+
+            if [ -z "$open_issues" ] && [ -z "$closed_issues" ]; then
+              echo "*No issues*" >> ISSUES.md
+              echo "" >> ISSUES.md
+            fi
+          done
+
+          echo "---" >> ISSUES.md
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> ISSUES.md
+
+          # ========== SYNC STARS ==========
+          echo "Syncing stars..."
+          gh api users/$USERNAME/starred --paginate --jq '.[] | {name: .name, url: .html_url, desc: .description, lang: .language, owner: .owner.login}' > stars.json
+
+          cat > references/starred.md << 'HEADER'
+          # Starred Repos
+
+          *Auto-synced every 6 hours*
+
+          HEADER
+
+          # Group by category based on topics/language
+          echo "## Nostr" >> references/starred.md
+          jq -rs '.[] | select(.name | test("nostr|nip|amber|aegis|blossom|bloom|relay|jumble|vnak"; "i")) | "- [\(.name)](\(.url)) - \(.desc // "No description")"' stars.json >> references/starred.md || true
+          echo "" >> references/starred.md
+
+          echo "## Lightning" >> references/starred.md
+          jq -rs '.[] | select(.name | test("lightning|lnurl|bolt|alby|coinos|breez|spark"; "i")) | "- [\(.name)](\(.url)) - \(.desc // "No description")"' stars.json >> references/starred.md || true
+          echo "" >> references/starred.md
+
+          echo "## Podcasting" >> references/starred.md
+          jq -rs '.[] | select(.name | test("podcast|rss|feed|boost|v4v|podping"; "i")) | "- [\(.name)](\(.url)) - \(.desc // "No description")"' stars.json >> references/starred.md || true
+          echo "" >> references/starred.md
+
+          echo "## Other" >> references/starred.md
+          jq -rs '.[] | select(.name | test("nostr|nip|amber|aegis|blossom|bloom|relay|jumble|vnak|lightning|lnurl|bolt|alby|coinos|breez|spark|podcast|rss|feed|boost|v4v|podping"; "i") | not) | "- [\(.name)](\(.url)) - \(.desc // "No description")"' stars.json >> references/starred.md || true
+
+          echo "" >> references/starred.md
+          echo "---" >> references/starred.md
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> references/starred.md
+
+          # Cleanup
+          rm -f repos.json stars.json
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Auto-sync $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
