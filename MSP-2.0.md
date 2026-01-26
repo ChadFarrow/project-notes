@@ -19,5 +19,8 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 ## Resources
 <!-- Add links, docs, tutorials -->
 
+## Issues
+- [#13 Support `<podcast:category>` - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) - Proposal to add genre tags using Wavlake's comma-delimited format (lowercase, hyphens allowed)
+
 ## TODOs
 - [ ] 
