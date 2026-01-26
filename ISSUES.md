@@ -1,47 +1,55 @@
 # GitHub Issues
 
-*Run `./sync-issues.sh` to update*
+*Auto-synced every 6 hours via GitHub Actions*
 
 ## MSP-2.0
 
 ### Open
-- [#13 Support `<podcast:category>` - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) - Proposal to implement genre tags using Wavlake's format
+- [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
+- [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
+- [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#16](https://github.com/ChadFarrow/MSP-2.0/issues/16) ✓ Add publisher feed entry to the album pages for existing publisher feeds.
 - [#15](https://github.com/ChadFarrow/MSP-2.0/issues/15) ✓ Add a better way to change the order of videos
-- [#14](https://github.com/ChadFarrow/MSP-2.0/issues/14) ✓ Track area collapsed at each key press / new track shouldn't be collapsed
-- [#12](https://github.com/ChadFarrow/MSP-2.0/issues/12) ✓ Add download section for publisher feeds before catalog feeds
-- [#9](https://github.com/ChadFarrow/MSP-2.0/issues/9) ✓ Check if Vans are added to songs if same as channel level
+- [#14](https://github.com/ChadFarrow/MSP-2.0/issues/14) ✓ Track area collapsed at each key press and new track shouldn't be collapsed when pressed.
+- [#12](https://github.com/ChadFarrow/MSP-2.0/issues/12) ✓ Add a download section for the publisher feeds before the section where it's added to the catalog feeds.
+- [#9](https://github.com/ChadFarrow/MSP-2.0/issues/9) ✓ Check to see if Vans are added to songs if it's the same as the channel level
 - [#8](https://github.com/ChadFarrow/MSP-2.0/issues/8) ✓ MSP might be overwriting feed info
-- [#7](https://github.com/ChadFarrow/MSP-2.0/issues/7) ✓ Add `<itunes:category>Music</itunes:category>`
-- [#6](https://github.com/ChadFarrow/MSP-2.0/issues/6) ✓ Add support for PI uploads
-- [#5](https://github.com/ChadFarrow/MSP-2.0/issues/5) ✓ Add MSP split
-- [#4](https://github.com/ChadFarrow/MSP-2.0/issues/4) ✓ Check time and size when pasting a track's URL
+- [#7](https://github.com/ChadFarrow/MSP-2.0/issues/7) ✓ Add <itunes:category>Music</itunes:category>
+- [#6](https://github.com/ChadFarrow/MSP-2.0/issues/6) ✓ add support for PI uploads
+- [#5](https://github.com/ChadFarrow/MSP-2.0/issues/5) ✓ add MSP split
+- [#4](https://github.com/ChadFarrow/MSP-2.0/issues/4) ✓ Check time and size when pasting a tracks url
 - [#3](https://github.com/ChadFarrow/MSP-2.0/issues/3) ✓ Add PI publishing
 - [#2](https://github.com/ChadFarrow/MSP-2.0/issues/2) ✓ Add track preview during upload
 - [#1](https://github.com/ChadFarrow/MSP-2.0/issues/1) ✓ Double medium tag
 
 ## MSP-2.0-Desktop-App
-*No open issues*
+
+*No issues*
 
 ## castr.me
-*No open issues*
+
+*No issues*
 
 ## TRM-Lightning
-*No open issues*
+
+*No issues*
 
 ## ITDV-Lightning
-*No open issues*
+
+*No issues*
 
 ## HPM-Lightning
-*No open issues*
+
+*No issues*
 
 ## stablekraft-app
 
 ### Closed
 - [#12](https://github.com/ChadFarrow/stablekraft-app/issues/12) ✓ Boost Button is unclickable
 - [#11](https://github.com/ChadFarrow/stablekraft-app/issues/11) ✓ Nostr URL
-- [#10](https://github.com/ChadFarrow/stablekraft-app/issues/10) ✓ Boost button
+- [#10](https://github.com/ChadFarrow/stablekraft-app/issues/10) ✓ Boostb button
 - [#9](https://github.com/ChadFarrow/stablekraft-app/issues/9) ✓ [BUG]
 - [#8](https://github.com/ChadFarrow/stablekraft-app/issues/8) ✓ [BUG]
 - [#7](https://github.com/ChadFarrow/stablekraft-app/issues/7) ✓ [BUG]
@@ -55,10 +63,62 @@
 ### Closed
 - [#3](https://github.com/ChadFarrow/lnaddress-music/issues/3) ✓ Album pages have low res background
 - [#2](https://github.com/ChadFarrow/lnaddress-music/issues/2) ✓ Boost button on fullscreen now playing not working
-- [#1](https://github.com/ChadFarrow/lnaddress-music/issues/1) ✓ Publisher feeds not loading
+- [#1](https://github.com/ChadFarrow/lnaddress-music/issues/1) ✓ publisher feeds now loading
 
 ## musicL-playlist-updater
-*No open issues*
+
+*No issues*
+
+## chadf-musicl-playlists
+
+*No issues*
+
+## Auto-musicL-Maker
+
+### Closed
+- [#10](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/10) ✓ Deploy & verify on Vercel
+- [#9](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/9) ✓ Docs: README updates
+- [#8](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/8) ✓ Download XML UX
+- [#7](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/7) ✓ XML generation: musicL compliance
+- [#6](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/6) ✓ Import items → remoteItem rows
+- [#5](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/5) ✓ Wire UI: fetch via proxy, parse, populate
+- [#4](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/4) ✓ Prod: Vercel serverless proxy (api/proxy.js)
+- [#3](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/3) ✓ Dev: /api/proxy endpoint (Express)
+- [#2](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/2) ✓ UI: Add RSS URL input + Load button
+- [#1](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/1) ✓ RSS import + musicL playlist generator UI with XML download
+
+## RSS-music-site-template
+
+### Open
+- [#1 Feed deletion](https://github.com/ChadFarrow/RSS-music-site-template/issues/1)
+
+## Helipad-to-Nostr-BoostBot
+
+*No issues*
+
+## LIT_Bot
+
+*No issues*
+
+## LibreRelayBot
+
+*No issues*
+
+## BoostAfterBoost
+
+*No issues*
+
+## chadf-landing-page
+
+*No issues*
+
+## HGH-checker
+
+*No issues*
+
+## lnurl-test-feed
+
+*No issues*
 
 ---
-*Last synced: Jan 26, 2026*
+*Last synced: 2026-01-26 23:38 UTC*

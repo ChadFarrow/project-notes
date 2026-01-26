@@ -1,33 +1,44 @@
 # GitHub Projects
 
+*Auto-synced every 6 hours*
+
 ## Music/Podcasting
-- [MSP-2.0](MSP-2.0.md) - RSS feed generator for decentralized music releases
-- [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md) - Desktop application for MSP-2.0
-- [musicL-playlist-updater](musicL-playlist-updater.md) - Playlist updater tool
-- [chadf-musicl-playlists](chadf-musicl-playlists.md) - MusicL playlists repository
-- [Auto-musicL-Maker](Auto-musicL-Maker.md) - Creates playlist from RSS feeds with V4V music
-- [lnaddress-music](lnaddress-music.md) - Lightning address for music
-- [castr.me](castr.me.md) - Turn your npub into a podcast feed
-- [RSS-music-site-template](RSS-music-site-template.md) - Template for RSS music sites
+- [MSP-2.0](MSP-2.0.md) - Music Side Project Studio - RSS feed generator for decentralized music releases (`TypeScript`)
+- [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md) - 
+- [musicL-playlist-updater](musicL-playlist-updater.md) -  (`JavaScript`)
+- [chadf-musicl-playlists](chadf-musicl-playlists.md) - 
+- [Auto-musicL-Maker](Auto-musicL-Maker.md) - Make a musicL playlist from any RSS feed that has V4V music in it (`JavaScript`)
+- [lnaddress-music](lnaddress-music.md) -  (`TypeScript`)
+- [castr.me](castr.me.md) - Effortlessly turn your npub into a podcast feed. (`TypeScript`)
+- [RSS-music-site-template](RSS-music-site-template.md) -  (`TypeScript`)
 
 ## Lightning
-- [ITDV-Lightning](ITDV-Lightning.md) - Lightning implementation for ITDV
-- [TRM-Lightning](TRM-Lightning.md) - Lightning implementation for TRM
-- [HPM-Lightning](HPM-Lightning.md) - Lightning implementation for HPM
-- [lnurl-test-feed](lnurl-test-feed.md) - LNURL test feed
+- [ITDV-Lightning](ITDV-Lightning.md) -  (`TypeScript`)
+- [TRM-Lightning](TRM-Lightning.md) -  (`TypeScript`)
+- [HPM-Lightning](HPM-Lightning.md) -  (`TypeScript`)
+- [lnurl-test-feed](lnurl-test-feed.md) -  (`HTML`)
 
 ## Nostr
-- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Sends Helipad info to Nostr via webhooks
-- [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr
-- [LibreRelayBot](LibreRelayBot.md) - Libre relay bot
-- [BoostAfterBoost](BoostAfterBoost.md) - IRC to Nostr bridge
+- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`)
+- [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr (`Roff`)
+- [LibreRelayBot](LibreRelayBot.md) -  (`JavaScript`)
+- [BoostAfterBoost](BoostAfterBoost.md) - IRC to Nostr bridge for monitoring BoostAfterBoost bot in #BowlAfterBowl (`JavaScript`)
 
 ## Web/Apps
-- [stablekraft-app](stablekraft-app.md) - Stablekraft application
-- [chadf-landing-page](chadf-landing-page.md) - Personal landing page
+- [stablekraft-app](stablekraft-app.md) -  (`TypeScript`)
+- [chadf-landing-page](chadf-landing-page.md) -  (`TypeScript`)
 
 ## Tools
-- [HGH-checker](HGH-checker.md) - HGH checker utility
+- [HGH-checker](HGH-checker.md) -  (`JavaScript`)
+
+## Uncategorized
+- [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
+- [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
+- [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
+- [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
+- [stacks](https://github.com/ChadFarrow/stacks) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. *(NEW)*
+- [stacks-pc20](https://github.com/ChadFarrow/stacks-pc20) - stacks templet for podcasting 2.0 *(NEW)*
+- [BoostBot-Starter](https://github.com/ChadFarrow/BoostBot-Starter) -  *(NEW)*
 
 ---
 
