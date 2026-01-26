@@ -18,5 +18,12 @@ Lightning address for music
 ## Resources
 <!-- Add links, docs, tutorials -->
 
+## Issues
+
+### Closed
+- [#3](https://github.com/ChadFarrow/lnaddress-music/issues/3) ✓ Album pages have low res background
+- [#2](https://github.com/ChadFarrow/lnaddress-music/issues/2) ✓ Boost button on fullscreen now playing not working
+- [#1](https://github.com/ChadFarrow/lnaddress-music/issues/1) ✓ Publisher feeds not loading
+
 ## TODOs
 - [ ] 
