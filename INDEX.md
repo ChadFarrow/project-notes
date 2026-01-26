@@ -2,6 +2,7 @@
 
 ## Music/Podcasting
 - [MSP-2.0](MSP-2.0.md) - RSS feed generator for decentralized music releases
+- [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md) - Desktop application for MSP-2.0
 - [musicL-playlist-updater](musicL-playlist-updater.md) - Playlist updater tool
 - [chadf-musicl-playlists](chadf-musicl-playlists.md) - MusicL playlists repository
 - [Auto-musicL-Maker](Auto-musicL-Maker.md) - Creates playlist from RSS feeds with V4V music
