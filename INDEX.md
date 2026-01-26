@@ -32,4 +32,5 @@
 
 ## Quick Links
 - [PC2.0 Specs Reference](PC2.0-SPECS.md)
+- [References](references/README.md) - General bookmarks & links
 - [GitHub Profile](https://github.com/ChadFarrow)
