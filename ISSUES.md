@@ -26,7 +26,8 @@
 
 ## MSP-2.0-Desktop-App
 
-*No issues*
+### Closed
+- [#1](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/1) ✓ Testing the issue sync
 
 ## castr.me
 
@@ -121,4 +122,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-26 23:40 UTC*
+*Last synced: 2026-01-27 01:41 UTC*
