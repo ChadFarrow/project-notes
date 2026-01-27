@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#19 If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.](https://github.com/ChadFarrow/MSP-2.0/issues/19)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
@@ -123,4 +124,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-27 12:42 UTC*
+*Last synced: 2026-01-27 12:56 UTC*
