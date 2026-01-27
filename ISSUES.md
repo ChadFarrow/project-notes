@@ -99,7 +99,8 @@
 
 ## LIT_Bot
 
-*No issues*
+### Open
+- [#1 BTWTS](https://github.com/ChadFarrow/LIT_Bot/issues/1)
 
 ## LibreRelayBot
 
@@ -122,4 +123,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-27 02:03 UTC*
+*Last synced: 2026-01-27 06:31 UTC*
