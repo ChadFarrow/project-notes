@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#20 Add a view RSS feed option](https://github.com/ChadFarrow/MSP-2.0/issues/20)
 - [#19 If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.](https://github.com/ChadFarrow/MSP-2.0/issues/19)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
@@ -110,7 +111,8 @@
 
 ## BoostAfterBoost
 
-*No issues*
+### Closed
+- [#1](https://github.com/ChadFarrow/BoostAfterBoost/issues/1) ✓ Add #BowlOfTrust to post
 
 ## chadf-landing-page
 
@@ -125,4 +127,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-27 18:42 UTC*
+*Last synced: 2026-01-27 22:07 UTC*
