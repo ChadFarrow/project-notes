@@ -4,7 +4,7 @@
 
 ## Music/Podcasting
 - [MSP-2.0](MSP-2.0.md) - Music Side Project Studio - RSS feed generator for decentralized music releases (`TypeScript`)
-- [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md) - 
+- [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md) -  (`TypeScript`)
 - [musicL-playlist-updater](musicL-playlist-updater.md) -  (`JavaScript`)
 - [chadf-musicl-playlists](chadf-musicl-playlists.md) - 
 - [Auto-musicL-Maker](Auto-musicL-Maker.md) - Make a musicL playlist from any RSS feed that has V4V music in it (`JavaScript`)
