@@ -50,6 +50,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
+
 ### Closed
 - [#12](https://github.com/ChadFarrow/stablekraft-app/issues/12) ✓ Boost Button is unclickable
 - [#11](https://github.com/ChadFarrow/stablekraft-app/issues/11) ✓ Nostr URL
@@ -127,4 +130,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-28 12:57 UTC*
+*Last synced: 2026-01-28 18:33 UTC*
