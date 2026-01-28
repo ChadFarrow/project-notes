@@ -6,13 +6,13 @@
 
 ### Open
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
-- [#20 Add a view RSS feed option](https://github.com/ChadFarrow/MSP-2.0/issues/20)
-- [#19 If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.](https://github.com/ChadFarrow/MSP-2.0/issues/19)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#20](https://github.com/ChadFarrow/MSP-2.0/issues/20) ✓ Add a view RSS feed option
+- [#19](https://github.com/ChadFarrow/MSP-2.0/issues/19) ✓ If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.
 - [#16](https://github.com/ChadFarrow/MSP-2.0/issues/16) ✓ Add publisher feed entry to the album pages for existing publisher feeds.
 - [#15](https://github.com/ChadFarrow/MSP-2.0/issues/15) ✓ Add a better way to change the order of videos
 - [#14](https://github.com/ChadFarrow/MSP-2.0/issues/14) ✓ Track area collapsed at each key press and new track shouldn't be collapsed when pressed.
@@ -127,4 +127,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-27 22:07 UTC*
+*Last synced: 2026-01-28 01:27 UTC*
