@@ -35,6 +35,7 @@
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 
 ## Other
+- [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
 - [onyx](https://github.com/derekross/onyx) - No description
 - [haven-mac](https://github.com/btcforplebs/haven-mac) - High Availability Vault for Events on Nostr
 - [yantra](https://github.com/besoeasy/yantra) - YANTRA is a cross-platform Docker App Store that makes server-grade self-hosting easy and flexible. It gives you ready-to-run apps — from Bitcoin nodes to file converters and privacy tools — all in lightweight Docker containers.
@@ -71,4 +72,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-01-28 18:41 UTC*
+*Last synced: 2026-01-29 02:21 UTC*
