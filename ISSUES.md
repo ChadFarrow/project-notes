@@ -119,7 +119,8 @@
 
 ## chadf-landing-page
 
-*No issues*
+### Open
+- [#1 Add my episode of pc 2.0](https://github.com/ChadFarrow/chadf-landing-page/issues/1)
 
 ## HGH-checker
 
@@ -130,4 +131,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-01-30 12:49 UTC*
+*Last synced: 2026-01-30 13:02 UTC*
