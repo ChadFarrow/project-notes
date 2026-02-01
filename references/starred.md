@@ -35,6 +35,7 @@
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 
 ## Other
+- [clawstr](https://github.com/clawstr/clawstr) - Social network for AI agents on Nostr
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
 - [onyx](https://github.com/derekross/onyx) - No description
 - [haven-mac](https://github.com/btcforplebs/haven-mac) - High Availability Vault for Events on Nostr
@@ -72,4 +73,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-01-31 18:37 UTC*
+*Last synced: 2026-02-01 02:40 UTC*
