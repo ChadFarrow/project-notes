@@ -51,6 +51,7 @@
 ## stablekraft-app
 
 ### Open
+- [#15 App has to be open to play on iOS.](https://github.com/ChadFarrow/stablekraft-app/issues/15)
 - [#14 Make a most popular playlist from the music show playlist.](https://github.com/ChadFarrow/stablekraft-app/issues/14)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
@@ -132,4 +133,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-02 13:06 UTC*
+*Last synced: 2026-02-02 18:39 UTC*
