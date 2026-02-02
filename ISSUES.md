@@ -51,6 +51,7 @@
 ## stablekraft-app
 
 ### Open
+- [#14 Make a most popular playlist from the music show playlist.](https://github.com/ChadFarrow/stablekraft-app/issues/14)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
@@ -131,4 +132,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-02 07:05 UTC*
+*Last synced: 2026-02-02 12:54 UTC*
