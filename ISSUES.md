@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Open
+- [#23 Add support for npub via txt tag.](https://github.com/ChadFarrow/MSP-2.0/issues/23)
+- [#22 Change publisher to artists](https://github.com/ChadFarrow/MSP-2.0/issues/22)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
@@ -134,4 +136,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-03 13:07 UTC*
+*Last synced: 2026-02-03 18:53 UTC*
