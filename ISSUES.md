@@ -51,11 +51,12 @@
 ## stablekraft-app
 
 ### Open
-- [#15 App has to be open to play on iOS.](https://github.com/ChadFarrow/stablekraft-app/issues/15)
-- [#14 Make a most popular playlist from the music show playlist.](https://github.com/ChadFarrow/stablekraft-app/issues/14)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
+- [#16](https://github.com/ChadFarrow/stablekraft-app/issues/16) ✓ add feed
+- [#15](https://github.com/ChadFarrow/stablekraft-app/issues/15) ✓ App has to be open to play on iOS.
+- [#14](https://github.com/ChadFarrow/stablekraft-app/issues/14) ✓ Make a most popular playlist from the music show playlist.
 - [#12](https://github.com/ChadFarrow/stablekraft-app/issues/12) ✓ Boost Button is unclickable
 - [#11](https://github.com/ChadFarrow/stablekraft-app/issues/11) ✓ Nostr URL
 - [#10](https://github.com/ChadFarrow/stablekraft-app/issues/10) ✓ Boostb button
@@ -133,4 +134,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-02 18:39 UTC*
+*Last synced: 2026-02-03 01:55 UTC*
