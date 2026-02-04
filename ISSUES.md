@@ -53,6 +53,7 @@
 ## stablekraft-app
 
 ### Open
+- [#17 Lock screen issues iOS](https://github.com/ChadFarrow/stablekraft-app/issues/17)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
@@ -136,4 +137,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-04 13:05 UTC*
+*Last synced: 2026-02-04 18:44 UTC*
