@@ -5,14 +5,14 @@
 ## MSP-2.0
 
 ### Open
-- [#23 Add support for npub via txt tag.](https://github.com/ChadFarrow/MSP-2.0/issues/23)
-- [#22 Change publisher to artists](https://github.com/ChadFarrow/MSP-2.0/issues/22)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#23](https://github.com/ChadFarrow/MSP-2.0/issues/23) ✓ Add support for npub via txt tag.
+- [#22](https://github.com/ChadFarrow/MSP-2.0/issues/22) ✓ Change publisher to artists
 - [#20](https://github.com/ChadFarrow/MSP-2.0/issues/20) ✓ Add a view RSS feed option
 - [#19](https://github.com/ChadFarrow/MSP-2.0/issues/19) ✓ If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.
 - [#16](https://github.com/ChadFarrow/MSP-2.0/issues/16) ✓ Add publisher feed entry to the album pages for existing publisher feeds.
@@ -136,4 +136,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-03 19:00 UTC*
+*Last synced: 2026-02-04 01:48 UTC*
