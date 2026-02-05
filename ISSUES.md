@@ -53,10 +53,10 @@
 ## stablekraft-app
 
 ### Open
-- [#17 Lock screen issues iOS](https://github.com/ChadFarrow/stablekraft-app/issues/17)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
+- [#17](https://github.com/ChadFarrow/stablekraft-app/issues/17) ✓ Lock screen issues iOS
 - [#16](https://github.com/ChadFarrow/stablekraft-app/issues/16) ✓ add feed
 - [#15](https://github.com/ChadFarrow/stablekraft-app/issues/15) ✓ App has to be open to play on iOS.
 - [#14](https://github.com/ChadFarrow/stablekraft-app/issues/14) ✓ Make a most popular playlist from the music show playlist.
@@ -137,4 +137,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-04 18:55 UTC*
+*Last synced: 2026-02-05 01:51 UTC*
