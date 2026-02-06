@@ -20,7 +20,7 @@
 
 ## Nostr
 - [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`)
-- [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr (`Roff`)
+- [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr (`JavaScript`)
 - [LibreRelayBot](LibreRelayBot.md) -  (`JavaScript`)
 - [BoostAfterBoost](BoostAfterBoost.md) - IRC to Nostr bridge for monitoring BoostAfterBoost bot in #BowlAfterBowl (`JavaScript`)
 
@@ -32,8 +32,8 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
+- [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
 - [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [stacks](https://github.com/ChadFarrow/stacks) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. *(NEW)*
