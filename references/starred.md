@@ -3,6 +3,7 @@
 *Auto-synced every 6 hours*
 
 ## Nostr
+- [openclaw-nostr](https://github.com/nash-the-ai/openclaw-nostr) - Self-sovereign Nostr identity + Bitcoin wallet skill for OpenClaw agents
 - [bloom](https://github.com/Letdown2491/bloom) - Bloom offers a familiar file‑manager interface that lets users quickly interact with files and blobs stored on Blossom and NIP‑96 servers. You can edit metadata, share items directly from Bloom, create shareable folders, and much more.
 - [vnak](https://github.com/fiatjaf/vnak) - visual nostr army knife with qt
 - [blossom](https://github.com/hzrd149/blossom) - Blobs stored simply on mediaservers
@@ -74,4 +75,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-06 23:54 UTC*
+*Last synced: 2026-02-07 02:12 UTC*
