@@ -86,6 +86,7 @@ jobs:
 
           ## Quick Links
           - [All Issues](ISSUES.md) - GitHub issues across all projects
+          - [All Pull Requests](PULL_REQUESTS.md) - PRs across all projects
           - [PC2.0 Specs Reference](PC2.0-SPECS.md)
           - [References](references/README.md) - General bookmarks & links
           - [GitHub Profile](https://github.com/ChadFarrow)
@@ -150,6 +151,44 @@ jobs:
 
           echo "---" >> ISSUES.md
           echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> ISSUES.md
+
+          # ========== SYNC PULL REQUESTS ==========
+          echo "Syncing pull requests..."
+
+          cat > PULL_REQUESTS.md << 'HEADER'
+          # Pull Requests
+
+          *Auto-synced every 6 hours via GitHub Actions*
+
+          HEADER
+
+          for repo in "${REPOS[@]}"; do
+            echo "## $repo" >> PULL_REQUESTS.md
+            echo "" >> PULL_REQUESTS.md
+
+            open_prs=$(gh pr list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null || echo "")
+            merged_prs=$(gh pr list --repo $USERNAME/$repo --state merged --json number,title,url --jq '.[] | "- [#\(.number)](\(.url)) ✓ \(.title)"' 2>/dev/null || echo "")
+
+            if [ -n "$open_prs" ]; then
+              echo "### Open" >> PULL_REQUESTS.md
+              echo "$open_prs" >> PULL_REQUESTS.md
+              echo "" >> PULL_REQUESTS.md
+            fi
+
+            if [ -n "$merged_prs" ]; then
+              echo "### Merged" >> PULL_REQUESTS.md
+              echo "$merged_prs" >> PULL_REQUESTS.md
+              echo "" >> PULL_REQUESTS.md
+            fi
+
+            if [ -z "$open_prs" ] && [ -z "$merged_prs" ]; then
+              echo "*No pull requests*" >> PULL_REQUESTS.md
+              echo "" >> PULL_REQUESTS.md
+            fi
+          done
+
+          echo "---" >> PULL_REQUESTS.md
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> PULL_REQUESTS.md
 
           # ========== SYNC STARS ==========
           echo "Syncing stars..."

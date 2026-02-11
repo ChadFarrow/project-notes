@@ -78,11 +78,48 @@ jobs:
           
           echo "---" >> $OUTPUT
           echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> $OUTPUT
-      
+
+          # ========== SYNC PULL REQUESTS ==========
+          echo "Syncing pull requests..."
+          PR_OUTPUT="PULL_REQUESTS.md"
+
+          echo "# Pull Requests" > $PR_OUTPUT
+          echo "" >> $PR_OUTPUT
+          echo "*Auto-synced every 6 hours via GitHub Actions*" >> $PR_OUTPUT
+          echo "" >> $PR_OUTPUT
+
+          for repo in "${REPOS[@]}"; do
+            echo "## $repo" >> $PR_OUTPUT
+            echo "" >> $PR_OUTPUT
+
+            open_prs=$(gh pr list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null || echo "")
+            merged_prs=$(gh pr list --repo $USERNAME/$repo --state merged --json number,title,url --jq '.[] | "- [#\(.number)](\(.url)) ✓ \(.title)"' 2>/dev/null || echo "")
+
+            if [ -n "$open_prs" ]; then
+              echo "### Open" >> $PR_OUTPUT
+              echo "$open_prs" >> $PR_OUTPUT
+              echo "" >> $PR_OUTPUT
+            fi
+
+            if [ -n "$merged_prs" ]; then
+              echo "### Merged" >> $PR_OUTPUT
+              echo "$merged_prs" >> $PR_OUTPUT
+              echo "" >> $PR_OUTPUT
+            fi
+
+            if [ -z "$open_prs" ] && [ -z "$merged_prs" ]; then
+              echo "*No pull requests*" >> $PR_OUTPUT
+              echo "" >> $PR_OUTPUT
+            fi
+          done
+
+          echo "---" >> $PR_OUTPUT
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> $PR_OUTPUT
+
       - name: Commit changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add ISSUES.md
+          git add ISSUES.md PULL_REQUESTS.md
           git diff --staged --quiet || git commit -m "Auto-sync issues $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push

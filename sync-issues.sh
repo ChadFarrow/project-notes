@@ -49,3 +49,30 @@ echo "---" >> $OUTPUT
 echo "*Last synced: $(date)*" >> $OUTPUT
 
 echo "Done! Issues synced to $OUTPUT"
+
+# ========== SYNC PULL REQUESTS ==========
+PR_OUTPUT="PULL_REQUESTS.md"
+
+echo "# Pull Requests" > $PR_OUTPUT
+echo "" >> $PR_OUTPUT
+echo "*Run \`./sync-issues.sh\` to update*" >> $PR_OUTPUT
+echo "" >> $PR_OUTPUT
+
+for repo in "${REPOS[@]}"; do
+  echo "Fetching PRs for $repo..."
+  echo "## $repo" >> $PR_OUTPUT
+
+  prs=$(gh pr list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null)
+
+  if [ -z "$prs" ]; then
+    echo "*No open pull requests*" >> $PR_OUTPUT
+  else
+    echo "$prs" >> $PR_OUTPUT
+  fi
+  echo "" >> $PR_OUTPUT
+done
+
+echo "---" >> $PR_OUTPUT
+echo "*Last synced: $(date)*" >> $PR_OUTPUT
+
+echo "Done! Pull requests synced to $PR_OUTPUT"
