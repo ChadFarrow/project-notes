@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#28 PI upload explainer](https://github.com/ChadFarrow/MSP-2.0/issues/28)
 - [#24 Add publisher feed upload section](https://github.com/ChadFarrow/MSP-2.0/issues/24)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
@@ -12,6 +13,7 @@
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#27](https://github.com/ChadFarrow/MSP-2.0/issues/27) ✓ Backup retention policy: keep last 10 per feed
 - [#23](https://github.com/ChadFarrow/MSP-2.0/issues/23) ✓ Add support for npub via txt tag.
 - [#22](https://github.com/ChadFarrow/MSP-2.0/issues/22) ✓ Change publisher to artists
 - [#20](https://github.com/ChadFarrow/MSP-2.0/issues/20) ✓ Add a view RSS feed option
@@ -138,4 +140,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-12 19:06 UTC*
+*Last synced: 2026-02-13 02:00 UTC*
