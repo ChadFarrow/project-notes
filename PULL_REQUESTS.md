@@ -4,9 +4,6 @@
 
 ## MSP-2.0
 
-### Open
-- [#30 Add OP3 analytics prefix support](https://github.com/ChadFarrow/MSP-2.0/pull/30)
-
 ### Merged
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
 - [#25](https://github.com/ChadFarrow/MSP-2.0/pull/25) ✓ Fix hosted feed overwrite when creating new album
@@ -103,4 +100,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-13 18:54 UTC*
+*Last synced: 2026-02-13 23:49 UTC*

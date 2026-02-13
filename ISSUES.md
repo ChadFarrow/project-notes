@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 ### Open
-- [#31 My splits don't show up automatically for imported feeds.](https://github.com/ChadFarrow/MSP-2.0/issues/31)
 - [#29 Maybe add op3 to advanced section](https://github.com/ChadFarrow/MSP-2.0/issues/29)
 - [#28 PI upload explainer](https://github.com/ChadFarrow/MSP-2.0/issues/28)
 - [#24 Add publisher feed upload section](https://github.com/ChadFarrow/MSP-2.0/issues/24)
@@ -15,6 +14,7 @@
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
 - [#27](https://github.com/ChadFarrow/MSP-2.0/issues/27) ✓ Backup retention policy: keep last 10 per feed
 - [#23](https://github.com/ChadFarrow/MSP-2.0/issues/23) ✓ Add support for npub via txt tag.
 - [#22](https://github.com/ChadFarrow/MSP-2.0/issues/22) ✓ Change publisher to artists
@@ -142,4 +142,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-13 18:54 UTC*
+*Last synced: 2026-02-13 23:49 UTC*
