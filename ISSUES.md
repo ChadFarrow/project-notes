@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#29 Maybe add op3 to advanced section](https://github.com/ChadFarrow/MSP-2.0/issues/29)
 - [#28 PI upload explainer](https://github.com/ChadFarrow/MSP-2.0/issues/28)
 - [#24 Add publisher feed upload section](https://github.com/ChadFarrow/MSP-2.0/issues/24)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
@@ -140,4 +141,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-13 07:02 UTC*
+*Last synced: 2026-02-13 12:53 UTC*
