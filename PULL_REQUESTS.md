@@ -44,6 +44,9 @@
 ## stablekraft-app
 
 ### Merged
+- [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
+- [#20](https://github.com/ChadFarrow/stablekraft-app/pull/20) ✓ fix: align format thresholds and invalidate filter cache on sort change
+- [#19](https://github.com/ChadFarrow/stablekraft-app/pull/19) ✓ fix: support multiple publisher feeds per artist on publisher pages
 - [#18](https://github.com/ChadFarrow/stablekraft-app/pull/18) ✓ fix: set nip51Format=true when PATCH updates nostrEventId on favorites
 - [#2](https://github.com/ChadFarrow/stablekraft-app/pull/2) ✓ Feature/rss feed parser
 - [#1](https://github.com/ChadFarrow/stablekraft-app/pull/1) ✓ Playlist maker
@@ -100,4 +103,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-14 12:55 UTC*
+*Last synced: 2026-02-14 18:30 UTC*

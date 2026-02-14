@@ -6,8 +6,6 @@
 
 ### Open
 - [#29 Maybe add op3 to advanced section](https://github.com/ChadFarrow/MSP-2.0/issues/29)
-- [#28 PI upload explainer](https://github.com/ChadFarrow/MSP-2.0/issues/28)
-- [#24 Add publisher feed upload section](https://github.com/ChadFarrow/MSP-2.0/issues/24)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
@@ -15,7 +13,9 @@
 
 ### Closed
 - [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
+- [#28](https://github.com/ChadFarrow/MSP-2.0/issues/28) ✓ PI upload explainer
 - [#27](https://github.com/ChadFarrow/MSP-2.0/issues/27) ✓ Backup retention policy: keep last 10 per feed
+- [#24](https://github.com/ChadFarrow/MSP-2.0/issues/24) ✓ Add publisher feed upload section
 - [#23](https://github.com/ChadFarrow/MSP-2.0/issues/23) ✓ Add support for npub via txt tag.
 - [#22](https://github.com/ChadFarrow/MSP-2.0/issues/22) ✓ Change publisher to artists
 - [#20](https://github.com/ChadFarrow/MSP-2.0/issues/20) ✓ Add a view RSS feed option
@@ -142,4 +142,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-14 12:55 UTC*
+*Last synced: 2026-02-14 18:30 UTC*
