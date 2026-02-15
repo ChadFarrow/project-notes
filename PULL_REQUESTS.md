@@ -43,10 +43,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#23 Deduplicate publisher feeds by artist name](https://github.com/ChadFarrow/stablekraft-app/pull/23)
-
 ### Merged
+- [#23](https://github.com/ChadFarrow/stablekraft-app/pull/23) ✓ Deduplicate publisher feeds by artist name
 - [#22](https://github.com/ChadFarrow/stablekraft-app/pull/22) ✓ fix: resolve publisher page scroll jank on iOS PWA
 - [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
 - [#20](https://github.com/ChadFarrow/stablekraft-app/pull/20) ✓ fix: align format thresholds and invalidate filter cache on sort change
@@ -107,4 +105,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-15 02:00 UTC*
+*Last synced: 2026-02-15 02:33 UTC*
