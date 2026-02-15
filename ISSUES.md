@@ -58,6 +58,7 @@
 ## stablekraft-app
 
 ### Open
+- [#24 Add confirmation for share link being copied on desktop](https://github.com/ChadFarrow/stablekraft-app/issues/24)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
@@ -142,4 +143,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-15 06:55 UTC*
+*Last synced: 2026-02-15 12:43 UTC*

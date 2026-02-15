@@ -44,6 +44,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#25](https://github.com/ChadFarrow/stablekraft-app/pull/25) ✓ fix: paginate publishers filter for faster loading and scrolling
 - [#23](https://github.com/ChadFarrow/stablekraft-app/pull/23) ✓ Deduplicate publisher feeds by artist name
 - [#22](https://github.com/ChadFarrow/stablekraft-app/pull/22) ✓ fix: resolve publisher page scroll jank on iOS PWA
 - [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
@@ -105,4 +106,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-15 06:55 UTC*
+*Last synced: 2026-02-15 12:43 UTC*
