@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
