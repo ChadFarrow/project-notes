@@ -79,6 +79,9 @@
 
 ## lnaddress-music
 
+### Open
+- [#4 BoostBox](https://github.com/ChadFarrow/lnaddress-music/issues/4)
+
 ### Closed
 - [#3](https://github.com/ChadFarrow/lnaddress-music/issues/3) ✓ Album pages have low res background
 - [#2](https://github.com/ChadFarrow/lnaddress-music/issues/2) ✓ Boost button on fullscreen now playing not working
@@ -143,4 +146,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-16 13:10 UTC*
+*Last synced: 2026-02-16 18:39 UTC*
