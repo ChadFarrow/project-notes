@@ -13,9 +13,10 @@
 ## MSP-2.0-Desktop-App
 
 ### Open
-- [#4 Add persistent local storage for desktop app](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/4)
+- [#5 Fix type error: add 'tauri' to connection method types](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/5)
 
 ### Merged
+- [#4](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/4) ✓ Add persistent local storage for desktop app
 - [#3](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/3) ✓ Sync updates from web repo
 - [#2](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/2) ✓ Sync updates from web repo
 
@@ -109,4 +110,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-16 02:29 UTC*
+*Last synced: 2026-02-16 07:00 UTC*
