@@ -12,6 +12,9 @@
 
 ## MSP-2.0-Desktop-App
 
+### Open
+- [#6 Add installation overview section to video outline](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/6)
+
 ### Merged
 - [#4](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/4) ✓ Add persistent local storage for desktop app
 - [#3](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/3) ✓ Sync updates from web repo
@@ -107,4 +110,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-17 13:10 UTC*
+*Last synced: 2026-02-17 18:54 UTC*
