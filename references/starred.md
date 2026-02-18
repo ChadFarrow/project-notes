@@ -42,7 +42,7 @@
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
 - [onyx](https://github.com/derekross/onyx) - No description
 - [haven-mac](https://github.com/btcforplebs/haven-mac) - High Availability Vault for Events on Nostr
-- [yantra](https://github.com/besoeasy/yantra) - YANTRA is a cross-platform Docker App Store that makes server-grade self-hosting easy and flexible. It gives you ready-to-run apps — from Bitcoin nodes to file converters and privacy tools — all in lightweight Docker containers.
+- [yantr](https://github.com/besoeasy/yantr) - YANTR is a cross-platform Docker App Store that makes server-grade self-hosting easy and flexible. It gives you ready-to-run apps — from Bitcoin nodes to file converters and privacy tools — all in lightweight Docker containers.
 - [pimonitor](https://github.com/Podcastindex-org/pimonitor) - Monitors incoming feeds to the Podcast Index API for triage and management.
 - [genre-list](https://github.com/wavlake/genre-list) - Genre list for Wavlake's music catalog
 - [live-updates](https://github.com/thebells1111/live-updates) - No description
@@ -76,4 +76,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-18 13:11 UTC*
+*Last synced: 2026-02-18 18:59 UTC*
