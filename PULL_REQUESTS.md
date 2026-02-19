@@ -50,6 +50,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#26 Add BoostBox integration for LNURL payment metadata](https://github.com/ChadFarrow/stablekraft-app/pull/26)
+
 ### Merged
 - [#25](https://github.com/ChadFarrow/stablekraft-app/pull/25) ✓ fix: paginate publishers filter for faster loading and scrolling
 - [#23](https://github.com/ChadFarrow/stablekraft-app/pull/23) ✓ Deduplicate publisher feeds by artist name
@@ -113,4 +116,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-19 13:12 UTC*
+*Last synced: 2026-02-19 18:47 UTC*
