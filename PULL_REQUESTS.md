@@ -4,10 +4,8 @@
 
 ## MSP-2.0
 
-### Open
-- [#32 Move common actions to bottom toolbar](https://github.com/ChadFarrow/MSP-2.0/pull/32)
-
 ### Merged
+- [#32](https://github.com/ChadFarrow/MSP-2.0/pull/32) ✓ Move common actions to bottom toolbar
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
 - [#25](https://github.com/ChadFarrow/MSP-2.0/pull/25) ✓ Fix hosted feed overwrite when creating new album
 - [#11](https://github.com/ChadFarrow/MSP-2.0/pull/11) ✓ Kmdev
@@ -15,10 +13,9 @@
 
 ## MSP-2.0-Desktop-App
 
-### Open
-- [#6 Add installation overview section to video outline](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/6)
-
 ### Merged
+- [#7](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/7) ✓ Sync updates from web repo
+- [#6](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/6) ✓ Add installation overview section to video outline
 - [#4](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/4) ✓ Add persistent local storage for desktop app
 - [#3](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/3) ✓ Sync updates from web repo
 - [#2](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/2) ✓ Sync updates from web repo
@@ -50,10 +47,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#26 Add BoostBox integration for LNURL payment metadata](https://github.com/ChadFarrow/stablekraft-app/pull/26)
-
 ### Merged
+- [#26](https://github.com/ChadFarrow/stablekraft-app/pull/26) ✓ Add BoostBox integration for LNURL payment metadata
 - [#25](https://github.com/ChadFarrow/stablekraft-app/pull/25) ✓ fix: paginate publishers filter for faster loading and scrolling
 - [#23](https://github.com/ChadFarrow/stablekraft-app/pull/23) ✓ Deduplicate publisher feeds by artist name
 - [#22](https://github.com/ChadFarrow/stablekraft-app/pull/22) ✓ fix: resolve publisher page scroll jank on iOS PWA
@@ -116,4 +111,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-19 18:54 UTC*
+*Last synced: 2026-02-20 01:52 UTC*
