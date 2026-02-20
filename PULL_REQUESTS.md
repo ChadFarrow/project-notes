@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#33](https://github.com/ChadFarrow/MSP-2.0/pull/33) ✓ Add GUID regenerate button for using feeds as templates
 - [#32](https://github.com/ChadFarrow/MSP-2.0/pull/32) ✓ Move common actions to bottom toolbar
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
 - [#25](https://github.com/ChadFarrow/MSP-2.0/pull/25) ✓ Fix hosted feed overwrite when creating new album
@@ -13,7 +14,11 @@
 
 ## MSP-2.0-Desktop-App
 
+### Open
+- [#9 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/9)
+
 ### Merged
+- [#8](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/8) ✓ Sync updates from web repo
 - [#7](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/7) ✓ Sync updates from web repo
 - [#6](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/6) ✓ Add installation overview section to video outline
 - [#4](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/4) ✓ Add persistent local storage for desktop app
@@ -111,4 +116,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-20 13:04 UTC*
+*Last synced: 2026-02-20 18:42 UTC*

@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 ### Open
-- [#29 Maybe add op3 to advanced section](https://github.com/ChadFarrow/MSP-2.0/issues/29)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
@@ -13,6 +12,7 @@
 
 ### Closed
 - [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
+- [#29](https://github.com/ChadFarrow/MSP-2.0/issues/29) ✓ Maybe add op3 to advanced section
 - [#28](https://github.com/ChadFarrow/MSP-2.0/issues/28) ✓ PI upload explainer
 - [#27](https://github.com/ChadFarrow/MSP-2.0/issues/27) ✓ Backup retention policy: keep last 10 per feed
 - [#24](https://github.com/ChadFarrow/MSP-2.0/issues/24) ✓ Add publisher feed upload section
@@ -146,4 +146,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-20 13:04 UTC*
+*Last synced: 2026-02-20 18:42 UTC*
