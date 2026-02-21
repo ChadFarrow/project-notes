@@ -53,6 +53,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
 - [#27](https://github.com/ChadFarrow/stablekraft-app/pull/27) ✓ Add external reference doc for Alby/Lightning payment integration
 - [#26](https://github.com/ChadFarrow/stablekraft-app/pull/26) ✓ Add BoostBox integration for LNURL payment metadata
 - [#25](https://github.com/ChadFarrow/stablekraft-app/pull/25) ✓ fix: paginate publishers filter for faster loading and scrolling
@@ -117,4 +118,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-21 02:11 UTC*
+*Last synced: 2026-02-21 06:38 UTC*
