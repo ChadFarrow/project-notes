@@ -53,6 +53,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#30](https://github.com/ChadFarrow/stablekraft-app/pull/30) ✓ Add missing BoostBox GUID params to BoostButton callsites
+- [#29](https://github.com/ChadFarrow/stablekraft-app/pull/29) ✓ Add success toast to bottom-left share button
 - [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
 - [#27](https://github.com/ChadFarrow/stablekraft-app/pull/27) ✓ Add external reference doc for Alby/Lightning payment integration
 - [#26](https://github.com/ChadFarrow/stablekraft-app/pull/26) ✓ Add BoostBox integration for LNURL payment metadata
@@ -118,4 +120,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-22 12:56 UTC*
+*Last synced: 2026-02-22 18:31 UTC*
