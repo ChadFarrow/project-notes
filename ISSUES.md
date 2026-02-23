@@ -58,10 +58,10 @@
 ## stablekraft-app
 
 ### Open
-- [#24 Add confirmation for share link being copied on desktop](https://github.com/ChadFarrow/stablekraft-app/issues/24)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
+- [#24](https://github.com/ChadFarrow/stablekraft-app/issues/24) ✓ Add confirmation for share link being copied on desktop
 - [#17](https://github.com/ChadFarrow/stablekraft-app/issues/17) ✓ Lock screen issues iOS
 - [#16](https://github.com/ChadFarrow/stablekraft-app/issues/16) ✓ add feed
 - [#15](https://github.com/ChadFarrow/stablekraft-app/issues/15) ✓ App has to be open to play on iOS.
@@ -146,4 +146,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-22 18:39 UTC*
+*Last synced: 2026-02-23 01:56 UTC*
