@@ -56,6 +56,7 @@
 - [#31 Add Kathryn Fountain.fm publisher feed to KNOWN_PUBLISHERS](https://github.com/ChadFarrow/stablekraft-app/pull/31)
 
 ### Merged
+- [#32](https://github.com/ChadFarrow/stablekraft-app/pull/32) ✓ Support Podcast Index URLs in admin feed add/reparse
 - [#30](https://github.com/ChadFarrow/stablekraft-app/pull/30) ✓ Add missing BoostBox GUID params to BoostButton callsites
 - [#29](https://github.com/ChadFarrow/stablekraft-app/pull/29) ✓ Add success toast to bottom-left share button
 - [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
@@ -123,4 +124,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-23 12:58 UTC*
+*Last synced: 2026-02-23 13:11 UTC*
