@@ -52,7 +52,12 @@
 
 ## stablekraft-app
 
+### Open
+- [#40 Fix iOS background audio: preload next track and proactive advance timer](https://github.com/ChadFarrow/stablekraft-app/pull/40)
+
 ### Merged
+- [#39](https://github.com/ChadFarrow/stablekraft-app/pull/39) ✓ Fix autoboost not firing by adding album-level V4V fallback
+- [#38](https://github.com/ChadFarrow/stablekraft-app/pull/38) ✓ Fix NowPlayingScreen boost missing V4V data by adding album-level fallback
 - [#37](https://github.com/ChadFarrow/stablekraft-app/pull/37) ✓ Fix missing comma in package.json from merge conflict resolution
 - [#36](https://github.com/ChadFarrow/stablekraft-app/pull/36) ✓ Update auto-generated version
 - [#35](https://github.com/ChadFarrow/stablekraft-app/pull/35) ✓ Update auto-generated version
@@ -126,4 +131,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-24 13:13 UTC*
+*Last synced: 2026-02-24 18:57 UTC*
