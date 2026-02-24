@@ -52,9 +52,6 @@
 
 ## stablekraft-app
 
-### Open
-- [#31 Add Kathryn Fountain.fm publisher feed to KNOWN_PUBLISHERS](https://github.com/ChadFarrow/stablekraft-app/pull/31)
-
 ### Merged
 - [#37](https://github.com/ChadFarrow/stablekraft-app/pull/37) ✓ Fix missing comma in package.json from merge conflict resolution
 - [#36](https://github.com/ChadFarrow/stablekraft-app/pull/36) ✓ Update auto-generated version
@@ -129,4 +126,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-23 19:07 UTC*
+*Last synced: 2026-02-24 01:53 UTC*
