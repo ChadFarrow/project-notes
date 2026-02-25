@@ -37,6 +37,7 @@
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 
 ## Other
+- [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [clawstr](https://github.com/clawstr/clawstr) - Social network for AI agents on Nostr
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
@@ -76,4 +77,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-24 19:06 UTC*
+*Last synced: 2026-02-25 02:27 UTC*
