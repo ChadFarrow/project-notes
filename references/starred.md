@@ -72,9 +72,9 @@
 - [nak](https://github.com/fiatjaf/nak) - a command line tool for doing all things nostr
 - [helipad](https://github.com/Podcastindex-org/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams.
 - [haven-docker](https://github.com/sudocarlos/haven-docker) - Haven nostr relay deployed with docker 
-- [haven](https://github.com/bitvora/haven) - High Availability Vault for Events on Nostr
+- [haven](https://github.com/barrydeen/haven) - High Availability Vault for Events on Nostr
 - [podpay](https://github.com/fountain-fm/podpay) - No description
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-25 02:27 UTC*
+*Last synced: 2026-02-25 07:05 UTC*
