@@ -53,6 +53,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#41](https://github.com/ChadFarrow/stablekraft-app/pull/41) ✓ Fix duplicate albums on reparse by normalizing URLs before DB lookup
 - [#40](https://github.com/ChadFarrow/stablekraft-app/pull/40) ✓ Fix iOS background audio: preload next track and proactive advance timer
 - [#39](https://github.com/ChadFarrow/stablekraft-app/pull/39) ✓ Fix autoboost not firing by adding album-level V4V fallback
 - [#38](https://github.com/ChadFarrow/stablekraft-app/pull/38) ✓ Fix NowPlayingScreen boost missing V4V data by adding album-level fallback
@@ -129,4 +130,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-26 13:13 UTC*
+*Last synced: 2026-02-26 18:50 UTC*
