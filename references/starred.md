@@ -24,6 +24,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podping.alpha](https://github.com/Podcastindex-org/podping.alpha) - Testing out some new things
 - [sovereign-feeds](https://github.com/thebells1111/sovereign-feeds) - No description
 - [boostbox](https://github.com/noblepayne/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata.
 - [feedparser](https://github.com/Podcastindex-org/feedparser) - The XML parser that converts saved podcast feeds into intermediary files for SQL ingestion.
@@ -77,4 +78,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-26 13:13 UTC*
+*Last synced: 2026-02-26 18:56 UTC*
