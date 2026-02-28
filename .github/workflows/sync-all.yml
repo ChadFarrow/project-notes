@@ -87,6 +87,7 @@ jobs:
           ## Quick Links
           - [All Issues](ISSUES.md) - GitHub issues across all projects
           - [All Pull Requests](PULL_REQUESTS.md) - PRs across all projects
+          - [All Branches](BRANCHES.md) - Active branches across all projects
           - [PC2.0 Specs Reference](PC2.0-SPECS.md)
           - [References](references/README.md) - General bookmarks & links
           - [GitHub Profile](https://github.com/ChadFarrow)
@@ -189,6 +190,33 @@ jobs:
 
           echo "---" >> PULL_REQUESTS.md
           echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> PULL_REQUESTS.md
+
+          # ========== SYNC BRANCHES ==========
+          echo "Syncing branches..."
+
+          cat > BRANCHES.md << 'HEADER'
+          # Branches
+
+          *Auto-synced every 6 hours via GitHub Actions*
+
+          HEADER
+
+          for repo in "${REPOS[@]}"; do
+            echo "## $repo" >> BRANCHES.md
+            echo "" >> BRANCHES.md
+
+            branches=$(gh api repos/$USERNAME/$repo/branches --paginate --jq '.[] | "- `\(.name)`\(if .protected then " 🔒" else "" end)"' 2>/dev/null || echo "")
+
+            if [ -n "$branches" ]; then
+              echo "$branches" >> BRANCHES.md
+            else
+              echo "*No branches found*" >> BRANCHES.md
+            fi
+            echo "" >> BRANCHES.md
+          done
+
+          echo "---" >> BRANCHES.md
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> BRANCHES.md
 
           # ========== SYNC STARS ==========
           echo "Syncing stars..."
