@@ -116,10 +116,61 @@ jobs:
           echo "---" >> $PR_OUTPUT
           echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> $PR_OUTPUT
 
+      - name: Sync Branches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPOS=(
+            "MSP-2.0"
+            "MSP-2.0-Desktop-App"
+            "castr.me"
+            "TRM-Lightning"
+            "ITDV-Lightning"
+            "HPM-Lightning"
+            "stablekraft-app"
+            "lnaddress-music"
+            "musicL-playlist-updater"
+            "chadf-musicl-playlists"
+            "Auto-musicL-Maker"
+            "RSS-music-site-template"
+            "Helipad-to-Nostr-BoostBot"
+            "LIT_Bot"
+            "LibreRelayBot"
+            "BoostAfterBoost"
+            "chadf-landing-page"
+            "HGH-checker"
+            "lnurl-test-feed"
+          )
+
+          USERNAME="ChadFarrow"
+          BR_OUTPUT="BRANCHES.md"
+
+          echo "# Branches" > $BR_OUTPUT
+          echo "" >> $BR_OUTPUT
+          echo "*Auto-synced every 6 hours via GitHub Actions*" >> $BR_OUTPUT
+          echo "" >> $BR_OUTPUT
+
+          for repo in "${REPOS[@]}"; do
+            echo "## $repo" >> $BR_OUTPUT
+            echo "" >> $BR_OUTPUT
+
+            branches=$(gh api repos/$USERNAME/$repo/branches --paginate --jq '.[] | "- `\(.name)`\(if .protected then " 🔒" else "" end)"' 2>/dev/null || echo "")
+
+            if [ -n "$branches" ]; then
+              echo "$branches" >> $BR_OUTPUT
+            else
+              echo "*No branches found*" >> $BR_OUTPUT
+            fi
+            echo "" >> $BR_OUTPUT
+          done
+
+          echo "---" >> $BR_OUTPUT
+          echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> $BR_OUTPUT
+
       - name: Commit changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add ISSUES.md PULL_REQUESTS.md
+          git add ISSUES.md PULL_REQUESTS.md BRANCHES.md
           git diff --staged --quiet || git commit -m "Auto-sync issues $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push

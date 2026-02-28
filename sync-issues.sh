@@ -76,3 +76,30 @@ echo "---" >> $PR_OUTPUT
 echo "*Last synced: $(date)*" >> $PR_OUTPUT
 
 echo "Done! Pull requests synced to $PR_OUTPUT"
+
+# ========== SYNC BRANCHES ==========
+BR_OUTPUT="BRANCHES.md"
+
+echo "# Branches" > $BR_OUTPUT
+echo "" >> $BR_OUTPUT
+echo "*Run \`./sync-issues.sh\` to update*" >> $BR_OUTPUT
+echo "" >> $BR_OUTPUT
+
+for repo in "${REPOS[@]}"; do
+  echo "Fetching branches for $repo..."
+  echo "## $repo" >> $BR_OUTPUT
+
+  branches=$(gh api repos/$USERNAME/$repo/branches --paginate --jq '.[] | "- `\(.name)`\(if .protected then " 🔒" else "" end)"' 2>/dev/null || echo "")
+
+  if [ -z "$branches" ]; then
+    echo "*No branches found*" >> $BR_OUTPUT
+  else
+    echo "$branches" >> $BR_OUTPUT
+  fi
+  echo "" >> $BR_OUTPUT
+done
+
+echo "---" >> $BR_OUTPUT
+echo "*Last synced: $(date)*" >> $BR_OUTPUT
+
+echo "Done! Branches synced to $BR_OUTPUT"
