@@ -58,6 +58,7 @@
 ## stablekraft-app
 
 ### Open
+- [#43 Add two for tunestr to this as a playlist](https://github.com/ChadFarrow/stablekraft-app/issues/43)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
@@ -89,11 +90,13 @@
 
 ## musicL-playlist-updater
 
-*No issues*
+### Open
+- [#1 Add two for tunestr to this](https://github.com/ChadFarrow/musicL-playlist-updater/issues/1)
 
 ## chadf-musicl-playlists
 
-*No issues*
+### Open
+- [#1 Add two for tunestr to this once I have the playlist made](https://github.com/ChadFarrow/chadf-musicl-playlists/issues/1)
 
 ## Auto-musicL-Maker
 
@@ -146,4 +149,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-28 12:52 UTC*
+*Last synced: 2026-02-28 18:29 UTC*

@@ -85,7 +85,8 @@
 
 ## musicL-playlist-updater
 
-*No pull requests*
+### Open
+- [#2 Add Two for Tunestr feed to generate TFT music playlist](https://github.com/ChadFarrow/musicL-playlist-updater/pull/2)
 
 ## chadf-musicl-playlists
 
@@ -100,6 +101,9 @@
 *No pull requests*
 
 ## Helipad-to-Nostr-BoostBot
+
+### Open
+- [#3 Add AlbyHub NWC (Nostr Wallet Connect) integration](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/3)
 
 ### Merged
 - [#2](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/2) ✓ Improve nostr posts
@@ -131,4 +135,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-02-28 12:52 UTC*
+*Last synced: 2026-02-28 18:29 UTC*
