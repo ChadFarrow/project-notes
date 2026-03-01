@@ -90,13 +90,13 @@
 
 ## musicL-playlist-updater
 
-### Open
-- [#1 Add two for tunestr to this](https://github.com/ChadFarrow/musicL-playlist-updater/issues/1)
+### Closed
+- [#1](https://github.com/ChadFarrow/musicL-playlist-updater/issues/1) ✓ Add two for tunestr to this
 
 ## chadf-musicl-playlists
 
-### Open
-- [#1 Add two for tunestr to this once I have the playlist made](https://github.com/ChadFarrow/chadf-musicl-playlists/issues/1)
+### Closed
+- [#1](https://github.com/ChadFarrow/chadf-musicl-playlists/issues/1) ✓ Add two for tunestr to this once I have the playlist made
 
 ## Auto-musicL-Maker
 
@@ -149,4 +149,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-02-28 18:36 UTC*
+*Last synced: 2026-03-01 02:02 UTC*
