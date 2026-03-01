@@ -53,6 +53,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#44](https://github.com/ChadFarrow/stablekraft-app/pull/44) ✓ Fix NWC wallet not persisting for NIP-46/Amber users
 - [#42](https://github.com/ChadFarrow/stablekraft-app/pull/42) ✓ Add bulk feed import from Podcast Index search pages
 - [#41](https://github.com/ChadFarrow/stablekraft-app/pull/41) ✓ Fix duplicate albums on reparse by normalizing URLs before DB lookup
 - [#40](https://github.com/ChadFarrow/stablekraft-app/pull/40) ✓ Fix iOS background audio: preload next track and proactive advance timer
@@ -132,4 +133,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-01 12:54 UTC*
+*Last synced: 2026-03-01 18:29 UTC*

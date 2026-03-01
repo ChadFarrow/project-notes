@@ -58,10 +58,10 @@
 ## stablekraft-app
 
 ### Open
-- [#43 Add two for tunestr to this as a playlist](https://github.com/ChadFarrow/stablekraft-app/issues/43)
 - [#13 Check boosts on android with amber taking minutes to send.](https://github.com/ChadFarrow/stablekraft-app/issues/13)
 
 ### Closed
+- [#43](https://github.com/ChadFarrow/stablekraft-app/issues/43) ✓ Add two for tunestr to this as a playlist
 - [#24](https://github.com/ChadFarrow/stablekraft-app/issues/24) ✓ Add confirmation for share link being copied on desktop
 - [#17](https://github.com/ChadFarrow/stablekraft-app/issues/17) ✓ Lock screen issues iOS
 - [#16](https://github.com/ChadFarrow/stablekraft-app/issues/16) ✓ add feed
@@ -149,4 +149,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-03-01 12:54 UTC*
+*Last synced: 2026-03-01 18:29 UTC*
