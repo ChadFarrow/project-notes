@@ -24,6 +24,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 - [podping.alpha](https://github.com/Podcastindex-org/podping.alpha) - Testing out some new things
 - [sovereign-feeds](https://github.com/thebells1111/sovereign-feeds) - No description
 - [boostbox](https://github.com/noblepayne/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata.
@@ -35,7 +36,6 @@
 - [v4v-lightning-payment-tester](https://github.com/ericpp/v4v-lightning-payment-tester) - No description
 - [demu-feed-template](https://github.com/de-mu/demu-feed-template) - Template for releasing decentralized music
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
-- [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 
 ## Other
 - [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
@@ -78,4 +78,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-02-28 18:36 UTC*
+*Last synced: 2026-03-01 02:35 UTC*
