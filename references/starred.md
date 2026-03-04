@@ -15,7 +15,7 @@
 - [nostr-irc](https://github.com/ronaldstoner/nostr-irc) - A simple command line based nostr client that simulates the old school IRC clients of the past
 
 ## Lightning
-- [alby-agent-skill](https://github.com/getAlby/alby-agent-skill) - Build lightning wallet functionality into your apps with your favorite agent, without hallucinations
+- [alby-agent-skill](https://github.com/getAlby/alby-agent-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [coinos-server](https://github.com/coinos/coinos-server) - Coinos back-end application server
 - [Lightning.Pub](https://github.com/shocknet/Lightning.Pub) - The Nostr Native Lightning node, share your node with nostr accounts and connect easily to webapps.
 - [spark-sdk](https://github.com/breez/spark-sdk) - No description
@@ -78,4 +78,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-04 02:21 UTC*
+*Last synced: 2026-03-04 06:53 UTC*
