@@ -30,7 +30,6 @@
 
 - `claude/test-boostbox-KCi8w`
 - `main`
-- `metaboost`
 - `vercel/dependencies-for-react-flight-9uwnbr`
 
 ## HPM-Lightning
@@ -98,4 +97,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-04 18:55 UTC*
+*Last synced: 2026-03-05 01:52 UTC*
