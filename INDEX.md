@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [IRL_QR](https://github.com/ChadFarrow/IRL_QR) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [helipad-startos](https://github.com/ChadFarrow/helipad-startos) - Helipad packaged for Start9's StartOS. *(NEW)*
