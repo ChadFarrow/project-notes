@@ -49,9 +49,9 @@
 
 ## ITDV-Lightning
 
-### Open
-- [#5 add the abilty to delete feeds from admin](https://github.com/ChadFarrow/ITDV-Lightning/issues/5)
-- [#4 remove the other artists from the shuffle](https://github.com/ChadFarrow/ITDV-Lightning/issues/4)
+### Closed
+- [#5](https://github.com/ChadFarrow/ITDV-Lightning/issues/5) ✓ add the abilty to delete feeds from admin
+- [#4](https://github.com/ChadFarrow/ITDV-Lightning/issues/4) ✓ remove the other artists from the shuffle
 
 ## HPM-Lightning
 
@@ -151,4 +151,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-03-05 19:18 UTC*
+*Last synced: 2026-03-06 01:53 UTC*

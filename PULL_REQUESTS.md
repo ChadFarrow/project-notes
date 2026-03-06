@@ -39,6 +39,8 @@
 ## ITDV-Lightning
 
 ### Merged
+- [#7](https://github.com/ChadFarrow/ITDV-Lightning/pull/7) ✓ fix: resolve PWA album loading failure on iOS cold start
+- [#6](https://github.com/ChadFarrow/ITDV-Lightning/pull/6) ✓ fix: add DuckDuckGo browser compatibility for canvas and storage APIs
 - [#3](https://github.com/ChadFarrow/ITDV-Lightning/pull/3) ✓ Fix React Server Components RCE vulnerability
 - [#2](https://github.com/ChadFarrow/ITDV-Lightning/pull/2) ✓ Feature/tsb integration
 
@@ -134,4 +136,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-05 19:18 UTC*
+*Last synced: 2026-03-06 01:53 UTC*
