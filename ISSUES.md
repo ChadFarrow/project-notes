@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#34 New items in existing feeds](https://github.com/ChadFarrow/MSP-2.0/issues/34)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#18 Maybe add a prompt that lets the user select the tags they want.](https://github.com/ChadFarrow/MSP-2.0/issues/18)
 - [#17 Add an advanced mode to remove the non-basic features](https://github.com/ChadFarrow/MSP-2.0/issues/17)
@@ -152,4 +153,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-03-11 06:58 UTC*
+*Last synced: 2026-03-11 12:54 UTC*

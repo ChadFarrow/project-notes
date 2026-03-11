@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#35](https://github.com/ChadFarrow/MSP-2.0/pull/35) ✓ Add community support splits button to track-level value recipients
 - [#33](https://github.com/ChadFarrow/MSP-2.0/pull/33) ✓ Add GUID regenerate button for using feeds as templates
 - [#32](https://github.com/ChadFarrow/MSP-2.0/pull/32) ✓ Move common actions to bottom toolbar
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
@@ -136,4 +137,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-11 06:58 UTC*
+*Last synced: 2026-03-11 12:54 UTC*
