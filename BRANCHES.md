@@ -10,7 +10,8 @@
 
 ## MSP-2.0-Desktop-App
 
-*No branches found*
+- `master` 🔒
+- `sync-upstream`
 
 ## castr.me
 
@@ -81,7 +82,7 @@
 
 ## BoostAfterBoost
 
-*No branches found*
+- `main`
 
 ## chadf-landing-page
 
@@ -96,4 +97,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-10 18:54 UTC*
+*Last synced: 2026-03-11 01:47 UTC*
