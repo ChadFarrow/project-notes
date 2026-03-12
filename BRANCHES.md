@@ -41,6 +41,7 @@
 
 ## stablekraft-app
 
+- `claude/fix-primal-singer-boost-EcxWf`
 - `feature/genre-filter`
 - `main`
 
@@ -97,4 +98,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-11 18:57 UTC*
+*Last synced: 2026-03-12 01:53 UTC*

@@ -56,6 +56,12 @@
 ## stablekraft-app
 
 ### Merged
+- [#51](https://github.com/ChadFarrow/stablekraft-app/pull/51) ✓ Fix getRelayUrl() failing for nostrconnect:// (Primal) connections
+- [#50](https://github.com/ChadFarrow/stablekraft-app/pull/50) ✓ Fix RelayManager.isConnected() to check actual WebSocket state
+- [#49](https://github.com/ChadFarrow/stablekraft-app/pull/49) ✓ Fix stale relay subscription causing Primal signer timeout on boost
+- [#48](https://github.com/ChadFarrow/stablekraft-app/pull/48) ✓ Fix Primal signer timeout on boost by matching NIP-46 relay timeout
+- [#47](https://github.com/ChadFarrow/stablekraft-app/pull/47) ✓ Update auto-generated version and PWA fallback file
+- [#46](https://github.com/ChadFarrow/stablekraft-app/pull/46) ✓ Add Primal login tab for iOS Nostr authentication
 - [#45](https://github.com/ChadFarrow/stablekraft-app/pull/45) ✓ Update auto-generated version and PWA fallback file
 - [#44](https://github.com/ChadFarrow/stablekraft-app/pull/44) ✓ Fix NWC wallet not persisting for NIP-46/Amber users
 - [#42](https://github.com/ChadFarrow/stablekraft-app/pull/42) ✓ Add bulk feed import from Podcast Index search pages
@@ -80,9 +86,6 @@
 - [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
 - [#20](https://github.com/ChadFarrow/stablekraft-app/pull/20) ✓ fix: align format thresholds and invalidate filter cache on sort change
 - [#19](https://github.com/ChadFarrow/stablekraft-app/pull/19) ✓ fix: support multiple publisher feeds per artist on publisher pages
-- [#18](https://github.com/ChadFarrow/stablekraft-app/pull/18) ✓ fix: set nip51Format=true when PATCH updates nostrEventId on favorites
-- [#2](https://github.com/ChadFarrow/stablekraft-app/pull/2) ✓ Feature/rss feed parser
-- [#1](https://github.com/ChadFarrow/stablekraft-app/pull/1) ✓ Playlist maker
 
 ## lnaddress-music
 
@@ -137,4 +140,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-11 18:57 UTC*
+*Last synced: 2026-03-12 01:53 UTC*
