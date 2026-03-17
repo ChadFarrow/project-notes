@@ -56,6 +56,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#52](https://github.com/ChadFarrow/stablekraft-app/pull/52) ✓ Fix undecoded HTML entities in song titles (e.g. &#39; instead of apostrophe)
 - [#51](https://github.com/ChadFarrow/stablekraft-app/pull/51) ✓ Fix getRelayUrl() failing for nostrconnect:// (Primal) connections
 - [#50](https://github.com/ChadFarrow/stablekraft-app/pull/50) ✓ Fix RelayManager.isConnected() to check actual WebSocket state
 - [#49](https://github.com/ChadFarrow/stablekraft-app/pull/49) ✓ Fix stale relay subscription causing Primal signer timeout on boost
@@ -85,7 +86,6 @@
 - [#22](https://github.com/ChadFarrow/stablekraft-app/pull/22) ✓ fix: resolve publisher page scroll jank on iOS PWA
 - [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
 - [#20](https://github.com/ChadFarrow/stablekraft-app/pull/20) ✓ fix: align format thresholds and invalidate filter cache on sort change
-- [#19](https://github.com/ChadFarrow/stablekraft-app/pull/19) ✓ fix: support multiple publisher feeds per artist on publisher pages
 
 ## lnaddress-music
 
@@ -140,4 +140,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-16 19:06 UTC*
+*Last synced: 2026-03-17 01:54 UTC*
