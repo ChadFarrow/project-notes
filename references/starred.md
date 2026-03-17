@@ -40,6 +40,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [zeus](https://github.com/ZeusLN/zeus) - A mobile Bitcoin wallet fit for the gods. ⚡️ Est. 563345
 - [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [clawstr](https://github.com/clawstr/clawstr) - Social network for AI agents on Nostr
@@ -80,4 +81,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-17 13:18 UTC*
+*Last synced: 2026-03-17 19:05 UTC*
