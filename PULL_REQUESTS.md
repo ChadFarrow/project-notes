@@ -89,7 +89,13 @@
 
 ## lnaddress-music
 
-*No pull requests*
+### Merged
+- [#10](https://github.com/ChadFarrow/lnaddress-music/pull/10) ✓ feat: Make username optional, add boost name settings
+- [#9](https://github.com/ChadFarrow/lnaddress-music/pull/9) ✓ fix: Use signed JWT challenge tokens instead of in-memory store
+- [#8](https://github.com/ChadFarrow/lnaddress-music/pull/8) ✓ fix: Derive WebAuthn RP ID from request origin instead of env vars
+- [#7](https://github.com/ChadFarrow/lnaddress-music/pull/7) ✓ chore: Remove implementation plan (completed)
+- [#6](https://github.com/ChadFarrow/lnaddress-music/pull/6) ✓ Add Breez passkey-login spec (v0.9.1) to docs
+- [#5](https://github.com/ChadFarrow/lnaddress-music/pull/5) ✓ Update feeds.json: replace generic titles, add metadata, fix stale timestamps
 
 ## musicL-playlist-updater
 
@@ -140,4 +146,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-18 13:19 UTC*
+*Last synced: 2026-03-18 18:55 UTC*
