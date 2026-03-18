@@ -17,7 +17,6 @@
 - [nostr-irc](https://github.com/ronaldstoner/nostr-irc) - A simple command line based nostr client that simulates the old school IRC clients of the past
 
 ## Lightning
-- [alby-agent-skill](https://github.com/getAlby/alby-agent-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [coinos-server](https://github.com/coinos/coinos-server) - Coinos back-end application server
 - [Lightning.Pub](https://github.com/shocknet/Lightning.Pub) - The Nostr Native Lightning node, share your node with nostr accounts and connect easily to webapps.
 - [spark-sdk](https://github.com/breez/spark-sdk) - No description
@@ -43,6 +42,7 @@
 - [zeus](https://github.com/ZeusLN/zeus) - A mobile Bitcoin wallet fit for the gods. ⚡️ Est. 563345
 - [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
+- [builder-skill](https://github.com/getAlby/builder-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [clawstr](https://github.com/clawstr/clawstr) - Social network for AI agents on Nostr
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
 - [onyx](https://github.com/derekross/onyx) - No description
@@ -81,4 +81,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-18 07:05 UTC*
+*Last synced: 2026-03-18 13:20 UTC*
