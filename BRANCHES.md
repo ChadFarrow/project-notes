@@ -46,7 +46,6 @@
 
 ## lnaddress-music
 
-- `claude/update-feeds-lfKnj`
 - `main`
 
 ## musicL-playlist-updater
@@ -97,4 +96,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-18 19:05 UTC*
+*Last synced: 2026-03-19 01:59 UTC*
