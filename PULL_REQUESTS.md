@@ -90,6 +90,8 @@
 ## lnaddress-music
 
 ### Merged
+- [#12](https://github.com/ChadFarrow/lnaddress-music/pull/12) ✓ Add logged-in user indicator and logout button to wallet selection screen
+- [#11](https://github.com/ChadFarrow/lnaddress-music/pull/11) ✓ Fix logout failing when wallet disconnect throws an error
 - [#10](https://github.com/ChadFarrow/lnaddress-music/pull/10) ✓ feat: Make username optional, add boost name settings
 - [#9](https://github.com/ChadFarrow/lnaddress-music/pull/9) ✓ fix: Use signed JWT challenge tokens instead of in-memory store
 - [#8](https://github.com/ChadFarrow/lnaddress-music/pull/8) ✓ fix: Derive WebAuthn RP ID from request origin instead of env vars
@@ -146,4 +148,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-19 07:02 UTC*
+*Last synced: 2026-03-19 12:58 UTC*
