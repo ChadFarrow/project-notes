@@ -90,6 +90,7 @@
 ## lnaddress-music
 
 ### Merged
+- [#13](https://github.com/ChadFarrow/lnaddress-music/pull/13) ✓ Fix logout button not working: add timeout guards and use auth context
 - [#12](https://github.com/ChadFarrow/lnaddress-music/pull/12) ✓ Add logged-in user indicator and logout button to wallet selection screen
 - [#11](https://github.com/ChadFarrow/lnaddress-music/pull/11) ✓ Fix logout failing when wallet disconnect throws an error
 - [#10](https://github.com/ChadFarrow/lnaddress-music/pull/10) ✓ feat: Make username optional, add boost name settings
@@ -148,4 +149,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-19 12:58 UTC*
+*Last synced: 2026-03-19 13:11 UTC*
