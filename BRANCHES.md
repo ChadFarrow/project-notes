@@ -6,7 +6,6 @@
 
 - `FAFO`
 - `claude/nostr-rss-feed-check-3j3vl`
-- `claude/test-1WJtK`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -97,4 +96,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-19 19:02 UTC*
+*Last synced: 2026-03-20 01:53 UTC*
