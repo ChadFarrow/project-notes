@@ -11,6 +11,7 @@
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#36](https://github.com/ChadFarrow/MSP-2.0/issues/36) ✓ Add person tag at track level
 - [#34](https://github.com/ChadFarrow/MSP-2.0/issues/34) ✓ New items in existing feeds
 - [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
 - [#29](https://github.com/ChadFarrow/MSP-2.0/issues/29) ✓ Maybe add op3 to advanced section
@@ -153,4 +154,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-03-21 12:55 UTC*
+*Last synced: 2026-03-21 18:32 UTC*
