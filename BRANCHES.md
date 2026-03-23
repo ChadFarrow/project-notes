@@ -41,7 +41,6 @@
 
 ## stablekraft-app
 
-- `claude/add-podcast-feed-sUR9X`
 - `feature/genre-filter`
 - `main`
 
@@ -97,4 +96,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-23 07:15 UTC*
+*Last synced: 2026-03-23 13:01 UTC*
