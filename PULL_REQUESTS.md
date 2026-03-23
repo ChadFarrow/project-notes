@@ -57,6 +57,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#53 Add proposal for music podcast support with Upbeats test feed](https://github.com/ChadFarrow/stablekraft-app/pull/53)
+
 ### Merged
 - [#52](https://github.com/ChadFarrow/stablekraft-app/pull/52) ✓ Fix undecoded HTML entities in song titles (e.g. &#39; instead of apostrophe)
 - [#51](https://github.com/ChadFarrow/stablekraft-app/pull/51) ✓ Fix getRelayUrl() failing for nostrconnect:// (Primal) connections
@@ -151,4 +154,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-22 18:41 UTC*
+*Last synced: 2026-03-23 02:00 UTC*
