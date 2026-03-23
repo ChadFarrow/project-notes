@@ -58,6 +58,10 @@
 ## stablekraft-app
 
 ### Merged
+- [#57](https://github.com/ChadFarrow/stablekraft-app/pull/57) ✓ Ensure podcast feeds get reparsed for new episodes
+- [#56](https://github.com/ChadFarrow/stablekraft-app/pull/56) ✓ Show podcast episodes (not tracks), sorted newest-first with dates
+- [#55](https://github.com/ChadFarrow/stablekraft-app/pull/55) ✓ Fix Podcasts filter to show curated podcast feeds (UpBeats)
+- [#54](https://github.com/ChadFarrow/stablekraft-app/pull/54) ✓ Add Podcasts filter to main page tabs (mobile select + desktop buttons)
 - [#53](https://github.com/ChadFarrow/stablekraft-app/pull/53) ✓ Add proposal for music podcast support with Upbeats test feed
 - [#52](https://github.com/ChadFarrow/stablekraft-app/pull/52) ✓ Fix undecoded HTML entities in song titles (e.g. &#39; instead of apostrophe)
 - [#51](https://github.com/ChadFarrow/stablekraft-app/pull/51) ✓ Fix getRelayUrl() failing for nostrconnect:// (Primal) connections
@@ -84,10 +88,6 @@
 - [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
 - [#27](https://github.com/ChadFarrow/stablekraft-app/pull/27) ✓ Add external reference doc for Alby/Lightning payment integration
 - [#26](https://github.com/ChadFarrow/stablekraft-app/pull/26) ✓ Add BoostBox integration for LNURL payment metadata
-- [#25](https://github.com/ChadFarrow/stablekraft-app/pull/25) ✓ fix: paginate publishers filter for faster loading and scrolling
-- [#23](https://github.com/ChadFarrow/stablekraft-app/pull/23) ✓ Deduplicate publisher feeds by artist name
-- [#22](https://github.com/ChadFarrow/stablekraft-app/pull/22) ✓ fix: resolve publisher page scroll jank on iOS PWA
-- [#21](https://github.com/ChadFarrow/stablekraft-app/pull/21) ✓ perf: eliminate redundant API calls and optimize sort for faster mobile loading
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-23 13:14 UTC*
+*Last synced: 2026-03-23 18:51 UTC*
