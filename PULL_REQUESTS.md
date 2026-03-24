@@ -58,6 +58,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#60](https://github.com/ChadFarrow/stablekraft-app/pull/60) ✓ fix: find first VTS with remoteItem instead of using index 0
+- [#59](https://github.com/ChadFarrow/stablekraft-app/pull/59) ✓ fix: prefer feed-matched track when resolving playlist remoteItems
 - [#58](https://github.com/ChadFarrow/stablekraft-app/pull/58) ✓ Add podcast chapter navigation + music podcast support
 - [#57](https://github.com/ChadFarrow/stablekraft-app/pull/57) ✓ Ensure podcast feeds get reparsed for new episodes
 - [#56](https://github.com/ChadFarrow/stablekraft-app/pull/56) ✓ Show podcast episodes (not tracks), sorted newest-first with dates
@@ -86,8 +88,6 @@
 - [#32](https://github.com/ChadFarrow/stablekraft-app/pull/32) ✓ Support Podcast Index URLs in admin feed add/reparse
 - [#30](https://github.com/ChadFarrow/stablekraft-app/pull/30) ✓ Add missing BoostBox GUID params to BoostButton callsites
 - [#29](https://github.com/ChadFarrow/stablekraft-app/pull/29) ✓ Add success toast to bottom-left share button
-- [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
-- [#27](https://github.com/ChadFarrow/stablekraft-app/pull/27) ✓ Add external reference doc for Alby/Lightning payment integration
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-24 13:18 UTC*
+*Last synced: 2026-03-24 18:59 UTC*
