@@ -58,6 +58,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#58](https://github.com/ChadFarrow/stablekraft-app/pull/58) ✓ Add podcast chapter navigation + music podcast support
 - [#57](https://github.com/ChadFarrow/stablekraft-app/pull/57) ✓ Ensure podcast feeds get reparsed for new episodes
 - [#56](https://github.com/ChadFarrow/stablekraft-app/pull/56) ✓ Show podcast episodes (not tracks), sorted newest-first with dates
 - [#55](https://github.com/ChadFarrow/stablekraft-app/pull/55) ✓ Fix Podcasts filter to show curated podcast feeds (UpBeats)
@@ -87,7 +88,6 @@
 - [#29](https://github.com/ChadFarrow/stablekraft-app/pull/29) ✓ Add success toast to bottom-left share button
 - [#28](https://github.com/ChadFarrow/stablekraft-app/pull/28) ✓ Update dependencies to latest within semver ranges
 - [#27](https://github.com/ChadFarrow/stablekraft-app/pull/27) ✓ Add external reference doc for Alby/Lightning payment integration
-- [#26](https://github.com/ChadFarrow/stablekraft-app/pull/26) ✓ Add BoostBox integration for LNURL payment metadata
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-23 18:59 UTC*
+*Last synced: 2026-03-24 01:51 UTC*
