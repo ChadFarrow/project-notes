@@ -58,6 +58,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#65](https://github.com/ChadFarrow/stablekraft-app/pull/65) ✓ fix: add explicit type to blended array to fix TS build error
 - [#64](https://github.com/ChadFarrow/stablekraft-app/pull/64) ✓ fix: chapter auto-boost now splits between track artist and show host
 - [#63](https://github.com/ChadFarrow/stablekraft-app/pull/63) ✓ fix: move share and auto-boost buttons inline below controls
 - [#62](https://github.com/ChadFarrow/stablekraft-app/pull/62) ✓ fix: move auto-boost toggle off album art to controls area
@@ -87,7 +88,6 @@
 - [#37](https://github.com/ChadFarrow/stablekraft-app/pull/37) ✓ Fix missing comma in package.json from merge conflict resolution
 - [#36](https://github.com/ChadFarrow/stablekraft-app/pull/36) ✓ Update auto-generated version
 - [#35](https://github.com/ChadFarrow/stablekraft-app/pull/35) ✓ Update auto-generated version
-- [#34](https://github.com/ChadFarrow/stablekraft-app/pull/34) ✓ Populate Feed.guid from podcast:guid during feed import
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-25 13:03 UTC*
+*Last synced: 2026-03-25 13:17 UTC*
