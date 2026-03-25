@@ -58,6 +58,10 @@
 ## stablekraft-app
 
 ### Merged
+- [#64](https://github.com/ChadFarrow/stablekraft-app/pull/64) ✓ fix: chapter auto-boost now splits between track artist and show host
+- [#63](https://github.com/ChadFarrow/stablekraft-app/pull/63) ✓ fix: move share and auto-boost buttons inline below controls
+- [#62](https://github.com/ChadFarrow/stablekraft-app/pull/62) ✓ fix: move auto-boost toggle off album art to controls area
+- [#61](https://github.com/ChadFarrow/stablekraft-app/pull/61) ✓ feat: auto-boost on VTS chapter/segment transitions
 - [#60](https://github.com/ChadFarrow/stablekraft-app/pull/60) ✓ fix: find first VTS with remoteItem instead of using index 0
 - [#59](https://github.com/ChadFarrow/stablekraft-app/pull/59) ✓ fix: prefer feed-matched track when resolving playlist remoteItems
 - [#58](https://github.com/ChadFarrow/stablekraft-app/pull/58) ✓ Add podcast chapter navigation + music podcast support
@@ -84,10 +88,6 @@
 - [#36](https://github.com/ChadFarrow/stablekraft-app/pull/36) ✓ Update auto-generated version
 - [#35](https://github.com/ChadFarrow/stablekraft-app/pull/35) ✓ Update auto-generated version
 - [#34](https://github.com/ChadFarrow/stablekraft-app/pull/34) ✓ Populate Feed.guid from podcast:guid during feed import
-- [#33](https://github.com/ChadFarrow/stablekraft-app/pull/33) ✓ Fix BoostBox feed_guid sending feed slug instead of podcast GUID
-- [#32](https://github.com/ChadFarrow/stablekraft-app/pull/32) ✓ Support Podcast Index URLs in admin feed add/reparse
-- [#30](https://github.com/ChadFarrow/stablekraft-app/pull/30) ✓ Add missing BoostBox GUID params to BoostButton callsites
-- [#29](https://github.com/ChadFarrow/stablekraft-app/pull/29) ✓ Add success toast to bottom-left share button
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-25 07:06 UTC*
+*Last synced: 2026-03-25 13:03 UTC*
