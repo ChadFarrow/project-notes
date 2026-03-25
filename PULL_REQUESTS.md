@@ -58,6 +58,10 @@
 ## stablekraft-app
 
 ### Merged
+- [#69](https://github.com/ChadFarrow/stablekraft-app/pull/69) ✓ feat: catch up missed chapter auto-boosts on foreground resume
+- [#68](https://github.com/ChadFarrow/stablekraft-app/pull/68) ✓ fix: move auto-boost toggle into playback controls row
+- [#67](https://github.com/ChadFarrow/stablekraft-app/pull/67) ✓ fix: let 100dvh control height instead of inset-0 bottom constraint
+- [#66](https://github.com/ChadFarrow/stablekraft-app/pull/66) ✓ fix: use 100dvh on NowPlayingScreen to avoid Safari URL bar clipping
 - [#65](https://github.com/ChadFarrow/stablekraft-app/pull/65) ✓ fix: add explicit type to blended array to fix TS build error
 - [#64](https://github.com/ChadFarrow/stablekraft-app/pull/64) ✓ fix: chapter auto-boost now splits between track artist and show host
 - [#63](https://github.com/ChadFarrow/stablekraft-app/pull/63) ✓ fix: move share and auto-boost buttons inline below controls
@@ -84,10 +88,6 @@
 - [#41](https://github.com/ChadFarrow/stablekraft-app/pull/41) ✓ Fix duplicate albums on reparse by normalizing URLs before DB lookup
 - [#40](https://github.com/ChadFarrow/stablekraft-app/pull/40) ✓ Fix iOS background audio: preload next track and proactive advance timer
 - [#39](https://github.com/ChadFarrow/stablekraft-app/pull/39) ✓ Fix autoboost not firing by adding album-level V4V fallback
-- [#38](https://github.com/ChadFarrow/stablekraft-app/pull/38) ✓ Fix NowPlayingScreen boost missing V4V data by adding album-level fallback
-- [#37](https://github.com/ChadFarrow/stablekraft-app/pull/37) ✓ Fix missing comma in package.json from merge conflict resolution
-- [#36](https://github.com/ChadFarrow/stablekraft-app/pull/36) ✓ Update auto-generated version
-- [#35](https://github.com/ChadFarrow/stablekraft-app/pull/35) ✓ Update auto-generated version
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-25 13:17 UTC*
+*Last synced: 2026-03-25 18:53 UTC*
