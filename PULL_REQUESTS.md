@@ -58,6 +58,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#71](https://github.com/ChadFarrow/stablekraft-app/pull/71) ✓ Fix autoboost not triggering on chapter transitions
+- [#70](https://github.com/ChadFarrow/stablekraft-app/pull/70) ✓ feat: auto-boost all chapters, not just song chapters
 - [#69](https://github.com/ChadFarrow/stablekraft-app/pull/69) ✓ feat: catch up missed chapter auto-boosts on foreground resume
 - [#68](https://github.com/ChadFarrow/stablekraft-app/pull/68) ✓ fix: move auto-boost toggle into playback controls row
 - [#67](https://github.com/ChadFarrow/stablekraft-app/pull/67) ✓ fix: let 100dvh control height instead of inset-0 bottom constraint
@@ -86,8 +88,6 @@
 - [#44](https://github.com/ChadFarrow/stablekraft-app/pull/44) ✓ Fix NWC wallet not persisting for NIP-46/Amber users
 - [#42](https://github.com/ChadFarrow/stablekraft-app/pull/42) ✓ Add bulk feed import from Podcast Index search pages
 - [#41](https://github.com/ChadFarrow/stablekraft-app/pull/41) ✓ Fix duplicate albums on reparse by normalizing URLs before DB lookup
-- [#40](https://github.com/ChadFarrow/stablekraft-app/pull/40) ✓ Fix iOS background audio: preload next track and proactive advance timer
-- [#39](https://github.com/ChadFarrow/stablekraft-app/pull/39) ✓ Fix autoboost not firing by adding album-level V4V fallback
 
 ## lnaddress-music
 
@@ -151,4 +151,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-25 18:59 UTC*
+*Last synced: 2026-03-26 02:03 UTC*
