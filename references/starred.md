@@ -25,6 +25,8 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podping](https://github.com/Podcastindex-org/podping) - A global message bus for podcast feed events.
+- [podping-hivewriter](https://github.com/Podcastindex-org/podping-hivewriter) - The hive writer component of podping.
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
 - [podping.alpha](https://github.com/Podcastindex-org/podping.alpha) - Testing out some new things
 - [sovereign-feeds](https://github.com/thebells1111/sovereign-feeds) - No description
@@ -81,4 +83,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-27 18:59 UTC*
+*Last synced: 2026-03-27 21:37 UTC*

@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/add-podping-integration-22KXt`
 - `claude/document-feed-hosting-bdjYj`
 - `claude/nostr-rss-feed-check-3j3vl`
 - `master`
@@ -97,4 +98,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-27 18:59 UTC*
+*Last synced: 2026-03-27 21:37 UTC*
