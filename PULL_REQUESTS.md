@@ -4,6 +4,9 @@
 
 ## MSP-2.0
 
+### Open
+- [#41 Add experimental nsite (NIP-5A) publishing support](https://github.com/ChadFarrow/MSP-2.0/pull/41)
+
 ### Merged
 - [#40](https://github.com/ChadFarrow/MSP-2.0/pull/40) ✓ Update lastBuildDate in remaining feed generation paths
 - [#39](https://github.com/ChadFarrow/MSP-2.0/pull/39) ✓ Update lastBuildDate when generating feed XML
@@ -153,4 +156,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-27 13:13 UTC*
+*Last synced: 2026-03-27 18:52 UTC*

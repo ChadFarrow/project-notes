@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/document-feed-hosting-bdjYj`
 - `claude/nostr-rss-feed-check-3j3vl`
 - `master`
 
@@ -96,4 +97,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-27 13:13 UTC*
+*Last synced: 2026-03-27 18:52 UTC*
