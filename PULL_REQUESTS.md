@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Merged
+- [#40](https://github.com/ChadFarrow/MSP-2.0/pull/40) ✓ Update lastBuildDate in remaining feed generation paths
+- [#39](https://github.com/ChadFarrow/MSP-2.0/pull/39) ✓ Update lastBuildDate when generating feed XML
 - [#38](https://github.com/ChadFarrow/MSP-2.0/pull/38) ✓ Skip redundant person tags on tracks that inherit from album
 - [#37](https://github.com/ChadFarrow/MSP-2.0/pull/37) ✓ Pre-populate track persons from album when override is toggled on
 - [#35](https://github.com/ChadFarrow/MSP-2.0/pull/35) ✓ Add community support splits button to track-level value recipients
@@ -151,4 +153,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-26 19:11 UTC*
+*Last synced: 2026-03-27 02:04 UTC*
