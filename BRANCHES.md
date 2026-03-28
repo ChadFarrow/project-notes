@@ -6,8 +6,6 @@
 
 - `FAFO`
 - `claude/add-podping-integration-22KXt`
-- `claude/document-feed-hosting-bdjYj`
-- `claude/nostr-rss-feed-check-3j3vl`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -87,6 +85,7 @@
 
 ## chadf-landing-page
 
+- `claude/add-tardbox-resource-OR7hG`
 - `main`
 
 ## HGH-checker
@@ -98,4 +97,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-28 18:45 UTC*
+*Last synced: 2026-03-28 23:10 UTC*

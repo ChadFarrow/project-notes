@@ -4,10 +4,9 @@
 
 ## MSP-2.0
 
-### Open
-- [#41 Add experimental nsite (NIP-5A) publishing support](https://github.com/ChadFarrow/MSP-2.0/pull/41)
-
 ### Merged
+- [#43](https://github.com/ChadFarrow/MSP-2.0/pull/43) ✓ Add NIP-71 naddr video resolution
+- [#42](https://github.com/ChadFarrow/MSP-2.0/pull/42) ✓ Add nsite (NIP-5A) publishing support
 - [#40](https://github.com/ChadFarrow/MSP-2.0/pull/40) ✓ Update lastBuildDate in remaining feed generation paths
 - [#39](https://github.com/ChadFarrow/MSP-2.0/pull/39) ✓ Update lastBuildDate when generating feed XML
 - [#38](https://github.com/ChadFarrow/MSP-2.0/pull/38) ✓ Skip redundant person tags on tracks that inherit from album
@@ -146,7 +145,8 @@
 
 ## chadf-landing-page
 
-*No pull requests*
+### Merged
+- [#2](https://github.com/ChadFarrow/chadf-landing-page/pull/2) ✓ Add TardBox to resources section
 
 ## HGH-checker
 
@@ -158,4 +158,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-28 18:45 UTC*
+*Last synced: 2026-03-28 23:10 UTC*
