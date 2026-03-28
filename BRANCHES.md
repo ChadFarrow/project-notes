@@ -11,7 +11,6 @@
 ## MSP-2.0-Desktop-App
 
 - `master` 🔒
-- `sync-upstream`
 
 ## castr.me
 
@@ -22,21 +21,15 @@
 
 ## TRM-Lightning
 
-- `claude/add-podcast-support-KHuvE`
 - `main`
-- `vercel/react-flight-rce-vulnerability-p71oc5`
 
 ## ITDV-Lightning
 
-- `claude/test-boostbox-KCi8w`
 - `main`
-- `vercel/dependencies-for-react-flight-9uwnbr`
 
 ## HPM-Lightning
 
-- `Nostr`
 - `main`
-- `vercel/nextjsreact-flight-rce-advisor-twgy2s`
 - `vercel/react-server-components-cve-vu-ndvmav`
 
 ## stablekraft-app
@@ -50,7 +43,6 @@
 
 ## musicL-playlist-updater
 
-- `claude/add-new-feed-playlist-M6gRA`
 - `main`
 
 ## chadf-musicl-playlists
@@ -68,7 +60,6 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-- `claude/albyhub-nwc-integration-wkbMd`
 - `main`
 
 ## LIT_Bot
@@ -85,7 +76,6 @@
 
 ## chadf-landing-page
 
-- `claude/add-tardbox-resource-OR7hG`
 - `main`
 
 ## HGH-checker
@@ -97,4 +87,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-28 23:12 UTC*
+*Last synced: 2026-03-28 23:44 UTC*
