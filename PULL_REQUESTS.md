@@ -63,6 +63,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#72](https://github.com/ChadFarrow/stablekraft-app/pull/72) ✓ fix: update Upbeats podcast RSS feed URL from RSS Blue to Podhome
 - [#71](https://github.com/ChadFarrow/stablekraft-app/pull/71) ✓ Fix autoboost not triggering on chapter transitions
 - [#70](https://github.com/ChadFarrow/stablekraft-app/pull/70) ✓ feat: auto-boost all chapters, not just song chapters
 - [#69](https://github.com/ChadFarrow/stablekraft-app/pull/69) ✓ feat: catch up missed chapter auto-boosts on foreground resume
@@ -92,7 +93,6 @@
 - [#45](https://github.com/ChadFarrow/stablekraft-app/pull/45) ✓ Update auto-generated version and PWA fallback file
 - [#44](https://github.com/ChadFarrow/stablekraft-app/pull/44) ✓ Fix NWC wallet not persisting for NIP-46/Amber users
 - [#42](https://github.com/ChadFarrow/stablekraft-app/pull/42) ✓ Add bulk feed import from Podcast Index search pages
-- [#41](https://github.com/ChadFarrow/stablekraft-app/pull/41) ✓ Fix duplicate albums on reparse by normalizing URLs before DB lookup
 
 ## lnaddress-music
 
@@ -110,11 +110,13 @@
 ## musicL-playlist-updater
 
 ### Merged
+- [#3](https://github.com/ChadFarrow/musicL-playlist-updater/pull/3) ✓ Update UpBeats feed URL to new Podhome location
 - [#2](https://github.com/ChadFarrow/musicL-playlist-updater/pull/2) ✓ Add Two for Tunestr feed to generate TFT music playlist
 
 ## chadf-musicl-playlists
 
-*No pull requests*
+### Merged
+- [#2](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/2) ✓ Update Two for Tunestr source feed URL to podhome.fm
 
 ## Auto-musicL-Maker
 
@@ -156,4 +158,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-28 13:01 UTC*
+*Last synced: 2026-03-28 18:36 UTC*
