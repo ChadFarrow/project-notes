@@ -41,6 +41,8 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [nsite.run](https://github.com/sandwichfarm/nsite.run) - nsite resource
+- [nsyte](https://github.com/sandwichfarm/nsyte) - deploy, manage and inspect websites served over nostr and blossom (nsites)
 - [zeus](https://github.com/ZeusLN/zeus) - A mobile Bitcoin wallet fit for the gods. ⚡️ Est. 563345
 - [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
@@ -83,4 +85,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-29 13:01 UTC*
+*Last synced: 2026-03-29 18:48 UTC*
