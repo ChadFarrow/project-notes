@@ -11,6 +11,7 @@
 ## MSP-2.0-Desktop-App
 
 - `master` 🔒
+- `sync-upstream`
 
 ## castr.me
 
@@ -87,4 +88,4 @@
 - `main`
 
 ---
-*Last synced: 2026-03-29 13:01 UTC*
+*Last synced: 2026-03-29 18:38 UTC*
