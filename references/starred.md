@@ -41,6 +41,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [stophammer](https://github.com/InTheMorning/stophammer) - V4V music feed index — index and community node (Rust + SQLite, signed event log)
 - [nsite.run](https://github.com/sandwichfarm/nsite.run) - nsite resource
 - [nsyte](https://github.com/sandwichfarm/nsyte) - deploy, manage and inspect websites served over nostr and blossom (nsites)
 - [zeus](https://github.com/ZeusLN/zeus) - A mobile Bitcoin wallet fit for the gods. ⚡️ Est. 563345
@@ -85,4 +86,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-03-30 13:27 UTC*
+*Last synced: 2026-03-30 19:03 UTC*
