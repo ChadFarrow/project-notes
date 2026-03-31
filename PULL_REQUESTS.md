@@ -63,6 +63,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
 - [#74](https://github.com/ChadFarrow/stablekraft-app/pull/74) ✓ fix: always show boost buttons for favorite tracks
 - [#73](https://github.com/ChadFarrow/stablekraft-app/pull/73) ✓ fix: Nostr boost links point to album page instead of favorites/playlist URLs
 - [#72](https://github.com/ChadFarrow/stablekraft-app/pull/72) ✓ fix: update Upbeats podcast RSS feed URL from RSS Blue to Podhome
@@ -92,7 +93,6 @@
 - [#48](https://github.com/ChadFarrow/stablekraft-app/pull/48) ✓ Fix Primal signer timeout on boost by matching NIP-46 relay timeout
 - [#47](https://github.com/ChadFarrow/stablekraft-app/pull/47) ✓ Update auto-generated version and PWA fallback file
 - [#46](https://github.com/ChadFarrow/stablekraft-app/pull/46) ✓ Add Primal login tab for iOS Nostr authentication
-- [#45](https://github.com/ChadFarrow/stablekraft-app/pull/45) ✓ Update auto-generated version and PWA fallback file
 
 ## lnaddress-music
 
@@ -159,4 +159,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-03-30 19:03 UTC*
+*Last synced: 2026-03-31 02:05 UTC*
