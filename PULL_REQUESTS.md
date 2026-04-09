@@ -42,6 +42,7 @@
 ## TRM-Lightning
 
 ### Merged
+- [#3](https://github.com/ChadFarrow/TRM-Lightning/pull/3) ✓ Fix video playback pausing after extended periods
 - [#1](https://github.com/ChadFarrow/TRM-Lightning/pull/1) ✓ Fix React Server Components RCE vulnerability
 
 ## ITDV-Lightning
@@ -160,4 +161,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-09 07:27 UTC*
+*Last synced: 2026-04-09 13:20 UTC*
