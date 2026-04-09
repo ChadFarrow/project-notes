@@ -124,7 +124,8 @@
 
 ## RSS-music-site-template
 
-*No pull requests*
+### Open
+- [#2 Update Next.js to 15.5.15 to fix CVE-2025-66478](https://github.com/ChadFarrow/RSS-music-site-template/pull/2)
 
 ## Helipad-to-Nostr-BoostBot
 
@@ -159,4 +160,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-08 19:20 UTC*
+*Last synced: 2026-04-09 01:59 UTC*

@@ -57,6 +57,7 @@
 ## RSS-music-site-template
 
 - `claude/clone-repository-2O3bN`
+- `fix/update-nextjs-cve-2025-66478`
 - `main`
 
 ## Helipad-to-Nostr-BoostBot
@@ -88,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-08 19:20 UTC*
+*Last synced: 2026-04-09 01:59 UTC*
