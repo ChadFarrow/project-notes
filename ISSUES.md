@@ -47,7 +47,8 @@
 
 ## TRM-Lightning
 
-*No issues*
+### Open
+- [#2 video pauses after 30 minutes](https://github.com/ChadFarrow/TRM-Lightning/issues/2)
 
 ## ITDV-Lightning
 
@@ -154,4 +155,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-09 01:59 UTC*
+*Last synced: 2026-04-09 02:35 UTC*

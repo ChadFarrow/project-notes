@@ -32,9 +32,9 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [NMNU](https://github.com/ChadFarrow/NMNU) -  *(NEW)*
 - [v4v-core-rs](https://github.com/ChadFarrow/v4v-core-rs) -  *(NEW)*
 - [v4v-toolkit](https://github.com/ChadFarrow/v4v-toolkit) -  *(NEW)*
-- [NMNU](https://github.com/ChadFarrow/NMNU) -  *(NEW)*
 - [is-this-thing-on](https://github.com/ChadFarrow/is-this-thing-on) -  *(NEW)*
 - [IRL_QR](https://github.com/ChadFarrow/IRL_QR) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
