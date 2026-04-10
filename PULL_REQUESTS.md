@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Merged
+- [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
+- [#44](https://github.com/ChadFarrow/MSP-2.0/pull/44) ✓ Add Nostr music NIP research notes
 - [#43](https://github.com/ChadFarrow/MSP-2.0/pull/43) ✓ Add NIP-71 naddr video resolution
 - [#42](https://github.com/ChadFarrow/MSP-2.0/pull/42) ✓ Add nsite (NIP-5A) publishing support
 - [#40](https://github.com/ChadFarrow/MSP-2.0/pull/40) ✓ Update lastBuildDate in remaining feed generation paths
@@ -162,4 +164,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-10 13:17 UTC*
+*Last synced: 2026-04-10 18:47 UTC*
