@@ -6,7 +6,6 @@
 
 - `FAFO`
 - `claude/add-podping-integration-22KXt`
-- `claude/nostr-music-custom-relay`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -90,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-11 18:50 UTC*
+*Last synced: 2026-04-12 01:40 UTC*
