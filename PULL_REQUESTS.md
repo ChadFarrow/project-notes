@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 - [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
 - [#44](https://github.com/ChadFarrow/MSP-2.0/pull/44) ✓ Add Nostr music NIP research notes
 - [#43](https://github.com/ChadFarrow/MSP-2.0/pull/43) ✓ Add NIP-71 naddr video resolution
@@ -164,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-12 18:55 UTC*
+*Last synced: 2026-04-13 02:26 UTC*

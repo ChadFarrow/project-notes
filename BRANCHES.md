@@ -6,6 +6,7 @@
 
 - `FAFO`
 - `claude/add-podping-integration-22KXt`
+- `claude/nostr-zap-splits-L8dhA`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -89,4 +90,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-12 18:55 UTC*
+*Last synced: 2026-04-13 02:26 UTC*
