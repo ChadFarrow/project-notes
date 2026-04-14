@@ -68,6 +68,11 @@
 ## stablekraft-app
 
 ### Merged
+- [#93](https://github.com/ChadFarrow/stablekraft-app/pull/93) ✓ fix: reflex proxy fallback for client-side chapters fetch
+- [#92](https://github.com/ChadFarrow/stablekraft-app/pull/92) ✓ fix: prevent iOS Safari scroll-through behind Now Playing screen
+- [#87](https://github.com/ChadFarrow/stablekraft-app/pull/87) ✓ fix: correct Two For Tunestr feed ID in nightly workflow; shrink PWA page cache TTL
+- [#86](https://github.com/ChadFarrow/stablekraft-app/pull/86) ✓ fix: make admin feed form mobile-friendly
+- [#84](https://github.com/ChadFarrow/stablekraft-app/pull/84) ✓ chore: add regenerated fallback SW from build
 - [#83](https://github.com/ChadFarrow/stablekraft-app/pull/83) ✓ Fix Brave iOS callback: use plain https:// instead of brave://open-url
 - [#82](https://github.com/ChadFarrow/stablekraft-app/pull/82) ✓ Fix Primal NIP-46 redirect back to Brave (and other non-Safari iOS browsers)
 - [#81](https://github.com/ChadFarrow/stablekraft-app/pull/81) ✓ Add callbackUrl to Primal nostrconnect URI and improve return-to-browser UX
@@ -93,11 +98,6 @@
 - [#61](https://github.com/ChadFarrow/stablekraft-app/pull/61) ✓ feat: auto-boost on VTS chapter/segment transitions
 - [#60](https://github.com/ChadFarrow/stablekraft-app/pull/60) ✓ fix: find first VTS with remoteItem instead of using index 0
 - [#59](https://github.com/ChadFarrow/stablekraft-app/pull/59) ✓ fix: prefer feed-matched track when resolving playlist remoteItems
-- [#58](https://github.com/ChadFarrow/stablekraft-app/pull/58) ✓ Add podcast chapter navigation + music podcast support
-- [#57](https://github.com/ChadFarrow/stablekraft-app/pull/57) ✓ Ensure podcast feeds get reparsed for new episodes
-- [#56](https://github.com/ChadFarrow/stablekraft-app/pull/56) ✓ Show podcast episodes (not tracks), sorted newest-first with dates
-- [#55](https://github.com/ChadFarrow/stablekraft-app/pull/55) ✓ Fix Podcasts filter to show curated podcast feeds (UpBeats)
-- [#54](https://github.com/ChadFarrow/stablekraft-app/pull/54) ✓ Add Podcasts filter to main page tabs (mobile select + desktop buttons)
 
 ## lnaddress-music
 
@@ -165,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-14 13:48 UTC*
+*Last synced: 2026-04-14 19:10 UTC*

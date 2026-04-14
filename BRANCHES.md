@@ -36,7 +36,7 @@
 
 ## stablekraft-app
 
-- `claude/fix-noster-boost-signing-Tcz5s`
+- `claude/add-missing-podcast-chapters-AYzWE`
 - `feature/genre-filter`
 - `main`
 
@@ -91,4 +91,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-14 13:48 UTC*
+*Last synced: 2026-04-14 19:10 UTC*
