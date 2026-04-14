@@ -68,6 +68,11 @@
 ## stablekraft-app
 
 ### Merged
+- [#82](https://github.com/ChadFarrow/stablekraft-app/pull/82) ✓ Fix Primal NIP-46 redirect back to Brave (and other non-Safari iOS browsers)
+- [#81](https://github.com/ChadFarrow/stablekraft-app/pull/81) ✓ Add callbackUrl to Primal nostrconnect URI and improve return-to-browser UX
+- [#80](https://github.com/ChadFarrow/stablekraft-app/pull/80) ✓ Remove Nostr signup/key creation from app
+- [#79](https://github.com/ChadFarrow/stablekraft-app/pull/79) ✓ Add direct extension login for faster NIP-07 sign-in
+- [#78](https://github.com/ChadFarrow/stablekraft-app/pull/78) ✓ fix: persist signer pubkey and stop aggressive stale reconnection for Primal
 - [#77](https://github.com/ChadFarrow/stablekraft-app/pull/77) ✓ fix: clean up NIP-46 state on logout so boost signing works after re-login
 - [#76](https://github.com/ChadFarrow/stablekraft-app/pull/76) ✓ fix: prevent NIP-46 boost signing race condition and silent relay failures
 - [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
@@ -93,11 +98,6 @@
 - [#55](https://github.com/ChadFarrow/stablekraft-app/pull/55) ✓ Fix Podcasts filter to show curated podcast feeds (UpBeats)
 - [#54](https://github.com/ChadFarrow/stablekraft-app/pull/54) ✓ Add Podcasts filter to main page tabs (mobile select + desktop buttons)
 - [#53](https://github.com/ChadFarrow/stablekraft-app/pull/53) ✓ Add proposal for music podcast support with Upbeats test feed
-- [#52](https://github.com/ChadFarrow/stablekraft-app/pull/52) ✓ Fix undecoded HTML entities in song titles (e.g. &#39; instead of apostrophe)
-- [#51](https://github.com/ChadFarrow/stablekraft-app/pull/51) ✓ Fix getRelayUrl() failing for nostrconnect:// (Primal) connections
-- [#50](https://github.com/ChadFarrow/stablekraft-app/pull/50) ✓ Fix RelayManager.isConnected() to check actual WebSocket state
-- [#49](https://github.com/ChadFarrow/stablekraft-app/pull/49) ✓ Fix stale relay subscription causing Primal signer timeout on boost
-- [#48](https://github.com/ChadFarrow/stablekraft-app/pull/48) ✓ Fix Primal signer timeout on boost by matching NIP-46 relay timeout
 
 ## lnaddress-music
 
@@ -165,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-14 07:51 UTC*
+*Last synced: 2026-04-14 13:19 UTC*
