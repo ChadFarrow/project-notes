@@ -68,6 +68,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#83](https://github.com/ChadFarrow/stablekraft-app/pull/83) ✓ Fix Brave iOS callback: use plain https:// instead of brave://open-url
 - [#82](https://github.com/ChadFarrow/stablekraft-app/pull/82) ✓ Fix Primal NIP-46 redirect back to Brave (and other non-Safari iOS browsers)
 - [#81](https://github.com/ChadFarrow/stablekraft-app/pull/81) ✓ Add callbackUrl to Primal nostrconnect URI and improve return-to-browser UX
 - [#80](https://github.com/ChadFarrow/stablekraft-app/pull/80) ✓ Remove Nostr signup/key creation from app
@@ -97,7 +98,6 @@
 - [#56](https://github.com/ChadFarrow/stablekraft-app/pull/56) ✓ Show podcast episodes (not tracks), sorted newest-first with dates
 - [#55](https://github.com/ChadFarrow/stablekraft-app/pull/55) ✓ Fix Podcasts filter to show curated podcast feeds (UpBeats)
 - [#54](https://github.com/ChadFarrow/stablekraft-app/pull/54) ✓ Add Podcasts filter to main page tabs (mobile select + desktop buttons)
-- [#53](https://github.com/ChadFarrow/stablekraft-app/pull/53) ✓ Add proposal for music podcast support with Upbeats test feed
 
 ## lnaddress-music
 
@@ -165,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-14 13:19 UTC*
+*Last synced: 2026-04-14 13:48 UTC*
