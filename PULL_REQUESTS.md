@@ -68,6 +68,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#77](https://github.com/ChadFarrow/stablekraft-app/pull/77) ✓ fix: clean up NIP-46 state on logout so boost signing works after re-login
+- [#76](https://github.com/ChadFarrow/stablekraft-app/pull/76) ✓ fix: prevent NIP-46 boost signing race condition and silent relay failures
 - [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
 - [#74](https://github.com/ChadFarrow/stablekraft-app/pull/74) ✓ fix: always show boost buttons for favorite tracks
 - [#73](https://github.com/ChadFarrow/stablekraft-app/pull/73) ✓ fix: Nostr boost links point to album page instead of favorites/playlist URLs
@@ -96,8 +98,6 @@
 - [#50](https://github.com/ChadFarrow/stablekraft-app/pull/50) ✓ Fix RelayManager.isConnected() to check actual WebSocket state
 - [#49](https://github.com/ChadFarrow/stablekraft-app/pull/49) ✓ Fix stale relay subscription causing Primal signer timeout on boost
 - [#48](https://github.com/ChadFarrow/stablekraft-app/pull/48) ✓ Fix Primal signer timeout on boost by matching NIP-46 relay timeout
-- [#47](https://github.com/ChadFarrow/stablekraft-app/pull/47) ✓ Update auto-generated version and PWA fallback file
-- [#46](https://github.com/ChadFarrow/stablekraft-app/pull/46) ✓ Add Primal login tab for iOS Nostr authentication
 
 ## lnaddress-music
 
@@ -165,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-13 19:17 UTC*
+*Last synced: 2026-04-14 02:12 UTC*
