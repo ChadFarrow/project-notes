@@ -68,6 +68,9 @@
 ## stablekraft-app
 
 ### Merged
+- [#96](https://github.com/ChadFarrow/stablekraft-app/pull/96) ✓ feat: add Amber as a top-level Nostr signer option
+- [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
+- [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
 - [#93](https://github.com/ChadFarrow/stablekraft-app/pull/93) ✓ fix: reflex proxy fallback for client-side chapters fetch
 - [#92](https://github.com/ChadFarrow/stablekraft-app/pull/92) ✓ fix: prevent iOS Safari scroll-through behind Now Playing screen
 - [#87](https://github.com/ChadFarrow/stablekraft-app/pull/87) ✓ fix: correct Two For Tunestr feed ID in nightly workflow; shrink PWA page cache TTL
@@ -95,9 +98,6 @@
 - [#64](https://github.com/ChadFarrow/stablekraft-app/pull/64) ✓ fix: chapter auto-boost now splits between track artist and show host
 - [#63](https://github.com/ChadFarrow/stablekraft-app/pull/63) ✓ fix: move share and auto-boost buttons inline below controls
 - [#62](https://github.com/ChadFarrow/stablekraft-app/pull/62) ✓ fix: move auto-boost toggle off album art to controls area
-- [#61](https://github.com/ChadFarrow/stablekraft-app/pull/61) ✓ feat: auto-boost on VTS chapter/segment transitions
-- [#60](https://github.com/ChadFarrow/stablekraft-app/pull/60) ✓ fix: find first VTS with remoteItem instead of using index 0
-- [#59](https://github.com/ChadFarrow/stablekraft-app/pull/59) ✓ fix: prefer feed-matched track when resolving playlist remoteItems
 
 ## lnaddress-music
 
@@ -165,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-14 19:20 UTC*
+*Last synced: 2026-04-15 02:10 UTC*
