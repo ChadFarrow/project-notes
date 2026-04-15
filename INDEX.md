@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
 - [podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) - A wholistic rss namespace for podcasting *(NEW)*
 - [NMNU](https://github.com/ChadFarrow/NMNU) -  *(NEW)*
 - [v4v-core-rs](https://github.com/ChadFarrow/v4v-core-rs) -  *(NEW)*
