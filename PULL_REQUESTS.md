@@ -71,6 +71,9 @@
 - [#97 feat(signer-nudge): kind-aware labels + connectivity-aware message](https://github.com/ChadFarrow/stablekraft-app/pull/97)
 
 ### Merged
+- [#100](https://github.com/ChadFarrow/stablekraft-app/pull/100) ✓ Fix NIP-46 relay reconnection for Primal boost signing
+- [#99](https://github.com/ChadFarrow/stablekraft-app/pull/99) ✓ Fix user profile not loading after NIP-46/Primal login
+- [#98](https://github.com/ChadFarrow/stablekraft-app/pull/98) ✓ fix: nostr login perf + multi-relay bunker + pubkey normalization
 - [#96](https://github.com/ChadFarrow/stablekraft-app/pull/96) ✓ feat: add Amber as a top-level Nostr signer option
 - [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
 - [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
@@ -98,9 +101,6 @@
 - [#67](https://github.com/ChadFarrow/stablekraft-app/pull/67) ✓ fix: let 100dvh control height instead of inset-0 bottom constraint
 - [#66](https://github.com/ChadFarrow/stablekraft-app/pull/66) ✓ fix: use 100dvh on NowPlayingScreen to avoid Safari URL bar clipping
 - [#65](https://github.com/ChadFarrow/stablekraft-app/pull/65) ✓ fix: add explicit type to blended array to fix TS build error
-- [#64](https://github.com/ChadFarrow/stablekraft-app/pull/64) ✓ fix: chapter auto-boost now splits between track artist and show host
-- [#63](https://github.com/ChadFarrow/stablekraft-app/pull/63) ✓ fix: move share and auto-boost buttons inline below controls
-- [#62](https://github.com/ChadFarrow/stablekraft-app/pull/62) ✓ fix: move auto-boost toggle off album art to controls area
 
 ## lnaddress-music
 
@@ -168,4 +168,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-16 07:52 UTC*
+*Last synced: 2026-04-16 13:24 UTC*
