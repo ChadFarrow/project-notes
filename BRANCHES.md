@@ -37,6 +37,7 @@
 ## stablekraft-app
 
 - `claude/add-missing-podcast-chapters-AYzWE`
+- `claude/primal-signer-ios-txs16`
 - `feature/genre-filter`
 - `main`
 
@@ -91,4 +92,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-15 19:22 UTC*
+*Last synced: 2026-04-16 02:26 UTC*

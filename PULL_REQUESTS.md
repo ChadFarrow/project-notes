@@ -67,6 +67,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#97 feat(signer-nudge): kind-aware labels + connectivity-aware message](https://github.com/ChadFarrow/stablekraft-app/pull/97)
+
 ### Merged
 - [#96](https://github.com/ChadFarrow/stablekraft-app/pull/96) ✓ feat: add Amber as a top-level Nostr signer option
 - [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
@@ -165,4 +168,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-15 19:22 UTC*
+*Last synced: 2026-04-16 02:26 UTC*
