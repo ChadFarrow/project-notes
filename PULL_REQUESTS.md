@@ -67,10 +67,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#97 feat(signer-nudge): kind-aware labels + connectivity-aware message](https://github.com/ChadFarrow/stablekraft-app/pull/97)
-
 ### Merged
+- [#103](https://github.com/ChadFarrow/stablekraft-app/pull/103) ✓ fix: Primal signing — persist signerAppPubkey + recover stale signer for favorites
 - [#102](https://github.com/ChadFarrow/stablekraft-app/pull/102) ✓ Keep NIP-46 relay socket alive on non-login pages
 - [#101](https://github.com/ChadFarrow/stablekraft-app/pull/101) ✓ Revive in-memory NIP-46 client before localStorage restore
 - [#100](https://github.com/ChadFarrow/stablekraft-app/pull/100) ✓ Fix NIP-46 relay reconnection for Primal boost signing
@@ -100,7 +98,6 @@
 - [#70](https://github.com/ChadFarrow/stablekraft-app/pull/70) ✓ feat: auto-boost all chapters, not just song chapters
 - [#69](https://github.com/ChadFarrow/stablekraft-app/pull/69) ✓ feat: catch up missed chapter auto-boosts on foreground resume
 - [#68](https://github.com/ChadFarrow/stablekraft-app/pull/68) ✓ fix: move auto-boost toggle into playback controls row
-- [#67](https://github.com/ChadFarrow/stablekraft-app/pull/67) ✓ fix: let 100dvh control height instead of inset-0 bottom constraint
 
 ## lnaddress-music
 
@@ -168,4 +165,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-16 19:20 UTC*
+*Last synced: 2026-04-17 02:14 UTC*
