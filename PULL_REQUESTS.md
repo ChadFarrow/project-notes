@@ -4,6 +4,9 @@
 
 ## MSP-2.0
 
+### Open
+- [#47 Scaffold podping.cloud integration](https://github.com/ChadFarrow/MSP-2.0/pull/47)
+
 ### Merged
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 - [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
@@ -68,6 +71,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
+- [#104](https://github.com/ChadFarrow/stablekraft-app/pull/104) ✓ fix: keep Lightning wallet connected when Nostr logs out
 - [#103](https://github.com/ChadFarrow/stablekraft-app/pull/103) ✓ fix: Primal signing — persist signerAppPubkey + recover stale signer for favorites
 - [#102](https://github.com/ChadFarrow/stablekraft-app/pull/102) ✓ Keep NIP-46 relay socket alive on non-login pages
 - [#101](https://github.com/ChadFarrow/stablekraft-app/pull/101) ✓ Revive in-memory NIP-46 client before localStorage restore
@@ -96,8 +101,6 @@
 - [#72](https://github.com/ChadFarrow/stablekraft-app/pull/72) ✓ fix: update Upbeats podcast RSS feed URL from RSS Blue to Podhome
 - [#71](https://github.com/ChadFarrow/stablekraft-app/pull/71) ✓ Fix autoboost not triggering on chapter transitions
 - [#70](https://github.com/ChadFarrow/stablekraft-app/pull/70) ✓ feat: auto-boost all chapters, not just song chapters
-- [#69](https://github.com/ChadFarrow/stablekraft-app/pull/69) ✓ feat: catch up missed chapter auto-boosts on foreground resume
-- [#68](https://github.com/ChadFarrow/stablekraft-app/pull/68) ✓ fix: move auto-boost toggle into playback controls row
 
 ## lnaddress-music
 
@@ -165,4 +168,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-17 13:25 UTC*
+*Last synced: 2026-04-17 18:56 UTC*

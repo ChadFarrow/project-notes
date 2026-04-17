@@ -6,6 +6,7 @@
 
 - `FAFO`
 - `claude/add-podping-integration-22KXt`
+- `claude/evaluate-pypodping-alternative-4SXWh`
 - `claude/nostr-zap-splits-L8dhA`
 - `master`
 
@@ -90,4 +91,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-17 13:25 UTC*
+*Last synced: 2026-04-17 18:56 UTC*
