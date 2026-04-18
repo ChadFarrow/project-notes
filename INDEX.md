@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
 - [podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) - A wholistic rss namespace for podcasting *(NEW)*
@@ -43,7 +44,6 @@
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [helipad-startos](https://github.com/ChadFarrow/helipad-startos) - Helipad packaged for Start9's StartOS. *(NEW)*
-- [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
