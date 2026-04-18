@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
 - [podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) - A wholistic rss namespace for podcasting *(NEW)*
 - [NMNU](https://github.com/ChadFarrow/NMNU) -  *(NEW)*
