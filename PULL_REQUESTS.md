@@ -4,10 +4,8 @@
 
 ## MSP-2.0
 
-### Open
-- [#47 Scaffold podping.cloud integration](https://github.com/ChadFarrow/MSP-2.0/pull/47)
-
 ### Merged
+- [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 - [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
 - [#44](https://github.com/ChadFarrow/MSP-2.0/pull/44) ✓ Add Nostr music NIP research notes
@@ -168,4 +166,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-17 19:04 UTC*
+*Last synced: 2026-04-18 02:04 UTC*
