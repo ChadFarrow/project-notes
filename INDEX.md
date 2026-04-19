@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
@@ -47,7 +48,6 @@
 - [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
-- [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [stacks](https://github.com/ChadFarrow/stacks) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. *(NEW)*
 - [stacks-pc20](https://github.com/ChadFarrow/stacks-pc20) - stacks templet for podcasting 2.0 *(NEW)*
 - [BoostBot-Starter](https://github.com/ChadFarrow/BoostBot-Starter) -  *(NEW)*
