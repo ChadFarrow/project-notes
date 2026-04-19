@@ -26,10 +26,14 @@
 ## MSP-2.0-Desktop-App
 
 ### Open
-- [#10 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/10)
+- [#12 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/12)
 
 ### Merged
+- [#15](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/15) ✓ Wire NIP-71 naddr paste handler into Video URL input
+- [#14](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/14) ✓ Restore bottom toolbar to match web layout
+- [#13](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/13) ✓ Port upstream features dropped by sync auto-resolve
 - [#11](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/11) ✓ Add Windows AV false positive warning and NSIS config improvements
+- [#10](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/10) ✓ Sync updates from web repo
 - [#9](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/9) ✓ Sync updates from web repo
 - [#8](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/8) ✓ Sync updates from web repo
 - [#7](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/7) ✓ Sync updates from web repo
@@ -166,4 +170,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-18 18:55 UTC*
+*Last synced: 2026-04-19 02:26 UTC*

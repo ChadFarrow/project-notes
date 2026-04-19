@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/add-podping-integration-22KXt`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -89,4 +88,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-18 18:55 UTC*
+*Last synced: 2026-04-19 02:26 UTC*
