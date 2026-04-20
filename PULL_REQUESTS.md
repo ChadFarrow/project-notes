@@ -73,6 +73,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
 - [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
 - [#104](https://github.com/ChadFarrow/stablekraft-app/pull/104) ✓ fix: keep Lightning wallet connected when Nostr logs out
 - [#103](https://github.com/ChadFarrow/stablekraft-app/pull/103) ✓ fix: Primal signing — persist signerAppPubkey + recover stale signer for favorites
@@ -102,7 +103,6 @@
 - [#73](https://github.com/ChadFarrow/stablekraft-app/pull/73) ✓ fix: Nostr boost links point to album page instead of favorites/playlist URLs
 - [#72](https://github.com/ChadFarrow/stablekraft-app/pull/72) ✓ fix: update Upbeats podcast RSS feed URL from RSS Blue to Podhome
 - [#71](https://github.com/ChadFarrow/stablekraft-app/pull/71) ✓ Fix autoboost not triggering on chapter transitions
-- [#70](https://github.com/ChadFarrow/stablekraft-app/pull/70) ✓ feat: auto-boost all chapters, not just song chapters
 
 ## lnaddress-music
 
@@ -170,4 +170,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-19 18:55 UTC*
+*Last synced: 2026-04-20 02:26 UTC*
