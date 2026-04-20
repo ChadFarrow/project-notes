@@ -72,6 +72,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#108 feat(api): OPML export at /api/feeds/opml for cross-app feed import](https://github.com/ChadFarrow/stablekraft-app/pull/108)
+
 ### Merged
 - [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
 - [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
@@ -170,4 +173,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-20 13:23 UTC*
+*Last synced: 2026-04-20 13:48 UTC*
