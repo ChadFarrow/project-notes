@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
 - [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 - [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
@@ -173,4 +174,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-20 19:01 UTC*
+*Last synced: 2026-04-20 19:10 UTC*
