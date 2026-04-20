@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/fix-ios-info-card-dGNSB`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -89,4 +90,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-20 13:48 UTC*
+*Last synced: 2026-04-20 19:01 UTC*
