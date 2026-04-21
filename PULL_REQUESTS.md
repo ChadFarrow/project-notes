@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#49](https://github.com/ChadFarrow/MSP-2.0/pull/49) ✓ Portal info tooltip to body on mobile so it clears backdrop-filter
 - [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
 - [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
@@ -73,11 +74,9 @@
 
 ## stablekraft-app
 
-### Open
-- [#108 feat(api): OPML export at /api/feeds/opml for cross-app feed import](https://github.com/ChadFarrow/stablekraft-app/pull/108)
-
 ### Merged
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
+- [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
 - [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
 - [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
 - [#104](https://github.com/ChadFarrow/stablekraft-app/pull/104) ✓ fix: keep Lightning wallet connected when Nostr logs out
@@ -106,7 +105,6 @@
 - [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
 - [#74](https://github.com/ChadFarrow/stablekraft-app/pull/74) ✓ fix: always show boost buttons for favorite tracks
 - [#73](https://github.com/ChadFarrow/stablekraft-app/pull/73) ✓ fix: Nostr boost links point to album page instead of favorites/playlist URLs
-- [#72](https://github.com/ChadFarrow/stablekraft-app/pull/72) ✓ fix: update Upbeats podcast RSS feed URL from RSS Blue to Podhome
 
 ## lnaddress-music
 
@@ -174,4 +172,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-20 19:10 UTC*
+*Last synced: 2026-04-21 02:23 UTC*

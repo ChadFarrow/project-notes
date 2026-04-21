@@ -34,7 +34,6 @@
 
 ## stablekraft-app
 
-- `claude/add-feed-list-alDsf`
 - `feature/genre-filter`
 - `main`
 
@@ -89,4 +88,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-20 19:10 UTC*
+*Last synced: 2026-04-21 02:23 UTC*

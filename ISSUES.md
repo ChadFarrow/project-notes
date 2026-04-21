@@ -62,10 +62,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#107 Some Henrik Flyman albums display tracks in reverse order](https://github.com/ChadFarrow/stablekraft-app/issues/107)
-
 ### Closed
+- [#107](https://github.com/ChadFarrow/stablekraft-app/issues/107) ✓ Some Henrik Flyman albums display tracks in reverse order
 - [#43](https://github.com/ChadFarrow/stablekraft-app/issues/43) ✓ Add two for tunestr to this as a playlist
 - [#24](https://github.com/ChadFarrow/stablekraft-app/issues/24) ✓ Add confirmation for share link being copied on desktop
 - [#17](https://github.com/ChadFarrow/stablekraft-app/issues/17) ✓ Lock screen issues iOS
@@ -156,4 +154,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-20 19:09 UTC*
+*Last synced: 2026-04-21 02:22 UTC*
