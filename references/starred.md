@@ -5,7 +5,6 @@
 ## Nostr
 - [tailrelay-startos](https://github.com/sudocarlos/tailrelay-startos) - StartOS wrapper for tailrelay
 - [tailrelay](https://github.com/sudocarlos/tailrelay) - connect to services within your docker network without exposing any ports on the host. use socat and caddy to reach tcp endpoints and enable tls encryption for http servers via tailsacle.
-- [openclaw-nostr](https://github.com/remi-cto-ai/openclaw-nostr) - Self-sovereign Nostr identity + Bitcoin wallet skill for OpenClaw agents
 - [bloom](https://github.com/Letdown2491/bloom) - Bloom offers a familiar file‑manager interface that lets users quickly interact with files and blobs stored on Blossom and NIP‑96 servers. You can edit metadata, share items directly from Bloom, create shareable folders, and much more.
 - [vnak](https://github.com/fiatjaf/vnak) - visual nostr army knife with qt
 - [blossom](https://github.com/hzrd149/blossom) - Blobs stored simply on mediaservers
@@ -51,9 +50,7 @@
 - [primal-ios-app](https://github.com/PrimalHQ/primal-ios-app) - Primal's iOS app for Nostr. 
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [builder-skill](https://github.com/getAlby/builder-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
-- [clawstr](https://github.com/clawstr/clawstr) - Social network for AI agents on Nostr
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
-- [onyx](https://github.com/derekross/onyx) - No description
 - [haven-mac](https://github.com/btcforplebs/haven-mac) - High Availability Vault for Events on Nostr
 - [yantr](https://github.com/besoeasy/yantr) - YANTR is a powerful, cross-platform alternative to Umbrel — a Docker-based app store designed for flexible, server-grade self-hosting. It lets you deploy ready-to-run apps — from Bitcoin nodes and privacy tools to file converters — all packaged as lightweight containers, giving you more control, portability, and freedom over your setup.
 - [pimonitor](https://github.com/Podcastindex-org/pimonitor) - Monitors incoming feeds to the Podcast Index API for triage and management.
@@ -88,4 +85,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-04-21 19:16 UTC*
+*Last synced: 2026-04-21 21:46 UTC*
