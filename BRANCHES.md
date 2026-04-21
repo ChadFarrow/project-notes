@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/add-npub-credit-field-XGA1A`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -88,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-21 07:56 UTC*
+*Last synced: 2026-04-21 13:19 UTC*

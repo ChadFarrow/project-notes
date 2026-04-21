@@ -4,6 +4,9 @@
 
 ## MSP-2.0
 
+### Open
+- [#50 Add Nostr npub field to person credits](https://github.com/ChadFarrow/MSP-2.0/pull/50)
+
 ### Merged
 - [#49](https://github.com/ChadFarrow/MSP-2.0/pull/49) ✓ Portal info tooltip to body on mobile so it clears backdrop-filter
 - [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
@@ -172,4 +175,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-21 07:56 UTC*
+*Last synced: 2026-04-21 13:19 UTC*
