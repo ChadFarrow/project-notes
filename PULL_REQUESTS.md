@@ -81,6 +81,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
 - [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
 - [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
@@ -110,7 +111,6 @@
 - [#76](https://github.com/ChadFarrow/stablekraft-app/pull/76) ✓ fix: prevent NIP-46 boost signing race condition and silent relay failures
 - [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
 - [#74](https://github.com/ChadFarrow/stablekraft-app/pull/74) ✓ fix: always show boost buttons for favorite tracks
-- [#73](https://github.com/ChadFarrow/stablekraft-app/pull/73) ✓ fix: Nostr boost links point to album page instead of favorites/playlist URLs
 
 ## lnaddress-music
 
@@ -178,4 +178,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-22 13:48 UTC*
+*Last synced: 2026-04-22 19:18 UTC*
