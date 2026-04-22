@@ -6,8 +6,6 @@
 
 - `FAFO`
 - `claude/add-nostr-music-menu-TZRww`
-- `claude/add-npub-credit-field-XGA1A`
-- `claude/rss-nostr-music-crossref-2gFId`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -91,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-21 21:46 UTC*
+*Last synced: 2026-04-22 02:48 UTC*

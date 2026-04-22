@@ -4,15 +4,12 @@
 
 ## MSP-2.0
 
-### Open
-- [#55 Add Nostr Music feed type with spec-only editor fields](https://github.com/ChadFarrow/MSP-2.0/pull/55)
-- [#54 Add RSS ↔ Nostr Music field cross-reference doc](https://github.com/ChadFarrow/MSP-2.0/pull/54)
-- [#50 Add Nostr npub field to person credits](https://github.com/ChadFarrow/MSP-2.0/pull/50)
-
 ### Merged
+- [#54](https://github.com/ChadFarrow/MSP-2.0/pull/54) ✓ Add RSS ↔ Nostr Music field cross-reference doc
 - [#53](https://github.com/ChadFarrow/MSP-2.0/pull/53) ✓ Document MUSIC_RELAYS and Nostr Music validator carve-out
 - [#52](https://github.com/ChadFarrow/MSP-2.0/pull/52) ✓ Skip description/duration/file-size requirements for Nostr Music
 - [#51](https://github.com/ChadFarrow/MSP-2.0/pull/51) ✓ Add drops.basspistol.org to Nostr Music relay list
+- [#50](https://github.com/ChadFarrow/MSP-2.0/pull/50) ✓ Add Nostr npub field to person credits
 - [#49](https://github.com/ChadFarrow/MSP-2.0/pull/49) ✓ Portal info tooltip to body on mobile so it clears backdrop-filter
 - [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
 - [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
@@ -180,4 +177,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-21 21:46 UTC*
+*Last synced: 2026-04-22 02:48 UTC*

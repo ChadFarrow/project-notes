@@ -63,9 +63,10 @@
 ## stablekraft-app
 
 ### Open
-- [#110 MSP podping for headstarts.uk feed didn't mint new feed record](https://github.com/ChadFarrow/stablekraft-app/issues/110)
+- [#111 Various Artist](https://github.com/ChadFarrow/stablekraft-app/issues/111)
 
 ### Closed
+- [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
 - [#107](https://github.com/ChadFarrow/stablekraft-app/issues/107) ✓ Some Henrik Flyman albums display tracks in reverse order
 - [#43](https://github.com/ChadFarrow/stablekraft-app/issues/43) ✓ Add two for tunestr to this as a playlist
 - [#24](https://github.com/ChadFarrow/stablekraft-app/issues/24) ✓ Add confirmation for share link being copied on desktop
@@ -157,4 +158,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-21 21:46 UTC*
+*Last synced: 2026-04-22 02:48 UTC*
