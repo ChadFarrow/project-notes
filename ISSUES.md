@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#56 Files types don't match for some tracks](https://github.com/ChadFarrow/MSP-2.0/issues/56)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -158,4 +159,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-22 07:52 UTC*
+*Last synced: 2026-04-22 13:48 UTC*

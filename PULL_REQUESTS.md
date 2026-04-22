@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Merged
+- [#57](https://github.com/ChadFarrow/MSP-2.0/pull/57) ✓ Validate audio file format from URL extension
 - [#54](https://github.com/ChadFarrow/MSP-2.0/pull/54) ✓ Add RSS ↔ Nostr Music field cross-reference doc
 - [#53](https://github.com/ChadFarrow/MSP-2.0/pull/53) ✓ Document MUSIC_RELAYS and Nostr Music validator carve-out
 - [#52](https://github.com/ChadFarrow/MSP-2.0/pull/52) ✓ Skip description/duration/file-size requirements for Nostr Music
@@ -177,4 +178,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-22 07:53 UTC*
+*Last synced: 2026-04-22 13:48 UTC*
