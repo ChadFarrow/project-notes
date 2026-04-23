@@ -4,6 +4,9 @@
 
 ## MSP-2.0
 
+### Open
+- [#58 Suggest ID3v1 genres in keywords fields](https://github.com/ChadFarrow/MSP-2.0/pull/58)
+
 ### Merged
 - [#57](https://github.com/ChadFarrow/MSP-2.0/pull/57) ✓ Validate audio file format from URL extension
 - [#54](https://github.com/ChadFarrow/MSP-2.0/pull/54) ✓ Add RSS ↔ Nostr Music field cross-reference doc
@@ -181,4 +184,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-23 13:50 UTC*
+*Last synced: 2026-04-23 19:15 UTC*
