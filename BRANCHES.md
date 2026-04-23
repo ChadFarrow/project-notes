@@ -35,7 +35,7 @@
 
 ## stablekraft-app
 
-- `feature/genre-filter`
+- `feature/genre-and-v4v-tags`
 - `main`
 
 ## lnaddress-music
@@ -89,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-22 19:18 UTC*
+*Last synced: 2026-04-23 02:51 UTC*

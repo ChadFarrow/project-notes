@@ -5,11 +5,11 @@
 ## MSP-2.0
 
 ### Open
-- [#56 Files types don't match for some tracks](https://github.com/ChadFarrow/MSP-2.0/issues/56)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ### Closed
+- [#56](https://github.com/ChadFarrow/MSP-2.0/issues/56) ✓ Files types don't match for some tracks
 - [#36](https://github.com/ChadFarrow/MSP-2.0/issues/36) ✓ Add person tag at track level
 - [#34](https://github.com/ChadFarrow/MSP-2.0/issues/34) ✓ New items in existing feeds
 - [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
@@ -63,10 +63,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#111 Various Artist](https://github.com/ChadFarrow/stablekraft-app/issues/111)
-
 ### Closed
+- [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
 - [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
 - [#107](https://github.com/ChadFarrow/stablekraft-app/issues/107) ✓ Some Henrik Flyman albums display tracks in reverse order
 - [#43](https://github.com/ChadFarrow/stablekraft-app/issues/43) ✓ Add two for tunestr to this as a playlist
@@ -159,4 +157,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-22 19:18 UTC*
+*Last synced: 2026-04-23 02:51 UTC*
