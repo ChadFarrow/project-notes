@@ -80,6 +80,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#113 feat(filters): add Genre + V4V Music Tag filters with ingest pipeline](https://github.com/ChadFarrow/stablekraft-app/pull/113)
+
 ### Merged
 - [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
@@ -178,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-23 07:59 UTC*
+*Last synced: 2026-04-23 13:50 UTC*

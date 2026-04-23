@@ -35,6 +35,7 @@
 
 ## stablekraft-app
 
+- `claude/deploy-branch-production-lKUya`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -89,4 +90,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-23 07:59 UTC*
+*Last synced: 2026-04-23 13:50 UTC*
