@@ -36,7 +36,6 @@
 
 ## stablekraft-app
 
-- `claude/deploy-branch-production-lKUya`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -59,7 +58,6 @@
 ## RSS-music-site-template
 
 - `claude/clone-repository-2O3bN`
-- `fix/update-nextjs-cve-2025-66478`
 - `main`
 
 ## Helipad-to-Nostr-BoostBot
@@ -91,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-23 19:15 UTC*
+*Last synced: 2026-04-24 02:52 UTC*

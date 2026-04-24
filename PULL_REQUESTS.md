@@ -83,9 +83,6 @@
 
 ## stablekraft-app
 
-### Open
-- [#113 feat(filters): add Genre + V4V Music Tag filters with ingest pipeline](https://github.com/ChadFarrow/stablekraft-app/pull/113)
-
 ### Merged
 - [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
@@ -148,8 +145,8 @@
 
 ## RSS-music-site-template
 
-### Open
-- [#2 Update Next.js to 15.5.15 to fix CVE-2025-66478](https://github.com/ChadFarrow/RSS-music-site-template/pull/2)
+### Merged
+- [#2](https://github.com/ChadFarrow/RSS-music-site-template/pull/2) ✓ Update Next.js to 15.5.15 to fix CVE-2025-66478
 
 ## Helipad-to-Nostr-BoostBot
 
@@ -184,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-23 19:15 UTC*
+*Last synced: 2026-04-24 02:52 UTC*
