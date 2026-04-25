@@ -83,7 +83,11 @@
 
 ## stablekraft-app
 
+### Open
+- [#116 feat(home): "New" top-level filter — recently added music](https://github.com/ChadFarrow/stablekraft-app/pull/116)
+
 ### Merged
+- [#115](https://github.com/ChadFarrow/stablekraft-app/pull/115) ✓ fix(wallet): detect Alby Hub from pasted NWC URL relay param
 - [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
 - [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
@@ -113,7 +117,6 @@
 - [#77](https://github.com/ChadFarrow/stablekraft-app/pull/77) ✓ fix: clean up NIP-46 state on logout so boost signing works after re-login
 - [#76](https://github.com/ChadFarrow/stablekraft-app/pull/76) ✓ fix: prevent NIP-46 boost signing race condition and silent relay failures
 - [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
-- [#74](https://github.com/ChadFarrow/stablekraft-app/pull/74) ✓ fix: always show boost buttons for favorite tracks
 
 ## lnaddress-music
 
@@ -181,4 +184,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-25 13:10 UTC*
+*Last synced: 2026-04-25 18:57 UTC*

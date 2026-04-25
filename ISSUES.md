@@ -63,6 +63,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#114 Scope per-Nostr-account Lightning settings (autoboost, default boost)](https://github.com/ChadFarrow/stablekraft-app/issues/114)
+
 ### Closed
 - [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
 - [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
@@ -157,4 +160,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-25 13:10 UTC*
+*Last synced: 2026-04-25 18:57 UTC*
