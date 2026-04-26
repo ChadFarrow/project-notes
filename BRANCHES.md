@@ -36,7 +36,6 @@
 
 ## stablekraft-app
 
-- `claude/add-new-feeds-section-bOF7d`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -90,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-04-25 18:57 UTC*
+*Last synced: 2026-04-26 03:18 UTC*

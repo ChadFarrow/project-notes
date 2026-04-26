@@ -63,10 +63,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#114 Scope per-Nostr-account Lightning settings (autoboost, default boost)](https://github.com/ChadFarrow/stablekraft-app/issues/114)
-
 ### Closed
+- [#114](https://github.com/ChadFarrow/stablekraft-app/issues/114) ✓ Scope per-Nostr-account Lightning settings (autoboost, default boost)
 - [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
 - [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
 - [#107](https://github.com/ChadFarrow/stablekraft-app/issues/107) ✓ Some Henrik Flyman albums display tracks in reverse order
@@ -160,4 +158,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-25 18:57 UTC*
+*Last synced: 2026-04-26 03:18 UTC*

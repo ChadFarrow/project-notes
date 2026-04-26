@@ -83,10 +83,10 @@
 
 ## stablekraft-app
 
-### Open
-- [#116 feat(home): "New" top-level filter — recently added music](https://github.com/ChadFarrow/stablekraft-app/pull/116)
-
 ### Merged
+- [#118](https://github.com/ChadFarrow/stablekraft-app/pull/118) ✓ fix(exclusions): hard-blacklist Henrik Flyman Wavlake mirrors + plug mint gaps
+- [#117](https://github.com/ChadFarrow/stablekraft-app/pull/117) ✓ perf(home): drop 'new' filter page size to 50 for iOS scroll parity
+- [#116](https://github.com/ChadFarrow/stablekraft-app/pull/116) ✓ feat(home): "New" top-level filter — recently added music
 - [#115](https://github.com/ChadFarrow/stablekraft-app/pull/115) ✓ fix(wallet): detect Alby Hub from pasted NWC URL relay param
 - [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
@@ -114,9 +114,6 @@
 - [#80](https://github.com/ChadFarrow/stablekraft-app/pull/80) ✓ Remove Nostr signup/key creation from app
 - [#79](https://github.com/ChadFarrow/stablekraft-app/pull/79) ✓ Add direct extension login for faster NIP-07 sign-in
 - [#78](https://github.com/ChadFarrow/stablekraft-app/pull/78) ✓ fix: persist signer pubkey and stop aggressive stale reconnection for Primal
-- [#77](https://github.com/ChadFarrow/stablekraft-app/pull/77) ✓ fix: clean up NIP-46 state on logout so boost signing works after re-login
-- [#76](https://github.com/ChadFarrow/stablekraft-app/pull/76) ✓ fix: prevent NIP-46 boost signing race condition and silent relay failures
-- [#75](https://github.com/ChadFarrow/stablekraft-app/pull/75) ✓ Add marquee scrolling to chapter titles on Now Playing screen
 
 ## lnaddress-music
 
@@ -184,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-25 18:57 UTC*
+*Last synced: 2026-04-26 03:18 UTC*
