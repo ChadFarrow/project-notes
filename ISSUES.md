@@ -63,6 +63,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#119 Investigate why "Party Like Forever" appears in the New tab](https://github.com/ChadFarrow/stablekraft-app/issues/119)
+
 ### Closed
 - [#114](https://github.com/ChadFarrow/stablekraft-app/issues/114) ✓ Scope per-Nostr-account Lightning settings (autoboost, default boost)
 - [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
@@ -158,4 +161,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-26 07:44 UTC*
+*Last synced: 2026-04-26 13:12 UTC*
