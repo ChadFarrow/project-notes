@@ -84,6 +84,12 @@
 ## stablekraft-app
 
 ### Merged
+- [#126](https://github.com/ChadFarrow/stablekraft-app/pull/126) ✓ docs(claude): Music-Show-Only Publishers behavior + Railway migration gotcha
+- [#125](https://github.com/ChadFarrow/stablekraft-app/pull/125) ✓ feat(admin): auto-offer cleanup after flagging an existing publisher
+- [#124](https://github.com/ChadFarrow/stablekraft-app/pull/124) ✓ feat(admin): bulk "Delete unplayed" button on music-show-only search results
+- [#123](https://github.com/ChadFarrow/stablekraft-app/pull/123) ✓ feat(admin): one-click "Delete unplayed albums" for music-show-only cleanup
+- [#121](https://github.com/ChadFarrow/stablekraft-app/pull/121) ✓ feat(admin): artist-name search for music-show-only publishers
+- [#120](https://github.com/ChadFarrow/stablekraft-app/pull/120) ✓ feat(admin): music-show-only flag for publisher feeds
 - [#118](https://github.com/ChadFarrow/stablekraft-app/pull/118) ✓ fix(exclusions): hard-blacklist Henrik Flyman Wavlake mirrors + plug mint gaps
 - [#117](https://github.com/ChadFarrow/stablekraft-app/pull/117) ✓ perf(home): drop 'new' filter page size to 50 for iOS scroll parity
 - [#116](https://github.com/ChadFarrow/stablekraft-app/pull/116) ✓ feat(home): "New" top-level filter — recently added music
@@ -108,12 +114,6 @@
 - [#87](https://github.com/ChadFarrow/stablekraft-app/pull/87) ✓ fix: correct Two For Tunestr feed ID in nightly workflow; shrink PWA page cache TTL
 - [#86](https://github.com/ChadFarrow/stablekraft-app/pull/86) ✓ fix: make admin feed form mobile-friendly
 - [#84](https://github.com/ChadFarrow/stablekraft-app/pull/84) ✓ chore: add regenerated fallback SW from build
-- [#83](https://github.com/ChadFarrow/stablekraft-app/pull/83) ✓ Fix Brave iOS callback: use plain https:// instead of brave://open-url
-- [#82](https://github.com/ChadFarrow/stablekraft-app/pull/82) ✓ Fix Primal NIP-46 redirect back to Brave (and other non-Safari iOS browsers)
-- [#81](https://github.com/ChadFarrow/stablekraft-app/pull/81) ✓ Add callbackUrl to Primal nostrconnect URI and improve return-to-browser UX
-- [#80](https://github.com/ChadFarrow/stablekraft-app/pull/80) ✓ Remove Nostr signup/key creation from app
-- [#79](https://github.com/ChadFarrow/stablekraft-app/pull/79) ✓ Add direct extension login for faster NIP-07 sign-in
-- [#78](https://github.com/ChadFarrow/stablekraft-app/pull/78) ✓ fix: persist signer pubkey and stop aggressive stale reconnection for Primal
 
 ## lnaddress-music
 
@@ -181,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-26 18:59 UTC*
+*Last synced: 2026-04-27 03:23 UTC*

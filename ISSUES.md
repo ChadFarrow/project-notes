@@ -63,10 +63,9 @@
 
 ## stablekraft-app
 
-### Open
-- [#119 Investigate why "Party Like Forever" appears in the New tab](https://github.com/ChadFarrow/stablekraft-app/issues/119)
-
 ### Closed
+- [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
+- [#119](https://github.com/ChadFarrow/stablekraft-app/issues/119) ✓ Investigate why "Party Like Forever" appears in the New tab
 - [#114](https://github.com/ChadFarrow/stablekraft-app/issues/114) ✓ Scope per-Nostr-account Lightning settings (autoboost, default boost)
 - [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
 - [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
@@ -161,4 +160,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-26 18:58 UTC*
+*Last synced: 2026-04-27 03:23 UTC*
