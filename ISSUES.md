@@ -63,6 +63,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#127 Admin import of remoteItem-only RSS feed creates unloadable album tile](https://github.com/ChadFarrow/stablekraft-app/issues/127)
+
 ### Closed
 - [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
 - [#119](https://github.com/ChadFarrow/stablekraft-app/issues/119) ✓ Investigate why "Party Like Forever" appears in the New tab
@@ -160,4 +163,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-27 08:29 UTC*
+*Last synced: 2026-04-27 14:00 UTC*
