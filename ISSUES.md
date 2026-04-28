@@ -63,10 +63,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#127 Admin import of remoteItem-only RSS feed creates unloadable album tile](https://github.com/ChadFarrow/stablekraft-app/issues/127)
-
 ### Closed
+- [#127](https://github.com/ChadFarrow/stablekraft-app/issues/127) ✓ Admin import of remoteItem-only RSS feed creates unloadable album tile
 - [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
 - [#119](https://github.com/ChadFarrow/stablekraft-app/issues/119) ✓ Investigate why "Party Like Forever" appears in the New tab
 - [#114](https://github.com/ChadFarrow/stablekraft-app/issues/114) ✓ Scope per-Nostr-account Lightning settings (autoboost, default boost)
@@ -163,4 +161,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-04-27 19:27 UTC*
+*Last synced: 2026-04-28 03:29 UTC*
