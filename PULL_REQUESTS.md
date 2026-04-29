@@ -84,6 +84,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
 - [#126](https://github.com/ChadFarrow/stablekraft-app/pull/126) ✓ docs(claude): Music-Show-Only Publishers behavior + Railway migration gotcha
 - [#125](https://github.com/ChadFarrow/stablekraft-app/pull/125) ✓ feat(admin): auto-offer cleanup after flagging an existing publisher
 - [#124](https://github.com/ChadFarrow/stablekraft-app/pull/124) ✓ feat(admin): bulk "Delete unplayed" button on music-show-only search results
@@ -113,7 +114,6 @@
 - [#92](https://github.com/ChadFarrow/stablekraft-app/pull/92) ✓ fix: prevent iOS Safari scroll-through behind Now Playing screen
 - [#87](https://github.com/ChadFarrow/stablekraft-app/pull/87) ✓ fix: correct Two For Tunestr feed ID in nightly workflow; shrink PWA page cache TTL
 - [#86](https://github.com/ChadFarrow/stablekraft-app/pull/86) ✓ fix: make admin feed form mobile-friendly
-- [#84](https://github.com/ChadFarrow/stablekraft-app/pull/84) ✓ chore: add regenerated fallback SW from build
 
 ## lnaddress-music
 
@@ -181,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-04-29 14:04 UTC*
+*Last synced: 2026-04-29 19:41 UTC*
