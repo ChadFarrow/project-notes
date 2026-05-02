@@ -32,8 +32,8 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [boostmebitch](https://github.com/ChadFarrow/boostmebitch) -  *(NEW)*
+- [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
