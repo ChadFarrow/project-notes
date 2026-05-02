@@ -40,6 +40,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
 - [zapstore](https://github.com/zapstore/zapstore) - The social permissionless app store
 - [start-os](https://github.com/Start9Labs/start-os) - A graphical server OS optimized for self-hosting
@@ -86,4 +87,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-01 19:16 UTC*
+*Last synced: 2026-05-02 02:55 UTC*
