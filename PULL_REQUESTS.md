@@ -84,6 +84,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
 - [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
 - [#126](https://github.com/ChadFarrow/stablekraft-app/pull/126) ✓ docs(claude): Music-Show-Only Publishers behavior + Railway migration gotcha
@@ -113,7 +114,6 @@
 - [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
 - [#93](https://github.com/ChadFarrow/stablekraft-app/pull/93) ✓ fix: reflex proxy fallback for client-side chapters fetch
 - [#92](https://github.com/ChadFarrow/stablekraft-app/pull/92) ✓ fix: prevent iOS Safari scroll-through behind Now Playing screen
-- [#87](https://github.com/ChadFarrow/stablekraft-app/pull/87) ✓ fix: correct Two For Tunestr feed ID in nightly workflow; shrink PWA page cache TTL
 
 ## lnaddress-music
 
@@ -181,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-04 08:33 UTC*
+*Last synced: 2026-05-04 14:07 UTC*
