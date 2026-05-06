@@ -169,6 +169,7 @@
 ## chadf-landing-page
 
 ### Merged
+- [#3](https://github.com/ChadFarrow/chadf-landing-page/pull/3) ✓ Add BoostMeBitch to apps section
 - [#2](https://github.com/ChadFarrow/chadf-landing-page/pull/2) ✓ Add TardBox to resources section
 
 ## HGH-checker
@@ -181,4 +182,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-06 14:20 UTC*
+*Last synced: 2026-05-06 19:49 UTC*
