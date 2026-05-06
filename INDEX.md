@@ -32,11 +32,11 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [boostmebitch](https://github.com/ChadFarrow/boostmebitch) -  *(NEW)*
 - [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
-- [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
 - [podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) - A wholistic rss namespace for podcasting *(NEW)*
 - [NMNU](https://github.com/ChadFarrow/NMNU) -  *(NEW)*
