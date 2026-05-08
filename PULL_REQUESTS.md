@@ -84,6 +84,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
 - [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
 - [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
@@ -113,7 +114,6 @@
 - [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
 - [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
 - [#93](https://github.com/ChadFarrow/stablekraft-app/pull/93) ✓ fix: reflex proxy fallback for client-side chapters fetch
-- [#92](https://github.com/ChadFarrow/stablekraft-app/pull/92) ✓ fix: prevent iOS Safari scroll-through behind Now Playing screen
 
 ## lnaddress-music
 
@@ -182,4 +182,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-08 07:45 UTC*
+*Last synced: 2026-05-08 13:55 UTC*

@@ -64,6 +64,7 @@
 ## stablekraft-app
 
 ### Closed
+- [#131](https://github.com/ChadFarrow/stablekraft-app/issues/131) ✓ Investigate: unknown feed auto-imported without authorization (anchor.fm/s/1125b8ad4)
 - [#127](https://github.com/ChadFarrow/stablekraft-app/issues/127) ✓ Admin import of remoteItem-only RSS feed creates unloadable album tile
 - [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
 - [#119](https://github.com/ChadFarrow/stablekraft-app/issues/119) ✓ Investigate why "Party Like Forever" appears in the New tab
@@ -161,4 +162,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-05-08 07:45 UTC*
+*Last synced: 2026-05-08 13:55 UTC*
