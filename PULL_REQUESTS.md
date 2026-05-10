@@ -84,6 +84,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#133](https://github.com/ChadFarrow/stablekraft-app/pull/133) ✓ fix: show boost buttons on New tab by falling back to track-level V4V
 - [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
 - [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
@@ -113,7 +114,6 @@
 - [#96](https://github.com/ChadFarrow/stablekraft-app/pull/96) ✓ feat: add Amber as a top-level Nostr signer option
 - [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
 - [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
-- [#93](https://github.com/ChadFarrow/stablekraft-app/pull/93) ✓ fix: reflex proxy fallback for client-side chapters fetch
 
 ## lnaddress-music
 
@@ -182,4 +182,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-10 13:24 UTC*
+*Last synced: 2026-05-10 19:08 UTC*
