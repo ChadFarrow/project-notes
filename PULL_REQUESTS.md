@@ -83,6 +83,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#134 Fix chapter markers missing when playing playlists from the grid](https://github.com/ChadFarrow/stablekraft-app/pull/134)
+
 ### Merged
 - [#133](https://github.com/ChadFarrow/stablekraft-app/pull/133) ✓ fix: show boost buttons on New tab by falling back to track-level V4V
 - [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
@@ -182,4 +185,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-11 09:44 UTC*
+*Last synced: 2026-05-11 15:15 UTC*
