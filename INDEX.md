@@ -32,6 +32,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [podroll-atlas](https://github.com/ChadFarrow/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset. *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
 - [boostmebitch](https://github.com/ChadFarrow/boostmebitch) -  *(NEW)*
@@ -47,7 +48,6 @@
 - [is-this-thing-on](https://github.com/ChadFarrow/is-this-thing-on) -  *(NEW)*
 - [IRL_QR](https://github.com/ChadFarrow/IRL_QR) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
-- [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [helipad-startos](https://github.com/ChadFarrow/helipad-startos) - Helipad packaged for Start9's StartOS. *(NEW)*
 - [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
