@@ -8,6 +8,8 @@
 - [#58 Suggest ID3v1 genres in keywords fields](https://github.com/ChadFarrow/MSP-2.0/pull/58)
 
 ### Merged
+- [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
+- [#61](https://github.com/ChadFarrow/MSP-2.0/pull/61) ✓ Validate RSS feed URLs for characters that cause Podcast Index duplicates
 - [#57](https://github.com/ChadFarrow/MSP-2.0/pull/57) ✓ Validate audio file format from URL extension
 - [#54](https://github.com/ChadFarrow/MSP-2.0/pull/54) ✓ Add RSS ↔ Nostr Music field cross-reference doc
 - [#53](https://github.com/ChadFarrow/MSP-2.0/pull/53) ✓ Document MUSIC_RELAYS and Nostr Music validator carve-out
@@ -83,10 +85,10 @@
 
 ## stablekraft-app
 
-### Open
-- [#134 Fix chapter markers missing when playing playlists from the grid](https://github.com/ChadFarrow/stablekraft-app/pull/134)
-
 ### Merged
+- [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
+- [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
+- [#134](https://github.com/ChadFarrow/stablekraft-app/pull/134) ✓ Fix chapter markers missing when playing playlists from the grid
 - [#133](https://github.com/ChadFarrow/stablekraft-app/pull/133) ✓ fix: show boost buttons on New tab by falling back to track-level V4V
 - [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
 - [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
@@ -114,9 +116,6 @@
 - [#100](https://github.com/ChadFarrow/stablekraft-app/pull/100) ✓ Fix NIP-46 relay reconnection for Primal boost signing
 - [#99](https://github.com/ChadFarrow/stablekraft-app/pull/99) ✓ Fix user profile not loading after NIP-46/Primal login
 - [#98](https://github.com/ChadFarrow/stablekraft-app/pull/98) ✓ fix: nostr login perf + multi-relay bunker + pubkey normalization
-- [#96](https://github.com/ChadFarrow/stablekraft-app/pull/96) ✓ feat: add Amber as a top-level Nostr signer option
-- [#95](https://github.com/ChadFarrow/stablekraft-app/pull/95) ✓ fix: replace recursive debugLog with console.log
-- [#94](https://github.com/ChadFarrow/stablekraft-app/pull/94) ✓ fix: stop signer-nudge wrapper from pre-empting NIP-46's 120s timeout
 
 ## lnaddress-music
 
@@ -185,4 +184,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-14 14:20 UTC*
+*Last synced: 2026-05-14 19:49 UTC*

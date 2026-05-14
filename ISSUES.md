@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Open
+- [#60 Remove spaces and special characters from feeds.](https://github.com/ChadFarrow/MSP-2.0/issues/60)
+- [#59 Add check and timeout for Nostr connections when publishing Nostr music](https://github.com/ChadFarrow/MSP-2.0/issues/59)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -162,4 +164,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-05-14 14:20 UTC*
+*Last synced: 2026-05-14 19:49 UTC*

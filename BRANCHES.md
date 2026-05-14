@@ -36,7 +36,6 @@
 
 ## stablekraft-app
 
-- `claude/fix-chapter-markers-display-0kQj7`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -90,4 +89,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-14 14:20 UTC*
+*Last synced: 2026-05-14 19:49 UTC*
