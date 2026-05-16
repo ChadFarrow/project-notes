@@ -40,6 +40,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [wisp-ios](https://github.com/barrydeen/wisp-ios) - No description
 - [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
@@ -88,4 +89,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-16 13:27 UTC*
+*Last synced: 2026-05-16 19:08 UTC*
