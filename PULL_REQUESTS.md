@@ -4,9 +4,6 @@
 
 ## MSP-2.0
 
-### Open
-- [#58 Suggest ID3v1 genres in keywords fields](https://github.com/ChadFarrow/MSP-2.0/pull/58)
-
 ### Merged
 - [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
 - [#61](https://github.com/ChadFarrow/MSP-2.0/pull/61) ✓ Validate RSS feed URLs for characters that cause Podcast Index duplicates
@@ -184,4 +181,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-15 19:41 UTC*
+*Last synced: 2026-05-16 03:26 UTC*

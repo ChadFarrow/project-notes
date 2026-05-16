@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/add-id3v1-genres-Es624`
 - `claude/add-nostr-music-menu-TZRww`
 - `master`
 
@@ -89,4 +88,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-15 19:42 UTC*
+*Last synced: 2026-05-16 03:26 UTC*
