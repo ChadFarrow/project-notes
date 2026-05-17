@@ -35,13 +35,12 @@
 
 ## MSP-2.0-Desktop-App
 
-### Open
-- [#12 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/12)
-
 ### Merged
+- [#16](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/16) ✓ Sync updates from web repo
 - [#15](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/15) ✓ Wire NIP-71 naddr paste handler into Video URL input
 - [#14](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/14) ✓ Restore bottom toolbar to match web layout
 - [#13](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/13) ✓ Port upstream features dropped by sync auto-resolve
+- [#12](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/12) ✓ Sync updates from web repo
 - [#11](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/11) ✓ Add Windows AV false positive warning and NSIS config improvements
 - [#10](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/10) ✓ Sync updates from web repo
 - [#9](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/9) ✓ Sync updates from web repo
@@ -171,6 +170,44 @@
 - [#3](https://github.com/ChadFarrow/chadf-landing-page/pull/3) ✓ Add BoostMeBitch to apps section
 - [#2](https://github.com/ChadFarrow/chadf-landing-page/pull/2) ✓ Add TardBox to resources section
 
+## boostmebitch
+
+### Merged
+- [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
+- [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
+- [#69](https://github.com/ChadFarrow/boostmebitch/pull/69) ✓ Add Boost All Tracks feature (MOAB branch)
+- [#68](https://github.com/ChadFarrow/boostmebitch/pull/68) ✓ feat: add fullscreen now playing view
+- [#67](https://github.com/ChadFarrow/boostmebitch/pull/67) ✓ Enforce 100 sat minimum boost to ensure 1% splits get paid
+- [#66](https://github.com/ChadFarrow/boostmebitch/pull/66) ✓ fix: parse podcast:value from RSS liveItem blocks
+- [#65](https://github.com/ChadFarrow/boostmebitch/pull/65) ✓ Always do a full fetch on mount, not incremental since-based
+- [#64](https://github.com/ChadFarrow/boostmebitch/pull/64) ✓ Fix REFRESH button showing stale cached content
+- [#63](https://github.com/ChadFarrow/boostmebitch/pull/63) ✓ Require a connected wallet to send a boost
+- [#62](https://github.com/ChadFarrow/boostmebitch/pull/62) ✓ Sort pending live items ascending by start time
+- [#61](https://github.com/ChadFarrow/boostmebitch/pull/61) ✓ Add in-memory fallback for the NWC URI when localStorage is hostile
+- [#60](https://github.com/ChadFarrow/boostmebitch/pull/60) ✓ Make NWC connect failures impossible to miss
+- [#59](https://github.com/ChadFarrow/boostmebitch/pull/59) ✓ NWC probe: fall back to get_balance if get_info isn't granted
+- [#58](https://github.com/ChadFarrow/boostmebitch/pull/58) ✓ Probe the NWC wallet at connect-time
+- [#57](https://github.com/ChadFarrow/boostmebitch/pull/57) ✓ Parse <podcast:liveItem> from RSS for pending live items
+- [#56](https://github.com/ChadFarrow/boostmebitch/pull/56) ✓ Show pending and live items in episode lists
+- [#55](https://github.com/ChadFarrow/boostmebitch/pull/55) ✓ Skip Nostr note when all splits fail; allow Nostr-only boosts
+- [#54](https://github.com/ChadFarrow/boostmebitch/pull/54) ✓ fix: retry nostrconnect while pending, not only after failure
+- [#53](https://github.com/ChadFarrow/boostmebitch/pull/53) ✓ Fix React error #310 on iOS remote-signer login
+- [#52](https://github.com/ChadFarrow/boostmebitch/pull/52) ✓ Auto-retry the Generate flow when Safari regains visibility
+- [#51](https://github.com/ChadFarrow/boostmebitch/pull/51) ✓ Time-bound bunker connect + better Primal iOS auth-URL surface
+- [#50](https://github.com/ChadFarrow/boostmebitch/pull/50) ✓ Add MIT license
+- [#49](https://github.com/ChadFarrow/boostmebitch/pull/49) ✓ Tolerate cached notes that predate the replies field
+- [#48](https://github.com/ChadFarrow/boostmebitch/pull/48) ✓ Sanitize kind:0 profile JSON + add a route-level error boundary
+- [#47](https://github.com/ChadFarrow/boostmebitch/pull/47) ✓ Drop the "Paying with <RAIL>" line from the boost modal
+- [#46](https://github.com/ChadFarrow/boostmebitch/pull/46) ✓ Drop the rail picker and "Signed as" indicator from the boost modal
+- [#45](https://github.com/ChadFarrow/boostmebitch/pull/45) ✓ Portal WalletModal to body to escape header's containing block
+- [#44](https://github.com/ChadFarrow/boostmebitch/pull/44) ✓ Consolidate Lightning wallet into a single modal in the account menu
+- [#43](https://github.com/ChadFarrow/boostmebitch/pull/43) ✓ Add Continue-from-Amber tap and label the Amber path explicitly
+- [#42](https://github.com/ChadFarrow/boostmebitch/pull/42) ✓ Switch Amber to same-tab dispatch + clipboard return
+
+## web-ui
+
+*No pull requests*
+
 ## HGH-checker
 
 *No pull requests*
@@ -181,4 +218,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-17 13:25 UTC*
+*Last synced: 2026-05-17 17:43 UTC*

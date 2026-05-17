@@ -155,6 +155,19 @@
 ### Closed
 - [#1](https://github.com/ChadFarrow/chadf-landing-page/issues/1) ✓ Add my episode of pc 2.0
 
+## boostmebitch
+
+### Closed
+- [#74](https://github.com/ChadFarrow/boostmebitch/issues/74) ✓ add boostmebitch.com links to nostr post
+- [#73](https://github.com/ChadFarrow/boostmebitch/issues/73) ✓ update now playing page
+- [#72](https://github.com/ChadFarrow/boostmebitch/issues/72) ✓ make media on page load before Nostr content
+- [#19](https://github.com/ChadFarrow/boostmebitch/issues/19) ✓ Spark rail: payments succeed on-chain but surface as failed (no preimage in SDK response)
+- [#16](https://github.com/ChadFarrow/boostmebitch/issues/16) ✓ Fountain boost amounts still missing — quote-resolved kind:9735 not landing
+
+## web-ui
+
+*No issues*
+
 ## HGH-checker
 
 *No issues*
@@ -164,4 +177,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-05-17 13:25 UTC*
+*Last synced: 2026-05-17 17:43 UTC*

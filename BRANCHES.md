@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/add-nostr-music-menu-TZRww`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -79,6 +78,16 @@
 
 - `main`
 
+## boostmebitch
+
+- `main`
+
+## web-ui
+
+- `add-chad-apps`
+- `master`
+- `update-ITDV-Music-app`
+
 ## HGH-checker
 
 - `master`
@@ -88,4 +97,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-17 13:25 UTC*
+*Last synced: 2026-05-17 17:43 UTC*

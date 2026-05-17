@@ -27,18 +27,18 @@
 ## Web/Apps
 - [stablekraft-app](stablekraft-app.md) -  (`TypeScript`)
 - [chadf-landing-page](chadf-landing-page.md) -  (`TypeScript`)
+- [boostmebitch](boostmebitch.md) -  (`TypeScript`)
+- [web-ui](web-ui.md) - The public home page of podcastindex.org (`HTML`)
 
 ## Tools
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [boostmebitch](https://github.com/ChadFarrow/boostmebitch) -  *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [podroll-atlas](https://github.com/ChadFarrow/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset. *(NEW)*
 - [helipad](https://github.com/ChadFarrow/helipad) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. *(NEW)*
 - [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
-- [web-ui](https://github.com/ChadFarrow/web-ui) - The public home page of podcastindex.org *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) -  *(NEW)*
 - [podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) - A wholistic rss namespace for podcasting *(NEW)*
