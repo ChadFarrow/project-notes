@@ -46,7 +46,7 @@ jobs:
           CATEGORIES["Music/Podcasting"]="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template"
           CATEGORIES["Lightning"]="ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed"
           CATEGORIES["Nostr"]="Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost"
-          CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page"
+          CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page boostmebitch web-ui"
           CATEGORIES["Tools"]="HGH-checker"
 
           for category in "Music/Podcasting" "Lightning" "Nostr" "Web/Apps" "Tools"; do
@@ -65,7 +65,7 @@ jobs:
 
           # Check for new repos not in categories
           echo "## Uncategorized" >> INDEX.md
-          known_repos="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost stablekraft-app chadf-landing-page HGH-checker project-notes"
+          known_repos="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost stablekraft-app chadf-landing-page boostmebitch web-ui HGH-checker project-notes"
           new_repos=$(jq -r '.[].name' repos.json | while read repo; do
             if [[ ! " $known_repos " =~ " $repo " ]]; then
               archived=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .isArchived' repos.json)
@@ -118,6 +118,8 @@ jobs:
             "LibreRelayBot"
             "BoostAfterBoost"
             "chadf-landing-page"
+            "boostmebitch"
+            "web-ui"
             "HGH-checker"
             "lnurl-test-feed"
           )

@@ -19,6 +19,8 @@ REPOS=(
   "LibreRelayBot"
   "BoostAfterBoost"
   "chadf-landing-page"
+  "boostmebitch"
+  "web-ui"
   "HGH-checker"
   "lnurl-test-feed"
 )
