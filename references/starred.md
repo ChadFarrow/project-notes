@@ -4,7 +4,7 @@
 
 ## Nostr
 - [tailrelay-startos](https://github.com/sudocarlos/tailrelay-startos) - StartOS wrapper for tailrelay
-- [tailrelay](https://github.com/sudocarlos/tailrelay) - connect to services within your docker network without exposing any ports on the host. use socat and caddy to reach tcp endpoints and enable tls encryption for http servers via tailsacle.
+- [tailrelay](https://github.com/sudocarlos/tailrelay) - connect to services within your docker network without exposing any ports on the host. uses `tailscale serve` to relay tcp endpoints and enable tls encryption for http servers,
 - [bloom](https://github.com/Letdown2491/bloom) - Bloom offers a familiar file‑manager interface that lets users quickly interact with files and blobs stored on Blossom and NIP‑96 servers. You can edit metadata, share items directly from Bloom, create shareable folders, and much more.
 - [vnak](https://github.com/fiatjaf/vnak) - visual nostr army knife with qt
 - [blossom](https://github.com/hzrd149/blossom) - Blobs stored simply on mediaservers
@@ -40,6 +40,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [start-tunnel](https://github.com/Start9Labs/start-tunnel) - Automated WireGuard VPN deployment tool for StartOS
 - [wisp-ios](https://github.com/barrydeen/wisp-ios) - No description
 - [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
@@ -89,4 +90,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-17 19:13 UTC*
+*Last synced: 2026-05-18 03:56 UTC*
