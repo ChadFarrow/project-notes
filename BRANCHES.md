@@ -34,6 +34,7 @@
 
 ## stablekraft-app
 
+- `claude/count-missing-publisher-feeds-OcmAs`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -97,4 +98,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-19 09:50 UTC*
+*Last synced: 2026-05-19 15:30 UTC*

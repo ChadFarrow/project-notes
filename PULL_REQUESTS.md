@@ -81,6 +81,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
+
 ### Merged
 - [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
 - [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
@@ -218,4 +221,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-19 09:50 UTC*
+*Last synced: 2026-05-19 15:30 UTC*
