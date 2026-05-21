@@ -4,6 +4,10 @@
 
 ## MSP-2.0
 
+### Open
+- [#64 Add first-visit onboarding guide modal](https://github.com/ChadFarrow/MSP-2.0/pull/64)
+- [#63 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/63)
+
 ### Merged
 - [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
 - [#61](https://github.com/ChadFarrow/MSP-2.0/pull/61) ✓ Validate RSS feed URLs for characters that cause Podcast Index duplicates
@@ -221,4 +225,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-21 15:33 UTC*
+*Last synced: 2026-05-21 19:56 UTC*
