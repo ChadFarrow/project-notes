@@ -6,6 +6,7 @@
 - [tailrelay-startos](https://github.com/sudocarlos/tailrelay-startos) - StartOS wrapper for tailrelay
 - [tailrelay](https://github.com/sudocarlos/tailrelay) - connect to services within your docker network without exposing any ports on the host. uses `tailscale serve` to relay tcp endpoints and enable tls encryption for http servers,
 - [bloom](https://github.com/Letdown2491/bloom) - Bloom offers a familiar file‑manager interface that lets users quickly interact with files and blobs stored on Blossom and NIP‑96 servers. You can edit metadata, share items directly from Bloom, create shareable folders, and much more.
+- [nostr-vault](https://github.com/btcforplebs/nostr-vault) - High Availability Vault for Events on Nostr
 - [vnak](https://github.com/fiatjaf/vnak) - visual nostr army knife with qt
 - [blossom](https://github.com/hzrd149/blossom) - Blobs stored simply on mediaservers
 - [Amber](https://github.com/greenart7c3/Amber) - No description
@@ -57,7 +58,6 @@
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [builder-skill](https://github.com/getAlby/builder-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
-- [haven-mac](https://github.com/btcforplebs/haven-mac) - High Availability Vault for Events on Nostr
 - [yantr](https://github.com/besoeasy/yantr) - YANTR is a powerful, cross-platform alternative to Umbrel — a Docker-based app store designed for flexible, server-grade self-hosting. It lets you deploy ready-to-run apps — from Bitcoin nodes and privacy tools to file converters — all packaged as lightweight containers, giving you more control, portability, and freedom over your setup.
 - [pimonitor](https://github.com/Podcastindex-org/pimonitor) - Monitors incoming feeds to the Podcast Index API for triage and management.
 - [genre-list](https://github.com/wavlake/genre-list) - Genre list for Wavlake's music catalog
@@ -91,4 +91,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-20 20:21 UTC*
+*Last synced: 2026-05-21 03:59 UTC*
