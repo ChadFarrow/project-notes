@@ -71,7 +71,7 @@
 - [nostore](https://github.com/ursuscamp/nostore) - A nostr signing extension for Safari.
 - [extractlv](https://github.com/Podcastindex-org/extractlv) - Tools for extracting TLV's from a lightning node and doing cool things with them.
 - [thelounge](https://github.com/thelounge/thelounge) - 💬  ‎ Modern, responsive, cross-platform, self-hosted web IRC client
-- [NYM](https://github.com/Spl0itable/NYM) - A lightweight, yet feature-rich, ephemeral chat client built on Nostr protocol, bridged with Bitchat for anonymous, temporary messaging.
+- [NYM](https://github.com/Spl0itable/NYM) - A lightweight, yet feature-rich, ephemeral chat client built on Nostr protocol, bridged with Bitchat for pseudonymous, temporary messaging.
 - [thesplitbox](https://github.com/thebells1111/thesplitbox) - No description
 - [castr.me](https://github.com/dergigi/castr.me) - Effortlessly turn your npub into a podcast feed.
 - [claude-task-master](https://github.com/eyaltoledano/claude-task-master) - An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.
@@ -91,4 +91,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-21 19:56 UTC*
+*Last synced: 2026-05-22 03:55 UTC*
