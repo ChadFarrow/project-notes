@@ -181,6 +181,8 @@
 ## boostmebitch
 
 ### Merged
+- [#76](https://github.com/ChadFarrow/boostmebitch/pull/76) ✓ fix(social-interact): parse socialInteract from RSS since PI doesn't expose it
+- [#75](https://github.com/ChadFarrow/boostmebitch/pull/75) ✓ feat: add podcast:socialInteract tag support (Nostr only)
 - [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
 - [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
 - [#69](https://github.com/ChadFarrow/boostmebitch/pull/69) ✓ Add Boost All Tracks feature (MOAB branch)
@@ -209,8 +211,6 @@
 - [#46](https://github.com/ChadFarrow/boostmebitch/pull/46) ✓ Drop the rail picker and "Signed as" indicator from the boost modal
 - [#45](https://github.com/ChadFarrow/boostmebitch/pull/45) ✓ Portal WalletModal to body to escape header's containing block
 - [#44](https://github.com/ChadFarrow/boostmebitch/pull/44) ✓ Consolidate Lightning wallet into a single modal in the account menu
-- [#43](https://github.com/ChadFarrow/boostmebitch/pull/43) ✓ Add Continue-from-Amber tap and label the Amber path explicitly
-- [#42](https://github.com/ChadFarrow/boostmebitch/pull/42) ✓ Switch Amber to same-tab dispatch + clipboard return
 
 ## web-ui
 
@@ -226,4 +226,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-27 15:51 UTC*
+*Last synced: 2026-05-27 20:21 UTC*

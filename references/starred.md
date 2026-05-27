@@ -47,7 +47,7 @@
 - [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
-- [zapstore](https://github.com/zapstore/zapstore) - The social permissionless app store
+- [zapstore](https://github.com/zapstore/zapstore) - The open app store
 - [start-os](https://github.com/Start9Labs/start-os) - A graphical server OS optimized for self-hosting
 - [etcher](https://github.com/balena-io/etcher) - Flash OS images to SD cards & USB drives, safely and easily.
 - [stophammer](https://github.com/InTheMorning/stophammer) - V4V music feed index — index and community node (Rust + SQLite, signed event log)
@@ -91,4 +91,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-05-27 15:51 UTC*
+*Last synced: 2026-05-27 20:21 UTC*
