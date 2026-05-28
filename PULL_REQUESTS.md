@@ -181,6 +181,8 @@
 ## boostmebitch
 
 ### Merged
+- [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
+- [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
 - [#76](https://github.com/ChadFarrow/boostmebitch/pull/76) ✓ fix(social-interact): parse socialInteract from RSS since PI doesn't expose it
 - [#75](https://github.com/ChadFarrow/boostmebitch/pull/75) ✓ feat: add podcast:socialInteract tag support (Nostr only)
 - [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
@@ -209,8 +211,6 @@
 - [#48](https://github.com/ChadFarrow/boostmebitch/pull/48) ✓ Sanitize kind:0 profile JSON + add a route-level error boundary
 - [#47](https://github.com/ChadFarrow/boostmebitch/pull/47) ✓ Drop the "Paying with <RAIL>" line from the boost modal
 - [#46](https://github.com/ChadFarrow/boostmebitch/pull/46) ✓ Drop the rail picker and "Signed as" indicator from the boost modal
-- [#45](https://github.com/ChadFarrow/boostmebitch/pull/45) ✓ Portal WalletModal to body to escape header's containing block
-- [#44](https://github.com/ChadFarrow/boostmebitch/pull/44) ✓ Consolidate Lightning wallet into a single modal in the account menu
 
 ## web-ui
 
@@ -226,4 +226,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-28 03:52 UTC*
+*Last synced: 2026-05-28 10:07 UTC*
