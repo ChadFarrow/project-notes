@@ -90,6 +90,7 @@
 - [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
 
 ### Merged
+- [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
 - [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
 - [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
 - [#134](https://github.com/ChadFarrow/stablekraft-app/pull/134) ✓ Fix chapter markers missing when playing playlists from the grid
@@ -119,7 +120,6 @@
 - [#101](https://github.com/ChadFarrow/stablekraft-app/pull/101) ✓ Revive in-memory NIP-46 client before localStorage restore
 - [#100](https://github.com/ChadFarrow/stablekraft-app/pull/100) ✓ Fix NIP-46 relay reconnection for Primal boost signing
 - [#99](https://github.com/ChadFarrow/stablekraft-app/pull/99) ✓ Fix user profile not loading after NIP-46/Primal login
-- [#98](https://github.com/ChadFarrow/stablekraft-app/pull/98) ✓ fix: nostr login perf + multi-relay bunker + pubkey normalization
 
 ## lnaddress-music
 
@@ -226,4 +226,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-29 09:57 UTC*
+*Last synced: 2026-05-29 15:41 UTC*
