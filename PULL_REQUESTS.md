@@ -92,6 +92,8 @@
 - [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
 
 ### Merged
+- [#140](https://github.com/ChadFarrow/stablekraft-app/pull/140) ✓ Fix settings wiped on every app load after new build/deploy
+- [#139](https://github.com/ChadFarrow/stablekraft-app/pull/139) ✓ Fix iOS PWA shuffle: set auto-transition flag in proactive advance timer
 - [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
 - [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
 - [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
@@ -120,8 +122,6 @@
 - [#103](https://github.com/ChadFarrow/stablekraft-app/pull/103) ✓ fix: Primal signing — persist signerAppPubkey + recover stale signer for favorites
 - [#102](https://github.com/ChadFarrow/stablekraft-app/pull/102) ✓ Keep NIP-46 relay socket alive on non-login pages
 - [#101](https://github.com/ChadFarrow/stablekraft-app/pull/101) ✓ Revive in-memory NIP-46 client before localStorage restore
-- [#100](https://github.com/ChadFarrow/stablekraft-app/pull/100) ✓ Fix NIP-46 relay reconnection for Primal boost signing
-- [#99](https://github.com/ChadFarrow/stablekraft-app/pull/99) ✓ Fix user profile not loading after NIP-46/Primal login
 
 ## lnaddress-music
 
@@ -182,6 +182,9 @@
 
 ## boostmebitch
 
+### Open
+- [#79 Add Spark SDK swap write-up (Breez → Spark Labs)](https://github.com/ChadFarrow/boostmebitch/pull/79)
+
 ### Merged
 - [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
 - [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
@@ -228,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-30 13:44 UTC*
+*Last synced: 2026-05-30 19:20 UTC*
