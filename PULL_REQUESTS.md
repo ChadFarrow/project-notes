@@ -5,7 +5,7 @@
 ## MSP-2.0
 
 ### Open
-- [#64 Add first-visit onboarding guide modal](https://github.com/ChadFarrow/MSP-2.0/pull/64)
+- [#64 Artist (Album + Publisher) setup + first-visit onboarding & feature questionnaire](https://github.com/ChadFarrow/MSP-2.0/pull/64)
 
 ### Merged
 - [#65](https://github.com/ChadFarrow/MSP-2.0/pull/65) ✓ Fix publisher feed Podcast Index submission
@@ -228,4 +228,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-30 03:39 UTC*
+*Last synced: 2026-05-30 08:30 UTC*
