@@ -5,11 +5,10 @@
 ## MSP-2.0
 
 ### Open
-- [#65 Fix publisher feed Podcast Index submission](https://github.com/ChadFarrow/MSP-2.0/pull/65)
 - [#64 Add first-visit onboarding guide modal](https://github.com/ChadFarrow/MSP-2.0/pull/64)
-- [#63 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/63)
 
 ### Merged
+- [#65](https://github.com/ChadFarrow/MSP-2.0/pull/65) ✓ Fix publisher feed Podcast Index submission
 - [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
 - [#61](https://github.com/ChadFarrow/MSP-2.0/pull/61) ✓ Validate RSS feed URLs for characters that cause Podcast Index duplicates
 - [#57](https://github.com/ChadFarrow/MSP-2.0/pull/57) ✓ Validate audio file format from URL extension
@@ -39,6 +38,9 @@
 - [#10](https://github.com/ChadFarrow/MSP-2.0/pull/10) ✓ Add light/dark theme switching with persistent user preference
 
 ## MSP-2.0-Desktop-App
+
+### Open
+- [#17 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/17)
 
 ### Merged
 - [#16](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/16) ✓ Sync updates from web repo
@@ -226,4 +228,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-29 20:29 UTC*
+*Last synced: 2026-05-30 03:39 UTC*

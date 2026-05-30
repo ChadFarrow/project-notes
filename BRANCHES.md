@@ -5,9 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/artist-publisher-feed-flow-Ad6B7`
 - `claude/onboarding-guide-uO2Tz`
-- `claude/publisher-feeds-podcastindex-V4jap`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -102,4 +100,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-29 20:29 UTC*
+*Last synced: 2026-05-30 03:39 UTC*
