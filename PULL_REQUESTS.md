@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Open
+- [#67 Add dead-simple new artist onboarding wizard](https://github.com/ChadFarrow/MSP-2.0/pull/67)
+- [#66 Add Blossom media upload for audio tracks](https://github.com/ChadFarrow/MSP-2.0/pull/66)
 - [#64 Artist (Album + Publisher) setup + first-visit onboarding & feature questionnaire](https://github.com/ChadFarrow/MSP-2.0/pull/64)
 
 ### Merged
@@ -182,10 +184,8 @@
 
 ## boostmebitch
 
-### Open
-- [#79 Add Spark SDK swap write-up (Breez → Spark Labs)](https://github.com/ChadFarrow/boostmebitch/pull/79)
-
 ### Merged
+- [#79](https://github.com/ChadFarrow/boostmebitch/pull/79) ✓ Swap Spark rail from Breez to Spark Labs SDK
 - [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
 - [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
 - [#76](https://github.com/ChadFarrow/boostmebitch/pull/76) ✓ fix(social-interact): parse socialInteract from RSS since PI doesn't expose it
@@ -215,7 +215,6 @@
 - [#49](https://github.com/ChadFarrow/boostmebitch/pull/49) ✓ Tolerate cached notes that predate the replies field
 - [#48](https://github.com/ChadFarrow/boostmebitch/pull/48) ✓ Sanitize kind:0 profile JSON + add a route-level error boundary
 - [#47](https://github.com/ChadFarrow/boostmebitch/pull/47) ✓ Drop the "Paying with <RAIL>" line from the boost modal
-- [#46](https://github.com/ChadFarrow/boostmebitch/pull/46) ✓ Drop the rail picker and "Signed as" indicator from the boost modal
 
 ## web-ui
 
@@ -231,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-30 19:20 UTC*
+*Last synced: 2026-05-31 04:05 UTC*

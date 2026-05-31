@@ -4,8 +4,10 @@
 
 ## MSP-2.0
 
+- `Blossom-Hosting`
 - `FAFO`
 - `claude/onboarding-guide-uO2Tz`
+- `feature/artist-onboarding`
 - `master`
 
 ## MSP-2.0-Desktop-App
@@ -82,7 +84,6 @@
 
 ## boostmebitch
 
-- `claude/social-interact-tag-idOOg`
 - `feature/blitz-wallet`
 - `main`
 
@@ -101,4 +102,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-30 19:20 UTC*
+*Last synced: 2026-05-31 04:05 UTC*
