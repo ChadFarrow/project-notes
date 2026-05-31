@@ -94,6 +94,7 @@
 - [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
 
 ### Merged
+- [#141](https://github.com/ChadFarrow/stablekraft-app/pull/141) ✓ fix(lightning): extract keysend routing TLVs from Helipad metadata into WebLN payload
 - [#140](https://github.com/ChadFarrow/stablekraft-app/pull/140) ✓ Fix settings wiped on every app load after new build/deploy
 - [#139](https://github.com/ChadFarrow/stablekraft-app/pull/139) ✓ Fix iOS PWA shuffle: set auto-transition flag in proactive advance timer
 - [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
@@ -123,7 +124,6 @@
 - [#104](https://github.com/ChadFarrow/stablekraft-app/pull/104) ✓ fix: keep Lightning wallet connected when Nostr logs out
 - [#103](https://github.com/ChadFarrow/stablekraft-app/pull/103) ✓ fix: Primal signing — persist signerAppPubkey + recover stale signer for favorites
 - [#102](https://github.com/ChadFarrow/stablekraft-app/pull/102) ✓ Keep NIP-46 relay socket alive on non-login pages
-- [#101](https://github.com/ChadFarrow/stablekraft-app/pull/101) ✓ Revive in-memory NIP-46 client before localStorage restore
 
 ## lnaddress-music
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-31 13:49 UTC*
+*Last synced: 2026-05-31 19:20 UTC*
