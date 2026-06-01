@@ -4,11 +4,9 @@
 
 ## MSP-2.0
 
-- `Blossom-Hosting`
 - `FAFO`
-- `claude/onboarding-guide-uO2Tz`
-- `feature/artist-onboarding`
 - `master`
+- `new-onboarding`
 
 ## MSP-2.0-Desktop-App
 
@@ -102,4 +100,4 @@
 - `main`
 
 ---
-*Last synced: 2026-05-31 19:20 UTC*
+*Last synced: 2026-06-01 04:20 UTC*

@@ -4,12 +4,8 @@
 
 ## MSP-2.0
 
-### Open
-- [#67 Add dead-simple new artist onboarding wizard](https://github.com/ChadFarrow/MSP-2.0/pull/67)
-- [#66 Add Blossom media upload for audio tracks](https://github.com/ChadFarrow/MSP-2.0/pull/66)
-- [#64 Artist (Album + Publisher) setup + first-visit onboarding & feature questionnaire](https://github.com/ChadFarrow/MSP-2.0/pull/64)
-
 ### Merged
+- [#68](https://github.com/ChadFarrow/MSP-2.0/pull/68) ✓ Add draft mode for hosted feeds — skip PI/podping when hosting
 - [#65](https://github.com/ChadFarrow/MSP-2.0/pull/65) ✓ Fix publisher feed Podcast Index submission
 - [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
 - [#61](https://github.com/ChadFarrow/MSP-2.0/pull/61) ✓ Validate RSS feed URLs for characters that cause Podcast Index duplicates
@@ -230,4 +226,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-05-31 19:20 UTC*
+*Last synced: 2026-06-01 04:20 UTC*
