@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Merged
+- [#70](https://github.com/ChadFarrow/MSP-2.0/pull/70) ✓ Fix NIP-46 signer reconnect loop and approval timeout for Primal iOS
+- [#69](https://github.com/ChadFarrow/MSP-2.0/pull/69) ✓ Fix Primal remote signer blocking Nostr music import
 - [#68](https://github.com/ChadFarrow/MSP-2.0/pull/68) ✓ Add draft mode for hosted feeds — skip PI/podping when hosting
 - [#65](https://github.com/ChadFarrow/MSP-2.0/pull/65) ✓ Fix publisher feed Podcast Index submission
 - [#62](https://github.com/ChadFarrow/MSP-2.0/pull/62) ✓ Add Nostr signer timeout and pre-flight connection check
@@ -33,7 +35,6 @@
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
 - [#25](https://github.com/ChadFarrow/MSP-2.0/pull/25) ✓ Fix hosted feed overwrite when creating new album
 - [#11](https://github.com/ChadFarrow/MSP-2.0/pull/11) ✓ Kmdev
-- [#10](https://github.com/ChadFarrow/MSP-2.0/pull/10) ✓ Add light/dark theme switching with persistent user preference
 
 ## MSP-2.0-Desktop-App
 
@@ -226,4 +227,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-02 10:28 UTC*
+*Last synced: 2026-06-02 16:37 UTC*
