@@ -7,6 +7,7 @@
 - `FAFO`
 - `master`
 - `new-onboarding`
+- `new-onboarding-v2`
 
 ## MSP-2.0-Desktop-App
 
@@ -100,4 +101,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-01 21:35 UTC*
+*Last synced: 2026-06-02 04:13 UTC*
