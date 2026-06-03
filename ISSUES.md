@@ -65,6 +65,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#143 Add nostr post selecter](https://github.com/ChadFarrow/stablekraft-app/issues/143)
+
 ### Closed
 - [#131](https://github.com/ChadFarrow/stablekraft-app/issues/131) ✓ Investigate: unknown feed auto-imported without authorization (anchor.fm/s/1125b8ad4)
 - [#127](https://github.com/ChadFarrow/stablekraft-app/issues/127) ✓ Admin import of remoteItem-only RSS feed creates unloadable album tile
@@ -177,4 +180,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-06-02 20:52 UTC*
+*Last synced: 2026-06-03 04:22 UTC*
