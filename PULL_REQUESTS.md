@@ -4,6 +4,9 @@
 
 ## MSP-2.0
 
+### Open
+- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
+
 ### Merged
 - [#70](https://github.com/ChadFarrow/MSP-2.0/pull/70) ✓ Fix NIP-46 signer reconnect loop and approval timeout for Primal iOS
 - [#69](https://github.com/ChadFarrow/MSP-2.0/pull/69) ✓ Fix Primal remote signer blocking Nostr music import
@@ -227,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-04 15:20 UTC*
+*Last synced: 2026-06-04 20:08 UTC*
