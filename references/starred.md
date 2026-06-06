@@ -41,6 +41,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [wisp](https://github.com/barrydeen/wisp) - wee interface for scrolling posts
 - [CLINK](https://github.com/shocknet/CLINK) - Common Lightning Interface for Nostr Keys
 - [start-tunnel](https://github.com/Start9Labs/start-tunnel) - Automated WireGuard VPN deployment tool for StartOS
 - [wisp-ios](https://github.com/barrydeen/wisp-ios) - No description
@@ -91,4 +92,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-06-06 08:36 UTC*
+*Last synced: 2026-06-06 13:49 UTC*
