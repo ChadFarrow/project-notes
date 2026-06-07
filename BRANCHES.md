@@ -83,6 +83,8 @@
 
 ## boostmebitch
 
+- `claude/code-refactoring-review-PFXwN`
+- `claude/episode-detail-page-mobile-c97pl`
 - `claude/pinned-episode-info-scroll-C38K8`
 - `feature/blitz-wallet`
 - `main`
@@ -102,4 +104,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-07 13:58 UTC*
+*Last synced: 2026-06-07 19:26 UTC*
