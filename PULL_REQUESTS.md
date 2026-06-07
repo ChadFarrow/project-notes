@@ -94,6 +94,7 @@
 - [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
 
 ### Merged
+- [#145](https://github.com/ChadFarrow/stablekraft-app/pull/145) ✓ Fix podcast episodes appearing in Favorite Tracks shuffle
 - [#144](https://github.com/ChadFarrow/stablekraft-app/pull/144) ✓ Fix refresh-playlists workflow crash on curl network errors
 - [#142](https://github.com/ChadFarrow/stablekraft-app/pull/142) ✓ Remove DynamicsCompressor from Web Audio pipeline
 - [#141](https://github.com/ChadFarrow/stablekraft-app/pull/141) ✓ fix(lightning): extract keysend routing TLVs from Helipad metadata into WebLN payload
@@ -123,7 +124,6 @@
 - [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
 - [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
 - [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
-- [#104](https://github.com/ChadFarrow/stablekraft-app/pull/104) ✓ fix: keep Lightning wallet connected when Nostr logs out
 
 ## lnaddress-music
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-06 19:26 UTC*
+*Last synced: 2026-06-07 04:10 UTC*
