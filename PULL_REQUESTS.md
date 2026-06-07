@@ -185,6 +185,10 @@
 ## boostmebitch
 
 ### Merged
+- [#83](https://github.com/ChadFarrow/boostmebitch/pull/83) ✓ feat: show full RSS show notes (content:encoded) in expanded episode panel
+- [#82](https://github.com/ChadFarrow/boostmebitch/pull/82) ✓ Start boost modal with blank amount field instead of a pre-filled default
+- [#81](https://github.com/ChadFarrow/boostmebitch/pull/81) ✓ Remove preset amount buttons from boost modal — input only
+- [#80](https://github.com/ChadFarrow/boostmebitch/pull/80) ✓ Pin podcast show header while episodes scroll; fix nested scroll and button overflow
 - [#79](https://github.com/ChadFarrow/boostmebitch/pull/79) ✓ Swap Spark rail from Breez to Spark Labs SDK
 - [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
 - [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
@@ -211,10 +215,6 @@
 - [#53](https://github.com/ChadFarrow/boostmebitch/pull/53) ✓ Fix React error #310 on iOS remote-signer login
 - [#52](https://github.com/ChadFarrow/boostmebitch/pull/52) ✓ Auto-retry the Generate flow when Safari regains visibility
 - [#51](https://github.com/ChadFarrow/boostmebitch/pull/51) ✓ Time-bound bunker connect + better Primal iOS auth-URL surface
-- [#50](https://github.com/ChadFarrow/boostmebitch/pull/50) ✓ Add MIT license
-- [#49](https://github.com/ChadFarrow/boostmebitch/pull/49) ✓ Tolerate cached notes that predate the replies field
-- [#48](https://github.com/ChadFarrow/boostmebitch/pull/48) ✓ Sanitize kind:0 profile JSON + add a route-level error boundary
-- [#47](https://github.com/ChadFarrow/boostmebitch/pull/47) ✓ Drop the "Paying with <RAIL>" line from the boost modal
 
 ## web-ui
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-07 09:16 UTC*
+*Last synced: 2026-06-07 13:58 UTC*

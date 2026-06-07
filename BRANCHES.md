@@ -83,6 +83,7 @@
 
 ## boostmebitch
 
+- `claude/pinned-episode-info-scroll-C38K8`
 - `feature/blitz-wallet`
 - `main`
 
@@ -101,4 +102,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-07 09:16 UTC*
+*Last synced: 2026-06-07 13:58 UTC*
