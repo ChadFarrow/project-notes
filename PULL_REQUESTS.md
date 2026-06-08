@@ -185,6 +185,11 @@
 ## boostmebitch
 
 ### Merged
+- [#95](https://github.com/ChadFarrow/boostmebitch/pull/95) ✓ Disconnect Spark wallet on Nostr sign-out and npub switch
+- [#94](https://github.com/ChadFarrow/boostmebitch/pull/94) ✓ Improve Primal same-device login UX
+- [#93](https://github.com/ChadFarrow/boostmebitch/pull/93) ✓ Auto-retry and translate 'subscription closed' NIP-46 errors
+- [#92](https://github.com/ChadFarrow/boostmebitch/pull/92) ✓ Make remote signer dropdown background opaque
+- [#91](https://github.com/ChadFarrow/boostmebitch/pull/91) ✓ Fix Primal/NIP-46 paste login timing out on iOS same-device flow
 - [#90](https://github.com/ChadFarrow/boostmebitch/pull/90) ✓ Add episode share links (?podcast=<guid>&episode=<guid>)
 - [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
 - [#88](https://github.com/ChadFarrow/boostmebitch/pull/88) ✓ Tier 1 refactoring: extract shared utilities to eliminate duplication
@@ -210,11 +215,6 @@
 - [#65](https://github.com/ChadFarrow/boostmebitch/pull/65) ✓ Always do a full fetch on mount, not incremental since-based
 - [#64](https://github.com/ChadFarrow/boostmebitch/pull/64) ✓ Fix REFRESH button showing stale cached content
 - [#63](https://github.com/ChadFarrow/boostmebitch/pull/63) ✓ Require a connected wallet to send a boost
-- [#62](https://github.com/ChadFarrow/boostmebitch/pull/62) ✓ Sort pending live items ascending by start time
-- [#61](https://github.com/ChadFarrow/boostmebitch/pull/61) ✓ Add in-memory fallback for the NWC URI when localStorage is hostile
-- [#60](https://github.com/ChadFarrow/boostmebitch/pull/60) ✓ Make NWC connect failures impossible to miss
-- [#59](https://github.com/ChadFarrow/boostmebitch/pull/59) ✓ NWC probe: fall back to get_balance if get_info isn't granted
-- [#58](https://github.com/ChadFarrow/boostmebitch/pull/58) ✓ Probe the NWC wallet at connect-time
 
 ## web-ui
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-08 11:00 UTC*
+*Last synced: 2026-06-08 15:57 UTC*
