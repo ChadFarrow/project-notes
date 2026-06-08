@@ -185,6 +185,8 @@
 ## boostmebitch
 
 ### Merged
+- [#90](https://github.com/ChadFarrow/boostmebitch/pull/90) ✓ Add episode share links (?podcast=<guid>&episode=<guid>)
+- [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
 - [#88](https://github.com/ChadFarrow/boostmebitch/pull/88) ✓ Tier 1 refactoring: extract shared utilities to eliminate duplication
 - [#87](https://github.com/ChadFarrow/boostmebitch/pull/87) ✓ Add per-episode Nostr boost feed to episode detail view
 - [#86](https://github.com/ChadFarrow/boostmebitch/pull/86) ✓ Add full-page episode detail view for better mobile UX
@@ -213,8 +215,6 @@
 - [#60](https://github.com/ChadFarrow/boostmebitch/pull/60) ✓ Make NWC connect failures impossible to miss
 - [#59](https://github.com/ChadFarrow/boostmebitch/pull/59) ✓ NWC probe: fall back to get_balance if get_info isn't granted
 - [#58](https://github.com/ChadFarrow/boostmebitch/pull/58) ✓ Probe the NWC wallet at connect-time
-- [#57](https://github.com/ChadFarrow/boostmebitch/pull/57) ✓ Parse <podcast:liveItem> from RSS for pending live items
-- [#56](https://github.com/ChadFarrow/boostmebitch/pull/56) ✓ Show pending and live items in episode lists
 
 ## web-ui
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-07 19:26 UTC*
+*Last synced: 2026-06-08 04:15 UTC*
