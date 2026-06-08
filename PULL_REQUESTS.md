@@ -185,6 +185,8 @@
 ## boostmebitch
 
 ### Merged
+- [#97](https://github.com/ChadFarrow/boostmebitch/pull/97) ✓ Fix Primal NIP-46 generate flow: single relay + correct UI guidance
+- [#96](https://github.com/ChadFarrow/boostmebitch/pull/96) ✓ Clarify Primal uses Have URI, not Generate URI
 - [#95](https://github.com/ChadFarrow/boostmebitch/pull/95) ✓ Disconnect Spark wallet on Nostr sign-out and npub switch
 - [#94](https://github.com/ChadFarrow/boostmebitch/pull/94) ✓ Improve Primal same-device login UX
 - [#93](https://github.com/ChadFarrow/boostmebitch/pull/93) ✓ Auto-retry and translate 'subscription closed' NIP-46 errors
@@ -213,8 +215,6 @@
 - [#67](https://github.com/ChadFarrow/boostmebitch/pull/67) ✓ Enforce 100 sat minimum boost to ensure 1% splits get paid
 - [#66](https://github.com/ChadFarrow/boostmebitch/pull/66) ✓ fix: parse podcast:value from RSS liveItem blocks
 - [#65](https://github.com/ChadFarrow/boostmebitch/pull/65) ✓ Always do a full fetch on mount, not incremental since-based
-- [#64](https://github.com/ChadFarrow/boostmebitch/pull/64) ✓ Fix REFRESH button showing stale cached content
-- [#63](https://github.com/ChadFarrow/boostmebitch/pull/63) ✓ Require a connected wallet to send a boost
 
 ## web-ui
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-08 15:57 UTC*
+*Last synced: 2026-06-08 20:21 UTC*
