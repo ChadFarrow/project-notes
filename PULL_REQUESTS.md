@@ -182,6 +182,9 @@
 ## boostmebitch
 
 ### Merged
+- [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
+- [#99](https://github.com/ChadFarrow/boostmebitch/pull/99) ✓ Fix NWC restore not firing after sign-out + sign-in
+- [#98](https://github.com/ChadFarrow/boostmebitch/pull/98) ✓ Fix NWC backup not auto-restoring on mobile (nostash/iOS)
 - [#97](https://github.com/ChadFarrow/boostmebitch/pull/97) ✓ Fix Primal NIP-46 generate flow: single relay + correct UI guidance
 - [#96](https://github.com/ChadFarrow/boostmebitch/pull/96) ✓ Clarify Primal uses Have URI, not Generate URI
 - [#95](https://github.com/ChadFarrow/boostmebitch/pull/95) ✓ Disconnect Spark wallet on Nostr sign-out and npub switch
@@ -209,9 +212,6 @@
 - [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
 - [#69](https://github.com/ChadFarrow/boostmebitch/pull/69) ✓ Add Boost All Tracks feature (MOAB branch)
 - [#68](https://github.com/ChadFarrow/boostmebitch/pull/68) ✓ feat: add fullscreen now playing view
-- [#67](https://github.com/ChadFarrow/boostmebitch/pull/67) ✓ Enforce 100 sat minimum boost to ensure 1% splits get paid
-- [#66](https://github.com/ChadFarrow/boostmebitch/pull/66) ✓ fix: parse podcast:value from RSS liveItem blocks
-- [#65](https://github.com/ChadFarrow/boostmebitch/pull/65) ✓ Always do a full fetch on mount, not incremental since-based
 
 ## web-ui
 
@@ -227,4 +227,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-09 09:50 UTC*
+*Last synced: 2026-06-09 14:56 UTC*
