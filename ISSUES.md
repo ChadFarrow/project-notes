@@ -66,6 +66,7 @@
 ## stablekraft-app
 
 ### Open
+- [#148 Add nip 05 login](https://github.com/ChadFarrow/stablekraft-app/issues/148)
 - [#143 Add nostr post selecter](https://github.com/ChadFarrow/stablekraft-app/issues/143)
 
 ### Closed
@@ -180,4 +181,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-06-09 14:56 UTC*
+*Last synced: 2026-06-09 20:09 UTC*
