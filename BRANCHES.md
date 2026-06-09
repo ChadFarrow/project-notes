@@ -36,7 +36,6 @@
 
 ## stablekraft-app
 
-- `claude/count-missing-publisher-feeds-OcmAs`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -83,10 +82,6 @@
 
 ## boostmebitch
 
-- `claude/code-refactoring-review-PFXwN`
-- `claude/episode-detail-page-mobile-c97pl`
-- `claude/pinned-episode-info-scroll-C38K8`
-- `feature/blitz-wallet`
 - `main`
 
 ## web-ui
@@ -104,4 +99,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-08 20:21 UTC*
+*Last synced: 2026-06-09 03:45 UTC*

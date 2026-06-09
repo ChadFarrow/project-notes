@@ -90,10 +90,9 @@
 
 ## stablekraft-app
 
-### Open
-- [#137 docs: add note on counting feeds missing publisher feeds](https://github.com/ChadFarrow/stablekraft-app/pull/137)
-
 ### Merged
+- [#147](https://github.com/ChadFarrow/stablekraft-app/pull/147) ✓ docs: note three-select-block sync gotcha in favorites/tracks route
+- [#146](https://github.com/ChadFarrow/stablekraft-app/pull/146) ✓ fix(favorites): add Feed.type to all track selects to fix Railway build
 - [#145](https://github.com/ChadFarrow/stablekraft-app/pull/145) ✓ Fix podcast episodes appearing in Favorite Tracks shuffle
 - [#144](https://github.com/ChadFarrow/stablekraft-app/pull/144) ✓ Fix refresh-playlists workflow crash on curl network errors
 - [#142](https://github.com/ChadFarrow/stablekraft-app/pull/142) ✓ Remove DynamicsCompressor from Web Audio pipeline
@@ -122,8 +121,6 @@
 - [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
 - [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
 - [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
-- [#106](https://github.com/ChadFarrow/stablekraft-app/pull/106) ✓ feat(shuffle): exclude Satellite Skirmish Boost Recap from global shuffle
-- [#105](https://github.com/ChadFarrow/stablekraft-app/pull/105) ✓ docs: note wallet/Nostr decoupling, pre-sign ping, manual reconnect
 
 ## lnaddress-music
 
@@ -230,4 +227,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-08 20:21 UTC*
+*Last synced: 2026-06-09 03:44 UTC*
