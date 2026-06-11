@@ -8,6 +8,8 @@
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#73](https://github.com/ChadFarrow/MSP-2.0/pull/73) ✓ Document proxy-feed allowlist enforcement in CLAUDE.md
+- [#72](https://github.com/ChadFarrow/MSP-2.0/pull/72) ✓ Harden security and performance across API and frontend
 - [#70](https://github.com/ChadFarrow/MSP-2.0/pull/70) ✓ Fix NIP-46 signer reconnect loop and approval timeout for Primal iOS
 - [#69](https://github.com/ChadFarrow/MSP-2.0/pull/69) ✓ Fix Primal remote signer blocking Nostr music import
 - [#68](https://github.com/ChadFarrow/MSP-2.0/pull/68) ✓ Add draft mode for hosted feeds — skip PI/podping when hosting
@@ -36,8 +38,6 @@
 - [#33](https://github.com/ChadFarrow/MSP-2.0/pull/33) ✓ Add GUID regenerate button for using feeds as templates
 - [#32](https://github.com/ChadFarrow/MSP-2.0/pull/32) ✓ Move common actions to bottom toolbar
 - [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
-- [#25](https://github.com/ChadFarrow/MSP-2.0/pull/25) ✓ Fix hosted feed overwrite when creating new album
-- [#11](https://github.com/ChadFarrow/MSP-2.0/pull/11) ✓ Kmdev
 
 ## MSP-2.0-Desktop-App
 
@@ -91,6 +91,12 @@
 ## stablekraft-app
 
 ### Merged
+- [#154](https://github.com/ChadFarrow/stablekraft-app/pull/154) ✓ docs: document ADMIN_SECRET auth, SSRF guard, and rate limit in CLAUDE.md
+- [#153](https://github.com/ChadFarrow/stablekraft-app/pull/153) ✓ Security hardening + performance fixes from full app audit
+- [#152](https://github.com/ChadFarrow/stablekraft-app/pull/152) ✓ docs: track-ordering sources + medium=music blacklist gotcha in CLAUDE.md
+- [#151](https://github.com/ChadFarrow/stablekraft-app/pull/151) ✓ feat: reparse newly imported feeds from RSS in nightly workflow (Step 5c)
+- [#150](https://github.com/ChadFarrow/stablekraft-app/pull/150) ✓ fix: sort PI episodes oldest-first so index-based trackOrder isn't reversed
+- [#149](https://github.com/ChadFarrow/stablekraft-app/pull/149) ✓ fix: blacklist Phantom Power Business Hour (talk podcast with medium=music)
 - [#147](https://github.com/ChadFarrow/stablekraft-app/pull/147) ✓ docs: note three-select-block sync gotcha in favorites/tracks route
 - [#146](https://github.com/ChadFarrow/stablekraft-app/pull/146) ✓ fix(favorites): add Feed.type to all track selects to fix Railway build
 - [#145](https://github.com/ChadFarrow/stablekraft-app/pull/145) ✓ Fix podcast episodes appearing in Favorite Tracks shuffle
@@ -115,12 +121,6 @@
 - [#121](https://github.com/ChadFarrow/stablekraft-app/pull/121) ✓ feat(admin): artist-name search for music-show-only publishers
 - [#120](https://github.com/ChadFarrow/stablekraft-app/pull/120) ✓ feat(admin): music-show-only flag for publisher feeds
 - [#118](https://github.com/ChadFarrow/stablekraft-app/pull/118) ✓ fix(exclusions): hard-blacklist Henrik Flyman Wavlake mirrors + plug mint gaps
-- [#117](https://github.com/ChadFarrow/stablekraft-app/pull/117) ✓ perf(home): drop 'new' filter page size to 50 for iOS scroll parity
-- [#116](https://github.com/ChadFarrow/stablekraft-app/pull/116) ✓ feat(home): "New" top-level filter — recently added music
-- [#115](https://github.com/ChadFarrow/stablekraft-app/pull/115) ✓ fix(wallet): detect Alby Hub from pasted NWC URL relay param
-- [#112](https://github.com/ChadFarrow/stablekraft-app/pull/112) ✓ feat(feeds): add ?public=true flag to GET /api/feeds
-- [#109](https://github.com/ChadFarrow/stablekraft-app/pull/109) ✓ fix(nip46): ping signer during reconnect to catch dead Primal subscriptions
-- [#108](https://github.com/ChadFarrow/stablekraft-app/pull/108) ✓ feat(api): OPML export at /api/feeds/opml for cross-app feed import
 
 ## lnaddress-music
 
@@ -228,4 +228,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-10 20:33 UTC*
+*Last synced: 2026-06-11 04:11 UTC*

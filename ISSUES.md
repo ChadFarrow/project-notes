@@ -161,6 +161,9 @@
 
 ## boostmebitch
 
+### Open
+- [#101 track order](https://github.com/ChadFarrow/boostmebitch/issues/101)
+
 ### Closed
 - [#74](https://github.com/ChadFarrow/boostmebitch/issues/74) ✓ add boostmebitch.com links to nostr post
 - [#73](https://github.com/ChadFarrow/boostmebitch/issues/73) ✓ update now playing page
@@ -181,4 +184,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-06-10 20:33 UTC*
+*Last synced: 2026-06-11 04:11 UTC*
