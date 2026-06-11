@@ -182,6 +182,7 @@
 ## boostmebitch
 
 ### Merged
+- [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
 - [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
 - [#99](https://github.com/ChadFarrow/boostmebitch/pull/99) ✓ Fix NWC restore not firing after sign-out + sign-in
 - [#98](https://github.com/ChadFarrow/boostmebitch/pull/98) ✓ Fix NWC backup not auto-restoring on mobile (nostash/iOS)
@@ -211,7 +212,6 @@
 - [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
 - [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
 - [#69](https://github.com/ChadFarrow/boostmebitch/pull/69) ✓ Add Boost All Tracks feature (MOAB branch)
-- [#68](https://github.com/ChadFarrow/boostmebitch/pull/68) ✓ feat: add fullscreen now playing view
 
 ## web-ui
 
@@ -228,4 +228,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-11 10:40 UTC*
+*Last synced: 2026-06-11 16:06 UTC*
