@@ -176,6 +176,7 @@
 ## chadf-landing-page
 
 ### Merged
+- [#4](https://github.com/ChadFarrow/chadf-landing-page/pull/4) ✓ Add Homegrown Hits Episode 111 to guest appearances
 - [#3](https://github.com/ChadFarrow/chadf-landing-page/pull/3) ✓ Add BoostMeBitch to apps section
 - [#2](https://github.com/ChadFarrow/chadf-landing-page/pull/2) ✓ Add TardBox to resources section
 
@@ -228,4 +229,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-11 20:25 UTC*
+*Last synced: 2026-06-12 04:13 UTC*
