@@ -8,6 +8,9 @@
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#76](https://github.com/ChadFarrow/MSP-2.0/pull/76) ✓ Document value recipient normalization on import in CLAUDE.md
+- [#75](https://github.com/ChadFarrow/MSP-2.0/pull/75) ✓ Migrate legacy MSP 1.0 support node to MSP 2.0 lnaddress on import
+- [#74](https://github.com/ChadFarrow/MSP-2.0/pull/74) ✓ Detect Lightning addresses on import regardless of feed type attribute
 - [#73](https://github.com/ChadFarrow/MSP-2.0/pull/73) ✓ Document proxy-feed allowlist enforcement in CLAUDE.md
 - [#72](https://github.com/ChadFarrow/MSP-2.0/pull/72) ✓ Harden security and performance across API and frontend
 - [#70](https://github.com/ChadFarrow/MSP-2.0/pull/70) ✓ Fix NIP-46 signer reconnect loop and approval timeout for Primal iOS
@@ -35,9 +38,6 @@
 - [#38](https://github.com/ChadFarrow/MSP-2.0/pull/38) ✓ Skip redundant person tags on tracks that inherit from album
 - [#37](https://github.com/ChadFarrow/MSP-2.0/pull/37) ✓ Pre-populate track persons from album when override is toggled on
 - [#35](https://github.com/ChadFarrow/MSP-2.0/pull/35) ✓ Add community support splits button to track-level value recipients
-- [#33](https://github.com/ChadFarrow/MSP-2.0/pull/33) ✓ Add GUID regenerate button for using feeds as templates
-- [#32](https://github.com/ChadFarrow/MSP-2.0/pull/32) ✓ Move common actions to bottom toolbar
-- [#26](https://github.com/ChadFarrow/MSP-2.0/pull/26) ✓ Add timestamped feed backups with list and restore endpoints
 
 ## MSP-2.0-Desktop-App
 
@@ -229,4 +229,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-12 10:17 UTC*
+*Last synced: 2026-06-12 15:19 UTC*
