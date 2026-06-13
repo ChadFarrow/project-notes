@@ -37,6 +37,7 @@
 ## stablekraft-app
 
 - `docs/admin-auth-claude-md`
+- `feat/podcast-image-tag`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -101,4 +102,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-12 20:13 UTC*
+*Last synced: 2026-06-13 04:01 UTC*

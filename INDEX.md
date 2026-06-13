@@ -34,6 +34,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
@@ -47,7 +48,6 @@
 - [v4v-toolkit](https://github.com/ChadFarrow/v4v-toolkit) -  *(NEW)*
 - [is-this-thing-on](https://github.com/ChadFarrow/is-this-thing-on) -  *(NEW)*
 - [IRL_QR](https://github.com/ChadFarrow/IRL_QR) -  *(NEW)*
-- [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [helipad-startos](https://github.com/ChadFarrow/helipad-startos) - Helipad packaged for Start9's StartOS. *(NEW)*
 - [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
