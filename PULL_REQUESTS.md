@@ -8,6 +8,7 @@
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#77](https://github.com/ChadFarrow/MSP-2.0/pull/77) ✓ Add reason: 'update' to automatic podping fire-and-forget calls
 - [#76](https://github.com/ChadFarrow/MSP-2.0/pull/76) ✓ Document value recipient normalization on import in CLAUDE.md
 - [#75](https://github.com/ChadFarrow/MSP-2.0/pull/75) ✓ Migrate legacy MSP 1.0 support node to MSP 2.0 lnaddress on import
 - [#74](https://github.com/ChadFarrow/MSP-2.0/pull/74) ✓ Detect Lightning addresses on import regardless of feed type attribute
@@ -37,7 +38,6 @@
 - [#39](https://github.com/ChadFarrow/MSP-2.0/pull/39) ✓ Update lastBuildDate when generating feed XML
 - [#38](https://github.com/ChadFarrow/MSP-2.0/pull/38) ✓ Skip redundant person tags on tracks that inherit from album
 - [#37](https://github.com/ChadFarrow/MSP-2.0/pull/37) ✓ Pre-populate track persons from album when override is toggled on
-- [#35](https://github.com/ChadFarrow/MSP-2.0/pull/35) ✓ Add community support splits button to track-level value recipients
 
 ## MSP-2.0-Desktop-App
 
@@ -92,6 +92,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#155](https://github.com/ChadFarrow/stablekraft-app/pull/155) ✓ Fix settings page showing defaults after logout/login
 - [#154](https://github.com/ChadFarrow/stablekraft-app/pull/154) ✓ docs: document ADMIN_SECRET auth, SSRF guard, and rate limit in CLAUDE.md
 - [#153](https://github.com/ChadFarrow/stablekraft-app/pull/153) ✓ Security hardening + performance fixes from full app audit
 - [#152](https://github.com/ChadFarrow/stablekraft-app/pull/152) ✓ docs: track-ordering sources + medium=music blacklist gotcha in CLAUDE.md
@@ -121,7 +122,6 @@
 - [#123](https://github.com/ChadFarrow/stablekraft-app/pull/123) ✓ feat(admin): one-click "Delete unplayed albums" for music-show-only cleanup
 - [#121](https://github.com/ChadFarrow/stablekraft-app/pull/121) ✓ feat(admin): artist-name search for music-show-only publishers
 - [#120](https://github.com/ChadFarrow/stablekraft-app/pull/120) ✓ feat(admin): music-show-only flag for publisher feeds
-- [#118](https://github.com/ChadFarrow/stablekraft-app/pull/118) ✓ fix(exclusions): hard-blacklist Henrik Flyman Wavlake mirrors + plug mint gaps
 
 ## lnaddress-music
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-13 14:04 UTC*
+*Last synced: 2026-06-13 19:40 UTC*
