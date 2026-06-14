@@ -84,7 +84,6 @@
 
 ## boostmebitch
 
-- `claude/git-pull-tegsyc`
 - `main`
 
 ## web-ui
@@ -102,4 +101,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-14 14:08 UTC*
+*Last synced: 2026-06-14 19:40 UTC*
