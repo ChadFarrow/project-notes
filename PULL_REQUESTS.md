@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
@@ -184,6 +185,8 @@
 ## boostmebitch
 
 ### Merged
+- [#105](https://github.com/ChadFarrow/boostmebitch/pull/105) ✓ fix: correct NWC error messages for Zeus embedded node limitation
+- [#104](https://github.com/ChadFarrow/boostmebitch/pull/104) ✓ fix: supply explicit preimage in NWC keysend for Zeus embedded node
 - [#103](https://github.com/ChadFarrow/boostmebitch/pull/103) ✓ Auto-play next track on music feeds
 - [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
 - [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
@@ -212,8 +215,6 @@
 - [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
 - [#76](https://github.com/ChadFarrow/boostmebitch/pull/76) ✓ fix(social-interact): parse socialInteract from RSS since PI doesn't expose it
 - [#75](https://github.com/ChadFarrow/boostmebitch/pull/75) ✓ feat: add podcast:socialInteract tag support (Nostr only)
-- [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
-- [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
 
 ## web-ui
 
@@ -230,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-15 12:19 UTC*
+*Last synced: 2026-06-15 20:57 UTC*

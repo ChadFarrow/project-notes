@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/feeds-demu-template-hf5tyk`
 - `master`
 - `new-onboarding`
 - `new-onboarding-v2`
@@ -101,4 +102,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-15 12:20 UTC*
+*Last synced: 2026-06-15 20:57 UTC*
