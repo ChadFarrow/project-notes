@@ -84,7 +84,6 @@
 
 ## boostmebitch
 
-- `claude/music-feeds-auto-play-l2k9i3`
 - `main`
 
 ## web-ui
@@ -102,4 +101,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-15 04:43 UTC*
+*Last synced: 2026-06-15 12:20 UTC*

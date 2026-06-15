@@ -183,10 +183,8 @@
 
 ## boostmebitch
 
-### Open
-- [#103 Auto-play next track on music feeds](https://github.com/ChadFarrow/boostmebitch/pull/103)
-
 ### Merged
+- [#103](https://github.com/ChadFarrow/boostmebitch/pull/103) ✓ Auto-play next track on music feeds
 - [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
 - [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
 - [#99](https://github.com/ChadFarrow/boostmebitch/pull/99) ✓ Fix NWC restore not firing after sign-out + sign-in
@@ -216,7 +214,6 @@
 - [#75](https://github.com/ChadFarrow/boostmebitch/pull/75) ✓ feat: add podcast:socialInteract tag support (Nostr only)
 - [#71](https://github.com/ChadFarrow/boostmebitch/pull/71) ✓ Fix text overlap in episode rows on mobile
 - [#70](https://github.com/ChadFarrow/boostmebitch/pull/70) ✓ feat: expandable episode rows with per-episode boost
-- [#69](https://github.com/ChadFarrow/boostmebitch/pull/69) ✓ Add Boost All Tracks feature (MOAB branch)
 
 ## web-ui
 
@@ -233,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-15 04:43 UTC*
+*Last synced: 2026-06-15 12:19 UTC*
