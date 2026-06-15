@@ -161,10 +161,8 @@
 
 ## boostmebitch
 
-### Open
-- [#101 track order](https://github.com/ChadFarrow/boostmebitch/issues/101)
-
 ### Closed
+- [#101](https://github.com/ChadFarrow/boostmebitch/issues/101) ✓ track order
 - [#74](https://github.com/ChadFarrow/boostmebitch/issues/74) ✓ add boostmebitch.com links to nostr post
 - [#73](https://github.com/ChadFarrow/boostmebitch/issues/73) ✓ update now playing page
 - [#72](https://github.com/ChadFarrow/boostmebitch/issues/72) ✓ make media on page load before Nostr content
@@ -184,4 +182,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-06-14 19:39 UTC*
+*Last synced: 2026-06-15 04:42 UTC*

@@ -183,6 +183,9 @@
 
 ## boostmebitch
 
+### Open
+- [#103 Auto-play next track on music feeds](https://github.com/ChadFarrow/boostmebitch/pull/103)
+
 ### Merged
 - [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
 - [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
@@ -230,4 +233,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-14 19:39 UTC*
+*Last synced: 2026-06-15 04:43 UTC*
