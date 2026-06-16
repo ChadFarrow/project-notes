@@ -52,6 +52,7 @@
 - [podstr](https://github.com/ChadFarrow/podstr) - A application that marries Nostr and Podcasting 2.0 *(NEW)*
 - [lnbeats](https://github.com/ChadFarrow/lnbeats) -  *(NEW)*
 - [so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay *(NEW)*
+- [demu-feed-template](https://github.com/ChadFarrow/demu-feed-template) - Template for releasing decentralized music *(NEW)*
 - [stacks](https://github.com/ChadFarrow/stacks) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. *(NEW)*
 - [stacks-pc20](https://github.com/ChadFarrow/stacks-pc20) - stacks templet for podcasting 2.0 *(NEW)*
 - [BoostBot-Starter](https://github.com/ChadFarrow/BoostBot-Starter) -  *(NEW)*
