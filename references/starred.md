@@ -41,6 +41,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [sidecar](https://github.com/dmnyc/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸
 - [haven-kit-startos](https://github.com/Letdown2491/haven-kit-startos) - HAVEN relay for StartOS
 - [wisp](https://github.com/barrydeen/wisp) - wee interface for scrolling posts
 - [CLINK](https://github.com/shocknet/CLINK) - Common Lightning Interface for Nostr Keys
@@ -93,4 +94,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-06-20 14:09 UTC*
+*Last synced: 2026-06-20 19:40 UTC*
