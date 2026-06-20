@@ -5,10 +5,8 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/auth-nostr-keypair-onboarding-92jtcx`
 - `claude/feeds-demu-template-hf5tyk`
 - `master`
-- `new-onboarding`
 - `new-onboarding-v2`
 
 ## MSP-2.0-Desktop-App
@@ -103,4 +101,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-19 19:52 UTC*
+*Last synced: 2026-06-20 03:56 UTC*
