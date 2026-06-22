@@ -61,7 +61,7 @@
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [builder-skill](https://github.com/getAlby/builder-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
-- [yantr](https://github.com/besoeasy/yantr) - YANTR is a powerful, cross-platform alternative to Umbrel — a Docker-based app store designed for flexible, server-grade self-hosting. It lets you deploy ready-to-run apps — from Bitcoin nodes and privacy tools to file converters — all packaged as lightweight containers, giving you more control, portability, and freedom over your setup.
+- [yantr](https://github.com/besoeasy/yantr) - A self-hosted app store that runs alongside your OS — not instead of it.
 - [pimonitor](https://github.com/Podcastindex-org/pimonitor) - Monitors incoming feeds to the Podcast Index API for triage and management.
 - [genre-list](https://github.com/wavlake/genre-list) - Genre list for Wavlake's music catalog
 - [live-updates](https://github.com/thebells1111/live-updates) - No description
@@ -94,4 +94,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-06-22 04:42 UTC*
+*Last synced: 2026-06-22 12:09 UTC*
