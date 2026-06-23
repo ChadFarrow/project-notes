@@ -9,6 +9,12 @@
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#86](https://github.com/ChadFarrow/MSP-2.0/pull/86) ✓ Docs: document the legacy domain (non-feed) redirect
+- [#85](https://github.com/ChadFarrow/MSP-2.0/pull/85) ✓ Redirect legacy msp.podtards.com domain to musicsideproject.com
+- [#84](https://github.com/ChadFarrow/MSP-2.0/pull/84) ✓ Docs: document the legacy 301 feed redirect
+- [#83](https://github.com/ChadFarrow/MSP-2.0/pull/83) ✓ 301-redirect legacy msp.podtards.com hosted-feed URLs to canonical
+- [#82](https://github.com/ChadFarrow/MSP-2.0/pull/82) ✓ Docs: update CLAUDE.md for canonical musicsideproject.com domain
+- [#81](https://github.com/ChadFarrow/MSP-2.0/pull/81) ✓ Use musicsideproject.com as canonical domain for all hosted feeds
 - [#78](https://github.com/ChadFarrow/MSP-2.0/pull/78) ✓ Add Twitter/X contact info to Info modal
 - [#77](https://github.com/ChadFarrow/MSP-2.0/pull/77) ✓ Add reason: 'update' to automatic podping fire-and-forget calls
 - [#76](https://github.com/ChadFarrow/MSP-2.0/pull/76) ✓ Document value recipient normalization on import in CLAUDE.md
@@ -33,12 +39,6 @@
 - [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 - [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
-- [#44](https://github.com/ChadFarrow/MSP-2.0/pull/44) ✓ Add Nostr music NIP research notes
-- [#43](https://github.com/ChadFarrow/MSP-2.0/pull/43) ✓ Add NIP-71 naddr video resolution
-- [#42](https://github.com/ChadFarrow/MSP-2.0/pull/42) ✓ Add nsite (NIP-5A) publishing support
-- [#40](https://github.com/ChadFarrow/MSP-2.0/pull/40) ✓ Update lastBuildDate in remaining feed generation paths
-- [#39](https://github.com/ChadFarrow/MSP-2.0/pull/39) ✓ Update lastBuildDate when generating feed XML
-- [#38](https://github.com/ChadFarrow/MSP-2.0/pull/38) ✓ Skip redundant person tags on tracks that inherit from album
 
 ## MSP-2.0-Desktop-App
 
@@ -231,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-22 20:51 UTC*
+*Last synced: 2026-06-23 03:48 UTC*
