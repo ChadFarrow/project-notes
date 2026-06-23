@@ -185,6 +185,7 @@
 ## boostmebitch
 
 ### Merged
+- [#107](https://github.com/ChadFarrow/boostmebitch/pull/107) ✓ Fix split rounding so small recipients aren't zeroed
 - [#106](https://github.com/ChadFarrow/boostmebitch/pull/106) ✓ feat: add Nostr live stream discovery (NIP-53 kind:30311)
 - [#105](https://github.com/ChadFarrow/boostmebitch/pull/105) ✓ fix: correct NWC error messages for Zeus embedded node limitation
 - [#104](https://github.com/ChadFarrow/boostmebitch/pull/104) ✓ fix: supply explicit preimage in NWC keysend for Zeus embedded node
@@ -214,7 +215,6 @@
 - [#79](https://github.com/ChadFarrow/boostmebitch/pull/79) ✓ Swap Spark rail from Breez to Spark Labs SDK
 - [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
 - [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
-- [#76](https://github.com/ChadFarrow/boostmebitch/pull/76) ✓ fix(social-interact): parse socialInteract from RSS since PI doesn't expose it
 
 ## web-ui
 
@@ -231,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-23 14:54 UTC*
+*Last synced: 2026-06-23 20:09 UTC*
