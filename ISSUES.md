@@ -65,11 +65,9 @@
 
 ## stablekraft-app
 
-### Open
-- [#143 Add nostr post selecter](https://github.com/ChadFarrow/stablekraft-app/issues/143)
-
 ### Closed
 - [#148](https://github.com/ChadFarrow/stablekraft-app/issues/148) ✓ Add nip 05 login
+- [#143](https://github.com/ChadFarrow/stablekraft-app/issues/143) ✓ Add nostr post selecter
 - [#131](https://github.com/ChadFarrow/stablekraft-app/issues/131) ✓ Investigate: unknown feed auto-imported without authorization (anchor.fm/s/1125b8ad4)
 - [#127](https://github.com/ChadFarrow/stablekraft-app/issues/127) ✓ Admin import of remoteItem-only RSS feed creates unloadable album tile
 - [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
@@ -182,4 +180,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-06-26 02:54 UTC*
+*Last synced: 2026-06-26 03:57 UTC*
