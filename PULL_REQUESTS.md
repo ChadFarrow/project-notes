@@ -185,6 +185,10 @@
 ## boostmebitch
 
 ### Merged
+- [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
+- [#110](https://github.com/ChadFarrow/boostmebitch/pull/110) ✓ Show only play/pause in the mini-bar for live streams
+- [#109](https://github.com/ChadFarrow/boostmebitch/pull/109) ✓ Move play/pause onto the live-stream video as a tap overlay
+- [#108](https://github.com/ChadFarrow/boostmebitch/pull/108) ✓ Improve mobile layout of fullscreen live-stream player
 - [#107](https://github.com/ChadFarrow/boostmebitch/pull/107) ✓ Fix split rounding so small recipients aren't zeroed
 - [#106](https://github.com/ChadFarrow/boostmebitch/pull/106) ✓ feat: add Nostr live stream discovery (NIP-53 kind:30311)
 - [#105](https://github.com/ChadFarrow/boostmebitch/pull/105) ✓ fix: correct NWC error messages for Zeus embedded node limitation
@@ -211,10 +215,6 @@
 - [#83](https://github.com/ChadFarrow/boostmebitch/pull/83) ✓ feat: show full RSS show notes (content:encoded) in expanded episode panel
 - [#82](https://github.com/ChadFarrow/boostmebitch/pull/82) ✓ Start boost modal with blank amount field instead of a pre-filled default
 - [#81](https://github.com/ChadFarrow/boostmebitch/pull/81) ✓ Remove preset amount buttons from boost modal — input only
-- [#80](https://github.com/ChadFarrow/boostmebitch/pull/80) ✓ Pin podcast show header while episodes scroll; fix nested scroll and button overflow
-- [#79](https://github.com/ChadFarrow/boostmebitch/pull/79) ✓ Swap Spark rail from Breez to Spark Labs SDK
-- [#78](https://github.com/ChadFarrow/boostmebitch/pull/78) ✓ Move discussion button off inline metadata row on mobile
-- [#77](https://github.com/ChadFarrow/boostmebitch/pull/77) ✓ Tighten thread indentation on mobile
 
 ## web-ui
 
@@ -231,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-26 09:31 UTC*
+*Last synced: 2026-06-26 14:29 UTC*
