@@ -34,6 +34,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) - The Libre Listener Wallet is a zero-infrastructure, non-custodial Bitcoin Lightning Network implementation *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
 - [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
