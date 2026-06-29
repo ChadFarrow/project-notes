@@ -184,6 +184,8 @@
 ## boostmebitch
 
 ### Merged
+- [#113](https://github.com/ChadFarrow/boostmebitch/pull/113) ✓ Resume live HLS streams on foreground (iOS Safari background fix)
+- [#112](https://github.com/ChadFarrow/boostmebitch/pull/112) ✓ Add Picture-in-Picture for video streams + Media Session controls
 - [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
 - [#110](https://github.com/ChadFarrow/boostmebitch/pull/110) ✓ Show only play/pause in the mini-bar for live streams
 - [#109](https://github.com/ChadFarrow/boostmebitch/pull/109) ✓ Move play/pause onto the live-stream video as a tap overlay
@@ -212,8 +214,6 @@
 - [#85](https://github.com/ChadFarrow/boostmebitch/pull/85) ✓ fix: move show header buttons inside the flex-1 info column to prevent overflow
 - [#84](https://github.com/ChadFarrow/boostmebitch/pull/84) ✓ fix: change boost modal amount placeholder from "enter sats" to "enter amount"
 - [#83](https://github.com/ChadFarrow/boostmebitch/pull/83) ✓ feat: show full RSS show notes (content:encoded) in expanded episode panel
-- [#82](https://github.com/ChadFarrow/boostmebitch/pull/82) ✓ Start boost modal with blank amount field instead of a pre-filled default
-- [#81](https://github.com/ChadFarrow/boostmebitch/pull/81) ✓ Remove preset amount buttons from boost modal — input only
 
 ## web-ui
 
@@ -230,4 +230,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-28 19:24 UTC*
+*Last synced: 2026-06-29 04:10 UTC*
