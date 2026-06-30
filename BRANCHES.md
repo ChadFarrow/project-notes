@@ -6,6 +6,7 @@
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
+- `claude/port-nostr-relay-fix`
 - `master`
 - `new-onboarding-v2`
 
@@ -99,4 +100,4 @@
 - `main`
 
 ---
-*Last synced: 2026-06-30 09:40 UTC*
+*Last synced: 2026-06-30 14:24 UTC*

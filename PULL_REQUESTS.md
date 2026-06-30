@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#87 Fix slow profile name on sign-in: don't let a dead relay stall the fetch](https://github.com/ChadFarrow/MSP-2.0/pull/87)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
@@ -184,6 +185,7 @@
 ## boostmebitch
 
 ### Merged
+- [#114](https://github.com/ChadFarrow/boostmebitch/pull/114) ✓ Add permanent /live/<npub> share links for Nostr streams
 - [#113](https://github.com/ChadFarrow/boostmebitch/pull/113) ✓ Resume live HLS streams on foreground (iOS Safari background fix)
 - [#112](https://github.com/ChadFarrow/boostmebitch/pull/112) ✓ Add Picture-in-Picture for video streams + Media Session controls
 - [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
@@ -213,7 +215,6 @@
 - [#86](https://github.com/ChadFarrow/boostmebitch/pull/86) ✓ Add full-page episode detail view for better mobile UX
 - [#85](https://github.com/ChadFarrow/boostmebitch/pull/85) ✓ fix: move show header buttons inside the flex-1 info column to prevent overflow
 - [#84](https://github.com/ChadFarrow/boostmebitch/pull/84) ✓ fix: change boost modal amount placeholder from "enter sats" to "enter amount"
-- [#83](https://github.com/ChadFarrow/boostmebitch/pull/83) ✓ feat: show full RSS show notes (content:encoded) in expanded episode panel
 
 ## web-ui
 
@@ -230,4 +231,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-30 09:40 UTC*
+*Last synced: 2026-06-30 14:24 UTC*
