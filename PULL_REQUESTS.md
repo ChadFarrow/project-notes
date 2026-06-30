@@ -10,6 +10,7 @@
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#88](https://github.com/ChadFarrow/MSP-2.0/pull/88) ✓ Restrict experimental features to local dev environment
 - [#86](https://github.com/ChadFarrow/MSP-2.0/pull/86) ✓ Docs: document the legacy domain (non-feed) redirect
 - [#85](https://github.com/ChadFarrow/MSP-2.0/pull/85) ✓ Redirect legacy msp.podtards.com domain to musicsideproject.com
 - [#84](https://github.com/ChadFarrow/MSP-2.0/pull/84) ✓ Docs: document the legacy 301 feed redirect
@@ -39,9 +40,11 @@
 - [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
 - [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
 - [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
-- [#45](https://github.com/ChadFarrow/MSP-2.0/pull/45) ✓ Rename 'Publish Nostr Music' to 'Publish to Nostr Music'
 
 ## MSP-2.0-Desktop-App
+
+### Open
+- [#20 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/20)
 
 ### Merged
 - [#19](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/19) ✓ Sync updates from web repo
@@ -231,4 +234,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-30 14:24 UTC*
+*Last synced: 2026-06-30 20:01 UTC*
