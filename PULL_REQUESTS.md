@@ -5,12 +5,14 @@
 ## MSP-2.0
 
 ### Open
-- [#87 Fix slow profile name on sign-in: don't let a dead relay stall the fetch](https://github.com/ChadFarrow/MSP-2.0/pull/87)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#90](https://github.com/ChadFarrow/MSP-2.0/pull/90) ✓ Email magic-link auth for MSP-hosted feeds (⚠️ needs Resend + DNS before merge)
+- [#89](https://github.com/ChadFarrow/MSP-2.0/pull/89) ✓ Value block guardrails: block empty splits + pull LN wallet from Nostr
 - [#88](https://github.com/ChadFarrow/MSP-2.0/pull/88) ✓ Restrict experimental features to local dev environment
+- [#87](https://github.com/ChadFarrow/MSP-2.0/pull/87) ✓ Fix slow profile name on sign-in: don't let a dead relay stall the fetch
 - [#86](https://github.com/ChadFarrow/MSP-2.0/pull/86) ✓ Docs: document the legacy domain (non-feed) redirect
 - [#85](https://github.com/ChadFarrow/MSP-2.0/pull/85) ✓ Redirect legacy msp.podtards.com domain to musicsideproject.com
 - [#84](https://github.com/ChadFarrow/MSP-2.0/pull/84) ✓ Docs: document the legacy 301 feed redirect
@@ -37,9 +39,6 @@
 - [#51](https://github.com/ChadFarrow/MSP-2.0/pull/51) ✓ Add drops.basspistol.org to Nostr Music relay list
 - [#50](https://github.com/ChadFarrow/MSP-2.0/pull/50) ✓ Add Nostr npub field to person credits
 - [#49](https://github.com/ChadFarrow/MSP-2.0/pull/49) ✓ Portal info tooltip to body on mobile so it clears backdrop-filter
-- [#48](https://github.com/ChadFarrow/MSP-2.0/pull/48) ✓ Fix info card tooltip clipping off-screen on iOS
-- [#47](https://github.com/ChadFarrow/MSP-2.0/pull/47) ✓ Replace podping.cloud with self-hosted hivepinger + SaveModal row
-- [#46](https://github.com/ChadFarrow/MSP-2.0/pull/46) ✓ Add missing Nostr music track tags per kind 36787 spec
 
 ## MSP-2.0-Desktop-App
 
@@ -234,4 +233,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-06-30 20:01 UTC*
+*Last synced: 2026-07-01 04:07 UTC*
