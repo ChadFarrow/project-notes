@@ -6,6 +6,7 @@
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
+- `claude/msp-upload-login-flow-m6bjef`
 - `master`
 - `new-onboarding-v2`
 
@@ -99,4 +100,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-01 14:41 UTC*
+*Last synced: 2026-07-01 19:59 UTC*

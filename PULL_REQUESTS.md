@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#91 Require login for MSP hosting writes; make login primary in import flow](https://github.com/ChadFarrow/MSP-2.0/pull/91)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
@@ -233,4 +234,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-07-01 14:41 UTC*
+*Last synced: 2026-07-01 19:59 UTC*
