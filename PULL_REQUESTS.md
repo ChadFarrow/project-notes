@@ -5,11 +5,11 @@
 ## MSP-2.0
 
 ### Open
-- [#91 Require login for MSP hosting writes; make login primary in import flow](https://github.com/ChadFarrow/MSP-2.0/pull/91)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ### Merged
+- [#91](https://github.com/ChadFarrow/MSP-2.0/pull/91) ✓ Require login for MSP hosting writes; make login primary in import flow
 - [#90](https://github.com/ChadFarrow/MSP-2.0/pull/90) ✓ Email magic-link auth for MSP-hosted feeds (⚠️ needs Resend + DNS before merge)
 - [#89](https://github.com/ChadFarrow/MSP-2.0/pull/89) ✓ Value block guardrails: block empty splits + pull LN wallet from Nostr
 - [#88](https://github.com/ChadFarrow/MSP-2.0/pull/88) ✓ Restrict experimental features to local dev environment
@@ -39,7 +39,6 @@
 - [#52](https://github.com/ChadFarrow/MSP-2.0/pull/52) ✓ Skip description/duration/file-size requirements for Nostr Music
 - [#51](https://github.com/ChadFarrow/MSP-2.0/pull/51) ✓ Add drops.basspistol.org to Nostr Music relay list
 - [#50](https://github.com/ChadFarrow/MSP-2.0/pull/50) ✓ Add Nostr npub field to person credits
-- [#49](https://github.com/ChadFarrow/MSP-2.0/pull/49) ✓ Portal info tooltip to body on mobile so it clears backdrop-filter
 
 ## MSP-2.0-Desktop-App
 
@@ -234,4 +233,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-07-01 19:59 UTC*
+*Last synced: 2026-07-02 03:49 UTC*

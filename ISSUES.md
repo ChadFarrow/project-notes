@@ -41,6 +41,9 @@
 
 ## MSP-2.0-Desktop-App
 
+### Open
+- [#21 Upstream sync breaks on cross-cutting web features (deep fork + force-reset sync-upstream)](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/21)
+
 ### Closed
 - [#1](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/1) ✓ Testing the issue sync
 
@@ -180,4 +183,4 @@
 *No issues*
 
 ---
-*Last synced: 2026-07-01 19:59 UTC*
+*Last synced: 2026-07-02 03:49 UTC*
