@@ -11,6 +11,8 @@
 
 ## MSP-2.0-Desktop-App
 
+- `docs-sync-automerge`
+- `enable-conflict-automerge`
 - `master` 🔒
 - `sync-upstream`
 
@@ -99,4 +101,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-02 19:27 UTC*
+*Last synced: 2026-07-03 03:30 UTC*
