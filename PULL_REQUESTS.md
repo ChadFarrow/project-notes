@@ -43,6 +43,7 @@
 ## MSP-2.0-Desktop-App
 
 ### Merged
+- [#25](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/25) ✓ Sync updates from web repo
 - [#24](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/24) ✓ Document auto-merge-on-web-update sync pipeline
 - [#23](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/23) ✓ Sync updates from web repo
 - [#22](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/22) ✓ Auto-merge conflict syncs too, gated on CI
@@ -234,4 +235,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-07-03 14:11 UTC*
+*Last synced: 2026-07-03 19:26 UTC*
