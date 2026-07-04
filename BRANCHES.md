@@ -11,10 +11,7 @@
 
 ## MSP-2.0-Desktop-App
 
-- `docs-sync-automerge`
-- `enable-conflict-automerge`
 - `master` 🔒
-- `sync-upstream`
 
 ## castr.me
 
@@ -101,4 +98,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-03 19:26 UTC*
+*Last synced: 2026-07-04 03:22 UTC*
