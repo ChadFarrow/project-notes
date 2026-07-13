@@ -154,8 +154,7 @@
 
 ## Auto-musicL-Maker
 
-### Open
-- [#11 Add podcastL aggregator for localbitcoiners.com/feeds](https://github.com/ChadFarrow/Auto-musicL-Maker/pull/11)
+*No pull requests*
 
 ## RSS-music-site-template
 
@@ -236,4 +235,4 @@
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
 ---
-*Last synced: 2026-07-13 19:25 UTC*
+*Last synced: 2026-07-13 23:01 UTC*
