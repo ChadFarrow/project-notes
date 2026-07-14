@@ -101,6 +101,7 @@
 ## libre-listener-wallet-monorepo
 
 - `claude/mobile-extension-feasibility-4aji1q`
+- `claude/session-guidance-0uitqh`
 - `feat/lsps2-jit-m1`
 - `master`
 
@@ -114,4 +115,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-14 02:40 UTC*
+*Last synced: 2026-07-14 08:09 UTC*
