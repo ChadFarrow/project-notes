@@ -188,6 +188,9 @@
 
 ## boostmebitch
 
+### Open
+- [#115 Add podroll support (host-recommended shows)](https://github.com/ChadFarrow/boostmebitch/pull/115)
+
 ### Merged
 - [#114](https://github.com/ChadFarrow/boostmebitch/pull/114) ✓ Add permanent /live/<npub> share links for Nostr streams
 - [#113](https://github.com/ChadFarrow/boostmebitch/pull/113) ✓ Resume live HLS streams on foreground (iOS Safari background fix)
@@ -240,6 +243,8 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#80](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/80) ✓ fix(wallet-pwa): durable Drive-configured marker so a failed email lookup can't re-prompt onboarding
+- [#79](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/79) ✓ fix(wallet-pwa): remember Drive account on iOS redirect connect so onboarding gate doesn't re-prompt
 - [#78](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/78) ✓ fix(wallet-pwa): allow restore to recover a rolled-back device (BACKUP_AHEAD)
 - [#77](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/77) ✓ fix(android): keep node alive on battery (wake lock + Doze exemption)
 - [#76](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/76) ✓ refactor(shared): hoist auto-start policy into @libre/shared (dedup PWA + extension)
@@ -268,8 +273,6 @@
 - [#51](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/51) ✓ fix: reconnect peers on foreground-resume (iOS zombie-socket silent-stall fix)
 - [#50](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/50) ✓ fix(wallet-pwa): never overwrite a Drive backup that belongs to a different wallet (iOS eviction fund-loss guard)
 - [#49](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/49) ✓ docs(soak): add a macOS quick-start runbook for the soak tests
-- [#48](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/48) ✓ fix(wallet-pwa): make offline-wake notification-only (no background node — removes force-close risk)
-- [#47](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/47) ✓ fix(wallet-pwa): keep offline-wake push alive on iOS + honest notifications
 
 ## localbitcoiners
 
@@ -282,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-14 13:48 UTC*
+*Last synced: 2026-07-14 19:22 UTC*
