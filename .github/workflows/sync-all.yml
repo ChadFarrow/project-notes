@@ -43,10 +43,10 @@ jobs:
 
           # Categories
           declare -A CATEGORIES
-          CATEGORIES["Music/Podcasting"]="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template"
-          CATEGORIES["Lightning"]="ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed"
+          CATEGORIES["Music/Podcasting"]="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template msp-podping-service"
+          CATEGORIES["Lightning"]="ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed libre-listener-wallet-monorepo"
           CATEGORIES["Nostr"]="Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost"
-          CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page boostmebitch web-ui"
+          CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page boostmebitch web-ui localbitcoiners"
           CATEGORIES["Tools"]="HGH-checker"
 
           for category in "Music/Podcasting" "Lightning" "Nostr" "Web/Apps" "Tools"; do
@@ -122,6 +122,9 @@ jobs:
             "web-ui"
             "HGH-checker"
             "lnurl-test-feed"
+            "libre-listener-wallet-monorepo"
+            "localbitcoiners"
+            "msp-podping-service"
           )
 
           cat > ISSUES.md << 'HEADER'
@@ -136,22 +139,13 @@ jobs:
             echo "" >> ISSUES.md
 
             open_issues=$(gh issue list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null || echo "")
-            closed_issues=$(gh issue list --repo $USERNAME/$repo --state closed --json number,title,url --jq '.[] | "- [#\(.number)](\(.url)) ✓ \(.title)"' 2>/dev/null || echo "")
 
             if [ -n "$open_issues" ]; then
               echo "### Open" >> ISSUES.md
               echo "$open_issues" >> ISSUES.md
               echo "" >> ISSUES.md
-            fi
-
-            if [ -n "$closed_issues" ]; then
-              echo "### Closed" >> ISSUES.md
-              echo "$closed_issues" >> ISSUES.md
-              echo "" >> ISSUES.md
-            fi
-
-            if [ -z "$open_issues" ] && [ -z "$closed_issues" ]; then
-              echo "*No issues*" >> ISSUES.md
+            else
+              echo "*No open issues*" >> ISSUES.md
               echo "" >> ISSUES.md
             fi
           done

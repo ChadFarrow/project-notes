@@ -23,6 +23,9 @@ REPOS=(
   "web-ui"
   "HGH-checker"
   "lnurl-test-feed"
+  "libre-listener-wallet-monorepo"
+  "localbitcoiners"
+  "msp-podping-service"
 )
 
 USERNAME="ChadFarrow"

@@ -11,7 +11,7 @@ The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds,
 ## Repo Structure
 
 - **`INDEX.md`** — Auto-generated project listing grouped by category (Music/Podcasting, Lightning, Nostr, Web/Apps, Tools). Links to per-project note files.
-- **`ISSUES.md`** — Auto-generated aggregate of GitHub issues (open + closed) across all tracked repos.
+- **`ISSUES.md`** — Auto-generated aggregate of open GitHub issues across all tracked repos.
 - **`PULL_REQUESTS.md`** — Auto-generated aggregate of pull requests (open + merged) across all tracked repos.
 - **`BRANCHES.md`** — Auto-generated listing of branches across all tracked repos. Protected branches are marked with a lock icon.
 - **`PC2.0-SPECS.md`** — Reference doc mapping Podcasting 2.0 namespace tags (`<podcast:value>`, `<podcast:medium>`, etc.) to which projects use them.
@@ -20,13 +20,12 @@ The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds,
 
 ## Automation
 
-Two GitHub Actions workflows run every 6 hours (and on manual dispatch):
+One GitHub Actions workflow runs every 6 hours (and on manual dispatch):
 
-- **`sync-all.yml`** — The main workflow. Fetches repo metadata via `gh`, regenerates `INDEX.md`, `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, and `references/starred.md`, then auto-commits. New repos not yet categorized appear under "Uncategorized" in INDEX.md.
-- **`sync-issues.yml`** — Standalone issue, PR, and branch sync (subset of sync-all). Writes to `ISSUES.md`, `PULL_REQUESTS.md`, and `BRANCHES.md`.
+- **`sync-all.yml`** — The main (and only) workflow. Fetches repo metadata via `gh`, regenerates `INDEX.md`, `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, and `references/starred.md`, then auto-commits. New repos not yet categorized appear under "Uncategorized" in INDEX.md. Issues are synced **open only** (closed issues are not listed).
 - **`sync-issues.sh`** — Local script for manually syncing issues, PRs, and branches (simpler version, open only).
 
-When adding a new project to be tracked, update the `REPOS` array and `CATEGORIES` map in `sync-all.yml`, the `REPOS` array in `sync-issues.yml` and `sync-issues.sh`, and create a new per-project `.md` file following the existing template.
+When adding a new project to be tracked, update the `REPOS` array and `CATEGORIES` map in `sync-all.yml`, the `REPOS` array in `sync-issues.sh`, and create a new per-project `.md` file following the existing template.
 
 ## Editing Guidelines
 
