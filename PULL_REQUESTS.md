@@ -240,6 +240,7 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#78](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/78) ✓ fix(wallet-pwa): allow restore to recover a rolled-back device (BACKUP_AHEAD)
 - [#77](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/77) ✓ fix(android): keep node alive on battery (wake lock + Doze exemption)
 - [#76](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/76) ✓ refactor(shared): hoist auto-start policy into @libre/shared (dedup PWA + extension)
 - [#74](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/74) ✓ fix(browser-extension): port channel-less peer-dial guard + android-app build note
@@ -269,7 +270,6 @@
 - [#49](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/49) ✓ docs(soak): add a macOS quick-start runbook for the soak tests
 - [#48](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/48) ✓ fix(wallet-pwa): make offline-wake notification-only (no background node — removes force-close risk)
 - [#47](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/47) ✓ fix(wallet-pwa): keep offline-wake push alive on iOS + honest notifications
-- [#46](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/46) ✓ feat(sdk): include payment history (tx_*) in the encrypted backup
 
 ## localbitcoiners
 
@@ -282,4 +282,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-14 08:09 UTC*
+*Last synced: 2026-07-14 13:48 UTC*
