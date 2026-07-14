@@ -98,5 +98,20 @@
 
 - `main`
 
+## libre-listener-wallet-monorepo
+
+- `claude/mobile-extension-feasibility-4aji1q`
+- `feat/lsps2-jit-m1`
+- `master`
+
+## localbitcoiners
+
+- `docs/claude-local-dev`
+- `main`
+
+## msp-podping-service
+
+- `main`
+
 ---
-*Last synced: 2026-07-13 23:01 UTC*
+*Last synced: 2026-07-14 00:28 UTC*

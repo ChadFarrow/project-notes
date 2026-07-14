@@ -234,5 +234,52 @@
 ### Merged
 - [#1](https://github.com/ChadFarrow/lnurl-test-feed/pull/1) ✓ Normalize raw.githubusercontent.com URLs to canonical branch form
 
+## libre-listener-wallet-monorepo
+
+### Open
+- [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
+
+### Merged
+- [#77](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/77) ✓ fix(android): keep node alive on battery (wake lock + Doze exemption)
+- [#76](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/76) ✓ refactor(shared): hoist auto-start policy into @libre/shared (dedup PWA + extension)
+- [#74](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/74) ✓ fix(browser-extension): port channel-less peer-dial guard + android-app build note
+- [#73](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/73) ✓ fix(wallet-pwa): prevent stale/duplicate-copy force-closes + iOS Drive redirect
+- [#71](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/71) ✓ Native Android wrapper scaffold (Target B) — foreground-service keep-alive for reliable background NWC
+- [#70](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/70) ✓ Fix Android/Brave web-push errors, keep-alive interruption handling, and IndexedDB freeze recovery
+- [#69](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/69) ✓ fix(wallet-pwa): actionable web-push errors for Brave/Android (dead-end "denied" fix)
+- [#68](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/68) ✓ feat(pwa): one-tap Drive reconnect nag on the home pill
+- [#67](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/67) ✓ fix(pwa): migrate legacy push installs + re-register wake (bump SHELL_CACHE v5)
+- [#66](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/66) ✓ chore(wallet-pwa): bump SHELL_CACHE to v4 so installed iOS PWAs pick up the wake + tx-list fixes
+- [#65](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/65) ✓ fix(sdk): refresh transaction list live when a payment record changes
+- [#64](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/64) ✓ One-tap background-mode chip so boosts settle without reopening the app
+- [#63](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/63) ✓ Mirror service-worker push logs into the diagnostics export
+- [#62](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/62) ✓ One-tap keep-alive activation + stop reporting in-flight NWC pays as failed
+- [#61](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/61) ✓ Fix boosts failing + stranded-pending records in the resume-from-background reconnect window
+- [#60](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/60) ✓ PWA: no-zoom, cross-device sync (alias + NWC), and a keep-alive audio fix
+- [#59](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/59) ✓ Peer alias delivery ("Unknown" fix) + PWA node name, channel-count smoothing, drawer Wallet item
+- [#58](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/58) ✓ feat(wallet-pwa): Receive screen confirms 'Payment received' and returns home
+- [#57](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/57) ✓ fix(wallet-pwa): show node ID as one unbroken string
+- [#56](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/56) ✓ fix(wallet-pwa): plain URL booted demo (stale per-tab latch) + v4vmusic.com app-name default
+- [#55](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/55) ✓ fix(wallet-pwa): seed copy/paste — show as one block + tolerate spaces on restore
+- [#54](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/54) ✓ feat(wallet-pwa): background-audio keep-alive so NWC boosts settle while backgrounded
+- [#53](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/53) ✓ fix(sdk): throttle chain catch-up after a long freeze to avoid esplora 429
+- [#52](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/52) ✓ fix(wallet-pwa): auto-retry a NODE_ALREADY_RUNNING start instead of latching a dead pill
+- [#51](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/51) ✓ fix: reconnect peers on foreground-resume (iOS zombie-socket silent-stall fix)
+- [#50](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/50) ✓ fix(wallet-pwa): never overwrite a Drive backup that belongs to a different wallet (iOS eviction fund-loss guard)
+- [#49](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/49) ✓ docs(soak): add a macOS quick-start runbook for the soak tests
+- [#48](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/48) ✓ fix(wallet-pwa): make offline-wake notification-only (no background node — removes force-close risk)
+- [#47](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/47) ✓ fix(wallet-pwa): keep offline-wake push alive on iOS + honest notifications
+- [#46](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/46) ✓ feat(sdk): include payment history (tx_*) in the encrypted backup
+
+## localbitcoiners
+
+*No pull requests*
+
+## msp-podping-service
+
+### Merged
+- [#2](https://github.com/ChadFarrow/msp-podping-service/pull/2) ✓ Add check-podping CLI to verify a feed was podpinged
+- [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
+
 ---
-*Last synced: 2026-07-13 23:01 UTC*
+*Last synced: 2026-07-14 00:28 UTC*

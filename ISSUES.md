@@ -8,126 +8,46 @@
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
-### Closed
-- [#60](https://github.com/ChadFarrow/MSP-2.0/issues/60) ✓ Remove spaces and special characters from feeds.
-- [#59](https://github.com/ChadFarrow/MSP-2.0/issues/59) ✓ Add check and timeout for Nostr connections when publishing Nostr music
-- [#56](https://github.com/ChadFarrow/MSP-2.0/issues/56) ✓ Files types don't match for some tracks
-- [#36](https://github.com/ChadFarrow/MSP-2.0/issues/36) ✓ Add person tag at track level
-- [#34](https://github.com/ChadFarrow/MSP-2.0/issues/34) ✓ New items in existing feeds
-- [#31](https://github.com/ChadFarrow/MSP-2.0/issues/31) ✓ My splits don't show up automatically for imported feeds.
-- [#29](https://github.com/ChadFarrow/MSP-2.0/issues/29) ✓ Maybe add op3 to advanced section
-- [#28](https://github.com/ChadFarrow/MSP-2.0/issues/28) ✓ PI upload explainer
-- [#27](https://github.com/ChadFarrow/MSP-2.0/issues/27) ✓ Backup retention policy: keep last 10 per feed
-- [#24](https://github.com/ChadFarrow/MSP-2.0/issues/24) ✓ Add publisher feed upload section
-- [#23](https://github.com/ChadFarrow/MSP-2.0/issues/23) ✓ Add support for npub via txt tag.
-- [#22](https://github.com/ChadFarrow/MSP-2.0/issues/22) ✓ Change publisher to artists
-- [#20](https://github.com/ChadFarrow/MSP-2.0/issues/20) ✓ Add a view RSS feed option
-- [#19](https://github.com/ChadFarrow/MSP-2.0/issues/19) ✓ If publisher feed look up fails ask user if the feed is in the index and if not allow them to submit it.
-- [#18](https://github.com/ChadFarrow/MSP-2.0/issues/18) ✓ Maybe add a prompt that lets the user select the tags they want.
-- [#17](https://github.com/ChadFarrow/MSP-2.0/issues/17) ✓ Add an advanced mode to remove the non-basic features
-- [#16](https://github.com/ChadFarrow/MSP-2.0/issues/16) ✓ Add publisher feed entry to the album pages for existing publisher feeds.
-- [#15](https://github.com/ChadFarrow/MSP-2.0/issues/15) ✓ Add a better way to change the order of videos
-- [#14](https://github.com/ChadFarrow/MSP-2.0/issues/14) ✓ Track area collapsed at each key press and new track shouldn't be collapsed when pressed.
-- [#12](https://github.com/ChadFarrow/MSP-2.0/issues/12) ✓ Add a download section for the publisher feeds before the section where it's added to the catalog feeds.
-- [#9](https://github.com/ChadFarrow/MSP-2.0/issues/9) ✓ Check to see if Vans are added to songs if it's the same as the channel level
-- [#8](https://github.com/ChadFarrow/MSP-2.0/issues/8) ✓ MSP might be overwriting feed info
-- [#7](https://github.com/ChadFarrow/MSP-2.0/issues/7) ✓ Add <itunes:category>Music</itunes:category>
-- [#6](https://github.com/ChadFarrow/MSP-2.0/issues/6) ✓ add support for PI uploads
-- [#5](https://github.com/ChadFarrow/MSP-2.0/issues/5) ✓ add MSP split
-- [#4](https://github.com/ChadFarrow/MSP-2.0/issues/4) ✓ Check time and size when pasting a tracks url
-- [#3](https://github.com/ChadFarrow/MSP-2.0/issues/3) ✓ Add PI publishing
-- [#2](https://github.com/ChadFarrow/MSP-2.0/issues/2) ✓ Add track preview during upload
-- [#1](https://github.com/ChadFarrow/MSP-2.0/issues/1) ✓ Double medium tag
-
 ## MSP-2.0-Desktop-App
 
-### Closed
-- [#21](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/21) ✓ Upstream sync breaks on cross-cutting web features (deep fork + force-reset sync-upstream)
-- [#1](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/1) ✓ Testing the issue sync
+*No open issues*
 
 ## castr.me
 
-*No issues*
+*No open issues*
 
 ## TRM-Lightning
 
-### Closed
-- [#2](https://github.com/ChadFarrow/TRM-Lightning/issues/2) ✓ video pauses after 30 minutes
+*No open issues*
 
 ## ITDV-Lightning
 
-### Closed
-- [#5](https://github.com/ChadFarrow/ITDV-Lightning/issues/5) ✓ add the abilty to delete feeds from admin
-- [#4](https://github.com/ChadFarrow/ITDV-Lightning/issues/4) ✓ remove the other artists from the shuffle
+*No open issues*
 
 ## HPM-Lightning
 
-*No issues*
+*No open issues*
 
 ## stablekraft-app
 
-### Closed
-- [#148](https://github.com/ChadFarrow/stablekraft-app/issues/148) ✓ Add nip 05 login
-- [#143](https://github.com/ChadFarrow/stablekraft-app/issues/143) ✓ Add nostr post selecter
-- [#131](https://github.com/ChadFarrow/stablekraft-app/issues/131) ✓ Investigate: unknown feed auto-imported without authorization (anchor.fm/s/1125b8ad4)
-- [#127](https://github.com/ChadFarrow/stablekraft-app/issues/127) ✓ Admin import of remoteItem-only RSS feed creates unloadable album tile
-- [#122](https://github.com/ChadFarrow/stablekraft-app/issues/122) ✓ Apply musicShowOnly migration to Railway production DB
-- [#119](https://github.com/ChadFarrow/stablekraft-app/issues/119) ✓ Investigate why "Party Like Forever" appears in the New tab
-- [#114](https://github.com/ChadFarrow/stablekraft-app/issues/114) ✓ Scope per-Nostr-account Lightning settings (autoboost, default boost)
-- [#111](https://github.com/ChadFarrow/stablekraft-app/issues/111) ✓ Various Artist
-- [#110](https://github.com/ChadFarrow/stablekraft-app/issues/110) ✓ MSP podping for headstarts.uk feed didn't mint new feed record
-- [#107](https://github.com/ChadFarrow/stablekraft-app/issues/107) ✓ Some Henrik Flyman albums display tracks in reverse order
-- [#43](https://github.com/ChadFarrow/stablekraft-app/issues/43) ✓ Add two for tunestr to this as a playlist
-- [#24](https://github.com/ChadFarrow/stablekraft-app/issues/24) ✓ Add confirmation for share link being copied on desktop
-- [#17](https://github.com/ChadFarrow/stablekraft-app/issues/17) ✓ Lock screen issues iOS
-- [#16](https://github.com/ChadFarrow/stablekraft-app/issues/16) ✓ add feed
-- [#15](https://github.com/ChadFarrow/stablekraft-app/issues/15) ✓ App has to be open to play on iOS.
-- [#14](https://github.com/ChadFarrow/stablekraft-app/issues/14) ✓ Make a most popular playlist from the music show playlist.
-- [#13](https://github.com/ChadFarrow/stablekraft-app/issues/13) ✓ Check boosts on android with amber taking minutes to send.
-- [#12](https://github.com/ChadFarrow/stablekraft-app/issues/12) ✓ Boost Button is unclickable
-- [#11](https://github.com/ChadFarrow/stablekraft-app/issues/11) ✓ Nostr URL
-- [#10](https://github.com/ChadFarrow/stablekraft-app/issues/10) ✓ Boostb button
-- [#9](https://github.com/ChadFarrow/stablekraft-app/issues/9) ✓ [BUG]
-- [#8](https://github.com/ChadFarrow/stablekraft-app/issues/8) ✓ [BUG]
-- [#7](https://github.com/ChadFarrow/stablekraft-app/issues/7) ✓ [BUG]
-- [#6](https://github.com/ChadFarrow/stablekraft-app/issues/6) ✓ Nostr GUIDs
-- [#5](https://github.com/ChadFarrow/stablekraft-app/issues/5) ✓ Remove LT from search
-- [#4](https://github.com/ChadFarrow/stablekraft-app/issues/4) ✓ Split EPs and Singles
-- [#3](https://github.com/ChadFarrow/stablekraft-app/issues/3) ✓ /radio
+*No open issues*
 
 ## lnaddress-music
 
 ### Open
 - [#4 BoostBox](https://github.com/ChadFarrow/lnaddress-music/issues/4)
 
-### Closed
-- [#3](https://github.com/ChadFarrow/lnaddress-music/issues/3) ✓ Album pages have low res background
-- [#2](https://github.com/ChadFarrow/lnaddress-music/issues/2) ✓ Boost button on fullscreen now playing not working
-- [#1](https://github.com/ChadFarrow/lnaddress-music/issues/1) ✓ publisher feeds now loading
-
 ## musicL-playlist-updater
 
-### Closed
-- [#1](https://github.com/ChadFarrow/musicL-playlist-updater/issues/1) ✓ Add two for tunestr to this
+*No open issues*
 
 ## chadf-musicl-playlists
 
-### Closed
-- [#1](https://github.com/ChadFarrow/chadf-musicl-playlists/issues/1) ✓ Add two for tunestr to this once I have the playlist made
+*No open issues*
 
 ## Auto-musicL-Maker
 
-### Closed
-- [#10](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/10) ✓ Deploy & verify on Vercel
-- [#9](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/9) ✓ Docs: README updates
-- [#8](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/8) ✓ Download XML UX
-- [#7](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/7) ✓ XML generation: musicL compliance
-- [#6](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/6) ✓ Import items → remoteItem rows
-- [#5](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/5) ✓ Wire UI: fetch via proxy, parse, populate
-- [#4](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/4) ✓ Prod: Vercel serverless proxy (api/proxy.js)
-- [#3](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/3) ✓ Dev: /api/proxy endpoint (Express)
-- [#2](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/2) ✓ UI: Add RSS URL input + Load button
-- [#1](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/1) ✓ RSS import + musicL playlist generator UI with XML download
+*No open issues*
 
 ## RSS-music-site-template
 
@@ -141,44 +61,49 @@
 
 ## LIT_Bot
 
-### Closed
-- [#1](https://github.com/ChadFarrow/LIT_Bot/issues/1) ✓ BTWTS
+*No open issues*
 
 ## LibreRelayBot
 
-*No issues*
+*No open issues*
 
 ## BoostAfterBoost
 
-### Closed
-- [#1](https://github.com/ChadFarrow/BoostAfterBoost/issues/1) ✓ Add #BowlOfTrust to post
+*No open issues*
 
 ## chadf-landing-page
 
-### Closed
-- [#1](https://github.com/ChadFarrow/chadf-landing-page/issues/1) ✓ Add my episode of pc 2.0
+*No open issues*
 
 ## boostmebitch
 
-### Closed
-- [#101](https://github.com/ChadFarrow/boostmebitch/issues/101) ✓ track order
-- [#74](https://github.com/ChadFarrow/boostmebitch/issues/74) ✓ add boostmebitch.com links to nostr post
-- [#73](https://github.com/ChadFarrow/boostmebitch/issues/73) ✓ update now playing page
-- [#72](https://github.com/ChadFarrow/boostmebitch/issues/72) ✓ make media on page load before Nostr content
-- [#19](https://github.com/ChadFarrow/boostmebitch/issues/19) ✓ Spark rail: payments succeed on-chain but surface as failed (no preimage in SDK response)
-- [#16](https://github.com/ChadFarrow/boostmebitch/issues/16) ✓ Fountain boost amounts still missing — quote-resolved kind:9735 not landing
+*No open issues*
 
 ## web-ui
 
-*No issues*
+*No open issues*
 
 ## HGH-checker
 
-*No issues*
+*No open issues*
 
 ## lnurl-test-feed
 
-*No issues*
+*No open issues*
+
+## libre-listener-wallet-monorepo
+
+### Open
+- [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14)
+- [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13)
+
+## localbitcoiners
+
+*No open issues*
+
+## msp-podping-service
+
+*No open issues*
 
 ---
-*Last synced: 2026-07-13 23:01 UTC*
+*Last synced: 2026-07-14 00:28 UTC*

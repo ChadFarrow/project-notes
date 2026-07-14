@@ -11,12 +11,14 @@
 - [lnaddress-music](lnaddress-music.md) -  (`TypeScript`)
 - [castr.me](castr.me.md) - Effortlessly turn your npub into a podcast feed. (`TypeScript`)
 - [RSS-music-site-template](RSS-music-site-template.md) -  (`TypeScript`)
+- [msp-podping-service](msp-podping-service.md) -  (`TypeScript`)
 
 ## Lightning
 - [ITDV-Lightning](ITDV-Lightning.md) -  (`TypeScript`)
 - [TRM-Lightning](TRM-Lightning.md) -  (`TypeScript`)
 - [HPM-Lightning](HPM-Lightning.md) -  (`TypeScript`)
 - [lnurl-test-feed](lnurl-test-feed.md) -  (`HTML`)
+- [libre-listener-wallet-monorepo](libre-listener-wallet-monorepo.md) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. (`TypeScript`)
 
 ## Nostr
 - [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`)
@@ -29,6 +31,7 @@
 - [chadf-landing-page](chadf-landing-page.md) -  (`TypeScript`)
 - [boostmebitch](boostmebitch.md) -  (`TypeScript`)
 - [web-ui](web-ui.md) - The public home page of podcastindex.org (`HTML`)
+- [localbitcoiners](localbitcoiners.md) - Local Bitcoiners Website (`JavaScript`)
 
 ## Tools
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
