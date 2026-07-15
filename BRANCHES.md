@@ -82,7 +82,6 @@
 
 ## boostmebitch
 
-- `claude/podrolls-support-8y60yt`
 - `main`
 
 ## web-ui
@@ -101,7 +100,6 @@
 
 ## libre-listener-wallet-monorepo
 
-- `claude/ios-pwa-google-drive-5fry5a`
 - `claude/mobile-extension-feasibility-4aji1q`
 - `feat/lsps2-jit-m1`
 - `master`
@@ -116,4 +114,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-14 19:23 UTC*
+*Last synced: 2026-07-15 02:38 UTC*

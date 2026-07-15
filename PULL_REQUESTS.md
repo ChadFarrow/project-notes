@@ -188,10 +188,10 @@
 
 ## boostmebitch
 
-### Open
-- [#115 Add podroll support (host-recommended shows)](https://github.com/ChadFarrow/boostmebitch/pull/115)
-
 ### Merged
+- [#117](https://github.com/ChadFarrow/boostmebitch/pull/117) ✓ Fix boost success sound not playing on mobile
+- [#116](https://github.com/ChadFarrow/boostmebitch/pull/116) ✓ docs: fix CLAUDE.md spots the podroll refactor made stale
+- [#115](https://github.com/ChadFarrow/boostmebitch/pull/115) ✓ Add podroll support (host-recommended shows)
 - [#114](https://github.com/ChadFarrow/boostmebitch/pull/114) ✓ Add permanent /live/<npub> share links for Nostr streams
 - [#113](https://github.com/ChadFarrow/boostmebitch/pull/113) ✓ Resume live HLS streams on foreground (iOS Safari background fix)
 - [#112](https://github.com/ChadFarrow/boostmebitch/pull/112) ✓ Add Picture-in-Picture for video streams + Media Session controls
@@ -219,9 +219,6 @@
 - [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
 - [#88](https://github.com/ChadFarrow/boostmebitch/pull/88) ✓ Tier 1 refactoring: extract shared utilities to eliminate duplication
 - [#87](https://github.com/ChadFarrow/boostmebitch/pull/87) ✓ Add per-episode Nostr boost feed to episode detail view
-- [#86](https://github.com/ChadFarrow/boostmebitch/pull/86) ✓ Add full-page episode detail view for better mobile UX
-- [#85](https://github.com/ChadFarrow/boostmebitch/pull/85) ✓ fix: move show header buttons inside the flex-1 info column to prevent overflow
-- [#84](https://github.com/ChadFarrow/boostmebitch/pull/84) ✓ fix: change boost modal amount placeholder from "enter sats" to "enter amount"
 
 ## web-ui
 
@@ -243,6 +240,11 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#85](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/85) ✓ docs(CLAUDE.md): document launch-flow work (tap-to-start, offline-mirror auto-start, pill settle window, boot loader)
+- [#84](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/84) ✓ feat(wallet-pwa): show a "Starting your node…" loader during boot
+- [#83](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/83) ✓ fix(wallet-pwa): stop the status-pill boot flicker (+ ship it to iOS)
+- [#82](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/82) ✓ feat(wallet-pwa): tap the "Node stopped" pill to start the node directly
+- [#81](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/81) ✓ fix(wallet-pwa): close the iOS rolled-back-storage race that force-closes channels
 - [#80](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/80) ✓ fix(wallet-pwa): durable Drive-configured marker so a failed email lookup can't re-prompt onboarding
 - [#79](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/79) ✓ fix(wallet-pwa): remember Drive account on iOS redirect connect so onboarding gate doesn't re-prompt
 - [#78](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/78) ✓ fix(wallet-pwa): allow restore to recover a rolled-back device (BACKUP_AHEAD)
@@ -268,11 +270,6 @@
 - [#56](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/56) ✓ fix(wallet-pwa): plain URL booted demo (stale per-tab latch) + v4vmusic.com app-name default
 - [#55](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/55) ✓ fix(wallet-pwa): seed copy/paste — show as one block + tolerate spaces on restore
 - [#54](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/54) ✓ feat(wallet-pwa): background-audio keep-alive so NWC boosts settle while backgrounded
-- [#53](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/53) ✓ fix(sdk): throttle chain catch-up after a long freeze to avoid esplora 429
-- [#52](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/52) ✓ fix(wallet-pwa): auto-retry a NODE_ALREADY_RUNNING start instead of latching a dead pill
-- [#51](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/51) ✓ fix: reconnect peers on foreground-resume (iOS zombie-socket silent-stall fix)
-- [#50](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/50) ✓ fix(wallet-pwa): never overwrite a Drive backup that belongs to a different wallet (iOS eviction fund-loss guard)
-- [#49](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/49) ✓ docs(soak): add a macOS quick-start runbook for the soak tests
 
 ## localbitcoiners
 
@@ -285,4 +282,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-14 19:22 UTC*
+*Last synced: 2026-07-15 02:38 UTC*
