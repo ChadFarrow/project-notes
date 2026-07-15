@@ -97,6 +97,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
 - [#155](https://github.com/ChadFarrow/stablekraft-app/pull/155) ✓ Fix settings page showing defaults after logout/login
 - [#154](https://github.com/ChadFarrow/stablekraft-app/pull/154) ✓ docs: document ADMIN_SECRET auth, SSRF guard, and rate limit in CLAUDE.md
 - [#153](https://github.com/ChadFarrow/stablekraft-app/pull/153) ✓ Security hardening + performance fixes from full app audit
@@ -126,7 +127,6 @@
 - [#124](https://github.com/ChadFarrow/stablekraft-app/pull/124) ✓ feat(admin): bulk "Delete unplayed" button on music-show-only search results
 - [#123](https://github.com/ChadFarrow/stablekraft-app/pull/123) ✓ feat(admin): one-click "Delete unplayed albums" for music-show-only cleanup
 - [#121](https://github.com/ChadFarrow/stablekraft-app/pull/121) ✓ feat(admin): artist-name search for music-show-only publishers
-- [#120](https://github.com/ChadFarrow/stablekraft-app/pull/120) ✓ feat(admin): music-show-only flag for publisher feeds
 
 ## lnaddress-music
 
@@ -240,6 +240,8 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#88](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/88) ✓ ci(wallet-embed): rolling wallet-embed-latest release of the packed tarball
+- [#87](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/87) ✓ feat: embeddable wallet — @libre/wallet-core extraction, roaming protocol, and the <libre-wallet> connect widget
 - [#86](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/86) ✓ fix(wallet-pwa): guard Drive auto-backup against restart race; disable non-functional iOS audio keep-alive
 - [#85](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/85) ✓ docs(CLAUDE.md): document launch-flow work (tap-to-start, offline-mirror auto-start, pill settle window, boot loader)
 - [#84](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/84) ✓ feat(wallet-pwa): show a "Starting your node…" loader during boot
@@ -268,8 +270,6 @@
 - [#59](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/59) ✓ Peer alias delivery ("Unknown" fix) + PWA node name, channel-count smoothing, drawer Wallet item
 - [#58](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/58) ✓ feat(wallet-pwa): Receive screen confirms 'Payment received' and returns home
 - [#57](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/57) ✓ fix(wallet-pwa): show node ID as one unbroken string
-- [#56](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/56) ✓ fix(wallet-pwa): plain URL booted demo (stale per-tab latch) + v4vmusic.com app-name default
-- [#55](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/55) ✓ fix(wallet-pwa): seed copy/paste — show as one block + tolerate spaces on restore
 
 ## localbitcoiners
 
@@ -282,4 +282,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-15 13:47 UTC*
+*Last synced: 2026-07-15 19:14 UTC*
