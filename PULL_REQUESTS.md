@@ -240,6 +240,7 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#86](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/86) ✓ fix(wallet-pwa): guard Drive auto-backup against restart race; disable non-functional iOS audio keep-alive
 - [#85](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/85) ✓ docs(CLAUDE.md): document launch-flow work (tap-to-start, offline-mirror auto-start, pill settle window, boot loader)
 - [#84](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/84) ✓ feat(wallet-pwa): show a "Starting your node…" loader during boot
 - [#83](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/83) ✓ fix(wallet-pwa): stop the status-pill boot flicker (+ ship it to iOS)
@@ -269,7 +270,6 @@
 - [#57](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/57) ✓ fix(wallet-pwa): show node ID as one unbroken string
 - [#56](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/56) ✓ fix(wallet-pwa): plain URL booted demo (stale per-tab latch) + v4vmusic.com app-name default
 - [#55](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/55) ✓ fix(wallet-pwa): seed copy/paste — show as one block + tolerate spaces on restore
-- [#54](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/54) ✓ feat(wallet-pwa): background-audio keep-alive so NWC boosts settle while backgrounded
 
 ## localbitcoiners
 
@@ -282,4 +282,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-15 08:15 UTC*
+*Last synced: 2026-07-15 13:47 UTC*
