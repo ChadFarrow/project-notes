@@ -96,6 +96,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#157 Add "Hide Feed" admin tool (durable markedDead flag)](https://github.com/ChadFarrow/stablekraft-app/pull/157)
+
 ### Merged
 - [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
 - [#155](https://github.com/ChadFarrow/stablekraft-app/pull/155) ✓ Fix settings page showing defaults after logout/login
@@ -285,4 +288,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-16 08:17 UTC*
+*Last synced: 2026-07-16 13:57 UTC*
