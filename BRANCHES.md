@@ -83,6 +83,8 @@
 
 ## boostmebitch
 
+- `claude/code-review-8zsbjf`
+- `feat/libre-wallet-embed`
 - `main`
 
 ## web-ui
@@ -115,4 +117,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-15 19:14 UTC*
+*Last synced: 2026-07-16 02:45 UTC*

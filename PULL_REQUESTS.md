@@ -188,6 +188,9 @@
 
 ## boostmebitch
 
+### Open
+- [#119 Add Libre Wallet as an in-page roaming rail (wallet-embed)](https://github.com/ChadFarrow/boostmebitch/pull/119)
+
 ### Merged
 - [#117](https://github.com/ChadFarrow/boostmebitch/pull/117) ✓ Fix boost success sound not playing on mobile
 - [#116](https://github.com/ChadFarrow/boostmebitch/pull/116) ✓ docs: fix CLAUDE.md spots the podroll refactor made stale
@@ -240,6 +243,7 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#89](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/89) ✓ docs(wallet-embed): pin immutable tarball for lockfile apps + fix pilot domain
 - [#88](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/88) ✓ ci(wallet-embed): rolling wallet-embed-latest release of the packed tarball
 - [#87](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/87) ✓ feat: embeddable wallet — @libre/wallet-core extraction, roaming protocol, and the <libre-wallet> connect widget
 - [#86](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/86) ✓ fix(wallet-pwa): guard Drive auto-backup against restart race; disable non-functional iOS audio keep-alive
@@ -269,7 +273,6 @@
 - [#60](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/60) ✓ PWA: no-zoom, cross-device sync (alias + NWC), and a keep-alive audio fix
 - [#59](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/59) ✓ Peer alias delivery ("Unknown" fix) + PWA node name, channel-count smoothing, drawer Wallet item
 - [#58](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/58) ✓ feat(wallet-pwa): Receive screen confirms 'Payment received' and returns home
-- [#57](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/57) ✓ fix(wallet-pwa): show node ID as one unbroken string
 
 ## localbitcoiners
 
@@ -282,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-15 19:14 UTC*
+*Last synced: 2026-07-16 02:45 UTC*
