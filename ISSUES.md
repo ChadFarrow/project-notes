@@ -94,7 +94,6 @@
 ## libre-listener-wallet-monorepo
 
 ### Open
-- [#90 Roaming: takeover after a dead holder boots a stale backup → channel force-closed (crash-gap check can't see the gap)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/90)
 - [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14)
 - [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13)
 
@@ -107,4 +106,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-16 02:45 UTC*
+*Last synced: 2026-07-16 08:16 UTC*

@@ -189,9 +189,10 @@
 ## boostmebitch
 
 ### Open
-- [#119 Add Libre Wallet as an in-page roaming rail (wallet-embed)](https://github.com/ChadFarrow/boostmebitch/pull/119)
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#119](https://github.com/ChadFarrow/boostmebitch/pull/119) ✓ Add Libre Wallet as an in-page roaming rail (wallet-embed)
 - [#117](https://github.com/ChadFarrow/boostmebitch/pull/117) ✓ Fix boost success sound not playing on mobile
 - [#116](https://github.com/ChadFarrow/boostmebitch/pull/116) ✓ docs: fix CLAUDE.md spots the podroll refactor made stale
 - [#115](https://github.com/ChadFarrow/boostmebitch/pull/115) ✓ Add podroll support (host-recommended shows)
@@ -221,7 +222,6 @@
 - [#90](https://github.com/ChadFarrow/boostmebitch/pull/90) ✓ Add episode share links (?podcast=<guid>&episode=<guid>)
 - [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
 - [#88](https://github.com/ChadFarrow/boostmebitch/pull/88) ✓ Tier 1 refactoring: extract shared utilities to eliminate duplication
-- [#87](https://github.com/ChadFarrow/boostmebitch/pull/87) ✓ Add per-episode Nostr boost feed to episode detail view
 
 ## web-ui
 
@@ -243,6 +243,7 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#91](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/91) ✓ fix(roaming): require proof of a clean handoff before restoring (#90)
 - [#89](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/89) ✓ docs(wallet-embed): pin immutable tarball for lockfile apps + fix pilot domain
 - [#88](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/88) ✓ ci(wallet-embed): rolling wallet-embed-latest release of the packed tarball
 - [#87](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/87) ✓ feat: embeddable wallet — @libre/wallet-core extraction, roaming protocol, and the <libre-wallet> connect widget
@@ -272,7 +273,6 @@
 - [#61](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/61) ✓ Fix boosts failing + stranded-pending records in the resume-from-background reconnect window
 - [#60](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/60) ✓ PWA: no-zoom, cross-device sync (alias + NWC), and a keep-alive audio fix
 - [#59](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/59) ✓ Peer alias delivery ("Unknown" fix) + PWA node name, channel-count smoothing, drawer Wallet item
-- [#58](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/58) ✓ feat(wallet-pwa): Receive screen confirms 'Payment received' and returns home
 
 ## localbitcoiners
 
@@ -285,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-16 02:45 UTC*
+*Last synced: 2026-07-16 08:17 UTC*
