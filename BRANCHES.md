@@ -35,7 +35,6 @@
 
 ## stablekraft-app
 
-- `claude/wavlake-items-publisher-etopgy`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -116,4 +115,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-17 13:42 UTC*
+*Last synced: 2026-07-17 19:13 UTC*

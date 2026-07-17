@@ -96,10 +96,8 @@
 
 ## stablekraft-app
 
-### Open
-- [#157 Add "Hide Feed" admin tool (durable markedDead flag)](https://github.com/ChadFarrow/stablekraft-app/pull/157)
-
 ### Merged
+- [#157](https://github.com/ChadFarrow/stablekraft-app/pull/157) ✓ Add "Hide Feed" admin tool (durable markedDead flag)
 - [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
 - [#155](https://github.com/ChadFarrow/stablekraft-app/pull/155) ✓ Fix settings page showing defaults after logout/login
 - [#154](https://github.com/ChadFarrow/stablekraft-app/pull/154) ✓ docs: document ADMIN_SECRET auth, SSRF guard, and rate limit in CLAUDE.md
@@ -129,7 +127,6 @@
 - [#125](https://github.com/ChadFarrow/stablekraft-app/pull/125) ✓ feat(admin): auto-offer cleanup after flagging an existing publisher
 - [#124](https://github.com/ChadFarrow/stablekraft-app/pull/124) ✓ feat(admin): bulk "Delete unplayed" button on music-show-only search results
 - [#123](https://github.com/ChadFarrow/stablekraft-app/pull/123) ✓ feat(admin): one-click "Delete unplayed albums" for music-show-only cleanup
-- [#121](https://github.com/ChadFarrow/stablekraft-app/pull/121) ✓ feat(admin): artist-name search for music-show-only publishers
 
 ## lnaddress-music
 
@@ -195,6 +192,8 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#123](https://github.com/ChadFarrow/boostmebitch/pull/123) ✓ fix(boost): stop the Nostr share checkbox reading backwards
+- [#122](https://github.com/ChadFarrow/boostmebitch/pull/122) ✓ Surface playback errors in the fullscreen player and stop truncating them
 - [#121](https://github.com/ChadFarrow/boostmebitch/pull/121) ✓ Fix live share link and boost routing to point at the stream host, not the platform bot
 - [#119](https://github.com/ChadFarrow/boostmebitch/pull/119) ✓ Add Libre Wallet as an in-page roaming rail (wallet-embed)
 - [#117](https://github.com/ChadFarrow/boostmebitch/pull/117) ✓ Fix boost success sound not playing on mobile
@@ -223,8 +222,6 @@
 - [#93](https://github.com/ChadFarrow/boostmebitch/pull/93) ✓ Auto-retry and translate 'subscription closed' NIP-46 errors
 - [#92](https://github.com/ChadFarrow/boostmebitch/pull/92) ✓ Make remote signer dropdown background opaque
 - [#91](https://github.com/ChadFarrow/boostmebitch/pull/91) ✓ Fix Primal/NIP-46 paste login timing out on iOS same-device flow
-- [#90](https://github.com/ChadFarrow/boostmebitch/pull/90) ✓ Add episode share links (?podcast=<guid>&episode=<guid>)
-- [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
 
 ## web-ui
 
@@ -288,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-17 13:42 UTC*
+*Last synced: 2026-07-17 19:13 UTC*
