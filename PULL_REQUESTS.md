@@ -195,6 +195,7 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#121](https://github.com/ChadFarrow/boostmebitch/pull/121) ✓ Fix live share link and boost routing to point at the stream host, not the platform bot
 - [#119](https://github.com/ChadFarrow/boostmebitch/pull/119) ✓ Add Libre Wallet as an in-page roaming rail (wallet-embed)
 - [#117](https://github.com/ChadFarrow/boostmebitch/pull/117) ✓ Fix boost success sound not playing on mobile
 - [#116](https://github.com/ChadFarrow/boostmebitch/pull/116) ✓ docs: fix CLAUDE.md spots the podroll refactor made stale
@@ -224,7 +225,6 @@
 - [#91](https://github.com/ChadFarrow/boostmebitch/pull/91) ✓ Fix Primal/NIP-46 paste login timing out on iOS same-device flow
 - [#90](https://github.com/ChadFarrow/boostmebitch/pull/90) ✓ Add episode share links (?podcast=<guid>&episode=<guid>)
 - [#89](https://github.com/ChadFarrow/boostmebitch/pull/89) ✓ Remove DeferredOnScroll from global feed on home page
-- [#88](https://github.com/ChadFarrow/boostmebitch/pull/88) ✓ Tier 1 refactoring: extract shared utilities to eliminate duplication
 
 ## web-ui
 
@@ -288,4 +288,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-16 19:14 UTC*
+*Last synced: 2026-07-17 02:48 UTC*
