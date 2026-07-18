@@ -192,6 +192,10 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#127](https://github.com/ChadFarrow/boostmebitch/pull/127) ✓ Stop the boost modal jittering when the share picker toggles
+- [#126](https://github.com/ChadFarrow/boostmebitch/pull/126) ✓ Compact the Share-on-Nostr picker into a pill row
+- [#125](https://github.com/ChadFarrow/boostmebitch/pull/125) ✓ Nostr boost-note destination picker + Spark restore fixes
+- [#124](https://github.com/ChadFarrow/boostmebitch/pull/124) ✓ Let signed-in users pick who signs their boost note
 - [#123](https://github.com/ChadFarrow/boostmebitch/pull/123) ✓ fix(boost): stop the Nostr share checkbox reading backwards
 - [#122](https://github.com/ChadFarrow/boostmebitch/pull/122) ✓ Surface playback errors in the fullscreen player and stop truncating them
 - [#121](https://github.com/ChadFarrow/boostmebitch/pull/121) ✓ Fix live share link and boost routing to point at the stream host, not the platform bot
@@ -218,10 +222,6 @@
 - [#97](https://github.com/ChadFarrow/boostmebitch/pull/97) ✓ Fix Primal NIP-46 generate flow: single relay + correct UI guidance
 - [#96](https://github.com/ChadFarrow/boostmebitch/pull/96) ✓ Clarify Primal uses Have URI, not Generate URI
 - [#95](https://github.com/ChadFarrow/boostmebitch/pull/95) ✓ Disconnect Spark wallet on Nostr sign-out and npub switch
-- [#94](https://github.com/ChadFarrow/boostmebitch/pull/94) ✓ Improve Primal same-device login UX
-- [#93](https://github.com/ChadFarrow/boostmebitch/pull/93) ✓ Auto-retry and translate 'subscription closed' NIP-46 errors
-- [#92](https://github.com/ChadFarrow/boostmebitch/pull/92) ✓ Make remote signer dropdown background opaque
-- [#91](https://github.com/ChadFarrow/boostmebitch/pull/91) ✓ Fix Primal/NIP-46 paste login timing out on iOS same-device flow
 
 ## web-ui
 
@@ -285,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-17 19:13 UTC*
+*Last synced: 2026-07-18 02:40 UTC*
