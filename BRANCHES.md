@@ -82,7 +82,6 @@
 
 ## boostmebitch
 
-- `claude/nostr-boost-destination-or37xj`
 - `feat/libre-wallet-embed`
 - `main`
 
@@ -116,4 +115,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-18 13:19 UTC*
+*Last synced: 2026-07-18 19:08 UTC*

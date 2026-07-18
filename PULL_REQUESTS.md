@@ -192,6 +192,7 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#128](https://github.com/ChadFarrow/boostmebitch/pull/128) ✓ Skip search autofocus on touch devices so header home nav stays put
 - [#127](https://github.com/ChadFarrow/boostmebitch/pull/127) ✓ Stop the boost modal jittering when the share picker toggles
 - [#126](https://github.com/ChadFarrow/boostmebitch/pull/126) ✓ Compact the Share-on-Nostr picker into a pill row
 - [#125](https://github.com/ChadFarrow/boostmebitch/pull/125) ✓ Nostr boost-note destination picker + Spark restore fixes
@@ -221,7 +222,6 @@
 - [#98](https://github.com/ChadFarrow/boostmebitch/pull/98) ✓ Fix NWC backup not auto-restoring on mobile (nostash/iOS)
 - [#97](https://github.com/ChadFarrow/boostmebitch/pull/97) ✓ Fix Primal NIP-46 generate flow: single relay + correct UI guidance
 - [#96](https://github.com/ChadFarrow/boostmebitch/pull/96) ✓ Clarify Primal uses Have URI, not Generate URI
-- [#95](https://github.com/ChadFarrow/boostmebitch/pull/95) ✓ Disconnect Spark wallet on Nostr sign-out and npub switch
 
 ## web-ui
 
@@ -285,4 +285,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-18 13:19 UTC*
+*Last synced: 2026-07-18 19:08 UTC*
