@@ -189,6 +189,7 @@
 ## boostmebitch
 
 ### Open
+- [#130 feat(pc2.0): synced transcripts + funding links, and episode-page tabs](https://github.com/ChadFarrow/boostmebitch/pull/130)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
@@ -285,4 +286,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-19 02:54 UTC*
+*Last synced: 2026-07-19 08:22 UTC*
