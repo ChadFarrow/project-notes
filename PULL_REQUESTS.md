@@ -96,6 +96,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#158 Add offline downloads via a tri-state favorite heart](https://github.com/ChadFarrow/stablekraft-app/pull/158)
+
 ### Merged
 - [#157](https://github.com/ChadFarrow/stablekraft-app/pull/157) ✓ Add "Hide Feed" admin tool (durable markedDead flag)
 - [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
@@ -193,6 +196,8 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#134](https://github.com/ChadFarrow/boostmebitch/pull/134) ✓ feat(queue): show "✓ queued" once an episode is in the queue
+- [#133](https://github.com/ChadFarrow/boostmebitch/pull/133) ✓ feat(queue): "+ queue" on episode rows and episode detail view
 - [#131](https://github.com/ChadFarrow/boostmebitch/pull/131) ✓ Show active chapter's artwork as now-playing art
 - [#130](https://github.com/ChadFarrow/boostmebitch/pull/130) ✓ feat(pc2.0): synced transcripts + funding links, and episode-page tabs
 - [#128](https://github.com/ChadFarrow/boostmebitch/pull/128) ✓ Skip search autofocus on touch devices so header home nav stays put
@@ -221,8 +226,6 @@
 - [#103](https://github.com/ChadFarrow/boostmebitch/pull/103) ✓ Auto-play next track on music feeds
 - [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
 - [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
-- [#99](https://github.com/ChadFarrow/boostmebitch/pull/99) ✓ Fix NWC restore not firing after sign-out + sign-in
-- [#98](https://github.com/ChadFarrow/boostmebitch/pull/98) ✓ Fix NWC backup not auto-restoring on mobile (nostash/iOS)
 
 ## web-ui
 
@@ -286,4 +289,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-19 19:09 UTC*
+*Last synced: 2026-07-20 03:23 UTC*

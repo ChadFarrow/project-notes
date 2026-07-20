@@ -37,8 +37,8 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. *(NEW)*
 - [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
+- [libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. *(NEW)*
 - [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
