@@ -96,6 +96,9 @@
 
 ## stablekraft-app
 
+### Open
+- [#161 fix(android): hold partial wake lock during playback so locked-screen audio survives Doze](https://github.com/ChadFarrow/stablekraft-app/pull/161)
+
 ### Merged
 - [#157](https://github.com/ChadFarrow/stablekraft-app/pull/157) ✓ Add "Hide Feed" admin tool (durable markedDead flag)
 - [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
@@ -286,4 +289,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-21 08:32 UTC*
+*Last synced: 2026-07-21 13:56 UTC*
