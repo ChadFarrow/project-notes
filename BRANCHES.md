@@ -35,7 +35,6 @@
 
 ## stablekraft-app
 
-- `claude/apk-zap-store-downloads-rrdv1t`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -117,4 +116,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-20 19:46 UTC*
+*Last synced: 2026-07-21 02:51 UTC*
