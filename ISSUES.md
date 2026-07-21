@@ -30,9 +30,7 @@
 
 ## stablekraft-app
 
-### Open
-- [#160 Remote signer disconnect stops next song from playing](https://github.com/ChadFarrow/stablekraft-app/issues/160)
-- [#159 No download button on favorites page](https://github.com/ChadFarrow/stablekraft-app/issues/159)
+*No open issues*
 
 ## lnaddress-music
 
@@ -109,4 +107,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-21 19:26 UTC*
+*Last synced: 2026-07-21 22:34 UTC*

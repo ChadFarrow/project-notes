@@ -96,10 +96,10 @@
 
 ## stablekraft-app
 
-### Open
-- [#161 fix(android): hold partial wake lock during playback so locked-screen audio survives Doze](https://github.com/ChadFarrow/stablekraft-app/pull/161)
-
 ### Merged
+- [#163](https://github.com/ChadFarrow/stablekraft-app/pull/163) ✓ Add working download button to favorites album cards
+- [#162](https://github.com/ChadFarrow/stablekraft-app/pull/162) ✓ Fix iOS background audio: auto-advance at track boundaries and restore position
+- [#161](https://github.com/ChadFarrow/stablekraft-app/pull/161) ✓ fix(android): hold partial wake lock during playback so locked-screen audio survives Doze
 - [#157](https://github.com/ChadFarrow/stablekraft-app/pull/157) ✓ Add "Hide Feed" admin tool (durable markedDead flag)
 - [#156](https://github.com/ChadFarrow/stablekraft-app/pull/156) ✓ fix: apply feed blacklist to publisher page so Wavlake mirrors stop showing
 - [#155](https://github.com/ChadFarrow/stablekraft-app/pull/155) ✓ Fix settings page showing defaults after logout/login
@@ -127,9 +127,6 @@
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
 - [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
 - [#126](https://github.com/ChadFarrow/stablekraft-app/pull/126) ✓ docs(claude): Music-Show-Only Publishers behavior + Railway migration gotcha
-- [#125](https://github.com/ChadFarrow/stablekraft-app/pull/125) ✓ feat(admin): auto-offer cleanup after flagging an existing publisher
-- [#124](https://github.com/ChadFarrow/stablekraft-app/pull/124) ✓ feat(admin): bulk "Delete unplayed" button on music-show-only search results
-- [#123](https://github.com/ChadFarrow/stablekraft-app/pull/123) ✓ feat(admin): one-click "Delete unplayed albums" for music-show-only cleanup
 
 ## lnaddress-music
 
@@ -289,4 +286,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-21 19:26 UTC*
+*Last synced: 2026-07-21 22:35 UTC*

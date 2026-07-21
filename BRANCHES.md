@@ -35,8 +35,6 @@
 
 ## stablekraft-app
 
-- `claude/favorites-download-button-9i68ay`
-- `claude/zap-store-audio-locked-screen-abe75d`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -118,4 +116,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-21 19:26 UTC*
+*Last synced: 2026-07-21 22:35 UTC*
