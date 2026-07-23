@@ -30,7 +30,11 @@
 
 ## stablekraft-app
 
-*No open issues*
+### Open
+- [#167 add support for the back button on android](https://github.com/ChadFarrow/stablekraft-app/issues/167)
+- [#166 on some devices the tracks end time is off and causes the play bar to go off the scree](https://github.com/ChadFarrow/stablekraft-app/issues/166)
+- [#165 LineageOS issues](https://github.com/ChadFarrow/stablekraft-app/issues/165)
+- [#164 make back button larger](https://github.com/ChadFarrow/stablekraft-app/issues/164)
 
 ## lnaddress-music
 
@@ -107,4 +111,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-22 19:23 UTC*
+*Last synced: 2026-07-23 02:55 UTC*
