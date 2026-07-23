@@ -97,6 +97,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#168](https://github.com/ChadFarrow/stablekraft-app/pull/168) ✓ feat(feeds): auto-add new albums from existing artists without a publisher feed
 - [#163](https://github.com/ChadFarrow/stablekraft-app/pull/163) ✓ Add working download button to favorites album cards
 - [#162](https://github.com/ChadFarrow/stablekraft-app/pull/162) ✓ Fix iOS background audio: auto-advance at track boundaries and restore position
 - [#161](https://github.com/ChadFarrow/stablekraft-app/pull/161) ✓ fix(android): hold partial wake lock during playback so locked-screen audio survives Doze
@@ -126,7 +127,6 @@
 - [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
 - [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
-- [#126](https://github.com/ChadFarrow/stablekraft-app/pull/126) ✓ docs(claude): Music-Show-Only Publishers behavior + Railway migration gotcha
 
 ## lnaddress-music
 
@@ -286,4 +286,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-23 08:33 UTC*
+*Last synced: 2026-07-23 14:05 UTC*
