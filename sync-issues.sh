@@ -26,6 +26,7 @@ REPOS=(
   "libre-listener-wallet-monorepo"
   "localbitcoiners"
   "msp-podping-service"
+  "candr.space"
 )
 
 USERNAME="ChadFarrow"
