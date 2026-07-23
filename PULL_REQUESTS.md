@@ -285,5 +285,9 @@
 - [#2](https://github.com/ChadFarrow/msp-podping-service/pull/2) ✓ Add check-podping CLI to verify a feed was podpinged
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
+## candr.space
+
+*No pull requests*
+
 ---
-*Last synced: 2026-07-23 19:21 UTC*
+*Last synced: 2026-07-23 20:19 UTC*

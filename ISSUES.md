@@ -111,5 +111,9 @@
 
 *No open issues*
 
+## candr.space
+
+*No open issues*
+
 ---
-*Last synced: 2026-07-23 19:20 UTC*
+*Last synced: 2026-07-23 20:19 UTC*
