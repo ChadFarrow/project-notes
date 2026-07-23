@@ -193,6 +193,8 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#136](https://github.com/ChadFarrow/boostmebitch/pull/136) ✓ Recognize podcastindex.org show URLs in search
+- [#135](https://github.com/ChadFarrow/boostmebitch/pull/135) ✓ Add non-PI feed preview by pasting an RSS URL into search
 - [#134](https://github.com/ChadFarrow/boostmebitch/pull/134) ✓ feat(queue): show "✓ queued" once an episode is in the queue
 - [#133](https://github.com/ChadFarrow/boostmebitch/pull/133) ✓ feat(queue): "+ queue" on episode rows and episode detail view
 - [#131](https://github.com/ChadFarrow/boostmebitch/pull/131) ✓ Show active chapter's artwork as now-playing art
@@ -221,8 +223,6 @@
 - [#105](https://github.com/ChadFarrow/boostmebitch/pull/105) ✓ fix: correct NWC error messages for Zeus embedded node limitation
 - [#104](https://github.com/ChadFarrow/boostmebitch/pull/104) ✓ fix: supply explicit preimage in NWC keysend for Zeus embedded node
 - [#103](https://github.com/ChadFarrow/boostmebitch/pull/103) ✓ Auto-play next track on music feeds
-- [#102](https://github.com/ChadFarrow/boostmebitch/pull/102) ✓ feat: sort music album feeds by disc/track number instead of date
-- [#100](https://github.com/ChadFarrow/boostmebitch/pull/100) ✓ Skip relay+NIP-44 on same-account sign-in via sessionStorage stash
 
 ## web-ui
 
@@ -286,4 +286,4 @@
 - [#1](https://github.com/ChadFarrow/msp-podping-service/pull/1) ✓ chore: bump Caddy to 2.11.3, Node to 24 LTS
 
 ---
-*Last synced: 2026-07-23 14:05 UTC*
+*Last synced: 2026-07-23 19:21 UTC*

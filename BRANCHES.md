@@ -82,6 +82,7 @@
 
 ## boostmebitch
 
+- `claude/feed-parsing-non-podcastindex-xvs4yk`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -116,4 +117,4 @@
 - `main`
 
 ---
-*Last synced: 2026-07-23 14:06 UTC*
+*Last synced: 2026-07-23 19:21 UTC*
