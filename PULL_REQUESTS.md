@@ -193,6 +193,10 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#140](https://github.com/ChadFarrow/boostmebitch/pull/140) ✓ Move Audio/Video toggle under the art/video instead of overlaying it
+- [#139](https://github.com/ChadFarrow/boostmebitch/pull/139) ✓ Overlay the Audio/Video toggle on the show artwork
+- [#138](https://github.com/ChadFarrow/boostmebitch/pull/138) ✓ Detect HLS + untyped video alternate enclosures
+- [#137](https://github.com/ChadFarrow/boostmebitch/pull/137) ✓ Support <podcast:alternateEnclosure> video renditions
 - [#136](https://github.com/ChadFarrow/boostmebitch/pull/136) ✓ Recognize podcastindex.org show URLs in search
 - [#135](https://github.com/ChadFarrow/boostmebitch/pull/135) ✓ Add non-PI feed preview by pasting an RSS URL into search
 - [#134](https://github.com/ChadFarrow/boostmebitch/pull/134) ✓ feat(queue): show "✓ queued" once an episode is in the queue
@@ -219,10 +223,6 @@
 - [#109](https://github.com/ChadFarrow/boostmebitch/pull/109) ✓ Move play/pause onto the live-stream video as a tap overlay
 - [#108](https://github.com/ChadFarrow/boostmebitch/pull/108) ✓ Improve mobile layout of fullscreen live-stream player
 - [#107](https://github.com/ChadFarrow/boostmebitch/pull/107) ✓ Fix split rounding so small recipients aren't zeroed
-- [#106](https://github.com/ChadFarrow/boostmebitch/pull/106) ✓ feat: add Nostr live stream discovery (NIP-53 kind:30311)
-- [#105](https://github.com/ChadFarrow/boostmebitch/pull/105) ✓ fix: correct NWC error messages for Zeus embedded node limitation
-- [#104](https://github.com/ChadFarrow/boostmebitch/pull/104) ✓ fix: supply explicit preimage in NWC keysend for Zeus embedded node
-- [#103](https://github.com/ChadFarrow/boostmebitch/pull/103) ✓ Auto-play next track on music feeds
 
 ## web-ui
 
@@ -290,4 +290,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-23 20:19 UTC*
+*Last synced: 2026-07-23 23:43 UTC*
