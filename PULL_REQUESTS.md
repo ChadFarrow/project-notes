@@ -97,6 +97,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#170](https://github.com/ChadFarrow/stablekraft-app/pull/170) ✓ fix(images): stop animated-GIF artwork flooding Railway logs
 - [#168](https://github.com/ChadFarrow/stablekraft-app/pull/168) ✓ feat(feeds): auto-add new albums from existing artists without a publisher feed
 - [#163](https://github.com/ChadFarrow/stablekraft-app/pull/163) ✓ Add working download button to favorites album cards
 - [#162](https://github.com/ChadFarrow/stablekraft-app/pull/162) ✓ Fix iOS background audio: auto-advance at track boundaries and restore position
@@ -126,7 +127,6 @@
 - [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
 - [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
 - [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
-- [#128](https://github.com/ChadFarrow/stablekraft-app/pull/128) ✓ fix(ios-pwa): tiered recovery for pause/resume with Bluetooth earbuds
 
 ## lnaddress-music
 
@@ -290,4 +290,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-24 02:49 UTC*
+*Last synced: 2026-07-24 08:29 UTC*
