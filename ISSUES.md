@@ -31,6 +31,7 @@
 ## stablekraft-app
 
 ### Open
+- [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 - [#166 on some devices the tracks end time is off and causes the play bar to go off the scree](https://github.com/ChadFarrow/stablekraft-app/issues/166)
 - [#165 LineageOS issues](https://github.com/ChadFarrow/stablekraft-app/issues/165)
 
@@ -113,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-24 13:48 UTC*
+*Last synced: 2026-07-24 19:26 UTC*
