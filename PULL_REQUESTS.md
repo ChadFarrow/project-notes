@@ -43,6 +43,8 @@
 ## MSP-2.0-Desktop-App
 
 ### Merged
+- [#27](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/27) ✓ Sync updates from web repo
+- [#26](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/26) ✓ Sync updates from web repo
 - [#25](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/25) ✓ Sync updates from web repo
 - [#24](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/24) ✓ Document auto-merge-on-web-update sync pipeline
 - [#23](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/23) ✓ Sync updates from web repo
@@ -97,6 +99,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#173](https://github.com/ChadFarrow/stablekraft-app/pull/173) ✓ fix(podping): match feed URLs across percent-encoding, not just case
+- [#172](https://github.com/ChadFarrow/stablekraft-app/pull/172) ✓ fix(podping): case-insensitive fallback in the feed-by-URL lookup
 - [#170](https://github.com/ChadFarrow/stablekraft-app/pull/170) ✓ fix(images): stop animated-GIF artwork flooding Railway logs
 - [#168](https://github.com/ChadFarrow/stablekraft-app/pull/168) ✓ feat(feeds): auto-add new albums from existing artists without a publisher feed
 - [#163](https://github.com/ChadFarrow/stablekraft-app/pull/163) ✓ Add working download button to favorites album cards
@@ -125,8 +129,6 @@
 - [#134](https://github.com/ChadFarrow/stablekraft-app/pull/134) ✓ Fix chapter markers missing when playing playlists from the grid
 - [#133](https://github.com/ChadFarrow/stablekraft-app/pull/133) ✓ fix: show boost buttons on New tab by falling back to track-level V4V
 - [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
-- [#130](https://github.com/ChadFarrow/stablekraft-app/pull/130) ✓ fix(albums-fast): exclude music-show-only artists from album grid
-- [#129](https://github.com/ChadFarrow/stablekraft-app/pull/129) ✓ fix(admin): include orphan albums by artist in music-show-only cleanup
 
 ## lnaddress-music
 
@@ -290,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-25 13:38 UTC*
+*Last synced: 2026-07-25 19:09 UTC*

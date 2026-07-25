@@ -25,6 +25,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podping-monitor](https://github.com/Podcastindex-org/podping-monitor) - A monitor and swarm manager for the podping gossip network.
 - [podping](https://github.com/Podcastindex-org/podping) - A global message bus for podcast feed events.
 - [podping-hivewriter](https://github.com/Podcastindex-org/podping-hivewriter) - The hive writer component of podping.
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
@@ -41,6 +42,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [hanami](https://github.com/Letdown2491/hanami) - No description
 - [go](https://github.com/getAlby/go) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub.
 - [pxpipe](https://github.com/teamchong/pxpipe) - cut Fable 5 token usage by rendering text context as images
 - [libre-listener-wallet-monorepo](https://github.com/satsandsteel/libre-listener-wallet-monorepo) - The Libre Listener Wallet is a zero-infrastructure, non-custodial Bitcoin Lightning Network implementation
@@ -98,4 +100,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-07-25 13:38 UTC*
+*Last synced: 2026-07-25 19:09 UTC*

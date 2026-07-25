@@ -5,6 +5,7 @@
 ## MSP-2.0
 
 ### Open
+- [#92 Add a confirmation that the PP was sent and received.](https://github.com/ChadFarrow/MSP-2.0/issues/92)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -31,9 +32,8 @@
 ## stablekraft-app
 
 ### Open
+- [#174 have app pick back up where a user left off when they come back to the app](https://github.com/ChadFarrow/stablekraft-app/issues/174)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
-- [#166 on some devices the tracks end time is off and causes the play bar to go off the scree](https://github.com/ChadFarrow/stablekraft-app/issues/166)
-- [#165 LineageOS issues](https://github.com/ChadFarrow/stablekraft-app/issues/165)
 
 ## lnaddress-music
 
@@ -114,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-25 13:38 UTC*
+*Last synced: 2026-07-25 19:09 UTC*
