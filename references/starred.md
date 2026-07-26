@@ -44,7 +44,7 @@
 ## Other
 - [hanami](https://github.com/Letdown2491/hanami) - No description
 - [go](https://github.com/getAlby/go) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub.
-- [pxpipe](https://github.com/teamchong/pxpipe) - cut Fable 5 token usage by rendering text context as images
+- [pxpipe](https://github.com/teamchong/pxpipe) - cut Claude Code token usage by rendering text context as images
 - [libre-listener-wallet-monorepo](https://github.com/satsandsteel/libre-listener-wallet-monorepo) - The Libre Listener Wallet is a zero-infrastructure, non-custodial Bitcoin Lightning Network implementation
 - [helipad-dev-env](https://github.com/ericpp/helipad-dev-env) - No description
 - [sidecar](https://github.com/dmnyc/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸
@@ -100,4 +100,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-07-26 08:29 UTC*
+*Last synced: 2026-07-26 13:26 UTC*
