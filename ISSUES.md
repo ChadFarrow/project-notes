@@ -32,7 +32,7 @@
 ## stablekraft-app
 
 ### Open
-- [#174 have app pick back up where a user left off when they come back to the app](https://github.com/ChadFarrow/stablekraft-app/issues/174)
+- [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
 ## lnaddress-music
@@ -114,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-25 19:09 UTC*
+*Last synced: 2026-07-26 02:57 UTC*
