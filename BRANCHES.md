@@ -36,6 +36,7 @@
 
 ## stablekraft-app
 
+- `claude/nostr-checkbox-username-47ucb7`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -83,6 +84,7 @@
 
 ## boostmebitch
 
+- `claude/boostmefam-domain-header-pjp7j5`
 - `claude/feed-parsing-non-podcastindex-xvs4yk`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -122,4 +124,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-27 14:39 UTC*
+*Last synced: 2026-07-27 19:36 UTC*

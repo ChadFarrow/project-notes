@@ -99,6 +99,8 @@
 ## stablekraft-app
 
 ### Merged
+- [#180](https://github.com/ChadFarrow/stablekraft-app/pull/180) ✓ feat(monitoring): send client errors and warnings to the server
+- [#179](https://github.com/ChadFarrow/stablekraft-app/pull/179) ✓ feat(boost): report auto-boost failures, not just successes
 - [#178](https://github.com/ChadFarrow/stablekraft-app/pull/178) ✓ feat(boost): tag every failure log with a triage category
 - [#177](https://github.com/ChadFarrow/stablekraft-app/pull/177) ✓ feat(boost): server-side warnings for failed boosts, unpaid recipients and fees
 - [#176](https://github.com/ChadFarrow/stablekraft-app/pull/176) ✓ fix(boost): always show the Nostr post row, stop npubs landing in the name field
@@ -127,8 +129,6 @@
 - [#140](https://github.com/ChadFarrow/stablekraft-app/pull/140) ✓ Fix settings wiped on every app load after new build/deploy
 - [#139](https://github.com/ChadFarrow/stablekraft-app/pull/139) ✓ Fix iOS PWA shuffle: set auto-transition flag in proactive advance timer
 - [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
-- [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
-- [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
 
 ## lnaddress-music
 
@@ -292,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-27 14:39 UTC*
+*Last synced: 2026-07-27 19:36 UTC*
