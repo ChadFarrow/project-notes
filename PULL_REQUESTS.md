@@ -99,6 +99,9 @@
 ## stablekraft-app
 
 ### Merged
+- [#178](https://github.com/ChadFarrow/stablekraft-app/pull/178) ✓ feat(boost): tag every failure log with a triage category
+- [#177](https://github.com/ChadFarrow/stablekraft-app/pull/177) ✓ feat(boost): server-side warnings for failed boosts, unpaid recipients and fees
+- [#176](https://github.com/ChadFarrow/stablekraft-app/pull/176) ✓ fix(boost): always show the Nostr post row, stop npubs landing in the name field
 - [#173](https://github.com/ChadFarrow/stablekraft-app/pull/173) ✓ fix(podping): match feed URLs across percent-encoding, not just case
 - [#172](https://github.com/ChadFarrow/stablekraft-app/pull/172) ✓ fix(podping): case-insensitive fallback in the feed-by-URL lookup
 - [#170](https://github.com/ChadFarrow/stablekraft-app/pull/170) ✓ fix(images): stop animated-GIF artwork flooding Railway logs
@@ -126,9 +129,6 @@
 - [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
 - [#136](https://github.com/ChadFarrow/stablekraft-app/pull/136) ✓ Guard lastNewTrackAt writes/reads against missing migration
 - [#135](https://github.com/ChadFarrow/stablekraft-app/pull/135) ✓ Surface albums with new tracks in the "new" filter
-- [#134](https://github.com/ChadFarrow/stablekraft-app/pull/134) ✓ Fix chapter markers missing when playing playlists from the grid
-- [#133](https://github.com/ChadFarrow/stablekraft-app/pull/133) ✓ fix: show boost buttons on New tab by falling back to track-level V4V
-- [#132](https://github.com/ChadFarrow/stablekraft-app/pull/132) ✓ chore(blacklist): ban anchor.fm/s/1125b8ad4 podcast feed
 
 ## lnaddress-music
 
@@ -292,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-27 09:55 UTC*
+*Last synced: 2026-07-27 14:39 UTC*
