@@ -99,6 +99,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#182](https://github.com/ChadFarrow/stablekraft-app/pull/182) ✓ feat(admin): diagnostics panel for boost failures and client errors
 - [#181](https://github.com/ChadFarrow/stablekraft-app/pull/181) ✓ fix(boost,monitoring): follow-ups from reviewing #176-#180
 - [#180](https://github.com/ChadFarrow/stablekraft-app/pull/180) ✓ feat(monitoring): send client errors and warnings to the server
 - [#179](https://github.com/ChadFarrow/stablekraft-app/pull/179) ✓ feat(boost): report auto-boost failures, not just successes
@@ -128,7 +129,6 @@
 - [#142](https://github.com/ChadFarrow/stablekraft-app/pull/142) ✓ Remove DynamicsCompressor from Web Audio pipeline
 - [#141](https://github.com/ChadFarrow/stablekraft-app/pull/141) ✓ fix(lightning): extract keysend routing TLVs from Helipad metadata into WebLN payload
 - [#140](https://github.com/ChadFarrow/stablekraft-app/pull/140) ✓ Fix settings wiped on every app load after new build/deploy
-- [#139](https://github.com/ChadFarrow/stablekraft-app/pull/139) ✓ Fix iOS PWA shuffle: set auto-transition flag in proactive advance timer
 
 ## lnaddress-music
 
@@ -292,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-28 02:41 UTC*
+*Last synced: 2026-07-28 08:37 UTC*
