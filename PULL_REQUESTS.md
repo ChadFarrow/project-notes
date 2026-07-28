@@ -99,6 +99,7 @@
 ## stablekraft-app
 
 ### Merged
+- [#181](https://github.com/ChadFarrow/stablekraft-app/pull/181) ✓ fix(boost,monitoring): follow-ups from reviewing #176-#180
 - [#180](https://github.com/ChadFarrow/stablekraft-app/pull/180) ✓ feat(monitoring): send client errors and warnings to the server
 - [#179](https://github.com/ChadFarrow/stablekraft-app/pull/179) ✓ feat(boost): report auto-boost failures, not just successes
 - [#178](https://github.com/ChadFarrow/stablekraft-app/pull/178) ✓ feat(boost): tag every failure log with a triage category
@@ -128,7 +129,6 @@
 - [#141](https://github.com/ChadFarrow/stablekraft-app/pull/141) ✓ fix(lightning): extract keysend routing TLVs from Helipad metadata into WebLN payload
 - [#140](https://github.com/ChadFarrow/stablekraft-app/pull/140) ✓ Fix settings wiped on every app load after new build/deploy
 - [#139](https://github.com/ChadFarrow/stablekraft-app/pull/139) ✓ Fix iOS PWA shuffle: set auto-transition flag in proactive advance timer
-- [#138](https://github.com/ChadFarrow/stablekraft-app/pull/138) ✓ fix(ios): sync body background to album color in NowPlaying screen
 
 ## lnaddress-music
 
@@ -292,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-27 19:36 UTC*
+*Last synced: 2026-07-28 02:41 UTC*

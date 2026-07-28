@@ -36,7 +36,6 @@
 
 ## stablekraft-app
 
-- `claude/nostr-checkbox-username-47ucb7`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -124,4 +123,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-27 19:36 UTC*
+*Last synced: 2026-07-28 02:41 UTC*
