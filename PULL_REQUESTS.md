@@ -165,7 +165,12 @@
 
 ## Helipad-to-Nostr-BoostBot
 
+### Open
+- [#7 Fix the s9pk build: bundle, license, assets, and packaging workspace](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/7)
+
 ### Merged
+- [#6](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/6) ✓ Build the .s9pk in CI and attach it to releases
+- [#5](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/5) ✓ Package BoostBot as a Start9 StartOS 0.4.x service
 - [#2](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/2) ✓ Improve nostr posts
 - [#1](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/1) ✓ Improve nostr posts
 
@@ -293,4 +298,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-28 14:11 UTC*
+*Last synced: 2026-07-28 19:27 UTC*
