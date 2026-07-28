@@ -85,6 +85,7 @@
 
 - `claude/boostmefam-domain-header-pjp7j5`
 - `claude/feed-parsing-non-podcastindex-xvs4yk`
+- `claude/wisp-google-auth-nostr-9h5bzy`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -123,4 +124,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-28 08:37 UTC*
+*Last synced: 2026-07-28 14:11 UTC*
