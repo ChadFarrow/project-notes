@@ -84,6 +84,7 @@
 
 ## boostmebitch
 
+- `claude/lnaddress-wellknown-keysend-m8oe05`
 - `claude/wisp-google-auth-nostr-9h5bzy`
 - `feat/libre-wallet-embed`
 - `feature/generated-profile`
@@ -125,4 +126,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-29 14:13 UTC*
+*Last synced: 2026-07-29 19:19 UTC*

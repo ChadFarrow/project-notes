@@ -202,6 +202,7 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#144](https://github.com/ChadFarrow/boostmebitch/pull/144) ✓ Proxy the keysend well-known lookup — direct fetch is CORS-blocked
 - [#143](https://github.com/ChadFarrow/boostmebitch/pull/143) ✓ Upgrade lnaddress boost legs to keysend when the address publishes one
 - [#140](https://github.com/ChadFarrow/boostmebitch/pull/140) ✓ Move Audio/Video toggle under the art/video instead of overlaying it
 - [#139](https://github.com/ChadFarrow/boostmebitch/pull/139) ✓ Overlay the Audio/Video toggle on the show artwork
@@ -231,7 +232,6 @@
 - [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
 - [#110](https://github.com/ChadFarrow/boostmebitch/pull/110) ✓ Show only play/pause in the mini-bar for live streams
 - [#109](https://github.com/ChadFarrow/boostmebitch/pull/109) ✓ Move play/pause onto the live-stream video as a tap overlay
-- [#108](https://github.com/ChadFarrow/boostmebitch/pull/108) ✓ Improve mobile layout of fullscreen live-stream player
 
 ## web-ui
 
@@ -299,4 +299,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-29 14:13 UTC*
+*Last synced: 2026-07-29 19:19 UTC*

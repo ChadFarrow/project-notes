@@ -81,6 +81,7 @@
 ## boostmebitch
 
 ### Open
+- [#145 Audio trigger stops my music on iOS](https://github.com/ChadFarrow/boostmebitch/issues/145)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
 ## web-ui
@@ -114,4 +115,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-29 14:13 UTC*
+*Last synced: 2026-07-29 19:19 UTC*
