@@ -196,6 +196,7 @@
 ## boostmebitch
 
 ### Open
+- [#142 Feature/generated profile](https://github.com/ChadFarrow/boostmebitch/pull/142)
 - [#141 Add Google onboarding that generates a Nostr key for keyless users](https://github.com/ChadFarrow/boostmebitch/pull/141)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -252,6 +253,7 @@
 - [#9 [Info] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9)
 
 ### Merged
+- [#92](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/92) ✓ feat(force-close): unilateral channel close, behind Developer settings
 - [#91](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/91) ✓ fix(roaming): require proof of a clean handoff before restoring (#90)
 - [#89](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/89) ✓ docs(wallet-embed): pin immutable tarball for lockfile apps + fix pilot domain
 - [#88](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/88) ✓ ci(wallet-embed): rolling wallet-embed-latest release of the packed tarball
@@ -281,7 +283,6 @@
 - [#62](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/62) ✓ One-tap keep-alive activation + stop reporting in-flight NWC pays as failed
 - [#61](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/61) ✓ Fix boosts failing + stranded-pending records in the resume-from-background reconnect window
 - [#60](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/60) ✓ PWA: no-zoom, cross-device sync (alias + NWC), and a keep-alive audio fix
-- [#59](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/59) ✓ Peer alias delivery ("Unknown" fix) + PWA node name, channel-count smoothing, drawer Wallet item
 
 ## localbitcoiners
 
@@ -298,4 +299,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-28 19:27 UTC*
+*Last synced: 2026-07-29 02:48 UTC*

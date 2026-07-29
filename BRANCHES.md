@@ -84,10 +84,9 @@
 
 ## boostmebitch
 
-- `claude/boostmefam-domain-header-pjp7j5`
-- `claude/feed-parsing-non-podcastindex-xvs4yk`
 - `claude/wisp-google-auth-nostr-9h5bzy`
 - `feat/libre-wallet-embed`
+- `feature/generated-profile`
 - `feature/inbox-listen-queue`
 - `main`
 
@@ -108,6 +107,7 @@
 ## libre-listener-wallet-monorepo
 
 - `claude/mobile-extension-feasibility-4aji1q`
+- `feat/force-close`
 - `feat/lsps2-jit-m1`
 - `master`
 
@@ -125,4 +125,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-28 19:27 UTC*
+*Last synced: 2026-07-29 02:48 UTC*
