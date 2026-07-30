@@ -63,8 +63,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-- `claude/start9-helipad-webhook-app-g4p59m`
-- `main`
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ## LIT_Bot
 
@@ -84,7 +83,6 @@
 
 ## boostmebitch
 
-- `claude/lnaddress-wellknown-keysend-m8oe05`
 - `claude/wisp-google-auth-nostr-9h5bzy`
 - `feat/libre-wallet-embed`
 - `feature/generated-profile`
@@ -126,4 +124,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-07-29 19:19 UTC*
+*Last synced: 2026-07-30 02:33 UTC*

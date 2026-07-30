@@ -165,14 +165,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-### Open
-- [#7 Fix the s9pk build: bundle, license, assets, and packaging workspace](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/7)
-
-### Merged
-- [#6](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/6) ✓ Build the .s9pk in CI and attach it to releases
-- [#5](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/5) ✓ Package BoostBot as a Start9 StartOS 0.4.x service
-- [#2](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/2) ✓ Improve nostr posts
-- [#1](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/1) ✓ Improve nostr posts
+*No pull requests*
 
 ## LIT_Bot
 
@@ -202,6 +195,7 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#146](https://github.com/ChadFarrow/boostmebitch/pull/146) ✓ Privacy policy + homepage copy for Google OAuth verification
 - [#144](https://github.com/ChadFarrow/boostmebitch/pull/144) ✓ Proxy the keysend well-known lookup — direct fetch is CORS-blocked
 - [#143](https://github.com/ChadFarrow/boostmebitch/pull/143) ✓ Upgrade lnaddress boost legs to keysend when the address publishes one
 - [#140](https://github.com/ChadFarrow/boostmebitch/pull/140) ✓ Move Audio/Video toggle under the art/video instead of overlaying it
@@ -231,7 +225,6 @@
 - [#112](https://github.com/ChadFarrow/boostmebitch/pull/112) ✓ Add Picture-in-Picture for video streams + Media Session controls
 - [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
 - [#110](https://github.com/ChadFarrow/boostmebitch/pull/110) ✓ Show only play/pause in the mini-bar for live streams
-- [#109](https://github.com/ChadFarrow/boostmebitch/pull/109) ✓ Move play/pause onto the live-stream video as a tap overlay
 
 ## web-ui
 
@@ -299,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-29 19:19 UTC*
+*Last synced: 2026-07-30 02:33 UTC*

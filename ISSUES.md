@@ -59,8 +59,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-### Open
-- [#4 Make boosts link to LNBeats and not PI](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/4)
+*No open issues*
 
 ## LIT_Bot
 
@@ -115,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-29 19:19 UTC*
+*Last synced: 2026-07-30 02:32 UTC*

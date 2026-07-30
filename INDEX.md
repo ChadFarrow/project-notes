@@ -21,7 +21,7 @@
 - [libre-listener-wallet-monorepo](libre-listener-wallet-monorepo.md) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. (`TypeScript`)
 
 ## Nostr
-- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`)
+- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - 
 - [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr (`JavaScript`)
 - [LibreRelayBot](LibreRelayBot.md) -  (`JavaScript`)
 - [BoostAfterBoost](BoostAfterBoost.md) - IRC to Nostr bridge for monitoring BoostAfterBoost bot in #BowlAfterBowl (`JavaScript`)
