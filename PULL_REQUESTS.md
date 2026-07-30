@@ -195,6 +195,7 @@
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ### Merged
+- [#147](https://github.com/ChadFarrow/boostmebitch/pull/147) ✓ fix(boost): the tap-time sound unlock was claiming an audio session too
 - [#146](https://github.com/ChadFarrow/boostmebitch/pull/146) ✓ Privacy policy + homepage copy for Google OAuth verification
 - [#144](https://github.com/ChadFarrow/boostmebitch/pull/144) ✓ Proxy the keysend well-known lookup — direct fetch is CORS-blocked
 - [#143](https://github.com/ChadFarrow/boostmebitch/pull/143) ✓ Upgrade lnaddress boost legs to keysend when the address publishes one
@@ -224,7 +225,6 @@
 - [#113](https://github.com/ChadFarrow/boostmebitch/pull/113) ✓ Resume live HLS streams on foreground (iOS Safari background fix)
 - [#112](https://github.com/ChadFarrow/boostmebitch/pull/112) ✓ Add Picture-in-Picture for video streams + Media Session controls
 - [#111](https://github.com/ChadFarrow/boostmebitch/pull/111) ✓ Optimize live loading: RSS fetch dedupe/cache, persistent + health-scored Nostr pool, feed racing
-- [#110](https://github.com/ChadFarrow/boostmebitch/pull/110) ✓ Show only play/pause in the mini-bar for live streams
 
 ## web-ui
 
@@ -292,4 +292,4 @@
 *No pull requests*
 
 ---
-*Last synced: 2026-07-30 14:07 UTC*
+*Last synced: 2026-07-30 19:28 UTC*
