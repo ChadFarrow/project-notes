@@ -169,22 +169,12 @@ jobs:
             echo "" >> PULL_REQUESTS.md
 
             open_prs=$(gh pr list --repo $USERNAME/$repo --state open --json number,title,url --jq '.[] | "- [#\(.number) \(.title)](\(.url))"' 2>/dev/null || echo "")
-            merged_prs=$(gh pr list --repo $USERNAME/$repo --state merged --json number,title,url --jq '.[] | "- [#\(.number)](\(.url)) ✓ \(.title)"' 2>/dev/null || echo "")
 
             if [ -n "$open_prs" ]; then
-              echo "### Open" >> PULL_REQUESTS.md
               echo "$open_prs" >> PULL_REQUESTS.md
               echo "" >> PULL_REQUESTS.md
-            fi
-
-            if [ -n "$merged_prs" ]; then
-              echo "### Merged" >> PULL_REQUESTS.md
-              echo "$merged_prs" >> PULL_REQUESTS.md
-              echo "" >> PULL_REQUESTS.md
-            fi
-
-            if [ -z "$open_prs" ] && [ -z "$merged_prs" ]; then
-              echo "*No pull requests*" >> PULL_REQUESTS.md
+            else
+              echo "*No open pull requests*" >> PULL_REQUESTS.md
               echo "" >> PULL_REQUESTS.md
             fi
           done
