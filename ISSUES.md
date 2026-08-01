@@ -80,7 +80,7 @@
 ## boostmebitch
 
 ### Open
-- [#145 Audio trigger stops my music on iOS](https://github.com/ChadFarrow/boostmebitch/issues/145)
+- [#148 Add support for live VTS](https://github.com/ChadFarrow/boostmebitch/issues/148)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
 ## web-ui
@@ -114,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-07-31 19:36 UTC*
+*Last synced: 2026-08-01 02:57 UTC*
