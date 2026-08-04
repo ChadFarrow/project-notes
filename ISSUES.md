@@ -5,7 +5,6 @@
 ## MSP-2.0
 
 ### Open
-- [#92 Add a confirmation that the PP was sent and received.](https://github.com/ChadFarrow/MSP-2.0/issues/92)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -114,4 +113,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-03 19:39 UTC*
+*Last synced: 2026-08-04 02:42 UTC*
