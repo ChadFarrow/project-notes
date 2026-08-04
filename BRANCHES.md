@@ -6,6 +6,7 @@
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
+- `claude/msp-publisher-feed-import-bug-txayql`
 - `master`
 - `new-onboarding-v2`
 
@@ -27,6 +28,7 @@
 
 ## ITDV-Lightning
 
+- `claude/album-description-dates-ybsvqk`
 - `main`
 
 ## HPM-Lightning
@@ -125,4 +127,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-08-04 14:19 UTC*
+*Last synced: 2026-08-04 19:40 UTC*

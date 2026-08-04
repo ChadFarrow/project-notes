@@ -31,6 +31,7 @@
 ## stablekraft-app
 
 ### Open
+- [#183 This loads singles but it's the wrong singles album](https://github.com/ChadFarrow/stablekraft-app/issues/183)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
@@ -113,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-04 14:19 UTC*
+*Last synced: 2026-08-04 19:40 UTC*
