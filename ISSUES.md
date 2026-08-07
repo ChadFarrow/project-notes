@@ -5,6 +5,8 @@
 ## MSP-2.0
 
 ### Open
+- [#95 add artwork preview for album art](https://github.com/ChadFarrow/MSP-2.0/issues/95)
+- [#94 track order for imported tracks](https://github.com/ChadFarrow/MSP-2.0/issues/94)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -113,4 +115,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-07 13:07 UTC*
+*Last synced: 2026-08-07 18:59 UTC*

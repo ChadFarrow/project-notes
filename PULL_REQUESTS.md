@@ -4,6 +4,7 @@
 
 ## MSP-2.0
 
+- [#93 Don't report success for feeds crawlers can't reach](https://github.com/ChadFarrow/MSP-2.0/pull/93)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
@@ -106,4 +107,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-07 13:07 UTC*
+*Last synced: 2026-08-07 18:59 UTC*

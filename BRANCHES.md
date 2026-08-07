@@ -7,6 +7,7 @@
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
 - `claude/msp-publisher-feed-import-bug-txayql`
+- `feed-reachability-guard`
 - `master`
 - `new-onboarding-v2`
 
@@ -123,4 +124,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-08-07 13:07 UTC*
+*Last synced: 2026-08-07 18:59 UTC*
