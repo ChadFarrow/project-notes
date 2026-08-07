@@ -57,7 +57,7 @@
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
 - [zapstore](https://github.com/zapstore/zapstore) - The open app store
-- [start-technologies](https://github.com/Start9Labs/start-technologies) - A graphical server OS optimized for self-hosting
+- [start-technologies](https://github.com/Start9Labs/start-technologies) - Monorepo for StartOS, StartWRT, StartTunnel, start-sdk, start-docs, start-cli, start-registry, patch-db, and various shared libraries
 - [etcher](https://github.com/balena-io/etcher) - Flash OS images to SD cards & USB drives, safely and easily.
 - [stophammer](https://github.com/InTheMorning/stophammer) - V4V music feed index — index and community node (Rust + SQLite, signed event log)
 - [nsite.run](https://github.com/sandwichfarm/nsite.run) - nsite resource
@@ -100,4 +100,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-06 14:15 UTC*
+*Last synced: 2026-08-07 00:04 UTC*
