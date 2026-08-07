@@ -84,13 +84,7 @@
 
 ## boostmebitch
 
-- `claude/anon-boost-name-clear-hzsecv`
-- `claude/live-vts-music-shows-8pi6wy`
-- `claude/payment-tagging-helipad-adryrl`
-- `claude/streaming-sats-per-minute-2eupje`
-- `claude/wisp-google-auth-nostr-9h5bzy`
 - `feat/libre-wallet-embed`
-- `feature/generated-profile`
 - `feature/inbox-listen-queue`
 - `main`
 
@@ -129,4 +123,4 @@
 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ---
-*Last synced: 2026-08-07 00:04 UTC*
+*Last synced: 2026-08-07 07:18 UTC*
