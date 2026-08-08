@@ -81,7 +81,6 @@
 ## boostmebitch
 
 ### Open
-- [#148 Add support for live VTS](https://github.com/ChadFarrow/boostmebitch/issues/148)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
 ## web-ui
@@ -115,4 +114,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-07 18:59 UTC*
+*Last synced: 2026-08-08 01:46 UTC*
