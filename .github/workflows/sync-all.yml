@@ -247,6 +247,30 @@ jobs:
           OUT="audits/$(date -u +%Y-%m-%d).md"
           mkdir -p audits
 
+          # A fork that isn't one of your curated projects is upstream code you're
+          # tracking, not work you owe: its PRs are opened against the parent repo, so
+          # every branch looks orphaned here and every quiet period looks like neglect.
+          # Skip those. Forks that ARE curated (libre-listener-wallet-monorepo,
+          # localbitcoiners, ...) still get audited — they're yours.
+          #
+          # AUDIT_SKIP is the manual escape hatch for curated repos the rule would
+          # otherwise keep: web-ui and castr.me are forks you contribute to upstream
+          # (e.g. web-ui's add-chad-apps shipped as Podcastindex-org/web-ui#557), so
+          # their branches never get a PR in your copy.
+          AUDIT_SKIP="castr.me web-ui"
+
+          audit_skip() {
+            local repo="$1" is_fork="$2"
+            case " $AUDIT_SKIP " in *" $repo "*) return 0 ;; esac
+            if [ "$is_fork" = "true" ]; then
+              case " ${REPOS[*]} " in
+                *" $repo "*) return 1 ;;
+                *) return 0 ;;
+              esac
+            fi
+            return 1
+          }
+
           {
             echo "# Cross-repo audit — $(date -u '+%Y-%m-%d %H:%M UTC')"
             echo
@@ -270,7 +294,10 @@ jobs:
             echo "## Branches with no open PR"
             echo
             gh repo list $USERNAME --limit 200 --no-archived \
-              --json name --jq '.[].name' | while read -r repo; do
+              --json name,isFork --jq '.[] | "\(.name)\t\(.isFork)"' \
+              | while IFS=$'\t' read -r repo is_fork; do
+
+              audit_skip "$repo" "$is_fork" && continue
 
               # one call per repo, not per branch
               default=$(gh repo view "$USERNAME/$repo" \
@@ -294,8 +321,12 @@ jobs:
             echo
             cutoff=$(date -u -d '180 days ago' +%Y-%m-%d)
             gh repo list $USERNAME --limit 200 --no-archived \
-              --json name,pushedAt \
-              --jq ".[] | select(.pushedAt < \"$cutoff\") | \"- [ ] \`\(.name)\` — last push \(.pushedAt[0:10])\""
+              --json name,pushedAt,isFork \
+              --jq ".[] | select(.pushedAt < \"$cutoff\") | \"\(.name)\t\(.isFork)\t\(.pushedAt[0:10])\"" \
+              | while IFS=$'\t' read -r repo is_fork pushed; do
+              audit_skip "$repo" "$is_fork" && continue
+              echo "- [ ] \`$repo\` — last push $pushed"
+            done
           } > "$OUT"
 
           cp "$OUT" LATEST.md

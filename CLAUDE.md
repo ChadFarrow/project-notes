@@ -30,6 +30,8 @@ One GitHub Actions workflow runs every 6 hours (and on manual dispatch):
   - *Curated* — `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, driven by the `CATEGORIES` map.
   - *Owner-wide* — the audit section (`LATEST.md`, `audits/`), driven by `gh search --owner ChadFarrow` and `gh repo list`, covering every non-archived repo including untracked ones.
 
+  The audit's **branch** and **stale repo** sections skip forks that aren't listed in `CATEGORIES` — their PRs are opened against the parent repo, so every branch would look orphaned and every quiet period would look like neglect. Forks that *are* curated still get audited. `AUDIT_SKIP` in `sync-all.yml` is the manual exception list for curated repos you contribute upstream from anyway (currently `castr.me` and `web-ui`); add a repo there to silence it. The open-PR and open-issue sections are unfiltered — they only ever show real work.
+
   The audit section needs the **`AUDIT_TOKEN`** secret (a PAT with cross-repo read); the step falls back to `GITHUB_TOKEN`, which generates everything else fine but returns empty audit results.
 - **`sync-issues.sh`** — Local script for manually syncing issues, PRs, and branches only. Its output is deliberately byte-identical to `sync-all.yml`'s — if you change the format in one, change it in the other, or local runs will produce diffs the next scheduled sync reverts.
 

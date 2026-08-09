@@ -1,10 +1,10 @@
-# Cross-repo audit — 2026-08-09 22:22 UTC
+# Cross-repo audit — 2026-08-09 22:26 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #18** — Send full Podcasting 2.0 metadata with a boost · opened 19 minutes ago by ChadFarrow
-- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 20 minutes ago by ChadFarrow
-- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 54 minutes ago by ChadFarrow
+- [ ] **candr.space #18** — Send full Podcasting 2.0 metadata with a boost · opened 23 minutes ago by ChadFarrow
+- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 24 minutes ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 58 minutes ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 1 day ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 21 days ago by ChadFarrow
@@ -38,62 +38,14 @@
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
-- [ ] `web-ui` — `add-chad-apps`
-- [ ] `web-ui` — `update-ITDV-Music-app`
 - [ ] `localbitcoiners` — `docs/claude-local-dev`
-- [ ] `haven` — `claude/add-dynamic-dns-support-onshs`
-- [ ] `haven` — `custom-haven-backup`
-- [ ] `haven` — `dev-0.4.4`
-- [ ] `haven` — `dev-addDeleteToInbox`
-- [ ] `haven` — `dev-blossom`
-- [ ] `haven` — `dev-dbSwapper`
-- [ ] `haven` — `dev-fixLazySubscription`
-- [ ] `haven` — `dev-fixPanic`
-- [ ] `haven` — `dev-fixStatic`
-- [ ] `haven` — `dev-fixStupidDocker`
-- [ ] `haven` — `dev-oct8update`
-- [ ] `haven` — `dev-oomFixAttempt`
-- [ ] `haven` — `dev-rateLimits`
-- [ ] `haven` — `dev-removeJsonFile`
-- [ ] `haven` — `dev-staticBugFix`
-- [ ] `haven` — `dev-updatev4.2`
-- [ ] `haven` — `dev-v1.0.1`
-- [ ] `haven` — `dev-v1.0.5`
-- [ ] `haven` — `update-v1.1.0`
-- [ ] `haven` — `v0.4.0`
-- [ ] `helipad` — `add-itdv-app`
-- [ ] `helipad` — `add-tardbox-metadata-support`
-- [ ] `helipad` — `leaderboard`
-- [ ] `helipad` — `patch-1`
-- [ ] `helipad` — `revert-32-message-template-improvements`
 - [ ] `RSS-music-site-template` — `claude/clone-repository-2O3bN`
 - [ ] `is-this-thing-on` — `claude/pull-latest-changes-MyBtZ`
-- [ ] `helipad-startos` — `custom-tardbox-build`
-- [ ] `podstr` — `feat/auto-chapters`
-- [ ] `podstr` — `feat/ping-podcast-index`
-- [ ] `podstr` — `podstr-2.0`
-- [ ] `lnbeats` — `add-msp2-icon`
-- [ ] `lnbeats` — `artist-filter`
-- [ ] `lnbeats` — `claude/add-msp-feed-detection-g003l`
-- [ ] `lnbeats` — `curiohoster`
-- [ ] `lnbeats` — `database-update`
-- [ ] `lnbeats` — `favorite`
-- [ ] `lnbeats` — `hosted_playlists`
-- [ ] `lnbeats` — `localDB`
-- [ ] `lnbeats` — `remote-playlist`
-- [ ] `lnbeats` — `remote-sync`
-- [ ] `lnbeats` — `timeValueSplit`
-- [ ] `lnbeats` — `transcript`
-- [ ] `castr.me` — `refactor/remove-media-content-tag`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
 
 ## Repos with no push in 180+ days (archive candidates)
 
-- [ ] `lnbeats` — last push 2026-02-05
 - [ ] `so-big-lightning-payment` — last push 2025-12-23
 - [ ] `HGH-checker` — last push 2025-12-19
-- [ ] `castr.me` — last push 2025-12-01
-- [ ] `demu-feed-template` — last push 2025-08-27
-- [ ] `stacks` — last push 2025-07-26
 - [ ] `stacks-pc20` — last push 2025-07-26
 - [ ] `BoostBot-Starter` — last push 2025-07-06
