@@ -1,0 +1,81 @@
+name: Cross-repo audit
+
+on:
+  schedule:
+    - cron: '0 13 * * 1'   # Mondays 09:00 ET (13:00 UTC)
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate audit
+        env:
+          GH_TOKEN: ${{ secrets.AUDIT_TOKEN }}
+        run: |
+          set -euo pipefail
+          OUT="audits/$(date -u +%Y-%m-%d).md"
+          mkdir -p audits
+
+          {
+            echo "# Cross-repo audit — $(date -u +%Y-%m-%d)"
+            echo
+
+            echo "## Open pull requests"
+            echo
+            gh search prs --owner ChadFarrow --state open --limit 100 \
+              --json repository,number,title,createdAt,updatedAt,isDraft,author \
+              --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}}{{if .isDraft}} _(draft)_{{end}} · opened {{timeago .createdAt}} by {{.author.login}}
+          {{end}}'
+
+            echo
+            echo "## Open issues"
+            echo
+            gh search issues --owner ChadFarrow --state open --limit 100 \
+              --json repository,number,title,createdAt,updatedAt,author,commentsCount \
+              --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}} · opened {{timeago .createdAt}} by {{.author.login}} ({{.commentsCount}} comments)
+          {{end}}'
+
+            echo
+            echo "## Branches with no open PR"
+            echo
+            # Collect branches that have an open PR so we can exclude them
+            gh search prs --owner ChadFarrow --state open --limit 100 \
+              --json repository,headRefName \
+              --template '{{range .}}{{.repository.name}}:{{.headRefName}}
+          {{end}}' | sort -u > /tmp/pr_branches.txt
+
+            gh repo list ChadFarrow --limit 200 --no-archived \
+              --json name --jq '.[].name' | while read -r repo; do
+              gh api "repos/ChadFarrow/$repo/branches" --paginate \
+                --jq '.[].name' 2>/dev/null | while read -r br; do
+                default=$(gh repo view "ChadFarrow/$repo" --json defaultBranchRef --jq .defaultBranchRef.name)
+                [ "$br" = "$default" ] && continue
+                grep -qx "$repo:$br" /tmp/pr_branches.txt && continue
+                echo "- [ ] \`$repo\` — \`$br\`"
+              done
+            done
+
+            echo
+            echo "## Repos with no push in 180+ days (archive candidates)"
+            echo
+            cutoff=$(date -u -d '180 days ago' +%Y-%m-%d)
+            gh repo list ChadFarrow --limit 200 --no-archived \
+              --json name,pushedAt \
+              --jq ".[] | select(.pushedAt < \"$cutoff\") | \"- [ ] \`\(.name)\` — last push \(.pushedAt[0:10])\""
+          } > "$OUT"
+
+          cp "$OUT" LATEST.md
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits LATEST.md
+          git diff --staged --quiet || git commit -m "Audit $(date -u +%Y-%m-%d)"
+          git push
