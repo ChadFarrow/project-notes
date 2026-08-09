@@ -21,7 +21,7 @@
 - [libre-listener-wallet-monorepo](libre-listener-wallet-monorepo.md) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. (`TypeScript`)
 
 ## Nostr
-- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - 
+- [Helipad-to-Nostr-BoostBot](Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`)
 - [LIT_Bot](LIT_Bot.md) - Live podcast notifications via PodPing to Nostr (`JavaScript`)
 - [LibreRelayBot](LibreRelayBot.md) -  (`JavaScript`)
 - [BoostAfterBoost](BoostAfterBoost.md) - IRC to Nostr bridge for monitoring BoostAfterBoost bot in #BowlAfterBowl (`JavaScript`)
@@ -32,12 +32,15 @@
 - [boostmebitch](boostmebitch.md) -  (`TypeScript`)
 - [web-ui](web-ui.md) - The public home page of podcastindex.org (`HTML`)
 - [localbitcoiners](localbitcoiners.md) - Local Bitcoiners Website (`JavaScript`)
-- [candr.space](candr.space.md) - 
+- [candr.space](candr.space.md) -  (`HTML`)
 
 ## Tools
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [pc20-clips](https://github.com/ChadFarrow/pc20-clips) - Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips *(NEW)*
+- [pc20-timeline](https://github.com/ChadFarrow/pc20-timeline) -  *(NEW)*
+- [blup](https://github.com/ChadFarrow/blup) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
