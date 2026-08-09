@@ -35,10 +35,35 @@ One GitHub Actions workflow runs every 6 hours (and on manual dispatch):
   The audit section needs the **`AUDIT_TOKEN`** secret (a PAT with cross-repo read); the step falls back to `GITHUB_TOKEN`, which generates everything else fine but returns empty audit results.
 - **`sync-issues.sh`** — Local script for manually syncing issues, PRs, and branches only. Its output is deliberately byte-identical to `sync-all.yml`'s — if you change the format in one, change it in the other, or local runs will produce diffs the next scheduled sync reverts.
 
-`CATEGORIES` in `sync-all.yml` is the **single source of truth** for which repos are tracked; the `REPOS` array and `known_repos` list are derived from it at runtime. When adding a new project to be tracked, add it to `CATEGORIES` in `sync-all.yml`, add it to the `REPOS` array in `sync-issues.sh`, and create a new per-project `.md` file following the existing template.
+`CATEGORIES` in `sync-all.yml` is the **single source of truth** for which repos are tracked; the `REPOS` array and `known_repos` list are derived from it at runtime. When adding a new project to be tracked:
+
+1. Add it to `CATEGORIES` in `sync-all.yml` (nowhere else in that file).
+2. Add it to the `REPOS` array in `sync-issues.sh`, **in the same position** — the workflow emits sections in category order, and the script's output has to match it exactly.
+3. Create a per-project `.md` file following the existing template.
+
+Skipping step 2 doesn't break anything visibly; it just makes local runs of `sync-issues.sh` produce a diff the next scheduled sync reverts.
+
+### Testing changes to the sync script
+
+The `run:` block is a single large bash script embedded in YAML. To test it without pushing, extract it and run it in a scratch directory rather than the repo — it overwrites the generated files in place:
+
+```bash
+python3 -c "import yaml; print(yaml.safe_load(open('.github/workflows/sync-all.yml'))['jobs']['sync']['steps'][2]['run'])" > /tmp/sync.sh
+bash -n /tmp/sync.sh   # syntax check
+```
+
+Two things make a full local run fail on macOS, both fine on the ubuntu runner:
+
+- `declare -A CATEGORIES` needs **bash 4+**. Stock macOS ships bash 3.2, which has no associative arrays. Either install a modern bash or inject `REPOS=(...)` manually and run only the sections you're changing.
+- `date -u -d '180 days ago'` in the audit section is **GNU date**. BSD date needs `-v-180d`. Shim it if you need that section locally.
+
+The `{{end}}'` lines closing the `gh search --template` strings must sit at exactly the YAML block-scalar indent (10 spaces). Less and YAML parsing breaks; more and the extra whitespace lands in the rendered markdown.
+
+The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase retry loop. A manual push can still collide with a scheduled run — if you hit a conflict in `LATEST.md` or `audits/<date>.md`, take either side and re-run the workflow, since both files are regenerated wholesale.
 
 ## Editing Guidelines
 
-- `INDEX.md`, `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, `LATEST.md`, `audits/*.md`, and `references/starred.md` are **auto-generated** — do not edit manually (changes will be overwritten by the next sync).
+- `INDEX.md`, `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), and `references/starred.md` are **auto-generated** — do not edit manually (changes will be overwritten by the next sync). To change what they contain, edit the generator in `sync-all.yml`.
 - All other `.md` files are manually maintained and safe to edit.
 - The GitHub user is `ChadFarrow`.
+- `.DS_Store` is tracked in git and the repo has no `.gitignore`, so it surfaces as a modified file on macOS. Leave it out of commits unless you're deliberately cleaning it up.
