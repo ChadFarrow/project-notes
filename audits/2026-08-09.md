@@ -1,8 +1,10 @@
-# Cross-repo audit — 2026-08-09
+# Cross-repo audit — 2026-08-09 22:13 UTC
 
 ## Open pull requests
 
-- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 24 minutes ago by ChadFarrow
+- [ ] **candr.space #18** — Send full Podcasting 2.0 metadata with a boost · opened 11 minutes ago by ChadFarrow
+- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 11 minutes ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 45 minutes ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 1 day ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 21 days ago by ChadFarrow
@@ -18,7 +20,6 @@
 ## Open issues
 
 - [ ] **MSP-2.0 #95** — add artwork preview for album art · opened 2 days ago by ChadFarrow (1 comments)
-- [ ] **MSP-2.0 #94** — track order for imported tracks · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 16 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 22 days ago by ChadFarrow (0 comments)

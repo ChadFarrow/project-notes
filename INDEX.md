@@ -38,9 +38,6 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. *(NEW)*
-- [msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) -  *(NEW)*
-- [localbitcoiners](https://github.com/ChadFarrow/localbitcoiners) - Local Bitcoiners Website *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
@@ -65,9 +62,15 @@
 ---
 
 ## Quick Links
+- [Latest Audit](LATEST.md) - **Start here** — every open PR, issue, orphan branch and stale repo
+- [Audit History](audits/README.md) - Past sweeps
+
+### Per-project detail (curated projects only)
 - [All Issues](ISSUES.md) - GitHub issues across all projects
 - [All Pull Requests](PULL_REQUESTS.md) - PRs across all projects
 - [All Branches](BRANCHES.md) - Active branches across all projects
+
+### Reference
 - [PC2.0 Specs Reference](PC2.0-SPECS.md)
 - [References](references/README.md) - General bookmarks & links
 - [GitHub Profile](https://github.com/ChadFarrow)

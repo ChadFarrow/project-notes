@@ -2,12 +2,14 @@
 
 *Auto-synced every 6 hours via GitHub Actions*
 
+*Scope: curated projects only. For all repos see [LATEST.md](LATEST.md).*
+
 ## MSP-2.0
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
 - `claude/msp-publisher-feed-import-bug-txayql`
-- `feed-reachability-guard`
+- `docs/pubdate-help-text`
 - `master`
 - `new-onboarding-v2`
 
@@ -15,35 +17,6 @@
 
 - `master` 🔒
 - `sync-upstream`
-
-## castr.me
-
-- `feat/episode-images`
-- `feat/podcast-value-tag`
-- `master`
-- `refactor/remove-media-content-tag`
-
-## TRM-Lightning
-
-- `main`
-
-## ITDV-Lightning
-
-- `main`
-
-## HPM-Lightning
-
-- `main`
-- `vercel/react-server-components-cve-vu-ndvmav`
-
-## stablekraft-app
-
-- `feature/genre-and-v4v-tags`
-- `main`
-
-## lnaddress-music
-
-- `main`
 
 ## musicL-playlist-updater
 
@@ -58,14 +31,53 @@
 - `claude/localbitcoiners-podcast-playlist-069mwk`
 - `main`
 
+## lnaddress-music
+
+- `main`
+
+## castr.me
+
+- `feat/episode-images`
+- `feat/podcast-value-tag`
+- `master`
+- `refactor/remove-media-content-tag`
+
 ## RSS-music-site-template
 
 - `claude/clone-repository-2O3bN`
 - `main`
 
+## msp-podping-service
+
+- `main`
+
+## ITDV-Lightning
+
+- `main`
+
+## TRM-Lightning
+
+- `main`
+
+## HPM-Lightning
+
+- `main`
+- `vercel/react-server-components-cve-vu-ndvmav`
+
+## lnurl-test-feed
+
+- `main`
+
+## libre-listener-wallet-monorepo
+
+- `claude/mobile-extension-feasibility-4aji1q`
+- `feat/force-close`
+- `feat/lsps2-jit-m1`
+- `master`
+
 ## Helipad-to-Nostr-BoostBot
 
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
+- `main`
 
 ## LIT_Bot
 
@@ -79,12 +91,18 @@
 
 - `main`
 
+## stablekraft-app
+
+- `feature/genre-and-v4v-tags`
+- `main`
+
 ## chadf-landing-page
 
 - `main`
 
 ## boostmebitch
 
+- `claude/spark-wallet-nostr-backup-ycm7gt`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -95,33 +113,20 @@
 - `master`
 - `update-ITDV-Music-app`
 
-## HGH-checker
-
-- `master`
-
-## lnurl-test-feed
-
-- `main`
-
-## libre-listener-wallet-monorepo
-
-- `claude/mobile-extension-feasibility-4aji1q`
-- `feat/force-close`
-- `feat/lsps2-jit-m1`
-- `master`
-
 ## localbitcoiners
 
 - `docs/claude-local-dev`
 - `main`
 
-## msp-podping-service
-
-- `main`
-
 ## candr.space
 
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
+- `chapterize-tool`
+- `claude/boost-pc20-metadata`
+- `main`
+
+## HGH-checker
+
+- `master`
 
 ---
-*Last synced: 2026-08-09 18:42 UTC*
+*Last synced: 2026-08-09 22:17 UTC*

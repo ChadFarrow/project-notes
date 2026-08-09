@@ -25,7 +25,10 @@ jobs:
 
       - name: Sync Everything
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # AUDIT_TOKEN is a PAT with cross-repo read — required for the owner-wide
+          # `gh search` calls in the audit section. Falls back to the default token,
+          # which can still generate everything except the audit.
+          GH_TOKEN: ${{ secrets.AUDIT_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           USERNAME="ChadFarrow"
 
@@ -41,7 +44,8 @@ jobs:
 
           HEADER
 
-          # Categories
+          # Categories — THE single source of truth for which repos are tracked.
+          # To track a new repo, add it here (and nowhere else in this file).
           declare -A CATEGORIES
           CATEGORIES["Music/Podcasting"]="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template msp-podping-service"
           CATEGORIES["Lightning"]="ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed libre-listener-wallet-monorepo"
@@ -49,7 +53,16 @@ jobs:
           CATEGORIES["Web/Apps"]="stablekraft-app chadf-landing-page boostmebitch web-ui localbitcoiners candr.space"
           CATEGORIES["Tools"]="HGH-checker"
 
-          for category in "Music/Podcasting" "Lightning" "Nostr" "Web/Apps" "Tools"; do
+          CATEGORY_ORDER=("Music/Podcasting" "Lightning" "Nostr" "Web/Apps" "Tools")
+
+          # Derived from CATEGORIES — do not maintain separately
+          REPOS=()
+          for category in "${CATEGORY_ORDER[@]}"; do
+            for repo in ${CATEGORIES[$category]}; do REPOS+=("$repo"); done
+          done
+          known_repos="project-notes ${REPOS[*]}"
+
+          for category in "${CATEGORY_ORDER[@]}"; do
             echo "## $category" >> INDEX.md
             for repo in ${CATEGORIES[$category]}; do
               desc=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .description // "No description"' repos.json)
@@ -65,7 +78,6 @@ jobs:
 
           # Check for new repos not in categories
           echo "## Uncategorized" >> INDEX.md
-          known_repos="MSP-2.0 MSP-2.0-Desktop-App musicL-playlist-updater chadf-musicl-playlists Auto-musicL-Maker lnaddress-music castr.me RSS-music-site-template ITDV-Lightning TRM-Lightning HPM-Lightning lnurl-test-feed Helipad-to-Nostr-BoostBot LIT_Bot LibreRelayBot BoostAfterBoost stablekraft-app chadf-landing-page boostmebitch web-ui HGH-checker candr.space project-notes"
           new_repos=$(jq -r '.[].name' repos.json | while read repo; do
             if [[ ! " $known_repos " =~ " $repo " ]]; then
               archived=$(jq -r --arg name "$repo" '.[] | select(.name == $name) | .isArchived' repos.json)
@@ -89,9 +101,15 @@ jobs:
           ---
 
           ## Quick Links
+          - [Latest Audit](LATEST.md) - **Start here** — every open PR, issue, orphan branch and stale repo
+          - [Audit History](audits/README.md) - Past sweeps
+
+          ### Per-project detail (curated projects only)
           - [All Issues](ISSUES.md) - GitHub issues across all projects
           - [All Pull Requests](PULL_REQUESTS.md) - PRs across all projects
           - [All Branches](BRANCHES.md) - Active branches across all projects
+
+          ### Reference
           - [PC2.0 Specs Reference](PC2.0-SPECS.md)
           - [References](references/README.md) - General bookmarks & links
           - [GitHub Profile](https://github.com/ChadFarrow)
@@ -100,38 +118,14 @@ jobs:
           # ========== SYNC ISSUES ==========
           echo "Syncing issues..."
 
-          REPOS=(
-            "MSP-2.0"
-            "MSP-2.0-Desktop-App"
-            "castr.me"
-            "TRM-Lightning"
-            "ITDV-Lightning"
-            "HPM-Lightning"
-            "stablekraft-app"
-            "lnaddress-music"
-            "musicL-playlist-updater"
-            "chadf-musicl-playlists"
-            "Auto-musicL-Maker"
-            "RSS-music-site-template"
-            "Helipad-to-Nostr-BoostBot"
-            "LIT_Bot"
-            "LibreRelayBot"
-            "BoostAfterBoost"
-            "chadf-landing-page"
-            "boostmebitch"
-            "web-ui"
-            "HGH-checker"
-            "lnurl-test-feed"
-            "libre-listener-wallet-monorepo"
-            "localbitcoiners"
-            "msp-podping-service"
-            "candr.space"
-          )
+          # REPOS is derived from CATEGORIES above
 
           cat > ISSUES.md << 'HEADER'
           # GitHub Issues
 
           *Auto-synced every 6 hours via GitHub Actions*
+
+          *Scope: curated projects only. For all repos see [LATEST.md](LATEST.md).*
 
           HEADER
 
@@ -162,6 +156,8 @@ jobs:
 
           *Auto-synced every 6 hours via GitHub Actions*
 
+          *Scope: curated projects only. For all repos see [LATEST.md](LATEST.md).*
+
           HEADER
 
           for repo in "${REPOS[@]}"; do
@@ -189,6 +185,8 @@ jobs:
           # Branches
 
           *Auto-synced every 6 hours via GitHub Actions*
+
+          *Scope: curated projects only. For all repos see [LATEST.md](LATEST.md).*
 
           HEADER
 
@@ -240,8 +238,81 @@ jobs:
           echo "---" >> references/starred.md
           echo "*Last synced: $(date -u '+%Y-%m-%d %H:%M UTC')*" >> references/starred.md
 
+          # ========== SYNC AUDIT ==========
+          # Owner-wide sweep — covers ALL repos, not just the curated CATEGORIES above.
+          # Requires AUDIT_TOKEN (a PAT); the default GITHUB_TOKEN cannot run `gh search`
+          # across the whole account. Same-day runs overwrite audits/<date>.md in place,
+          # so each dated file is that day's final snapshot.
+          echo "Syncing audit..."
+          OUT="audits/$(date -u +%Y-%m-%d).md"
+          mkdir -p audits
+
+          {
+            echo "# Cross-repo audit — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            echo
+
+            echo "## Open pull requests"
+            echo
+            gh search prs --owner $USERNAME --state open --limit 100 \
+              --json repository,number,title,createdAt,isDraft,author \
+              --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}}{{if .isDraft}} _(draft)_{{end}} · opened {{timeago .createdAt}} by {{.author.login}}
+          {{end}}'
+
+            echo
+            echo "## Open issues"
+            echo
+            gh search issues --owner $USERNAME --state open --limit 100 \
+              --json repository,number,title,createdAt,author,commentsCount \
+              --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}} · opened {{timeago .createdAt}} by {{.author.login}} ({{.commentsCount}} comments)
+          {{end}}'
+
+            echo
+            echo "## Branches with no open PR"
+            echo
+            gh repo list $USERNAME --limit 200 --no-archived \
+              --json name --jq '.[].name' | while read -r repo; do
+
+              # one call per repo, not per branch
+              default=$(gh repo view "$USERNAME/$repo" \
+                --json defaultBranchRef --jq .defaultBranchRef.name 2>/dev/null || echo "")
+
+              # head branches of this repo's open PRs
+              gh pr list --repo "$USERNAME/$repo" --state open --limit 100 \
+                --json headRefName --jq '.[].headRefName' > /tmp/pr_branches.txt 2>/dev/null \
+                || : > /tmp/pr_branches.txt
+
+              gh api "repos/$USERNAME/$repo/branches" --paginate \
+                --jq '.[].name' 2>/dev/null | while read -r br; do
+                if [ "$br" = "$default" ]; then continue; fi
+                if grep -qxF "$br" /tmp/pr_branches.txt; then continue; fi
+                echo "- [ ] \`$repo\` — \`$br\`"
+              done || true
+            done
+
+            echo
+            echo "## Repos with no push in 180+ days (archive candidates)"
+            echo
+            cutoff=$(date -u -d '180 days ago' +%Y-%m-%d)
+            gh repo list $USERNAME --limit 200 --no-archived \
+              --json name,pushedAt \
+              --jq ".[] | select(.pushedAt < \"$cutoff\") | \"- [ ] \`\(.name)\` — last push \(.pushedAt[0:10])\""
+          } > "$OUT"
+
+          cp "$OUT" LATEST.md
+
+          # Audit history index
+          {
+            echo "# Audit History"
+            echo
+            echo "Point-in-time cross-repo sweeps. [LATEST.md](../LATEST.md) is a copy of the newest entry."
+            echo
+            ls -1 audits/*.md 2>/dev/null | grep -v 'README' | sort -r | while read -r f; do
+              echo "- [$(basename "$f" .md)]($(basename "$f"))"
+            done
+          } > audits/README.md
+
           # Cleanup
-          rm -f repos.json stars.json
+          rm -f repos.json stars.json /tmp/pr_branches.txt
 
       - name: Commit changes
         run: |
