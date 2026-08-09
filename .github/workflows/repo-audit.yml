@@ -3,7 +3,7 @@ name: Cross-repo audit
 on:
   schedule:
     - cron: '0 13 * * 1'   # Mondays 09:00 ET (13:00 UTC)
-  workflow_dispatch:        # lets you run it manually from the Actions tab
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -29,7 +29,7 @@ jobs:
             echo "## Open pull requests"
             echo
             gh search prs --owner ChadFarrow --state open --limit 100 \
-              --json repository,number,title,createdAt,updatedAt,isDraft,author \
+              --json repository,number,title,createdAt,isDraft,author \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}}{{if .isDraft}} _(draft)_{{end}} · opened {{timeago .createdAt}} by {{.author.login}}
           {{end}}'
 
@@ -37,28 +37,31 @@ jobs:
             echo "## Open issues"
             echo
             gh search issues --owner ChadFarrow --state open --limit 100 \
-              --json repository,number,title,createdAt,updatedAt,author,commentsCount \
+              --json repository,number,title,createdAt,author,commentsCount \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}} · opened {{timeago .createdAt}} by {{.author.login}} ({{.commentsCount}} comments)
           {{end}}'
 
             echo
             echo "## Branches with no open PR"
             echo
-            # Collect branches that have an open PR so we can exclude them
-            gh search prs --owner ChadFarrow --state open --limit 100 \
-              --json repository,headRefName \
-              --template '{{range .}}{{.repository.name}}:{{.headRefName}}
-          {{end}}' | sort -u > /tmp/pr_branches.txt
-
             gh repo list ChadFarrow --limit 200 --no-archived \
               --json name --jq '.[].name' | while read -r repo; do
+
+              # one call per repo, not per branch
+              default=$(gh repo view "ChadFarrow/$repo" \
+                --json defaultBranchRef --jq .defaultBranchRef.name 2>/dev/null || echo "")
+
+              # head branches of this repo's open PRs
+              gh pr list --repo "ChadFarrow/$repo" --state open --limit 100 \
+                --json headRefName --jq '.[].headRefName' > /tmp/pr_branches.txt 2>/dev/null \
+                || : > /tmp/pr_branches.txt
+
               gh api "repos/ChadFarrow/$repo/branches" --paginate \
                 --jq '.[].name' 2>/dev/null | while read -r br; do
-                default=$(gh repo view "ChadFarrow/$repo" --json defaultBranchRef --jq .defaultBranchRef.name)
-                [ "$br" = "$default" ] && continue
-                grep -qx "$repo:$br" /tmp/pr_branches.txt && continue
+                if [ "$br" = "$default" ]; then continue; fi
+                if grep -qxF "$br" /tmp/pr_branches.txt; then continue; fi
                 echo "- [ ] \`$repo\` — \`$br\`"
-              done
+              done || true
             done
 
             echo
