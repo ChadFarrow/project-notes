@@ -1,10 +1,10 @@
-# Cross-repo audit — 2026-08-09 22:19 UTC
+# Cross-repo audit — 2026-08-09 22:22 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #18** — Send full Podcasting 2.0 metadata with a boost · opened 16 minutes ago by ChadFarrow
-- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 16 minutes ago by ChadFarrow
-- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 51 minutes ago by ChadFarrow
+- [ ] **candr.space #18** — Send full Podcasting 2.0 metadata with a boost · opened 19 minutes ago by ChadFarrow
+- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 20 minutes ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 54 minutes ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 1 day ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 21 days ago by ChadFarrow
