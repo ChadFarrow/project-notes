@@ -65,7 +65,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-*No open pull requests*
+- [#9 Let BoostBot write to /data on StartOS, and release 1.0.1](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/9)
 
 ## LIT_Bot
 
@@ -103,7 +103,6 @@
 
 ## candr.space
 
-- [#18 Send full Podcasting 2.0 metadata with a boost](https://github.com/ChadFarrow/candr.space/pull/18)
 - [#11 Add the chapter and transcript generator](https://github.com/ChadFarrow/candr.space/pull/11)
 
 ## HGH-checker
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-09 22:28 UTC*
+*Last synced: 2026-08-10 01:57 UTC*

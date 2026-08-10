@@ -77,6 +77,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
+- `fix/data-dir-writable`
 - `main`
 
 ## LIT_Bot
@@ -121,7 +122,6 @@
 ## candr.space
 
 - `chapterize-tool`
-- `claude/boost-pc20-metadata`
 - `main`
 
 ## HGH-checker
@@ -129,4 +129,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-09 22:28 UTC*
+*Last synced: 2026-08-10 01:57 UTC*
