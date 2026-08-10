@@ -1,14 +1,14 @@
-# Cross-repo audit — 2026-08-10 01:57 UTC
+# Cross-repo audit — 2026-08-10 07:45 UTC
 
 ## Open pull requests
 
-- [ ] **Helipad-to-Nostr-BoostBot #9** — Let BoostBot write to /data on StartOS, and release 1.0.1 · opened 2 hours ago by ChadFarrow
-- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 3 hours ago by ChadFarrow
-- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 4 hours ago by ChadFarrow
-- [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 6 hours ago by ChadFarrow
+- [ ] **Helipad-to-Nostr-BoostBot #9** — Let BoostBot write to /data on StartOS, and release 1.0.1 · opened 8 hours ago by ChadFarrow
+- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 9 hours ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 10 hours ago by ChadFarrow
+- [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 12 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 1 day ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 21 days ago by ChadFarrow
-- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 24 days ago by ChadFarrow
+- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 25 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
