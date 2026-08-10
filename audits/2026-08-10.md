@@ -1,13 +1,13 @@
-# Cross-repo audit — 2026-08-10 13:12 UTC
+# Cross-repo audit — 2026-08-10 18:59 UTC
 
 ## Open pull requests
 
-- [ ] **Helipad-to-Nostr-BoostBot #9** — Let BoostBot write to /data on StartOS, and release 1.0.1 · opened 13 hours ago by ChadFarrow
-- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 15 hours ago by ChadFarrow
-- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 15 hours ago by ChadFarrow
-- [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 17 hours ago by ChadFarrow
+- [ ] **Helipad-to-Nostr-BoostBot #9** — Let BoostBot write to /data on StartOS, and release 1.0.1 · opened 19 hours ago by ChadFarrow
+- [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 20 hours ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 21 hours ago by ChadFarrow
+- [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 23 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 2 days ago by ReedBTC
-- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 21 days ago by ChadFarrow
+- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 22 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 25 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
@@ -19,10 +19,10 @@
 
 ## Open issues
 
-- [ ] **MSP-2.0 #95** — add artwork preview for album art · opened 2 days ago by ChadFarrow (1 comments)
+- [ ] **MSP-2.0 #95** — add artwork preview for album art · opened 3 days ago by ChadFarrow (1 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 15 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 16 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 22 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 17 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #129** — queue · opened 23 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
