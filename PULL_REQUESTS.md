@@ -103,7 +103,6 @@
 
 ## candr.space
 
-- [#25 Catch the static fallback up to the nine cards KV has](https://github.com/ChadFarrow/candr.space/pull/25)
 - [#11 Add the chapter and transcript generator](https://github.com/ChadFarrow/candr.space/pull/11)
 
 ## HGH-checker
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-11 01:52 UTC*
+*Last synced: 2026-08-11 07:10 UTC*

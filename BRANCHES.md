@@ -122,12 +122,12 @@
 ## candr.space
 
 - `chapterize-tool`
+- `claude/mobile-player-layout-squished-94rbj3`
 - `main`
-- `worktree-sync-resources-fallback`
 
 ## HGH-checker
 
 - `master`
 
 ---
-*Last synced: 2026-08-11 01:53 UTC*
+*Last synced: 2026-08-11 07:10 UTC*
