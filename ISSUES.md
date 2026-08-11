@@ -7,7 +7,8 @@
 ## MSP-2.0
 
 ### Open
-- [#95 add artwork preview for album art](https://github.com/ChadFarrow/MSP-2.0/issues/95)
+- [#106 Pin the checked IP at connect time to close the DNS-rebinding window in the SSRF guards](https://github.com/ChadFarrow/MSP-2.0/issues/106)
+- [#99 Check publisher feeds](https://github.com/ChadFarrow/MSP-2.0/issues/99)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
@@ -115,4 +116,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-11 13:09 UTC*
+*Last synced: 2026-08-11 19:03 UTC*
