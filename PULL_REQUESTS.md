@@ -65,7 +65,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-- [#9 Let BoostBot write to /data on StartOS, and release 1.0.1](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pull/9)
+*No open pull requests*
 
 ## LIT_Bot
 
@@ -103,6 +103,7 @@
 
 ## candr.space
 
+- [#25 Catch the static fallback up to the nine cards KV has](https://github.com/ChadFarrow/candr.space/pull/25)
 - [#11 Add the chapter and transcript generator](https://github.com/ChadFarrow/candr.space/pull/11)
 
 ## HGH-checker
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-10 18:59 UTC*
+*Last synced: 2026-08-11 01:52 UTC*

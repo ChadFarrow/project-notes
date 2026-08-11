@@ -77,7 +77,6 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-- `fix/data-dir-writable`
 - `main`
 
 ## LIT_Bot
@@ -103,6 +102,7 @@
 
 ## boostmebitch
 
+- `claude/npubs-txt-field-0a8ncy`
 - `claude/spark-wallet-nostr-backup-ycm7gt`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -123,10 +123,11 @@
 
 - `chapterize-tool`
 - `main`
+- `worktree-sync-resources-fallback`
 
 ## HGH-checker
 
 - `master`
 
 ---
-*Last synced: 2026-08-10 18:59 UTC*
+*Last synced: 2026-08-11 01:53 UTC*
