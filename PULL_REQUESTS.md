@@ -85,7 +85,7 @@
 
 ## chadf-landing-page
 
-*No open pull requests*
+- [#5 Support multiple co-hosted shows in podcast section](https://github.com/ChadFarrow/chadf-landing-page/pull/5)
 
 ## boostmebitch
 
@@ -110,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-11 07:10 UTC*
+*Last synced: 2026-08-11 13:09 UTC*

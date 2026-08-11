@@ -1,11 +1,12 @@
-# Cross-repo audit — 2026-08-11 07:10 UTC
+# Cross-repo audit — 2026-08-11 13:09 UTC
 
 ## Open pull requests
 
+- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 3 hours ago by ChadFarrow
 - [ ] **MSP-2.0 #98** — Explain the pub date convention in the Pub Date help text · opened 1 day ago by ChadFarrow
 - [ ] **MSP-2.0-Desktop-App #35** — Sync updates from web repo · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 1 day ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 2 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 3 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 22 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 26 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
