@@ -1,12 +1,12 @@
-# Cross-repo audit — 2026-08-12 02:05 UTC
+# Cross-repo audit — 2026-08-12 07:27 UTC
 
 ## Open pull requests
 
-- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 16 hours ago by ChadFarrow
+- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 21 hours ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 3 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 23 days ago by ChadFarrow
-- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 26 days ago by ChadFarrow
+- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 27 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
@@ -32,6 +32,7 @@
 
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `MSP-2.0` — `FAFO`
+- [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
 - [ ] `candr.space` — `claude/mobile-player-layout-squished-94rbj3`
 - [ ] `boostmebitch` — `claude/npubs-txt-field-0a8ncy`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
