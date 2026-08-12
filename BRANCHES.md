@@ -92,6 +92,7 @@
 
 ## stablekraft-app
 
+- `claude/cross-app-favorites-sync-kp8sgd`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -102,6 +103,7 @@
 
 ## boostmebitch
 
+- `claude/cross-app-favorites-sync-kp8sgd`
 - `claude/npubs-txt-field-0a8ncy`
 - `claude/spark-wallet-nostr-backup-ycm7gt`
 - `feat/libre-wallet-embed`
@@ -130,4 +132,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-12 07:27 UTC*
+*Last synced: 2026-08-12 13:13 UTC*

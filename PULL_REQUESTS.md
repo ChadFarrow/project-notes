@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#163 Share favorites across apps via one NIP-51 list](https://github.com/ChadFarrow/boostmebitch/pull/163)
 - [#160 Republish a local signer's Spark backup when the relays have none](https://github.com/ChadFarrow/boostmebitch/pull/160)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -109,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-12 07:27 UTC*
+*Last synced: 2026-08-12 13:13 UTC*

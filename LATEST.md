@@ -1,10 +1,11 @@
-# Cross-repo audit — 2026-08-12 07:27 UTC
+# Cross-repo audit — 2026-08-12 13:13 UTC
 
 ## Open pull requests
 
-- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 21 hours ago by ChadFarrow
+- [ ] **boostmebitch #163** — Share favorites across apps via one NIP-51 list · opened 2 hours ago by ChadFarrow
+- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 3 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 4 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 23 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 27 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -35,13 +36,14 @@
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
 - [ ] `candr.space` — `claude/mobile-player-layout-squished-94rbj3`
 - [ ] `boostmebitch` — `claude/npubs-txt-field-0a8ncy`
+- [ ] `stablekraft-app` — `claude/cross-app-favorites-sync-kp8sgd`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
+- [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
 - [ ] `localbitcoiners` — `docs/claude-local-dev`
 - [ ] `RSS-music-site-template` — `claude/clone-repository-2O3bN`
 - [ ] `is-this-thing-on` — `claude/pull-latest-changes-MyBtZ`
-- [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
 
 ## Repos with no push in 180+ days (archive candidates)
 
