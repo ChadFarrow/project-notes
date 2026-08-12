@@ -1,12 +1,11 @@
-# Cross-repo audit — 2026-08-12 13:13 UTC
+# Cross-repo audit — 2026-08-12 19:03 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #163** — Share favorites across apps via one NIP-51 list · opened 2 hours ago by ChadFarrow
 - [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 2 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 4 days ago by ReedBTC
-- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 23 days ago by ChadFarrow
+- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 24 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 27 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
@@ -18,9 +17,11 @@
 
 ## Open issues
 
+- [ ] **boostmebitch #166** — A degraded relay read renders as an empty favorites list, with no way to tell it apart from "your favorites are gone" · opened 1 hour ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #190** — Album favorite is saved and listed but its heart renders unfilled · opened 1 hour ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 17 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 18 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 24 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 19 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #129** — queue · opened 25 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
@@ -31,13 +32,14 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/cross-app-favorites-sync-kp8sgd`
+- [ ] `boostmebitch` — `claude/npubs-txt-field-0a8ncy`
+- [ ] `stablekraft-app` — `claude/cross-app-favorites-sync-kp8sgd`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `MSP-2.0` — `FAFO`
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
 - [ ] `candr.space` — `claude/mobile-player-layout-squished-94rbj3`
-- [ ] `boostmebitch` — `claude/npubs-txt-field-0a8ncy`
-- [ ] `stablekraft-app` — `claude/cross-app-favorites-sync-kp8sgd`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
