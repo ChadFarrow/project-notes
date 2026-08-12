@@ -6,18 +6,12 @@
 
 ## MSP-2.0
 
-- [#104 Catch curly and pre-encoded apostrophes in feed URLs](https://github.com/ChadFarrow/MSP-2.0/pull/104)
-- [#103 Stop deleting publisher tags the parser can't model](https://github.com/ChadFarrow/MSP-2.0/pull/103)
-- [#102 Fetch self-hosted feeds instead of 403ing them](https://github.com/ChadFarrow/MSP-2.0/pull/102)
-- [#101 Extract feedProbe's safe fetch mechanism into a shared module](https://github.com/ChadFarrow/MSP-2.0/pull/101)
-- [#100 Fetch self-hosted feeds and stop eating publisher tags](https://github.com/ChadFarrow/MSP-2.0/pull/100)
-- [#98 Explain the pub date convention in the Pub Date help text](https://github.com/ChadFarrow/MSP-2.0/pull/98)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ## MSP-2.0-Desktop-App
 
-- [#35 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/35)
+*No open pull requests*
 
 ## musicL-playlist-updater
 
@@ -115,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-11 19:03 UTC*
+*Last synced: 2026-08-12 02:05 UTC*

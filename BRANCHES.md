@@ -7,14 +7,7 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/apostrophe-url-warning`
-- `claude/extract-safe-fetch`
 - `claude/feeds-demu-template-hf5tyk`
-- `claude/msp-publisher-feed-import-bug-txayql`
-- `claude/proxy-feed-no-allowlist`
-- `claude/publisher-feed-xml-issues-tqfbnw`
-- `claude/publisher-tag-round-trip`
-- `docs/pubdate-help-text`
 - `master`
 - `new-onboarding-v2`
 
@@ -136,4 +129,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-11 19:03 UTC*
+*Last synced: 2026-08-12 02:05 UTC*
