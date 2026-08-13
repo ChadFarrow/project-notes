@@ -14,6 +14,8 @@
 
 ## MSP-2.0-Desktop-App
 
+- `claude/release-on-tags-only`
+- `claude/trim-playwright-artifact-retention`
 - `master` 🔒
 - `sync-upstream`
 
@@ -130,4 +132,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-13 07:37 UTC*
+*Last synced: 2026-08-13 13:15 UTC*
