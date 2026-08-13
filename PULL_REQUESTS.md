@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#168 Resolve favorited episodes from their feed, not only Podcast Index](https://github.com/ChadFarrow/boostmebitch/pull/168)
 - [#160 Republish a local signer's Spark backup when the relays have none](https://github.com/ChadFarrow/boostmebitch/pull/160)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -109,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-12 19:03 UTC*
+*Last synced: 2026-08-13 02:07 UTC*

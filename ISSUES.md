@@ -85,7 +85,6 @@
 ## stablekraft-app
 
 ### Open
-- [#190 Album favorite is saved and listed but its heart renders unfilled](https://github.com/ChadFarrow/stablekraft-app/issues/190)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
@@ -96,7 +95,7 @@
 ## boostmebitch
 
 ### Open
-- [#166 A degraded relay read renders as an empty favorites list, with no way to tell it apart from "your favorites are gone"](https://github.com/ChadFarrow/boostmebitch/issues/166)
+- [#167 A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite](https://github.com/ChadFarrow/boostmebitch/issues/167)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
 ## web-ui
@@ -116,4 +115,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-12 19:03 UTC*
+*Last synced: 2026-08-13 02:07 UTC*

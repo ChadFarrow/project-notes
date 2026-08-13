@@ -38,6 +38,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
 - [pc20-clips](https://github.com/ChadFarrow/pc20-clips) - Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips *(NEW)*
 - [pc20-timeline](https://github.com/ChadFarrow/pc20-timeline) -  *(NEW)*
 - [blup](https://github.com/ChadFarrow/blup) -  *(NEW)*
