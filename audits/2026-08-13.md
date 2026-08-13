@@ -1,8 +1,8 @@
-# Cross-repo audit — 2026-08-13 13:15 UTC
+# Cross-repo audit — 2026-08-13 13:58 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #168** — Resolve favorited episodes from their feed, not only Podcast Index · opened 13 hours ago by ChadFarrow
+- [ ] **boostmebitch #168** — Resolve favorited episodes from their feed, not only Podcast Index · opened 14 hours ago by ChadFarrow
 - [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 3 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 5 days ago by ReedBTC
@@ -19,7 +19,7 @@
 ## Open issues
 
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 11 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 14 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 15 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 19 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 25 days ago by ChadFarrow (0 comments)
@@ -33,14 +33,17 @@
 
 ## Branches with no open PR
 
-- [ ] `PC20-Nostr` — `spec/aggregate-eose-is-not-an-answer`
-- [ ] `PC20-Nostr` — `spec/medium-hint-position-4`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
+- [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
+- [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
 - [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `MSP-2.0` — `FAFO`
+- [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
+- [ ] `PC20-Nostr` — `spec/aggregate-eose-is-not-an-answer`
+- [ ] `PC20-Nostr` — `spec/medium-hint-position-4`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `candr.space` — `claude/mobile-player-layout-squished-94rbj3`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`

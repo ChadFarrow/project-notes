@@ -8,6 +8,7 @@
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
+- `claude/high-usage-fix-2rkv2j`
 - `docs/sync-and-ci-notes`
 - `master`
 - `new-onboarding-v2`
@@ -15,6 +16,8 @@
 ## MSP-2.0-Desktop-App
 
 - `claude/release-on-tags-only`
+- `claude/restore-release-on-master-push`
+- `claude/skip-duplicate-test-runs`
 - `claude/trim-playwright-artifact-retention`
 - `master` 🔒
 - `sync-upstream`
@@ -132,4 +135,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-13 13:15 UTC*
+*Last synced: 2026-08-13 13:58 UTC*
