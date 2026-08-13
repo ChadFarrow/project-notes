@@ -85,6 +85,7 @@
 ## stablekraft-app
 
 ### Open
+- [#201 background art switches to stock art](https://github.com/ChadFarrow/stablekraft-app/issues/201)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
@@ -115,4 +116,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-13 02:07 UTC*
+*Last synced: 2026-08-13 07:36 UTC*

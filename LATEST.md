@@ -1,13 +1,13 @@
-# Cross-repo audit — 2026-08-13 02:07 UTC
+# Cross-repo audit — 2026-08-13 07:37 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #168** — Resolve favorited episodes from their feed, not only Podcast Index · opened 2 hours ago by ChadFarrow
+- [ ] **boostmebitch #168** — Resolve favorited episodes from their feed, not only Podcast Index · opened 7 hours ago by ChadFarrow
 - [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 3 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 4 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 24 days ago by ChadFarrow
-- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 27 days ago by ChadFarrow
+- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 28 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
@@ -18,7 +18,8 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 3 hours ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 5 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 8 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 19 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 25 days ago by ChadFarrow (0 comments)
