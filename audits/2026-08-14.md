@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-14 13:10 UTC
+# Cross-repo audit — 2026-08-14 18:56 UTC
 
 ## Open pull requests
 
@@ -6,10 +6,10 @@
 - [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 4 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 6 days ago by ReedBTC
-- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 25 days ago by ChadFarrow
+- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 26 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 29 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
-- [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 1 month ago by ChadFarrow
+- [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **IRL_QR #19** — Replace payment feed with configurable multi-QR code grid · opened 5 months ago by ChadFarrow
 - [ ] **HPM-Lightning #2** — Fix React Server Components CVE vulnerabilities _(draft)_ · opened 8 months ago by vercel[bot]
@@ -18,11 +18,12 @@
 
 ## Open issues
 
+- [ ] **boostmebitch #176** — Verify NWC socket-leak fix + Fountain LNURL metadata (test checklist) · opened 2 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 19 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 20 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 26 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 21 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #129** — queue · opened 27 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
@@ -33,11 +34,15 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/fountain-lnurl-payments-jufohp`
+- [ ] `boostmebitch` — `claude/kind-10333-usage-audit-fyfiww`
+- [ ] `boostmebitch` — `claude/mobile-friendliness-regression-e7c3x7`
+- [ ] `boostmebitch` — `claude/nwc-connection-lifecycle`
+- [ ] `boostmebitch` — `claude/nwc-indeterminate`
+- [ ] `boostmebitch` — `claude/pr-template`
 - [ ] `stablekraft-app` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `PC20-Nostr` — `claude/kind-10333-usage-audit-fyfiww`
-- [ ] `boostmebitch` — `claude/kind-10333-usage-audit-fyfiww`
-- [ ] `boostmebitch` — `claude/mobile-friendliness-regression-e7c3x7`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
