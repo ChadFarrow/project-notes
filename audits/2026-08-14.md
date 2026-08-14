@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-14 07:26 UTC
+# Cross-repo audit — 2026-08-14 13:10 UTC
 
 ## Open pull requests
 
 - [ ] **boostmebitch #168** — Resolve favorited episodes from their feed, not only Podcast Index · opened 1 day ago by ChadFarrow
-- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 2 days ago by ChadFarrow
+- [ ] **chadf-landing-page #5** — Support multiple co-hosted shows in podcast section · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #160** — Republish a local signer's Spark backup when the relays have none · opened 4 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 5 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 6 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 25 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 29 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -33,9 +33,9 @@
 
 ## Branches with no open PR
 
-- [ ] `PC20-Nostr` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
+- [ ] `PC20-Nostr` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `boostmebitch` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `boostmebitch` — `claude/mobile-friendliness-regression-e7c3x7`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
