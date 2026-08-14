@@ -97,6 +97,7 @@
 
 ## stablekraft-app
 
+- `claude/kind-10333-usage-audit-fyfiww`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -107,6 +108,8 @@
 
 ## boostmebitch
 
+- `claude/kind-10333-usage-audit-fyfiww`
+- `claude/mobile-friendliness-regression-e7c3x7`
 - `claude/spark-wallet-nostr-backup-ycm7gt`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -135,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-13 19:04 UTC*
+*Last synced: 2026-08-14 02:05 UTC*
