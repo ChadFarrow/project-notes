@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-15 01:20 UTC
+# Cross-repo audit — 2026-08-15 06:40 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 56 minutes ago by ChadFarrow
+- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 6 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator · opened 6 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 26 days ago by ChadFarrow
-- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 29 days ago by ChadFarrow
+- [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
@@ -16,7 +16,7 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 1 day ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 20 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 21 days ago by ChadFarrow (1 comments)
