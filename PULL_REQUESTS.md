@@ -84,12 +84,11 @@
 
 ## chadf-landing-page
 
-- [#5 Support multiple co-hosted shows in podcast section](https://github.com/ChadFarrow/chadf-landing-page/pull/5)
+*No open pull requests*
 
 ## boostmebitch
 
-- [#168 Resolve favorited episodes from their feed, not only Podcast Index](https://github.com/ChadFarrow/boostmebitch/pull/168)
-- [#160 Republish a local signer's Spark backup when the relays have none](https://github.com/ChadFarrow/boostmebitch/pull/160)
+- [#181 Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for](https://github.com/ChadFarrow/boostmebitch/pull/181)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-14 18:56 UTC*
+*Last synced: 2026-08-15 01:19 UTC*

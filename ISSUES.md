@@ -96,7 +96,6 @@
 ## boostmebitch
 
 ### Open
-- [#176 Verify NWC socket-leak fix + Fountain LNURL metadata (test checklist)](https://github.com/ChadFarrow/boostmebitch/issues/176)
 - [#167 A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite](https://github.com/ChadFarrow/boostmebitch/issues/167)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
@@ -117,4 +116,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-14 18:56 UTC*
+*Last synced: 2026-08-15 01:19 UTC*

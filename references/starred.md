@@ -25,6 +25,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podping-gossipwriter](https://github.com/Podcastindex-org/podping-gossipwriter) - The iroh p2p gossip writer module for podping.cloud.
 - [podping-monitor](https://github.com/Podcastindex-org/podping-monitor) - A monitor and swarm manager for the podping gossip network.
 - [podping](https://github.com/Podcastindex-org/podping) - A global message bus for podcast feed events.
 - [podping-hivewriter](https://github.com/Podcastindex-org/podping-hivewriter) - The hive writer component of podping.
@@ -100,4 +101,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-14 18:56 UTC*
+*Last synced: 2026-08-15 01:20 UTC*

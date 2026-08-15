@@ -103,21 +103,14 @@
 
 ## chadf-landing-page
 
-- `claude/podcast-appearance-list-rbk279`
 - `main`
 
 ## boostmebitch
 
-- `claude/fountain-lnurl-payments-jufohp`
-- `claude/kind-10333-usage-audit-fyfiww`
 - `claude/mobile-friendliness-regression-e7c3x7`
-- `claude/nwc-connection-lifecycle`
-- `claude/nwc-indeterminate`
-- `claude/pr-template`
-- `claude/spark-wallet-nostr-backup-ycm7gt`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
-- `fix/resolve-episodes-via-feed-url`
+- `fix/spark-backup-assert`
 - `main`
 
 ## web-ui
@@ -142,4 +135,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-14 18:56 UTC*
+*Last synced: 2026-08-15 01:20 UTC*
