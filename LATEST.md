@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-08-15 06:40 UTC
+# Cross-repo audit — 2026-08-15 12:40 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 6 hours ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 6 days ago by ReedBTC
+- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 12 hours ago by ChadFarrow
+- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 7 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 26 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
