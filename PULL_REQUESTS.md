@@ -102,6 +102,7 @@
 
 ## candr.space
 
+- [#29 Make a search hit readable](https://github.com/ChadFarrow/candr.space/pull/29)
 - [#11 Add the chapter and transcript generator](https://github.com/ChadFarrow/candr.space/pull/11)
 
 ## HGH-checker
@@ -109,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-15 12:40 UTC*
+*Last synced: 2026-08-15 18:31 UTC*

@@ -127,7 +127,7 @@
 ## candr.space
 
 - `chapterize-tool`
-- `claude/mobile-player-layout-squished-94rbj3`
+- `claude/transcript-hit-contrast`
 - `main`
 
 ## HGH-checker
@@ -135,4 +135,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-15 12:40 UTC*
+*Last synced: 2026-08-15 18:31 UTC*

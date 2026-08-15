@@ -1,9 +1,10 @@
-# Cross-repo audit — 2026-08-15 12:40 UTC
+# Cross-repo audit — 2026-08-15 18:31 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 12 hours ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator · opened 7 days ago by ReedBTC
+- [ ] **candr.space #29** — Make a search hit readable · opened 1 minute ago by ChadFarrow
+- [ ] **boostmebitch #181** — Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for · opened 18 hours ago by ChadFarrow
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 7 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 26 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -19,12 +20,12 @@
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 20 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 21 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 27 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 22 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #129** — queue · opened 28 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
-- [ ] **lnaddress-music #4** — BoostBox · opened 5 months ago by ChadFarrow (0 comments)
+- [ ] **lnaddress-music #4** — BoostBox · opened 6 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #21** — Make feed layout match the DeMu template. · opened 6 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #13** — Support <podcast:category> - RFC · opened 6 months ago by Kolomona (0 comments)
 - [ ] **RSS-music-site-template #1** — Feed deletion · opened 8 months ago by ChadFarrow (0 comments)
@@ -43,7 +44,6 @@
 - [ ] `MSP-2.0` — `FAFO`
 - [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
-- [ ] `candr.space` — `claude/mobile-player-layout-squished-94rbj3`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
