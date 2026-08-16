@@ -88,7 +88,6 @@
 
 ## boostmebitch
 
-- [#181 Put the Spark backup's zero-relay assert in the wrapper, and name the event we asked for](https://github.com/ChadFarrow/boostmebitch/pull/181)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -102,7 +101,6 @@
 
 ## candr.space
 
-- [#29 Make a search hit readable](https://github.com/ChadFarrow/candr.space/pull/29)
 - [#11 Add the chapter and transcript generator](https://github.com/ChadFarrow/candr.space/pull/11)
 
 ## HGH-checker
@@ -110,4 +108,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-15 18:31 UTC*
+*Last synced: 2026-08-16 01:24 UTC*

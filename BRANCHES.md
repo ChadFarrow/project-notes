@@ -107,10 +107,9 @@
 
 ## boostmebitch
 
-- `claude/mobile-friendliness-regression-e7c3x7`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
-- `fix/spark-backup-assert`
+- `hardening/review-pass`
 - `main`
 
 ## web-ui
@@ -127,7 +126,6 @@
 ## candr.space
 
 - `chapterize-tool`
-- `claude/transcript-hit-contrast`
 - `main`
 
 ## HGH-checker
@@ -135,4 +133,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-15 18:31 UTC*
+*Last synced: 2026-08-16 01:25 UTC*
