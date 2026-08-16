@@ -107,9 +107,9 @@
 
 ## boostmebitch
 
+- `claude/bmb-boost-error-v50u78`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
-- `hardening/review-pass`
 - `main`
 
 ## web-ui
@@ -133,4 +133,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-16 01:25 UTC*
+*Last synced: 2026-08-16 06:41 UTC*

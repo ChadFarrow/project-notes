@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-16 01:25 UTC
+# Cross-repo audit — 2026-08-16 06:41 UTC
 
 ## Open pull requests
 
@@ -15,7 +15,7 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 2 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 22 days ago by ChadFarrow (1 comments)
@@ -30,7 +30,7 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `hardening/review-pass`
+- [ ] `boostmebitch` — `claude/bmb-boost-error-v50u78`
 - [ ] `stablekraft-app` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `PC20-Nostr` — `claude/kind-10333-usage-audit-fyfiww`
