@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-08-16 12:42 UTC
+# Cross-repo audit — 2026-08-16 18:31 UTC
 
 ## Open pull requests
 
+- [ ] **PC20-Nostr #13** — Recipes a stranger's agent can install, sourced only from live sites · opened 12 minutes ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 8 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 27 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,8 +19,8 @@
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 21 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 22 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 28 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 23 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #129** — queue · opened 29 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
@@ -30,18 +31,17 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `claude/bmb-boost-error-v50u78`
 - [ ] `stablekraft-app` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
-- [ ] `PC20-Nostr` — `claude/kind-10333-usage-audit-fyfiww`
+- [ ] `MSP-2.0` — `FAFO`
+- [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
+- [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
+- [ ] `boostmebitch` — `claude/bmb-boost-error-v50u78`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
 - [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
-- [ ] `MSP-2.0` — `FAFO`
-- [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
-- [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
