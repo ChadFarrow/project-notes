@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-17 01:22 UTC
+# Cross-repo audit — 2026-08-17 06:58 UTC
 
 ## Open pull requests
 
@@ -15,7 +15,7 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 3 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 22 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 23 days ago by ChadFarrow (1 comments)
@@ -30,17 +30,17 @@
 
 ## Branches with no open PR
 
+- [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
+- [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
+- [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
+- [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
+- [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `stablekraft-app` — `claude/kind-10333-usage-audit-fyfiww`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0` — `FAFO`
 - [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
 - [ ] `boostmebitch` — `claude/bmb-boost-error-v50u78`
-- [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
-- [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
-- [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
-- [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
-- [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
