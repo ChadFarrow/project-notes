@@ -1,8 +1,8 @@
-# Cross-repo audit — 2026-08-17 06:58 UTC
+# Cross-repo audit — 2026-08-17 12:47 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 8 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 9 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 28 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
