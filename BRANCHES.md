@@ -7,6 +7,7 @@
 ## MSP-2.0
 
 - `FAFO`
+- `claude/asd-ste100-simplified-english-2lndpi`
 - `claude/feeds-demu-template-hf5tyk`
 - `claude/high-usage-fix-2rkv2j`
 - `docs/sync-and-ci-notes`
@@ -107,7 +108,7 @@
 
 ## boostmebitch
 
-- `claude/bmb-boost-error-v50u78`
+- `claude/clickable-show-notes-links-00mc12`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -133,4 +134,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-17 18:42 UTC*
+*Last synced: 2026-08-18 01:19 UTC*
