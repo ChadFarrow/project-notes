@@ -1,10 +1,10 @@
-# Cross-repo audit — 2026-08-18 18:40 UTC
+# Cross-repo audit — 2026-08-18 21:41 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #187** — feat(nostr): look up any npub's boosts, sent and received · opened 2 hours ago by ChadFarrow
+- [ ] **boostmebitch #187** — feat(nostr): look up any npub's boosts, sent and received · opened 5 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 10 days ago by ReedBTC
-- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 29 days ago by ChadFarrow
+- [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds · opened 2 months ago by ChadFarrow
@@ -18,7 +18,7 @@
 
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 5 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #175** — up date downloads UI · opened 23 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #175** — up date downloads UI · opened 24 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 25 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
