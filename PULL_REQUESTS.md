@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#187 feat(nostr): look up any npub's boosts, sent and received](https://github.com/ChadFarrow/boostmebitch/pull/187)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -108,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-18 12:50 UTC*
+*Last synced: 2026-08-18 18:40 UTC*

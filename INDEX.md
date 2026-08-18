@@ -38,10 +38,10 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
 - [pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) - A public reference for Podcasting 2.0 — the namespace, the payments, and the plumbing underneath. Built from an Obsidian vault. *(NEW)*
-- [pc20-clips](https://github.com/ChadFarrow/pc20-clips) - Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips *(NEW)*
 - [pc20-timeline](https://github.com/ChadFarrow/pc20-timeline) -  *(NEW)*
+- [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
+- [pc20-clips](https://github.com/ChadFarrow/pc20-clips) - Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips *(NEW)*
 - [blup](https://github.com/ChadFarrow/blup) -  *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [pc20-archive](https://github.com/ChadFarrow/pc20-archive) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 *(NEW)*
