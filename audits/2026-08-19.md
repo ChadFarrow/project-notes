@@ -1,8 +1,8 @@
-# Cross-repo audit — 2026-08-19 06:46 UTC
+# Cross-repo audit — 2026-08-19 12:50 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 10 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 11 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -30,8 +30,8 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `docs/npub-review-rules`
 - [ ] `pc20-wiki` — `claude/wiki-search-topics-ljj53w`
+- [ ] `boostmebitch` — `docs/npub-review-rules`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
