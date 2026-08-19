@@ -108,8 +108,7 @@
 
 ## boostmebitch
 
-- `claude/clickable-show-notes-links-00mc12`
-- `claude/search-npub-boosts-m0jxup`
+- `docs/npub-review-rules`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -135,4 +134,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-18 21:41 UTC*
+*Last synced: 2026-08-19 01:20 UTC*
