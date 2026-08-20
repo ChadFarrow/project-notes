@@ -1,7 +1,10 @@
-# Cross-repo audit — 2026-08-20 12:53 UTC
+# Cross-repo audit — 2026-08-20 18:41 UTC
 
 ## Open pull requests
 
+- [ ] **boostmebitch #191** — feat(live): favorite the songs a live show plays · opened 3 hours ago by ChadFarrow
+- [ ] **boostmebitch #190** — feat(android): ship Boost Me Bitch on Zapstore as a Trusted Web Activity _(draft)_ · opened 3 hours ago by ChadFarrow
+- [ ] **boostmebitch #189** — feat(favorites): give favorites their own page · opened 5 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 12 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,7 +21,7 @@
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 25 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 26 days ago by ChadFarrow (1 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 27 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
