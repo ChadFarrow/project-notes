@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-20 01:19 UTC
+# Cross-repo audit — 2026-08-20 06:49 UTC
 
 ## Open pull requests
 
@@ -15,7 +15,7 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 25 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 26 days ago by ChadFarrow (1 comments)
