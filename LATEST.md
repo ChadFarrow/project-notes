@@ -1,9 +1,8 @@
-# Cross-repo audit — 2026-08-21 06:50 UTC
+# Cross-repo audit — 2026-08-21 12:51 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #190** — feat(android): ship Boost Me Bitch on Zapstore as a Trusted Web Activity _(draft)_ · opened 16 hours ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 12 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 13 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -16,7 +15,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #192** — UI bug · opened 11 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #192** — UI bug · opened 17 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 26 days ago by ChadFarrow (0 comments)
@@ -32,8 +31,8 @@
 
 ## Branches with no open PR
 
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `docs/npub-review-rules`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
