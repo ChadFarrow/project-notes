@@ -1,9 +1,8 @@
-# Cross-repo audit — 2026-08-21 01:24 UTC
+# Cross-repo audit — 2026-08-21 06:50 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #191** — feat(live): favorite the songs a live show plays · opened 9 hours ago by ChadFarrow
-- [ ] **boostmebitch #190** — feat(android): ship Boost Me Bitch on Zapstore as a Trusted Web Activity _(draft)_ · opened 10 hours ago by ChadFarrow
+- [ ] **boostmebitch #190** — feat(android): ship Boost Me Bitch on Zapstore as a Trusted Web Activity _(draft)_ · opened 16 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 12 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -17,8 +16,8 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #192** — UI bug · opened 5 hours ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 7 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #192** — UI bug · opened 11 hours ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 26 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 27 days ago by ChadFarrow (1 comments)
@@ -33,13 +32,13 @@
 
 ## Branches with no open PR
 
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `docs/npub-review-rules`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
 - [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0` — `FAFO`
 - [ ] `MSP-2.0` — `claude/asd-ste100-simplified-english-2lndpi`
 - [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`

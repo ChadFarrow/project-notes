@@ -108,7 +108,6 @@
 ## boostmebitch
 
 - `claude/boostmebitch-zap-store-6e4hww`
-- `claude/favorites-live-shows-io9anp`
 - `docs/npub-review-rules`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -135,4 +134,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-21 01:24 UTC*
+*Last synced: 2026-08-21 06:50 UTC*

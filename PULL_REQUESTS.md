@@ -88,7 +88,6 @@
 
 ## boostmebitch
 
-- [#191 feat(live): favorite the songs a live show plays](https://github.com/ChadFarrow/boostmebitch/pull/191)
 - [#190 feat(android): ship Boost Me Bitch on Zapstore as a Trusted Web Activity](https://github.com/ChadFarrow/boostmebitch/pull/190)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -110,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-21 01:23 UTC*
+*Last synced: 2026-08-21 06:50 UTC*
