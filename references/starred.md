@@ -25,6 +25,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [BoostBots](https://github.com/valcanobacon/BoostBots) - Bots which posts Booots
 - [podcasting2.org](https://github.com/theDanielJLewis/podcasting2.org) - No description
 - [onlyboosts](https://github.com/ReedBTC/onlyboosts) - A nostr client of only podcasting 2.0 boosts with stats, social features and podcasts. 
 - [podping-gossipwriter](https://github.com/Podcastindex-org/podping-gossipwriter) - The iroh p2p gossip writer module for podping.cloud.
@@ -103,4 +104,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-20 18:41 UTC*
+*Last synced: 2026-08-21 01:24 UTC*
