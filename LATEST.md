@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-08-22 01:19 UTC
+# Cross-repo audit — 2026-08-22 06:42 UTC
 
 ## Open pull requests
 
+- [ ] **PC20-Nostr #19** — A private half is optional to support and mandatory to carry · opened 3 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 13 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -16,7 +17,7 @@
 ## Open issues
 
 - [ ] **boostmebitch #192** — UI bug · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 8 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 27 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 28 days ago by ChadFarrow (1 comments)
@@ -31,7 +32,6 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `docs/npub-review-rules`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`

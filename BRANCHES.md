@@ -107,7 +107,6 @@
 
 ## boostmebitch
 
-- `docs/npub-review-rules`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -133,4 +132,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-22 01:19 UTC*
+*Last synced: 2026-08-22 06:42 UTC*
