@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-08-22 06:42 UTC
+# Cross-repo audit — 2026-08-22 12:41 UTC
 
 ## Open pull requests
 
-- [ ] **PC20-Nostr #19** — A private half is optional to support and mandatory to carry · opened 3 hours ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 13 days ago by ReedBTC
+- [ ] **PC20-Nostr #19** — A private half is optional to support and mandatory to carry · opened 9 hours ago by ChadFarrow
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 14 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
