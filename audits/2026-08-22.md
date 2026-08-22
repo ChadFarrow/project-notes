@@ -1,8 +1,8 @@
-# Cross-repo audit — 2026-08-22 12:41 UTC
+# Cross-repo audit — 2026-08-22 18:32 UTC
 
 ## Open pull requests
 
-- [ ] **PC20-Nostr #19** — A private half is optional to support and mandatory to carry · opened 9 hours ago by ChadFarrow
+- [ ] **boostmebitch #216** — fix(nwc): the NWC backup could never reach Amber — the connection string's own `?` killed it · opened 5 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 14 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -20,7 +20,7 @@
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 27 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 28 days ago by ChadFarrow (1 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 29 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
@@ -32,6 +32,8 @@
 
 ## Branches with no open PR
 
+- [ ] `PC20-Nostr` — `claude/asd-ste100-simplified-english-2lndpi`
+- [ ] `boostmebitch` — `claude/keysend-lnurl-fallback-bxfjab`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
@@ -42,7 +44,6 @@
 - [ ] `MSP-2.0` — `claude/asd-ste100-simplified-english-2lndpi`
 - [ ] `MSP-2.0` — `claude/high-usage-fix-2rkv2j`
 - [ ] `MSP-2.0` — `docs/sync-and-ci-notes`
-- [ ] `PC20-Nostr` — `claude/asd-ste100-simplified-english-2lndpi`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
