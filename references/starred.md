@@ -46,6 +46,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [napstr](https://github.com/lnbits/napstr) - No description
 - [hanami](https://github.com/Letdown2491/hanami) - No description
 - [go](https://github.com/getAlby/go) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub.
 - [pxpipe](https://github.com/teamchong/pxpipe) - cut Claude Code token usage by rendering text context as images
@@ -104,4 +105,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-21 18:38 UTC*
+*Last synced: 2026-08-22 01:19 UTC*
