@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-23 12:42 UTC
+# Cross-repo audit — 2026-08-23 18:32 UTC
 
 ## Open pull requests
 
@@ -19,7 +19,7 @@
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 28 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 29 days ago by ChadFarrow (1 comments)
+- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #129** — queue · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
