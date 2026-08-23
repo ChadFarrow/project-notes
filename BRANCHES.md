@@ -107,8 +107,7 @@
 
 ## boostmebitch
 
-- `claude/keysend-lnurl-fallback-bxfjab`
-- `claude/nwc-backup-apk-amber-79rux8`
+- `claude/ios-safari-favorites-mute-jhvbj9`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -134,4 +133,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-23 06:43 UTC*
+*Last synced: 2026-08-23 12:42 UTC*

@@ -1,10 +1,8 @@
-# Cross-repo audit — 2026-08-23 06:43 UTC
+# Cross-repo audit — 2026-08-23 12:42 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #218** — fix(keysend): remember a target that does not pay, and widen the refusal retry · opened 11 hours ago by ChadFarrow
-- [ ] **boostmebitch #216** — fix(nwc): the NWC backup could never reach Amber — the connection string's own `?` killed it · opened 17 hours ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 14 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 15 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -33,6 +31,7 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/ios-safari-favorites-mute-jhvbj9`
 - [ ] `PC20-Nostr` — `claude/asd-ste100-simplified-english-2lndpi`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
