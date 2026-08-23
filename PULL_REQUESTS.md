@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#218 fix(keysend): remember a target that does not pay, and widen the refusal retry](https://github.com/ChadFarrow/boostmebitch/pull/218)
 - [#216 fix(nwc): the NWC backup could never reach Amber — the connection string's own `?` killed it](https://github.com/ChadFarrow/boostmebitch/pull/216)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -109,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-22 18:32 UTC*
+*Last synced: 2026-08-23 01:26 UTC*
