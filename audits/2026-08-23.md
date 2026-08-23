@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-08-23 01:26 UTC
+# Cross-repo audit — 2026-08-23 06:43 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #218** — fix(keysend): remember a target that does not pay, and widen the refusal retry · opened 6 hours ago by ChadFarrow
-- [ ] **boostmebitch #216** — fix(nwc): the NWC backup could never reach Amber — the connection string's own `?` killed it · opened 11 hours ago by ChadFarrow
+- [ ] **boostmebitch #218** — fix(keysend): remember a target that does not pay, and widen the refusal retry · opened 11 hours ago by ChadFarrow
+- [ ] **boostmebitch #216** — fix(nwc): the NWC backup could never reach Amber — the connection string's own `?` killed it · opened 17 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 14 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,7 +18,7 @@
 ## Open issues
 
 - [ ] **boostmebitch #192** — UI bug · opened 2 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 9 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 28 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 29 days ago by ChadFarrow (1 comments)
