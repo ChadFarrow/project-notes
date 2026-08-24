@@ -98,6 +98,7 @@
 
 ## stablekraft-app
 
+- `claude/carry-favorites-content`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -107,8 +108,9 @@
 
 ## boostmebitch
 
-- `claude/ios-safari-favorites-mute-jhvbj9`
+- `claude/review-branch-pr-ejho8z`
 - `feat/libre-wallet-embed`
+- `feat/private-favorites`
 - `feature/inbox-listen-queue`
 - `main`
 
@@ -133,4 +135,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-23 18:32 UTC*
+*Last synced: 2026-08-24 01:24 UTC*

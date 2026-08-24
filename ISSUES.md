@@ -96,7 +96,6 @@
 ## boostmebitch
 
 ### Open
-- [#192 UI bug](https://github.com/ChadFarrow/boostmebitch/issues/192)
 - [#167 A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite](https://github.com/ChadFarrow/boostmebitch/issues/167)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
@@ -117,4 +116,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-23 18:31 UTC*
+*Last synced: 2026-08-24 01:23 UTC*
