@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-24 01:24 UTC
+# Cross-repo audit — 2026-08-24 07:01 UTC
 
 ## Open pull requests
 
-- [ ] **PC20-Nostr #21** — Make the `content` carry normative, and say how a baseline handles two halves · opened 33 minutes ago by ChadFarrow
-- [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 33 minutes ago by ChadFarrow
-- [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 1 hour ago by ChadFarrow
-- [ ] **boostmebitch #222** — Private favorites: carry `content`, and a public/private/off choice · opened 2 hours ago by ChadFarrow
+- [ ] **PC20-Nostr #21** — Make the `content` carry normative, and say how a baseline handles two halves · opened 6 hours ago by ChadFarrow
+- [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 6 hours ago by ChadFarrow
+- [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 6 hours ago by ChadFarrow
+- [ ] **boostmebitch #222** — Private favorites: carry `content`, and a public/private/off choice · opened 8 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 15 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -19,7 +19,7 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #201** — background art switches to stock art · opened 10 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #201** — background art switches to stock art · opened 11 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 11 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 29 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
