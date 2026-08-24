@@ -58,7 +58,7 @@
 - [CLINK](https://github.com/shocknet/CLINK) - Common Lightning Interface for Nostr Keys
 - [start-tunnel](https://github.com/Start9Labs/start-tunnel) - Automated WireGuard VPN deployment tool for StartOS
 - [wisp-ios](https://github.com/barrydeen/wisp-ios) - No description
-- [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - In-browser map of the podroll ecosystem from the Podcast Index dataset.
+- [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - The Podroll ecosystem: who recommends whom in podcasting, mapped in your browser from the podcast:podroll recommendation tag. Static web app, no backend, no tracking.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
 - [zapstore](https://github.com/zapstore/zapstore) - The open app store
@@ -105,4 +105,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-24 07:01 UTC*
+*Last synced: 2026-08-24 12:53 UTC*
