@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-24 12:53 UTC
+# Cross-repo audit — 2026-08-24 18:42 UTC
 
 ## Open pull requests
 
-- [ ] **PC20-Nostr #21** — Make the `content` carry normative, and say how a baseline handles two halves · opened 12 hours ago by ChadFarrow
-- [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 12 hours ago by ChadFarrow
-- [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 12 hours ago by ChadFarrow
-- [ ] **boostmebitch #222** — Private favorites: carry `content`, and a public/private/off choice · opened 14 hours ago by ChadFarrow
+- [ ] **PC20-Nostr #21** — Make the `content` carry normative, and say how a baseline handles two halves · opened 17 hours ago by ChadFarrow
+- [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 17 hours ago by ChadFarrow
+- [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 18 hours ago by ChadFarrow
+- [ ] **boostmebitch #222** — Private favorites: carry `content`, and a public/private/off choice · opened 20 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 16 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
