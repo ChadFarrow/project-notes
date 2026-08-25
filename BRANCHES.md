@@ -108,6 +108,8 @@
 
 ## boostmebitch
 
+- `claude/new-relay-type-draft-6osmum`
+- `claude/nostr-database-setup-9xx388`
 - `claude/review-branch-pr-ejho8z`
 - `feat/libre-wallet-embed`
 - `feat/private-favorites`
@@ -135,4 +137,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-25 12:50 UTC*
+*Last synced: 2026-08-25 18:41 UTC*

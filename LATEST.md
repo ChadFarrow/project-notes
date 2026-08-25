@@ -1,7 +1,9 @@
-# Cross-repo audit — 2026-08-25 12:50 UTC
+# Cross-repo audit — 2026-08-25 18:41 UTC
 
 ## Open pull requests
 
+- [ ] **PC20-Nostr #22** — Value Playback Events: kinds 3369 / 33369 / 23369 for streaming-sats metadata · opened 36 minutes ago by ChadFarrow
+- [ ] **boostmebitch #228** — Add a Nostr read index so feeds and favorites load fast · opened 3 hours ago by ChadFarrow
 - [ ] **PC20-Nostr #21** — Make the `content` carry normative, and say how a baseline handles two halves · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 1 day ago by ChadFarrow
@@ -34,6 +36,7 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/new-relay-type-draft-6osmum`
 - [ ] `PC20-Nostr` — `claude/asd-ste100-simplified-english-2lndpi`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`

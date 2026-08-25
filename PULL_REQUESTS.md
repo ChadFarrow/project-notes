@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#228 Add a Nostr read index so feeds and favorites load fast](https://github.com/ChadFarrow/boostmebitch/pull/228)
 - [#223 Carry `content`, and give the list a private half behind a gate](https://github.com/ChadFarrow/boostmebitch/pull/223)
 - [#222 Private favorites: carry `content`, and a public/private/off choice](https://github.com/ChadFarrow/boostmebitch/pull/222)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-25 12:50 UTC*
+*Last synced: 2026-08-25 18:41 UTC*
