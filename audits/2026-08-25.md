@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-25 06:51 UTC
+# Cross-repo audit — 2026-08-25 12:50 UTC
 
 ## Open pull requests
 
@@ -6,7 +6,7 @@
 - [ ] **stablekraft-app #225** — Carry `content` on the shared favorites list instead of blanking it · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #223** — Carry `content`, and give the list a private half behind a gate · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #222** — Private favorites: carry `content`, and a public/private/off choice · opened 1 day ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 16 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 17 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
