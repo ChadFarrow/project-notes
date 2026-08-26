@@ -99,7 +99,10 @@
 ## stablekraft-app
 
 - `feature/genre-and-v4v-tags`
+- `fix/feed-column-loss-and-field-drift`
 - `main`
+- `perf/catalog-and-render`
+- `quality/lint-gate-dead-code-a11y`
 
 ## chadf-landing-page
 
@@ -133,4 +136,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-26 01:24 UTC*
+*Last synced: 2026-08-26 06:52 UTC*

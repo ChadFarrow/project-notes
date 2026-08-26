@@ -80,7 +80,9 @@
 
 ## stablekraft-app
 
-*No open pull requests*
+- [#232 Make the lint gate real, delete the dead code, name the unnamed buttons](https://github.com/ChadFarrow/stablekraft-app/pull/232)
+- [#231 Cut the catalog payload, and stop the audio clock re-rendering every page](https://github.com/ChadFarrow/stablekraft-app/pull/231)
+- [#230 Stop the silent Feed column loss, and give the album shape one definition](https://github.com/ChadFarrow/stablekraft-app/pull/230)
 
 ## chadf-landing-page
 
@@ -108,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-26 01:24 UTC*
+*Last synced: 2026-08-26 06:52 UTC*
