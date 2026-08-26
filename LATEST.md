@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-26 12:55 UTC
+# Cross-repo audit — 2026-08-26 19:49 UTC
 
 ## Open pull requests
 
-- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 8 hours ago by ChadFarrow
-- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 8 hours ago by ChadFarrow
-- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 9 hours ago by ChadFarrow
-- [ ] **PC20-Nostr #27** — Fourteen vectors nobody can run are fourteen vectors the next app learns by shipping · opened 10 hours ago by ChadFarrow
+- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 15 hours ago by ChadFarrow
+- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 15 hours ago by ChadFarrow
+- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 16 hours ago by ChadFarrow
+- [ ] **PC20-Nostr #27** — Fourteen vectors nobody can run are fourteen vectors the next app learns by shipping · opened 17 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 18 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -19,8 +19,8 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #240** — Add a selector to the search box to "search for" · opened 32 minutes ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #239** — Add option to reverse episode order · opened 33 minutes ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #240** — Add a selector to the search box to "search for" · opened 7 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #239** — Add option to reverse episode order · opened 7 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 13 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 13 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
@@ -36,8 +36,8 @@
 
 ## Branches with no open PR
 
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `feat/private-favorites`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
