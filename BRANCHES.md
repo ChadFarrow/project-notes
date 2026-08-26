@@ -98,7 +98,6 @@
 
 ## stablekraft-app
 
-- `claude/carry-favorites-content`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -108,9 +107,6 @@
 
 ## boostmebitch
 
-- `claude/new-relay-type-draft-6osmum`
-- `claude/nostr-database-setup-9xx388`
-- `claude/review-branch-pr-ejho8z`
 - `feat/libre-wallet-embed`
 - `feat/private-favorites`
 - `feature/inbox-listen-queue`
@@ -137,4 +133,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-25 18:41 UTC*
+*Last synced: 2026-08-26 01:24 UTC*

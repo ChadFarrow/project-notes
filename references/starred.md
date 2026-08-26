@@ -56,7 +56,7 @@
 - [haven-kit-startos](https://github.com/Letdown2491/haven-kit-startos) - HAVEN relay for StartOS
 - [wisp](https://github.com/barrydeen/wisp) - wee interface for scrolling posts
 - [CLINK](https://github.com/shocknet/CLINK) - Common Lightning Interface for Nostr Keys
-- [start-tunnel](https://github.com/Start9Labs/start-tunnel) - Automated WireGuard VPN deployment tool for StartOS
+- [start-tunnel](https://github.com/Start9Labs/start-tunnel) - Moved to the start-technologies monorepo: projects/start-tunnel
 - [wisp-ios](https://github.com/barrydeen/wisp-ios) - No description
 - [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - The Podroll ecosystem: who recommends whom in podcasting, mapped in your browser from the podcast:podroll recommendation tag. Static web app, no backend, no tracking.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
@@ -105,4 +105,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-25 18:41 UTC*
+*Last synced: 2026-08-26 01:24 UTC*

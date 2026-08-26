@@ -80,7 +80,7 @@
 
 ## stablekraft-app
 
-- [#225 Carry `content` on the shared favorites list instead of blanking it](https://github.com/ChadFarrow/stablekraft-app/pull/225)
+*No open pull requests*
 
 ## chadf-landing-page
 
@@ -88,9 +88,6 @@
 
 ## boostmebitch
 
-- [#228 Add a Nostr read index so feeds and favorites load fast](https://github.com/ChadFarrow/boostmebitch/pull/228)
-- [#223 Carry `content`, and give the list a private half behind a gate](https://github.com/ChadFarrow/boostmebitch/pull/223)
-- [#222 Private favorites: carry `content`, and a public/private/off choice](https://github.com/ChadFarrow/boostmebitch/pull/222)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -111,4 +108,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-25 18:41 UTC*
+*Last synced: 2026-08-26 01:24 UTC*
