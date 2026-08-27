@@ -29,6 +29,7 @@
 
 ## chadf-musicl-playlists
 
+- `add/v4vmusic-christmas`
 - `main`
 
 ## Auto-musicL-Maker
@@ -110,6 +111,7 @@
 
 ## boostmebitch
 
+- `claude/ios-nip04-decrypt-error-6r66kt`
 - `feat/libre-wallet-embed`
 - `feat/private-favorites`
 - `feature/inbox-listen-queue`
@@ -136,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-27 08:09 UTC*
+*Last synced: 2026-08-27 21:56 UTC*
