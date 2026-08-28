@@ -96,8 +96,6 @@
 ## boostmebitch
 
 ### Open
-- [#240 Add a selector to the search box to "search for"](https://github.com/ChadFarrow/boostmebitch/issues/240)
-- [#239 Add option to reverse episode order](https://github.com/ChadFarrow/boostmebitch/issues/239)
 - [#167 A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite](https://github.com/ChadFarrow/boostmebitch/issues/167)
 - [#129 queue](https://github.com/ChadFarrow/boostmebitch/issues/129)
 
@@ -118,4 +116,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-08-27 21:56 UTC*
+*Last synced: 2026-08-28 10:11 UTC*

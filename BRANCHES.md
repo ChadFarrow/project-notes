@@ -111,7 +111,6 @@
 
 ## boostmebitch
 
-- `claude/ios-nip04-decrypt-error-6r66kt`
 - `feat/libre-wallet-embed`
 - `feat/private-favorites`
 - `feature/inbox-listen-queue`
@@ -138,4 +137,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-27 21:56 UTC*
+*Last synced: 2026-08-28 10:12 UTC*
