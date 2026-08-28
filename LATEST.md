@@ -1,13 +1,14 @@
-# Cross-repo audit — 2026-08-28 10:12 UTC
+# Cross-repo audit — 2026-08-28 21:50 UTC
 
 ## Open pull requests
 
-- [ ] **PC20-Nostr #28** — The list feed pays 4 KB to remove the ambiguity 10333 lives with · opened 21 hours ago by ChadFarrow
+- [ ] **boostmebitch #255** — feat(brand): one repo, two deploys — add the Boost Me Buddy brand · opened 1 hour ago by ChadFarrow
+- [ ] **PC20-Nostr #28** — The list feed pays 4 KB to remove the ambiguity 10333 lives with · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 2 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 2 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 2 days ago by ChadFarrow
 - [ ] **PC20-Nostr #27** — Fourteen vectors nobody can run are fourteen vectors the next app learns by shipping · opened 2 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 19 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 20 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -31,12 +32,12 @@
 - [ ] **lnaddress-music #4** — BoostBox · opened 6 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #21** — Make feed layout match the DeMu template. · opened 7 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #13** — Support <podcast:category> - RFC · opened 7 months ago by Kolomona (0 comments)
-- [ ] **RSS-music-site-template #1** — Feed deletion · opened 8 months ago by ChadFarrow (0 comments)
+- [ ] **RSS-music-site-template #1** — Feed deletion · opened 9 months ago by ChadFarrow (0 comments)
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `feat/private-favorites`
 - [ ] `chadf-musicl-playlists` — `add/v4vmusic-christmas`
+- [ ] `boostmebitch` — `feat/private-favorites`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`

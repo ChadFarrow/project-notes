@@ -111,6 +111,7 @@
 
 ## boostmebitch
 
+- `claude/family-friendly-site-version-qbr14f`
 - `feat/libre-wallet-embed`
 - `feat/private-favorites`
 - `feature/inbox-listen-queue`
@@ -137,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-28 10:12 UTC*
+*Last synced: 2026-08-28 21:50 UTC*

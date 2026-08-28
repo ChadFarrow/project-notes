@@ -90,6 +90,7 @@
 
 ## boostmebitch
 
+- [#255 feat(brand): one repo, two deploys — add the Boost Me Buddy brand](https://github.com/ChadFarrow/boostmebitch/pull/255)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-28 10:11 UTC*
+*Last synced: 2026-08-28 21:49 UTC*
