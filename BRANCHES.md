@@ -29,7 +29,6 @@
 
 ## chadf-musicl-playlists
 
-- `add/v4vmusic-christmas`
 - `main`
 
 ## Auto-musicL-Maker
@@ -111,9 +110,7 @@
 
 ## boostmebitch
 
-- `claude/family-friendly-site-version-qbr14f`
 - `feat/libre-wallet-embed`
-- `feat/private-favorites`
 - `feature/inbox-listen-queue`
 - `main`
 
@@ -138,4 +135,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-28 21:50 UTC*
+*Last synced: 2026-08-29 06:10 UTC*
