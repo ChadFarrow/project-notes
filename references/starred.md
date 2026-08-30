@@ -25,6 +25,7 @@
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
 
 ## Podcasting
+- [podping-hivepinger](https://github.com/brianoflondon/podping-hivepinger) - Small lightweight docker based internal service for RSS Hosts to send podpings
 - [BoostBots](https://github.com/valcanobacon/BoostBots) - Bots which posts Booots
 - [podcasting2.org](https://github.com/theDanielJLewis/podcasting2.org) - No description
 - [onlyboosts](https://github.com/ReedBTC/onlyboosts) - A nostr client of only podcasting 2.0 boosts with stats, social features and podcasts. 
@@ -106,4 +107,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-08-29 20:36 UTC*
+*Last synced: 2026-08-30 04:19 UTC*

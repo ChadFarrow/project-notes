@@ -7,10 +7,7 @@
 ## MSP-2.0
 
 - `FAFO`
-- `claude/asd-ste100-simplified-english-2lndpi`
 - `claude/feeds-demu-template-hf5tyk`
-- `claude/high-usage-fix-2rkv2j`
-- `docs/sync-and-ci-notes`
 - `master`
 - `new-onboarding-v2`
 
@@ -135,4 +132,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-29 20:36 UTC*
+*Last synced: 2026-08-30 04:19 UTC*
