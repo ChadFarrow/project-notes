@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-08-30 16:16 UTC
+# Cross-repo audit — 2026-08-30 20:43 UTC
 
 ## Open pull requests
 
@@ -18,7 +18,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #275** — Look for zap splits · opened 1 hour ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 6 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
@@ -34,6 +34,7 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/page-load-performance-9zkh1c`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
