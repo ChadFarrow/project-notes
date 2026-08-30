@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-08-30 11:29 UTC
+# Cross-repo audit — 2026-08-30 16:16 UTC
 
 ## Open pull requests
 
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 4 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 4 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 4 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 21 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 22 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,6 +18,7 @@
 
 ## Open issues
 
+- [ ] **boostmebitch #275** — Look for zap splits · opened 1 hour ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
