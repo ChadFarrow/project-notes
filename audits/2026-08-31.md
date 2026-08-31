@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-08-31 13:00 UTC
+# Cross-repo audit — 2026-08-31 22:37 UTC
 
 ## Open pull requests
 
+- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 1 hour ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 5 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 5 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 5 days ago by ChadFarrow
@@ -18,7 +19,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #275** — Look for zap splits · opened 22 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)

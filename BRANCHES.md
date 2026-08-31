@@ -107,6 +107,7 @@
 
 ## boostmebitch
 
+- `claude/google-login-canceled-boostmebuddy-0q8bq4`
 - `claude/page-load-performance-9zkh1c`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -133,4 +134,4 @@
 - `master`
 
 ---
-*Last synced: 2026-08-31 13:00 UTC*
+*Last synced: 2026-08-31 22:37 UTC*

@@ -90,6 +90,7 @@
 
 ## boostmebitch
 
+- [#282 Google sign-in: stop reporting a refused origin as "cancelled"](https://github.com/ChadFarrow/boostmebitch/pull/282)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-08-31 13:00 UTC*
+*Last synced: 2026-08-31 22:36 UTC*
