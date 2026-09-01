@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-09-01 04:08 UTC
+# Cross-repo audit — 2026-09-01 11:17 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 6 hours ago by ChadFarrow
-- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 5 days ago by ChadFarrow
+- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 13 hours ago by ChadFarrow
+- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 6 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 6 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 6 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 23 days ago by ReedBTC
