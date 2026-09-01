@@ -1,8 +1,8 @@
-# Cross-repo audit — 2026-09-01 16:15 UTC
+# Cross-repo audit — 2026-09-01 20:43 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 18 hours ago by ChadFarrow
+- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 23 hours ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 6 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 6 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 6 days ago by ChadFarrow
@@ -36,13 +36,13 @@
 ## Branches with no open PR
 
 - [ ] `boostmebitch` — `claude/page-load-performance-9zkh1c`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
 - [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
 - [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
 - [ ] `MSP-2.0` — `FAFO`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `libre-listener-wallet-monorepo` — `feat/force-close`
 - [ ] `libre-listener-wallet-monorepo` — `feat/lsps2-jit-m1`
 - [ ] `Auto-musicL-Maker` — `claude/localbitcoiners-podcast-playlist-069mwk`
