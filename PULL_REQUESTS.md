@@ -90,6 +90,7 @@
 
 ## boostmebitch
 
+- [#292 Add the leaf that decides which people a boost note may tag](https://github.com/ChadFarrow/boostmebitch/pull/292)
 - [#282 Google sign-in: stop reporting a refused origin as "cancelled"](https://github.com/ChadFarrow/boostmebitch/pull/282)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -111,4 +112,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-02 16:10 UTC*
+*Last synced: 2026-09-02 20:41 UTC*

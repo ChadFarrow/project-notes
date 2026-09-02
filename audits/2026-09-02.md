@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-09-02 16:10 UTC
+# Cross-repo audit — 2026-09-02 20:41 UTC
 
 ## Open pull requests
 
+- [ ] **boostmebitch #292** — Add the leaf that decides which people a boost note may tag · opened 3 hours ago by ChadFarrow
 - [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 7 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 7 days ago by ChadFarrow
@@ -11,7 +12,7 @@
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 2 months ago by ChadFarrow
-- [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 2 months ago by ChadFarrow
+- [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 3 months ago by ChadFarrow
 - [ ] **IRL_QR #19** — Replace payment feed with configurable multi-QR code grid · opened 5 months ago by ChadFarrow
 - [ ] **HPM-Lightning #2** — Fix React Server Components CVE vulnerabilities _(draft)_ · opened 8 months ago by vercel[bot]
 - [ ] **castr.me #2** — Add Podcasting 2.0 value tag with Lightning address support · opened 10 months ago by ChadFarrow
@@ -19,7 +20,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #291** — Shareable chapters · opened 2 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #291** — Shareable chapters · opened 6 hours ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 20 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 20 days ago by ChadFarrow (0 comments)
@@ -37,7 +38,6 @@
 ## Branches with no open PR
 
 - [ ] `boostmebitch` — `claude/list-visibility-tag`
-- [ ] `boostmebitch` — `claude/nostr-profile-mentions-boosts-elcu08`
 - [ ] `boostmebitch` — `claude/page-load-performance-9zkh1c`
 - [ ] `stablekraft-app` — `claude/carried-half-and-mode-conflict`
 - [ ] `stablekraft-app` — `claude/fix-duplicate-mergemovednodes`
