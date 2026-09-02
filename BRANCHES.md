@@ -95,6 +95,9 @@
 
 ## stablekraft-app
 
+- `claude/carried-half-and-mode-conflict`
+- `claude/fix-duplicate-mergemovednodes`
+- `claude/visibility-tag`
 - `feature/genre-and-v4v-tags`
 - `fix/feed-column-loss-and-field-drift`
 - `main`
@@ -108,6 +111,7 @@
 ## boostmebitch
 
 - `claude/google-login-canceled-boostmebuddy-0q8bq4`
+- `claude/list-visibility-tag`
 - `claude/page-load-performance-9zkh1c`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -134,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-01 20:43 UTC*
+*Last synced: 2026-09-02 03:30 UTC*
