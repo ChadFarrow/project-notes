@@ -99,7 +99,6 @@
 - `claude/fix-duplicate-mergemovednodes`
 - `claude/visibility-tag`
 - `feature/genre-and-v4v-tags`
-- `fix/favorites-wire-order-and-conformance`
 - `fix/feed-column-loss-and-field-drift`
 - `main`
 - `perf/catalog-and-render`
@@ -111,14 +110,11 @@
 
 ## boostmebitch
 
-- `claude/boostmebuddy-tlv-info-jdpl6p`
-- `claude/google-login-canceled-boostmebuddy-0q8bq4`
 - `claude/list-visibility-tag`
 - `claude/nostr-profile-mentions-boosts-elcu08`
 - `claude/page-load-performance-9zkh1c`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
-- `fix/favorites-duplicate-group-and-conformance`
 - `main`
 
 ## web-ui
@@ -142,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-03 10:51 UTC*
+*Last synced: 2026-09-03 16:00 UTC*

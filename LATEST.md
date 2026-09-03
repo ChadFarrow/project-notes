@@ -1,16 +1,12 @@
-# Cross-repo audit — 2026-09-03 10:52 UTC
+# Cross-repo audit — 2026-09-03 16:00 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #300** — docs(ops): the buddy Vercel project has its own env, and BoostBox 401s there · opened 7 hours ago by ChadFarrow
-- [ ] **stablekraft-app #236** — Keep a group's items in wire order, stop resurrecting what another app removed, and run the spec's vectors · opened 10 hours ago by ChadFarrow
-- [ ] **boostmebitch #294** — Fold a duplicate feed group instead of dropping its items, and run the spec's vectors · opened 10 hours ago by ChadFarrow
-- [ ] **boostmebitch #292** — Add the leaf that decides which people a boost note may tag · opened 17 hours ago by ChadFarrow
-- [ ] **boostmebitch #282** — Google sign-in: stop reporting a refused origin as "cancelled" · opened 2 days ago by ChadFarrow
+- [ ] **boostmebitch #292** — Add the leaf that decides which people a boost note may tag · opened 23 hours ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 8 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 8 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 8 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 25 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 26 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
@@ -23,18 +19,16 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #299** — boostmebuddy: check NEXT_PUBLIC_GOOGLE_CLIENT_ID (and that APP_NAME stays unset) · opened 7 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #298** — boostmebuddy: verify PLAYLIST_DB_URL and PLAYLIST_DB_CA are set (playlist accelerator) · opened 7 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #297** — Railway read index is not answering — /api/nostr/index has been 503 on boostmebitch for at least a day · opened 7 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #296** — boostmebuddy: Nostr read index is not configured (NOSTR_INDEX_URL / NOSTR_INDEX_KEY missing) · opened 7 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #295** — boostmebuddy: BoostBox answers 401, so every LNURL leg pays with no rss::payment descriptor · opened 7 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #291** — Shareable chapters · opened 21 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 3 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 19 minutes ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #299** — boostmebuddy: check NEXT_PUBLIC_GOOGLE_CLIENT_ID (and that APP_NAME stays unset) · opened 12 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #298** — boostmebuddy: verify PLAYLIST_DB_URL and PLAYLIST_DB_CA are set (playlist accelerator) · opened 12 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #296** — boostmebuddy: Nostr read index is not configured (NOSTR_INDEX_URL / NOSTR_INDEX_KEY missing) · opened 12 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #295** — boostmebuddy: BoostBox answers 401, so every LNURL leg pays with no rss::payment descriptor · opened 12 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #291** — Shareable chapters · opened 1 day ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 21 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #167** — A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #129** — queue · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 2 months ago by ChadFarrow (0 comments)
