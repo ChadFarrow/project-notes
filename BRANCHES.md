@@ -79,18 +79,24 @@
 
 ## Helipad-to-Nostr-BoostBot
 
+- `fix-env-example-relay`
 - `main`
+- `nip73-podcast-guids`
 
 ## LIT_Bot
 
+- `drop-unreachable-relay`
 - `main`
+- `untrack-runtime-state`
 
 ## LibreRelayBot
 
+- `drop-unreachable-relay`
 - `main`
 
 ## BoostAfterBoost
 
+- `drop-unreachable-relay`
 - `main`
 
 ## stablekraft-app
@@ -110,8 +116,8 @@
 
 ## boostmebitch
 
+- `claude/amber-android-issue-pizn7a`
 - `claude/list-visibility-tag`
-- `claude/nostr-profile-mentions-boosts-elcu08`
 - `claude/page-load-performance-9zkh1c`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -138,4 +144,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-03 16:00 UTC*
+*Last synced: 2026-09-03 20:40 UTC*

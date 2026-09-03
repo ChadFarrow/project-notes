@@ -1,8 +1,7 @@
-# Cross-repo audit — 2026-09-03 16:00 UTC
+# Cross-repo audit — 2026-09-03 20:40 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #292** — Add the leaf that decides which people a boost note may tag · opened 23 hours ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 8 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 8 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 8 days ago by ChadFarrow
@@ -19,12 +18,9 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 19 minutes ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #299** — boostmebuddy: check NEXT_PUBLIC_GOOGLE_CLIENT_ID (and that APP_NAME stays unset) · opened 12 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #298** — boostmebuddy: verify PLAYLIST_DB_URL and PLAYLIST_DB_CA are set (playlist accelerator) · opened 12 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #296** — boostmebuddy: Nostr read index is not configured (NOSTR_INDEX_URL / NOSTR_INDEX_KEY missing) · opened 12 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #295** — boostmebuddy: BoostBox answers 401, so every LNURL leg pays with no rss::payment descriptor · opened 12 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #291** — Shareable chapters · opened 1 day ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #237** — StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both) · opened 15 minutes ago by ReedBTC (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 4 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 5 hours ago by ChadFarrow (3 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
@@ -39,8 +35,15 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/amber-android-issue-pizn7a`
 - [ ] `boostmebitch` — `claude/list-visibility-tag`
 - [ ] `boostmebitch` — `claude/page-load-performance-9zkh1c`
+- [ ] `LIT_Bot` — `drop-unreachable-relay`
+- [ ] `LIT_Bot` — `untrack-runtime-state`
+- [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
+- [ ] `Helipad-to-Nostr-BoostBot` — `nip73-podcast-guids`
+- [ ] `BoostAfterBoost` — `drop-unreachable-relay`
+- [ ] `LibreRelayBot` — `drop-unreachable-relay`
 - [ ] `stablekraft-app` — `claude/carried-half-and-mode-conflict`
 - [ ] `stablekraft-app` — `claude/fix-duplicate-mergemovednodes`
 - [ ] `stablekraft-app` — `claude/visibility-tag`

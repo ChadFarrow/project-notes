@@ -90,7 +90,6 @@
 
 ## boostmebitch
 
-- [#292 Add the leaf that decides which people a boost note may tag](https://github.com/ChadFarrow/boostmebitch/pull/292)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-03 15:59 UTC*
+*Last synced: 2026-09-03 20:40 UTC*

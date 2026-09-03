@@ -85,6 +85,7 @@
 ## stablekraft-app
 
 ### Open
+- [#237 StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both)](https://github.com/ChadFarrow/stablekraft-app/issues/237)
 - [#201 background art switches to stock art](https://github.com/ChadFarrow/stablekraft-app/issues/201)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
@@ -96,12 +97,8 @@
 ## boostmebitch
 
 ### Open
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#301 nostr-index leaks heap until it OOMs, then stops itself after 10 retries](https://github.com/ChadFarrow/boostmebitch/issues/301)
-- [#299 boostmebuddy: check NEXT_PUBLIC_GOOGLE_CLIENT_ID (and that APP_NAME stays unset)](https://github.com/ChadFarrow/boostmebitch/issues/299)
-- [#298 boostmebuddy: verify PLAYLIST_DB_URL and PLAYLIST_DB_CA are set (playlist accelerator)](https://github.com/ChadFarrow/boostmebitch/issues/298)
-- [#296 boostmebuddy: Nostr read index is not configured (NOSTR_INDEX_URL / NOSTR_INDEX_KEY missing)](https://github.com/ChadFarrow/boostmebitch/issues/296)
-- [#295 boostmebuddy: BoostBox answers 401, so every LNURL leg pays with no rss::payment descriptor](https://github.com/ChadFarrow/boostmebitch/issues/295)
-- [#291 Shareable chapters](https://github.com/ChadFarrow/boostmebitch/issues/291)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
 
 ## web-ui
@@ -121,4 +118,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-03 15:59 UTC*
+*Last synced: 2026-09-03 20:40 UTC*
