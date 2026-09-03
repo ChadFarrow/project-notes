@@ -80,6 +80,7 @@
 
 ## stablekraft-app
 
+- [#236 Keep a group's items in wire order, stop resurrecting what another app removed, and run the spec's vectors](https://github.com/ChadFarrow/stablekraft-app/pull/236)
 - [#232 Make the lint gate real, delete the dead code, name the unnamed buttons](https://github.com/ChadFarrow/stablekraft-app/pull/232)
 - [#231 Cut the catalog payload, and stop the audio clock re-rendering every page](https://github.com/ChadFarrow/stablekraft-app/pull/231)
 - [#230 Stop the silent Feed column loss, and give the album shape one definition](https://github.com/ChadFarrow/stablekraft-app/pull/230)
@@ -90,6 +91,8 @@
 
 ## boostmebitch
 
+- [#300 docs(ops): the buddy Vercel project has its own env, and BoostBox 401s there](https://github.com/ChadFarrow/boostmebitch/pull/300)
+- [#294 Fold a duplicate feed group instead of dropping its items, and run the spec's vectors](https://github.com/ChadFarrow/boostmebitch/pull/294)
 - [#292 Add the leaf that decides which people a boost note may tag](https://github.com/ChadFarrow/boostmebitch/pull/292)
 - [#282 Google sign-in: stop reporting a refused origin as "cancelled"](https://github.com/ChadFarrow/boostmebitch/pull/282)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
@@ -112,4 +115,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-02 20:41 UTC*
+*Last synced: 2026-09-03 03:31 UTC*

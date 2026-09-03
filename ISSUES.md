@@ -96,6 +96,11 @@
 ## boostmebitch
 
 ### Open
+- [#299 boostmebuddy: check NEXT_PUBLIC_GOOGLE_CLIENT_ID (and that APP_NAME stays unset)](https://github.com/ChadFarrow/boostmebitch/issues/299)
+- [#298 boostmebuddy: verify PLAYLIST_DB_URL and PLAYLIST_DB_CA are set (playlist accelerator)](https://github.com/ChadFarrow/boostmebitch/issues/298)
+- [#297 Railway read index is not answering — /api/nostr/index has been 503 on boostmebitch for at least a day](https://github.com/ChadFarrow/boostmebitch/issues/297)
+- [#296 boostmebuddy: Nostr read index is not configured (NOSTR_INDEX_URL / NOSTR_INDEX_KEY missing)](https://github.com/ChadFarrow/boostmebitch/issues/296)
+- [#295 boostmebuddy: BoostBox answers 401, so every LNURL leg pays with no rss::payment descriptor](https://github.com/ChadFarrow/boostmebitch/issues/295)
 - [#291 Shareable chapters](https://github.com/ChadFarrow/boostmebitch/issues/291)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
 - [#167 A favorites publish rejected by every relay is recorded as if it landed, permanently losing the favorite](https://github.com/ChadFarrow/boostmebitch/issues/167)
@@ -118,4 +123,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-02 20:41 UTC*
+*Last synced: 2026-09-03 03:30 UTC*
