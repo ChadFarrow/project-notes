@@ -90,6 +90,7 @@
 
 ## boostmebitch
 
+- [#325 ci(android): make the first Zapstore publish able to succeed, and prove it before a tag](https://github.com/ChadFarrow/boostmebitch/pull/325)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-04 10:51 UTC*
+*Last synced: 2026-09-04 15:57 UTC*
