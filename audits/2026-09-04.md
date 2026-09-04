@@ -1,10 +1,10 @@
-# Cross-repo audit — 2026-09-04 03:29 UTC
+# Cross-repo audit — 2026-09-04 10:51 UTC
 
 ## Open pull requests
 
-- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 8 days ago by ChadFarrow
-- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 8 days ago by ChadFarrow
-- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 8 days ago by ChadFarrow
+- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 9 days ago by ChadFarrow
+- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 9 days ago by ChadFarrow
+- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 9 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 26 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,10 +18,10 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #313** — nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too · opened 5 hours ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #237** — StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both) · opened 7 hours ago by ReedBTC (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 11 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 11 hours ago by ChadFarrow (6 comments)
+- [ ] **boostmebitch #313** — nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too · opened 12 hours ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #237** — StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both) · opened 14 hours ago by ReedBTC (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 18 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 19 hours ago by ChadFarrow (6 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 22 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
