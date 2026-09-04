@@ -116,7 +116,6 @@
 
 ## boostmebitch
 
-- `claude/zap-store-app-completion-8s7flt`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -142,4 +141,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-04 15:57 UTC*
+*Last synced: 2026-09-04 20:26 UTC*
