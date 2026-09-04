@@ -97,6 +97,7 @@
 ## boostmebitch
 
 ### Open
+- [#313 nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too](https://github.com/ChadFarrow/boostmebitch/issues/313)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#301 nostr-index leaks heap until it OOMs, then stops itself after 10 retries](https://github.com/ChadFarrow/boostmebitch/issues/301)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
@@ -118,4 +119,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-03 20:40 UTC*
+*Last synced: 2026-09-04 02:21 UTC*

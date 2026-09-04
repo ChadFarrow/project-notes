@@ -116,9 +116,6 @@
 
 ## boostmebitch
 
-- `claude/amber-android-issue-pizn7a`
-- `claude/list-visibility-tag`
-- `claude/page-load-performance-9zkh1c`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `main`
@@ -144,4 +141,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-03 20:40 UTC*
+*Last synced: 2026-09-04 02:21 UTC*
