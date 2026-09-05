@@ -90,6 +90,10 @@
 
 ## boostmebitch
 
+- [#334 UI redesign: dock, header, tabs, action tiles, favorites, search lanes](https://github.com/ChadFarrow/boostmebitch/pull/334)
+- [#333 UI: shared UnderlineTabs replaces the two pill strips](https://github.com/ChadFarrow/boostmebitch/pull/333)
+- [#332 Wallet modal: wrap the NWC pubkey so the sheet stops scrolling sideways](https://github.com/ChadFarrow/boostmebitch/pull/332)
+- [#331 UI: bottom tab bar (dock) — nav out of the header](https://github.com/ChadFarrow/boostmebitch/pull/331)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +114,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-04 20:26 UTC*
+*Last synced: 2026-09-05 03:30 UTC*
