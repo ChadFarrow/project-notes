@@ -1,14 +1,14 @@
-# Cross-repo audit — 2026-09-05 03:30 UTC
+# Cross-repo audit — 2026-09-05 10:09 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #334** — UI redesign: dock, header, tabs, action tiles, favorites, search lanes _(draft)_ · opened 16 minutes ago by ChadFarrow
-- [ ] **boostmebitch #333** — UI: shared UnderlineTabs replaces the two pill strips · opened 2 hours ago by ChadFarrow
-- [ ] **boostmebitch #332** — Wallet modal: wrap the NWC pubkey so the sheet stops scrolling sideways · opened 2 hours ago by ChadFarrow
-- [ ] **boostmebitch #331** — UI: bottom tab bar (dock) — nav out of the header _(draft)_ · opened 3 hours ago by ChadFarrow
-- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 9 days ago by ChadFarrow
-- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 9 days ago by ChadFarrow
-- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 9 days ago by ChadFarrow
+- [ ] **boostmebitch #334** — UI redesign: dock, header, tabs, action tiles, favorites, search lanes _(draft)_ · opened 6 hours ago by ChadFarrow
+- [ ] **boostmebitch #333** — UI: shared UnderlineTabs replaces the two pill strips · opened 8 hours ago by ChadFarrow
+- [ ] **boostmebitch #332** — Wallet modal: wrap the NWC pubkey so the sheet stops scrolling sideways · opened 9 hours ago by ChadFarrow
+- [ ] **boostmebitch #331** — UI: bottom tab bar (dock) — nav out of the header _(draft)_ · opened 10 hours ago by ChadFarrow
+- [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 10 days ago by ChadFarrow
+- [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 10 days ago by ChadFarrow
+- [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 10 days ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 27 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
