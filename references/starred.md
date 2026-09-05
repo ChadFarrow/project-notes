@@ -47,6 +47,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Decentralized commerce on Nostr + Bitcoin Lightning
 - [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
 - [napstr](https://github.com/lnbits/napstr) - No description
 - [hanami](https://github.com/Letdown2491/hanami) - No description
@@ -107,4 +108,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-09-05 14:47 UTC*
+*Last synced: 2026-09-05 20:03 UTC*

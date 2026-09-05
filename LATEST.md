@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-09-05 14:47 UTC
+# Cross-repo audit — 2026-09-05 20:03 UTC
 
 ## Open pull requests
 
+- [ ] **boostmebitch #336** — feat(signers): a one-tap Clave sign-in on iOS, and signatures that survive its approval · opened 3 hours ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 10 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 10 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 10 days ago by ChadFarrow
@@ -11,17 +12,17 @@
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 3 months ago by ChadFarrow
-- [ ] **IRL_QR #19** — Replace payment feed with configurable multi-QR code grid · opened 5 months ago by ChadFarrow
+- [ ] **IRL_QR #19** — Replace payment feed with configurable multi-QR code grid · opened 6 months ago by ChadFarrow
 - [ ] **HPM-Lightning #2** — Fix React Server Components CVE vulnerabilities _(draft)_ · opened 8 months ago by vercel[bot]
-- [ ] **castr.me #2** — Add Podcasting 2.0 value tag with Lightning address support · opened 10 months ago by ChadFarrow
-- [ ] **castr.me #1** — Add episode image support and Podcasting 2.0 value tag · opened 10 months ago by ChadFarrow
+- [ ] **castr.me #2** — Add Podcasting 2.0 value tag with Lightning address support · opened 11 months ago by ChadFarrow
+- [ ] **castr.me #1** — Add episode image support and Podcasting 2.0 value tag · opened 11 months ago by ChadFarrow
 
 ## Open issues
 
 - [ ] **boostmebitch #313** — nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #237** — StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both) · opened 1 day ago by ReedBTC (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 1 day ago by ChadFarrow (6 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 2 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 2 days ago by ChadFarrow (6 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 23 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
@@ -36,10 +37,6 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `fix/nwc-host-wrap`
-- [ ] `boostmebitch` — `ui/dock`
-- [ ] `boostmebitch` — `ui/redesign`
-- [ ] `boostmebitch` — `ui/underline-tabs`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`

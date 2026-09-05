@@ -116,13 +116,10 @@
 
 ## boostmebitch
 
+- `claude/clave-ios-signing-flow-6mj4iq`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
-- `fix/nwc-host-wrap`
 - `main`
-- `ui/dock`
-- `ui/redesign`
-- `ui/underline-tabs`
 
 ## web-ui
 
@@ -145,4 +142,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-05 14:47 UTC*
+*Last synced: 2026-09-05 20:03 UTC*
