@@ -1,15 +1,11 @@
-# Cross-repo audit — 2026-09-05 10:09 UTC
+# Cross-repo audit — 2026-09-05 14:47 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #334** — UI redesign: dock, header, tabs, action tiles, favorites, search lanes _(draft)_ · opened 6 hours ago by ChadFarrow
-- [ ] **boostmebitch #333** — UI: shared UnderlineTabs replaces the two pill strips · opened 8 hours ago by ChadFarrow
-- [ ] **boostmebitch #332** — Wallet modal: wrap the NWC pubkey so the sheet stops scrolling sideways · opened 9 hours ago by ChadFarrow
-- [ ] **boostmebitch #331** — UI: bottom tab bar (dock) — nav out of the header _(draft)_ · opened 10 hours ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 10 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 10 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 10 days ago by ChadFarrow
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 27 days ago by ReedBTC
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 28 days ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(inbox): new-episodes inbox + listen queue _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
@@ -26,7 +22,7 @@
 - [ ] **stablekraft-app #237** — StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both) · opened 1 day ago by ReedBTC (0 comments)
 - [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 1 day ago by ChadFarrow (6 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 5 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 23 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
@@ -40,6 +36,10 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `fix/nwc-host-wrap`
+- [ ] `boostmebitch` — `ui/dock`
+- [ ] `boostmebitch` — `ui/redesign`
+- [ ] `boostmebitch` — `ui/underline-tabs`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
