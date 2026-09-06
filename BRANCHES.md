@@ -104,6 +104,7 @@
 - `claude/carried-half-and-mode-conflict`
 - `claude/fix-duplicate-mergemovednodes`
 - `claude/visibility-tag`
+- `claude/zapstore-fork-railway-access-wc9py7`
 - `feature/genre-and-v4v-tags`
 - `fix/feed-column-loss-and-field-drift`
 - `main`
@@ -142,4 +143,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-06 15:07 UTC*
+*Last synced: 2026-09-06 20:08 UTC*

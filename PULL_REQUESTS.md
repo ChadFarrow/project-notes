@@ -80,6 +80,7 @@
 
 ## stablekraft-app
 
+- [#244 Stop third-party apps and websites running on this backend](https://github.com/ChadFarrow/stablekraft-app/pull/244)
 - [#232 Make the lint gate real, delete the dead code, name the unnamed buttons](https://github.com/ChadFarrow/stablekraft-app/pull/232)
 - [#231 Cut the catalog payload, and stop the audio clock re-rendering every page](https://github.com/ChadFarrow/stablekraft-app/pull/231)
 - [#230 Stop the silent Feed column loss, and give the album shape one definition](https://github.com/ChadFarrow/stablekraft-app/pull/230)
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-06 15:07 UTC*
+*Last synced: 2026-09-06 20:07 UTC*

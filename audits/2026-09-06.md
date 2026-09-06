@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-09-06 15:07 UTC
+# Cross-repo audit — 2026-09-06 20:08 UTC
 
 ## Open pull requests
 
+- [ ] **stablekraft-app #244** — Stop third-party apps and websites running on this backend · opened 34 minutes ago by ChadFarrow
 - [ ] **stablekraft-app #232** — Make the lint gate real, delete the dead code, name the unnamed buttons · opened 11 days ago by ChadFarrow
 - [ ] **stablekraft-app #231** — Cut the catalog payload, and stop the audio clock re-rendering every page · opened 11 days ago by ChadFarrow
 - [ ] **stablekraft-app #230** — Stop the silent Feed column loss, and give the album shape one definition · opened 11 days ago by ChadFarrow
@@ -18,25 +19,25 @@
 
 ## Open issues
 
-- [ ] **stablekraft-app #242** — Boost notes publish internal database ids as podcast:item:guid when the real guid is null · opened 14 hours ago by ChadFarrow (0 comments)
-- [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **LibreRelayBot #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **BoostAfterBoost #4** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #4** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **is-this-thing-on #18** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **HPM-Lightning #3** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **NMNU #2** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **TRM-Lightning #4** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **RSS-music-site-template #3** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **lnaddress-music #14** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 15 hours ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #242** — Boost notes publish internal database ids as podcast:item:guid when the real guid is null · opened 19 hours ago by ChadFarrow (0 comments)
+- [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **LibreRelayBot #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **BoostAfterBoost #4** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #4** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **is-this-thing-on #18** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **HPM-Lightning #3** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **NMNU #2** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **TRM-Lightning #4** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **RSS-music-site-template #3** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **lnaddress-music #14** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 hours ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #313** — nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too · opened 2 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 2 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 2 days ago by ChadFarrow (6 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 3 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #301** — nostr-index leaks heap until it OOMs, then stops itself after 10 retries · opened 3 days ago by ChadFarrow (6 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #201** — background art switches to stock art · opened 24 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
