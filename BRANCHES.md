@@ -119,7 +119,6 @@
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `fix/keyboard-inset-phantom`
-- `fix/keyboard-settle-nudge`
 - `main`
 
 ## web-ui
@@ -143,4 +142,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-06 10:30 UTC*
+*Last synced: 2026-09-06 15:07 UTC*

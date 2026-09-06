@@ -90,7 +90,6 @@
 
 ## boostmebitch
 
-- [#345 The settle nudge never actually scrolled, so the dock stayed stranded](https://github.com/ChadFarrow/boostmebitch/pull/345)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-06 10:30 UTC*
+*Last synced: 2026-09-06 15:07 UTC*
