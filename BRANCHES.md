@@ -116,9 +116,10 @@
 
 ## boostmebitch
 
-- `claude/clave-ios-signing-flow-6mj4iq`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
+- `fix/keyboard-inset-phantom`
+- `fix/keyboard-settle-nudge`
 - `main`
 
 ## web-ui
@@ -142,4 +143,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-05 20:03 UTC*
+*Last synced: 2026-09-06 03:31 UTC*

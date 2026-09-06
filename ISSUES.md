@@ -7,12 +7,14 @@
 ## MSP-2.0
 
 ### Open
+- [#137 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0/issues/137)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
 
 ## MSP-2.0-Desktop-App
 
-*No open issues*
+### Open
+- [#66 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/66)
 
 ## musicL-playlist-updater
 
@@ -29,6 +31,7 @@
 ## lnaddress-music
 
 ### Open
+- [#14 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/lnaddress-music/issues/14)
 - [#4 BoostBox](https://github.com/ChadFarrow/lnaddress-music/issues/4)
 
 ## castr.me
@@ -38,6 +41,7 @@
 ## RSS-music-site-template
 
 ### Open
+- [#3 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/RSS-music-site-template/issues/3)
 - [#1 Feed deletion](https://github.com/ChadFarrow/RSS-music-site-template/issues/1)
 
 ## msp-podping-service
@@ -46,15 +50,18 @@
 
 ## ITDV-Lightning
 
-*No open issues*
+### Open
+- [#9 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/ITDV-Lightning/issues/9)
 
 ## TRM-Lightning
 
-*No open issues*
+### Open
+- [#4 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/TRM-Lightning/issues/4)
 
 ## HPM-Lightning
 
-*No open issues*
+### Open
+- [#3 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/HPM-Lightning/issues/3)
 
 ## lnurl-test-feed
 
@@ -68,24 +75,28 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-*No open issues*
+### Open
+- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16)
 
 ## LIT_Bot
 
-*No open issues*
+### Open
+- [#4 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/LIT_Bot/issues/4)
 
 ## LibreRelayBot
 
-*No open issues*
+### Open
+- [#3 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/LibreRelayBot/issues/3)
 
 ## BoostAfterBoost
 
-*No open issues*
+### Open
+- [#4 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/BoostAfterBoost/issues/4)
 
 ## stablekraft-app
 
 ### Open
-- [#237 StableKraft boost notes carry NIP-73 i tags with no k tag (BoostMeBitch sends both)](https://github.com/ChadFarrow/stablekraft-app/issues/237)
+- [#242 Boost notes publish internal database ids as podcast:item:guid when the real guid is null](https://github.com/ChadFarrow/stablekraft-app/issues/242)
 - [#201 background art switches to stock art](https://github.com/ChadFarrow/stablekraft-app/issues/201)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
@@ -119,4 +130,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-05 20:03 UTC*
+*Last synced: 2026-09-06 03:31 UTC*

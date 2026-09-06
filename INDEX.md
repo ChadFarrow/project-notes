@@ -38,6 +38,7 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [sidecar](https://github.com/ChadFarrow/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 *(NEW)*
 - [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
 - [pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) - A public reference for Podcasting 2.0 — the namespace, the payments, and the plumbing underneath. Built from an Obsidian vault. *(NEW)*
 - [pc20-timeline](https://github.com/ChadFarrow/pc20-timeline) -  *(NEW)*

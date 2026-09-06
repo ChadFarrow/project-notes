@@ -90,7 +90,7 @@
 
 ## boostmebitch
 
-- [#336 feat(signers): a one-tap Clave sign-in on iOS, and signatures that survive its approval](https://github.com/ChadFarrow/boostmebitch/pull/336)
+- [#345 The settle nudge never actually scrolled, so the dock stayed stranded](https://github.com/ChadFarrow/boostmebitch/pull/345)
 - [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -111,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-05 20:03 UTC*
+*Last synced: 2026-09-06 03:31 UTC*
