@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-09-07 17:29 UTC
+# Cross-repo audit — 2026-09-07 21:14 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #362** — Carry everything past the identifier on an `i` tag we can place · opened 47 minutes ago by ChadFarrow
-- [ ] **stablekraft-app #255** — Carry everything past the identifier on an `i` tag we can place · opened 47 minutes ago by ChadFarrow
+- [ ] **boostbox #8** — feat(nostr): BIP-340 signing, NIP-01 events and NIP-19 bech32 · opened 20 minutes ago by ChadFarrow
+- [ ] **PC20-Nostr #34** — One favorite, one tag: an item entry carries its own feed guid · opened 1 hour ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 1 month ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -46,7 +46,9 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/carry-i-tag-tail`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
+- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
 - [ ] `LIT_Bot` — `untrack-runtime-state`

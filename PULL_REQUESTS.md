@@ -80,7 +80,7 @@
 
 ## stablekraft-app
 
-- [#255 Carry everything past the identifier on an `i` tag we can place](https://github.com/ChadFarrow/stablekraft-app/pull/255)
+*No open pull requests*
 
 ## chadf-landing-page
 
@@ -88,7 +88,6 @@
 
 ## boostmebitch
 
-- [#362 Carry everything past the identifier on an `i` tag we can place](https://github.com/ChadFarrow/boostmebitch/pull/362)
 - [#132 feat(queue): a cross-show listen queue (Up Next)](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -109,4 +108,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-07 17:29 UTC*
+*Last synced: 2026-09-07 21:14 UTC*
