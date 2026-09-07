@@ -96,8 +96,6 @@
 ## stablekraft-app
 
 ### Open
-- [#242 Boost notes publish internal database ids as podcast:item:guid when the real guid is null](https://github.com/ChadFarrow/stablekraft-app/issues/242)
-- [#201 background art switches to stock art](https://github.com/ChadFarrow/stablekraft-app/issues/201)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
@@ -108,9 +106,7 @@
 ## boostmebitch
 
 ### Open
-- [#313 nostr-tools' yieldThread leaks a MessagePort per relay message in the browser too](https://github.com/ChadFarrow/boostmebitch/issues/313)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
-- [#301 nostr-index leaks heap until it OOMs, then stops itself after 10 retries](https://github.com/ChadFarrow/boostmebitch/issues/301)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
 
 ## web-ui
@@ -130,4 +126,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-06 20:07 UTC*
+*Last synced: 2026-09-07 03:31 UTC*

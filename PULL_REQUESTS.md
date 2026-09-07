@@ -80,10 +80,7 @@
 
 ## stablekraft-app
 
-- [#244 Stop third-party apps and websites running on this backend](https://github.com/ChadFarrow/stablekraft-app/pull/244)
-- [#232 Make the lint gate real, delete the dead code, name the unnamed buttons](https://github.com/ChadFarrow/stablekraft-app/pull/232)
-- [#231 Cut the catalog payload, and stop the audio clock re-rendering every page](https://github.com/ChadFarrow/stablekraft-app/pull/231)
-- [#230 Stop the silent Feed column loss, and give the album shape one definition](https://github.com/ChadFarrow/stablekraft-app/pull/230)
+*No open pull requests*
 
 ## chadf-landing-page
 
@@ -91,7 +88,7 @@
 
 ## boostmebitch
 
-- [#132 feat(inbox): new-episodes inbox + listen queue](https://github.com/ChadFarrow/boostmebitch/pull/132)
+- [#132 feat(queue): a cross-show listen queue (Up Next)](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ## web-ui
@@ -111,4 +108,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-06 20:07 UTC*
+*Last synced: 2026-09-07 03:31 UTC*
