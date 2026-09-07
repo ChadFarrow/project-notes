@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-07 03:31 UTC
+# Cross-repo audit — 2026-09-07 11:52 UTC
 
 ## Open pull requests
 
@@ -44,6 +44,7 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `claude/mobile-now-playing-crowding-45d805`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
