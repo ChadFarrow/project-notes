@@ -1,8 +1,10 @@
-# Cross-repo audit — 2026-09-07 11:52 UTC
+# Cross-repo audit — 2026-09-07 17:29 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 29 days ago by ReedBTC
+- [ ] **boostmebitch #362** — Carry everything past the identifier on an `i` tag we can place · opened 47 minutes ago by ChadFarrow
+- [ ] **stablekraft-app #255** — Carry everything past the identifier on an `i` tag we can place · opened 47 minutes ago by ChadFarrow
+- [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 1 month ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
@@ -30,8 +32,8 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 3 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 7 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 4 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
@@ -44,7 +46,6 @@
 
 ## Branches with no open PR
 
-- [ ] `boostmebitch` — `claude/mobile-now-playing-crowding-45d805`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`

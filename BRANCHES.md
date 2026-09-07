@@ -101,6 +101,7 @@
 
 ## stablekraft-app
 
+- `claude/carry-i-tag-tail`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -110,7 +111,7 @@
 
 ## boostmebitch
 
-- `claude/mobile-now-playing-crowding-45d805`
+- `claude/carry-i-tag-tail`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `fix/keyboard-inset-phantom`
@@ -137,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-07 11:52 UTC*
+*Last synced: 2026-09-07 17:29 UTC*
