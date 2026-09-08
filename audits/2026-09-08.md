@@ -1,7 +1,10 @@
-# Cross-repo audit — 2026-09-08 10:49 UTC
+# Cross-repo audit — 2026-09-08 16:13 UTC
 
 ## Open pull requests
 
+- [ ] **PC20-Nostr #47** — An empty list is public, and the private half was optional all along · opened 5 minutes ago by ChadFarrow
+- [ ] **boostmebitch #365** — A carried claim retires with its entry, and a move between halves is a merge · opened 2 hours ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 4 hours ago by ChadFarrow
 - [ ] **candr.space #11** — Add the chapter and transcript generator _(draft)_ · opened 1 month ago by ReedBTC
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -15,6 +18,7 @@
 
 ## Open issues
 
+- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 2 hours ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 2 days ago by ChadFarrow (0 comments)
@@ -31,7 +35,7 @@
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 4 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 8 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
@@ -44,11 +48,11 @@
 
 ## Branches with no open PR
 
+- [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `claude/carry-i-tag-tail`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
-- [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`

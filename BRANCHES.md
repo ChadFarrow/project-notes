@@ -102,6 +102,7 @@
 ## stablekraft-app
 
 - `claude/carry-i-tag-tail`
+- `claude/git-pull-rd2q57`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -111,6 +112,7 @@
 
 ## boostmebitch
 
+- `claude/bmb-update-favorites-53y466`
 - `claude/carry-i-tag-tail`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -138,4 +140,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-08 10:49 UTC*
+*Last synced: 2026-09-08 16:13 UTC*
