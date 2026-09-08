@@ -102,7 +102,6 @@
 ## stablekraft-app
 
 - `claude/carry-i-tag-tail`
-- `claude/favorites-stage1-read-feed-guid`
 - `feature/genre-and-v4v-tags`
 - `main`
 
@@ -139,4 +138,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-08 03:36 UTC*
+*Last synced: 2026-09-08 10:49 UTC*

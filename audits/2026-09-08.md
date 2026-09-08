@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-08 03:36 UTC
+# Cross-repo audit — 2026-09-08 10:49 UTC
 
 ## Open pull requests
 
@@ -44,12 +44,11 @@
 
 ## Branches with no open PR
 
+- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `claude/carry-i-tag-tail`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
-- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
-- [ ] `stablekraft-app` — `claude/favorites-stage1-read-feed-guid`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
