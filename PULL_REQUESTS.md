@@ -88,7 +88,6 @@
 
 ## boostmebitch
 
-- [#365 A carried claim retires with its entry, and a move between halves is a merge](https://github.com/ChadFarrow/boostmebitch/pull/365)
 - [#132 feat(queue): a cross-show listen queue (Up Next)](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -109,4 +108,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-08 16:13 UTC*
+*Last synced: 2026-09-08 20:51 UTC*
