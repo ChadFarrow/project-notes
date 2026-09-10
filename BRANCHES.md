@@ -79,9 +79,7 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-- `fix-env-example-relay`
-- `main`
-- `nip73-podcast-guids`
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ## LIT_Bot
 
@@ -114,6 +112,7 @@
 
 - `claude/bmb-update-favorites-53y466`
 - `claude/carry-i-tag-tail`
+- `feat/downloads`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `fix/keyboard-inset-phantom`
@@ -132,12 +131,11 @@
 
 ## candr.space
 
-- `chapterize-tool`
-- `main`
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
 
 ## HGH-checker
 
 - `master`
 
 ---
-*Last synced: 2026-09-08 20:51 UTC*
+*Last synced: 2026-09-10 18:17 UTC*
