@@ -1,7 +1,11 @@
-# Cross-repo audit — 2026-09-10 18:17 UTC
+# Cross-repo audit — 2026-09-10 20:33 UTC
 
 ## Open pull requests
 
+- [ ] **LibreRelayBot #4** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 1 hour ago by ChadFarrow
+- [ ] **BoostAfterBoost #5** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 1 hour ago by ChadFarrow
+- [ ] **LIT_Bot #6** — Containerize for the candr VPS; go through shared ZNC instead of direct · opened 1 hour ago by ChadFarrow
+- [ ] **LIT_Bot #5** — Route Chad and Reeds live notifications to #candr · opened 1 hour ago by ChadFarrow
 - [ ] **boostmebitch #375** — Downloads: keep an episode on the device and play it without a connection · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -16,7 +20,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #377** — A silent bunker relay costs 90 s with nothing on screen · opened 23 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #377** — A silent bunker relay costs 90 s with nothing on screen · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 4 days ago by ChadFarrow (0 comments)

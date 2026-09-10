@@ -83,17 +83,21 @@
 
 ## LIT_Bot
 
+- `claude/bots-migration-vps-8ga9qa`
+- `claude/podcast-candr-irc-display-74e3iz`
 - `drop-unreachable-relay`
 - `main`
 - `untrack-runtime-state`
 
 ## LibreRelayBot
 
+- `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
 - `main`
 
 ## BoostAfterBoost
 
+- `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
 - `main`
 
@@ -138,4 +142,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-10 18:17 UTC*
+*Last synced: 2026-09-10 20:33 UTC*

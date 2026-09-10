@@ -68,15 +68,16 @@
 
 ## LIT_Bot
 
-*No open pull requests*
+- [#6 Containerize for the candr VPS; go through shared ZNC instead of direct](https://github.com/ChadFarrow/LIT_Bot/pull/6)
+- [#5 Route Chad and Reeds live notifications to #candr](https://github.com/ChadFarrow/LIT_Bot/pull/5)
 
 ## LibreRelayBot
 
-*No open pull requests*
+- [#4 Containerize for the candr VPS; drop old-host ZNC coupling](https://github.com/ChadFarrow/LibreRelayBot/pull/4)
 
 ## BoostAfterBoost
 
-*No open pull requests*
+- [#5 Containerize for the candr VPS; drop old-host ZNC coupling](https://github.com/ChadFarrow/BoostAfterBoost/pull/5)
 
 ## stablekraft-app
 
@@ -109,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-10 18:17 UTC*
+*Last synced: 2026-09-10 20:33 UTC*
