@@ -26,11 +26,32 @@ jobs:
       - name: Sync Everything
         env:
           # AUDIT_TOKEN is a PAT with cross-repo read — required for the owner-wide
-          # `gh search` calls in the audit section. Falls back to the default token,
-          # which can still generate everything except the audit.
-          GH_TOKEN: ${{ secrets.AUDIT_TOKEN || secrets.GITHUB_TOKEN }}
+          # `gh search` calls in the audit section. The step probes it at runtime and
+          # falls back to the default token, which can still generate everything
+          # except the audit.
+          AUDIT_TOKEN: ${{ secrets.AUDIT_TOKEN }}
+          FALLBACK_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           USERNAME="ChadFarrow"
+
+          # Pick a token that actually works. AUDIT_TOKEN is a PAT, and PATs expire;
+          # the `||` default in YAML only covers an *unset* secret, so an expired one
+          # took the whole sync down on the very first `gh` call with
+          # "HTTP 401: Bad credentials". Probe it once and fall back to GITHUB_TOKEN,
+          # which regenerates everything except the audit.
+          AUDIT_OK=1
+          if [ -z "${AUDIT_TOKEN:-}" ]; then
+            echo "::notice::AUDIT_TOKEN is not set — the owner-wide audit sections will be empty."
+            AUDIT_OK=0
+          elif ! GH_TOKEN="$AUDIT_TOKEN" gh api rate_limit >/dev/null 2>&1; then
+            echo "::warning::AUDIT_TOKEN was rejected by GitHub (expired or revoked). Falling back to GITHUB_TOKEN — the owner-wide audit sections will be empty until the secret is rotated."
+            AUDIT_OK=0
+          fi
+          if [ "$AUDIT_OK" = "1" ]; then
+            export GH_TOKEN="$AUDIT_TOKEN"
+          else
+            export GH_TOKEN="$FALLBACK_TOKEN"
+          fi
 
           # ========== SYNC REPOS & INDEX ==========
           echo "Fetching repos..."
@@ -280,7 +301,8 @@ jobs:
             gh search prs --owner $USERNAME --state open --limit 100 \
               --json repository,number,title,createdAt,isDraft,author \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}}{{if .isDraft}} _(draft)_{{end}} · opened {{timeago .createdAt}} by {{.author.login}}
-          {{end}}'
+          {{end}}' \
+              || echo "_Unavailable — AUDIT_TOKEN is missing or expired._"
 
             echo
             echo "## Open issues"
@@ -288,7 +310,8 @@ jobs:
             gh search issues --owner $USERNAME --state open --limit 100 \
               --json repository,number,title,createdAt,author,commentsCount \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}} · opened {{timeago .createdAt}} by {{.author.login}} ({{.commentsCount}} comments)
-          {{end}}'
+          {{end}}' \
+              || echo "_Unavailable — AUDIT_TOKEN is missing or expired._"
 
             echo
             echo "## Branches with no open PR"
