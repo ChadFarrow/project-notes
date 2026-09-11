@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-09-11 03:37 UTC
+# Cross-repo audit — 2026-09-11 10:49 UTC
 
 ## Open pull requests
 
-- [ ] **LibreRelayBot #4** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 8 hours ago by ChadFarrow
-- [ ] **BoostAfterBoost #5** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 8 hours ago by ChadFarrow
-- [ ] **LIT_Bot #6** — Containerize for the candr VPS; go through shared ZNC instead of direct · opened 8 hours ago by ChadFarrow
-- [ ] **LIT_Bot #5** — Route Chad and Reeds live notifications to #candr · opened 8 hours ago by ChadFarrow
+- [ ] **LibreRelayBot #4** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 15 hours ago by ChadFarrow
+- [ ] **BoostAfterBoost #5** — Containerize for the candr VPS; drop old-host ZNC coupling · opened 15 hours ago by ChadFarrow
+- [ ] **LIT_Bot #6** — Containerize for the candr VPS; go through shared ZNC instead of direct · opened 15 hours ago by ChadFarrow
+- [ ] **LIT_Bot #5** — Route Chad and Reeds live notifications to #candr · opened 16 hours ago by ChadFarrow
 - [ ] **boostmebitch #375** — Downloads: keep an episode on the device and play it without a connection · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
