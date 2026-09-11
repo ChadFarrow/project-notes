@@ -84,8 +84,8 @@
 ## LIT_Bot
 
 - `claude/bots-migration-vps-8ga9qa`
-- `claude/podcast-candr-irc-display-74e3iz`
 - `drop-unreachable-relay`
+- `fix/nostr-tools-socket-leak`
 - `main`
 - `untrack-runtime-state`
 
@@ -93,12 +93,16 @@
 
 - `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
+- `fix/nostr-tools-socket-leak`
+- `fix/znc-whois-reconnect-loop`
 - `main`
 
 ## BoostAfterBoost
 
 - `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
+- `fix/nostr-tools-socket-leak`
+- `fix/znc-whois-reconnect-loop`
 - `main`
 
 ## stablekraft-app
@@ -114,8 +118,6 @@
 
 ## boostmebitch
 
-- `claude/bmb-update-favorites-53y466`
-- `claude/carry-i-tag-tail`
 - `feat/downloads`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
@@ -142,4 +144,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-11 10:49 UTC*
+*Last synced: 2026-09-11 16:04 UTC*

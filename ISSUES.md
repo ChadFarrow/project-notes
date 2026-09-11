@@ -79,8 +79,7 @@
 
 ## LIT_Bot
 
-### Open
-- [#4 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/LIT_Bot/issues/4)
+*No open issues*
 
 ## LibreRelayBot
 
@@ -105,7 +104,6 @@
 ## boostmebitch
 
 ### Open
-- [#377 A silent bunker relay costs 90 s with nothing on screen](https://github.com/ChadFarrow/boostmebitch/issues/377)
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
@@ -127,4 +125,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-11 10:48 UTC*
+*Last synced: 2026-09-11 16:04 UTC*
