@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-09-11 19:47 UTC
+# Cross-repo audit — 2026-09-11 20:38 UTC
 
 ## Open pull requests
 
-- [ ] **LIT_Bot #10** — Count publish outcomes, not promise states — `failed` was always 0 · opened 2 hours ago by ChadFarrow
-- [ ] **boostbox #25** — feat(scripts): check a Podcast Index key before deploying it · opened 6 hours ago by ChadFarrow
+- [ ] **LIT_Bot #10** — Count publish outcomes, not promise states — `failed` was always 0 · opened 3 hours ago by ChadFarrow
+- [ ] **boostbox #25** — feat(scripts): check a Podcast Index key before deploying it · opened 7 hours ago by ChadFarrow
 - [ ] **boostmebitch #375** — Downloads: keep an episode on the device and play it without a connection · opened 2 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #132** — feat(queue): a cross-show listen queue (Up Next) _(draft)_ · opened 1 month ago by ChadFarrow
@@ -18,9 +18,9 @@
 
 ## Open issues
 
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 2 hours ago by ChadFarrow (0 comments)
-- [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 2 hours ago by ChadFarrow (0 comments)
-- [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 2 hours ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 3 hours ago by ChadFarrow (0 comments)
+- [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 3 hours ago by ChadFarrow (0 comments)
+- [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 3 hours ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 5 days ago by ChadFarrow (0 comments)
@@ -46,6 +46,7 @@
 
 ## Branches with no open PR
 
+- [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `BoostAfterBoost` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `BoostAfterBoost` — `drop-unreachable-relay`
 - [ ] `BoostAfterBoost` — `fix/cold-start-hang-and-log-perms`
@@ -64,7 +65,6 @@
 - [ ] `LIT_Bot` — `fix/node22-websocket`
 - [ ] `LIT_Bot` — `fix/nostr-tools-socket-leak`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
-- [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
