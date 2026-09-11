@@ -85,7 +85,10 @@
 
 - `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
+- `fix/app-log-perms`
+- `fix/node22-websocket`
 - `fix/nostr-tools-socket-leak`
+- `fix/relay-publish-count`
 - `main`
 - `untrack-runtime-state`
 
@@ -93,6 +96,8 @@
 
 - `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
+- `fix/cold-start-hang-and-log-perms`
+- `fix/node22-websocket`
 - `fix/nostr-tools-socket-leak`
 - `fix/znc-whois-reconnect-loop`
 - `main`
@@ -101,6 +106,8 @@
 
 - `claude/bots-migration-vps-8ga9qa`
 - `drop-unreachable-relay`
+- `fix/cold-start-hang-and-log-perms`
+- `fix/node22-websocket`
 - `fix/nostr-tools-socket-leak`
 - `fix/znc-whois-reconnect-loop`
 - `main`
@@ -144,4 +151,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-11 16:04 UTC*
+*Last synced: 2026-09-11 19:47 UTC*

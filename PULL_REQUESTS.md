@@ -68,7 +68,7 @@
 
 ## LIT_Bot
 
-*No open pull requests*
+- [#10 Count publish outcomes, not promise states — `failed` was always 0](https://github.com/ChadFarrow/LIT_Bot/pull/10)
 
 ## LibreRelayBot
 
@@ -76,7 +76,7 @@
 
 ## BoostAfterBoost
 
-- [#6 Tag each relayed boost with its amount, the boost topic tags, the episode guid and the origin app](https://github.com/ChadFarrow/BoostAfterBoost/pull/6)
+*No open pull requests*
 
 ## stablekraft-app
 
@@ -109,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-11 16:04 UTC*
+*Last synced: 2026-09-11 19:47 UTC*

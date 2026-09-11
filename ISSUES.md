@@ -79,17 +79,18 @@
 
 ## LIT_Bot
 
-*No open issues*
+### Open
+- [#11 Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID](https://github.com/ChadFarrow/LIT_Bot/issues/11)
 
 ## LibreRelayBot
 
 ### Open
-- [#3 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/LibreRelayBot/issues/3)
+- [#11 Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts](https://github.com/ChadFarrow/LibreRelayBot/issues/11)
+- [#10 Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it](https://github.com/ChadFarrow/LibreRelayBot/issues/10)
 
 ## BoostAfterBoost
 
-### Open
-- [#4 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/BoostAfterBoost/issues/4)
+*No open issues*
 
 ## stablekraft-app
 
@@ -125,4 +126,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-11 16:04 UTC*
+*Last synced: 2026-09-11 19:47 UTC*
