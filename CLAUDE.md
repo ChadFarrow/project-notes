@@ -67,6 +67,33 @@ The `{{end}}'` lines closing the `gh search --template` strings must sit at exac
 
 The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase retry loop. A manual push can still collide with a scheduled run — if you hit a conflict in `LATEST.md` or `audits/<date>.md`, take either side and re-run the workflow, since both files are regenerated wholesale.
 
+### Runner maintenance
+
+Every run currently logs a deprecation warning:
+
+```
+Node.js 20 is deprecated. The following actions target Node.js 20 but are being
+forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4
+```
+
+It is harmless today — the runner force-runs both on Node 24 — but it will become
+a hard failure once Node 20 support is removed ([changelog](https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/)).
+Bumping `actions/checkout@v4` → `@v5` clears half of it.
+
+The other half should be deleted rather than bumped: **the `Setup Node` step is
+dead weight.** The sync script never invokes `node`, `npm`, or `npx` — it only
+uses `gh`, `jq`, and `date`, all preinstalled on the ubuntu runner. Dropping the
+step (and its `node-version: '20'`) removes the warning by removing the cause,
+and cuts a few seconds off every run.
+
+Note that `node-version: '20'` is *not* what the warning is about — that selects
+the Node toolchain for the job, whereas the warning is about the runtime the
+action itself declares in its own `action.yml`. Changing `node-version` alone
+would silence nothing.
+
+If you delete the `Setup Node` step, the step indices shift, so the extraction
+snippet above becomes `steps[1]` rather than `steps[2]`.
+
 ## Editing Guidelines
 
 - `INDEX.md`, `ISSUES.md`, `PULL_REQUESTS.md`, `BRANCHES.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), and `references/starred.md` are **auto-generated** — do not edit manually (changes will be overwritten by the next sync). To change what they contain, edit the generator in `sync-all.yml`.
