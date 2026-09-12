@@ -38,9 +38,9 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
-- [sidecar](https://github.com/ChadFarrow/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 *(NEW)*
-- [thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) - Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode *(NEW)*
 - [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
+- [thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) - Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode *(NEW)*
+- [sidecar](https://github.com/ChadFarrow/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 *(NEW)*
 - [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
 - [pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) - A public reference for Podcasting 2.0 — the namespace, the payments, and the plumbing underneath. Built from an Obsidian vault. *(NEW)*
 - [pc20-timeline](https://github.com/ChadFarrow/pc20-timeline) -  *(NEW)*
