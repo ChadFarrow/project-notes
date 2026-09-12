@@ -127,6 +127,7 @@
 ## boostmebitch
 
 - `feat/downloads`
+- `feat/downloads-v2`
 - `feat/libre-wallet-embed`
 - `feature/inbox-listen-queue`
 - `fix/keyboard-inset-phantom`
@@ -153,4 +154,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-12 10:17 UTC*
+*Last synced: 2026-09-12 15:12 UTC*

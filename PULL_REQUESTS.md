@@ -88,7 +88,7 @@
 
 ## boostmebitch
 
-- [#375 Downloads: keep an episode on the device and play it without a connection](https://github.com/ChadFarrow/boostmebitch/pull/375)
+- [#389 Downloads: keep an episode on the device and play it without a connection](https://github.com/ChadFarrow/boostmebitch/pull/389)
 - [#132 feat(queue): a cross-show listen queue (Up Next)](https://github.com/ChadFarrow/boostmebitch/pull/132)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -109,4 +109,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-12 10:17 UTC*
+*Last synced: 2026-09-12 15:12 UTC*
