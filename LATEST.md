@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-12 03:38 UTC
+# Cross-repo audit — 2026-09-12 03:41 UTC
 
 ## Open pull requests
 
@@ -17,7 +17,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #388** — buddy boost iso · opened 38 minutes ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #388** — buddy boost iso · opened 41 minutes ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 4 hours ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 10 hours ago by ChadFarrow (0 comments)
 - [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 10 hours ago by ChadFarrow (0 comments)
