@@ -39,12 +39,21 @@ jobs:
           # took the whole sync down on the very first `gh` call with
           # "HTTP 401: Bad credentials". Probe it once and fall back to GITHUB_TOKEN,
           # which regenerates everything except the audit.
+          #
+          # Falling back does NOT empty the audit, which is the trap: GITHUB_TOKEN can
+          # still read every *public* repo through the search API, so the output looks
+          # complete while silently dropping private ones. Both branches are warnings
+          # (not a notice) and AUDIT_DEGRADED carries the reason into the generated
+          # file, so a degraded audit is visible in LATEST.md rather than only here.
           AUDIT_OK=1
+          AUDIT_DEGRADED=""
           if [ -z "${AUDIT_TOKEN:-}" ]; then
-            echo "::notice::AUDIT_TOKEN is not set — the owner-wide audit sections will be empty."
+            AUDIT_DEGRADED="\`AUDIT_TOKEN\` is not set (or is set to an empty value)"
+            echo "::warning::AUDIT_TOKEN is empty or unset — private repos will be silently omitted from the owner-wide audit; public repos still resolve via GITHUB_TOKEN. Note that \`gh secret set\` stores an empty value when it cannot prompt for one (no TTY), which is indistinguishable from an unset secret here."
             AUDIT_OK=0
           elif ! GH_TOKEN="$AUDIT_TOKEN" gh api rate_limit >/dev/null 2>&1; then
-            echo "::warning::AUDIT_TOKEN was rejected by GitHub (expired or revoked). Falling back to GITHUB_TOKEN — the owner-wide audit sections will be empty until the secret is rotated."
+            AUDIT_DEGRADED="\`AUDIT_TOKEN\` was rejected by GitHub (expired or revoked)"
+            echo "::warning::AUDIT_TOKEN was rejected by GitHub (expired or revoked). Falling back to GITHUB_TOKEN — private repos will be silently omitted from the owner-wide audit until the secret is rotated."
             AUDIT_OK=0
           fi
           if [ "$AUDIT_OK" = "1" ]; then
@@ -295,6 +304,18 @@ jobs:
           {
             echo "# Cross-repo audit — $(date -u '+%Y-%m-%d %H:%M UTC')"
             echo
+            if [ -n "$AUDIT_DEGRADED" ]; then
+              echo "> [!WARNING]"
+              echo "> **This audit is incomplete — private repositories are missing.**"
+              echo ">"
+              echo "> $AUDIT_DEGRADED, so this ran with the default \`GITHUB_TOKEN\`, which"
+              echo "> only sees public repos. Every section below is public-only; open PRs,"
+              echo "> issues and branches in private repos are absent, not resolved."
+              echo ">"
+              echo "> Fix: rotate the secret (repo Settings → Secrets and variables → Actions →"
+              echo "> \`AUDIT_TOKEN\`) with a PAT carrying \`repo\` scope, then re-run the workflow."
+              echo
+            fi
 
             echo "## Open pull requests"
             echo
@@ -302,7 +323,7 @@ jobs:
               --json repository,number,title,createdAt,isDraft,author \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}}{{if .isDraft}} _(draft)_{{end}} · opened {{timeago .createdAt}} by {{.author.login}}
           {{end}}' \
-              || echo "_Unavailable — AUDIT_TOKEN is missing or expired._"
+              || echo "_Unavailable — the \`gh search\` call failed (rate limit, transient error, or token)._"
 
             echo
             echo "## Open issues"
@@ -311,7 +332,7 @@ jobs:
               --json repository,number,title,createdAt,author,commentsCount \
               --template '{{range .}}- [ ] **{{.repository.name}} #{{.number}}** — {{.title}} · opened {{timeago .createdAt}} by {{.author.login}} ({{.commentsCount}} comments)
           {{end}}' \
-              || echo "_Unavailable — AUDIT_TOKEN is missing or expired._"
+              || echo "_Unavailable — the \`gh search\` call failed (rate limit, transient error, or token)._"
 
             echo
             echo "## Branches with no open PR"
