@@ -7,6 +7,7 @@
 ## MSP-2.0
 
 ### Open
+- [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138)
 - [#137 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0/issues/137)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
 - [#13 Support <podcast:category> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13)
@@ -105,6 +106,7 @@
 ## boostmebitch
 
 ### Open
+- [#388 buddy boost iso](https://github.com/ChadFarrow/boostmebitch/issues/388)
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
@@ -126,4 +128,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-11 20:38 UTC*
+*Last synced: 2026-09-12 03:38 UTC*

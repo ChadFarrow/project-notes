@@ -88,7 +88,6 @@
 - `fix/app-log-perms`
 - `fix/node22-websocket`
 - `fix/nostr-tools-socket-leak`
-- `fix/relay-publish-count`
 - `main`
 - `untrack-runtime-state`
 
@@ -151,4 +150,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-11 20:38 UTC*
+*Last synced: 2026-09-12 03:38 UTC*
