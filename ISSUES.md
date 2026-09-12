@@ -76,7 +76,8 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-*No open issues*
+### Open
+- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16)
 
 ## LIT_Bot
 
@@ -128,4 +129,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-12 03:48 UTC*
+*Last synced: 2026-09-12 03:52 UTC*

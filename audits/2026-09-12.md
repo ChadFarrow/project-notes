@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-09-12 03:48 UTC
+# Cross-repo audit — 2026-09-12 03:53 UTC
 
 ## Open pull requests
 
+- [ ] **thelounge-candr #9** — Describe the stack that is actually running, not the planned one · opened 9 hours ago by ChadFarrow
 - [ ] **boostbox #25** — feat(scripts): check a Podcast Index key before deploying it · opened 14 hours ago by ChadFarrow
 - [ ] **boostmebitch #375** — Downloads: keep an episode on the device and play it without a connection · opened 2 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 3 days ago by ChadFarrow
@@ -17,14 +18,16 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #388** — buddy boost iso · opened 48 minutes ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #388** — buddy boost iso · opened 53 minutes ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 4 hours ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 10 hours ago by ChadFarrow (0 comments)
 - [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 10 hours ago by ChadFarrow (0 comments)
 - [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 10 hours ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 3 days ago by ChadFarrow (0 comments)
+- [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **is-this-thing-on #18** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **HPM-Lightning #3** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **NMNU #2** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 6 days ago by ChadFarrow (0 comments)
@@ -40,6 +43,7 @@
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
+- [ ] **blup #2** — force logout · opened 3 months ago by ChadFarrow (0 comments)
 - [ ] **lnaddress-music #4** — BoostBox · opened 6 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #21** — Make feed layout match the DeMu template. · opened 7 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #13** — Support <podcast:category> - RFC · opened 7 months ago by Kolomona (0 comments)
@@ -47,6 +51,7 @@
 
 ## Branches with no open PR
 
+- [ ] `candr.space` — `chapterize-tool`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `LIT_Bot` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `LIT_Bot` — `drop-unreachable-relay`
@@ -54,6 +59,7 @@
 - [ ] `LIT_Bot` — `fix/node22-websocket`
 - [ ] `LIT_Bot` — `fix/nostr-tools-socket-leak`
 - [ ] `LIT_Bot` — `untrack-runtime-state`
+- [ ] `thelounge-candr` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `BoostAfterBoost` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `BoostAfterBoost` — `drop-unreachable-relay`
 - [ ] `BoostAfterBoost` — `fix/cold-start-hang-and-log-perms`
@@ -70,6 +76,8 @@
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
+- [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
+- [ ] `Helipad-to-Nostr-BoostBot` — `nip73-podcast-guids`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`

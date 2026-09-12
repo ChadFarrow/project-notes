@@ -79,7 +79,9 @@
 
 ## Helipad-to-Nostr-BoostBot
 
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
+- `fix-env-example-relay`
+- `main`
+- `nip73-podcast-guids`
 
 ## LIT_Bot
 
@@ -143,11 +145,12 @@
 
 ## candr.space
 
-{"message":"Not Found","documentation_url":"https://docs.github.com/rest/branches/branches#list-branches","status":"404"}
+- `chapterize-tool`
+- `main`
 
 ## HGH-checker
 
 - `master`
 
 ---
-*Last synced: 2026-09-12 03:48 UTC*
+*Last synced: 2026-09-12 03:53 UTC*
