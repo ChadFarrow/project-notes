@@ -126,7 +126,9 @@
 
 ## boostmebitch
 
+- `audit/second-pass`
 - `feat/downloads`
+- `feat/favorites-new`
 - `feat/libre-wallet-embed`
 - `feat/listen-queue`
 - `feature/inbox-listen-queue`
@@ -154,4 +156,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-12 20:18 UTC*
+*Last synced: 2026-09-13 00:37 UTC*
