@@ -1,10 +1,10 @@
-# Cross-repo audit — 2026-09-13 15:48 UTC
+# Cross-repo audit — 2026-09-13 20:28 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 15 hours ago by ChadFarrow
-- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 18 hours ago by ChadFarrow
-- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 22 hours ago by ChadFarrow
+- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 20 hours ago by ChadFarrow
+- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 23 hours ago by ChadFarrow
+- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 1 day ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 5 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
@@ -20,9 +20,9 @@
 
 - [ ] **boostmebitch #388** — buddy boost iso · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 1 day ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 2 days ago by ChadFarrow (0 comments)
+- [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 2 days ago by ChadFarrow (0 comments)
+- [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 4 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
@@ -37,7 +37,7 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 9 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 10 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
@@ -51,31 +51,13 @@
 
 ## Branches with no open PR
 
+- [ ] `thelounge-candr` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `boostmebitch` — `feat/downloads`
 - [ ] `boostmebitch` — `feature/inbox-listen-queue`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
-- [ ] `thelounge-candr` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `candr.space` — `chapterize-tool`
-- [ ] `LIT_Bot` — `claude/bots-migration-vps-8ga9qa`
-- [ ] `LIT_Bot` — `drop-unreachable-relay`
-- [ ] `LIT_Bot` — `fix/app-log-perms`
-- [ ] `LIT_Bot` — `fix/node22-websocket`
-- [ ] `LIT_Bot` — `fix/nostr-tools-socket-leak`
-- [ ] `LIT_Bot` — `untrack-runtime-state`
-- [ ] `BoostAfterBoost` — `claude/bots-migration-vps-8ga9qa`
-- [ ] `BoostAfterBoost` — `drop-unreachable-relay`
-- [ ] `BoostAfterBoost` — `fix/cold-start-hang-and-log-perms`
-- [ ] `BoostAfterBoost` — `fix/node22-websocket`
-- [ ] `BoostAfterBoost` — `fix/nostr-tools-socket-leak`
-- [ ] `BoostAfterBoost` — `fix/znc-whois-reconnect-loop`
-- [ ] `LibreRelayBot` — `claude/bots-migration-vps-8ga9qa`
-- [ ] `LibreRelayBot` — `drop-unreachable-relay`
-- [ ] `LibreRelayBot` — `fix/cold-start-hang-and-log-perms`
-- [ ] `LibreRelayBot` — `fix/node22-websocket`
-- [ ] `LibreRelayBot` — `fix/nostr-tools-socket-leak`
-- [ ] `LibreRelayBot` — `fix/znc-whois-reconnect-loop`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
