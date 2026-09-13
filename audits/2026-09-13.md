@@ -1,15 +1,15 @@
-# Cross-repo audit — 2026-09-13 11:17 UTC
+# Cross-repo audit — 2026-09-13 15:48 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 11 hours ago by ChadFarrow
-- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 14 hours ago by ChadFarrow
-- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 17 hours ago by ChadFarrow
+- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 15 hours ago by ChadFarrow
+- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 18 hours ago by ChadFarrow
+- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 22 hours ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 1 day ago by ChadFarrow
-- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 4 days ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 5 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
-- [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 2 months ago by ChadFarrow
+- [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 3 months ago by ChadFarrow
 - [ ] **IRL_QR #19** — Replace payment feed with configurable multi-QR code grid · opened 6 months ago by ChadFarrow
 - [ ] **HPM-Lightning #2** — Fix React Server Components CVE vulnerabilities _(draft)_ · opened 9 months ago by vercel[bot]
@@ -23,8 +23,8 @@
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **LibreRelayBot #11** — Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **LibreRelayBot #10** — Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 3 days ago by ChadFarrow (0 comments)
-- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 4 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 4 days ago by ChadFarrow (0 comments)
+- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
@@ -38,7 +38,7 @@
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 9 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 13 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
