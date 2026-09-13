@@ -1,11 +1,11 @@
-# Cross-repo audit — 2026-09-13 03:50 UTC
+# Cross-repo audit — 2026-09-13 11:17 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 3 hours ago by ChadFarrow
-- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 6 hours ago by ChadFarrow
-- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 10 hours ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 22 hours ago by ChadFarrow
+- [ ] **boostmebitch #392** — Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers · opened 11 hours ago by ChadFarrow
+- [ ] **boostmebitch #391** — docs(queue): carry the inbox/queue design documents onto current main · opened 14 hours ago by ChadFarrow
+- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 17 hours ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 1 day ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 4 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 1 month ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
@@ -54,6 +54,8 @@
 - [ ] `boostmebitch` — `feat/downloads`
 - [ ] `boostmebitch` — `feature/inbox-listen-queue`
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
+- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `thelounge-candr` — `claude/bots-migration-vps-8ga9qa`
 - [ ] `candr.space` — `chapterize-tool`
 - [ ] `LIT_Bot` — `claude/bots-migration-vps-8ga9qa`
@@ -76,8 +78,6 @@
 - [ ] `LibreRelayBot` — `fix/znc-whois-reconnect-loop`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
-- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
 - [ ] `Helipad-to-Nostr-BoostBot` — `nip73-podcast-guids`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
