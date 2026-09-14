@@ -1,13 +1,13 @@
-# Cross-repo audit — 2026-09-14 03:57 UTC
+# Cross-repo audit — 2026-09-14 12:09 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #399** — Write down the kind:3 size ceiling on remote signers · opened 2 hours ago by ChadFarrow
-- [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 2 hours ago by ChadFarrow
-- [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 5 hours ago by ChadFarrow
+- [ ] **boostmebitch #399** — Write down the kind:3 size ceiling on remote signers · opened 10 hours ago by ChadFarrow
+- [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 10 hours ago by ChadFarrow
+- [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 13 hours ago by ChadFarrow
 - [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 1 day ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 1 day ago by ChadFarrow
-- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 5 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 2 days ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 6 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
@@ -22,7 +22,7 @@
 - [ ] **boostmebitch #388** — buddy boost iso · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 2 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 4 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 8 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 8 days ago by ChadFarrow (0 comments)
