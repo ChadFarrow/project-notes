@@ -88,8 +88,9 @@
 
 ## boostmebitch
 
-- [#392 Audit pass two: a stored-XSS residual, three check vectors that were asserted against nothing, and two measured numbers](https://github.com/ChadFarrow/boostmebitch/pull/392)
-- [#391 docs(queue): carry the inbox/queue design documents onto current main](https://github.com/ChadFarrow/boostmebitch/pull/391)
+- [#399 Write down the kind:3 size ceiling on remote signers](https://github.com/ChadFarrow/boostmebitch/pull/399)
+- [#398 docs(queue): carry the inbox/queue design documents onto current main](https://github.com/ChadFarrow/boostmebitch/pull/398)
+- [#397 DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit)](https://github.com/ChadFarrow/boostmebitch/pull/397)
 - [#390 A cross-show listen queue (Up Next), and seven fixes from reviewing it](https://github.com/ChadFarrow/boostmebitch/pull/390)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-13 20:28 UTC*
+*Last synced: 2026-09-14 03:56 UTC*

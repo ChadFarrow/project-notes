@@ -126,7 +126,8 @@
 
 ## boostmebitch
 
-- `audit/second-pass`
+- `claude/unchecked-shows-meaning-ebd9u6`
+- `docs/kind3-signer-limit`
 - `feat/downloads`
 - `feat/favorites-new`
 - `feat/libre-wallet-embed`
@@ -134,6 +135,7 @@
 - `feature/inbox-listen-queue`
 - `fix/keyboard-inset-phantom`
 - `main`
+- `merge/stack-onto-main`
 
 ## web-ui
 
@@ -156,4 +158,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-13 20:28 UTC*
+*Last synced: 2026-09-14 03:57 UTC*

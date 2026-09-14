@@ -86,9 +86,7 @@
 
 ## LibreRelayBot
 
-### Open
-- [#11 Relayed notes carry no boost evidence, no provenance, and show-level identity for track-level boosts](https://github.com/ChadFarrow/LibreRelayBot/issues/11)
-- [#10 Document what PODCAST_INDEX_API_KEY actually gates — and what still works without it](https://github.com/ChadFarrow/LibreRelayBot/issues/10)
+*No open issues*
 
 ## BoostAfterBoost
 
@@ -129,4 +127,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-13 20:28 UTC*
+*Last synced: 2026-09-14 03:56 UTC*
