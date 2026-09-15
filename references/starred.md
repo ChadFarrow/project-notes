@@ -48,7 +48,7 @@
 
 ## Other
 - [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Decentralized commerce on Nostr + Bitcoin Lightning
-- [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman
+- [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
 - [napstr](https://github.com/lnbits/napstr) - No description
 - [hanami](https://github.com/Letdown2491/hanami) - No description
 - [go](https://github.com/getAlby/go) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub.
@@ -108,4 +108,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-09-15 03:56 UTC*
+*Last synced: 2026-09-15 11:20 UTC*
