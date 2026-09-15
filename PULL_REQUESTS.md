@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#402 feat(boost): pay a qualifying leg as a real NIP-57 zap so the note can quote its receipt](https://github.com/ChadFarrow/boostmebitch/pull/402)
 - [#399 Write down the kind:3 size ceiling on remote signers](https://github.com/ChadFarrow/boostmebitch/pull/399)
 - [#398 docs(queue): carry the inbox/queue design documents onto current main](https://github.com/ChadFarrow/boostmebitch/pull/398)
 - [#397 DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit)](https://github.com/ChadFarrow/boostmebitch/pull/397)
@@ -111,4 +112,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-15 11:19 UTC*
+*Last synced: 2026-09-15 16:31 UTC*
