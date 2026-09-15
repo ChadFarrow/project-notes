@@ -126,6 +126,7 @@
 
 ## boostmebitch
 
+- `claude/boost-tracks-min-sats-fk2bfo`
 - `claude/new-session-8xcj6t`
 - `claude/unchecked-shows-meaning-ebd9u6`
 - `docs/kind3-signer-limit`
@@ -159,4 +160,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-15 16:31 UTC*
+*Last synced: 2026-09-15 20:58 UTC*

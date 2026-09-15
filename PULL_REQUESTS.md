@@ -88,6 +88,7 @@
 
 ## boostmebitch
 
+- [#403 fix(boost): value_msat_total is per leg group, and boost-all says "per track"](https://github.com/ChadFarrow/boostmebitch/pull/403)
 - [#402 feat(boost): pay a qualifying leg as a real NIP-57 zap so the note can quote its receipt](https://github.com/ChadFarrow/boostmebitch/pull/402)
 - [#399 Write down the kind:3 size ceiling on remote signers](https://github.com/ChadFarrow/boostmebitch/pull/399)
 - [#398 docs(queue): carry the inbox/queue design documents onto current main](https://github.com/ChadFarrow/boostmebitch/pull/398)
@@ -112,4 +113,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-15 16:31 UTC*
+*Last synced: 2026-09-15 20:58 UTC*
