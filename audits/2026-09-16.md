@@ -1,14 +1,14 @@
-# Cross-repo audit — 2026-09-16 03:54 UTC
+# Cross-repo audit — 2026-09-16 11:02 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #403** — fix(boost): value_msat_total is per leg group, and boost-all says "per track" · opened 8 hours ago by ChadFarrow
-- [ ] **boostmebitch #402** — feat(boost): pay a qualifying leg as a real NIP-57 zap so the note can quote its receipt · opened 13 hours ago by ChadFarrow
+- [ ] **boostmebitch #403** — fix(boost): value_msat_total is per leg group, and boost-all says "per track" · opened 15 hours ago by ChadFarrow
+- [ ] **boostmebitch #402** — feat(boost): pay a qualifying leg as a real NIP-57 zap so the note can quote its receipt · opened 20 hours ago by ChadFarrow
 - [ ] **boostmebitch #399** — Write down the kind:3 size ceiling on remote signers · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 3 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 3 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 4 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 7 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
