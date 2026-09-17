@@ -1,13 +1,13 @@
-# Cross-repo audit — 2026-09-17 03:59 UTC
+# Cross-repo audit — 2026-09-17 11:13 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #406** — test(boost): restore the body nevent beside the `q` tag — does Fountain's ⚡ badge read it? _(draft)_ · opened 3 hours ago by ChadFarrow
+- [ ] **boostmebitch #406** — test(boost): restore the body nevent beside the `q` tag — does Fountain's ⚡ badge read it? _(draft)_ · opened 10 hours ago by ChadFarrow
 - [ ] **boostmebitch #399** — Write down the kind:3 size ceiling on remote signers · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 4 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 4 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 5 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 8 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
