@@ -128,6 +128,7 @@
 
 - `claude/unchecked-shows-meaning-ebd9u6`
 - `claude/zap-quote-body-form-test`
+- `docs/kind3-cross-reference`
 - `docs/kind3-signer-limit`
 - `feat/downloads`
 - `feat/favorites-new`
@@ -159,4 +160,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-17 16:29 UTC*
+*Last synced: 2026-09-17 21:03 UTC*
