@@ -1,11 +1,12 @@
-# Cross-repo audit — 2026-09-18 16:01 UTC
+# Cross-repo audit — 2026-09-18 20:35 UTC
 
 ## Open pull requests
 
-- [ ] **thelounge-candr #22** — docs: how to turn zap receipts on, and how to give candr-boost a key · opened 3 hours ago by ChadFarrow
+- [ ] **boostbox #27** — feat(nostrbot): say why a transaction published nothing · opened 3 hours ago by ChadFarrow
+- [ ] **thelounge-candr #22** — docs: how to turn zap receipts on, and how to give candr-boost a key · opened 7 hours ago by ChadFarrow
 - [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 4 days ago by ChadFarrow
 - [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 4 days ago by ChadFarrow
-- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 5 days ago by ChadFarrow
+- [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 6 days ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 6 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 10 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
@@ -21,7 +22,7 @@
 
 - [ ] **boostmebitch #388** — buddy boost iso · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 6 days ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 9 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 12 days ago by ChadFarrow (0 comments)
@@ -36,7 +37,7 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 12 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 12 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 12 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 14 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 15 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #175** — up date downloads UI · opened 1 month ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
@@ -50,6 +51,7 @@
 
 ## Branches with no open PR
 
+- [ ] `candr.space` — `chapterize-tool`
 - [ ] `boostmebitch` — `claude/zap-quote-body-form-test`
 - [ ] `boostmebitch` — `docs/kind3-signer-limit`
 - [ ] `boostmebitch` — `feat/downloads`
@@ -60,7 +62,6 @@
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
-- [ ] `candr.space` — `chapterize-tool`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
 - [ ] `Helipad-to-Nostr-BoostBot` — `nip73-podcast-guids`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
