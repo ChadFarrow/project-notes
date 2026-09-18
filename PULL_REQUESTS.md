@@ -88,7 +88,6 @@
 
 ## boostmebitch
 
-- [#411 docs(nostr): the kind:3 paragraph points at the 849-follow ceiling](https://github.com/ChadFarrow/boostmebitch/pull/411)
 - [#398 docs(queue): carry the inbox/queue design documents onto current main](https://github.com/ChadFarrow/boostmebitch/pull/398)
 - [#397 DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit)](https://github.com/ChadFarrow/boostmebitch/pull/397)
 - [#390 A cross-show listen queue (Up Next), and seven fixes from reviewing it](https://github.com/ChadFarrow/boostmebitch/pull/390)
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-17 21:03 UTC*
+*Last synced: 2026-09-18 03:46 UTC*

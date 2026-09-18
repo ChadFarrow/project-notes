@@ -105,7 +105,6 @@
 ## boostmebitch
 
 ### Open
-- [#410 Some login with Nostr buttons don't offer Google login](https://github.com/ChadFarrow/boostmebitch/issues/410)
 - [#388 buddy boost iso](https://github.com/ChadFarrow/boostmebitch/issues/388)
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
@@ -128,4 +127,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-17 21:03 UTC*
+*Last synced: 2026-09-18 03:46 UTC*
