@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-19 02:40 UTC
+# Cross-repo audit — 2026-09-19 03:42 UTC
 
 ## Open pull requests
 
@@ -18,7 +18,7 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #388** — buddy boost iso · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #388** — buddy boost iso · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 7 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 9 days ago by ChadFarrow (0 comments)
@@ -49,6 +49,8 @@
 
 ## Branches with no open PR
 
+- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `candr.space` — `chapterize-tool`
 - [ ] `boostmebitch` — `claude/zap-quote-body-form-test`
 - [ ] `boostmebitch` — `docs/kind3-signer-limit`
@@ -58,8 +60,6 @@
 - [ ] `boostmebitch` — `fix/keyboard-inset-phantom`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
-- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`
 - [ ] `Helipad-to-Nostr-BoostBot` — `nip73-podcast-guids`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
