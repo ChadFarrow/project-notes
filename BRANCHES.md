@@ -127,15 +127,16 @@
 
 ## boostmebitch
 
-- `claude/unchecked-shows-meaning-ebd9u6`
-- `claude/zap-quote-body-form-test`
 - `docs/kind3-signer-limit`
 - `feat/downloads`
+- `feat/downloads-reland`
 - `feat/favorites-new`
 - `feat/libre-wallet-embed`
 - `feat/listen-queue`
-- `feature/inbox-listen-queue`
-- `fix/keyboard-inset-phantom`
+- `feat/new-episodes-on-main`
+- `feat/queue-inbox`
+- `feat/queue-on-main`
+- `fix/audit-392-residuals`
 - `main`
 - `merge/stack-onto-main`
 
@@ -160,4 +161,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-19 10:30 UTC*
+*Last synced: 2026-09-19 15:33 UTC*
