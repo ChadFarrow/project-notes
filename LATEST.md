@@ -1,11 +1,12 @@
-# Cross-repo audit — 2026-09-19 03:42 UTC
+# Cross-repo audit — 2026-09-19 10:30 UTC
 
 ## Open pull requests
 
+- [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 6 hours ago by ChadFarrow
 - [ ] **boostmebitch #398** — docs(queue): carry the inbox/queue design documents onto current main · opened 5 days ago by ChadFarrow
 - [ ] **boostmebitch #397** — DO NOT MERGE YET — the stack resolved against main (downloads, queue, new episodes, audit) _(draft)_ · opened 5 days ago by ChadFarrow
 - [ ] **boostmebitch #390** — A cross-show listen queue (Up Next), and seven fixes from reviewing it · opened 6 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 6 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 7 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 10 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow

@@ -80,6 +80,7 @@
 
 ## stablekraft-app
 
+- [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266)
 - [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257)
 
 ## chadf-landing-page
@@ -110,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-19 03:42 UTC*
+*Last synced: 2026-09-19 10:29 UTC*

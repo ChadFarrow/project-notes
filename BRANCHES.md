@@ -119,6 +119,7 @@
 - `claude/git-pull-rd2q57`
 - `feature/genre-and-v4v-tags`
 - `main`
+- `worktree-fix-private-item-leak`
 
 ## chadf-landing-page
 
@@ -159,4 +160,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-19 03:42 UTC*
+*Last synced: 2026-09-19 10:30 UTC*
