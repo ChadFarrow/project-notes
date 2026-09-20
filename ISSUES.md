@@ -95,6 +95,7 @@
 ## stablekraft-app
 
 ### Open
+- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272)
 - [#175 up date downloads UI](https://github.com/ChadFarrow/stablekraft-app/issues/175)
 - [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
@@ -127,4 +128,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-19 20:12 UTC*
+*Last synced: 2026-09-20 03:58 UTC*

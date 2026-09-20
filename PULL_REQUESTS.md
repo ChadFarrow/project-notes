@@ -89,7 +89,6 @@
 
 ## boostmebitch
 
-- [#426 fix(live): read a Podcast Index 0 as no timestamp, not as a broadcast that ended in 1970](https://github.com/ChadFarrow/boostmebitch/pull/426)
 - [#424 New episodes from your favorites, on main — probe-first, and one cap for both ends](https://github.com/ChadFarrow/boostmebitch/pull/424)
 - [#422 The listen queue on main — and #414's resume position wired into its four paths](https://github.com/ChadFarrow/boostmebitch/pull/422)
 - [#421 Downloads, re-landed on current main — and the id bug that paid the show instead of the song](https://github.com/ChadFarrow/boostmebitch/pull/421)
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-19 20:12 UTC*
+*Last synced: 2026-09-20 03:58 UTC*
