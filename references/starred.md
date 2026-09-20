@@ -47,6 +47,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [Libre-Soundboard](https://github.com/Kolomona/Libre-Soundboard) - LibreSoundboard is a native Linux desktop JACK enabled soundboard application.
 - [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Decentralized commerce on Nostr + Bitcoin Lightning
 - [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
 - [napstr](https://github.com/lnbits/napstr) - No description
@@ -108,4 +109,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-09-20 20:29 UTC*
+*Last synced: 2026-09-20 21:12 UTC*

@@ -115,7 +115,6 @@
 
 ## stablekraft-app
 
-- `claude/carry-i-tag-tail`
 - `claude/git-pull-rd2q57`
 - `feature/genre-and-v4v-tags`
 - `main`
@@ -159,4 +158,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-20 20:29 UTC*
+*Last synced: 2026-09-20 21:12 UTC*

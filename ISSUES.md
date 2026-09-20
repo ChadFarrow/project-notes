@@ -96,7 +96,6 @@
 
 ### Open
 - [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272)
-- [#171 explore low bandwidth mode](https://github.com/ChadFarrow/stablekraft-app/issues/171)
 
 ## chadf-landing-page
 
@@ -127,4 +126,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-20 20:29 UTC*
+*Last synced: 2026-09-20 21:12 UTC*

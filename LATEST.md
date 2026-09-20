@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-20 20:29 UTC
+# Cross-repo audit — 2026-09-20 21:12 UTC
 
 ## Open pull requests
 
@@ -39,7 +39,6 @@
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 17 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 21 days ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #171** — explore low bandwidth mode · opened 1 month ago by ChadFarrow (1 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 3 months ago by ChadFarrow (0 comments)
@@ -50,14 +49,13 @@
 
 ## Branches with no open PR
 
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `boostmebitch` — `docs/kind3-signer-limit`
 - [ ] `boostmebitch` — `feat/downloads`
 - [ ] `boostmebitch` — `feat/favorites-new`
 - [ ] `boostmebitch` — `feat/libre-wallet-embed`
 - [ ] `boostmebitch` — `feat/listen-queue`
 - [ ] `boostmebitch` — `merge/stack-onto-main`
-- [ ] `stablekraft-app` — `claude/carry-i-tag-tail`
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `candr.space` — `chapterize-tool`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
