@@ -135,7 +135,6 @@
 - `feat/new-episodes-on-main`
 - `feat/queue-on-main`
 - `main`
-- `merge/stack-onto-main`
 
 ## web-ui
 
@@ -158,4 +157,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-21 21:47 UTC*
+*Last synced: 2026-09-21 23:25 UTC*

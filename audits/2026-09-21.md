@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-21 21:47 UTC
+# Cross-repo audit — 2026-09-21 23:25 UTC
 
 ## Open pull requests
 
@@ -54,7 +54,6 @@
 - [ ] `boostmebitch` — `feat/favorites-new`
 - [ ] `boostmebitch` — `feat/libre-wallet-embed`
 - [ ] `boostmebitch` — `feat/listen-queue`
-- [ ] `boostmebitch` — `merge/stack-onto-main`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `candr.space` — `chapterize-tool`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
