@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-09-22 16:31 UTC
+# Cross-repo audit — 2026-09-22 21:00 UTC
 
 ## Open pull requests
 
-- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 1 hour ago by ChadFarrow
-- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 1 hour ago by ChadFarrow
+- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 6 hours ago by ChadFarrow
+- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 6 hours ago by ChadFarrow
 - [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #422** — The listen queue on main — and #414's resume position wired into its four paths · opened 3 days ago by ChadFarrow
 - [ ] **boostmebitch #421** — Downloads, re-landed on current main — and the id bug that paid the show instead of the song · opened 3 days ago by ChadFarrow
@@ -24,7 +24,7 @@
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #388** — buddy boost iso · opened 10 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 10 days ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 10 days ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 11 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 13 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 16 days ago by ChadFarrow (0 comments)
