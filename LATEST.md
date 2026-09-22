@@ -1,12 +1,12 @@
-# Cross-repo audit — 2026-09-22 03:53 UTC
+# Cross-repo audit — 2026-09-22 11:09 UTC
 
 ## Open pull requests
 
 - [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #422** — The listen queue on main — and #414's resume position wired into its four paths · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #421** — Downloads, re-landed on current main — and the id bug that paid the show instead of the song · opened 2 days ago by ChadFarrow
-- [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 2 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 9 days ago by ChadFarrow
+- [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 3 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 10 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 13 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
