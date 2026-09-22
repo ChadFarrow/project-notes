@@ -126,12 +126,9 @@
 
 ## boostmebitch
 
-- `docs/kind3-signer-limit`
-- `feat/downloads`
 - `feat/downloads-reland`
 - `feat/favorites-new`
 - `feat/libre-wallet-embed`
-- `feat/listen-queue`
 - `feat/new-episodes-on-main`
 - `feat/queue-on-main`
 - `main`
@@ -157,4 +154,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-21 23:25 UTC*
+*Last synced: 2026-09-22 03:53 UTC*
