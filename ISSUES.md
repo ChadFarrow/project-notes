@@ -104,6 +104,8 @@
 ## boostmebitch
 
 ### Open
+- [#432 Show user who's being boosted](https://github.com/ChadFarrow/boostmebitch/issues/432)
+- [#431 Double check RSS feeds when boosting](https://github.com/ChadFarrow/boostmebitch/issues/431)
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
@@ -125,4 +127,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-23 10:59 UTC*
+*Last synced: 2026-09-23 16:20 UTC*

@@ -1,16 +1,17 @@
-# Cross-repo audit — 2026-09-23 11:00 UTC
+# Cross-repo audit — 2026-09-23 16:20 UTC
 
 ## Open pull requests
 
-- [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 10 hours ago by ChadFarrow
-- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 20 hours ago by ChadFarrow
-- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 20 hours ago by ChadFarrow
-- [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 3 days ago by ChadFarrow
-- [ ] **boostmebitch #422** — The listen queue on main — and #414's resume position wired into its four paths · opened 3 days ago by ChadFarrow
-- [ ] **boostmebitch #421** — Downloads, re-landed on current main — and the id bug that paid the show instead of the song · opened 3 days ago by ChadFarrow
+- [ ] **boostmebitch #433** — feat(nostr): the boost note names the track it paid · opened 2 hours ago by ChadFarrow
+- [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 15 hours ago by ChadFarrow
+- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 1 day ago by ChadFarrow
+- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 1 day ago by ChadFarrow
+- [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 4 days ago by ChadFarrow
+- [ ] **boostmebitch #422** — The listen queue on main — and #414's resume position wired into its four paths · opened 4 days ago by ChadFarrow
+- [ ] **boostmebitch #421** — Downloads, re-landed on current main — and the id bug that paid the show instead of the song · opened 4 days ago by ChadFarrow
 - [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 4 days ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 11 days ago by ChadFarrow
-- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 14 days ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 15 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
 - [ ] **MSP-2.0 #71** — Add first-time artist setup flow for album + publisher feeds _(draft)_ · opened 3 months ago by ChadFarrow
@@ -21,12 +22,14 @@
 
 ## Open issues
 
+- [ ] **boostmebitch #432** — Show user who's being boosted · opened 4 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #431** — Double check RSS feeds when boosting · opened 4 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 11 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 11 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 13 days ago by ChadFarrow (0 comments)
-- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 14 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 14 days ago by ChadFarrow (0 comments)
+- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
@@ -39,8 +42,8 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 19 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 23 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 20 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 24 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 3 months ago by ChadFarrow (0 comments)
