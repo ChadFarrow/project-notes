@@ -47,6 +47,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [icloud-for-linux](https://github.com/cross-platform/icloud-for-linux) - Access all of your favourite iCloud apps from Linux
 - [Libre-Soundboard](https://github.com/Kolomona/Libre-Soundboard) - LibreSoundboard is a native Linux desktop JACK enabled soundboard application.
 - [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Decentralized commerce on Nostr + Bitcoin Lightning
 - [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
@@ -109,4 +110,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-09-22 21:00 UTC*
+*Last synced: 2026-09-23 03:51 UTC*

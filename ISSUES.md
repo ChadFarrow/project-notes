@@ -104,7 +104,6 @@
 ## boostmebitch
 
 ### Open
-- [#388 buddy boost iso](https://github.com/ChadFarrow/boostmebitch/issues/388)
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371)
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304)
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275)
@@ -126,4 +125,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-22 21:00 UTC*
+*Last synced: 2026-09-23 03:51 UTC*

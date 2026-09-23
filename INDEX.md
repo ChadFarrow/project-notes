@@ -38,10 +38,11 @@
 - [HGH-checker](HGH-checker.md) -  (`JavaScript`)
 
 ## Uncategorized
+- [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
+- [obsidian-candr](https://github.com/ChadFarrow/obsidian-candr) - Obsidian vault: candr *(NEW)*
 - [thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) - Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode *(NEW)*
 - [haven](https://github.com/ChadFarrow/haven) - High Availability Vault for Events on Nostr *(NEW)*
 - [blup](https://github.com/ChadFarrow/blup) -  *(NEW)*
-- [boostbox](https://github.com/ChadFarrow/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. *(NEW)*
 - [PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) - Repo for code example for my apps *(NEW)*
 - [sidecar](https://github.com/ChadFarrow/sidecar) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 *(NEW)*
 - [pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) - A public reference for Podcasting 2.0 — the namespace, the payments, and the plumbing underneath. Built from an Obsidian vault. *(NEW)*
