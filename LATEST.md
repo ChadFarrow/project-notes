@@ -1,9 +1,9 @@
-# Cross-repo audit — 2026-09-23 16:20 UTC
+# Cross-repo audit — 2026-09-23 21:15 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #433** — feat(nostr): the boost note names the track it paid · opened 2 hours ago by ChadFarrow
-- [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 15 hours ago by ChadFarrow
+- [ ] **boostmebitch #433** — feat(nostr): the boost note names the track it paid · opened 7 hours ago by ChadFarrow
+- [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 20 hours ago by ChadFarrow
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 1 day ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 4 days ago by ChadFarrow
@@ -22,12 +22,12 @@
 
 ## Open issues
 
-- [ ] **boostmebitch #432** — Show user who's being boosted · opened 4 hours ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #431** — Double check RSS feeds when boosting · opened 4 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #432** — Show user who's being boosted · opened 8 hours ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #431** — Double check RSS feeds when boosting · opened 9 hours ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 3 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 11 days ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 11 days ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 12 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 17 days ago by ChadFarrow (0 comments)
