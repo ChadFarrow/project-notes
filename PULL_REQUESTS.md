@@ -89,7 +89,6 @@
 
 ## boostmebitch
 
-- [#433 feat(nostr): the boost note names the track it paid](https://github.com/ChadFarrow/boostmebitch/pull/433)
 - [#424 New episodes from your favorites, on main — probe-first, and one cap for both ends](https://github.com/ChadFarrow/boostmebitch/pull/424)
 - [#422 The listen queue on main — and #414's resume position wired into its four paths](https://github.com/ChadFarrow/boostmebitch/pull/422)
 - [#421 Downloads, re-landed on current main — and the id bug that paid the show instead of the song](https://github.com/ChadFarrow/boostmebitch/pull/421)
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-23 21:14 UTC*
+*Last synced: 2026-09-24 03:43 UTC*
