@@ -1,15 +1,16 @@
-# Cross-repo audit — 2026-09-24 03:43 UTC
+# Cross-repo audit — 2026-09-24 11:19 UTC
 
 ## Open pull requests
 
+- [ ] **boostmebitch #438** — Add a playback speed control (1× / 1.25× / 1.5× / 2×) · opened 7 hours ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 1 day ago by ChadFarrow
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 1 day ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #424** — New episodes from your favorites, on main — probe-first, and one cap for both ends · opened 4 days ago by ChadFarrow
 - [ ] **boostmebitch #422** — The listen queue on main — and #414's resume position wired into its four paths · opened 4 days ago by ChadFarrow
 - [ ] **boostmebitch #421** — Downloads, re-landed on current main — and the id bug that paid the show instead of the song · opened 4 days ago by ChadFarrow
-- [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 4 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 11 days ago by ChadFarrow
+- [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 5 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 12 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 15 days ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
