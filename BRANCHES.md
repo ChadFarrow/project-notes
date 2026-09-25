@@ -126,7 +126,6 @@
 
 ## boostmebitch
 
-- `claude/app-review-security-audit-95r1jg`
 - `claude/desktop-layout-pass`
 - `claude/opml-import-export-s2kapj`
 - `feat/libre-wallet-embed`
@@ -153,4 +152,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-25 03:59 UTC*
+*Last synced: 2026-09-25 11:24 UTC*
