@@ -89,7 +89,6 @@
 
 ## boostmebitch
 
-- [#444 fix(boost): no boost payment is a zap, so every boost carries PC 2.0 metadata](https://github.com/ChadFarrow/boostmebitch/pull/444)
 - [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442)
 - [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441)
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
@@ -111,4 +110,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-25 16:48 UTC*
+*Last synced: 2026-09-25 21:14 UTC*

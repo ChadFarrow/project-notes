@@ -1,11 +1,10 @@
-# Cross-repo audit — 2026-09-25 16:48 UTC
+# Cross-repo audit — 2026-09-25 21:14 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #444** — fix(boost): no boost payment is a zap, so every boost carries PC 2.0 metadata · opened 2 hours ago by ChadFarrow
-- [ ] **candr.space #44** — Send boosts as NIP-57 zaps with NIP-73 tags, and list recent zaps · opened 2 hours ago by ChadFarrow
-- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 16 hours ago by ChadFarrow
-- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 16 hours ago by ChadFarrow
+- [ ] **candr.space #44** — Send boosts as NIP-57 zaps with NIP-73 tags · opened 7 hours ago by ChadFarrow
+- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 20 hours ago by ChadFarrow
+- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 21 hours ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 2 days ago by ChadFarrow
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 3 days ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 3 days ago by ChadFarrow
@@ -23,12 +22,12 @@
 
 ## Open issues
 
-- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 21 hours ago by ChadFarrow (0 comments)
+- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **candr.space #43** — Check if the site uses nip-73 · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 13 days ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 13 days ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 16 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
@@ -55,8 +54,8 @@
 
 ## Branches with no open PR
 
-- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `candr.space` — `chapterize-tool`
+- [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`
 - [ ] `PC20-Nostr` — `spec/comparison-refresh`
 - [ ] `PC20-Nostr` — `spec/rule-5-normalised-comparison`
 - [ ] `Helipad-to-Nostr-BoostBot` — `fix-env-example-relay`

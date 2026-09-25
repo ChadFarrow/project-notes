@@ -129,7 +129,6 @@
 - `claude/desktop-layout-pass`
 - `claude/opml-import-export-s2kapj`
 - `feat/libre-wallet-embed`
-- `fix/keysend-before-zap`
 - `main`
 
 ## web-ui
@@ -154,4 +153,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-25 16:48 UTC*
+*Last synced: 2026-09-25 21:14 UTC*
