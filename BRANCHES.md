@@ -126,12 +126,10 @@
 
 ## boostmebitch
 
-- `claude/2x-playback-speed-782q7x`
-- `feat/downloads-reland`
-- `feat/favorites-new`
+- `claude/app-review-security-audit-95r1jg`
+- `claude/desktop-layout-pass`
+- `claude/opml-import-export-s2kapj`
 - `feat/libre-wallet-embed`
-- `feat/new-episodes-on-main`
-- `feat/queue-on-main`
 - `main`
 
 ## web-ui
@@ -155,4 +153,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-24 21:16 UTC*
+*Last synced: 2026-09-25 03:59 UTC*

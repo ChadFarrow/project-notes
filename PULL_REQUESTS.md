@@ -89,10 +89,10 @@
 
 ## boostmebitch
 
-- [#438 Add a playback speed control (1× / 1.25× / 1.5× / 2×)](https://github.com/ChadFarrow/boostmebitch/pull/438)
-- [#424 New episodes from your favorites, on main — probe-first, and one cap for both ends](https://github.com/ChadFarrow/boostmebitch/pull/424)
-- [#422 The listen queue on main — and #414's resume position wired into its four paths](https://github.com/ChadFarrow/boostmebitch/pull/422)
-- [#421 Downloads, re-landed on current main — and the id bug that paid the show instead of the song](https://github.com/ChadFarrow/boostmebitch/pull/421)
+- [#443 fix(bunker): refuse a non-http(s) NIP-46 auth_url before it becomes an href](https://github.com/ChadFarrow/boostmebitch/pull/443)
+- [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442)
+- [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441)
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120)
 
 ## web-ui
 
@@ -111,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-24 21:16 UTC*
+*Last synced: 2026-09-25 03:59 UTC*
