@@ -1,10 +1,9 @@
-# Cross-repo audit — 2026-09-25 21:14 UTC
+# Cross-repo audit — 2026-09-25 23:21 UTC
 
 ## Open pull requests
 
-- [ ] **candr.space #44** — Send boosts as NIP-57 zaps with NIP-73 tags · opened 7 hours ago by ChadFarrow
-- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 20 hours ago by ChadFarrow
-- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 21 hours ago by ChadFarrow
+- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 22 hours ago by ChadFarrow
+- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 23 hours ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 2 days ago by ChadFarrow
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 3 days ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 3 days ago by ChadFarrow
@@ -23,7 +22,6 @@
 ## Open issues
 
 - [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **candr.space #43** — Check if the site uses nip-73 · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 13 days ago by ChadFarrow (0 comments)

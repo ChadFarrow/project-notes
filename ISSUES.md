@@ -118,12 +118,11 @@
 
 ## candr.space
 
-### Open
-- [#43 Check if the site uses nip-73](https://github.com/ChadFarrow/candr.space/issues/43)
+*No open issues*
 
 ## HGH-checker
 
 *No open issues*
 
 ---
-*Last synced: 2026-09-25 21:13 UTC*
+*Last synced: 2026-09-25 23:20 UTC*

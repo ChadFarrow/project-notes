@@ -103,11 +103,11 @@
 
 ## candr.space
 
-- [#44 Send boosts as NIP-57 zaps with NIP-73 tags, and list recent zaps](https://github.com/ChadFarrow/candr.space/pull/44)
+*No open pull requests*
 
 ## HGH-checker
 
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-25 21:14 UTC*
+*Last synced: 2026-09-25 23:21 UTC*

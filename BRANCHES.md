@@ -145,7 +145,6 @@
 ## candr.space
 
 - `chapterize-tool`
-- `claude/nip73-site-boosts-metadata-x40qeq`
 - `main`
 
 ## HGH-checker
@@ -153,4 +152,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-25 21:14 UTC*
+*Last synced: 2026-09-25 23:21 UTC*
