@@ -129,6 +129,7 @@
 - `claude/desktop-layout-pass`
 - `claude/opml-import-export-s2kapj`
 - `feat/libre-wallet-embed`
+- `fix/keysend-before-zap`
 - `main`
 
 ## web-ui
@@ -145,6 +146,7 @@
 ## candr.space
 
 - `chapterize-tool`
+- `claude/nip73-site-boosts-metadata-x40qeq`
 - `main`
 
 ## HGH-checker
@@ -152,4 +154,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-25 11:24 UTC*
+*Last synced: 2026-09-25 16:48 UTC*

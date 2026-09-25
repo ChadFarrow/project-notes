@@ -1,15 +1,17 @@
-# Cross-repo audit — 2026-09-25 11:24 UTC
+# Cross-repo audit — 2026-09-25 16:48 UTC
 
 ## Open pull requests
 
-- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 10 hours ago by ChadFarrow
-- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 11 hours ago by ChadFarrow
+- [ ] **boostmebitch #444** — fix(boost): no boost payment is a zap, so every boost carries PC 2.0 metadata · opened 2 hours ago by ChadFarrow
+- [ ] **candr.space #44** — Send boosts as NIP-57 zaps with NIP-73 tags, and list recent zaps · opened 2 hours ago by ChadFarrow
+- [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 16 hours ago by ChadFarrow
+- [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 16 hours ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 2 days ago by ChadFarrow
-- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 2 days ago by ChadFarrow
-- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 2 days ago by ChadFarrow
+- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 3 days ago by ChadFarrow
+- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 3 days ago by ChadFarrow
 - [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 6 days ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 13 days ago by ChadFarrow
-- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 16 days ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 17 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
@@ -21,14 +23,14 @@
 
 ## Open issues
 
-- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 15 hours ago by ChadFarrow (0 comments)
-- [ ] **candr.space #43** — Check if the site uses nip-73 · opened 20 hours ago by ChadFarrow (0 comments)
+- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 21 hours ago by ChadFarrow (0 comments)
+- [ ] **candr.space #43** — Check if the site uses nip-73 · opened 1 day ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 5 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 13 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 13 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 16 days ago by ChadFarrow (0 comments)
-- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 16 days ago by ChadFarrow (0 comments)
+- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
@@ -41,8 +43,8 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 19 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 21 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 25 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 22 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 26 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 3 months ago by ChadFarrow (0 comments)
