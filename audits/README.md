@@ -2,6 +2,7 @@
 
 Point-in-time cross-repo sweeps. [LATEST.md](../LATEST.md) is a copy of the newest entry.
 
+- [2026-09-26](2026-09-26.md)
 - [2026-09-25](2026-09-25.md)
 - [2026-09-24](2026-09-24.md)
 - [2026-09-23](2026-09-23.md)
