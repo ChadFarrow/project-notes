@@ -119,7 +119,6 @@
 - `archive/feature-genre-filter`
 - `claude/git-pull-rd2q57`
 - `feature/genre-and-v4v-tags`
-- `fix/issue-272-db-egress`
 - `main`
 - `worktree-fix-private-item-leak`
 
@@ -156,4 +155,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-26 15:59 UTC*
+*Last synced: 2026-09-26 20:46 UTC*

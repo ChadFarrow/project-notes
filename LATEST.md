@@ -1,9 +1,8 @@
-# Cross-repo audit — 2026-09-26 15:59 UTC
+# Cross-repo audit — 2026-09-26 20:46 UTC
 
 ## Open pull requests
 
-- [ ] **stablekraft-app #281** — Cut database egress ~80%: stop two uncached reads that were 99% of it (#272) _(draft)_ · opened 2 minutes ago by ChadFarrow
-- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 1 hour ago by ChadFarrow
+- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 6 hours ago by ChadFarrow
 - [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 1 day ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 3 days ago by ChadFarrow
@@ -23,11 +22,10 @@
 
 ## Open issues
 
-- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 6 days ago by ChadFarrow (1 comments)
-- [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 2 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 6 days ago by ChadFarrow (3 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 14 days ago by ChadFarrow (0 comments)
-- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 14 days ago by ChadFarrow (0 comments)
+- [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 17 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 20 days ago by ChadFarrow (0 comments)
@@ -42,7 +40,7 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 20 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 22 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 23 days ago by ChadFarrow (1 comments)
 - [ ] **boostmebitch #275** — Look for zap splits · opened 27 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
