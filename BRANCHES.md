@@ -116,6 +116,7 @@
 
 ## stablekraft-app
 
+- `archive/feature-genre-filter`
 - `claude/git-pull-rd2q57`
 - `feature/genre-and-v4v-tags`
 - `main`
@@ -129,6 +130,7 @@
 
 - `claude/desktop-layout-pass`
 - `claude/opml-import-export-s2kapj`
+- `docs/week-review-2026-09-25`
 - `feat/libre-wallet-embed`
 - `main`
 
@@ -153,4 +155,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-26 11:00 UTC*
+*Last synced: 2026-09-26 15:53 UTC*
