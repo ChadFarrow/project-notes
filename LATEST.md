@@ -1,4 +1,4 @@
-# Cross-repo audit — 2026-09-26 04:04 UTC
+# Cross-repo audit — 2026-09-26 11:00 UTC
 
 ## Open pull requests
 
@@ -8,7 +8,7 @@
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 3 days ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 3 days ago by ChadFarrow
 - [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 7 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 13 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 14 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 17 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
