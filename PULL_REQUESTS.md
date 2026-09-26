@@ -80,6 +80,7 @@
 
 ## stablekraft-app
 
+- [#281 Cut database egress ~80%: stop two uncached reads that were 99% of it (#272)](https://github.com/ChadFarrow/stablekraft-app/pull/281)
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266)
 - [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257)
 
@@ -111,4 +112,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-26 15:53 UTC*
+*Last synced: 2026-09-26 15:59 UTC*

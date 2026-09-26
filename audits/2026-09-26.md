@@ -1,7 +1,8 @@
-# Cross-repo audit — 2026-09-26 15:53 UTC
+# Cross-repo audit — 2026-09-26 15:59 UTC
 
 ## Open pull requests
 
+- [ ] **stablekraft-app #281** — Cut database egress ~80%: stop two uncached reads that were 99% of it (#272) _(draft)_ · opened 2 minutes ago by ChadFarrow
 - [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 1 hour ago by ChadFarrow
 - [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 1 day ago by ChadFarrow
@@ -23,7 +24,7 @@
 ## Open issues
 
 - [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 1 day ago by ChadFarrow (0 comments)
-- [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 6 days ago by ChadFarrow (0 comments)
+- [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 6 days ago by ChadFarrow (1 comments)
 - [ ] **boostbox #32** — Follow-ups from the Railway cost work (#29, #30, #31) · opened 6 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 14 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 14 days ago by ChadFarrow (0 comments)
