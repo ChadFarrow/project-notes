@@ -1,16 +1,16 @@
-# Cross-repo audit — 2026-09-27 04:18 UTC
+# Cross-repo audit — 2026-09-27 11:38 UTC
 
 ## Open pull requests
 
-- [ ] **pc20-wiki #3** — Search the 14 episodes the server has no transcript for _(draft)_ · opened 53 minutes ago by ChadFarrow
-- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 14 hours ago by ChadFarrow
+- [ ] **MSP-2.0 #144** — Record the finished msp-bot rollout and the Vercel CLI traps · opened 21 minutes ago by ChadFarrow
+- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 21 hours ago by ChadFarrow
 - [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 2 days ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 4 days ago by ChadFarrow
 - [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 4 days ago by ChadFarrow
 - [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 4 days ago by ChadFarrow
 - [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 8 days ago by ChadFarrow
-- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 14 days ago by ChadFarrow
+- [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 15 days ago by ChadFarrow
 - [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 18 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
@@ -27,7 +27,7 @@
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 7 days ago by ChadFarrow (3 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 15 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 17 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 18 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
@@ -49,7 +49,7 @@
 - [ ] **lnaddress-music #4** — BoostBox · opened 7 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #21** — Make feed layout match the DeMu template. · opened 8 months ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #13** — Support <podcast:category> - RFC · opened 8 months ago by Kolomona (0 comments)
-- [ ] **RSS-music-site-template #1** — Feed deletion · opened 9 months ago by ChadFarrow (0 comments)
+- [ ] **RSS-music-site-template #1** — Feed deletion · opened 10 months ago by ChadFarrow (0 comments)
 
 ## Branches with no open PR
 
