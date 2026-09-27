@@ -73,4 +73,4 @@ The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase 
 - `INDEX.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), `references/starred.md` and the AUTO blocks in `projects/*.md` are **auto-generated** — do not edit them by hand (the next sync overwrites them). To change what they contain, edit `scripts/lib/render.mjs` and its tests.
 - Everything else in `projects/*.md`, and all other `.md` files, are manually maintained and safe to edit.
 - The GitHub user is `ChadFarrow`.
-- `.DS_Store` is tracked in git and the repo has no `.gitignore`, so it surfaces as a modified file on macOS. Leave it out of commits unless you're deliberately cleaning it up.
+- `.gitignore` ignores `.DS_Store`. It was tracked in git until 2026-09-27.
