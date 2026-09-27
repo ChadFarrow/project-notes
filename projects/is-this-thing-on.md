@@ -2,7 +2,7 @@
 
 **Category:** Uncategorized  
 **Uses:**  
-**Track:** yes  
+**Track:** no  
 **Repo:** https://github.com/ChadFarrow/is-this-thing-on
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
