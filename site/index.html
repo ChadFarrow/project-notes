@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.github.com; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<title>Project notes</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <div class="title-row">
+      <h1>Project notes</h1>
+      <button type="button" class="quiet-button" id="token-button">Set up editing</button>
+    </div>
+    <p class="updated" id="updated"></p>
+  </header>
+
+  <div id="banners"></div>
+  <p class="summary" id="summary"></p>
+
+  <form class="controls" id="controls" role="search" hidden>
+    <label class="search">
+      <span class="visually-hidden">Search projects, PRs and issues</span>
+      <input type="search" id="q" placeholder="Search projects, PRs and issues" autocomplete="off" spellcheck="false">
+    </label>
+    <fieldset class="chips" id="status-filter">
+      <legend class="visually-hidden">Show PRs</legend>
+    </fieldset>
+    <div class="control-row">
+      <label class="select">
+        <span>Category</span>
+        <select id="category"></select>
+      </label>
+      <button type="button" class="quiet-button" id="toggle-all">Open all</button>
+    </div>
+  </form>
+
+  <main id="content">
+    <p class="loading">Loading the dashboard…</p>
+  </main>
+
+  <footer class="foot">
+    <p>Built from <a href="https://github.com/ChadFarrow/project-notes">ChadFarrow/project-notes</a>. The data refreshes every 6 hours and after each saved change to Category, Uses or Track.</p>
+  </footer>
+</div>
+
+<dialog id="editor" class="sheet" aria-labelledby="editor-title"></dialog>
+<dialog id="token-dialog" class="sheet" aria-labelledby="token-title"></dialog>
+
+<noscript><p class="page">This dashboard needs JavaScript. <a href="https://github.com/ChadFarrow/project-notes/blob/main/LATEST.md">Read LATEST.md on GitHub</a> instead.</p></noscript>
+</body>
+</html>
