@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Two-way sync between ~/Vibe/project-notes and the iCloud vault "project-notes".
+  Edit this template, not the copy in ~/Library/LaunchAgents.
+
+  WatchPaths is the fast path: it fires when the vault's projects/ or notes/ folder
+  changes, which covers a note saved on the phone once iCloud brings it down. It is
+  not recursive and does not see every in-place write, so StartInterval is the
+  backstop. The script waits 30 s after a trigger, so a burst of saves is one sync.
+  A run with nothing to do writes nothing and logs nothing.
+
+  Install:  cp scripts/com.chadfarrow.project-notes-vault.plist ~/Library/LaunchAgents/
+            launchctl load ~/Library/LaunchAgents/com.chadfarrow.project-notes-vault.plist
+  Stop:     launchctl unload ~/Library/LaunchAgents/com.chadfarrow.project-notes-vault.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.chadfarrow.project-notes-vault</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/node</string>
+        <string>/Users/chad-mini/Vibe/project-notes/scripts/vault-sync.mjs</string>
+    </array>
+
+    <!-- git in /usr/bin, gh in /opt/homebrew/bin (for starting the dashboard sync). -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>WatchPaths</key>
+    <array>
+        <string>/Users/chad-mini/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes/projects</string>
+        <string>/Users/chad-mini/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes/notes</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>900</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/chad-mini/Library/Logs/project-notes-vault.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/chad-mini/Library/Logs/project-notes-vault.err</string>
+</dict>
+</plist>
