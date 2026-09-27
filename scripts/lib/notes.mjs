@@ -143,7 +143,20 @@ const BOLD_LINE = /^\*\*[^*]+:\*\*/;
 const HEADER_ORDER = ['category', 'uses', 'track'];
 const HEADER_NAME = { category: 'Category', uses: 'Uses', track: 'Track' };
 
+const REPO_NAME = /^[A-Za-z0-9._-]+$/;
+
 const isBlank = (line) => line.text.trim() === '';
+
+// What counts as the same text or the same checklist, on both sides of a comparison:
+// blank lines around the text and the line break at its end do not.
+const cleanText = (text) => String(text).replace(/\r\n?/g, '\n').replace(/^\s*\n/, '').replace(/\s+$/, '');
+const cleanTodos = (todos) => todos
+  .map((t) => ({ done: Boolean(t.done), text: String(t.text == null ? '' : t.text).replace(/\s*[\r\n]+\s*/g, ' ').trim() }))
+  .filter((t) => t.text);
+const sameSet = (a, b) => {
+  const key = (list) => [...new Set(list.map((s) => s.toLowerCase()))].sort().join(',');
+  return key(a) === key(b);
+};
 
 // Lines as { text, eol }, so each keeps its own ending. A byte-order mark is kept apart.
 function splitNote(source) {
@@ -282,9 +295,7 @@ function setHeader(lines, key, value, eol) {
 function sectionEdit(lines, s, current, change) {
   if (change.todos) {
     if (!current.todos) return { error: `The ${s.heading} section is no longer a checklist; reload the note` };
-    const items = change.todos
-      .map((t) => ({ done: Boolean(t.done), text: String(t.text == null ? '' : t.text).replace(/\s*[\r\n]+\s*/g, ' ').trim() }))
-      .filter((t) => t.text);
+    const items = cleanTodos(change.todos);
     if (items.some((t) => MARKER.test(t.text))) return { error: 'A TODO may not be an AUTO marker line' };
     const sameItems = items.length === current.todos.length
       && items.every((t, k) => t.text === current.todos[k].text);
@@ -301,10 +312,14 @@ function sectionEdit(lines, s, current, change) {
     return {};
   }
   if (typeof change.text !== 'string') return {};
-  const text = change.text.replace(/\r\n?/g, '\n').replace(/^\s*\n/, '').replace(/\s+$/, '');
-  if (text === current.text) return {};
+  const text = cleanText(change.text);
+  if (text === cleanText(current.text)) return {};
   const texts = text === '' ? [] : text.split('\n');
   if (texts.some((t) => MARKER.test(t))) return { error: 'The text may not contain an AUTO marker line' };
+  // An open fence would hide every heading below it, TODOs included.
+  if (texts.filter((t) => FENCE.test(t)).length % 2) {
+    return { error: `The code block (\`\`\`) in ${s.heading} is not closed` };
+  }
   return { texts };
 }
 
@@ -348,12 +363,21 @@ export function applyNoteForm(source, changes = {}) {
     if (changes[key] === undefined) continue;
     let value = changes[key];
     if (key === 'category') value = String(value).trim().replace(/\s+/g, ' ') || 'Uncategorized';
-    if (key === 'uses') value = [...new Set(value.map((n) => String(n).trim()).filter(Boolean))];
+    if (key === 'uses') {
+      const names = [...new Set(value.map((n) => String(n).trim()).filter(Boolean))];
+      const bad = names.find((n) => !REPO_NAME.test(n));
+      if (bad !== undefined) return { error: `**Uses:** can only name repos, and “${bad}” is not a repo name` };
+      // The names already in the note keep their order; new names go at the end.
+      const lower = new Set(names.map((n) => n.toLowerCase()));
+      const kept = form.uses.filter((n) => lower.has(n.toLowerCase()));
+      const keptLower = new Set(kept.map((n) => n.toLowerCase()));
+      value = [...kept, ...names.filter((n) => !keptLower.has(n.toLowerCase()))];
+    }
     if (key === 'track') {
       value = String(value).trim().toLowerCase();
       if (!TRACK_VALUES.has(value)) return { error: `Track must be yes, no or upstream, not “${changes.track}”` };
     }
-    const same = key === 'uses' ? value.join(',') === form.uses.join(',') : value === form[key];
+    const same = key === 'uses' ? sameSet(value, form.uses) : value === form[key];
     if (same) continue;
     if (form.readOnly.includes(key)) {
       return { error: `The note has more than one **${HEADER_NAME[key]}:** line; fix it in the file first` };
@@ -361,6 +385,46 @@ export function applyNoteForm(source, changes = {}) {
     setHeader(lines, key, value, eol);
   }
   return { text: note.bom + lines.map((l) => l.text + l.eol).join('') };
+}
+
+// The changes between a form as read and the values an editor hands back, in the shape
+// applyNoteForm takes. Uses is a set here: the order of the checkboxes is not a change.
+export function diffNoteForm(form, values) {
+  const changes = {};
+  const open = (key) => !form.readOnly.includes(key) && values[key] !== undefined;
+  if (open('category') && values.category !== form.category) changes.category = values.category;
+  if (open('uses') && !sameSet(values.uses, form.uses)) changes.uses = values.uses;
+  if (open('track') && values.track !== form.track) changes.track = values.track;
+  const sections = {};
+  for (const s of form.sections) {
+    const v = (values.sections || {})[s.id];
+    if (!v) continue;
+    if (v.todos && s.todos) {
+      if (JSON.stringify(cleanTodos(v.todos)) !== JSON.stringify(s.todos)) sections[s.id] = { todos: v.todos };
+    } else if (typeof v.text === 'string' && cleanText(v.text) !== cleanText(s.text)) {
+      sections[s.id] = { text: v.text };
+    }
+  }
+  if (Object.keys(sections).length) changes.sections = sections;
+  return changes;
+}
+
+// The fields in `changes` that also changed in the note between `opened` (the form
+// the editor started from) and `fresh` (the note as it is now). Saving over them
+// would drop someone else's edit, so the editor stops and says so.
+export function conflictingFields(opened, fresh, changes) {
+  const fields = [];
+  if (changes.category !== undefined && fresh.category !== opened.category) fields.push('Category');
+  if (changes.uses !== undefined && !sameSet(fresh.uses, opened.uses)) fields.push('Uses');
+  if (changes.track !== undefined && fresh.track !== opened.track) fields.push('Track');
+  for (const id of Object.keys(changes.sections || {})) {
+    const a = opened.sections.find((s) => s.id === id);
+    const b = fresh.sections.find((s) => s.id === id);
+    if (!a || !b || cleanText(a.text) !== cleanText(b.text) || JSON.stringify(a.todos) !== JSON.stringify(b.todos)) {
+      fields.push(id.replace(/#\d+$/, ''));
+    }
+  }
+  return fields;
 }
 
 // The existing spelling when the input differs from a known category only in case or

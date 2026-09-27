@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { normalizeRepos } from '../scripts/lib/model.mjs';
 import { buildOutputs } from '../scripts/lib/render.mjs';
-import { siteDirProblem } from '../scripts/lib/site.mjs';
+import { buildSiteFiles, siteDirProblem } from '../scripts/lib/site.mjs';
 
 const pages = JSON.parse(readFileSync(new URL('./fixtures/repos-pages.json', import.meta.url)));
 const NOW = new Date('2026-09-27T12:00:00Z');
@@ -65,9 +65,14 @@ test('site data orders projects with open work like the dashboard', () => {
 test('site data keeps the PR state the badges need', () => {
   const { data } = run();
   const pr = project(data, 'app-one').prs[0];
-  for (const key of ['number', 'title', 'url', 'isDraft', 'createdAt', 'updatedAt', 'mergeable', 'checks', 'author', 'for']) {
+  for (const key of ['number', 'title', 'url', 'isDraft', 'createdAt', 'mergeable', 'checks', 'author', 'for']) {
     assert.ok(key in pr, key);
   }
+});
+
+test('site data leaves out update times, which no markdown file publishes', () => {
+  const { siteData } = run();
+  assert.doesNotMatch(siteData, /updatedAt|lastActivity/);
 });
 
 test('site data points to the note file, including a stub made in the same run', () => {
@@ -119,12 +124,30 @@ test('buildOutputs does not put the site data in the repo', () => {
   assert.ok(![...files.keys()].some((f) => f.endsWith('.json')));
 });
 
-test('siteDirProblem refuses the repo, a folder above it and the site sources', () => {
+test('buildSiteFiles stamps one build id into every file and adds the data and the note library', () => {
+  const sources = new Map([
+    ['index.html', '<script src="app.js?v=__BUILD__"></script>'],
+    ['app.js', "import { x } from './lib/notes.js?v=__BUILD__';"],
+    ['style.css', 'body {}'],
+  ]);
+  const files = buildSiteFiles({ sources, notesSource: 'export const x = 1;', siteData: '{}\n' });
+  assert.deepEqual([...files.keys()].sort(), ['app.js', 'data.json', 'index.html', 'lib/notes.js', 'style.css']);
+  const id = /v=([0-9a-f]{12})"/.exec(files.get('index.html'))?.[1];
+  assert.ok(id, files.get('index.html'));
+  assert.equal(files.get('app.js'), `import { x } from './lib/notes.js?v=${id}';`);
+  assert.equal(files.get('lib/notes.js'), 'export const x = 1;');
+  assert.equal(files.get('data.json'), '{}\n');
+  const changed = buildSiteFiles({ sources, notesSource: 'export const x = 2;', siteData: '{}\n' });
+  assert.notEqual(changed.get('index.html'), files.get('index.html'), 'a new note library gets a new build id');
+});
+
+test('siteDirProblem allows only _site inside the repo, and nothing above it', () => {
   const root = '/work/project-notes';
-  for (const dir of ['/work/project-notes', '/work', '/', '/work/project-notes/site', '/work/project-notes/site/lib']) {
+  for (const dir of ['/work/project-notes', '/work', '/', '/work/project-notes/site', '/work/project-notes/site/lib',
+    '/work/project-notes/projects', '/work/project-notes/--dry-run']) {
     assert.match(siteDirProblem(root, dir), /--site/, dir);
   }
-  for (const dir of ['/work/project-notes/_site', '/tmp/runner/site', '/work/project-notes-site']) {
+  for (const dir of ['/work/project-notes/_site', '/work/project-notes/_site/x', '/tmp/runner/site', '/work/project-notes-site']) {
     assert.equal(siteDirProblem(root, dir), null, dir);
   }
 });

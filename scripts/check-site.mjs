@@ -21,6 +21,7 @@ import path from 'node:path';
 import { normalizeRepos } from './lib/model.mjs';
 import { applyNoteForm } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
+import { buildSiteFiles } from './lib/site.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const PORT = 8131;
@@ -62,7 +63,7 @@ const APP_ONE_NOTE = [
   '# app-one',
   '',
   '**Category:** Apps  ',
-  '**Uses:** svc-core  ',
+  '**Uses:** svc-core, fork-thing  ',
   '**Repo:** https://github.com/ChadFarrow/app-one',
   '',
   '## Description',
@@ -90,22 +91,25 @@ const NOTES = [
   { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n' },
 ];
 
+// The same files sync.mjs --site writes, built by the same function.
 async function siteFiles() {
-  const files = new Map();
+  const sources = new Map();
   for (const name of await readdir(path.join(ROOT, 'site'))) {
-    files.set(`/${name}`, await readFile(path.join(ROOT, 'site', name)));
+    if (!name.startsWith('.')) sources.set(name, await readFile(path.join(ROOT, 'site', name), 'utf8'));
   }
-  files.set('/lib/notes.js', await readFile(path.join(ROOT, 'scripts/lib/notes.mjs')));
+  let siteData;
   if (DATA_FILE) {
-    files.set('/data.json', await readFile(DATA_FILE));
+    siteData = await readFile(DATA_FILE, 'utf8');
   } else {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
-    const { siteData } = buildOutputs({
+    ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
       auditFiles: [], degradedReason: null,
-    });
-    files.set('/data.json', Buffer.from(siteData));
+    }));
   }
+  const notesSource = await readFile(path.join(ROOT, 'scripts/lib/notes.mjs'), 'utf8');
+  const files = new Map();
+  for (const [rel, text] of buildSiteFiles({ sources, notesSource, siteData })) files.set(`/${rel}`, Buffer.from(text));
   return files;
 }
 
@@ -129,17 +133,33 @@ const api = {
   notes: new Map(NOTES.map((n, i) => [n.file, { text: n.text, sha: `sha-${i}` }])),
   puts: [],
   dispatches: 0,
+  probes: 0,
   conflictOnce: false,
+  conflictSameOnce: false,
   revoked: false,
   goodToken: 'good-token',
   nextSha: 100,
 };
 
+// The tokens the stand-in knows, and what each may do. Any other token is refused.
+const TOKENS = {
+  'good-token': { write: true, sync: true },
+  'readonly-token': { write: false, sync: false },
+  'nosync-token': { write: true, sync: false },
+};
+const FORBIDDEN = [403, { message: 'Resource not accessible by personal access token' }];
+
 // → [status, body object or null]
 function answer(method, url, auth, body) {
   const u = new URL(url);
-  if (auth !== `Bearer ${api.goodToken}` || api.revoked) return [401, { message: 'Bad credentials' }];
+  const may = TOKENS[String(auth).replace(/^Bearer /, '')];
+  if (!may || api.revoked) return [401, { message: 'Bad credentials' }];
   if (method === 'GET' && u.pathname === `/repos/${REPO}`) return [200, { full_name: REPO }];
+  if (method === 'PUT' && u.pathname === `/repos/${REPO}/contents/README.md`) {
+    // The page's access probe: a sha that never matches, so nothing is written.
+    api.probes++;
+    return may.write ? [409, { message: 'README.md does not match' }] : FORBIDDEN;
+  }
   const note = /^\/repos\/ChadFarrow\/project-notes\/contents\/projects\/(.+)$/.exec(u.pathname);
   if (note) {
     const file = decodeURIComponent(note[1]);
@@ -147,12 +167,20 @@ function answer(method, url, auth, body) {
     if (!stored) return [404, { message: 'Not Found' }];
     if (method === 'GET') return [200, { encoding: 'base64', content: b64(stored.text).replace(/(.{60})/g, '$1\n'), sha: stored.sha }];
     if (method === 'PUT') {
+      if (!may.write) return FORBIDDEN;
       const put = JSON.parse(body);
       api.puts.push({ file, ...put, text: fromB64(put.content) });
       if (api.conflictOnce) {
-        // Someone else saved the note first.
+        // Someone else saved the note first, in another section.
         api.conflictOnce = false;
         stored.text = stored.text.replace('- Docs: https://example.com', '- Docs: https://example.com\n- Added elsewhere');
+        stored.sha = `sha-${api.nextSha++}`;
+        return [409, { message: 'is at a different sha' }];
+      }
+      if (api.conflictSameOnce) {
+        // Someone else saved the note first, in the section being edited.
+        api.conflictSameOnce = false;
+        stored.text = stored.text.replace('## Notes\n', '## Notes\nWritten in Obsidian\n');
         stored.sha = `sha-${api.nextSha++}`;
         return [409, { message: 'is at a different sha' }];
       }
@@ -163,6 +191,12 @@ function answer(method, url, auth, body) {
     }
   }
   if (method === 'POST' && u.pathname === `/repos/${REPO}/actions/workflows/sync-all.yml/dispatches`) {
+    if (!may.sync) return FORBIDDEN;
+    // The page's access probe names a branch that does not exist: no run starts.
+    if (JSON.parse(body).ref !== 'main') {
+      api.probes++;
+      return [422, { message: 'No ref found' }];
+    }
     api.dispatches++;
     return [204, null];
   }
@@ -433,10 +467,17 @@ async function main() {
       await click('#token-dialog .primary');
       check('a refused token gets a clear message', await waitFor('document.querySelector("#token-dialog .status").textContent.includes("refused")'));
       await shoot('token', { full: false });
+      await fill('#t-token', 'readonly-token');
+      await click('#token-dialog .primary');
+      check('a token that cannot write is refused at setup',
+        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot save notes")'));
+      check('a refused token is not kept', (await evaluate('localStorage.getItem("pn:token")')) === null);
       await fill('#t-token', api.goodToken);
       await click('#token-dialog .primary');
       check('a good token opens the editor', await waitFor('document.querySelector("#editor").open && document.querySelector("#f-category")'));
       check('the token is kept in this browser', (await evaluate('localStorage.getItem("pn:token")')) === js(api.goodToken));
+      check('the access probes start no sync and write nothing', api.probes > 0 && api.dispatches === 0 && api.puts.length === 0);
+      check('an untouched editor has no unsaved changes', (await evaluate('document.querySelector("#editor").isDirty()')) === false);
 
       const options = await evaluate('[...document.querySelectorAll("#f-category option")].map((o) => o.textContent)');
       check('Category offers the categories in use', js(options) === js([...data.categories, 'New category…']), options.join(', '));
@@ -462,8 +503,9 @@ async function main() {
       check('the saved bytes are exactly the edited note', api.puts.length === 1 && api.puts[0].text === expected);
       check('the commit message names the project', api.puts[0]?.message === 'Edit the app-one note from the web dashboard');
       check('a text-only edit does not start the sync', api.dispatches === 0);
+      check('the form locks after a save', await evaluate('document.querySelector("#editor .editor-fields").disabled'));
 
-      await click('#editor .sheet-foot button:not(.primary)');
+      await click('#editor .cancel-button');
       await click('article.project[data-project="app-one"] .edit-button');
       await waitFor('document.querySelector("#editor .todo")');
       check('non-ASCII text survives the round trip', await evaluate('[...document.querySelectorAll("#editor .todo input[type=text]")].some((i) => i.value === "café — ✓")'));
@@ -475,13 +517,14 @@ async function main() {
       await click('#editor .sheet-foot .primary');
       await waitFor('document.querySelector("#editor .status").textContent.startsWith("Saved")');
       check('the category is saved with the existing spelling', api.puts.at(-1)?.text.includes('**Category:** Libraries  \n'));
+      check('a header edit keeps the Uses line as it was', api.puts.at(-1)?.text.includes('**Uses:** svc-core, fork-thing  \n'));
       check('a header edit starts the sync', api.dispatches === 1);
       check('the board moves the project at once',
         await evaluate(`(() => { const row = document.querySelector('article.project[data-project="app-one"]');
           let el = row; while (el && el.tagName !== 'H3') el = el.previousElementSibling; return el?.textContent === 'Libraries'; })()`));
 
       // Someone else saved the note while the editor was open.
-      await click('#editor .sheet-foot button:not(.primary)');
+      await click('#editor .cancel-button');
       await click('article.project[data-project="app-one"] .edit-button');
       await waitFor('document.querySelector("#f-s1")');
       api.conflictOnce = true;
@@ -493,8 +536,45 @@ async function main() {
       check('a conflict is retried and keeps both edits',
         api.puts.length === before + 2 && final.includes('Edited after a conflict') && final.includes('- Added elsewhere'));
 
+      // Someone else changed the same section: stop, and keep the typed text.
+      await click('#editor .cancel-button');
+      await click('article.project[data-project="app-one"] .edit-button');
+      await waitFor('document.querySelector("#f-s1")');
+      api.conflictSameOnce = true;
+      const beforeSame = api.puts.length;
+      await fill('#f-s1', 'My own notes');
+      await click('#editor .sheet-foot .primary');
+      check('a conflict in the same section is refused, not overwritten',
+        await waitFor('document.querySelector("#editor .status").textContent.includes("changed on GitHub")')
+        && api.puts.length === beforeSame + 1
+        && api.notes.get('app-one.md').text.includes('Written in Obsidian')
+        && !api.notes.get('app-one.md').text.includes('My own notes'));
+      check('the refused text stays in the editor', (await evaluate('document.querySelector("#f-s1").value')) === 'My own notes');
+      await evaluate('window.confirm = () => true');
+
+      // The token stops working during a save: paste a new one without losing the edit.
+      await click('#editor .cancel-button');
+      await click('article.project[data-project="app-one"] .edit-button');
+      await waitFor('document.querySelector("#f-s1")');
+      await fill('#f-s1', 'Kept across a new token');
+      api.revoked = true;
+      await click('#editor .sheet-foot .primary');
+      await waitFor('document.querySelector("#editor .status").textContent.includes("refused")');
+      check('a refused save offers a new token in the editor', await evaluate(`[...document.querySelectorAll('#editor .sheet-foot button')]
+        .some((b) => !b.hidden && b.textContent === 'Paste a new token')`));
+      await evaluate(`[...document.querySelectorAll('#editor .sheet-foot button')].find((b) => b.textContent === 'Paste a new token').click()`);
+      check('the token sheet opens over the editor', await waitFor('document.querySelector("#token-dialog").open && document.querySelector("#editor").open'));
+      api.revoked = false;
+      await fill('#t-token', api.goodToken);
+      await click('#token-dialog .primary');
+      await waitFor('!document.querySelector("#token-dialog").open');
+      check('the edit is still there after the new token', (await evaluate('document.querySelector("#f-s1").value')) === 'Kept across a new token');
+      await click('#editor .sheet-foot .primary');
+      check('the save then goes through', await waitFor('document.querySelector("#editor .status").textContent.startsWith("Saved")')
+        && api.notes.get('app-one.md').text.includes('Kept across a new token'));
+
       // A project whose note is not in the repo yet.
-      await click('#editor .sheet-foot button:not(.primary)');
+      await click('#editor .cancel-button');
       await click('article.project[data-project="fork-thing"] .edit-button');
       check('a missing note says it is not in the repo yet',
         await waitFor('document.querySelector("#editor .hint.bad")?.textContent.includes("not in the repo yet")'));
@@ -508,6 +588,18 @@ async function main() {
       check('a revoked token says what to do', await waitFor('document.querySelector("#editor .hint.bad")?.textContent.includes("token")'));
       await evaluate('document.querySelector("#editor").close()');
       api.revoked = false;
+
+      // A token without Actions: kept, with a note that the sync waits.
+      await click('#token-button');
+      await waitFor('document.querySelector("#token-dialog").open');
+      await fill('#t-token', 'nosync-token');
+      await click('#token-dialog .primary');
+      check('a token without Actions is kept, with a warning',
+        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot start the sync")')
+        && (await text('#token-dialog .primary')) === 'Continue'
+        && (await evaluate('localStorage.getItem("pn:token")')) === js('nosync-token'));
+      await click('#token-dialog .primary');
+      await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
     }
 
     // ---- the phone ----

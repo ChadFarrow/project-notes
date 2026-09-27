@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  AUTO_START, AUTO_END, stubNote, readNoteForm, applyNoteForm, matchCategory,
+  AUTO_START, AUTO_END, stubNote, readNoteForm, applyNoteForm, matchCategory, diffNoteForm, conflictingFields,
 } from '../scripts/lib/notes.mjs';
 
 const md = (...lines) => lines.join('\n');
@@ -312,6 +312,85 @@ test('applyNoteForm round-trips every section of the stub note', () => {
   assert.equal(sectionOf(again, 'Notes#0').text, 'hello');
   assert.deepEqual(sectionOf(again, 'TODOs#0').todos, [{ done: false, text: 'first' }]);
   assert.ok(out.includes(`${AUTO_START}\n${AUTO_END}\n`));
+});
+
+// ---------- review fixes: Uses order, dirty checks, conflicts ----------
+
+// Shaped like projects/stablekraft-app.md: Uses not in alphabetical order.
+const STABLE = md(
+  '# stablekraft-app',
+  '',
+  '**Category:** Web/Apps  ',
+  '**Uses:** msp-podping-service, boostbox, chadf-musicl-playlists  ',
+  '',
+  '## Notes',
+  'Line with a break  ',
+  '',
+  '## TODOs',
+  '- [ ] a',
+  '',
+);
+
+// The values an untouched editor hands back: Uses in alphabetical checkbox order.
+const untouched = (form) => ({
+  category: form.category,
+  uses: [...form.uses].sort(),
+  track: form.track,
+  sections: Object.fromEntries(form.sections.map((s) => [s.id, s.todos ? { todos: s.todos } : { text: s.text }])),
+});
+
+test('diffNoteForm finds nothing when the editor hands back what it read', () => {
+  for (const text of [BOOST, WEBUI, STUB, STABLE]) {
+    assert.deepEqual(diffNoteForm(readNoteForm(text), untouched(readNoteForm(text))), {}, text.split('\n')[0]);
+  }
+});
+
+test('diffNoteForm lists only the changed fields, with Uses compared as a set', () => {
+  const form = readNoteForm(STABLE);
+  const values = untouched(form);
+  values.uses = ['boostbox', 'chadf-musicl-playlists'];
+  values.sections['TODOs#0'] = { todos: [{ done: true, text: 'a' }] };
+  assert.deepEqual(diffNoteForm(form, values), {
+    uses: ['boostbox', 'chadf-musicl-playlists'],
+    sections: { 'TODOs#0': { todos: [{ done: true, text: 'a' }] } },
+  });
+});
+
+test('applyNoteForm leaves Uses alone when only the order differs', () => {
+  assert.equal(apply(STABLE, { uses: ['boostbox', 'chadf-musicl-playlists', 'msp-podping-service'] }), STABLE);
+});
+
+test('applyNoteForm keeps the note order of Uses and appends new names', () => {
+  assert.equal(apply(STABLE, { uses: ['msp-podping-service', 'boostbox', 'chadf-musicl-playlists', 'aaa-new'] }),
+    STABLE.replace('chadf-musicl-playlists  \n', 'chadf-musicl-playlists, aaa-new  \n'));
+});
+
+test('applyNoteForm refuses a Uses name that is not a repo name', () => {
+  assert.match(applyNoteForm(STABLE, { uses: ['boostbox', `x\n${AUTO_START}`] }).error, /Uses/);
+  assert.match(applyNoteForm(STABLE, { uses: ['two words'] }).error, /Uses/);
+});
+
+test('a trailing line break at the end of a section is not a change', () => {
+  const form = readNoteForm(STABLE);
+  assert.equal(apply(STABLE, { sections: { 'Notes#0': { text: 'Line with a break' } } }), STABLE);
+  assert.deepEqual(diffNoteForm(form, { ...untouched(form), sections: { 'Notes#0': { text: 'Line with a break' } } }), {});
+});
+
+test('applyNoteForm refuses a code fence that is not closed', () => {
+  assert.match(applyNoteForm(BOOST, { sections: { 'Notes#0': { text: 'see:\n```\ncode' } } }).error, /code block/);
+  assert.equal(applyNoteForm(BOOST, { sections: { 'Notes#0': { text: 'see:\n```\ncode\n```' } } }).error, undefined);
+});
+
+test('conflictingFields names the changed fields that also changed on GitHub', () => {
+  const opened = readNoteForm(STABLE);
+  const changes = { category: 'Nostr', sections: { 'Notes#0': { text: 'mine' }, 'TODOs#0': { todos: [] } } };
+  assert.deepEqual(conflictingFields(opened, readNoteForm(STABLE), changes), []);
+  const elsewhere = STABLE.replace('- [ ] a', '- [ ] a\n- [ ] added in Obsidian');
+  assert.deepEqual(conflictingFields(opened, readNoteForm(elsewhere), changes), ['TODOs']);
+  const recategorised = STABLE.replace('Web/Apps', 'Tools');
+  assert.deepEqual(conflictingFields(opened, readNoteForm(recategorised), changes), ['Category']);
+  const noNotes = STABLE.replace('## Notes', '## Ideas');
+  assert.deepEqual(conflictingFields(opened, readNoteForm(noNotes), changes), ['Notes']);
 });
 
 // ---------- matchCategory ----------

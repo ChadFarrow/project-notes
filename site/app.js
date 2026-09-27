@@ -4,14 +4,17 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, matchCategory, readNoteForm } from './lib/notes.js';
+import { applyNoteForm, conflictingFields, diffNoteForm, matchCategory, readNoteForm } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
 const WORKFLOW = 'sync-all.yml';
 const REPO_URL = `https://github.com/${REPO}`;
 const ACTIONS_URL = `${REPO_URL}/actions/workflows/${WORKFLOW}`;
-const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new';
+// Pre-fills the name, the owner, a 90-day life and the two permissions; the repository
+// itself still has to be picked by hand (GitHub has no parameter for it).
+const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+web+editor'
+  + '&description=Edits+notes+from+notes.podtards.com&target_name=ChadFarrow&expires_in=90&contents=write&actions=write';
 const DATA_VERSION = 1;
 const OLD_DATA_HOURS = 7;
 const MAX_LAMPS = 12;
@@ -487,7 +490,7 @@ async function gh(path, init = {}, auth = token) {
     throw new UserError('GitHub did not answer. Check the network connection, then try again.');
   }
   if (res.status === 401) {
-    throw new UserError('GitHub refused the token: it is wrong or expired. Use “Editing token” to paste a new one.', 'auth');
+    throw new UserError('GitHub refused the token: it is wrong or expired. Paste a new token.', 'auth');
   }
   return res;
 }
@@ -496,7 +499,7 @@ async function apiError(res, doing) {
   let detail = '';
   try { detail = (await res.json()).message || ''; } catch { /* no body */ }
   if (res.status === 403) {
-    return new UserError(`The token may not ${doing}. Give it “Contents: Read and write” on ${REPO}.${detail ? ` (${detail})` : ''}`);
+    return new UserError(`The token may not ${doing}. It needs “Contents: Read and write” on ${REPO}. Paste a new token.${detail ? ` (${detail})` : ''}`, 'auth');
   }
   return new UserError(`GitHub could not ${doing} (HTTP ${res.status}${detail ? `: ${detail}` : ''}).`);
 }
@@ -544,33 +547,33 @@ async function startSync() {
   return res.status === 204;
 }
 
+// Whether the token can commit and start the sync. The repo is public, so reading it
+// proves nothing. Each probe is a request GitHub refuses either way, so it changes
+// nothing: a PUT with a sha that never matches (409 with write access, 403 without),
+// and a dispatch to a branch that does not exist (422 with Actions access, 403 without).
+async function probeToken(auth) {
+  const write = await gh(`/repos/${REPO}/contents/README.md`, {
+    method: 'PUT',
+    body: JSON.stringify({ message: 'Access check from the web dashboard', content: '', sha: '0'.repeat(40), branch: 'main' }),
+  }, auth);
+  const dispatch = await gh(`/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, {
+    method: 'POST',
+    body: JSON.stringify({ ref: 'refs/heads/no-such-branch-access-check' }),
+  }, auth);
+  return {
+    canWrite: write.status !== 403 && write.status !== 404,
+    canSync: dispatch.status !== 403 && dispatch.status !== 404,
+  };
+}
+
 // ---------- the editor ----------
 
-const normText = (text) => String(text).replace(/\r\n?/g, '\n').replace(/^\s*\n/, '').replace(/\s+$/, '');
-const normTodos = (todos) => todos
-  .map((t) => ({ done: Boolean(t.done), text: String(t.text).replace(/\s*[\r\n]+\s*/g, ' ').trim() }))
-  .filter((t) => t.text);
-const lowerList = (list) => list.map((s) => s.toLowerCase()).join(',');
-
-// Only the fields that differ from what the note held when the editor opened.
-function diffForm(form, values) {
-  const changes = {};
-  if (!form.readOnly.includes('category') && values.category !== form.category) changes.category = values.category;
-  if (!form.readOnly.includes('uses') && lowerList(values.uses) !== lowerList(form.uses)) changes.uses = values.uses;
-  if (!form.readOnly.includes('track') && values.track !== form.track) changes.track = values.track;
-  const sections = {};
-  for (const s of form.sections) {
-    const v = values.sections[s.id];
-    if (!v) continue;
-    if (v.todos) {
-      if (JSON.stringify(normTodos(v.todos)) !== JSON.stringify(s.todos)) sections[s.id] = { todos: v.todos };
-    } else if (normText(v.text) !== s.text) {
-      sections[s.id] = { text: v.text };
-    }
-  }
-  if (Object.keys(sections).length) changes.sections = sections;
-  return changes;
-}
+// The editor that is open, if any: guards unsaved edits against a page reload.
+let openSession = null;
+window.addEventListener('beforeunload', (e) => {
+  const dlg = document.querySelector('#editor');
+  if (dlg && dlg.open && dlg.isDirty && dlg.isDirty()) e.preventDefault();
+});
 
 function sheet(dlg, titleId, title, body, foot) {
   dlg.replaceChildren(h('div', { class: 'sheet-inner' },
@@ -602,11 +605,15 @@ async function openEditor(p) {
   const dlg = $('#editor');
   setupSheet(dlg);
   dlg.isDirty = null;
+  const session = {};
+  openSession = session;
   const status = h('p', { class: 'status', role: 'status' });
   const body = h('div', { class: 'sheet-body' }, h('p', { class: 'empty', text: 'Loading the note…' }));
   const save = h('button', { type: 'button', class: 'primary', disabled: true }, 'Save changes');
-  const cancel = h('button', { type: 'button', onclick: () => closeSheet(dlg) }, 'Cancel');
-  sheet(dlg, 'editor-title', p.name, body, h('div', { class: 'sheet-foot' }, status, cancel, save));
+  const cancel = h('button', { type: 'button', class: 'cancel-button', onclick: () => closeSheet(dlg) }, 'Cancel');
+  // Opens the token sheet over the editor, so the edits stay.
+  const newToken = h('button', { type: 'button', hidden: true, onclick: () => openTokenDialog() }, 'Paste a new token');
+  sheet(dlg, 'editor-title', p.name, body, h('div', { class: 'sheet-foot' }, status, newToken, cancel, save));
   if (!dlg.open) dlg.showModal();
 
   let note;
@@ -616,41 +623,50 @@ async function openEditor(p) {
     form = readNoteForm(note.text);
     if (form.error) throw new UserError(`This note cannot be edited here: ${form.error}. Fix the note on GitHub.`);
   } catch (err) {
+    if (openSession !== session) return;
     body.replaceChildren(h('div', {}, h('p', { class: 'hint bad', text: messageFor(err) }),
       err.kind === 'auth' ? h('p', {}, h('button', { type: 'button', onclick: () => { dlg.close(); openTokenDialog(() => openEditor(p)); } }, 'Paste a new token')) : null,
       h('p', {}, h('a', { href: noteUrl(p) }, 'Open the note on GitHub'))));
     return;
   }
+  // The editor was closed, or another project opened, while this note loaded.
+  if (openSession !== session || !dlg.open) return;
 
   const editor = editorForm(p, form);
-  body.replaceChildren(editor.element, h('p', { class: 'hint' }, h('a', { href: noteUrl(p) }, 'Open the note on GitHub')));
-  dlg.isDirty = () => Object.keys(diffForm(form, editor.values())).length > 0;
+  const fields = h('fieldset', { class: 'editor-fields' }, editor.element);
+  body.replaceChildren(fields, h('p', { class: 'hint' }, h('a', { href: noteUrl(p) }, 'Open the note on GitHub')));
+  dlg.isDirty = () => Object.keys(diffNoteForm(form, editor.values())).length > 0;
   save.disabled = false;
   save.addEventListener('click', async () => {
-    const changes = diffForm(form, editor.values());
+    const changes = diffNoteForm(form, editor.values());
     if (!Object.keys(changes).length) {
       setStatus(status, '', 'Nothing changed.');
       return;
     }
     save.disabled = true;
+    newToken.hidden = true;
     setStatus(status, '', 'Saving…');
     try {
-      const message = await saveChanges(p, note, changes);
+      const message = await saveChanges(p, note, form, changes);
+      // The form now shows what is saved; open the note again to change more.
       dlg.isDirty = null;
+      fields.disabled = true;
       setStatus(status, 'good', message);
       save.textContent = 'Saved';
       cancel.textContent = 'Close';
       renderContent();
     } catch (err) {
       setStatus(status, 'bad', messageFor(err));
+      newToken.hidden = err.kind !== 'auth';
       save.disabled = false;
     }
   });
 }
 
 // Writes the changes to GitHub. On a conflict (the note changed since it was read),
-// reads the note again and applies the same changes once more.
-async function saveChanges(p, note, changes) {
+// reads the note again and applies the same changes once more, but only when none of
+// the changed fields changed on GitHub too; otherwise it stops rather than overwrite.
+async function saveChanges(p, note, opened, changes) {
   let current = note;
   for (let attempt = 0; ; attempt++) {
     const result = applyNoteForm(current.text, changes);
@@ -660,6 +676,13 @@ async function saveChanges(p, note, changes) {
     if (res.ok) break;
     if ((res.status === 409 || res.status === 422) && attempt === 0) {
       current = await getNote(p.noteFile);
+      const fresh = readNoteForm(current.text);
+      if (fresh.error) throw new UserError(`The note changed on GitHub and cannot be edited here now: ${fresh.error}.`);
+      const clash = conflictingFields(opened, fresh, changes);
+      if (clash.length) {
+        throw new UserError(`${clash.join(', ')} changed on GitHub while you edited, so nothing is saved. `
+          + 'Copy your text, close the editor, and open it again.');
+      }
       continue;
     }
     throw await apiError(res, 'save the note');
@@ -822,7 +845,16 @@ function openTokenDialog(then) {
     }, 'Forget the token'));
   }
 
+  let accepted = false;
+  const finish = () => {
+    dlg.close();
+    if (then) then();
+  };
   check.addEventListener('click', async () => {
+    if (accepted) {
+      finish();
+      return;
+    }
     const value = input.value.trim();
     if (!value) {
       setStatus(status, 'bad', 'Paste the token first.');
@@ -835,13 +867,27 @@ function openTokenDialog(then) {
       const res = await gh(`/repos/${REPO}`, {}, value);
       if (res.status === 404) throw new UserError(`This token cannot see ${REPO}. Give it access to that repository.`);
       if (!res.ok) throw await apiError(res, 'read the repository');
+      const access = await probeToken(value);
+      if (!access.canWrite) {
+        throw new UserError(`This token cannot save notes. It needs “Contents: Read and write” on ${REPO}. `
+          + 'Change it on GitHub, or make a new one with the link above.');
+      }
       token = value;
       store.set('token', value);
       updateTokenButton();
-      dlg.close();
-      if (then) then();
+      if (access.canSync) {
+        finish();
+        return;
+      }
+      // Usable, but a Category, Uses or Track change then waits for the 6-hour sync.
+      accepted = true;
+      setStatus(status, '', 'The token is saved. It cannot start the sync (“Actions: Read and write” is missing), '
+        + 'so a change to Category, Uses or Track shows after the next 6-hour sync.');
+      check.textContent = 'Continue';
+      check.disabled = false;
     } catch (err) {
-      setStatus(status, 'bad', err.kind === 'auth' ? 'GitHub refused this token. Copy it again and paste it here.' : messageFor(err));
+      setStatus(status, 'bad', err.kind === 'auth' && !/Contents/.test(err.message)
+        ? 'GitHub refused this token. Copy it again and paste it here.' : messageFor(err));
       check.disabled = false;
     }
   });
@@ -857,10 +903,11 @@ function openTokenDialog(then) {
       ? 'Editing is set up in this browser. To use a different token, paste it below.'
       : 'To edit notes from this page, give it a GitHub token. The token stays in this browser only.' }),
     h('ol', { class: 'steps' },
-      h('li', {}, 'Open ', h('a', { href: NEW_TOKEN_URL, target: '_blank', rel: 'noopener' }, 'a new fine-grained token on GitHub'), '.'),
+      h('li', {}, 'Open ', h('a', { href: NEW_TOKEN_URL, target: '_blank', rel: 'noopener' }, 'a new fine-grained token on GitHub'),
+        '. The link fills in the name, a 90-day life and the permissions.'),
       h('li', {}, 'For “Repository access”, choose “Only select repositories” and pick ', h('strong', { text: REPO }), '.'),
-      h('li', {}, 'Under “Permissions”, set ', h('strong', { text: 'Contents' }), ' and ', h('strong', { text: 'Actions' }),
-        ' to “Read and write”. Add nothing else. Actions lets this page start the sync after you save.'),
+      h('li', {}, 'Make sure that ', h('strong', { text: 'Contents' }), ' and ', h('strong', { text: 'Actions' }),
+        ' are “Read and write”, and add nothing else. Actions lets this page start the sync after you save.'),
       h('li', { text: 'Generate the token, copy it, and paste it here.' })),
     h('div', { class: 'field' }, h('label', { class: 'label', for: 't-token', text: 'Token' }), input),
     h('p', { class: 'hint', text: 'On an iPhone, add this page to the Home Screen. Safari clears the storage of a site that you do not visit for 7 days.' }));

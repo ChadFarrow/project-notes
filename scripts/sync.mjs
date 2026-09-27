@@ -8,21 +8,22 @@
 //                                      (site/ + data.json + lib/notes.js); --dry-run
 //                                      does not stop this, it only guards the repo
 
-import { copyFileSync, cpSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fetchRepos, fetchStars, pickToken, probeToken } from './lib/github.mjs';
 import { normalizeRepos } from './lib/model.mjs';
 import { buildOutputs } from './lib/render.mjs';
-import { siteDirProblem } from './lib/site.mjs';
+import { buildSiteFiles, siteDirProblem } from './lib/site.mjs';
 
 const OWNER = 'ChadFarrow';
 const root = path.resolve(import.meta.dirname, '..');
 const dryRun = process.argv.includes('--dry-run');
 
 const siteFlag = process.argv.indexOf('--site');
-const siteDir = siteFlag >= 0 ? path.resolve(process.argv[siteFlag + 1] || '') : null;
-if (siteDir) {
-  const problem = siteFlag + 1 >= process.argv.length ? '--site needs a folder' : siteDirProblem(root, siteDir);
+const siteArg = siteFlag >= 0 ? process.argv[siteFlag + 1] : undefined;
+const siteDir = siteFlag >= 0 && siteArg && !siteArg.startsWith('--') ? path.resolve(siteArg) : null;
+if (siteFlag >= 0) {
+  const problem = siteDir ? siteDirProblem(root, siteDir) : '--site needs a folder';
   if (problem) {
     console.error(problem);
     process.exit(2);
@@ -67,11 +68,15 @@ for (const [rel, content] of files) {
 // The site is built after the repo files, from the same fetch. Existing files in the
 // folder are overwritten, never deleted.
 if (siteDir) {
-  cpSync(path.join(root, 'site'), siteDir, { recursive: true });
-  writeFileSync(path.join(siteDir, 'data.json'), siteData);
-  mkdirSync(path.join(siteDir, 'lib'), { recursive: true });
-  // .js, not .mjs: a module script needs a JavaScript MIME type from the server.
-  copyFileSync(path.join(root, 'scripts/lib/notes.mjs'), path.join(siteDir, 'lib/notes.js'));
+  const siteSrc = path.join(root, 'site');
+  const sources = new Map(readdirSync(siteSrc, { withFileTypes: true })
+    .filter((d) => d.isFile() && !d.name.startsWith('.'))
+    .map((d) => [d.name, readFileSync(path.join(siteSrc, d.name), 'utf8')]));
+  const notesSource = readFileSync(path.join(root, 'scripts/lib/notes.mjs'), 'utf8');
+  for (const [rel, content] of buildSiteFiles({ sources, notesSource, siteData })) {
+    mkdirSync(path.dirname(path.join(siteDir, rel)), { recursive: true });
+    writeFileSync(path.join(siteDir, rel), content);
+  }
   console.log(`built the site in ${siteDir}`);
 }
 for (const p of problems) console.log(`::warning::${p}`);
