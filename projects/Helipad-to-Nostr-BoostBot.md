@@ -1,7 +1,6 @@
 # Helipad-to-Nostr-BoostBot
 
 **Category:** Nostr  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot
 
 ## Description

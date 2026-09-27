@@ -1,7 +1,6 @@
 # HPM-Lightning
 
 **Category:** Lightning  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/HPM-Lightning
 
 ## Description

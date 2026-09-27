@@ -1,7 +1,7 @@
 # TRM-Lightning
 
 **Category:** Lightning  
-**Language:** TypeScript  
+**Uses:** lnurl-test-feed  
 **Repo:** https://github.com/ChadFarrow/TRM-Lightning
 
 ## Description

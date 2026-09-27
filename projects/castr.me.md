@@ -1,7 +1,7 @@
 # castr.me
 
 **Category:** Music/Podcasting  
-**Language:** TypeScript  
+**Track:** upstream  
 **Repo:** https://github.com/ChadFarrow/castr.me
 
 ## Description

@@ -1,7 +1,6 @@
 # candr.space
 
 **Category:** Web/Apps  
-**Language:** HTML  
 **Repo:** https://github.com/ChadFarrow/candr.space
 
 ## Description

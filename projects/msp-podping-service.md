@@ -1,7 +1,6 @@
 # msp-podping-service
 
 **Category:** Music/Podcasting  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/msp-podping-service
 
 ## Description

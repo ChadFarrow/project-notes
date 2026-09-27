@@ -1,7 +1,6 @@
 # libre-listener-wallet-monorepo
 
 **Category:** Lightning  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/libre-listener-wallet-monorepo
 
 ## Description

@@ -1,7 +1,6 @@
 # chadf-landing-page
 
 **Category:** Web/Apps  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/chadf-landing-page
 
 ## Description

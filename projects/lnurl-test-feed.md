@@ -1,7 +1,6 @@
 # lnurl-test-feed
 
 **Category:** Lightning  
-**Language:** HTML  
 **Repo:** https://github.com/ChadFarrow/lnurl-test-feed
 
 ## Description

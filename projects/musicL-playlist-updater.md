@@ -1,7 +1,7 @@
 # musicL-playlist-updater
 
 **Category:** Music/Podcasting  
-**Language:** JavaScript  
+**Uses:** msp-podping-service, chadf-musicl-playlists  
 **Repo:** https://github.com/ChadFarrow/musicL-playlist-updater
 
 ## Description

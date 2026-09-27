@@ -1,7 +1,6 @@
 # Auto-musicL-Maker
 
 **Category:** Music/Podcasting  
-**Language:** JavaScript  
 **Repo:** https://github.com/ChadFarrow/Auto-musicL-Maker
 
 ## Description

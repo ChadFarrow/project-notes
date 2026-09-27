@@ -1,7 +1,6 @@
 # RSS-music-site-template
 
 **Category:** Music/Podcasting  
-**Language:** TypeScript  
 **Repo:** https://github.com/ChadFarrow/RSS-music-site-template
 
 ## Description

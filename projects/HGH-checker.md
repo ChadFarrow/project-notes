@@ -1,7 +1,6 @@
 # HGH-checker
 
 **Category:** Tools  
-**Language:** JavaScript  
 **Repo:** https://github.com/ChadFarrow/HGH-checker
 
 ## Description

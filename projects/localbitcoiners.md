@@ -1,7 +1,6 @@
 # localbitcoiners
 
 **Category:** Web/Apps  
-**Language:** JavaScript  
 **Repo:** https://github.com/ChadFarrow/localbitcoiners
 
 ## Description
