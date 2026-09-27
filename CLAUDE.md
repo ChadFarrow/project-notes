@@ -17,7 +17,8 @@ The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds,
 - **`projects/<repo>.md`** — One note per non-archived repo. The hand-written part is yours; the sync only rewrites the block between `<!-- AUTO:START -->` and `<!-- AUTO:END -->`. See *Project notes* below. `projects/archived/` holds notes for archived repos; the sync does not read it.
 - **`PC2.0-SPECS.md`** — Reference doc mapping Podcasting 2.0 namespace tags (`<podcast:value>`, `<podcast:medium>`, etc.) to which projects use them.
 - **`references/`** — Curated bookmark collections by topic (podcasting-2.0, lightning, nostr, dev-tools, misc). `starred.md` is auto-synced.
-- **`scripts/`** — The generator: `sync.mjs` (the command, all I/O), `lib/github.mjs` (`gh` calls, token choice), `lib/notes.mjs` (note header parsing, AUTO-block splice), `lib/model.mjs` (pure data), `lib/render.mjs` (pure markdown). Zero npm dependencies; there is no `package.json`.
+- **`notes/`** — Free-form notes, usually written on the phone in the Obsidian vault and pushed by the vault sync. Anything goes; the dashboard does not read them.
+- **`scripts/`** — The generator: `sync.mjs` (the command, all I/O), `lib/github.mjs` (`gh` calls, token choice), `lib/notes.mjs` (note header parsing, AUTO-block splice), `lib/model.mjs` (pure data), `lib/render.mjs` (pure markdown). The Obsidian vault sync: `vault-sync.mjs` (I/O and git), `lib/vault.mjs` (pure planning), and the launchd template `com.chadfarrow.project-notes-vault.plist`. Zero npm dependencies; there is no `package.json`.
 - **`test/`** — `node --test` unit tests with hand-written fixtures in `test/fixtures/`.
 
 ## Project notes
@@ -35,6 +36,35 @@ The sync creates a stub note for any non-archived repo that has none. Deleting a
 **Linking work across repos.** When a PR or issue in repo B is opened for work in repo A, put a line `For: ChadFarrow/A` in its body. The sync lists that item under A as *Opened elsewhere for this project*. The line must start with `For:` (list, quote and emphasis markers before it are fine) and must name the repo as `ChadFarrow/<repo>` or its URL — bare repo names in prose are ignored on purpose, because they are far too noisy. A marker that names an unknown or archived repo shows under *Note problems*.
 
 **The AUTO block.** Never edit inside it. It holds only data that comes from GitHub — no timestamps, no relative times — so a run with nothing new leaves every note byte-identical. If the markers are not exactly one START followed by one END (a duplicate, a missing END, one inside a code fence), the sync leaves that note untouched and lists it under *Note problems*; fix the markers by hand.
+
+## The Obsidian vault
+
+The iCloud vault `project-notes` (`~/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes`) is a two-way copy of this repo, so Chad can read the dashboard and write notes on the phone. The launchd agent `com.chadfarrow.project-notes-vault` runs `scripts/vault-sync.mjs` when the vault's `projects/` or `notes/` folder changes (after a 30 s pause) and every 15 minutes. Log: `~/Library/Logs/project-notes-vault.log`. The phone reaches GitHub through this Mac, so the Mac must be on.
+
+**A save in the vault reaches GitHub with no review** — usually within a minute for a new note, at most about 15 minutes for an edit the folder watch misses — and the repo is public.
+
+The rule: **hand-written files sync both ways; generated files flow repo → vault only.**
+
+- *Generated*, repo → vault: `LATEST.md`, `INDEX.md`, `audits/`, `references/starred.md`, and the AUTO block of each note. An edit to these in the vault is overwritten.
+- *Notes*, `projects/<repo>.md`: the text outside the AUTO block syncs both ways; the vault's version gets the repo's AUTO block. The repo decides which notes exist — a note deleted in the vault comes back, and a new file made in the vault's `projects/` stays in the vault only.
+- *Free files*, whole file both ways, including new and deleted files: `README.md`, `PC2.0-SPECS.md`, `references/` (except `starred.md`), `notes/`, `projects/archived/`.
+- Not synced: `CLAUDE.md`, `scripts/`, `test/`, `.github/`, dotfiles, the vault's `.obsidian/` and `conflicts/`. The first run writes `.obsidian/app.json` so new notes land in `notes/` — Obsidian's default, the vault root, does not sync.
+
+A three-way compare against the last sync (`.git/vault-sync-state.json`, never committed) picks the direction. When a file changed on both sides, **the repo wins** and the vault's version is saved to the vault's `conflicts/` folder, with a Mac notification. A vault note with broken AUTO markers is treated the same way.
+
+**The sync pauses itself while this checkout is in use.** It skips the run (and logs why) unless the checkout is on `main`, has no uncommitted changes, and has no unpushed commits other than its own `Sync N files from the Obsidian vault` commits. So work on a branch, and switch back to a clean `main` when done — the vault catches up on the next run.
+
+Other stops, each logged with a notification: a missing vault folder after the first run (iCloud off must never read as "everything was deleted"), a run that would delete more than 5 files from the repo (`--allow-deletes` overrides), and a failed pull. An iCloud placeholder (`.name.icloud`) is skipped, not read as a deletion. When a note's `Category`, `Uses` or `Track` line changes in the vault, the sync starts the `sync-all.yml` workflow so the dashboard updates in minutes.
+
+Install or reload the agent:
+
+```bash
+cp scripts/com.chadfarrow.project-notes-vault.plist ~/Library/LaunchAgents/
+launchctl unload ~/Library/LaunchAgents/com.chadfarrow.project-notes-vault.plist 2>/dev/null
+launchctl load ~/Library/LaunchAgents/com.chadfarrow.project-notes-vault.plist
+```
+
+`test/vault-sync.test.mjs` runs the script end to end against a temporary remote, checkout and vault; `PN_REPO`, `PN_VAULT`, `PN_STATE`, `PN_LOCK`, `PN_NO_NOTIFY` and `PN_NO_WORKFLOW` exist for it.
 
 ## Automation
 
@@ -71,6 +101,6 @@ The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase 
 ## Editing Guidelines
 
 - `INDEX.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), `references/starred.md` and the AUTO blocks in `projects/*.md` are **auto-generated** — do not edit them by hand (the next sync overwrites them). To change what they contain, edit `scripts/lib/render.mjs` and its tests.
-- Everything else in `projects/*.md`, and all other `.md` files, are manually maintained and safe to edit.
+- Everything else in `projects/*.md`, and all other `.md` files, are manually maintained and safe to edit. Edits made in the Obsidian vault arrive as `Sync N files from the Obsidian vault` commits.
 - The GitHub user is `ChadFarrow`.
 - `.gitignore` ignores `.DS_Store`. It was tracked in git until 2026-09-27.

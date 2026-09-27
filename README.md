@@ -29,6 +29,10 @@ To show a PR or an issue under the project it was opened for, add this line to i
 For: ChadFarrow/<project-repo>
 ```
 
+## Obsidian
+
+The iCloud vault `project-notes` holds a copy of this repo for Obsidian on the Mac and the phone. Notes that you write there reach GitHub within minutes: new notes go in `notes/`, and your text in a project note goes to its file in `projects/`. The dashboard and the live blocks flow the other way only. The Mac mini does the sync, so it must be on.
+
 ## How it updates
 
 A GitHub Action runs `scripts/sync.mjs` every 6 hours and commits the result. To preview a run locally, use `node scripts/sync.mjs --dry-run`. [CLAUDE.md](CLAUDE.md) has the details.
