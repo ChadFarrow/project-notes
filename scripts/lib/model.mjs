@@ -166,3 +166,52 @@ export function buildModel({ repos, notes, now, owner, degraded = false }) {
 
   return { owner, now, projects, index, readyIdle, stale, problems };
 }
+
+// ---------- shared by the dashboard and the site data ----------
+
+export const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length;
+
+export const branchUrl = (p, name) => `${p.url}/tree/${name.split('/').map(encodeURIComponent).join('/')}`;
+
+// Category order: alphabetical, Uncategorized last.
+export const compareCategories = (a, b) =>
+  (a === 'Uncategorized') - (b === 'Uncategorized') || a.localeCompare(b, 'en', { sensitivity: 'base' });
+
+export function groupByCategory(projects) {
+  const groups = new Map();
+  for (const p of projects) {
+    if (!groups.has(p.category)) groups.set(p.category, []);
+    groups.get(p.category).push(p);
+  }
+  return [...groups.entries()].sort(([a], [b]) => compareCategories(a, b));
+}
+
+// Tracked projects with open work, most recent activity first.
+export const activeProjects = (tracked) =>
+  tracked.filter(hasWork).sort((a, b) => b.lastActivity.localeCompare(a.lastActivity));
+
+const newestFirst = (a, b) => b.updatedAt.localeCompare(a.updatedAt);
+
+// The open issues of the tracked projects: issues whose title is open in several repos
+// (one group each, most recent activity first, items by repo), then the rest by
+// project (newest issue first, projects by their newest issue).
+export function issueGroups(tracked) {
+  const issues = tracked.flatMap((p) => p.issues.map((i) => ({ ...i, repo: p.name })));
+  const byTitle = new Map();
+  for (const i of issues) {
+    const key = i.title.trim().toLowerCase();
+    if (!byTitle.has(key)) byTitle.set(key, []);
+    byTitle.get(key).push(i);
+  }
+  const groups = [...byTitle.values()].filter((g) => new Set(g.map((i) => i.repo)).size > 1);
+  const sharedUrls = new Set(groups.flat().map((i) => i.url));
+  const latest = (g) => g.map((i) => i.updatedAt).sort().at(-1);
+  const shared = groups
+    .sort((a, b) => latest(b).localeCompare(latest(a)))
+    .map((g) => ({ title: g[0].title.trim(), issues: [...g].sort((a, b) => a.repo.localeCompare(b.repo)) }));
+  const byProject = tracked
+    .map((project) => ({ project, issues: project.issues.filter((i) => !sharedUrls.has(i.url)).sort(newestFirst) }))
+    .filter((g) => g.issues.length)
+    .sort((a, b) => newestFirst(a.issues[0], b.issues[0]));
+  return { total: issues.length, shared, byProject };
+}
