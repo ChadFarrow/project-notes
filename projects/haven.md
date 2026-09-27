@@ -22,26 +22,5 @@ High Availability Vault for Events on Nostr
 
 - **Repo:** [ChadFarrow/haven](https://github.com/ChadFarrow/haven) · Go · fork of barrydeen/haven
 
-### Branches with no open PR (20)
-
-- [`claude/add-dynamic-dns-support-onshs`](https://github.com/ChadFarrow/haven/tree/claude/add-dynamic-dns-support-onshs)
-- [`custom-haven-backup`](https://github.com/ChadFarrow/haven/tree/custom-haven-backup)
-- [`dev-0.4.4`](https://github.com/ChadFarrow/haven/tree/dev-0.4.4)
-- [`dev-addDeleteToInbox`](https://github.com/ChadFarrow/haven/tree/dev-addDeleteToInbox)
-- [`dev-blossom`](https://github.com/ChadFarrow/haven/tree/dev-blossom)
-- [`dev-dbSwapper`](https://github.com/ChadFarrow/haven/tree/dev-dbSwapper)
-- [`dev-fixLazySubscription`](https://github.com/ChadFarrow/haven/tree/dev-fixLazySubscription)
-- [`dev-fixPanic`](https://github.com/ChadFarrow/haven/tree/dev-fixPanic)
-- [`dev-fixStatic`](https://github.com/ChadFarrow/haven/tree/dev-fixStatic)
-- [`dev-fixStupidDocker`](https://github.com/ChadFarrow/haven/tree/dev-fixStupidDocker)
-- [`dev-oct8update`](https://github.com/ChadFarrow/haven/tree/dev-oct8update)
-- [`dev-oomFixAttempt`](https://github.com/ChadFarrow/haven/tree/dev-oomFixAttempt)
-- [`dev-rateLimits`](https://github.com/ChadFarrow/haven/tree/dev-rateLimits)
-- [`dev-removeJsonFile`](https://github.com/ChadFarrow/haven/tree/dev-removeJsonFile)
-- [`dev-staticBugFix`](https://github.com/ChadFarrow/haven/tree/dev-staticBugFix)
-- [`dev-updatev4.2`](https://github.com/ChadFarrow/haven/tree/dev-updatev4.2)
-- [`dev-v1.0.1`](https://github.com/ChadFarrow/haven/tree/dev-v1.0.1)
-- [`dev-v1.0.5`](https://github.com/ChadFarrow/haven/tree/dev-v1.0.5)
-- [`update-v1.1.0`](https://github.com/ChadFarrow/haven/tree/update-v1.1.0)
-- [`v0.4.0`](https://github.com/ChadFarrow/haven/tree/v0.4.0)
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

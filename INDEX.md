@@ -47,8 +47,8 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 ## Uncategorized
 
 - [boostbox](projects/boostbox.md) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. (`Clojure`) · fork
-- [demu-feed-template](projects/demu-feed-template.md) - Template for releasing decentralized music · fork
-- [haven](projects/haven.md) - High Availability Vault for Events on Nostr (`Go`) · fork
+- [demu-feed-template](projects/demu-feed-template.md) - Template for releasing decentralized music · fork · not tracked
+- [haven](projects/haven.md) - High Availability Vault for Events on Nostr (`Go`) · fork · not tracked
 - [helipad](projects/helipad.md) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. (`JavaScript`) · fork
 - [helipad-startos](projects/helipad-startos.md) - Helipad packaged for Start9's StartOS. (`Makefile`) · fork
 - [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`)

@@ -1,6 +1,6 @@
 # Dashboard — 2026-09-27 20:52 UTC
 
-18 open PRs · 24 open issues · 66 branches with no PR · 49 tracked repos (2 not tracked)
+18 open PRs · 24 open issues · 46 branches with no PR · 47 tracked repos (4 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -201,22 +201,6 @@
 - PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 5 days ago
 - PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 5 days ago
 
-#### [haven](projects/haven.md)
-
-20 branches with no PR
-
-- Branch [`claude/add-dynamic-dns-support-onshs`](https://github.com/ChadFarrow/haven/tree/claude/add-dynamic-dns-support-onshs) — no PR
-- Branch [`custom-haven-backup`](https://github.com/ChadFarrow/haven/tree/custom-haven-backup) — no PR
-- Branch [`update-v1.1.0`](https://github.com/ChadFarrow/haven/tree/update-v1.1.0) — no PR
-- Branch [`dev-v1.0.5`](https://github.com/ChadFarrow/haven/tree/dev-v1.0.5) — no PR
-- Branch [`dev-v1.0.1`](https://github.com/ChadFarrow/haven/tree/dev-v1.0.1) — no PR
-- Branch [`dev-blossom`](https://github.com/ChadFarrow/haven/tree/dev-blossom) — no PR
-- Branch [`dev-addDeleteToInbox`](https://github.com/ChadFarrow/haven/tree/dev-addDeleteToInbox) — no PR
-- Branch [`dev-0.4.4`](https://github.com/ChadFarrow/haven/tree/dev-0.4.4) — no PR
-- Branch [`dev-updatev4.2`](https://github.com/ChadFarrow/haven/tree/dev-updatev4.2) — no PR
-- Branch [`v0.4.0`](https://github.com/ChadFarrow/haven/tree/v0.4.0) — no PR
-- [10 more branches with no PR](projects/haven.md)
-
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
 1 issue · 2 branches with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
@@ -290,13 +274,12 @@
 
 ### Quiet — no open work
 
-[chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [demu-feed-template](projects/demu-feed-template.md) · [HGH-checker](projects/HGH-checker.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [podroll-atlas](projects/podroll-atlas.md) · [project-notes](projects/project-notes.md) · [so-big-lightning-payment](projects/so-big-lightning-payment.md) · [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) · [stacks](projects/stacks.md) · [stacks-pc20](projects/stacks-pc20.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [podroll-atlas](projects/podroll-atlas.md) · [project-notes](projects/project-notes.md) · [so-big-lightning-payment](projects/so-big-lightning-payment.md) · [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) · [stacks](projects/stacks.md) · [stacks-pc20](projects/stacks-pc20.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
 - [stacks-pc20](projects/stacks-pc20.md) — last push 2025-07-26
 - [stacks](projects/stacks.md) — last push 2025-07-26 · fork
-- [demu-feed-template](projects/demu-feed-template.md) — last push 2025-08-27 · fork
 - [HGH-checker](projects/HGH-checker.md) — last push 2025-12-19
 - [so-big-lightning-payment](projects/so-big-lightning-payment.md) — last push 2025-12-23
 - [lnbeats](projects/lnbeats.md) — last push 2026-02-05 · fork

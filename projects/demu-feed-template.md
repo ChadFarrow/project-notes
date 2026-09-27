@@ -22,5 +22,5 @@ Template for releasing decentralized music
 
 - **Repo:** [ChadFarrow/demu-feed-template](https://github.com/ChadFarrow/demu-feed-template) · fork of de-mu/demu-feed-template
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->
