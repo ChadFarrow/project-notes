@@ -22,11 +22,5 @@
 
 - **Repo:** [ChadFarrow/is-this-thing-on](https://github.com/ChadFarrow/is-this-thing-on) · JavaScript
 
-### Issues (1)
-
-- [#18 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/is-this-thing-on/issues/18) — opened 2026-09-05
-
-### Branches with no open PR (1)
-
-- [`claude/pull-latest-changes-MyBtZ`](https://github.com/ChadFarrow/is-this-thing-on/tree/claude/pull-latest-changes-MyBtZ)
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

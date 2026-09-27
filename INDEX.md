@@ -51,10 +51,10 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [haven](projects/haven.md) - High Availability Vault for Events on Nostr (`Go`) · fork · not tracked
 - [helipad](projects/helipad.md) - This is a simple lnd poller and web front-end to see and read boosts and boostagrams. (`JavaScript`) · fork
 - [helipad-startos](projects/helipad-startos.md) - Helipad packaged for Start9's StartOS. (`Makefile`) · fork
-- [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`)
-- [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`)
-- [lnbeats](projects/lnbeats.md) - No description (`Svelte`) · fork
-- [NMNU](projects/NMNU.md) - No description (`TypeScript`)
+- [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`) · not tracked
+- [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`) · not tracked
+- [lnbeats](projects/lnbeats.md) - No description (`Svelte`) · fork · not tracked
+- [NMNU](projects/NMNU.md) - No description (`TypeScript`) · not tracked
 - [obsidian-candr](projects/obsidian-candr.md) - Obsidian vault: candr · private
 - [pc20-archive](projects/pc20-archive.md) - Podcasting 2.0 back-catalog RSS feed for episodes 1-100 (`TypeScript`)
 - [pc20-clips](projects/pc20-clips.md) - Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips (`Python`) · private

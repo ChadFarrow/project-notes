@@ -22,18 +22,5 @@
 
 - **Repo:** [ChadFarrow/lnbeats](https://github.com/ChadFarrow/lnbeats) · Svelte · fork of thebells1111/lnbeats
 
-### Branches with no open PR (12)
-
-- [`add-msp2-icon`](https://github.com/ChadFarrow/lnbeats/tree/add-msp2-icon)
-- [`artist-filter`](https://github.com/ChadFarrow/lnbeats/tree/artist-filter)
-- [`claude/add-msp-feed-detection-g003l`](https://github.com/ChadFarrow/lnbeats/tree/claude/add-msp-feed-detection-g003l)
-- [`curiohoster`](https://github.com/ChadFarrow/lnbeats/tree/curiohoster)
-- [`database-update`](https://github.com/ChadFarrow/lnbeats/tree/database-update)
-- [`favorite`](https://github.com/ChadFarrow/lnbeats/tree/favorite)
-- [`hosted_playlists`](https://github.com/ChadFarrow/lnbeats/tree/hosted_playlists)
-- [`localDB`](https://github.com/ChadFarrow/lnbeats/tree/localDB)
-- [`remote-playlist`](https://github.com/ChadFarrow/lnbeats/tree/remote-playlist)
-- [`remote-sync`](https://github.com/ChadFarrow/lnbeats/tree/remote-sync)
-- [`timeValueSplit`](https://github.com/ChadFarrow/lnbeats/tree/timeValueSplit)
-- [`transcript`](https://github.com/ChadFarrow/lnbeats/tree/transcript)
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

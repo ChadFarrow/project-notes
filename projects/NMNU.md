@@ -21,9 +21,6 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/NMNU](https://github.com/ChadFarrow/NMNU) · TypeScript
-- **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Issues (1)
-
-- [#2 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/NMNU/issues/2) — opened 2026-09-05
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

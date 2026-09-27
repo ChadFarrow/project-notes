@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/IRL_QR](https://github.com/ChadFarrow/IRL_QR) · JavaScript
 
-### Pull requests (1)
-
-- [#19 Replace payment feed with configurable multi-QR code grid](https://github.com/ChadFarrow/IRL_QR/pull/19) — opened 2026-03-09
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->
