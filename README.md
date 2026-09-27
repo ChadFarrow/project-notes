@@ -2,9 +2,11 @@
 
 One place to see the open work across every ChadFarrow repo.
 
-### [→ Open the dashboard](LATEST.md)
+### [→ Open the web dashboard](https://notes.podtards.com)
 
-The dashboard shows what needs attention now, then the open PRs, issues and branches for each project. It updates every 6 hours.
+The web dashboard shows the status of every open PR as a coloured lamp, lets you filter the list, and lets you edit a project's category, the repos it uses, and your notes and TODOs without markdown. To edit, you set up a GitHub token once on each device; the page tells you how.
+
+[The same dashboard as markdown](LATEST.md) shows what needs attention now, then the open PRs, issues and branches for each project. Both update every 6 hours.
 
 - [Project index](INDEX.md) — every repo, grouped by category, with a link to its note
 - [Dashboard history](audits/README.md) — one snapshot per day

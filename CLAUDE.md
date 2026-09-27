@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Repo Is
 
-A markdown dashboard for ChadFarrow's GitHub work: what needs attention now, and what is open for each project — including work opened in the other repos a project uses. The only code is the generator in `scripts/` and its tests; everything else is markdown.
+A markdown dashboard for ChadFarrow's GitHub work: what needs attention now, and what is open for each project — including work opened in the other repos a project uses. The same data also feeds a web dashboard at **https://notes.podtards.com** (see *The web dashboard* below), where Chad reads the status and edits notes without markdown. The code is the generator in `scripts/`, the web page in `site/`, and their tests; everything else is markdown.
 
 The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds, V4V payments, musicL playlists), **Lightning Network** (LNURL, Lightning Address, streaming sats), and **Nostr** (social protocol, relay bots, event publishing).
 
@@ -18,7 +18,8 @@ The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds,
 - **`PC2.0-SPECS.md`** — Reference doc mapping Podcasting 2.0 namespace tags (`<podcast:value>`, `<podcast:medium>`, etc.) to which projects use them.
 - **`references/`** — Curated bookmark collections by topic (podcasting-2.0, lightning, nostr, dev-tools, misc). `starred.md` is auto-synced.
 - **`notes/`** — Free-form notes, usually written on the phone in the Obsidian vault and pushed by the vault sync. Anything goes; the dashboard does not read them.
-- **`scripts/`** — The generator: `sync.mjs` (the command, all I/O), `lib/github.mjs` (`gh` calls, token choice), `lib/notes.mjs` (note header parsing, AUTO-block splice), `lib/model.mjs` (pure data), `lib/render.mjs` (pure markdown). The Obsidian vault sync: `vault-sync.mjs` (I/O and git), `lib/vault.mjs` (pure planning), and the launchd template `com.chadfarrow.project-notes-vault.plist`. Zero npm dependencies; there is no `package.json`.
+- **`scripts/`** — The generator: `sync.mjs` (the command, all I/O), `lib/github.mjs` (`gh` calls, token choice), `lib/notes.mjs` (note header parsing, AUTO-block splice, and the web editor's `readNoteForm`/`applyNoteForm`), `lib/model.mjs` (pure data, plus the ordering rules the markdown and the web page share), `lib/render.mjs` (pure markdown), `lib/site.mjs` (pure `data.json` for the web page). `check-site.mjs` drives the web page in a real browser. The Obsidian vault sync: `vault-sync.mjs` (I/O and git), `lib/vault.mjs` (pure planning), and the launchd template `com.chadfarrow.project-notes-vault.plist`. Zero npm dependencies; there is no `package.json`.
+- **`site/`** — The web dashboard: `index.html`, `app.js`, `style.css`, `icon.svg`, hand-written, no dependencies, no build step. `sync.mjs --site <dir>` adds `data.json` and a copy of `scripts/lib/notes.mjs` as `lib/notes.js`.
 - **`test/`** — `node --test` unit tests with hand-written fixtures in `test/fixtures/`.
 
 ## Project notes
@@ -48,7 +49,7 @@ The rule: **hand-written files sync both ways; generated files flow repo → vau
 - *Generated*, repo → vault: `LATEST.md`, `INDEX.md`, `audits/`, `references/starred.md`, and the AUTO block of each note. An edit to these in the vault is overwritten.
 - *Notes*, `projects/<repo>.md`: the text outside the AUTO block syncs both ways; the vault's version gets the repo's AUTO block. The repo decides which notes exist — a note deleted in the vault comes back, and a new file made in the vault's `projects/` stays in the vault only.
 - *Free files*, whole file both ways, including new and deleted files: `README.md`, `PC2.0-SPECS.md`, `references/` (except `starred.md`), `notes/`, `projects/archived/`.
-- Not synced: `CLAUDE.md`, `scripts/`, `test/`, `.github/`, dotfiles, the vault's `.obsidian/` and `conflicts/`. The first run writes `.obsidian/app.json` so new notes land in `notes/` — Obsidian's default, the vault root, does not sync.
+- Not synced: `CLAUDE.md`, `scripts/`, `site/`, `test/`, `.github/`, dotfiles, the vault's `.obsidian/` and `conflicts/`. The first run writes `.obsidian/app.json` so new notes land in `notes/` — Obsidian's default, the vault root, does not sync.
 
 A three-way compare against the last sync (`.git/vault-sync-state.json`, never committed) picks the direction. When a file changed on both sides, **the repo wins** and the vault's version is saved to the vault's `conflicts/` folder, with a Mac notification. A vault note with broken AUTO markers is treated the same way.
 
@@ -68,7 +69,7 @@ launchctl load ~/Library/LaunchAgents/com.chadfarrow.project-notes-vault.plist
 
 ## Automation
 
-One GitHub Actions workflow, **`sync-all.yml`**, runs every 6 hours (and on manual dispatch): `node --test`, then `node scripts/sync.mjs`, then auto-commit. It writes only files whose content changed.
+One GitHub Actions workflow, **`sync-all.yml`**, runs every 6 hours, on manual dispatch, and on a push to `main` that touches `site/`, `scripts/` or the workflow: `node --test`, then `node scripts/sync.mjs --site "$RUNNER_TEMP/site"`, then auto-commit, then upload of the web dashboard. It writes only files whose content changed. A second job, `deploy`, publishes the upload to GitHub Pages (see *The web dashboard*). Do not add `projects/**` to the push paths: every Obsidian save would start a run.
 
 The sync makes one paginated GraphQL query (`REPOS_QUERY` in `scripts/lib/github.mjs`) over `user.repositories(ownerAffiliations: [OWNER], isArchived: false)`, 25 repos per page — a page of 100 took 9.1 s against GitHub's 10 s limit. Nested lists (50 PRs, 50 issues, 100 branches per repo) are not paginated; if a repo has more, the list is marked truncated under *Note problems*. PR and issue bodies are read for `For:` markers and then dropped — they are never written to the repo.
 
@@ -88,7 +89,11 @@ The same command runs on the Mac (Node 22+, `gh` logged in):
 node --test                      # bare, as the workflow runs it
 node scripts/sync.mjs --dry-run  # lists what would change, writes nothing
 node scripts/sync.mjs            # writes the changed files
+node scripts/sync.mjs --dry-run --site _site   # also builds the web page into _site/ (gitignored)
+node scripts/check-site.mjs      # the web page in headless Chrome, against the fixture
 ```
+
+`--dry-run` guards only the repo files; `--site` always writes its folder, and refuses the checkout, a folder above it, and `site/` itself. To look at the page, run `python3 -m http.server -d _site 8765`.
 
 Locally there is no `AUDIT_TOKEN`, so `gh` uses its keychain login and the run is never degraded. Set `AUDIT_TOKEN=bogus FALLBACK_TOKEN="$(gh auth token)"` to exercise the "rejected" path.
 
@@ -98,9 +103,37 @@ Locally there is no `AUDIT_TOKEN`, so `gh` uses its keychain login and the run i
 
 The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase retry loop. A manual push can still collide with a scheduled run — if you hit a conflict in `LATEST.md`, `INDEX.md` or `audits/<date>.md`, take either side and re-run the workflow, since those files are regenerated wholesale. The same goes for a conflict inside a note's AUTO block. A conflict *outside* the AUTO block is your own edit and needs a real merge.
 
+## The web dashboard
+
+**https://notes.podtards.com** shows the same data as `LATEST.md`, with a status lamp for each open PR: red for a merge conflict or failing checks, amber while checks run, hollow for a draft, green when ready. It also has a form editor for each project: Category (picked from the categories in use, so the names match), Uses, Track, one text box for each `## ` section of the note, and the TODOs as a checklist. Filters and open rows live in the browser's localStorage (`pn:*` keys) and never reach the repo.
+
+**Data.** `sync.mjs --site <dir>` writes `data.json` from the same fetch and model as the markdown; `data.json` is never committed. `renderSiteData` in `scripts/lib/site.mjs` publishes only what `LATEST.md`, `INDEX.md` and the AUTO blocks already publish. A `**Track:** no` project carries only its `INDEX.md` facts; it stays listed so its Track can be switched back on. `test/site.test.mjs` checks that every URL in `data.json` also appears in the markdown. Keep that test passing when you add a field.
+
+**Hosting.** The `deploy` job in `sync-all.yml` publishes the upload with `actions/deploy-pages`. It is a separate job, so the job that holds `AUDIT_TOKEN` never gets an OIDC token. GitHub Pages is set to build from Actions, with the custom domain `notes.podtards.com`. Cloudflare holds the DNS for `podtards.com`: `CNAME notes → chadfarrow.github.io`, **DNS only**. The one-time setup was:
+
+```bash
+gh api -X POST repos/ChadFarrow/project-notes/pages -f build_type=workflow
+gh api -X PUT repos/ChadFarrow/project-notes/pages -f cname=notes.podtards.com
+gh api -X PUT repos/ChadFarrow/project-notes/pages -F https_enforced=true   # once the certificate is issued
+```
+
+**Never serve the page from `chadfarrow.github.io/project-notes`.** Three other repos publish Pages on that origin (`chadf-musicl-playlists`, `libre-listener-wallet-monorepo`, `pc20-archive`). localStorage and the CSP `'self'` are per origin, so a script on any of those sites could read the edit token. The custom domain gives the page an origin of its own.
+
+**Editing and the token.** Saving uses the GitHub Contents API with a fine-grained PAT that Chad pastes once on each device. The PAT has access to `ChadFarrow/project-notes` only, with **Contents: Read and write** and **Actions: Read and write** (to start the sync), and nothing else. The page keeps it in localStorage as `pn:token`, and "Editing token → Forget the token" removes it. The setup link pre-fills the name, a 90-day life and both permissions (GitHub has no parameter for the repository, so that one is picked by hand). To rotate, make a new PAT and paste it through the same button; the editor also offers "Paste a new token" when a save is refused, without losing the edit. The repo is public, so reading it proves nothing about a token: at setup the page sends two requests that GitHub refuses either way and that change nothing — a PUT of `README.md` with an all-zero sha (409 with write access, 403 without) and a dispatch to a branch that does not exist (422 with Actions access, 403 without). A token that cannot write is refused; one without Actions is kept with a warning.
+
+Each save is one commit on `main` by Chad: `Edit the <repo> note from the web dashboard`. The form compares Uses as a set, so the order of the checkboxes is never a change, and a saved Uses line keeps the note's order. On a conflict (the note changed since it was opened), the page reads the note again. If none of the fields it is saving changed on GitHub (`conflictingFields` in `notes.mjs`), it applies them once more; if one did, it saves nothing and says which field, rather than overwrite someone else's edit. After a change to Category, Uses or Track it dispatches `sync-all.yml`, so the dashboard updates in a few minutes. The vault sync pulls these commits like any other push, and its rule still applies: when a note changed on both sides, the repo wins.
+
+**`scripts/lib/notes.mjs` runs in the browser too.** The site serves a copy of it. Keep it free of imports and Node APIs; `test/notes-form.test.mjs` checks the imports. Also avoid newer syntax such as regex lookbehind, which older iOS Safari cannot parse. `applyNoteForm` must leave every byte it did not edit as it was: each line keeps its own ending, and only the lines of a changed value are rewritten.
+
+**Security.** The CSP is a `<meta>` tag in `site/index.html`: scripts, styles and fonts come from the page's own origin only, and the page connects only to itself and to `api.github.com`. PR and issue titles are written by other people, so `app.js` puts every GitHub string into the page with `textContent` or a Text node, never as HTML. The page refuses to run inside a frame. `site/index.html` and `app.js` carry `?v=__BUILD__`, which `buildSiteFiles` replaces with a hash of the code, so a browser never pairs a cached `app.js` with a newer `lib/notes.js`.
+
+**The edit token can reach `AUDIT_TOKEN`.** Contents write on this repo is enough to change `scripts/`, and the workflow runs `scripts/sync.mjs` with `AUDIT_TOKEN`, a classic `repo` PAT that can write to every repo Chad owns. So a leaked edit token (a bad browser extension is the likely way) is worth more than one repo. Keep the edit token short-lived and on devices Chad controls. A read-only fine-grained `AUDIT_TOKEN` (Metadata, Contents, Issues, Pull requests and Commit statuses: read, on all repositories) would close the gap, but fine-grained PATs have no Checks permission, and the check state from GitHub Actions may then drop out of `statusCheckRollup`. A GraphQL error stops the sync loudly, but a quietly missing state would not. Before you switch, save `LATEST.md`, run the sync with the new token, and compare the "checks passing" and "checks failing" tags. Switch only if they match.
+
+**Verify.** `node scripts/check-site.mjs` drives the page in headless Chrome over CDP, with no dependencies. It stands in for `api.github.com`, so the editor is checked end to end: the saved bytes, UTF-8, the conflict retry and the refusal of a same-field conflict, the dispatch, the token probes, a revoked token mid-save, the CSP, stray `null` text, and the phone layout (`Emulation.setDeviceMetricsOverride` with `mobile: true`, no sideways scroll, controls of at least 24 by 24 px). **Every** check must pass. The number grows as checks are added, so read the total that the run prints. Add `--data _site/data.json` to check the board with real data, `--shots <dir>` to save screenshots, and `--host https://notes.podtards.com` for read-only checks of the live site.
+
 ## Editing Guidelines
 
-- `INDEX.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), `references/starred.md` and the AUTO blocks in `projects/*.md` are **auto-generated** — do not edit them by hand (the next sync overwrites them). To change what they contain, edit `scripts/lib/render.mjs` and its tests.
+- `INDEX.md`, `LATEST.md`, `audits/*.md` (including `audits/README.md`), `references/starred.md` and the AUTO blocks in `projects/*.md` are **auto-generated** — do not edit them by hand (the next sync overwrites them). To change what they contain, edit `scripts/lib/render.mjs` and its tests. The web page's data comes from `scripts/lib/site.mjs`; its layout is `site/`.
 - Everything else in `projects/*.md`, and all other `.md` files, are manually maintained and safe to edit. Edits made in the Obsidian vault arrive as `Sync N files from the Obsidian vault` commits.
 - The GitHub user is `ChadFarrow`.
 - `.gitignore` ignores `.DS_Store`. It was tracked in git until 2026-09-27.

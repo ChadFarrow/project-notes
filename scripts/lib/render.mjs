@@ -2,8 +2,11 @@
 // references/starred.md. `buildOutputs` ties it together and returns every file the
 // sync should write, keyed by path relative to the repo root.
 
-import { buildModel, IDLE_DAYS, STALE_DAYS } from './model.mjs';
+import {
+  activeProjects, branchUrl, buildModel, groupByCategory, hasWork, IDLE_DAYS, issueGroups, STALE_DAYS,
+} from './model.mjs';
 import { parseHeader, spliceAutoBlock, stubNote } from './notes.mjs';
+import { renderSiteData } from './site.mjs';
 
 const MD_SPECIAL = /[\\[\]<>*_`]/g;
 
@@ -29,7 +32,6 @@ function ago(iso, now) {
 
 const noteFile = (model, name) => model.index.get(name).noteFile ?? `${name}.md`;
 const noteLink = (model, name, prefix) => `[${name}](${prefix}${noteFile(model, name)})`;
-const branchUrl = (p, name) => `${p.url}/tree/${name.split('/').map(encodeURIComponent).join('/')}`;
 
 function workCounts(p) {
   const parts = [];
@@ -117,21 +119,6 @@ export function renderAutoBlock(p, model) {
 
 // ---------- the dashboard ----------
 
-const byCategory = (a, b) =>
-  (a === 'Uncategorized') - (b === 'Uncategorized') || a.localeCompare(b, 'en', { sensitivity: 'base' });
-
-function groupByCategory(projects) {
-  const groups = new Map();
-  for (const p of projects) {
-    if (!groups.has(p.category)) groups.set(p.category, []);
-    groups.get(p.category).push(p);
-  }
-  return [...groups.entries()].sort(([a], [b]) => byCategory(a, b));
-}
-
-const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length;
-const newestFirst = (a, b) => b.updatedAt.localeCompare(a.updatedAt);
-
 export function renderDashboard(model, { generatedAt, degradedReason, base, problems }) {
   const { now, owner } = model;
   const notes = `${base}projects/`;
@@ -177,30 +164,16 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
   }
 
   // Issues: one line for titles open in several repos, then the rest by project.
-  const issues = tracked.flatMap((p) => p.issues.map((i) => ({ ...i, repo: p.name })));
-  const byTitle = new Map();
-  for (const i of issues) {
-    const key = i.title.trim().toLowerCase();
-    if (!byTitle.has(key)) byTitle.set(key, []);
-    byTitle.get(key).push(i);
-  }
-  const shared = [...byTitle.values()].filter((g) => new Set(g.map((i) => i.repo)).size > 1);
-  const sharedUrls = new Set(shared.flat().map((i) => i.url));
-  out.push('', `### Open issues (${issues.length})`);
-  if (shared.length) {
+  const issues = issueGroups(tracked);
+  out.push('', `### Open issues (${issues.total})`);
+  if (issues.shared.length) {
     out.push('', '**Same title in several repos**', '');
-    const latest = (g) => g.map((i) => i.updatedAt).sort().at(-1);
-    for (const g of shared.sort((a, b) => latest(b).localeCompare(latest(a)))) {
-      const links = [...g].sort((a, b) => a.repo.localeCompare(b.repo)).map((i) => `[${i.repo} #${i.number}](${i.url})`);
-      out.push(`- ${escapeMd(g[0].title.trim())} — ${links.join(' · ')}`);
+    for (const g of issues.shared) {
+      const links = g.issues.map((i) => `[${i.repo} #${i.number}](${i.url})`);
+      out.push(`- ${escapeMd(g.title)} — ${links.join(' · ')}`);
     }
   }
-  const issueGroups = tracked
-    .map((p) => ({ p, list: p.issues.filter((i) => !sharedUrls.has(i.url)) }))
-    .filter((g) => g.list.length)
-    .map((g) => ({ ...g, list: [...g.list].sort(newestFirst) }))
-    .sort((a, b) => newestFirst(a.list[0], b.list[0]));
-  for (const { p, list } of issueGroups) {
+  for (const { project: p, issues: list } of issues.byProject) {
     out.push('', `**${noteLink(model, p.name, notes)}**`, '');
     for (const i of list) {
       const details = [`opened ${ago(i.createdAt, now)}`];
@@ -209,11 +182,11 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
       out.push(line(itemLink(i), [...details, ...forText(i, model, notes)]));
     }
   }
-  if (!issues.length) out.push('', '_None._');
+  if (!issues.total) out.push('', '_None._');
 
   // Projects with open work, by category.
   out.push('', '## Projects');
-  const active = tracked.filter(hasWork).sort((a, b) => b.lastActivity.localeCompare(a.lastActivity));
+  const active = activeProjects(tracked);
   for (const [category, projects] of groupByCategory(active)) {
     out.push('', `### ${category}`);
     for (const p of projects) {
@@ -352,5 +325,7 @@ export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degr
   files.set('audits/README.md', renderAuditsReadme([...new Set([...auditFiles, `${date}.md`])]));
   files.set('INDEX.md', renderIndex(model));
   files.set('references/starred.md', renderStarred(stars, generatedAt));
-  return { files, problems };
+  // The web dashboard's data: published with the site, never committed.
+  const siteData = renderSiteData(model, { ...opts, generatedAtIso: now.toISOString() });
+  return { files, problems, siteData };
 }
