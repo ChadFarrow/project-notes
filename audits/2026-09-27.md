@@ -1,17 +1,18 @@
-# Cross-repo audit — 2026-09-27 11:38 UTC
+# Cross-repo audit — 2026-09-27 16:36 UTC
 
 ## Open pull requests
 
-- [ ] **MSP-2.0 #144** — Record the finished msp-bot rollout and the Vercel CLI traps · opened 21 minutes ago by ChadFarrow
-- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 21 hours ago by ChadFarrow
+- [ ] **boostbox #43** — MSP 2.0 gets its own Nostr account, for the artists who agreed · opened 1 hour ago by ChadFarrow
+- [ ] **MSP-2.0-Desktop-App #74** — Sync updates from web repo · opened 3 hours ago by ChadFarrow
+- [ ] **boostmebitch #451** — docs(plans): week review of 2026-09-17..26 — checklist to finish _(draft)_ · opened 1 day ago by ChadFarrow
 - [ ] **boostmebitch #442** — Add OPML import and export of favorite shows · opened 2 days ago by ChadFarrow
 - [ ] **boostmebitch #441** — Desktop layout for downloads, the queue, new episodes and speed · opened 2 days ago by ChadFarrow
 - [ ] **boostbox #33** — fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts · opened 4 days ago by ChadFarrow
-- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 4 days ago by ChadFarrow
-- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 4 days ago by ChadFarrow
+- [ ] **thelounge-candr #37** — feat(public): read the WEBIRC password from the environment · opened 5 days ago by ChadFarrow
+- [ ] **thelounge-candr #36** — docs: record the 2026-09-22 bots and Lounge deploys · opened 5 days ago by ChadFarrow
 - [ ] **stablekraft-app #266** — Hold back an adopted private item, not only an adopted private feed · opened 8 days ago by ChadFarrow
 - [ ] **boostbox #26** — feat(nostrbot): announce boosts on Mastodon as well as Nostr _(draft)_ · opened 15 days ago by ChadFarrow
-- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 18 days ago by ChadFarrow
+- [ ] **stablekraft-app #257** — Write a feed entry only for a feed the user chose · opened 19 days ago by ChadFarrow
 - [ ] **boostmebitch #120** — Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **libre-listener-wallet-monorepo #9** — [Info] Mobile browser extension feasibility note (not for merge) _(draft)_ · opened 2 months ago by ChadFarrow
 - [ ] **MSP-2.0 #79** — Add DeMu-style educational XML comments to generated feeds _(draft)_ · opened 3 months ago by ChadFarrow
@@ -23,12 +24,13 @@
 
 ## Open issues
 
+- [ ] **MSP-2.0 #148** — Write the publisher role as rel on both sides of a publisher link · opened 34 minutes ago by InTheMorning (0 comments)
 - [ ] **thelounge-candr #38** — Lit bot for candr doesn't post in Bowl After Bowl · opened 2 days ago by ChadFarrow (0 comments)
 - [ ] **stablekraft-app #272** — Follow-up: confirm the egress drop, and the database-read leads left alone · opened 7 days ago by ChadFarrow (3 comments)
 - [ ] **MSP-2.0 #138** — when someone imports a feed check it for errors · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **LIT_Bot #11** — Live notices carry no NIP-73 podcast identifier — add the feed GUID, and only the feed GUID · opened 15 days ago by ChadFarrow (0 comments)
 - [ ] **boostmebitch #371** — iOS lock screen shows no artwork for the now-playing item · opened 18 days ago by ChadFarrow (0 comments)
-- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 18 days ago by ChadFarrow (0 comments)
+- [ ] **PC20-Nostr #44** — Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant · opened 19 days ago by ChadFarrow (0 comments)
 - [ ] **blup #3** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **BoostBot-Starter #1** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **Helipad-to-Nostr-BoostBot #16** — Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
@@ -41,8 +43,8 @@
 - [ ] **ITDV-Lightning #9** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0-Desktop-App #66** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
 - [ ] **MSP-2.0 #137** — Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects · opened 21 days ago by ChadFarrow (0 comments)
-- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 23 days ago by ChadFarrow (1 comments)
-- [ ] **boostmebitch #275** — Look for zap splits · opened 27 days ago by ChadFarrow (0 comments)
+- [ ] **boostmebitch #304** — Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: * which does not cover Authorization · opened 24 days ago by ChadFarrow (1 comments)
+- [ ] **boostmebitch #275** — Look for zap splits · opened 28 days ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #14** — move NWC connects to setting page with webLN · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **libre-listener-wallet-monorepo #13** — clear invoices in extension when paid · opened 2 months ago by ChadFarrow (0 comments)
 - [ ] **blup #2** — force logout · opened 3 months ago by ChadFarrow (0 comments)
@@ -53,12 +55,11 @@
 
 ## Branches with no open PR
 
+- [ ] `MSP-2.0` — `FAFO`
 - [ ] `MSP-2.0-Desktop-App` — `claude/release-on-tags-only`
 - [ ] `MSP-2.0-Desktop-App` — `claude/restore-release-on-master-push`
 - [ ] `MSP-2.0-Desktop-App` — `claude/skip-duplicate-test-runs`
 - [ ] `MSP-2.0-Desktop-App` — `claude/trim-playwright-artifact-retention`
-- [ ] `MSP-2.0-Desktop-App` — `sync-upstream`
-- [ ] `MSP-2.0` — `FAFO`
 - [ ] `pc20-wiki` — `fix/search-word-bounds`
 - [ ] `stablekraft-app` — `archive/feature-genre-filter`
 - [ ] `stablekraft-app` — `feature/genre-and-v4v-tags`

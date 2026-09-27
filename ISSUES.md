@@ -7,6 +7,7 @@
 ## MSP-2.0
 
 ### Open
+- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148)
 - [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138)
 - [#137 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0/issues/137)
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21)
@@ -125,4 +126,4 @@
 *No open issues*
 
 ---
-*Last synced: 2026-09-27 11:38 UTC*
+*Last synced: 2026-09-27 16:36 UTC*

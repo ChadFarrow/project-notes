@@ -6,13 +6,12 @@
 
 ## MSP-2.0
 
-- [#144 Record the finished msp-bot rollout and the Vercel CLI traps](https://github.com/ChadFarrow/MSP-2.0/pull/144)
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79)
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71)
 
 ## MSP-2.0-Desktop-App
 
-*No open pull requests*
+- [#74 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/74)
 
 ## musicL-playlist-updater
 
@@ -112,4 +111,4 @@
 *No open pull requests*
 
 ---
-*Last synced: 2026-09-27 11:38 UTC*
+*Last synced: 2026-09-27 16:36 UTC*

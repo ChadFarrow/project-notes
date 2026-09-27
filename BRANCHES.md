@@ -8,7 +8,6 @@
 
 - `FAFO`
 - `claude/feeds-demu-template-hf5tyk`
-- `docs/claude-md-after-msp-rollout`
 - `master`
 - `new-onboarding-v2`
 
@@ -156,4 +155,4 @@
 - `master`
 
 ---
-*Last synced: 2026-09-27 11:38 UTC*
+*Last synced: 2026-09-27 16:36 UTC*
