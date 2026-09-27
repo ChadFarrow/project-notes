@@ -2,7 +2,7 @@
 
 **Category:** Uncategorized  
 **Uses:**  
-**Track:** yes  
+**Track:** no  
 **Repo:** https://github.com/ChadFarrow/podstr
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->

@@ -2,7 +2,7 @@
 
 **Category:** Uncategorized  
 **Uses:** boostbox  
-**Track:** yes  
+**Track:** no  
 **Repo:** https://github.com/ChadFarrow/StableKraft-Nostr-Fix
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
