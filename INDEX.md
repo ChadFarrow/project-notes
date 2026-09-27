@@ -61,7 +61,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [podcast-namespace](projects/podcast-namespace.md) - A wholistic rss namespace for podcasting · fork
 - [podroll-atlas](projects/podroll-atlas.md) - In-browser map of the podroll ecosystem from the Podcast Index dataset. (`HTML`) · fork
 - [podstr](projects/podstr.md) - A application that marries Nostr and Podcasting 2.0 (`TypeScript`) · fork
-- [project-notes](projects/project-notes.md) - No description (`Shell`)
+- [project-notes](projects/project-notes.md) - No description (`JavaScript`)
 - [sidecar](projects/sidecar.md) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 (`JavaScript`) · fork
 - [so-big-lightning-payment](projects/so-big-lightning-payment.md) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay (`CSS`)
 - [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) - No description (`TypeScript`)
