@@ -10,6 +10,7 @@ The projects tracked here focus on three domains: **Podcasting 2.0** (RSS feeds,
 
 ## Repo Structure
 
+- **`README.md`** — Hand-written front page: the dashboard link and a short guide to the note header lines and the `For:` marker. Not generated; keep it in step with *Project notes* below.
 - **`LATEST.md`** — Auto-generated dashboard and the entry point. *Needs you now* (ready-but-idle PRs, then every open issue, with issues that share a title across repos folded into one line), then *Projects* grouped by category (PRs with CI/conflict/draft state, items opened elsewhere for the project, branches with no PR), *Quiet* projects, *Stale* repos (no push in 180+ days) and *Note problems*. Scope is every non-archived repo ChadFarrow owns, forks included, minus notes marked `**Track:** no`.
 - **`audits/`** — Auto-generated daily snapshots of the dashboard (`audits/<YYYY-MM-DD>.md`); same-day runs overwrite in place. The snapshot is rendered with `../` links, so it is **not** a byte copy of `LATEST.md`. `audits/README.md` is the auto-generated newest-first index. Files before 2026-09-27 use the old flat audit format.
 - **`INDEX.md`** — Auto-generated directory of every project, grouped by category, with fork / private / not-tracked flags.
