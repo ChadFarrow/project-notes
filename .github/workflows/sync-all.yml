@@ -3,7 +3,15 @@ name: Sync All Project Data
 on:
   schedule:
     - cron: '0 */6 * * *'  # Every 6 hours
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:  # Manual trigger; the web dashboard and the vault sync also start it
+  push:
+    # A change to the page or the generator redeploys the web dashboard. Not
+    # projects/**: every Obsidian save would then start a run.
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'scripts/**'
+      - '.github/workflows/sync-all.yml'
 
 concurrency:
   group: sync-main
@@ -34,7 +42,9 @@ jobs:
           # repos only; see pickToken in scripts/lib/github.mjs and CLAUDE.md.
           AUDIT_TOKEN: ${{ secrets.AUDIT_TOKEN }}
           FALLBACK_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/sync.mjs
+        # The web dashboard is built outside the checkout, so `git add -A` below can
+        # never commit it.
+        run: node scripts/sync.mjs --site "$RUNNER_TEMP/site"
 
       - name: Commit changes
         run: |
@@ -50,3 +60,27 @@ jobs:
           done
           echo "Push failed after 3 attempts"
           exit 1
+
+      # After the push, so the site never shows data the repo does not have.
+      - name: Upload the web dashboard
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ runner.temp }}/site
+
+  deploy:
+    # Publishes the web dashboard at https://notes.podtards.com. A separate job: the
+    # job that holds AUDIT_TOKEN gets no OIDC token, and a run on another branch skips
+    # this instead of failing on the environment's main-only rule.
+    needs: sync
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
