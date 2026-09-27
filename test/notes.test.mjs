@@ -133,6 +133,11 @@ test('stubNote parses back to the defaults and has an empty block', () => {
   assert.equal(text.split(AUTO_START).length, 2);
 });
 
+test('stubNote ends each header line with two spaces so GitHub breaks the lines', () => {
+  const stub = stubNote({ name: 'x', description: '' });
+  assert.ok(stub.includes('**Category:** Uncategorized  \n**Uses:**  \n**Track:** yes  \n**Repo:** '));
+});
+
 test('stubNote writes a placeholder when there is no description', () => {
   assert.match(stubNote({ name: 'x', description: '' }), /## Description\n<!-- Add a description -->\n/);
 });

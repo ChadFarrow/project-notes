@@ -67,14 +67,18 @@ export function spliceAutoBlock(original, body) {
   return { text: crlf ? out.replace(/\n/g, '\r\n') : out };
 }
 
+// Two trailing spaces make a markdown line break, so each header line renders on its
+// own row. Spelled out because editors strip trailing whitespace from a literal.
+const BR = '  ';
+
 // The note the sync creates for a repo that has none. `description` is already
 // escaped markdown (or empty).
 export function stubNote({ name, description }) {
   return `# ${name}
 
-**Category:** Uncategorized
-**Uses:**
-**Track:** yes
+**Category:** Uncategorized${BR}
+**Uses:**${BR}
+**Track:** yes${BR}
 **Repo:** https://github.com/ChadFarrow/${name}
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
