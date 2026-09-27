@@ -22,5 +22,5 @@ stacks templet for podcasting 2.0
 
 - **Repo:** [ChadFarrow/stacks-pc20](https://github.com/ChadFarrow/stacks-pc20) · TypeScript
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

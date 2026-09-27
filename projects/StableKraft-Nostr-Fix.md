@@ -21,7 +21,6 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/StableKraft-Nostr-Fix](https://github.com/ChadFarrow/StableKraft-Nostr-Fix) · TypeScript
-- **Uses:** [boostbox](boostbox.md) (2 PRs)
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

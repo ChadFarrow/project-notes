@@ -22,5 +22,5 @@ Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay
 
 - **Repo:** [ChadFarrow/so-big-lightning-payment](https://github.com/ChadFarrow/so-big-lightning-payment) · CSS
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

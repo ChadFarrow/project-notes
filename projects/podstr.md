@@ -22,9 +22,5 @@ A application that marries Nostr and Podcasting 2.0
 
 - **Repo:** [ChadFarrow/podstr](https://github.com/ChadFarrow/podstr) · TypeScript · fork of derekross/podstr
 
-### Branches with no open PR (3)
-
-- [`feat/auto-chapters`](https://github.com/ChadFarrow/podstr/tree/feat/auto-chapters)
-- [`feat/ping-podcast-index`](https://github.com/ChadFarrow/podstr/tree/feat/ping-podcast-index)
-- [`podstr-2.0`](https://github.com/ChadFarrow/podstr/tree/podstr-2.0)
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

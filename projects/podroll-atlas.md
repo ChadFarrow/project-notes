@@ -22,5 +22,5 @@ In-browser map of the podroll ecosystem from the Podcast Index dataset.
 
 - **Repo:** [ChadFarrow/podroll-atlas](https://github.com/ChadFarrow/podroll-atlas) · HTML · fork of albertobeta/podroll-atlas
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

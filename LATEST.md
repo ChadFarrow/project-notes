@@ -1,6 +1,6 @@
-# Dashboard — 2026-09-27 20:53 UTC
+# Dashboard — 2026-09-27 20:54 UTC
 
-17 open PRs · 22 open issues · 33 branches with no PR · 43 tracked repos (8 not tracked)
+17 open PRs · 22 open issues · 30 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -231,24 +231,12 @@
 
 - Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
 
-#### [podstr](projects/podstr.md)
-
-3 branches with no PR
-
-- Branch [`feat/ping-podcast-index`](https://github.com/ChadFarrow/podstr/tree/feat/ping-podcast-index) — no PR
-- Branch [`feat/auto-chapters`](https://github.com/ChadFarrow/podstr/tree/feat/auto-chapters) — no PR
-- Branch [`podstr-2.0`](https://github.com/ChadFarrow/podstr/tree/podstr-2.0) — no PR
-
 ### Quiet — no open work
 
-[chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [podroll-atlas](projects/podroll-atlas.md) · [project-notes](projects/project-notes.md) · [so-big-lightning-payment](projects/so-big-lightning-payment.md) · [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) · [stacks](projects/stacks.md) · [stacks-pc20](projects/stacks-pc20.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
-- [stacks-pc20](projects/stacks-pc20.md) — last push 2025-07-26
-- [stacks](projects/stacks.md) — last push 2025-07-26 · fork
 - [HGH-checker](projects/HGH-checker.md) — last push 2025-12-19
-- [so-big-lightning-payment](projects/so-big-lightning-payment.md) — last push 2025-12-23
-- [podstr](projects/podstr.md) — last push 2026-02-15 · fork
 - [helipad-startos](projects/helipad-startos.md) — last push 2026-02-26 · fork
 - [HPM-Lightning](projects/HPM-Lightning.md) — last push 2026-03-28

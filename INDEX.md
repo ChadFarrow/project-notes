@@ -62,14 +62,14 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [pc20-timeline](projects/pc20-timeline.md) - No description (`HTML`) · private
 - [pc20-wiki](projects/pc20-wiki.md) - A public reference for Podcasting 2.0 — the namespace, the payments, and the plumbing underneath. Built from an Obsidian vault. (`JavaScript`)
 - [podcast-namespace](projects/podcast-namespace.md) - A wholistic rss namespace for podcasting · fork
-- [podroll-atlas](projects/podroll-atlas.md) - In-browser map of the podroll ecosystem from the Podcast Index dataset. (`HTML`) · fork
-- [podstr](projects/podstr.md) - A application that marries Nostr and Podcasting 2.0 (`TypeScript`) · fork
+- [podroll-atlas](projects/podroll-atlas.md) - In-browser map of the podroll ecosystem from the Podcast Index dataset. (`HTML`) · fork · not tracked
+- [podstr](projects/podstr.md) - A application that marries Nostr and Podcasting 2.0 (`TypeScript`) · fork · not tracked
 - [project-notes](projects/project-notes.md) - No description (`JavaScript`)
 - [sidecar](projects/sidecar.md) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 (`JavaScript`) · fork
-- [so-big-lightning-payment](projects/so-big-lightning-payment.md) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay (`CSS`)
-- [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) - No description (`TypeScript`)
-- [stacks](projects/stacks.md) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. (`TypeScript`) · fork
-- [stacks-pc20](projects/stacks-pc20.md) - stacks templet for podcasting 2.0 (`TypeScript`)
+- [so-big-lightning-payment](projects/so-big-lightning-payment.md) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay (`CSS`) · not tracked
+- [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) - No description (`TypeScript`) · not tracked
+- [stacks](projects/stacks.md) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. (`TypeScript`) · fork · not tracked
+- [stacks-pc20](projects/stacks-pc20.md) - stacks templet for podcasting 2.0 (`TypeScript`) · not tracked
 - [thelounge-candr](projects/thelounge-candr.md) - Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode (`JavaScript`) · private
 - [v4v-core-rs](projects/v4v-core-rs.md) - No description (`Rust`)
 - [v4v-toolkit](projects/v4v-toolkit.md) - No description (`TypeScript`)

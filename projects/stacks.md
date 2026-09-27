@@ -22,5 +22,5 @@ Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic 
 
 - **Repo:** [ChadFarrow/stacks](https://github.com/ChadFarrow/stacks) · TypeScript · fork of stacksjs/stacks
 
-_No open work._
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->
