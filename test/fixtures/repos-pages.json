@@ -1,0 +1,169 @@
+[
+  {
+    "data": {
+      "user": {
+        "repositories": {
+          "pageInfo": { "hasNextPage": true, "endCursor": "c1" },
+          "nodes": [
+            {
+              "name": "app-one",
+              "url": "https://github.com/ChadFarrow/app-one",
+              "description": "The main app",
+              "isFork": false,
+              "isPrivate": false,
+              "pushedAt": "2026-09-26T10:00:00Z",
+              "primaryLanguage": { "name": "TypeScript" },
+              "parent": null,
+              "defaultBranchRef": { "name": "main" },
+              "pullRequests": {
+                "totalCount": 8,
+                "nodes": [
+                  { "number": 1, "title": "Ready one", "url": "https://github.com/ChadFarrow/app-one/pull/1", "isDraft": false, "createdAt": "2026-09-01T00:00:00Z", "updatedAt": "2026-09-20T12:00:00Z", "headRefName": "feature-x", "mergeable": "MERGEABLE", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "SUCCESS" } },
+                  { "number": 2, "title": "Draft thing", "url": "https://github.com/ChadFarrow/app-one/pull/2", "isDraft": true, "createdAt": "2026-08-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "headRefName": "draft-branch", "mergeable": "MERGEABLE", "body": null, "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "SUCCESS" } },
+                  { "number": 3, "title": "Conflicted", "url": "https://github.com/ChadFarrow/app-one/pull/3", "isDraft": false, "createdAt": "2026-08-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "headRefName": "conflict-branch", "mergeable": "CONFLICTING", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "SUCCESS" } },
+                  { "number": 5, "title": "Almost idle", "url": "https://github.com/ChadFarrow/app-one/pull/5", "isDraft": false, "createdAt": "2026-09-01T00:00:00Z", "updatedAt": "2026-09-20T14:24:00Z", "headRefName": "almost", "mergeable": "MERGEABLE", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": null },
+                  { "number": 6, "title": "Unknown merge state", "url": "https://github.com/ChadFarrow/app-one/pull/6", "isDraft": false, "createdAt": "2026-09-01T00:00:00Z", "updatedAt": "2026-09-10T00:00:00Z", "headRefName": "unknown", "mergeable": "UNKNOWN", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": null },
+                  { "number": 9, "title": "Failing", "url": "https://github.com/ChadFarrow/app-one/pull/9", "isDraft": false, "createdAt": "2026-08-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "headRefName": "failing", "mergeable": "MERGEABLE", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "FAILURE" } },
+                  { "number": 10, "title": "Pending", "url": "https://github.com/ChadFarrow/app-one/pull/10", "isDraft": false, "createdAt": "2026-08-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "headRefName": "pending", "mergeable": "MERGEABLE", "body": "", "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "PENDING" } },
+                  { "number": 11, "title": "Bot bump", "url": "https://github.com/ChadFarrow/app-one/pull/11", "isDraft": false, "createdAt": "2026-08-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "headRefName": "bot-bump", "mergeable": "MERGEABLE", "body": "", "author": { "login": "vercel" }, "statusCheckRollup": { "state": "SUCCESS" } }
+                ]
+              },
+              "issues": {
+                "totalCount": 2,
+                "nodes": [
+                  { "number": 4, "title": "Support <podcast:category> *now*", "url": "https://github.com/ChadFarrow/app-one/issues/4", "createdAt": "2026-09-25T00:00:00Z", "updatedAt": "2026-09-27T11:00:00Z", "body": "", "author": { "login": "outsider" }, "comments": { "totalCount": 2 } },
+                  { "number": 14, "title": "Bump nostr-tools", "url": "https://github.com/ChadFarrow/app-one/issues/14", "createdAt": "2026-09-06T00:00:00Z", "updatedAt": "2026-09-06T00:00:00Z", "body": "", "author": { "login": "ChadFarrow" }, "comments": { "totalCount": 0 } }
+                ]
+              },
+              "refs": {
+                "totalCount": 4,
+                "nodes": [
+                  { "name": "main", "target": { "committedDate": "2026-09-26T10:00:00Z" } },
+                  { "name": "feature-x", "target": { "committedDate": "2026-09-20T00:00:00Z" } },
+                  { "name": "old-branch", "target": { "committedDate": "2026-08-01T00:00:00Z" } },
+                  { "name": "newer-branch", "target": { "committedDate": "2026-09-01T00:00:00Z" } }
+                ]
+              }
+            },
+            {
+              "name": "fork-thing",
+              "url": "https://github.com/ChadFarrow/fork-thing",
+              "description": null,
+              "isFork": true,
+              "isPrivate": false,
+              "pushedAt": "2026-01-01T00:00:00Z",
+              "primaryLanguage": null,
+              "parent": { "nameWithOwner": "upstream/fork-thing" },
+              "defaultBranchRef": { "name": "main" },
+              "pullRequests": { "totalCount": 0, "nodes": [] },
+              "issues": { "totalCount": 0, "nodes": [] },
+              "refs": {
+                "totalCount": 2,
+                "nodes": [
+                  { "name": "main", "target": { "committedDate": "2026-01-01T00:00:00Z" } },
+                  { "name": "patch-1", "target": { "committedDate": "2025-12-01T00:00:00Z" } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "user": {
+        "repositories": {
+          "pageInfo": { "hasNextPage": false, "endCursor": "c2" },
+          "nodes": [
+            {
+              "name": "hidden-repo",
+              "url": "https://github.com/ChadFarrow/hidden-repo",
+              "description": "Not wanted",
+              "isFork": false,
+              "isPrivate": false,
+              "pushedAt": "2026-09-01T00:00:00Z",
+              "primaryLanguage": { "name": "Go" },
+              "parent": null,
+              "defaultBranchRef": { "name": "main" },
+              "pullRequests": { "totalCount": 0, "nodes": [] },
+              "issues": {
+                "totalCount": 1,
+                "nodes": [
+                  { "number": 1, "title": "Hidden issue", "url": "https://github.com/ChadFarrow/hidden-repo/issues/1", "createdAt": "2026-09-01T00:00:00Z", "updatedAt": "2026-09-01T00:00:00Z", "body": "", "author": { "login": "ChadFarrow" }, "comments": { "totalCount": 0 } }
+                ]
+              },
+              "refs": { "totalCount": 1, "nodes": [ { "name": "main", "target": { "committedDate": "2026-09-01T00:00:00Z" } } ] }
+            },
+            {
+              "name": "secret-repo",
+              "url": "https://github.com/ChadFarrow/secret-repo",
+              "description": "Private work",
+              "isFork": false,
+              "isPrivate": true,
+              "pushedAt": "2026-09-20T00:00:00Z",
+              "primaryLanguage": { "name": "Rust" },
+              "parent": null,
+              "defaultBranchRef": { "name": "master" },
+              "pullRequests": {
+                "totalCount": 1,
+                "nodes": [
+                  { "number": 3, "title": "Helper for app-one", "url": "https://github.com/ChadFarrow/secret-repo/pull/3", "isDraft": false, "createdAt": "2026-09-20T00:00:00Z", "updatedAt": "2026-09-26T00:00:00Z", "headRefName": "helper", "mergeable": "MERGEABLE", "body": "Adds the helper.\n\nFor: ChadFarrow/app-one\n", "author": { "login": "ChadFarrow" }, "statusCheckRollup": { "state": "SUCCESS" } }
+                ]
+              },
+              "issues": { "totalCount": 0, "nodes": [] },
+              "refs": {
+                "totalCount": 2,
+                "nodes": [
+                  { "name": "master", "target": { "committedDate": "2026-09-20T00:00:00Z" } },
+                  { "name": "helper", "target": { "committedDate": "2026-09-20T00:00:00Z" } }
+                ]
+              }
+            },
+            {
+              "name": "svc-core",
+              "url": "https://github.com/ChadFarrow/svc-core",
+              "description": "Shared service",
+              "isFork": false,
+              "isPrivate": false,
+              "pushedAt": "2026-09-25T00:00:00Z",
+              "primaryLanguage": { "name": "JavaScript" },
+              "parent": null,
+              "defaultBranchRef": { "name": "main" },
+              "pullRequests": { "totalCount": 0, "nodes": [] },
+              "issues": {
+                "totalCount": 5,
+                "nodes": [
+                  { "number": 7, "title": "Rate limit for app-one", "url": "https://github.com/ChadFarrow/svc-core/issues/7", "createdAt": "2026-09-24T00:00:00Z", "updatedAt": "2026-09-24T00:00:00Z", "body": "Context.\n\n**For:** https://github.com/ChadFarrow/App-One.\n", "author": { "login": "ChadFarrow" }, "comments": { "totalCount": 0 } },
+                  { "number": 8, "title": "Self and unknown markers", "url": "https://github.com/ChadFarrow/svc-core/issues/8", "createdAt": "2026-09-23T00:00:00Z", "updatedAt": "2026-09-23T00:00:00Z", "body": "For: ChadFarrow/svc-core\nFor: ChadFarrow/nope\n", "author": { "login": "ChadFarrow" }, "comments": { "totalCount": 0 } },
+                  { "number": 13, "title": "Bump nostr-tools", "url": "https://github.com/ChadFarrow/svc-core/issues/13", "createdAt": "2026-09-06T00:00:00Z", "updatedAt": "2026-09-06T00:00:00Z", "body": "Two models.\nFor: rule 2 both are fine, see ChadFarrow/app-one\n", "author": { "login": "ChadFarrow" }, "comments": { "totalCount": 0 } }
+                ]
+              },
+              "refs": { "totalCount": 1, "nodes": [ { "name": "main", "target": { "committedDate": "2026-09-25T00:00:00Z" } } ] }
+            },
+            {
+              "name": "upstream-fork",
+              "url": "https://github.com/ChadFarrow/upstream-fork",
+              "description": "Fork I contribute upstream from",
+              "isFork": true,
+              "isPrivate": false,
+              "pushedAt": "2025-12-01T00:00:00Z",
+              "primaryLanguage": { "name": "Vue" },
+              "parent": { "nameWithOwner": "someone/upstream-fork" },
+              "defaultBranchRef": { "name": "master" },
+              "pullRequests": { "totalCount": 0, "nodes": [] },
+              "issues": { "totalCount": 0, "nodes": [] },
+              "refs": {
+                "totalCount": 2,
+                "nodes": [
+                  { "name": "master", "target": { "committedDate": "2025-12-01T00:00:00Z" } },
+                  { "name": "their-branch", "target": { "committedDate": "2025-11-01T00:00:00Z" } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+]
