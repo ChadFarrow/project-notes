@@ -22,12 +22,5 @@
 
 - **Repo:** [ChadFarrow/blup](https://github.com/ChadFarrow/blup) · TypeScript · private
 
-### Issues (2)
-
-- [#3 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/blup/issues/3) — opened 2026-09-05
-- [#2 force logout](https://github.com/ChadFarrow/blup/issues/2) — opened 2026-06-08
-
-### Branches with no open PR (1)
-
-- [`claude/mp3-upload-error-7jr8tc`](https://github.com/ChadFarrow/blup/tree/claude/mp3-upload-error-7jr8tc)
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

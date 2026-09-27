@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/BoostBot-Starter](https://github.com/ChadFarrow/BoostBot-Starter) · JavaScript
 
-### Issues (1)
-
-- [#1 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/BoostBot-Starter/issues/1) — opened 2026-09-05
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->

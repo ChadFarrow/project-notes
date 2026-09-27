@@ -24,6 +24,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 
 ## Nostr
 
+- [blup](projects/blup.md) - No description (`TypeScript`) · private · not tracked
 - [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) - Send Helipad info to Nostr using the webhooks in Helipad. (`TypeScript`) · private
 
 ## Tools
@@ -41,8 +42,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 
 ## Uncategorized
 
-- [blup](projects/blup.md) - No description (`TypeScript`) · private
-- [BoostBot-Starter](projects/BoostBot-Starter.md) - No description (`JavaScript`)
+- [BoostBot-Starter](projects/BoostBot-Starter.md) - No description (`JavaScript`) · not tracked
 - [boostbox](projects/boostbox.md) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata. (`Clojure`) · fork
 - [demu-feed-template](projects/demu-feed-template.md) - Template for releasing decentralized music · fork
 - [haven](projects/haven.md) - High Availability Vault for Events on Nostr (`Go`) · fork

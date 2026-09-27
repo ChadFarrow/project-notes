@@ -1,6 +1,6 @@
-# Dashboard — 2026-09-27 20:40 UTC
+# Dashboard — 2026-09-27 20:51 UTC
 
-18 open PRs · 27 open issues · 67 branches with no PR · 51 tracked repos
+18 open PRs · 24 open issues · 66 branches with no PR · 49 tracked repos (2 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -13,11 +13,10 @@
 - **IRL_QR** [#19 Replace payment feed with configurable multi-QR code grid](https://github.com/ChadFarrow/IRL_QR/pull/19) — idle 201 days · checks passing
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 8 days · checks passing
 
-### Open issues (27)
+### Open issues (24)
 
 **Same title in several repos**
 
-- Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects — [blup #3](https://github.com/ChadFarrow/blup/issues/3) · [BoostBot-Starter #1](https://github.com/ChadFarrow/BoostBot-Starter/issues/1) · [Helipad-to-Nostr-BoostBot #16](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16)
 - Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects — [HPM-Lightning #3](https://github.com/ChadFarrow/HPM-Lightning/issues/3) · [is-this-thing-on #18](https://github.com/ChadFarrow/is-this-thing-on/issues/18) · [ITDV-Lightning #9](https://github.com/ChadFarrow/ITDV-Lightning/issues/9) · [lnaddress-music #14](https://github.com/ChadFarrow/lnaddress-music/issues/14) · [MSP-2.0 #137](https://github.com/ChadFarrow/MSP-2.0/issues/137) · [MSP-2.0-Desktop-App #66](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/66) · [NMNU #2](https://github.com/ChadFarrow/NMNU/issues/2) · [RSS-music-site-template #3](https://github.com/ChadFarrow/RSS-music-site-template/issues/3) · [TRM-Lightning #4](https://github.com/ChadFarrow/TRM-Lightning/issues/4)
 
 **[MSP-2.0](projects/MSP-2.0.md)**
@@ -45,14 +44,14 @@
 
 - [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 19 days ago
 
+**[Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)**
+
+- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 21 days ago
+
 **[libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)**
 
 - [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 2 months ago
 - [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 2 months ago
-
-**[blup](projects/blup.md)**
-
-- [#2 force logout](https://github.com/ChadFarrow/blup/issues/2) — opened 3 months ago
 
 **[lnaddress-music](projects/lnaddress-music.md)**
 
@@ -102,7 +101,7 @@
 
 1 PR · 1 issue · 4 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (2 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#74 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/74) — opened 7 hours ago · checks failing
+- PR [#74 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/74) — opened 8 hours ago · checks failing
 - Branch [`claude/restore-release-on-master-push`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/restore-release-on-master-push) — no PR
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 - Branch [`claude/trim-playwright-artifact-retention`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/trim-playwright-artifact-retention) — no PR
@@ -218,12 +217,6 @@
 - Branch [`v0.4.0`](https://github.com/ChadFarrow/haven/tree/v0.4.0) — no PR
 - [10 more branches with no PR](projects/haven.md)
 
-#### [blup](projects/blup.md)
-
-2 issues · 1 branch with no PR
-
-- Branch [`claude/mp3-upload-error-7jr8tc`](https://github.com/ChadFarrow/blup/tree/claude/mp3-upload-error-7jr8tc) — no PR
-
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
 1 issue · 2 branches with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
@@ -238,10 +231,6 @@
 - Branch [`feat/webln-keysend`](https://github.com/ChadFarrow/sidecar/tree/feat/webln-keysend) — no PR
 - Branch [`fix/custom-emoji-reactions`](https://github.com/ChadFarrow/sidecar/tree/fix/custom-emoji-reactions) — no PR
 - Branch [`local/demo-funds`](https://github.com/ChadFarrow/sidecar/tree/local/demo-funds) — no PR
-
-#### [BoostBot-Starter](projects/BoostBot-Starter.md)
-
-1 issue
 
 #### [is-this-thing-on](projects/is-this-thing-on.md)
 
@@ -305,7 +294,6 @@
 
 ## Stale — no push in 180+ days
 
-- [BoostBot-Starter](projects/BoostBot-Starter.md) — last push 2025-07-06
 - [stacks-pc20](projects/stacks-pc20.md) — last push 2025-07-26
 - [stacks](projects/stacks.md) — last push 2025-07-26 · fork
 - [demu-feed-template](projects/demu-feed-template.md) — last push 2025-08-27 · fork
