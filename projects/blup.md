@@ -1,8 +1,8 @@
 # blup
 
-**Category:** Uncategorized  
+**Category:** Nostr  
 **Uses:**  
-**Track:** yes  
+**Track:** no  
 **Repo:** https://github.com/ChadFarrow/blup
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
