@@ -829,6 +829,15 @@ function todoEditor(section, index) {
 function openTokenDialog(then) {
   const dlg = $('#token-dialog');
   setupSheet(dlg);
+  // Over plain http (before the certificate is issued) the token could be read on the
+  // way, so the page does not take one.
+  if (!window.isSecureContext) {
+    sheet(dlg, 'token-title', 'Set up editing',
+      h('div', { class: 'sheet-body' }, h('p', { class: 'hint bad', text: 'Editing needs a secure connection. Open this page with https:// and try again.' })),
+      h('div', { class: 'sheet-foot' }, h('button', { type: 'button', onclick: () => dlg.close() }, 'Close')));
+    if (!dlg.open) dlg.showModal();
+    return;
+  }
   const status = h('p', { class: 'status', role: 'status' });
   const input = h('input', { type: 'password', id: 't-token', autocomplete: 'off', spellcheck: 'false', placeholder: 'github_pat_…' });
   const check = h('button', { type: 'button', class: 'primary' }, 'Check and save');

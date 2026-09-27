@@ -300,7 +300,9 @@ async function main() {
   const browser = spawn(chrome, [
     '--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check',
     ...(process.env.CHROME_FLAGS ? process.env.CHROME_FLAGS.split(/\s+/) : []),
-    '--window-size=1280,900', `--remote-debugging-port=${CDP_PORT}`, `--user-data-dir=${PROFILE}`, 'about:blank',
+    '--window-size=1280,900',
+    // notes.test is this machine over plain http: a page that is not a secure context.
+    '--host-resolver-rules=MAP notes.test 127.0.0.1', `--remote-debugging-port=${CDP_PORT}`, `--user-data-dir=${PROFILE}`, 'about:blank',
   ], { stdio: 'ignore' });
 
   const results = [];
@@ -600,6 +602,16 @@ async function main() {
         && (await evaluate('localStorage.getItem("pn:token")')) === js('nosync-token'));
       await click('#token-dialog .primary');
       await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+    }
+
+    // ---- plain http: no token is taken ----
+    if (!HOST) {
+      await go(`http://notes.test:${PORT}/`);
+      await click('#token-button');
+      check('over plain http the page refuses to take a token',
+        await waitFor('document.querySelector("#token-dialog").open && !document.querySelector("#t-token")'
+          + ' && document.querySelector("#token-dialog").textContent.includes("secure connection")'));
+      await evaluate('document.querySelector("#token-dialog").close()');
     }
 
     // ---- the phone ----
