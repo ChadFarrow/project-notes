@@ -1,6 +1,6 @@
-# Dashboard — 2026-09-28 13:13 UTC
+# Dashboard — 2026-09-28 20:48 UTC
 
-16 open PRs · 21 open issues · 30 branches with no PR · 36 tracked repos (15 not tracked)
+17 open PRs · 21 open issues · 30 branches with no PR · 36 tracked repos (15 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -20,7 +20,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 21 hours ago · by InTheMorning
+- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 1 day ago · by InTheMorning
 - [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138) — opened 16 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 8 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 8 months ago · by Kolomona
@@ -31,17 +31,17 @@
 
 **[thelounge-candr](projects/thelounge-candr.md)**
 
-- [#38 Lit bot for candr doesn't post in Bowl After Bowl](https://github.com/ChadFarrow/thelounge-candr/issues/38) — opened 3 days ago
+- [#38 Lit bot for candr doesn't post in Bowl After Bowl](https://github.com/ChadFarrow/thelounge-candr/issues/38) — opened 4 days ago
 
 **[boostmebitch](projects/boostmebitch.md)**
 
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 19 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 24 days ago · 1 comment
-- [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 28 days ago
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 25 days ago · 1 comment
+- [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 29 days ago
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
-- [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 19 days ago
+- [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 20 days ago
 
 **[Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)**
 
@@ -68,8 +68,8 @@
 
 2 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
 
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 5 days ago
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 16 days ago · draft
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 5 days ago · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 16 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
@@ -110,12 +110,13 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+5 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 1 day ago · draft
+- PR [#455 Add "Report a bug" to both header menus](https://github.com/ChadFarrow/boostmebitch/pull/455) — opened 5 hours ago
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 3 days ago
 - PR [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441) — opened 3 days ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
@@ -216,8 +217,8 @@
 
 2 PRs · 1 issue
 
-- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 5 days ago
-- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 5 days ago
+- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 6 days ago
+- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 6 days ago
 
 ### Websites
 
