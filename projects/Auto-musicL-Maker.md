@@ -1,6 +1,6 @@
 # Auto-musicL-Maker
 
-**Category:** Music  
+**Category:** musicL playlists  
 **Repo:** https://github.com/ChadFarrow/Auto-musicL-Maker
 
 ## Description

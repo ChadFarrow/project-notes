@@ -1,6 +1,6 @@
 # chadf-musicl-playlists
 
-**Category:** Music  
+**Category:** musicL playlists  
 **Repo:** https://github.com/ChadFarrow/chadf-musicl-playlists
 
 ## Description

@@ -1,6 +1,6 @@
 # web-ui
 
-**Category:** Web/Apps
+**Category:** Podcasting 2.0 reference  
 **Track:** upstream  
 **Repo:** https://github.com/ChadFarrow/web-ui (fork of [Podcastindex-org/web-ui](https://github.com/Podcastindex-org/web-ui))
 

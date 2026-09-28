@@ -1,6 +1,6 @@
 # demu-feed-template
 
-**Category:** Music  
+**Category:** Music publishing  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/demu-feed-template

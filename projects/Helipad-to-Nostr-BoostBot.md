@@ -1,6 +1,6 @@
 # Helipad-to-Nostr-BoostBot
 
-**Category:** Nostr  
+**Category:** Boosts  
 **Repo:** https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot
 
 ## Description

@@ -1,6 +1,6 @@
 # thelounge-candr
 
-**Category:** Web/Apps  
+**Category:** Tools & self-hosting  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/thelounge-candr

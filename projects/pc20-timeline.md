@@ -1,6 +1,6 @@
 # pc20-timeline
 
-**Category:** Podcasting 2.0  
+**Category:** Podcasting 2.0 reference  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/pc20-timeline

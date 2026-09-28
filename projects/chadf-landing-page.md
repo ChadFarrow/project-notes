@@ -1,6 +1,6 @@
 # chadf-landing-page
 
-**Category:** Web/Apps  
+**Category:** Websites  
 **Repo:** https://github.com/ChadFarrow/chadf-landing-page
 
 ## Description

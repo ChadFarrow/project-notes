@@ -1,6 +1,6 @@
 # boostbox
 
-**Category:** Podcasting 2.0  
+**Category:** Boosts  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/boostbox

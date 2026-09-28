@@ -1,6 +1,6 @@
 # RSS-music-site-template
 
-**Category:** Music  
+**Category:** Music publishing  
 **Repo:** https://github.com/ChadFarrow/RSS-music-site-template
 
 ## Description

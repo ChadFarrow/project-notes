@@ -1,6 +1,6 @@
 # obsidian-candr
 
-**Category:** Web/Apps  
+**Category:** Tools & self-hosting  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/obsidian-candr
