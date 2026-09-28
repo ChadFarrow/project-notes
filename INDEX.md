@@ -4,7 +4,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 
 ## Lightning
 
-- [HPM-Lightning](projects/HPM-Lightning.md) - No description (`TypeScript`)
+- [HPM-Lightning](projects/HPM-Lightning.md) - No description (`TypeScript`) · not tracked
 - [ITDV-Lightning](projects/ITDV-Lightning.md) - No description (`TypeScript`)
 - [libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md) - Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.0 / Value-for-Value — exploring browser, PWA, WebLN-extension, and native-Android clients. (`TypeScript`) · fork
 - [lnurl-test-feed](projects/lnurl-test-feed.md) - No description (`HTML`)

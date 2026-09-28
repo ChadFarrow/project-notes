@@ -26,11 +26,5 @@ Lightning implementation for HPM
 
 - **Repo:** [ChadFarrow/HPM-Lightning](https://github.com/ChadFarrow/HPM-Lightning) · TypeScript
 
-### Pull requests (1)
-
-- [#2 Fix React Server Components CVE vulnerabilities](https://github.com/ChadFarrow/HPM-Lightning/pull/2) — opened 2025-12-14 · draft · by vercel
-
-### Issues (1)
-
-- [#3 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/HPM-Lightning/issues/3) — opened 2026-09-05
+_Not tracked: this note has `**Track:** no`, so the dashboard leaves the project out._
 <!-- AUTO:END -->
