@@ -1,6 +1,6 @@
 # lnurl-test-feed
 
-**Category:** Lightning  
+**Category:** Lightning & wallets  
 **Repo:** https://github.com/ChadFarrow/lnurl-test-feed
 
 ## Description

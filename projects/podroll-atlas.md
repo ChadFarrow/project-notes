@@ -1,6 +1,6 @@
 # podroll-atlas
 
-**Category:** Uncategorized  
+**Category:** Podcasting 2.0 reference  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/podroll-atlas

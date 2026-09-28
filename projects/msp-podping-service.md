@@ -1,6 +1,6 @@
 # msp-podping-service
 
-**Category:** Music/Podcasting  
+**Category:** Music publishing  
 **Repo:** https://github.com/ChadFarrow/msp-podping-service
 
 ## Description

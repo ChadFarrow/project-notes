@@ -1,6 +1,6 @@
 # pc20-archive
 
-**Category:** Uncategorized  
+**Category:** Podcasting 2.0 reference  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/pc20-archive

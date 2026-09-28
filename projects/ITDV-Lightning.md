@@ -1,6 +1,6 @@
 # ITDV-Lightning
 
-**Category:** Lightning  
+**Category:** Music apps & sites  
 **Uses:** lnurl-test-feed  
 **Repo:** https://github.com/ChadFarrow/ITDV-Lightning
 

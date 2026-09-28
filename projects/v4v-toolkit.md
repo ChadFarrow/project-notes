@@ -1,6 +1,6 @@
 # v4v-toolkit
 
-**Category:** Uncategorized  
+**Category:** Lightning & wallets  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/v4v-toolkit

@@ -1,6 +1,6 @@
 # libre-listener-wallet-monorepo
 
-**Category:** Lightning  
+**Category:** Lightning & wallets  
 **Repo:** https://github.com/ChadFarrow/libre-listener-wallet-monorepo
 
 ## Description

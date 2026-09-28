@@ -1,6 +1,6 @@
 # helipad
 
-**Category:** Uncategorized  
+**Category:** Boosts  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/helipad

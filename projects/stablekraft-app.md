@@ -1,6 +1,6 @@
 # stablekraft-app
 
-**Category:** Web/Apps  
+**Category:** Music apps & sites  
 **Uses:** msp-podping-service, boostbox, chadf-musicl-playlists, lnurl-test-feed  
 **Repo:** https://github.com/ChadFarrow/stablekraft-app
 

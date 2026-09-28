@@ -1,6 +1,6 @@
 # NMNU
 
-**Category:** Uncategorized  
+**Category:** Music apps & sites  
 **Uses:** lnurl-test-feed  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/NMNU

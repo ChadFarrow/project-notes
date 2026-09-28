@@ -1,6 +1,6 @@
 # lnbeats
 
-**Category:** Uncategorized  
+**Category:** Music apps & sites  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/lnbeats

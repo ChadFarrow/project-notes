@@ -1,6 +1,6 @@
 # boostmebitch
 
-**Category:** Web/Apps
+**Category:** Music apps & sites  
 **Uses:** boostbox, chadf-musicl-playlists, stablekraft-app  
 **Repo:** https://github.com/ChadFarrow/boostmebitch
 **Deployed:** https://boostmebitch.vercel.app

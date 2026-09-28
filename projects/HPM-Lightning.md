@@ -1,6 +1,6 @@
 # HPM-Lightning
 
-**Category:** Lightning  
+**Category:** Music apps & sites  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/HPM-Lightning
 

@@ -1,6 +1,6 @@
 # MSP-2.0
 
-**Category:** Music/Podcasting  
+**Category:** Music publishing  
 **Uses:** msp-podping-service  
 **Repo:** https://github.com/ChadFarrow/MSP-2.0
 

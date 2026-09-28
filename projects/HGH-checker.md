@@ -1,6 +1,6 @@
 # HGH-checker
 
-**Category:** Tools  
+**Category:** Tools & self-hosting  
 **Repo:** https://github.com/ChadFarrow/HGH-checker
 
 ## Description

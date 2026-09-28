@@ -1,6 +1,6 @@
 # localbitcoiners
 
-**Category:** Web/Apps  
+**Category:** Websites  
 **Repo:** https://github.com/ChadFarrow/localbitcoiners
 
 ## Description

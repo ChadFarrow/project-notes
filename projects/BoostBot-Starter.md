@@ -1,6 +1,6 @@
 # BoostBot-Starter
 
-**Category:** PC 2.0  
+**Category:** Boosts  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/BoostBot-Starter
