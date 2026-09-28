@@ -1,6 +1,6 @@
 # stacks-pc20
 
-**Category:** Uncategorized  
+**Category:** Podcasting 2.0  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/stacks-pc20

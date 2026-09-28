@@ -1,6 +1,6 @@
 # BoostBot-Starter
 
-**Category:** PC 2.0  
+**Category:** Podcasting 2.0  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/BoostBot-Starter

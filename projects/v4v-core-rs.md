@@ -1,6 +1,6 @@
 # v4v-core-rs
 
-**Category:** Uncategorized  
+**Category:** Lightning  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/v4v-core-rs

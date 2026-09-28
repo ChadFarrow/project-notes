@@ -1,6 +1,6 @@
 # thelounge-candr
 
-**Category:** Uncategorized  
+**Category:** Web/Apps  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/thelounge-candr

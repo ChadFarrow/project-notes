@@ -1,6 +1,6 @@
 # lnaddress-music
 
-**Category:** Music/Podcasting  
+**Category:** Music  
 **Uses:** lnurl-test-feed  
 **Repo:** https://github.com/ChadFarrow/lnaddress-music
 

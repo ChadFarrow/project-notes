@@ -1,6 +1,6 @@
 # sidecar
 
-**Category:** Uncategorized  
+**Category:** Nostr  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/sidecar

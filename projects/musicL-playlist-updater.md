@@ -1,6 +1,6 @@
 # musicL-playlist-updater
 
-**Category:** Music/Podcasting  
+**Category:** Music  
 **Uses:** msp-podping-service, chadf-musicl-playlists  
 **Repo:** https://github.com/ChadFarrow/musicL-playlist-updater
 

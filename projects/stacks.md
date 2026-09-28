@@ -1,6 +1,6 @@
 # stacks
 
-**Category:** Uncategorized  
+**Category:** Tools  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/stacks

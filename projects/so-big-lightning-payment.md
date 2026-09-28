@@ -1,6 +1,6 @@
 # so-big-lightning-payment
 
-**Category:** Uncategorized  
+**Category:** Music  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/so-big-lightning-payment

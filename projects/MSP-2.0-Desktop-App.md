@@ -1,6 +1,6 @@
 # MSP-2.0-Desktop-App
 
-**Category:** Music/Podcasting  
+**Category:** Music  
 **Uses:** MSP-2.0, msp-podping-service  
 **Repo:** https://github.com/ChadFarrow/MSP-2.0-Desktop-App
 

@@ -1,6 +1,6 @@
 # podstr
 
-**Category:** Uncategorized  
+**Category:** Nostr  
 **Uses:**  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/podstr

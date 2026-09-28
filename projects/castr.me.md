@@ -1,6 +1,6 @@
 # castr.me
 
-**Category:** Music/Podcasting  
+**Category:** Music  
 **Track:** upstream  
 **Repo:** https://github.com/ChadFarrow/castr.me
 

@@ -1,6 +1,6 @@
 # RSS-music-site-template
 
-**Category:** Music/Podcasting  
+**Category:** Music  
 **Repo:** https://github.com/ChadFarrow/RSS-music-site-template
 
 ## Description

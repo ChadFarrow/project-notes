@@ -1,6 +1,6 @@
 # StableKraft-Nostr-Fix
 
-**Category:** Uncategorized  
+**Category:** Nostr  
 **Uses:** boostbox  
 **Track:** no  
 **Repo:** https://github.com/ChadFarrow/StableKraft-Nostr-Fix

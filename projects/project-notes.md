@@ -1,6 +1,6 @@
 # project-notes
 
-**Category:** Uncategorized  
+**Category:** Tools  
 **Uses:**  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/project-notes

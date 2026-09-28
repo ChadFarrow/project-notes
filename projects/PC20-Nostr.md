@@ -1,6 +1,6 @@
 # PC20-Nostr
 
-**Category:** Uncategorized  
+**Category:** Nostr  
 **Uses:** stablekraft-app  
 **Track:** yes  
 **Repo:** https://github.com/ChadFarrow/PC20-Nostr
