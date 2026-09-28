@@ -2,7 +2,9 @@ name: Sync All Project Data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    # Every 6 hours, off the hour: GitHub delays or drops scheduled runs under load,
+    # and minute 0 is the busiest. A single missed run is normal; see OLD_DATA_HOURS.
+    - cron: '23 */6 * * *'
   workflow_dispatch:  # Manual trigger; the web dashboard and the vault sync also start it
   push:
     # A change to the page or the generator redeploys the web dashboard. Not
