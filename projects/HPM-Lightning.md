@@ -1,6 +1,7 @@
 # HPM-Lightning
 
 **Category:** Lightning  
+**Track:** no  
 **Repo:** https://github.com/ChadFarrow/HPM-Lightning
 
 ## Description
