@@ -1,4 +1,4 @@
-# Dashboard — 2026-09-28 01:03 UTC
+# Dashboard — 2026-09-28 04:19 UTC
 
 16 open PRs · 21 open issues · 30 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -10,7 +10,7 @@
 
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 343 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 301 days · no checks
-- **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 8 days · checks passing
+- **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 9 days · checks passing
 
 ### Open issues (21)
 
@@ -20,14 +20,14 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 9 hours ago · by InTheMorning
+- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 12 hours ago · by InTheMorning
 - [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138) — opened 16 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 8 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 8 months ago · by Kolomona
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272) — opened 7 days ago · 3 comments
+- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272) — opened 8 days ago · 3 comments
 
 **[thelounge-candr](projects/thelounge-candr.md)**
 
@@ -62,15 +62,41 @@
 
 ## Projects
 
-### Lightning
+### Boosts
 
-#### [TRM-Lightning](projects/TRM-Lightning.md)
+#### [boostbox](projects/boostbox.md)
 
-1 issue · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+2 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
 
-#### [ITDV-Lightning](projects/ITDV-Lightning.md)
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 5 days ago · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 15 days ago · draft · merge conflict
+- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
+- Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
-1 issue · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+#### [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)
+
+1 issue · 2 branches with no PR
+
+- Branch [`fix-env-example-relay`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/fix-env-example-relay) — no PR
+- Branch [`nip73-podcast-guids`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/nip73-podcast-guids) — no PR
+
+#### [helipad](projects/helipad.md)
+
+5 branches with no PR
+
+- Branch [`add-itdv-app`](https://github.com/ChadFarrow/helipad/tree/add-itdv-app) — no PR
+- Branch [`patch-1`](https://github.com/ChadFarrow/helipad/tree/patch-1) — no PR
+- Branch [`add-tardbox-metadata-support`](https://github.com/ChadFarrow/helipad/tree/add-tardbox-metadata-support) — no PR
+- Branch [`leaderboard`](https://github.com/ChadFarrow/helipad/tree/leaderboard) — no PR
+- Branch [`revert-32-message-template-improvements`](https://github.com/ChadFarrow/helipad/tree/revert-32-message-template-improvements) — no PR
+
+#### [helipad-startos](projects/helipad-startos.md)
+
+1 branch with no PR
+
+- Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
+
+### Lightning & wallets
 
 #### [libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)
 
@@ -80,7 +106,39 @@
 - Branch [`feat/force-close`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/force-close) — no PR
 - Branch [`feat/lsps2-jit-m1`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/lsps2-jit-m1) — no PR
 
-### Music/Podcasting
+### Music apps & sites
+
+#### [boostmebitch](projects/boostmebitch.md)
+
+4 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 1 day ago · draft
+- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 3 days ago
+- PR [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441) — opened 3 days ago
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft
+
+#### [stablekraft-app](projects/stablekraft-app.md)
+
+2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 9 days ago
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 19 days ago · merge conflict
+- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
+- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
+
+#### [TRM-Lightning](projects/TRM-Lightning.md)
+
+1 issue · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+
+#### [lnaddress-music](projects/lnaddress-music.md)
+
+2 issues · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+
+#### [ITDV-Lightning](projects/ITDV-Lightning.md)
+
+1 issue · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+
+### Music publishing
 
 #### [MSP-2.0](projects/MSP-2.0.md)
 
@@ -94,7 +152,7 @@
 
 1 PR · 1 issue · 4 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (2 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#74 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/74) — opened 12 hours ago · checks failing
+- PR [#74 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/74) — opened 15 hours ago · checks failing
 - Branch [`claude/restore-release-on-master-push`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/restore-release-on-master-push) — no PR
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 - Branch [`claude/trim-playwright-artifact-retention`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/trim-playwright-artifact-retention) — no PR
@@ -112,9 +170,7 @@
 
 - Branch [`claude/clone-repository-2O3bN`](https://github.com/ChadFarrow/RSS-music-site-template/tree/claude/clone-repository-2O3bN) — no PR
 
-#### [lnaddress-music](projects/lnaddress-music.md)
-
-2 issues · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
+### musicL playlists
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -122,77 +178,7 @@
 
 - Branch [`claude/localbitcoiners-podcast-playlist-069mwk`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/claude/localbitcoiners-podcast-playlist-069mwk) — no PR
 
-#### [castr.me](projects/castr.me.md)
-
-2 PRs
-
-- PR [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — opened 11 months ago
-- PR [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — opened 11 months ago
-
 ### Nostr
-
-#### [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)
-
-1 issue · 2 branches with no PR
-
-- Branch [`fix-env-example-relay`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/fix-env-example-relay) — no PR
-- Branch [`nip73-podcast-guids`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/nip73-podcast-guids) — no PR
-
-### Web/Apps
-
-#### [boostmebitch](projects/boostmebitch.md)
-
-4 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
-
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 1 day ago · draft
-- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 3 days ago
-- PR [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441) — opened 3 days ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
-
-#### [stablekraft-app](projects/stablekraft-app.md)
-
-2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
-
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 8 days ago
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 19 days ago · merge conflict
-- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
-- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
-
-#### [candr.space](projects/candr.space.md)
-
-1 branch with no PR
-
-- Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
-
-#### [localbitcoiners](projects/localbitcoiners.md)
-
-1 branch with no PR
-
-- Branch [`docs/claude-local-dev`](https://github.com/ChadFarrow/localbitcoiners/tree/docs/claude-local-dev) — no PR
-
-### Uncategorized
-
-#### [boostbox](projects/boostbox.md)
-
-2 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
-
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 5 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 15 days ago · draft · merge conflict
-- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
-- Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
-
-#### [pc20-wiki](projects/pc20-wiki.md)
-
-1 branch with no PR · uses [pc20-archive](projects/pc20-archive.md) (no open work)
-
-- Branch [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds) — no PR
-
-#### [thelounge-candr](projects/thelounge-candr.md)
-
-2 PRs · 1 issue
-
-- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 5 days ago
-- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 5 days ago
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
@@ -209,21 +195,43 @@
 - Branch [`fix/custom-emoji-reactions`](https://github.com/ChadFarrow/sidecar/tree/fix/custom-emoji-reactions) — no PR
 - Branch [`local/demo-funds`](https://github.com/ChadFarrow/sidecar/tree/local/demo-funds) — no PR
 
-#### [helipad](projects/helipad.md)
+#### [castr.me](projects/castr.me.md)
 
-5 branches with no PR
+2 PRs
 
-- Branch [`add-itdv-app`](https://github.com/ChadFarrow/helipad/tree/add-itdv-app) — no PR
-- Branch [`patch-1`](https://github.com/ChadFarrow/helipad/tree/patch-1) — no PR
-- Branch [`add-tardbox-metadata-support`](https://github.com/ChadFarrow/helipad/tree/add-tardbox-metadata-support) — no PR
-- Branch [`leaderboard`](https://github.com/ChadFarrow/helipad/tree/leaderboard) — no PR
-- Branch [`revert-32-message-template-improvements`](https://github.com/ChadFarrow/helipad/tree/revert-32-message-template-improvements) — no PR
+- PR [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — opened 11 months ago
+- PR [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — opened 11 months ago
 
-#### [helipad-startos](projects/helipad-startos.md)
+### Podcasting 2.0 reference
+
+#### [pc20-wiki](projects/pc20-wiki.md)
+
+1 branch with no PR · uses [pc20-archive](projects/pc20-archive.md) (no open work)
+
+- Branch [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds) — no PR
+
+### Tools & self-hosting
+
+#### [thelounge-candr](projects/thelounge-candr.md)
+
+2 PRs · 1 issue
+
+- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 5 days ago
+- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 5 days ago
+
+### Websites
+
+#### [candr.space](projects/candr.space.md)
 
 1 branch with no PR
 
-- Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
+- Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
+
+#### [localbitcoiners](projects/localbitcoiners.md)
+
+1 branch with no PR
+
+- Branch [`docs/claude-local-dev`](https://github.com/ChadFarrow/localbitcoiners/tree/docs/claude-local-dev) — no PR
 
 ### Quiet — no open work
 
