@@ -40,7 +40,7 @@ The sync creates a stub note for any non-archived repo that has none. Deleting a
 
 ## The Obsidian vault
 
-The iCloud vault `project-notes` (`~/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes`) is a two-way copy of this repo, so Chad can read the dashboard and write notes on the phone. The launchd agent `com.chadfarrow.project-notes-vault` runs `scripts/vault-sync.mjs` when the vault's `projects/` or `notes/` folder changes (after a 30 s pause) and every 15 minutes. Log: `~/Library/Logs/project-notes-vault.log`. The phone reaches GitHub through this Mac, so the Mac must be on.
+The iCloud vault `project-notes` (`~/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes`) is a two-way copy of this repo, so Chad can read the dashboard and write notes on the phone. The launchd agent `com.chadfarrow.project-notes-vault` runs `scripts/vault-sync.mjs` when the vault's `projects/` or `notes/` folder changes (after a 30 s pause) and every 15 minutes. Log: `~/Library/Logs/project-notes-vault.log`. A run with nothing to do writes no log line, so hours of silence are normal; `launchctl list | grep project-notes-vault` shows whether the agent is loaded. A commit made on GitHub (the web dashboard, the workflow) reaches the vault on the next 15-minute run, because the folder watch only sees vault changes. The phone reaches GitHub through this Mac, so the Mac must be on.
 
 **A save in the vault reaches GitHub with no review** — usually within a minute for a new note, at most about 15 minutes for an edit the folder watch misses — and the repo is public.
 
@@ -109,13 +109,19 @@ The workflow pushes to `main` under `concurrency: sync-main` with a pull-rebase 
 
 **Data.** `sync.mjs --site <dir>` writes `data.json` from the same fetch and model as the markdown; `data.json` is never committed. `renderSiteData` in `scripts/lib/site.mjs` publishes only what `LATEST.md`, `INDEX.md` and the AUTO blocks already publish. A `**Track:** no` project carries only its `INDEX.md` facts; it stays listed so its Track can be switched back on. `test/site.test.mjs` checks that every URL in `data.json` also appears in the markdown. Keep that test passing when you add a field.
 
-**Hosting.** The `deploy` job in `sync-all.yml` publishes the upload with `actions/deploy-pages`. It is a separate job, so the job that holds `AUDIT_TOKEN` never gets an OIDC token. GitHub Pages is set to build from Actions, with the custom domain `notes.podtards.com`. Cloudflare holds the DNS for `podtards.com`: `CNAME notes → chadfarrow.github.io`, **DNS only**. The one-time setup was:
+**Hosting.** The `deploy` job in `sync-all.yml` publishes the upload with `actions/deploy-pages`. It is a separate job, so the job that holds `AUDIT_TOKEN` never gets an OIDC token. GitHub Pages is set to build from Actions, with the custom domain `notes.podtards.com`, and HTTPS enforced. Only `main` may deploy (the `github-pages` environment's branch rule).
+
+**DNS is at Cloudflare, not Squarespace.** `podtards.com` is registered at Squarespace, but its name servers are Cloudflare's (`bella`/`hans.ns.cloudflare.com`), so records go in the Cloudflare dashboard. The Squarespace DNS page shows an old copy under "You're using custom nameservers"; it is inactive and out of date, so never switch the name servers back to it (the root and `itdv` records would break). The record is `CNAME notes → chadfarrow.github.io`, **DNS only** (grey cloud): a proxied record hides GitHub's IPs and blocks the certificate. Check it with `dig +short CNAME notes.podtards.com @bella.ns.cloudflare.com`.
+
+The one-time setup, done on 2026-09-27:
 
 ```bash
 gh api -X POST repos/ChadFarrow/project-notes/pages -f build_type=workflow
-gh api -X PUT repos/ChadFarrow/project-notes/pages -f cname=notes.podtards.com
-gh api -X PUT repos/ChadFarrow/project-notes/pages -F https_enforced=true   # once the certificate is issued
+gh api -X PUT repos/ChadFarrow/project-notes/pages -f cname=notes.podtards.com   # before the DNS record, so no one else can claim the name
+gh api -X PUT repos/ChadFarrow/project-notes/pages -F https_enforced=true        # once the certificate is "approved"
 ```
+
+GitHub issues and renews the certificate itself (`gh api repos/ChadFarrow/project-notes/pages --jq .https_certificate`; the first one expires 2026-12-26). If the certificate stays `null` after the DNS record resolves and `pages/health` reports `is_valid: true`, saving the same domain again does nothing. Remove the domain (`gh api -X PUT …/pages --input` a file holding `{"cname": null}`) and add it again; the certificate then went `authorized` → `approved` within minutes.
 
 **Never serve the page from `chadfarrow.github.io/project-notes`.** Three other repos publish Pages on that origin (`chadf-musicl-playlists`, `libre-listener-wallet-monorepo`, `pc20-archive`). localStorage and the CSP `'self'` are per origin, so a script on any of those sites could read the edit token. The custom domain gives the page an origin of its own.
 
@@ -125,11 +131,13 @@ Each save is one commit on `main` by Chad: `Edit the <repo> note from the web da
 
 **`scripts/lib/notes.mjs` runs in the browser too.** The site serves a copy of it. Keep it free of imports and Node APIs; `test/notes-form.test.mjs` checks the imports. Also avoid newer syntax such as regex lookbehind, which older iOS Safari cannot parse. `applyNoteForm` must leave every byte it did not edit as it was: each line keeps its own ending, and only the lines of a changed value are rewritten.
 
-**Security.** The CSP is a `<meta>` tag in `site/index.html`: scripts, styles and fonts come from the page's own origin only, and the page connects only to itself and to `api.github.com`. PR and issue titles are written by other people, so `app.js` puts every GitHub string into the page with `textContent` or a Text node, never as HTML. The page refuses to run inside a frame. `site/index.html` and `app.js` carry `?v=__BUILD__`, which `buildSiteFiles` replaces with a hash of the code, so a browser never pairs a cached `app.js` with a newer `lib/notes.js`.
+**Security.** The CSP is a `<meta>` tag in `site/index.html`: scripts, styles and fonts come from the page's own origin only, and the page connects only to itself and to `api.github.com`. PR and issue titles are written by other people, so `app.js` puts every GitHub string into the page with `textContent` or a Text node, never as HTML. The page refuses to run inside a frame, and it will not take a token over plain http (`window.isSecureContext`), which matters for the minutes before a new certificate exists. `site/index.html` and `app.js` carry `?v=__BUILD__`, which `buildSiteFiles` replaces with a hash of the code, so a browser never pairs a cached `app.js` with a newer `lib/notes.js`.
 
 **The edit token can reach `AUDIT_TOKEN`.** Contents write on this repo is enough to change `scripts/`, and the workflow runs `scripts/sync.mjs` with `AUDIT_TOKEN`, a classic `repo` PAT that can write to every repo Chad owns. So a leaked edit token (a bad browser extension is the likely way) is worth more than one repo. Keep the edit token short-lived and on devices Chad controls. A read-only fine-grained `AUDIT_TOKEN` (Metadata, Contents, Issues, Pull requests and Commit statuses: read, on all repositories) would close the gap, but fine-grained PATs have no Checks permission, and the check state from GitHub Actions may then drop out of `statusCheckRollup`. A GraphQL error stops the sync loudly, but a quietly missing state would not. Before you switch, save `LATEST.md`, run the sync with the new token, and compare the "checks passing" and "checks failing" tags. Switch only if they match.
 
 **Verify.** `node scripts/check-site.mjs` drives the page in headless Chrome over CDP, with no dependencies. It stands in for `api.github.com`, so the editor is checked end to end: the saved bytes, UTF-8, the conflict retry and the refusal of a same-field conflict, the dispatch, the token probes, a revoked token mid-save, the CSP, stray `null` text, and the phone layout (`Emulation.setDeviceMetricsOverride` with `mobile: true`, no sideways scroll, controls of at least 24 by 24 px). **Every** check must pass. The number grows as checks are added, so read the total that the run prints. Add `--data _site/data.json` to check the board with real data, `--shots <dir>` to save screenshots, and `--host https://notes.podtards.com` for read-only checks of the live site.
+
+The whole chain was checked with a real edit on 2026-09-27: HPM-Lightning set to "Hide from the dashboard". The page committed one added line (`**Track:** no`), dispatched `sync-all.yml` 3 seconds later, and the next data showed the project hidden and the totals lowered. The vault got the new line 15 minutes after the save, on the next vault-sync run. To check a save like that, read the note's commits (`gh api "repos/ChadFarrow/project-notes/commits?path=projects/<file>"`), the run list of `sync-all.yml`, and `https://notes.podtards.com/data.json`.
 
 ## Editing Guidelines
 
