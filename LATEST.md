@@ -1,16 +1,18 @@
-# Dashboard — 2026-09-29 13:08 UTC
+# Dashboard — 2026-09-29 22:26 UTC
 
-17 open PRs · 21 open issues · 31 branches with no PR · 36 tracked repos (15 not tracked)
+18 open PRs · 21 open issues · 30 branches with no PR · 36 tracked repos (15 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (3)
+### Ready to merge — idle 7+ days (5)
 
-- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 344 days · no checks
+- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 345 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 302 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 10 days · checks passing
+- **thelounge-candr** [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — idle 7 days · no checks
+- **thelounge-candr** [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — idle 7 days · no checks
 
 ### Open issues (21)
 
@@ -20,7 +22,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 1 day ago · by InTheMorning
+- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 2 days ago · by InTheMorning
 - [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138) — opened 17 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 8 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 8 months ago · by Kolomona
@@ -31,17 +33,17 @@
 
 **[thelounge-candr](projects/thelounge-candr.md)**
 
-- [#38 Lit bot for candr doesn't post in Bowl After Bowl](https://github.com/ChadFarrow/thelounge-candr/issues/38) — opened 4 days ago
+- [#38 Lit bot for candr doesn't post in Bowl After Bowl](https://github.com/ChadFarrow/thelounge-candr/issues/38) — opened 5 days ago
 
 **[boostmebitch](projects/boostmebitch.md)**
 
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 20 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 25 days ago · 1 comment
-- [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 29 days ago
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 26 days ago · 1 comment
+- [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 30 days ago
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
-- [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 20 days ago
+- [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 21 days ago
 
 **[Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)**
 
@@ -66,11 +68,11 @@
 
 #### [boostbox](projects/boostbox.md)
 
-2 PRs · 3 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
+3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
 
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 7 hours ago
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 6 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 17 days ago · draft · merge conflict
-- Branch [`claude/msp-bot-npub-3oyd69`](https://github.com/ChadFarrow/boostbox/tree/claude/msp-bot-npub-3oyd69) — no PR
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
@@ -111,17 +113,17 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-5 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+5 PRs · 3 issues · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#455 Add "Report a bug" to both header menus](https://github.com/ChadFarrow/boostmebitch/pull/455) — opened 21 hours ago
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2 days ago · draft
+- PR [#455 Add "Report a bug" to both header menus](https://github.com/ChadFarrow/boostmebitch/pull/455) — opened 1 day ago
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 3 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 4 days ago
 - PR [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441) — opened 4 days ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 10 days ago
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 21 days ago · merge conflict
@@ -218,8 +220,8 @@
 
 2 PRs · 1 issue
 
-- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 6 days ago
-- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 6 days ago
+- PR [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 7 days ago
+- PR [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 7 days ago
 
 ### Websites
 

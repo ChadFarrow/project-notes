@@ -21,7 +21,7 @@ Stablekraft application
 ## Live status
 
 - **Repo:** [ChadFarrow/stablekraft-app](https://github.com/ChadFarrow/stablekraft-app) · TypeScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
 ### Pull requests (2)
