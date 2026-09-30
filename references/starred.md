@@ -1,6 +1,6 @@
 # Starred Repos
 
-*Auto-synced every 6 hours*
+*Auto-synced every 4 hours*
 
 ## Nostr
 - [tailrelay-startos](https://github.com/sudocarlos/tailrelay-startos) - StartOS wrapper for tailrelay
@@ -110,4 +110,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-09-30 12:49 UTC*
+*Last synced: 2026-09-30 19:29 UTC*
