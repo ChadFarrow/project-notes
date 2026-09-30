@@ -17,7 +17,7 @@ const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?na
   + '&description=Edits+notes+from+notes.podtards.com&target_name=ChadFarrow&expires_in=90&contents=write&actions=write';
 const DATA_VERSION = 1;
 // GitHub drops a scheduled run now and then, so warn only after two missed runs.
-const OLD_DATA_HOURS = 13;
+const OLD_DATA_HOURS = 9;
 const MAX_LAMPS = 12;
 const MAX_BRANCHES = 10;
 const NEW_CATEGORY = '\u0000new';
@@ -194,7 +194,7 @@ function renderHeader() {
   const hours = Math.floor((Date.now() - new Date(data.generatedAtIso)) / 3600000);
   if (hours >= OLD_DATA_HOURS) {
     banners.push(h('div', { class: 'banner' }, h('p', {},
-      `This data is ${plural(hours, 'hour')} old, but the sync should run every 6 hours, so it has missed at least two runs. `,
+      `This data is ${plural(hours, 'hour')} old, but the sync should run every 4 hours, so it has missed at least two runs. `,
       h('a', { href: ACTIONS_URL }, 'Check the sync runs'), '.')));
   }
   $('#banners').replaceChildren(...banners);
@@ -701,7 +701,7 @@ async function saveChanges(p, note, opened, changes) {
     try { started = await startSync(); } catch { started = false; }
     return started
       ? 'Saved. The dashboard shows the change in a few minutes.'
-      : 'Saved. The dashboard shows the change after the next sync (within 6 hours), because this token cannot start the sync.';
+      : 'Saved. The dashboard shows the change after the next sync (within about 5 hours), because this token cannot start the sync.';
   }
   return 'Saved.';
 }

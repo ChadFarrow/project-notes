@@ -275,7 +275,7 @@ const STAR_SECTIONS = [
 
 export function renderStarred(stars, generatedAt) {
   const item = (s) => `- [${s.name}](${s.html_url}) - ${s.description ?? 'No description'}`;
-  const out = ['# Starred Repos', '', '*Auto-synced every 6 hours*', ''];
+  const out = ['# Starred Repos', '', '*Auto-synced every 4 hours*', ''];
   for (const [title, pattern] of STAR_SECTIONS) {
     const re = new RegExp(pattern, 'i');
     out.push(`## ${title}`, ...stars.filter((s) => re.test(s.name)).map(item), '');
