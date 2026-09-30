@@ -22,12 +22,7 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (2)
+### Pull requests (1)
 
 - [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 2026-09-22
-- [#36 docs: record the 2026-09-22 bots and Lounge deploys](https://github.com/ChadFarrow/thelounge-candr/pull/36) — opened 2026-09-22
-
-### Issues (1)
-
-- [#38 Lit bot for candr doesn't post in Bowl After Bowl](https://github.com/ChadFarrow/thelounge-candr/issues/38) — opened 2026-09-24
 <!-- AUTO:END -->
