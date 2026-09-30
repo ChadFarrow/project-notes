@@ -190,7 +190,7 @@ test('renderStarred matches the old jq output exactly', () => {
   assert.equal(renderStarred(stars, GENERATED), [
     '# Starred Repos',
     '',
-    '*Auto-synced every 6 hours*',
+    '*Auto-synced every 4 hours*',
     '',
     '## Nostr',
     '- [nostr-relay](https://github.com/a/nostr-relay) - Relay',

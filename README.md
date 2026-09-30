@@ -6,7 +6,7 @@ One place to see the open work across every ChadFarrow repo.
 
 The web dashboard shows the status of every open PR as a coloured lamp, lets you filter the list, and lets you edit a project's category, the repos it uses, and your notes and TODOs without markdown. To edit, you set up a GitHub token once on each device; the page tells you how.
 
-[The same dashboard as markdown](LATEST.md) shows what needs attention now, then the open PRs, issues and branches for each project. Both update every 6 hours.
+[The same dashboard as markdown](LATEST.md) shows what needs attention now, then the open PRs, issues and branches for each project. Both update every 4 hours.
 
 - [Project index](INDEX.md) — every repo, grouped by category, with a link to its note
 - [Dashboard history](audits/README.md) — one snapshot per day
@@ -37,4 +37,4 @@ The iCloud vault `project-notes` holds a copy of this repo for Obsidian on the M
 
 ## How it updates
 
-A GitHub Action runs `scripts/sync.mjs` every 6 hours and commits the result. To preview a run locally, use `node scripts/sync.mjs --dry-run`. [CLAUDE.md](CLAUDE.md) has the details.
+A GitHub Action runs `scripts/sync.mjs` every 4 hours and commits the result. To preview a run locally, use `node scripts/sync.mjs --dry-run`. [CLAUDE.md](CLAUDE.md) has the details.
