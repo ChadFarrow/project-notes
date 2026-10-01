@@ -41,8 +41,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#441 Desktop layout for downloads, the queue, new episodes and speed](https://github.com/ChadFarrow/boostmebitch/pull/441) — opened 2026-09-25 · merge conflict
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
-### Issues (3)
+### Issues (4)
 
+- [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 2026-10-01 · by ReedBTC
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 2026-09-09
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 2026-08-30
