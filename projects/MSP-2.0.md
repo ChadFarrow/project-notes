@@ -30,14 +30,14 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work)
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 
-### Pull requests (2)
+### Pull requests (3)
 
-- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
-- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
+- [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · by InTheMorning
+- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft
+- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft
 
-### Issues (5)
+### Issues (4)
 
-- [#148 Write the publisher role as rel on both sides of a publisher link](https://github.com/ChadFarrow/MSP-2.0/issues/148) — opened 2026-09-27 · by InTheMorning
 - [#138 when someone imports a feed check it for errors](https://github.com/ChadFarrow/MSP-2.0/issues/138) — opened 2026-09-11
 - [#137 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0/issues/137) — opened 2026-09-05
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 2026-01-27
