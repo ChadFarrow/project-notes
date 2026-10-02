@@ -34,10 +34,8 @@
 - [podping](https://github.com/Podcastindex-org/podping) - A global message bus for podcast feed events.
 - [podping-hivewriter](https://github.com/Podcastindex-org/podping-hivewriter) - The hive writer component of podping.
 - [podcast-namespace](https://github.com/Podcastindex-org/podcast-namespace) - A wholistic rss namespace for podcasting
-- [podping.alpha](https://github.com/Podcastindex-org/podping.alpha) - Testing out some new things
 - [sovereign-feeds](https://github.com/thebells1111/sovereign-feeds) - No description
 - [boostbox](https://github.com/noblepayne/boostbox) - Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata.
-- [feedparser](https://github.com/Podcastindex-org/feedparser) - The XML parser that converts saved podcast feeds into intermediary files for SQL ingestion.
 - [BoostBait](https://github.com/ablekirby/BoostBait) - Sound Clips for Boosting
 - [metaboost](https://github.com/ericpp/metaboost) - No description
 - [v4v-info.github.io](https://github.com/v4v-info/v4v-info.github.io) - General information on the value4value model & lifestyle.
@@ -110,4 +108,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-02 02:51 UTC*
+*Last synced: 2026-10-02 10:06 UTC*
