@@ -32,26 +32,17 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (7)
+### Pull requests (3)
 
-- [#463 Desktop layout: use the width, keep the look](https://github.com/ChadFarrow/boostmebitch/pull/463) — opened 2026-10-01
-- [#462 Use the phone's ⋯ menus on desktop too](https://github.com/ChadFarrow/boostmebitch/pull/462) — opened 2026-10-01
-- [#461 Next UI](https://github.com/ChadFarrow/boostmebitch/pull/461) — opened 2026-10-01 · draft
-- [#455 Add "Report a bug" to both header menus](https://github.com/ChadFarrow/boostmebitch/pull/455) — opened 2026-09-28
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
 - [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 2026-09-25
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
-### Issues (4)
+### Issues (5)
 
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 2026-10-01 · by ReedBTC
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 2026-09-09
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 2026-08-30
-
-### Branches with no open PR (3)
-
-- [`claude/delete-download-after-play`](https://github.com/ChadFarrow/boostmebitch/tree/claude/delete-download-after-play)
-- [`claude/desktop-layout-pass`](https://github.com/ChadFarrow/boostmebitch/tree/claude/desktop-layout-pass)
-- [`claude/played-marks-new-episodes-download`](https://github.com/ChadFarrow/boostmebitch/tree/claude/played-marks-new-episodes-download)
 <!-- AUTO:END -->
