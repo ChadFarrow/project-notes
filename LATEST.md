@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-03 18:52 UTC
+# Dashboard — 2026-10-03 22:29 UTC
 
 18 open PRs · 18 open issues · 31 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -6,13 +6,12 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (5)
+### Ready to merge — idle 7+ days (4)
 
-- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 348 days · no checks
+- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 349 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 306 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 14 days · checks passing
 - **thelounge-candr** [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — idle 11 days · no checks
-- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 8 days · checks passing
 
 ### Open issues (18)
 
@@ -106,9 +105,9 @@
 
 3 PRs · 3 issues · 1 branch with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 7 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 8 days ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 7 days ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
 - Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
 
 #### [stablekraft-app](projects/stablekraft-app.md)
@@ -138,9 +137,9 @@
 
 5 PRs · 4 issues · 1 branch with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-- PR [#152 Warn in Podping modal that a ping does not upload hosted-feed edits](https://github.com/ChadFarrow/MSP-2.0/pull/152) — opened 55 minutes ago
-- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 21 hours ago · by InTheMorning
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 1 day ago · by InTheMorning
+- PR [#152 Warn in Podping modal that a ping does not upload hosted-feed edits](https://github.com/ChadFarrow/MSP-2.0/pull/152) — opened 4 hours ago
+- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 1 day ago · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2 days ago · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 3 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
 - Branch [`FAFO`](https://github.com/ChadFarrow/MSP-2.0/tree/FAFO) — no PR
