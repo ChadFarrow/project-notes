@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-03 01:31 UTC
+# Dashboard — 2026-10-03 02:37 UTC
 
 18 open PRs · 22 open issues · 30 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -6,13 +6,12 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (5)
+### Ready to merge — idle 7+ days (4)
 
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 348 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 306 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 13 days · checks passing
 - **thelounge-candr** [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — idle 10 days · no checks
-- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 8 days · checks passing
 
 ### Open issues (22)
 
@@ -22,7 +21,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#481 Sign-in modal: Amber is styled differently from the other sign-in methods on Android](https://github.com/ChadFarrow/boostmebitch/issues/481) — opened 41 minutes ago
+- [#481 Sign-in modal: Amber is styled differently from the other sign-in methods on Android](https://github.com/ChadFarrow/boostmebitch/issues/481) — opened 1 hour ago
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 2 days ago · by ReedBTC · 3 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 1 day ago
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 23 days ago
@@ -31,7 +30,7 @@
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272) — opened 12 days ago · 3 comments
+- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272) — opened 13 days ago · 3 comments
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
@@ -113,10 +112,10 @@
 
 4 PRs · 6 issues · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#474 Stamp a podcast note with no payment as a COMMENT](https://github.com/ChadFarrow/boostmebitch/pull/474) — opened 8 hours ago
+- PR [#474 Stamp a podcast note with no payment as a COMMENT](https://github.com/ChadFarrow/boostmebitch/pull/474) — opened 9 hours ago · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 6 days ago · draft
-- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 8 days ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft
+- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 8 days ago · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
@@ -145,7 +144,7 @@
 
 4 PRs · 4 issues · 1 branch with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 4 hours ago · by InTheMorning
+- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 5 hours ago · by InTheMorning
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 1 day ago · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 3 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
