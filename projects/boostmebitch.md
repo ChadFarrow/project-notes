@@ -32,18 +32,16 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (7)
+### Pull requests (4)
 
-- [#478 siteLandingUrl: encode the feed guid, and let the track hints use it](https://github.com/ChadFarrow/boostmebitch/pull/478) — opened 2026-10-02 · checks pending
-- [#477 Like tile: say why a press failed, and let a dead signer be walked away from](https://github.com/ChadFarrow/boostmebitch/pull/477) — opened 2026-10-02 · checks pending
-- [#476 Like read: find the viewer's own like wherever they publish it](https://github.com/ChadFarrow/boostmebitch/pull/476) — opened 2026-10-02 · checks pending
 - [#474 Stamp a podcast note with no payment as a COMMENT](https://github.com/ChadFarrow/boostmebitch/pull/474) — opened 2026-10-02
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
 - [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 2026-09-25
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
-### Issues (5)
+### Issues (6)
 
+- [#481 Sign-in modal: Amber is styled differently from the other sign-in methods on Android](https://github.com/ChadFarrow/boostmebitch/issues/481) — opened 2026-10-03
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 2026-10-01 · by ReedBTC
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 2026-09-09
