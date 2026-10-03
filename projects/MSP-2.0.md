@@ -30,8 +30,9 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work)
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 
-### Pull requests (4)
+### Pull requests (5)
 
+- [#152 Warn in Podping modal that a ping does not upload hosted-feed edits](https://github.com/ChadFarrow/MSP-2.0/pull/152) — opened 2026-10-03
 - [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 2026-10-02 · by InTheMorning
 - [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · by InTheMorning
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
