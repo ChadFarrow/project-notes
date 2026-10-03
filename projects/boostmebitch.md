@@ -34,10 +34,10 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 
 ### Pull requests (4)
 
-- [#474 Stamp a podcast note with no payment as a COMMENT](https://github.com/ChadFarrow/boostmebitch/pull/474) — opened 2026-10-02 · merge conflict
+- [#474 Stamp a podcast note with no payment as a COMMENT](https://github.com/ChadFarrow/boostmebitch/pull/474) — opened 2026-10-02
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 2026-09-25 · merge conflict
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 2026-09-25
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
 ### Issues (6)
 
@@ -47,4 +47,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#371 iOS lock screen shows no artwork for the now-playing item](https://github.com/ChadFarrow/boostmebitch/issues/371) — opened 2026-09-09
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 - [#275 Look for zap splits](https://github.com/ChadFarrow/boostmebitch/issues/275) — opened 2026-08-30
+
+### Branches with no open PR (1)
+
+- [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover)
 <!-- AUTO:END -->
