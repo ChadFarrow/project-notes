@@ -22,7 +22,5 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (1)
-
-- [#37 feat(public): read the WEBIRC password from the environment](https://github.com/ChadFarrow/thelounge-candr/pull/37) — opened 2026-09-22
+_No open work._
 <!-- AUTO:END -->
