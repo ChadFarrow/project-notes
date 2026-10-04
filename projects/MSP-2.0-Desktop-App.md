@@ -27,19 +27,11 @@ Desktop application for MSP-2.0
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0-Desktop-App](https://github.com/ChadFarrow/MSP-2.0-Desktop-App) · TypeScript
-- **Uses:** [MSP-2.0](MSP-2.0.md) (9 PRs, 3 issues), [msp-podping-service](msp-podping-service.md) (1 PR)
+- **Uses:** [MSP-2.0](MSP-2.0.md) (4 PRs, 2 issues), [msp-podping-service](msp-podping-service.md) (1 PR)
 
-### Pull requests (2)
+### Branches with no open PR (6)
 
-- [#76 Port the Feed check store from web #157](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/76) — opened 2026-10-04 · draft · checks failing
-- [#75 Bump nostr-tools to 2.25.2 and support Clave as a NIP-46 signer](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/75) — opened 2026-10-04 · draft · checks failing
-
-### Issues (1)
-
-- [#66 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/66) — opened 2026-09-05
-
-### Branches with no open PR (5)
-
+- [`claude-md-sync-lessons`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude-md-sync-lessons)
 - [`claude/release-on-tags-only`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/release-on-tags-only)
 - [`claude/restore-release-on-master-push`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/restore-release-on-master-push)
 - [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs)
