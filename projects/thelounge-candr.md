@@ -22,5 +22,7 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-_No open work._
+### Branches with no open PR (1)
+
+- [`feat/public-own-ipv6`](https://github.com/ChadFarrow/thelounge-candr/tree/feat/public-own-ipv6)
 <!-- AUTO:END -->
