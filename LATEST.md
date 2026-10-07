@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-07 18:02 UTC
+# Dashboard — 2026-10-07 23:54 UTC
 
 16 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 352 days · no checks
+- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 353 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 310 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 18 days · checks passing
 - **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 8 days · checks passing
@@ -35,7 +35,7 @@
 
 **[Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)**
 
-- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 31 days ago
+- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 32 days ago
 
 **[libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)**
 
@@ -147,8 +147,8 @@
 
 4 PRs · 2 issues · 1 branch with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 4 days ago · merge conflict · by InTheMorning
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 5 days ago · by InTheMorning
+- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 5 days ago · merge conflict · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 6 days ago · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 3 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
 - Branch [`FAFO`](https://github.com/ChadFarrow/MSP-2.0/tree/FAFO) — no PR
@@ -157,7 +157,7 @@
 
 1 PR · 1 branch with no PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 2 days ago
+- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 3 days ago
 - Branch [`claude/homegrown-hits-live-tab-6cyuw1`](https://github.com/ChadFarrow/msp-podping-service/tree/claude/homegrown-hits-live-tab-6cyuw1) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
