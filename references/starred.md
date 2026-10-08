@@ -18,7 +18,7 @@
 
 ## Lightning
 - [Lightning.Pub](https://github.com/shocknet/Lightning.Pub) - The Nostr Native Lightning node, share your node with nostr accounts and connect easily to webapps.
-- [spark-sdk](https://github.com/breez/spark-sdk) - No description
+- [spark-sdk](https://github.com/breez/spark-sdk) - An SDK for integrating instant bitcoin and stablecoins into apps and services.
 - [v4v-lightning-payment-tester](https://github.com/ericpp/v4v-lightning-payment-tester) - No description
 - [lnurl-playground](https://github.com/fiatjaf/lnurl-playground) - a place to test lnurl wallets
 - [lnurlp](https://github.com/lnbits/lnurlp) - LNbits Pay Links with lnurlp extension
@@ -107,4 +107,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-08 03:17 UTC*
+*Last synced: 2026-10-08 10:59 UTC*
