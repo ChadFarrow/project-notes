@@ -26,8 +26,8 @@ Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata
 ### Pull requests (3)
 
 - [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 2026-09-29
-- [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 2026-09-23
-- [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2026-09-12 · draft
+- [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 2026-09-23 · merge conflict
+- [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2026-09-12 · draft · merge conflict
 
 ### Branches with no open PR (2)
 
