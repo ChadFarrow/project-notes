@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-13 15:21 UTC
+# Dashboard — 2026-10-13 20:52 UTC
 
 19 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -11,8 +11,8 @@
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 358 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 316 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 24 days · checks passing
-- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 13 days · checks passing
-- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 9 days · checks passing
+- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 14 days · checks passing
+- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 10 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 8 days · no checks
 
 ### Open issues (15)
@@ -25,7 +25,7 @@
 
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 12 days ago · by ReedBTC · 3 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 11 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 39 days ago · 1 comment
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 40 days ago · 1 comment
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
@@ -61,7 +61,7 @@
 
 3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
 
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 13 days ago
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 14 days ago
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 20 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 31 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
@@ -106,7 +106,7 @@
 
 4 PRs · 3 issues · 2 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#493 Add a GIPHY picker to both boost modals](https://github.com/ChadFarrow/boostmebitch/pull/493) — opened 14 hours ago
+- PR [#493 Add a GIPHY picker to both boost modals](https://github.com/ChadFarrow/boostmebitch/pull/493) — opened 19 hours ago
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 17 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 18 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2 months ago · draft · merge conflict
