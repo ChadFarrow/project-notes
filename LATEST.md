@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-15 15:52 UTC
+# Dashboard — 2026-10-15 19:31 UTC
 
 19 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -11,7 +11,7 @@
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 360 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 318 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 26 days · checks passing
-- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 15 days · checks passing
+- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 16 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 11 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 10 days · no checks
 
@@ -25,7 +25,7 @@
 
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 14 days ago · by ReedBTC · 3 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 13 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 41 days ago · 1 comment
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 42 days ago · 1 comment
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
