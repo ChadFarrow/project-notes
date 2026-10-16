@@ -44,6 +44,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [lnzap](https://github.com/ericpp/lnzap) - No description
 - [icloud-for-linux](https://github.com/cross-platform/icloud-for-linux) - Access all of your favourite iCloud apps from Linux
 - [Libre-Soundboard](https://github.com/Kolomona/Libre-Soundboard) - LibreSoundboard is a native Linux desktop JACK enabled soundboard application.
 - [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Open-source Nostr commerce clients for signed listings, private orders, and direct Lightning payments.
@@ -107,4 +108,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-16 15:40 UTC*
+*Last synced: 2026-10-16 19:06 UTC*
