@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-16 19:06 UTC
+# Dashboard — 2026-10-16 22:17 UTC
 
 18 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -6,15 +6,14 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (7)
+### Ready to merge — idle 7+ days (6)
 
-- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 361 days · no checks
+- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 362 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 319 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 27 days · checks passing
 - **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 17 days · checks passing
-- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 12 days · checks passing
+- **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 13 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 11 days · no checks
-- **MSP-2.0** [#161 Restore podcast:alternateEnclosure feature](https://github.com/ChadFarrow/MSP-2.0/pull/161) — idle 7 days · checks passing
 
 ### Open issues (15)
 
@@ -48,7 +47,7 @@
 **[MSP-2.0](projects/MSP-2.0.md)**
 
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 8 months ago
-- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 8 months ago · by Kolomona
+- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
 **[RSS-music-site-template](projects/RSS-music-site-template.md)**
 
@@ -140,10 +139,10 @@
 
 6 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
+- PR [#161 Add alternate versions (podcast:alternateEnclosure) to album tracks](https://github.com/ChadFarrow/MSP-2.0/pull/161) — opened 7 days ago
 - PR [#162 Add recommended tracks and albums via proposed \<podcast:pinned\> tag](https://github.com/ChadFarrow/MSP-2.0/pull/162) — opened 6 days ago
-- PR [#161 Restore podcast:alternateEnclosure feature](https://github.com/ChadFarrow/MSP-2.0/pull/161) — opened 7 days ago
-- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 13 days ago · merge conflict · by InTheMorning
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 14 days ago · by InTheMorning
+- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 14 days ago · merge conflict · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 15 days ago · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
 
