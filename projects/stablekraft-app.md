@@ -27,7 +27,7 @@ Stablekraft application
 ### Pull requests (2)
 
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19
-- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08 · merge conflict
+- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
 
 ### Issues (1)
 
