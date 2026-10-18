@@ -43,4 +43,8 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 2026-01-27
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 2026-01-19 · by Kolomona
+
+### Opened elsewhere for this project (1)
+
+- [MSP-2.0-Desktop-App #81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — PR · opened 2026-10-18
 <!-- AUTO:END -->
