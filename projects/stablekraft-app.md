@@ -31,7 +31,7 @@ Stablekraft application
 
 ### Issues (1)
 
-- [#272 Follow-up: confirm the egress drop, and the database-read leads left alone](https://github.com/ChadFarrow/stablekraft-app/issues/272) — opened 2026-09-20
+- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 2026-10-18
 
 ### Branches with no open PR (2)
 
