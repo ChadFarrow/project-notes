@@ -24,7 +24,8 @@ Coming soon page for the Chad and Reeds Podcast, served via GitHub Pages at [can
 
 - **Repo:** [ChadFarrow/candr.space](https://github.com/ChadFarrow/candr.space) · JavaScript · private
 
-### Branches with no open PR (1)
+### Branches with no open PR (2)
 
 - [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool)
+- [`claude/helipad-boostagrams`](https://github.com/ChadFarrow/candr.space/tree/claude/helipad-boostagrams)
 <!-- AUTO:END -->
