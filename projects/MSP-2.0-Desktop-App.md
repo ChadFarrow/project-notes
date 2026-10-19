@@ -32,7 +32,7 @@ Desktop application for MSP-2.0
 ### Pull requests (2)
 
 - [#82 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/82) — opened 2026-10-18 · checks failing
-- [#81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — opened 2026-10-18 · draft · for [MSP-2.0](MSP-2.0.md)
+- [#81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — opened 2026-10-18 · draft · merge conflict · for [MSP-2.0](MSP-2.0.md)
 
 ### Branches with no open PR (6)
 
