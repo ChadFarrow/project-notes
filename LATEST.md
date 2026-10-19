@@ -1,6 +1,6 @@
-# Dashboard — 2026-10-18 21:59 UTC
+# Dashboard — 2026-10-19 02:07 UTC
 
-21 open PRs · 15 open issues · 33 branches with no PR · 36 tracked repos (15 not tracked)
+20 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -9,12 +9,12 @@
 ### Ready to merge — idle 7+ days (7)
 
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 364 days · no checks
-- **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 321 days · no checks
+- **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 322 days · no checks
 - **stablekraft-app** [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — idle 40 days · checks passing
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 29 days · checks passing
 - **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 19 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 15 days · checks passing
-- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 13 days · no checks
+- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 14 days · no checks
 
 ### Open issues (15)
 
@@ -24,12 +24,12 @@
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 4 minutes ago
+- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 4 hours ago
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 17 days ago · by ReedBTC · 3 comments
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 16 days ago
+- [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 18 days ago · by ReedBTC · 3 comments
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 17 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 45 days ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
@@ -38,7 +38,7 @@
 
 **[Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)**
 
-- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 42 days ago
+- [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 43 days ago
 
 **[libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)**
 
@@ -63,7 +63,7 @@
 3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md), [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md)
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 19 days ago
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 25 days ago · merge conflict
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 26 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 36 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
@@ -117,7 +117,7 @@
 3 PRs · 3 issues · 2 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 22 days ago · draft
-- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 23 days ago
+- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 24 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
 - Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
@@ -138,11 +138,11 @@
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-3 PRs · 5 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (6 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
+2 PRs · 6 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (6 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
-- PR [#83 Port the local-time track Pub Date field from web #163](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/83) — opened 1 minute ago · checks pending
-- PR [#82 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/82) — opened 5 hours ago · checks failing
-- PR [#81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — opened 21 hours ago · draft · for [MSP-2.0](projects/MSP-2.0.md)
+- PR [#82 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/82) — opened 9 hours ago · checks failing
+- PR [#81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — opened 1 day ago · draft · for [MSP-2.0](projects/MSP-2.0.md)
+- Branch [`port-pubdate-field`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-pubdate-field) — no PR
 - Branch [`claude-md-sync-lessons`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude-md-sync-lessons) — no PR
 - Branch [`claude/restore-release-on-master-push`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/restore-release-on-master-push) — no PR
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
@@ -154,18 +154,18 @@
 6 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 17 days ago · by InTheMorning
-- PR [#161 Add alternate versions (podcast:alternateEnclosure) to album tracks](https://github.com/ChadFarrow/MSP-2.0/pull/161) — opened 9 days ago
+- PR [#161 Add alternate versions (podcast:alternateEnclosure) to album tracks](https://github.com/ChadFarrow/MSP-2.0/pull/161) — opened 9 days ago · merge conflict
 - PR [#162 Add recommended tracks and albums via proposed \<podcast:pinned\> tag](https://github.com/ChadFarrow/MSP-2.0/pull/162) — opened 8 days ago
-- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 16 days ago · by InTheMorning
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft
-- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft
-- Opened elsewhere: [MSP-2.0-Desktop-App #81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — PR · opened 21 hours ago
+- PR [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 16 days ago · merge conflict · by InTheMorning
+- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
+- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
+- Opened elsewhere: [MSP-2.0-Desktop-App #81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — PR · opened 1 day ago
 
 #### [msp-podping-service](projects/msp-podping-service.md)
 
 1 PR · 1 branch with no PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 13 days ago
+- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 14 days ago
 - Branch [`claude/homegrown-hits-live-tab-6cyuw1`](https://github.com/ChadFarrow/msp-podping-service/tree/claude/homegrown-hits-live-tab-6cyuw1) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
