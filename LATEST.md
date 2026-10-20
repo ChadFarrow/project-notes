@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-20 15:56 UTC
+# Dashboard — 2026-10-20 19:45 UTC
 
 20 open PRs · 15 open issues · 34 branches with no PR · 36 tracked repos (15 not tracked)
 
@@ -11,7 +11,7 @@
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 365 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 323 days · no checks
 - **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 31 days · checks passing
-- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 20 days · checks passing
+- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 21 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 16 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 15 days · no checks
 
@@ -29,7 +29,7 @@
 
 - [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 19 days ago · by ReedBTC · 3 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 18 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 46 days ago · 1 comment
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 47 days ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -139,7 +139,7 @@
 
 2 PRs · 6 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (6 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
-- PR [#82 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/82) — opened 1 day ago · checks failing
+- PR [#82 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/82) — opened 2 days ago · checks failing
 - PR [#81 Port alternate versions and music videos from web #161](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/81) — opened 2 days ago · draft · merge conflict · for [MSP-2.0](projects/MSP-2.0.md)
 - Branch [`port-pubdate-field`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-pubdate-field) — no PR
 - Branch [`claude-md-sync-lessons`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude-md-sync-lessons) — no PR
@@ -247,3 +247,4 @@
 - [v4v-core-rs](projects/v4v-core-rs.md) — last push 2026-04-07
 - [TRM-Lightning](projects/TRM-Lightning.md) — last push 2026-04-09
 - [podcast-namespace](projects/podcast-namespace.md) — last push 2026-04-11 · fork
+- [RSS-music-site-template](projects/RSS-music-site-template.md) — last push 2026-04-23
