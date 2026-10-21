@@ -24,6 +24,10 @@ Coming soon page for the Chad and Reeds Podcast, served via GitHub Pages at [can
 
 - **Repo:** [ChadFarrow/candr.space](https://github.com/ChadFarrow/candr.space) · JavaScript · private
 
+### Pull requests (1)
+
+- [#49 /boosts: review fixes, and stay signed in across a reload](https://github.com/ChadFarrow/candr.space/pull/49) — opened 2026-10-21
+
 ### Branches with no open PR (1)
 
 - [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool)
