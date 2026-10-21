@@ -44,6 +44,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [icm-architect](https://github.com/RinDig/icm-architect) - Claude skill: design any process, idea, or problem into an ICM workspace (folder structure as agent architecture), or restructure an existing folder into one
 - [chat.bts.com](https://github.com/cottongin/chat.bts.com) - Customized thelounge instance for the Behind the Sch3m3s podcast chat room
 - [lnzap](https://github.com/ericpp/lnzap) - No description
 - [icloud-for-linux](https://github.com/cross-platform/icloud-for-linux) - Access all of your favourite iCloud apps from Linux
@@ -109,4 +110,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-20 22:45 UTC*
+*Last synced: 2026-10-21 02:16 UTC*
