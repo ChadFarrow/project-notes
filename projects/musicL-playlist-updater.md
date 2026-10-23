@@ -27,5 +27,7 @@ Playlist updater tool
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
 - **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
 
-_No open work._
+### Pull requests (1)
+
+- [#4 Small Group Shows: drop the source-feed tag, republish on any XML change](https://github.com/ChadFarrow/musicL-playlist-updater/pull/4) — opened 2026-10-23
 <!-- AUTO:END -->
