@@ -27,19 +27,21 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0](https://github.com/ChadFarrow/MSP-2.0) · TypeScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR, 1 issue)
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 
-### Pull requests (5)
+### Pull requests (6)
 
+- [#165 Document the reconcile route for a stuck Desktop sync](https://github.com/ChadFarrow/MSP-2.0/pull/165) — opened 2026-10-23
 - [#162 Add recommended tracks and albums via proposed \<podcast:pinned\> tag](https://github.com/ChadFarrow/MSP-2.0/pull/162) — opened 2026-10-10
-- [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 2026-10-02 · by InTheMorning
-- [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · by InTheMorning
-- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft
-- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft
+- [#151 Keep and edit every publisher of an album (podcast-namespace PR #793)](https://github.com/ChadFarrow/MSP-2.0/pull/151) — opened 2026-10-02 · merge conflict · by InTheMorning
+- [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · merge conflict · by InTheMorning
+- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
+- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
 
-### Issues (2)
+### Issues (3)
 
+- [#166 Security: redeploy API functions for Node.js October 2026 security fixes](https://github.com/ChadFarrow/MSP-2.0/issues/166) — opened 2026-10-23
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 2026-01-27
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 2026-01-19 · by Kolomona
 <!-- AUTO:END -->

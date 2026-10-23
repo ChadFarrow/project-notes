@@ -24,8 +24,9 @@ Template project for RSS music sites
 
 - **Repo:** [ChadFarrow/RSS-music-site-template](https://github.com/ChadFarrow/RSS-music-site-template) · TypeScript
 
-### Issues (2)
+### Issues (3)
 
+- [#4 Security: pin a fixed Node.js version and update CI from Node 18 (October 2026 security fixes)](https://github.com/ChadFarrow/RSS-music-site-template/issues/4) — opened 2026-10-23
 - [#3 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/RSS-music-site-template/issues/3) — opened 2026-09-05
 - [#1 Feed deletion](https://github.com/ChadFarrow/RSS-music-site-template/issues/1) — opened 2025-12-01
 

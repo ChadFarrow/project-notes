@@ -25,9 +25,14 @@ Playlist updater tool
 ## Live status
 
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR, 1 issue), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
 
-### Pull requests (1)
+### Issues (1)
 
-- [#4 Small Group Shows: drop the source-feed tag, republish on any XML change](https://github.com/ChadFarrow/musicL-playlist-updater/pull/4) — opened 2026-10-23
+- [#6 Security: daily-feed-update workflow runs on Node 18 (end-of-life)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/6) — opened 2026-10-23
+
+### Branches with no open PR (2)
+
+- [`feat/smallgroup-playlist-art`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/smallgroup-playlist-art)
+- [`fix/smallgroup-source-feed-and-rewrite`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/smallgroup-source-feed-and-rewrite)
 <!-- AUTO:END -->

@@ -30,6 +30,10 @@ Podping notification service for MSP-2.0 — notifies subscribers when podcast/m
 
 - [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 2026-10-04
 
+### Issues (1)
+
+- [#5 Security: move viewer and consumer off Node 20 (end-of-life) for Node.js October 2026 security fixes](https://github.com/ChadFarrow/msp-podping-service/issues/5) — opened 2026-10-23
+
 ### Branches with no open PR (1)
 
 - [`claude/homegrown-hits-live-tab-6cyuw1`](https://github.com/ChadFarrow/msp-podping-service/tree/claude/homegrown-hits-live-tab-6cyuw1)

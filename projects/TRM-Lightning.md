@@ -27,7 +27,8 @@ Lightning implementation for TRM
 - **Repo:** [ChadFarrow/TRM-Lightning](https://github.com/ChadFarrow/TRM-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Issues (1)
+### Issues (2)
 
+- [#5 Security: pin a fixed Node.js version and update CI from Node 18 (October 2026 security fixes)](https://github.com/ChadFarrow/TRM-Lightning/issues/5) — opened 2026-10-23
 - [#4 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/TRM-Lightning/issues/4) — opened 2026-09-05
 <!-- AUTO:END -->

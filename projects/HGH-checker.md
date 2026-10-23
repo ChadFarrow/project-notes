@@ -21,5 +21,7 @@ HGH checker utility
 
 - **Repo:** [ChadFarrow/HGH-checker](https://github.com/ChadFarrow/HGH-checker) · JavaScript
 
-_No open work._
+### Issues (1)
+
+- [#1 Security: pin a fixed Node.js version for proxy-server (October 2026 security fixes)](https://github.com/ChadFarrow/HGH-checker/issues/1) — opened 2026-10-23
 <!-- AUTO:END -->

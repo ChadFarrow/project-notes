@@ -23,6 +23,10 @@ A public reference for Podcasting 2.0 — the namespace, the payments, and the p
 - **Repo:** [ChadFarrow/pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) · JavaScript
 - **Uses:** [pc20-archive](pc20-archive.md) (no open work)
 
+### Issues (1)
+
+- [#4 Security: raise minimum Node.js version (October 2026 security fixes)](https://github.com/ChadFarrow/pc20-wiki/issues/4) — opened 2026-10-23
+
 ### Branches with no open PR (1)
 
 - [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds)

@@ -25,6 +25,10 @@ Creates playlist from RSS feeds containing value-for-value music
 
 - **Repo:** [ChadFarrow/Auto-musicL-Maker](https://github.com/ChadFarrow/Auto-musicL-Maker) · JavaScript
 
+### Issues (1)
+
+- [#12 Security: pin a fixed Node.js version (October 2026 security fixes)](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/12) — opened 2026-10-23
+
 ### Branches with no open PR (1)
 
 - [`claude/localbitcoiners-podcast-playlist-069mwk`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/claude/localbitcoiners-podcast-playlist-069mwk)
