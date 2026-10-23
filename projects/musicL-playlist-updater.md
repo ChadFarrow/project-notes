@@ -31,8 +31,14 @@ Playlist updater tool
 
 - [#6 Security: daily-feed-update workflow runs on Node 18 (end-of-life)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/6) — opened 2026-10-23
 
-### Branches with no open PR (2)
+### Branches with no open PR (8)
 
+- [`docs/claude-md-refresh`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/docs/claude-md-refresh)
+- [`feat/pi-pubnotify`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/pi-pubnotify)
+- [`feat/podping-via-pusher`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/podping-via-pusher)
 - [`feat/smallgroup-playlist-art`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/smallgroup-playlist-art)
+- [`fix/lbc-no-source-feed`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/lbc-no-source-feed)
+- [`fix/lbc-skip-unchanged`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/lbc-skip-unchanged)
 - [`fix/smallgroup-source-feed-and-rewrite`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/smallgroup-source-feed-and-rewrite)
+- [`fix/stable-playlist-guid`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/stable-playlist-guid)
 <!-- AUTO:END -->
