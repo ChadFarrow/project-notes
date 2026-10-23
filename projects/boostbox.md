@@ -21,7 +21,7 @@ Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata
 ## Live status
 
 - **Repo:** [ChadFarrow/boostbox](https://github.com/ChadFarrow/boostbox) · Clojure · fork of noblepayne/boostbox
-- **Used by:** [boostmebitch](boostmebitch.md), [stablekraft-app](stablekraft-app.md), [StableKraft-Nostr-Fix](StableKraft-Nostr-Fix.md)
+- **Used by:** [boostmebitch](boostmebitch.md), [stablekraft-app](stablekraft-app.md)
 
 ### Pull requests (3)
 

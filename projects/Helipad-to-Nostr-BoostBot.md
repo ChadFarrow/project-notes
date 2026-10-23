@@ -28,8 +28,9 @@ Sends Helipad information to Nostr using webhooks
 
 - [#16 Bump nostr-tools to ≥2.25.2 — socket leak on failed relay connects](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/issues/16) — opened 2026-09-05
 
-### Branches with no open PR (2)
+### Branches with no open PR (3)
 
 - [`fix-env-example-relay`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/fix-env-example-relay)
 - [`nip73-podcast-guids`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/nip73-podcast-guids)
+- [`security/node-oct-2026`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/security/node-oct-2026)
 <!-- AUTO:END -->

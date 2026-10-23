@@ -27,7 +27,6 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [NMNU](projects/NMNU.md) - No description (`TypeScript`) · not tracked
 - [so-big-lightning-payment](projects/so-big-lightning-payment.md) - Lightning payment page for So Big album - $1.25 invoice QR with LNURL-pay (`CSS`) · not tracked
 - [stablekraft-app](projects/stablekraft-app.md) - No description (`TypeScript`)
-- [StableKraft-Nostr-Fix](projects/StableKraft-Nostr-Fix.md) - No description (`TypeScript`) · not tracked
 - [TRM-Lightning](projects/TRM-Lightning.md) - No description (`TypeScript`)
 
 ## Music publishing

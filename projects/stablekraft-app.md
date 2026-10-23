@@ -21,17 +21,16 @@ Stablekraft application
 ## Live status
 
 - **Repo:** [ChadFarrow/stablekraft-app](https://github.com/ChadFarrow/stablekraft-app) · TypeScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR, 1 issue), [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
 ### Pull requests (2)
 
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19
-- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08 · merge conflict
+- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
 
-### Issues (2)
+### Issues (1)
 
-- [#288 Security: redeploy for Node.js October 2026 security fixes (22.23.4)](https://github.com/ChadFarrow/stablekraft-app/issues/288) — opened 2026-10-23
 - [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 2026-10-18
 
 ### Branches with no open PR (2)

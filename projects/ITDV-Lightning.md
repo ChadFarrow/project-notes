@@ -27,8 +27,7 @@ Lightning implementation for ITDV
 - **Repo:** [ChadFarrow/ITDV-Lightning](https://github.com/ChadFarrow/ITDV-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Issues (2)
+### Issues (1)
 
-- [#10 Security: pin a fixed Node.js version and update CI from Node 18 (October 2026 security fixes)](https://github.com/ChadFarrow/ITDV-Lightning/issues/10) — opened 2026-10-23
 - [#9 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/ITDV-Lightning/issues/9) — opened 2026-09-05
 <!-- AUTO:END -->

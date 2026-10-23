@@ -25,11 +25,7 @@ Playlist updater tool
 ## Live status
 
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR, 1 issue), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
-
-### Issues (1)
-
-- [#6 Security: daily-feed-update workflow runs on Node 18 (end-of-life)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/6) — opened 2026-10-23
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
 
 ### Branches with no open PR (8)
 

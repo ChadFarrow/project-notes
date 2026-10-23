@@ -21,7 +21,5 @@ Personal landing page
 
 - **Repo:** [ChadFarrow/chadf-landing-page](https://github.com/ChadFarrow/chadf-landing-page) · TypeScript
 
-### Issues (1)
-
-- [#6 Security: pin a fixed Node.js version (October 2026 security fixes)](https://github.com/ChadFarrow/chadf-landing-page/issues/6) — opened 2026-10-23
+_No open work._
 <!-- AUTO:END -->
