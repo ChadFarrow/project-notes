@@ -27,8 +27,9 @@ Playlist updater tool
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
 - **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
 
-### Branches with no open PR (8)
+### Branches with no open PR (9)
 
+- [`add-new-smallgroup-shows`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/add-new-smallgroup-shows)
 - [`docs/claude-md-refresh`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/docs/claude-md-refresh)
 - [`feat/pi-pubnotify`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/pi-pubnotify)
 - [`feat/podping-via-pusher`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/podping-via-pusher)
