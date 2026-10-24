@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-24 02:15 UTC
+# Dashboard — 2026-10-24 08:28 UTC
 
 22 open PRs · 12 open issues · 45 branches with no PR · 36 tracked repos (14 not tracked)
 
@@ -10,7 +10,7 @@
 
 - **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 369 days · no checks
 - **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 327 days · no checks
-- **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 34 days · checks passing
+- **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 35 days · checks passing
 - **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 24 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 20 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 19 days · no checks
@@ -67,7 +67,7 @@
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 24 days ago
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 31 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 41 days ago · draft · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 42 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
@@ -103,8 +103,8 @@
 
 5 PRs · 3 issues · 2 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#502 Alternative logo: a face bolt inside the inked stamp](https://github.com/ChadFarrow/boostmebitch/pull/502) — opened 2 hours ago · draft
-- PR [#501 New per-brand logo: the inked stamp bolt](https://github.com/ChadFarrow/boostmebitch/pull/501) — opened 2 hours ago · draft
+- PR [#502 Alternative logo: a face bolt inside the inked stamp](https://github.com/ChadFarrow/boostmebitch/pull/502) — opened 8 hours ago · draft
+- PR [#501 New per-brand logo: the inked stamp bolt](https://github.com/ChadFarrow/boostmebitch/pull/501) — opened 8 hours ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 27 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 29 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
@@ -119,7 +119,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 34 days ago
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 35 days ago
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 45 days ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -146,7 +146,7 @@
 
 1 PR · 8 branches with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
-- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 8 hours ago
+- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 15 hours ago
 - Branch [`sync-upstream`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/sync-upstream) — no PR
 - Branch [`port-pubdate-field`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-pubdate-field) — no PR
 - Branch [`port-alternate-versions`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-alternate-versions) — no PR
