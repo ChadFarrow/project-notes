@@ -27,7 +27,5 @@ Lightning implementation for TRM
 - **Repo:** [ChadFarrow/TRM-Lightning](https://github.com/ChadFarrow/TRM-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Issues (1)
-
-- [#4 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/TRM-Lightning/issues/4) — opened 2026-09-05
+_No open work._
 <!-- AUTO:END -->

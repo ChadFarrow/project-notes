@@ -28,7 +28,5 @@ Lightning address for music
 - **Repo:** [ChadFarrow/lnaddress-music](https://github.com/ChadFarrow/lnaddress-music) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Issues (1)
-
-- [#14 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/lnaddress-music/issues/14) — opened 2026-09-05
+_No open work._
 <!-- AUTO:END -->
