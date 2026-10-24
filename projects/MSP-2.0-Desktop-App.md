@@ -27,20 +27,13 @@ Desktop application for MSP-2.0
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0-Desktop-App](https://github.com/ChadFarrow/MSP-2.0-Desktop-App) · TypeScript
-- **Uses:** [MSP-2.0](MSP-2.0.md) (5 PRs, 2 issues), [msp-podping-service](msp-podping-service.md) (1 PR)
+- **Uses:** [MSP-2.0](MSP-2.0.md) (4 PRs, 2 issues), [msp-podping-service](msp-podping-service.md) (1 PR)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#89 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/89) — opened 2026-10-24 · checks failing
 - [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 2026-10-23
 
-### Branches with no open PR (7)
+### Branches with no open PR (1)
 
-- [`claude-md-sync-lessons`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude-md-sync-lessons)
-- [`claude/release-on-tags-only`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/release-on-tags-only)
-- [`claude/restore-release-on-master-push`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/restore-release-on-master-push)
 - [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs)
-- [`claude/trim-playwright-artifact-retention`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/trim-playwright-artifact-retention)
-- [`port-alternate-versions`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-alternate-versions)
-- [`port-pubdate-field`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/port-pubdate-field)
 <!-- AUTO:END -->
