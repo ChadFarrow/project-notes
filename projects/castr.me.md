@@ -26,8 +26,5 @@ Effortlessly turn your npub into a podcast feed
 
 - **Repo:** [ChadFarrow/castr.me](https://github.com/ChadFarrow/castr.me) · TypeScript · fork of dergigi/castr.me
 
-### Pull requests (2)
-
-- [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — opened 2025-10-10
-- [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — opened 2025-10-10
+_No open work._
 <!-- AUTO:END -->

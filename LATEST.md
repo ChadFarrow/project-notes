@@ -1,19 +1,16 @@
-# Dashboard — 2026-10-25 22:08 UTC
+# Dashboard — 2026-10-25 22:56 UTC
 
-16 open PRs · 12 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
+15 open PRs · 12 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (6)
+### Ready to merge — idle 7+ days (3)
 
-- **castr.me** [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — idle 371 days · no checks
-- **castr.me** [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — idle 328 days · no checks
-- **stablekraft-app** [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — idle 36 days · checks passing
 - **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 26 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 22 days · checks passing
-- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 20 days · no checks
+- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 21 days · no checks
 
 ### Open issues (12)
 
@@ -100,6 +97,15 @@
 
 ### Music apps & sites
 
+#### [stablekraft-app](projects/stablekraft-app.md)
+
+2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 36 days ago · draft
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 47 days ago · merge conflict
+- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
+- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
+
 #### [boostmebitch](projects/boostmebitch.md)
 
 3 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
@@ -110,15 +116,6 @@
 - Branch [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
 - Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
-
-#### [stablekraft-app](projects/stablekraft-app.md)
-
-2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
-
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 36 days ago
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 47 days ago · merge conflict
-- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
-- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
 #### [ITDV-Lightning](projects/ITDV-Lightning.md)
 
@@ -151,7 +148,7 @@
 
 1 PR · 1 branch with no PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 20 days ago
+- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 21 days ago
 - Branch [`claude/homegrown-hits-live-tab-6cyuw1`](https://github.com/ChadFarrow/msp-podping-service/tree/claude/homegrown-hits-live-tab-6cyuw1) — no PR
 
 ### musicL playlists
@@ -193,13 +190,6 @@
 - Branch [`fix/custom-emoji-reactions`](https://github.com/ChadFarrow/sidecar/tree/fix/custom-emoji-reactions) — no PR
 - Branch [`local/demo-funds`](https://github.com/ChadFarrow/sidecar/tree/local/demo-funds) — no PR
 
-#### [castr.me](projects/castr.me.md)
-
-2 PRs
-
-- PR [#1 Add episode image support and Podcasting 2.0 value tag](https://github.com/ChadFarrow/castr.me/pull/1) — opened 12 months ago
-- PR [#2 Add Podcasting 2.0 value tag with Lightning address support](https://github.com/ChadFarrow/castr.me/pull/2) — opened 12 months ago
-
 ### Podcasting 2.0 reference
 
 #### [pc20-wiki](projects/pc20-wiki.md)
@@ -212,8 +202,9 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 branch with no PR
+1 PR · 1 branch with no PR
 
+- PR [#48 Our own Lounge build: pipeline + 7-day scrollback](https://github.com/ChadFarrow/thelounge-candr/pull/48) — opened 7 minutes ago · checks pending
 - Branch [`feat/public-own-ipv6`](https://github.com/ChadFarrow/thelounge-candr/tree/feat/public-own-ipv6) — no PR
 
 ### Websites
@@ -232,7 +223,7 @@
 
 ### Quiet — no open work
 
-[chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
