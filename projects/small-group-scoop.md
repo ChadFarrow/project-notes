@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
 
-### Branches with no open PR (1)
-
-- [`add-shows`](https://github.com/ChadFarrow/small-group-scoop/tree/add-shows)
+_No open work._
 <!-- AUTO:END -->
