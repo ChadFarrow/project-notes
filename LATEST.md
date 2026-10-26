@@ -1,18 +1,17 @@
-# Dashboard — 2026-10-25 22:56 UTC
+# Dashboard — 2026-10-26 02:02 UTC
 
-15 open PRs · 12 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
+14 open PRs · 11 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (3)
+### Ready to merge — idle 7+ days (2)
 
-- **boostbox** [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — idle 26 days · checks passing
 - **boostmebitch** [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — idle 22 days · checks passing
 - **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 21 days · no checks
 
-### Open issues (12)
+### Open issues (11)
 
 **Same title in several repos**
 
@@ -24,8 +23,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#460 Feedback from using BMB as my primary player app](https://github.com/ChadFarrow/boostmebitch/issues/460) — opened 24 days ago · by ReedBTC · 3 comments
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 23 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 24 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 52 days ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
@@ -50,6 +48,16 @@
 
 ### Boosts
 
+#### [boostbox](projects/boostbox.md)
+
+3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
+
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 26 days ago · draft
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 33 days ago · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 43 days ago · draft · merge conflict
+- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
+- Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
+
 #### [helipad](projects/helipad.md)
 
 6 branches with no PR
@@ -68,16 +76,6 @@
 - Branch [`security/node-oct-2026`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/security/node-oct-2026) — no PR
 - Branch [`fix-env-example-relay`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/fix-env-example-relay) — no PR
 - Branch [`nip73-podcast-guids`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/nip73-podcast-guids) — no PR
-
-#### [boostbox](projects/boostbox.md)
-
-3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
-
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 26 days ago
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 32 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 43 days ago · draft · merge conflict
-- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
-- Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
 #### [helipad-startos](projects/helipad-startos.md)
 
@@ -108,10 +106,10 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-3 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+3 PRs · 2 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 29 days ago · draft
-- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 30 days ago
+- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 31 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - Branch [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
@@ -202,9 +200,8 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 PR · 1 branch with no PR
+1 branch with no PR
 
-- PR [#48 Our own Lounge build: pipeline + 7-day scrollback](https://github.com/ChadFarrow/thelounge-candr/pull/48) — opened 7 minutes ago · checks pending
 - Branch [`feat/public-own-ipv6`](https://github.com/ChadFarrow/thelounge-candr/tree/feat/public-own-ipv6) — no PR
 
 ### Websites
