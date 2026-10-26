@@ -1,6 +1,6 @@
-# Dashboard — 2026-10-26 02:02 UTC
+# Dashboard — 2026-10-26 02:05 UTC
 
-14 open PRs · 11 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
+14 open PRs · 11 open issues · 40 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -196,14 +196,6 @@
 
 - Branch [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds) — no PR
 
-### Tools & self-hosting
-
-#### [thelounge-candr](projects/thelounge-candr.md)
-
-1 branch with no PR
-
-- Branch [`feat/public-own-ipv6`](https://github.com/ChadFarrow/thelounge-candr/tree/feat/public-own-ipv6) — no PR
-
 ### Websites
 
 #### [candr.space](projects/candr.space.md)
@@ -220,7 +212,7 @@
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
