@@ -44,6 +44,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [musicindex-studio](https://github.com/InTheMorning/musicindex-studio) - No description
 - [small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) - No description
 - [podsovereign](https://github.com/rgblack316/podsovereign) - PodSovereign is a self-hosting podcasting platform.
 - [icm-architect](https://github.com/RinDig/icm-architect) - Agent skill: design any process, idea, or problem into an ICM workspace (folder structure as agent architecture), or restructure an existing folder into one
@@ -112,4 +113,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-27 02:40 UTC*
+*Last synced: 2026-10-27 09:24 UTC*
