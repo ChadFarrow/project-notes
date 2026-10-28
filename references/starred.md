@@ -46,7 +46,7 @@
 ## Other
 - [musicindex-studio](https://github.com/InTheMorning/musicindex-studio) - No description
 - [small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) - No description
-- [podsovereign](https://github.com/rgblack316/podsovereign) - PodSovereign is a self-hosting podcasting platform.
+- [PodSovereign](https://github.com/rgblack316/PodSovereign) - PodSovereign is a self-hosting podcasting platform.
 - [icm-architect](https://github.com/RinDig/icm-architect) - Agent skill: design any process, idea, or problem into an ICM workspace (folder structure as agent architecture), or restructure an existing folder into one
 - [chat.bts.com](https://github.com/cottongin/chat.bts.com) - Customized thelounge instance for the Behind the Sch3m3s podcast chat room
 - [lnzap](https://github.com/ericpp/lnzap) - No description
@@ -113,4 +113,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-10-28 10:06 UTC*
+*Last synced: 2026-10-28 17:31 UTC*
