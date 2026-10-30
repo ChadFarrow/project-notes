@@ -23,7 +23,5 @@ Podcasting 2.0 back-catalog RSS feed for episodes 1-100
 - **Repo:** [ChadFarrow/pc20-archive](https://github.com/ChadFarrow/pc20-archive) · TypeScript
 - **Used by:** [pc20-wiki](pc20-wiki.md)
 
-### Pull requests (1)
-
-- [#3 sync-nas: mount the share when it is not mounted](https://github.com/ChadFarrow/pc20-archive/pull/3) — opened 2026-10-30
+_No open work._
 <!-- AUTO:END -->

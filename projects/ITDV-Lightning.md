@@ -27,6 +27,10 @@ Lightning implementation for ITDV
 - **Repo:** [ChadFarrow/ITDV-Lightning](https://github.com/ChadFarrow/ITDV-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
+### Pull requests (1)
+
+- [#13 Bump @getalby/bitcoin-connect to ^3.12.3 so no nostr-tools copy is below 2.25.2](https://github.com/ChadFarrow/ITDV-Lightning/pull/13) — opened 2026-10-30
+
 ### Issues (1)
 
 - [#9 Bump nostr-tools to ≥2.25.2 — leaked WebSockets on failed relay connects](https://github.com/ChadFarrow/ITDV-Lightning/issues/9) — opened 2026-09-05
