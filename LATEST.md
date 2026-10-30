@@ -1,6 +1,6 @@
-# Dashboard — 2026-10-29 23:41 UTC
+# Dashboard — 2026-10-30 03:14 UTC
 
-15 open PRs · 11 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
+16 open PRs · 11 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -23,7 +23,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 27 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 28 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 56 days ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
@@ -53,7 +53,7 @@
 3 PRs · 2 branches with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 30 days ago · draft
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 36 days ago · merge conflict
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 37 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 47 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
@@ -109,7 +109,7 @@
 3 PRs · 2 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 33 days ago · draft
-- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 34 days ago
+- PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 35 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - Branch [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
@@ -190,9 +190,15 @@
 
 ### Podcasting 2.0 reference
 
+#### [pc20-archive](projects/pc20-archive.md)
+
+1 PR · used by [pc20-wiki](projects/pc20-wiki.md)
+
+- PR [#3 sync-nas: mount the share when it is not mounted](https://github.com/ChadFarrow/pc20-archive/pull/3) — opened 1 hour ago
+
 #### [pc20-wiki](projects/pc20-wiki.md)
 
-1 branch with no PR · uses [pc20-archive](projects/pc20-archive.md) (no open work)
+1 branch with no PR · uses [pc20-archive](projects/pc20-archive.md) (1 PR)
 
 - Branch [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds) — no PR
 
@@ -202,7 +208,7 @@
 
 1 PR
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 6 hours ago
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 hours ago
 
 ### Websites
 
@@ -221,7 +227,7 @@
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [small-group-scoop](projects/small-group-scoop.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
