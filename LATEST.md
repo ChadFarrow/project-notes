@@ -1,4 +1,4 @@
-# Dashboard — 2026-10-30 03:14 UTC
+# Dashboard — 2026-10-30 10:31 UTC
 
 16 open PRs · 11 open issues · 41 branches with no PR · 37 tracked repos (14 not tracked)
 
@@ -54,7 +54,7 @@
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 30 days ago · draft
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 37 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 47 days ago · draft · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 48 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 - Branch [`feat/podcast-index`](https://github.com/ChadFarrow/boostbox/tree/feat/podcast-index) — no PR
 
@@ -99,7 +99,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 40 days ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 41 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 51 days ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -194,7 +194,7 @@
 
 1 PR · used by [pc20-wiki](projects/pc20-wiki.md)
 
-- PR [#3 sync-nas: mount the share when it is not mounted](https://github.com/ChadFarrow/pc20-archive/pull/3) — opened 1 hour ago
+- PR [#3 sync-nas: mount the share when it is not mounted](https://github.com/ChadFarrow/pc20-archive/pull/3) — opened 8 hours ago
 
 #### [pc20-wiki](projects/pc20-wiki.md)
 
@@ -208,7 +208,7 @@
 
 1 PR
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 hours ago
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 17 hours ago
 
 ### Websites
 
