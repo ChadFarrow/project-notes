@@ -2,6 +2,7 @@
 
 **Category:** Music publishing  
 **Uses:** msp-podping-service  
+**Watch:** InTheMorning/musicindex-studio  
 **Repo:** https://github.com/ChadFarrow/MSP-2.0
 
 ## Description
@@ -18,6 +19,7 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 
 ## Resources
 <!-- Add links, docs, tutorials -->
+- [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) — Music Index Studio, a Rust app that edits hosted Podcasting 2.0 music feeds. Related to MSP; followed by the `**Watch:**` line above.
 
 ## TODOs
 - [ ] 
