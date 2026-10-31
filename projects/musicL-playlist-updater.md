@@ -27,15 +27,5 @@ Playlist updater tool
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
 - **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
 
-### Branches with no open PR (9)
-
-- [`add-new-smallgroup-shows`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/add-new-smallgroup-shows)
-- [`docs/claude-md-refresh`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/docs/claude-md-refresh)
-- [`feat/pi-pubnotify`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/pi-pubnotify)
-- [`feat/podping-via-pusher`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/podping-via-pusher)
-- [`feat/smallgroup-playlist-art`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/feat/smallgroup-playlist-art)
-- [`fix/lbc-no-source-feed`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/lbc-no-source-feed)
-- [`fix/lbc-skip-unchanged`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/lbc-skip-unchanged)
-- [`fix/smallgroup-source-feed-and-rewrite`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/smallgroup-source-feed-and-rewrite)
-- [`fix/stable-playlist-guid`](https://github.com/ChadFarrow/musicL-playlist-updater/tree/fix/stable-playlist-guid)
+_No open work._
 <!-- AUTO:END -->

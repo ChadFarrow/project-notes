@@ -24,9 +24,5 @@ Sends Helipad information to Nostr using webhooks
 
 - **Repo:** [ChadFarrow/Helipad-to-Nostr-BoostBot](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot) · TypeScript · private
 
-### Branches with no open PR (3)
-
-- [`fix-env-example-relay`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/fix-env-example-relay)
-- [`nip73-podcast-guids`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/nip73-podcast-guids)
-- [`security/node-oct-2026`](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/tree/security/node-oct-2026)
+_No open work._
 <!-- AUTO:END -->

@@ -22,12 +22,9 @@ This is a simple lnd poller and web front-end to see and read boosts and boostag
 
 - **Repo:** [ChadFarrow/helipad](https://github.com/ChadFarrow/helipad) · JavaScript · fork of Podcastindex-org/helipad
 
-### Branches with no open PR (6)
+### Branches with no open PR (3)
 
-- [`add-itdv-app`](https://github.com/ChadFarrow/helipad/tree/add-itdv-app)
 - [`add-tardbox-metadata-support`](https://github.com/ChadFarrow/helipad/tree/add-tardbox-metadata-support)
-- [`boost-me-apps`](https://github.com/ChadFarrow/helipad/tree/boost-me-apps)
 - [`leaderboard`](https://github.com/ChadFarrow/helipad/tree/leaderboard)
-- [`patch-1`](https://github.com/ChadFarrow/helipad/tree/patch-1)
 - [`revert-32-message-template-improvements`](https://github.com/ChadFarrow/helipad/tree/revert-32-message-template-improvements)
 <!-- AUTO:END -->

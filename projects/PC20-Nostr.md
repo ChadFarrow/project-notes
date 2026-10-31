@@ -27,8 +27,7 @@ Repo for code example for my apps
 
 - [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 2026-09-08
 
-### Branches with no open PR (2)
+### Branches with no open PR (1)
 
 - [`spec/comparison-refresh`](https://github.com/ChadFarrow/PC20-Nostr/tree/spec/comparison-refresh)
-- [`spec/rule-5-normalised-comparison`](https://github.com/ChadFarrow/PC20-Nostr/tree/spec/rule-5-normalised-comparison)
 <!-- AUTO:END -->

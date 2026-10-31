@@ -36,8 +36,7 @@ Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.
 - [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 2026-07-06
 - [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 2026-07-06
 
-### Branches with no open PR (2)
+### Branches with no open PR (1)
 
-- [`feat/force-close`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/force-close)
 - [`feat/lsps2-jit-m1`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/lsps2-jit-m1)
 <!-- AUTO:END -->

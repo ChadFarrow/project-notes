@@ -22,9 +22,8 @@ A classy Nostr keystore and signer that lives in your browser sidebar 🍸
 
 - **Repo:** [ChadFarrow/sidecar](https://github.com/ChadFarrow/sidecar) · JavaScript · fork of dmnyc/sidecar
 
-### Branches with no open PR (3)
+### Branches with no open PR (2)
 
-- [`feat/webln-keysend`](https://github.com/ChadFarrow/sidecar/tree/feat/webln-keysend)
 - [`fix/custom-emoji-reactions`](https://github.com/ChadFarrow/sidecar/tree/fix/custom-emoji-reactions)
 - [`local/demo-funds`](https://github.com/ChadFarrow/sidecar/tree/local/demo-funds)
 <!-- AUTO:END -->
