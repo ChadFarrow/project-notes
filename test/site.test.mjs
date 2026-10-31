@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { normalizeRepos } from '../scripts/lib/model.mjs';
+import { normalizeRepos, normalizeWatched } from '../scripts/lib/model.mjs';
 import { buildOutputs } from '../scripts/lib/render.mjs';
 import { buildSiteFiles, siteDirProblem } from '../scripts/lib/site.mjs';
 
@@ -12,18 +12,23 @@ const NOTES = [
   { file: 'app-one.md', text: '# app-one\n\n**Category:** Apps  \n**Uses:** svc-core  \n\n## Notes\nMine.\n' },
   { file: 'svc-core.md', text: '# svc-core\n\n**Category:** Libraries  \n\n## Notes\n' },
   { file: 'hidden-repo.md', text: '# hidden-repo\n\n**Track:** no  \n' },
-  { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n' },
+  { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n**Watch:** upstream/thing  \n' },
 ];
+const WATCHED = normalizeWatched({ data: { r0: {
+  nameWithOwner: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
+  pushedAt: '2026-09-27T08:00:00Z', pullRequests: { totalCount: 0 }, issues: { totalCount: 4 }, mine: { totalCount: 1 },
+} } }, ['upstream/thing']);
 
 function run(degradedReason = null) {
   const out = buildOutputs({
     owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], notes: NOTES,
-    auditFiles: [], degradedReason,
+    auditFiles: [], degradedReason, watched: WATCHED,
   });
   return { ...out, data: JSON.parse(out.siteData) };
 }
 const project = (data, name) => data.projects.find((p) => p.name === name);
-const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length;
+const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+  || p.watch.some((w) => w.prsTotal || w.issuesTotal);
 
 test('site data carries the version, the times and the thresholds', () => {
   const { data } = run();
@@ -90,6 +95,16 @@ test('site data lists ready-but-idle PRs, stale repos and shared issues in dashb
   assert.equal(data.issues.shared[0].title, 'Bump nostr-tools');
   assert.deepEqual(data.issues.shared[0].items.map((i) => i.repo), ['app-one', 'svc-core']);
   assert.equal(data.issues.total, Number(/### Open issues \((\d+)\)/.exec(latest)[1]));
+});
+
+test('site data carries a watched repo as its link and counts, nothing more', () => {
+  const { data } = run();
+  assert.deepEqual(project(data, 'upstream-fork').watch, [{
+    repo: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true,
+    prsTotal: 0, issuesTotal: 4, issuesMine: 1,
+  }]);
+  assert.deepEqual(project(data, 'app-one').watch, []);
+  assert.ok(hasWork(project(data, 'upstream-fork')));
 });
 
 test('site data shows an untracked project with the index facts only', () => {

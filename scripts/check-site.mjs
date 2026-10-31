@@ -18,7 +18,7 @@ import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
-import { normalizeRepos } from './lib/model.mjs';
+import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
 import { applyNoteForm } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
 import { buildSiteFiles } from './lib/site.mjs';
@@ -88,8 +88,14 @@ const NOTES = [
   { file: 'app-one.md', text: APP_ONE_NOTE },
   { file: 'svc-core.md', text: '# svc-core\n\n**Category:** Libraries  \n\n## Notes\n' },
   { file: 'hidden-repo.md', text: '# hidden-repo\n\n**Track:** no  \n' },
-  { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n' },
+  { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n**Watch:** upstream/thing  \n' },
 ];
+
+// What fetchWatched would return for that Watch line: a private repo, counts only.
+const WATCHED = normalizeWatched({ data: { r0: {
+  nameWithOwner: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
+  pushedAt: '2026-09-27T08:00:00Z', pullRequests: { totalCount: 0 }, issues: { totalCount: 4 }, mine: { totalCount: 1 },
+} } }, ['upstream/thing']);
 
 // The same files sync.mjs --site writes, built by the same function.
 async function siteFiles() {
@@ -104,7 +110,7 @@ async function siteFiles() {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
     ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
-      auditFiles: [], degradedReason: null,
+      auditFiles: [], degradedReason: null, watched: WATCHED,
     }));
   }
   const notesSource = await readFile(path.join(ROOT, 'scripts/lib/notes.mjs'), 'utf8');
@@ -387,7 +393,9 @@ async function main() {
     })()`)) || ['(could not read the page)'];
 
     const tracked = data.projects.filter((p) => p.track !== 'no');
-    const active = tracked.filter((p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length);
+    // `watch || []`: the live site's data may predate the field (--host).
+    const active = tracked.filter((p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+      || (p.watch || []).some((w) => w.prsTotal || w.issuesTotal));
 
     // ---- the board ----
     await go();
@@ -410,6 +418,20 @@ async function main() {
       check('a running check lights an amber lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.wait[title^="#10:"]')`));
       check('a draft shows a hollow lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.draft[title^="#2:"]')`));
       check('the shared issue title is listed once', (await text('#content'))?.includes('Same title in several repos'));
+      const fork = 'article.project[data-project="upstream-fork"]';
+      check('a watched repo with open work puts a quiet fork on the board', await evaluate(`!!document.querySelector('${fork}')`));
+      check('the row counts name the watched repo',
+        (await evaluate(`document.querySelector('${fork} .counts')?.textContent`)) === '4 issues in Upstream/thing');
+      await click(`${fork} .disclose`);
+      const watchFact = await evaluate(`(() => {
+        const span = document.querySelector('${fork} .project-body .watch');
+        const link = span && span.querySelector('a');
+        return span && { text: span.textContent, href: link && link.getAttribute('href') };
+      })()`);
+      check('an open row links the watched repo with its counts only',
+        watchFact?.href === 'https://github.com/Upstream/thing'
+          && watchFact.text === 'Watches Upstream/thing (private · 4 issues · 1 opened by you)', js(watchFact));
+      await click(`${fork} .disclose`);
     }
 
     // ---- filters ----

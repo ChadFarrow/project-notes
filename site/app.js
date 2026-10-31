@@ -97,7 +97,11 @@ const withCode = (text) => String(text).split('`').map((part, i) => (i % 2 ? h('
 const slug = (name) => `p-${name.replace(/[^A-Za-z0-9_-]/g, '-')}`;
 const noteUrl = (p) => `${REPO_URL}/blob/main/projects/${encodeURIComponent(p.noteFile)}`;
 const hasWork = (p) => p.track !== 'no'
-  && (p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length);
+  && (p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+    || p.watch.some((w) => w.prsTotal || w.issuesTotal));
+// "1 PR and 4 issues", or '' for none. A watched repo has counts only: no title reaches the page.
+const workText = (o) => [o.prsTotal ? plural(o.prsTotal, 'PR') : '', o.issuesTotal ? plural(o.issuesTotal, 'issue') : '']
+  .filter(Boolean).join(' and ');
 
 class UserError extends Error {
   constructor(message, kind = 'user') {
@@ -364,6 +368,7 @@ function countsText(p) {
   if (p.issuesTotal) parts.push(plural(p.issuesTotal, 'issue'));
   if (p.orphanBranches.length) parts.push(`${plural(p.orphanBranches.length, 'branch', 'branches')} with no PR`);
   if (p.openedElsewhere.length) parts.push(`${p.openedElsewhere.length} opened elsewhere`);
+  for (const w of p.watch) if (workText(w)) parts.push(`${workText(w)} in ${w.repo}`);
   return parts.join(', ');
 }
 
@@ -413,6 +418,11 @@ function projectDetails(p, states) {
       ` (${[u.prsTotal ? plural(u.prsTotal, 'PR') : '', u.issuesTotal ? plural(u.issuesTotal, 'issue') : ''].filter(Boolean).join(', ') || 'no open work'})`])));
   }
   if (p.usedBy.length) facts.push(h('span', {}, h('strong', { text: 'Used by ' }), p.usedBy.join(', ')));
+  if (p.watch.length) {
+    facts.push(h('span', { class: 'watch' }, h('strong', { text: 'Watches ' }), p.watch.map((w, i) => [i ? ', ' : '',
+      h('a', { href: w.url }, w.repo), ` (${[w.isPrivate ? 'private' : '', workText(w) || 'no open work',
+        w.issuesMine ? `${w.issuesMine} opened by you` : ''].filter(Boolean).join(' · ')})`])));
+  }
   if (facts.length) parts.push(h('p', { class: 'facts' }, facts.map((f, i) => [i ? '. ' : '', f]), '.'));
 
   const items = [];

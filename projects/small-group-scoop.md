@@ -2,13 +2,14 @@
 
 **Category:** Uncategorized  
 **Uses:**  
-**Track:** yes  
+**Track:** upstream  
+**Watch:** SpencerPearson/small-group-scoop  
 **Repo:** https://github.com/ChadFarrow/small-group-scoop
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
 ## Description
-<!-- Add a description -->
+Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fork now: Chad watches the site and files issues in the upstream repo. The dashboard shows the upstream repo's open PR and issue counts only, because that repo is private.
 
 ## Notes
 <!-- Add your notes here -->
@@ -21,6 +22,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
+- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 4 issues)
 
 _No open work._
 <!-- AUTO:END -->

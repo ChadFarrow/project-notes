@@ -12,7 +12,7 @@ export const AUTO_START = '<!-- AUTO:START -->';
 export const AUTO_END = '<!-- AUTO:END -->';
 
 const MARKER = /^\s*<!--\s*AUTO:(START|END)\s*-->\s*$/;
-const HEADER_KEY = /^\*\*(Category|Uses|Track):\*\*\s*(.*?)\s*$/i;
+const HEADER_KEY = /^\*\*(Category|Uses|Track|Watch):\*\*\s*(.*?)\s*$/i;
 const TRACK_VALUES = new Set(['yes', 'no', 'upstream']);
 
 // The header lines the sync reads: only lines above the first `## ` heading (or the
@@ -34,14 +34,29 @@ const usesEntries = (value) => value
   .map((raw) => ({ raw, name: raw.replace(/`/g, '').replace(/^(https:\/\/github\.com\/)?ChadFarrow\//i, '') }))
   .filter((u) => u.name);
 
+// `**Watch:**` entries: repos outside the account, as `owner/repo` or their URL.
+const WATCH_NAME = /^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/;
+
+function watchEntries(value, problems) {
+  const names = [];
+  for (const raw of value.split(/[,\s]+/).filter(Boolean)) {
+    const name = raw.replace(/`/g, '').replace(/^https:\/\/github\.com\//i, '').replace(/(\.git)?\/?$/, '');
+    if (!WATCH_NAME.test(name)) problems.push(`\`**Watch:**\` entry \`${raw}\` is not owner/repo; ignored`);
+    else if (!names.some((n) => n.toLowerCase() === name.toLowerCase())) names.push(name);
+  }
+  return names;
+}
+
 export function parseHeader(text) {
-  const header = { category: 'Uncategorized', uses: [], track: 'yes', problems: [] };
+  const header = { category: 'Uncategorized', uses: [], track: 'yes', watch: [], problems: [] };
   for (const { key: rawKey, value } of headerEntries(text.replace(/\r\n/g, '\n').split('\n'))) {
     const key = rawKey.toLowerCase();
     if (key === 'category') {
       if (value) header.category = value;
     } else if (key === 'uses') {
       header.uses = usesEntries(value).map((u) => u.name);
+    } else if (key === 'watch') {
+      header.watch = watchEntries(value, header.problems);
     } else if (value) {
       const track = value.toLowerCase();
       if (TRACK_VALUES.has(track)) header.track = track;

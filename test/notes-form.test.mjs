@@ -195,6 +195,14 @@ test('applyNoteForm inserts before **Repo:** when the note has no header lines',
     md('# x', '', '**Track:** no  ', '**Repo:** https://github.com/ChadFarrow/x', '', '## Notes', ''));
 });
 
+test('applyNoteForm keeps a Watch line as it was, and Watch locks no field', () => {
+  const text = md('# x', '', '**Track:** yes  ', '**Watch:** SpencerPearson/small-group-scoop  ',
+    '**Repo:** https://github.com/ChadFarrow/x', '', '## Notes', '');
+  assert.equal(apply(text, { track: 'upstream' }), text.replace('**Track:** yes  ', '**Track:** upstream  '));
+  assert.equal(apply(text, { category: 'Nostr' }), text.replace('**Track:** yes  ', '**Category:** Nostr  \n**Track:** yes  '));
+  assert.deepEqual(readNoteForm(md('# x', '', '**Watch:** a/b  ', '**Watch:** c/d  ', '', '## Notes', '')).readOnly, []);
+});
+
 test('applyNoteForm inserts after the title when there is nothing else to anchor to', () => {
   assert.equal(apply(md('# x', '', '## Notes', 'hi', ''), { track: 'no' }),
     md('# x', '', '**Track:** no  ', '', '## Notes', 'hi', ''));

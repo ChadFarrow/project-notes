@@ -24,6 +24,7 @@ These lines at the top of a note control the dashboard:
 | `**Category:** Nostr` | Groups the project on the dashboard and in the index. |
 | `**Uses:** boostbox, msp-podping-service` | Shows the open work in those repos, and adds a "Used by" line to each of them. |
 | `**Track:** no` | Leaves the project out of the dashboard. `**Track:** upstream` hides only its branches and its stale warning. |
+| `**Watch:** SpencerPearson/small-group-scoop` | Shows the open PR and issue counts of a repo that another account owns, with a link. It never shows titles, because the repo can be private. The web editor does not change this line. |
 
 To show a PR or an issue under the project it was opened for, add this line to its body:
 

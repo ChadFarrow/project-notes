@@ -188,7 +188,7 @@ function push(headerChanged) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     if (tryGit('push', '-q', 'origin', 'main').ok) {
       log('pushed to origin/main');
-      // A new Category, Uses or Track line only shows on the dashboard after a sync run.
+      // A new Category, Uses, Track or Watch line only shows on the dashboard after a sync run.
       if (headerChanged && !env.PN_NO_WORKFLOW) {
         try {
           execFileSync('gh', ['workflow', 'run', 'sync-all.yml', '-R', 'ChadFarrow/project-notes'], { stdio: 'ignore' });

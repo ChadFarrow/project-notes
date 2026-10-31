@@ -115,6 +115,13 @@ test('a header edit in the vault sets headerChanged', () => {
   assert.equal(p.headerChanged, true);
 });
 
+test('a Watch edit in the vault sets headerChanged', () => {
+  const before = note('**Watch:** a/b  ');
+  const state = synced({ 'projects/a.md': before });
+  const p = plan({ repo: { 'projects/a.md': before }, vault: { 'projects/a.md': note('**Watch:** a/b, c/d  ') }, state });
+  assert.equal(p.headerChanged, true);
+});
+
 test('a note deleted in the vault comes back from the repo', () => {
   const state = synced({ 'projects/a.md': note('mine') });
   const p = plan({ repo: { 'projects/a.md': note('mine') }, vault: {}, state });

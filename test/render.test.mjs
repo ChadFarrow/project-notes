@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { normalizeRepos, buildModel } from '../scripts/lib/model.mjs';
+import { normalizeRepos, normalizeWatched, buildModel } from '../scripts/lib/model.mjs';
 import { parseHeader, AUTO_START, AUTO_END } from '../scripts/lib/notes.mjs';
 import {
   escapeMd, renderAutoBlock, renderDashboard, renderIndex, renderStarred,
@@ -274,4 +274,48 @@ test('buildOutputs is stable: a second run over its own output changes no note',
   for (const [path, text] of first) if (path.startsWith('projects/')) texts[path.slice('projects/'.length)] = text;
   const second = outputs(texts).files;
   for (const [path, text] of second) if (path.startsWith('projects/')) assert.equal(text, first.get(path), path);
+});
+
+// ---------- watched repos ----------
+
+const WATCHED_RESPONSE = { data: { r0: {
+  nameWithOwner: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
+  pushedAt: '2026-09-27T08:00:00Z', pullRequests: { totalCount: 0 }, issues: { totalCount: 4 }, mine: { totalCount: 1 },
+} } };
+
+const quietLine = (md) => (md.split('### Quiet')[1] ?? '').split('\n')[2] ?? '';
+
+function watchModel() {
+  const texts = { ...NOTE_TEXTS, 'upstream-fork.md': '# upstream-fork\n\n**Track:** upstream  \n**Watch:** upstream/thing  \n' };
+  const notes = Object.entries(texts).map(([file, text]) => ({ file, header: parseHeader(text) }));
+  return buildModel({
+    repos: normalizeRepos(pages), notes, now: NOW, owner: 'ChadFarrow',
+    watched: normalizeWatched(WATCHED_RESPONSE, ['upstream/thing']),
+  });
+}
+
+test('renderAutoBlock gives a watched repo one line: a link and its counts', () => {
+  const m = watchModel();
+  const block = renderAutoBlock(project(m, 'upstream-fork'), m);
+  assert.ok(block.includes('\n- **Watch:** [Upstream/thing](https://github.com/Upstream/thing) '
+    + '(private · 4 issues · 1 opened by you)\n'), block);
+});
+
+test('the dashboard lists a project whose only open work is in a watched repo', () => {
+  const m = watchModel();
+  const out = renderDashboard(m, { generatedAt: GENERATED, degradedReason: null, base: '', problems: [] });
+  const plain = renderDashboard(model(), { generatedAt: GENERATED, degradedReason: null, base: '', problems: [] });
+  assert.ok(quietLine(plain).includes('upstream-fork'), 'quiet without the watch');
+  const section = out.split('#### [upstream-fork](projects/upstream-fork.md)')[1];
+  assert.ok(section, 'upstream-fork is under Projects');
+  assert.ok(section.split('\n')[2].includes('watches [Upstream/thing](https://github.com/Upstream/thing) '
+    + '(private · 4 issues · 1 opened by you)'), section.split('\n')[2]);
+  assert.ok(!quietLine(out).includes('upstream-fork'));
+});
+
+test('the dashboard totals and the issue list count only the owner\'s repos', () => {
+  const plain = renderDashboard(model(), { generatedAt: GENERATED, degradedReason: null, base: '', problems: [] });
+  const watched = renderDashboard(watchModel(), { generatedAt: GENERATED, degradedReason: null, base: '', problems: [] });
+  assert.equal(watched.split('\n')[2], plain.split('\n')[2]);
+  assert.equal(/### Open issues \((\d+)\)/.exec(watched)[1], /### Open issues \((\d+)\)/.exec(plain)[1]);
 });

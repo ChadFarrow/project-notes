@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { normalizeRepos, parseForMarkers, buildModel } from '../scripts/lib/model.mjs';
+import { normalizeRepos, normalizeWatched, parseForMarkers, buildModel, hasWork } from '../scripts/lib/model.mjs';
 import { parseHeader } from '../scripts/lib/notes.mjs';
 
 const pages = JSON.parse(readFileSync(new URL('./fixtures/repos-pages.json', import.meta.url)));
@@ -168,4 +168,76 @@ test('lastActivity is the later of the push and the newest item update', () => {
   const m = model();
   assert.equal(project(m, 'app-one').lastActivity, '2026-09-27T11:00:00Z');
   assert.equal(project(m, 'fork-thing').lastActivity, '2026-01-01T00:00:00Z');
+});
+
+// ---------- watched repos ----------
+
+const WATCH_NAMES = ['upstream/Thing', 'gone/away', 'old/archived'];
+const watchedRepo = (name, extra = {}) => ({
+  nameWithOwner: name, url: `https://github.com/${name}`, isPrivate: true, isArchived: false,
+  pushedAt: '2026-09-27T08:00:00Z', pullRequests: { totalCount: 0 }, issues: { totalCount: 4 }, mine: { totalCount: 1 },
+  ...extra,
+});
+const WATCH_RESPONSE = {
+  data: { r0: watchedRepo('Upstream/thing'), r1: null, r2: watchedRepo('old/archived', { isArchived: true }) },
+  errors: [{ type: 'NOT_FOUND', path: ['r1'], message: "Could not resolve to a Repository with the name 'gone/away'." }],
+};
+
+test('normalizeWatched keys each repo by the name the note wrote, and maps NOT_FOUND to null', () => {
+  const watched = normalizeWatched(WATCH_RESPONSE, WATCH_NAMES);
+  assert.deepEqual([...watched.keys()], ['upstream/thing', 'gone/away', 'old/archived']);
+  assert.deepEqual(watched.get('upstream/thing'), {
+    repo: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
+    pushedAt: '2026-09-27T08:00:00Z', prsTotal: 0, issuesTotal: 4, issuesMine: 1,
+  });
+  assert.equal(watched.get('gone/away'), null);
+});
+
+test('normalizeWatched stops the run on any error other than NOT_FOUND', () => {
+  const response = { data: { r0: null }, errors: [{ type: 'RATE_LIMITED', message: 'API rate limit exceeded' }] };
+  assert.throws(() => normalizeWatched(response, ['a/b']), /API rate limit exceeded/);
+});
+
+function watchModel(watchLine) {
+  return buildModel({
+    repos: normalizeRepos(pages),
+    notes: [{ file: 'upstream-fork.md', header: parseHeader(`**Track:** upstream\n**Watch:** ${watchLine}\n`) }],
+    now: NOW, owner: 'ChadFarrow', watched: normalizeWatched(WATCH_RESPONSE, WATCH_NAMES),
+  });
+}
+
+test('a watched repo with open work makes its project active', () => {
+  assert.ok(!hasWork(project(model(), 'upstream-fork')), 'quiet without the watch');
+  const m = watchModel('UPSTREAM/thing');
+  const fork = project(m, 'upstream-fork');
+  assert.deepEqual(fork.watch.map((w) => [w.repo, w.prsTotal, w.issuesTotal]), [['Upstream/thing', 0, 4]]);
+  assert.ok(hasWork(fork));
+  assert.equal(fork.lastActivity, '2026-09-27T08:00:00Z');
+  assert.deepEqual(m.problems.filter((p) => p.includes('Watch')), []);
+});
+
+test('a watched repo with no open work leaves its project quiet', () => {
+  const quiet = { data: { r0: watchedRepo('upstream/Thing', { issues: { totalCount: 0 }, mine: { totalCount: 0 } }) } };
+  const m = buildModel({
+    repos: normalizeRepos(pages),
+    notes: [{ file: 'upstream-fork.md', header: parseHeader('**Track:** upstream\n**Watch:** upstream/Thing\n') }],
+    now: NOW, owner: 'ChadFarrow', watched: normalizeWatched(quiet, ['upstream/Thing']),
+  });
+  const fork = project(m, 'upstream-fork');
+  assert.equal(fork.watch.length, 1);
+  assert.ok(!hasWork(fork));
+});
+
+test('Watch problems: an unreadable repo, an archived repo, and a repo of the owner', () => {
+  const m = watchModel('gone/away, old/archived, chadfarrow/svc-core');
+  assert.deepEqual(project(m, 'upstream-fork').watch, []);
+  assert.deepEqual(m.problems.filter((p) => p.includes('Watch')), [
+    '`projects/upstream-fork.md`: `**Watch:**` names `gone/away`, which GitHub did not return to this token',
+    '`projects/upstream-fork.md`: `**Watch:**` names `old/archived`, which is archived',
+    '`projects/upstream-fork.md`: `**Watch:**` names `chadfarrow/svc-core`, a ChadFarrow repo; use `**Uses:**`',
+  ]);
+});
+
+test('every project has an empty watch list when no note names one', () => {
+  for (const p of model().projects) assert.deepEqual(p.watch, []);
 });
