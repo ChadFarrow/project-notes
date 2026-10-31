@@ -24,5 +24,7 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
 - **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 4 issues)
 
-_No open work._
+### Pull requests (1)
+
+- [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31
 <!-- AUTO:END -->
