@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-### Pull requests (1)
-
-- [#15 Watch InTheMorning/musicindex-studio from the MSP-2.0 note](https://github.com/ChadFarrow/project-notes/pull/15) — opened 2026-10-31
+_No open work._
 <!-- AUTO:END -->

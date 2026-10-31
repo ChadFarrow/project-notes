@@ -1,6 +1,6 @@
-# Dashboard — 2026-10-31 03:16 UTC
+# Dashboard — 2026-10-31 03:19 UTC
 
-18 open PRs · 9 open issues · 42 branches with no PR · 37 tracked repos (14 not tracked)
+17 open PRs · 9 open issues · 42 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -122,20 +122,20 @@
 
 - Branch [`claude/clone-repository-2O3bN`](https://github.com/ChadFarrow/RSS-music-site-template/tree/claude/clone-repository-2O3bN) — no PR
 
+#### [MSP-2.0](projects/MSP-2.0.md)
+
+3 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 29 days ago · merge conflict · by InTheMorning
+- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
+- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
+
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
 - PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 7 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
-
-#### [MSP-2.0](projects/MSP-2.0.md)
-
-3 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
-
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 29 days ago · merge conflict · by InTheMorning
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
-- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 4 months ago · draft · merge conflict
 
 #### [msp-podping-service](projects/msp-podping-service.md)
 
@@ -193,17 +193,11 @@
 
 ### Tools & self-hosting
 
-#### [project-notes](projects/project-notes.md)
-
-1 PR
-
-- PR [#15 Watch InTheMorning/musicindex-studio from the MSP-2.0 note](https://github.com/ChadFarrow/project-notes/pull/15) — opened 1 minute ago
-
 #### [thelounge-candr](projects/thelounge-candr.md)
 
 2 PRs
 
-- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 57 minutes ago · draft
+- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 1 hour ago · draft
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 1 day ago
 
 ### Websites
@@ -229,7 +223,7 @@ watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/sma
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
