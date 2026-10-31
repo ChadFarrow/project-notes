@@ -21,17 +21,46 @@ test('parseHeader reads Category, Uses and Track with trailing spaces', () => {
     category: 'Music/Podcasting',
     uses: ['svc-core', 'other-lib'],
     track: 'upstream',
+    watch: [],
     problems: [],
   });
 });
 
 test('parseHeader gives defaults when the lines are missing or empty', () => {
   assert.deepEqual(parseHeader('# x\n\n**Category:**  \n**Uses:**  \n## Notes\n'), {
-    category: 'Uncategorized', uses: [], track: 'yes', problems: [],
+    category: 'Uncategorized', uses: [], track: 'yes', watch: [], problems: [],
   });
   assert.deepEqual(parseHeader(''), {
-    category: 'Uncategorized', uses: [], track: 'yes', problems: [],
+    category: 'Uncategorized', uses: [], track: 'yes', watch: [], problems: [],
   });
+});
+
+test('parseHeader reads Watch as owner/repo, from a name, a URL or code', () => {
+  const h = parseHeader([
+    '# fork',
+    '',
+    '**Watch:** SpencerPearson/small-group-scoop, `other/thing`  ',
+    '**Track:** yes  ',
+    '',
+  ].join('\n'));
+  assert.deepEqual(h.watch, ['SpencerPearson/small-group-scoop', 'other/thing']);
+  assert.equal(h.track, 'yes');
+  assert.deepEqual(h.problems, []);
+  assert.deepEqual(parseHeader('**Watch:** https://github.com/a/b.git https://github.com/c/d/\n').watch, ['a/b', 'c/d']);
+});
+
+test('parseHeader drops a Watch entry twice over and reports one that is not owner/repo', () => {
+  const h = parseHeader('**Watch:** a/b, A/B, just-a-name, a/b/c\n');
+  assert.deepEqual(h.watch, ['a/b']);
+  assert.deepEqual(h.problems, [
+    '`**Watch:**` entry `just-a-name` is not owner/repo; ignored',
+    '`**Watch:**` entry `a/b/c` is not owner/repo; ignored',
+  ]);
+});
+
+test('parseHeader does not read a Watch line as Track', () => {
+  assert.equal(parseHeader('**Track:** no\n**Watch:** a/b\n').track, 'no');
+  assert.deepEqual(parseHeader('**Watch:**  \n').watch, []);
 });
 
 test('parseHeader matches keys without case', () => {
@@ -122,7 +151,7 @@ for (const [name, before] of [
 test('stubNote parses back to the defaults and has an empty block', () => {
   const stub = stubNote({ name: 'new-repo', description: 'A thing' });
   assert.deepEqual(parseHeader(stub), {
-    category: 'Uncategorized', uses: [], track: 'yes', problems: [],
+    category: 'Uncategorized', uses: [], track: 'yes', watch: [], problems: [],
   });
   assert.match(stub, /^# new-repo\n/);
   assert.match(stub, /https:\/\/github\.com\/ChadFarrow\/new-repo/);

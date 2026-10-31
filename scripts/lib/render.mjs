@@ -40,6 +40,11 @@ function workCounts(p) {
   return parts.length ? parts.join(', ') : 'no open work';
 }
 
+// A watched repo: a link and its counts, never a title (see `watchQuery`).
+const watchText = (w) => `[${w.repo}](${w.url}) (${[
+  ...(w.isPrivate ? ['private'] : []), workCounts(w), ...(w.issuesMine ? [`${w.issuesMine} opened by you`] : []),
+].join(' · ')})`;
+
 function prTags(pr, owner) {
   const tags = [];
   if (pr.isDraft) tags.push('draft');
@@ -83,6 +88,7 @@ export function renderAutoBlock(p, model) {
     out.push(`- **Uses:** ${p.uses.map((n) => `${noteLink(model, n, '')} (${workCounts(model.index.get(n))})`).join(', ')}`);
   }
   if (p.usedBy.length) out.push(`- **Used by:** ${p.usedBy.map((n) => noteLink(model, n, '')).join(', ')}`);
+  if (p.watch.length) out.push(`- **Watch:** ${p.watch.map(watchText).join(', ')}`);
 
   const byNumber = (a, b) => b.number - a.number;
   const more = (shown, total, path) =>
@@ -198,6 +204,7 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
         facts.push(`uses ${p.uses.map((n) => `${noteLink(model, n, notes)} (${workCounts(model.index.get(n))})`).join(', ')}`);
       }
       if (p.usedBy.length) facts.push(`used by ${p.usedBy.map((n) => noteLink(model, n, notes)).join(', ')}`);
+      if (p.watch.length) facts.push(`watches ${p.watch.map(watchText).join(', ')}`);
       out.push('', `#### ${noteLink(model, p.name, notes)}`, '', facts.join(' · '));
 
       const items = [];
@@ -299,9 +306,10 @@ export function renderAuditsReadme(files) {
 }
 
 // notes: [{ file, text }] from projects/. auditFiles: names already in audits/.
-export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degradedReason }) {
+// watched: the `normalizeWatched` map for the notes' `**Watch:**` entries.
+export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degradedReason, watched }) {
   const parsed = notes.map((n) => ({ ...n, header: parseHeader(n.text) }));
-  const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason) });
+  const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason), watched });
   const problems = [...model.problems];
   const files = new Map();
 

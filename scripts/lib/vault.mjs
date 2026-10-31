@@ -54,8 +54,8 @@ function decide(repo, vault, base) {
 
 const noteKey = (text) => hashOf(handPart(text) ?? `RAW\n${text}`);
 const headerOf = (text) => {
-  const { category, uses, track } = parseHeader(text);
-  return JSON.stringify({ category, uses, track });
+  const { category, uses, track, watch } = parseHeader(text);
+  return JSON.stringify({ category, uses, track, watch });
 };
 
 // repo, vault: Map<path, Buffer>. state: the previous result's `state`, or null.

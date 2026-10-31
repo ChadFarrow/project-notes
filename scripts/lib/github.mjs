@@ -29,6 +29,26 @@ export const REPOS_QUERY = `query($owner: String!, $endCursor: String) {
   }
 }`;
 
+// The repos named on `**Watch:**` lines, one alias each. It asks for counts only, never
+// a title: a watched repo is someone else's and may be private, and this repo is public.
+// `mine` counts the open issues `$me` opened there.
+export function watchQuery(count) {
+  const vars = ['$me: String!'];
+  const fields = [];
+  for (let i = 0; i < count; i++) {
+    vars.push(`$o${i}: String!, $n${i}: String!`);
+    fields.push(`  r${i}: repository(owner: $o${i}, name: $n${i}) { ...Watched }`);
+  }
+  return `query(${vars.join(', ')}) {
+${fields.join('\n')}
+}
+fragment Watched on Repository {
+  nameWithOwner url isPrivate isArchived pushedAt
+  pullRequests(states: OPEN) { totalCount }  issues(states: OPEN) { totalCount }
+  mine: issues(states: OPEN, filterBy: {createdBy: $me}) { totalCount }
+}`;
+}
+
 // Picks a token that actually works. AUDIT_TOKEN is a PAT, and PATs expire; a YAML
 // `||` default only covers an *unset* secret, so an expired one used to take the whole
 // sync down with "HTTP 401: Bad credentials". Probe it once and fall back.
@@ -73,7 +93,9 @@ export function probeToken(token) {
 }
 
 // Runs gh and parses its JSON output, retrying once after 10 s for a transient error.
-export async function ghJson(args, token) {
+// `partial`: gh exits 1 when a GraphQL response carries any error, but it still prints
+// the body; return that body when it has data, and let the caller judge the errors.
+export async function ghJson(args, token, { partial = false } = {}) {
   for (let attempt = 1; ; attempt++) {
     try {
       const out = execFileSync('gh', args, {
@@ -81,6 +103,11 @@ export async function ghJson(args, token) {
       });
       return JSON.parse(out);
     } catch (err) {
+      if (partial) {
+        let body = null;
+        try { body = JSON.parse(err.stdout); } catch { /* not a GraphQL body: retry below */ }
+        if (body?.data) return body;
+      }
       if (attempt >= 2) throw new Error(`gh ${args.slice(0, 2).join(' ')} failed: ${err.stderr || err.message}`);
       await sleep(10_000);
     }
@@ -98,4 +125,15 @@ export async function fetchRepos(token, owner) {
 
 export async function fetchStars(token, owner) {
   return (await ghJson(['api', `users/${owner}/starred`, '--paginate', '--slurp'], token)).flat();
+}
+
+// names: `owner/repo` strings; me: the dashboard owner. Returns the raw response;
+// `normalizeWatched` reads it.
+export async function fetchWatched(token, names, me) {
+  const args = ['api', 'graphql', '-f', `query=${watchQuery(names.length)}`, '-f', `me=${me}`];
+  names.forEach((name, i) => {
+    const [owner, repo] = name.split('/');
+    args.push('-f', `o${i}=${owner}`, '-f', `n${i}=${repo}`);
+  });
+  return ghJson(args, token, { partial: true });
 }

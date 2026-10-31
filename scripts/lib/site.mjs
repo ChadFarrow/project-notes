@@ -42,6 +42,7 @@ const INDEX_FACTS = ['name', 'url', 'description', 'language', 'isFork', 'parent
 const PR_FIELDS = ['number', 'title', 'url', 'isDraft', 'createdAt', 'mergeable', 'checks', 'author', 'for'];
 const ISSUE_FIELDS = ['number', 'title', 'url', 'createdAt', 'author', 'comments', 'for'];
 const ELSEWHERE_FIELDS = ['repo', 'kind', 'number', 'title', 'url', 'createdAt'];
+const WATCH_FIELDS = ['repo', 'url', 'isPrivate', 'prsTotal', 'issuesTotal', 'issuesMine'];
 
 const noteFileOf = (p) => p.noteFile ?? `${p.name}.md`;
 
@@ -64,6 +65,7 @@ function projectData(p, model) {
       return { name, prsTotal: used.prsTotal, issuesTotal: used.issuesTotal };
     }),
     usedBy: p.usedBy,
+    watch: p.watch.map((w) => pick(w, WATCH_FIELDS)),
   };
 }
 

@@ -65,12 +65,34 @@ export function normalizeRepos(pages) {
   }));
 }
 
+// The `fetchWatched` response → Map<lower-case owner/repo, repo or null>. null means
+// GitHub had no repo by that name that the token can read (a private repo looks the
+// same as a missing one). Any other GraphQL error stops the run, as a failed fetch does.
+export function normalizeWatched(response, names) {
+  const errors = (response.errors ?? []).filter((e) => e.type !== 'NOT_FOUND');
+  if (errors.length) throw new Error(`GraphQL errors: ${errors.map((e) => e.message).join('; ')}`);
+  return new Map(names.map((name, i) => {
+    const r = response.data[`r${i}`];
+    return [name.toLowerCase(), r ? {
+      repo: r.nameWithOwner,
+      url: r.url,
+      isPrivate: r.isPrivate,
+      isArchived: r.isArchived,
+      pushedAt: r.pushedAt,
+      prsTotal: r.pullRequests.totalCount,
+      issuesTotal: r.issues.totalCount,
+      issuesMine: r.mine.totalCount,
+    } : null];
+  }));
+}
+
 const byName = (a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' });
 const newest = (a, b) => (a.updatedAt < b.updatedAt ? 1 : a.updatedAt > b.updatedAt ? -1 : 0);
 
 // notes: [{ file: 'repo.md', header }]. `degraded` means private repos are missing
-// from `repos`, so their notes must not be reported as orphans.
-export function buildModel({ repos, notes, now, owner, degraded = false }) {
+// from `repos`, so their notes must not be reported as orphans. watched: the
+// `normalizeWatched` map for every `**Watch:**` entry.
+export function buildModel({ repos, notes, now, owner, degraded = false, watched = new Map() }) {
   const problems = [];
   const lookup = new Map(repos.map((r) => [r.name.toLowerCase(), r.name]));
   const noteFor = new Map();
@@ -94,11 +116,21 @@ export function buildModel({ repos, notes, now, owner, degraded = false }) {
       else if (name === repo.name) problems.push(`\`projects/${note.file}\`: \`**Uses:**\` names ${repo.name} itself`);
       else if (!uses.includes(name)) uses.push(name);
     }
+    const watch = [];
+    for (const raw of header.watch) {
+      const found = watched.get(raw.toLowerCase());
+      const where = `\`projects/${note.file}\`: \`**Watch:**\` names \`${raw}\``;
+      if (raw.toLowerCase().startsWith(`${owner.toLowerCase()}/`)) problems.push(`${where}, a ${owner} repo; use \`**Uses:**\``);
+      else if (!found) problems.push(`${where}, which GitHub did not return to this token`);
+      else if (found.isArchived) problems.push(`${where}, which is archived`);
+      else if (!watch.some((w) => w.repo === found.repo)) watch.push(found);
+    }
     const prHeads = new Set(repo.prs.map((p) => p.headRefName));
     const orphanBranches = header.track === 'upstream' ? [] : repo.branches
       .filter((b) => b.name !== repo.defaultBranch && !prHeads.has(b.name))
       .sort((a, b) => (b.committedDate || '').localeCompare(a.committedDate || '') || a.name.localeCompare(b.name));
-    const lastActivity = [repo.pushedAt, ...repo.prs.map((p) => p.updatedAt), ...repo.issues.map((i) => i.updatedAt)]
+    const lastActivity = [repo.pushedAt, ...repo.prs.map((p) => p.updatedAt), ...repo.issues.map((i) => i.updatedAt),
+      ...watch.map((w) => w.pushedAt)]
       .filter(Boolean).sort().at(-1);
 
     for (const [kind, total, shown] of [
@@ -118,6 +150,7 @@ export function buildModel({ repos, notes, now, owner, degraded = false }) {
       track: header.track,
       uses,
       usedBy: [],
+      watch,
       orphanBranches,
       openedElsewhere: [],
       stale: header.track === 'yes' && now - new Date(repo.pushedAt) > STALE_DAYS * DAY,
@@ -169,7 +202,8 @@ export function buildModel({ repos, notes, now, owner, degraded = false }) {
 
 // ---------- shared by the dashboard and the site data ----------
 
-export const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length;
+export const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+  || p.watch.some((w) => w.prsTotal || w.issuesTotal);
 
 export const branchUrl = (p, name) => `${p.url}/tree/${name.split('/').map(encodeURIComponent).join('/')}`;
 

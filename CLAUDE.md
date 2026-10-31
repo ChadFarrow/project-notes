@@ -28,7 +28,8 @@ A note's header lines are read by the sync — only the lines above the first `#
 
 - `**Category:** Music/Podcasting` — dashboard and index grouping. Missing or empty → `Uncategorized`.
 - `**Uses:** msp-podping-service, boostbox` — the repos this project depends on. The note's AUTO block and its dashboard section show their open-work counts, and each used repo gets a computed `Used by` line.
-- `**Track:** yes | no | upstream` — `no` hides the project from the dashboard (its AUTO block says so; archive the repo instead if it is dead). `upstream` hides its branches and stale warning, for forks you contribute upstream from (`castr.me`, `web-ui`) — their branches never get a PR in the fork. Default `yes`.
+- `**Track:** yes | no | upstream` — `no` hides the project from the dashboard (its AUTO block says so; archive the repo instead if it is dead). `upstream` hides its branches and stale warning, for forks you contribute upstream from (`castr.me`, `web-ui`, `small-group-scoop`) — their branches never get a PR in the fork. Default `yes`.
+- `**Watch:** SpencerPearson/small-group-scoop` — repos that another account owns, as `owner/repo` or their URL, comma-separated. The note's AUTO block and its dashboard section show each one's link and its open PR and issue counts, plus how many of those issues ChadFarrow opened. Open work in a watched repo makes the project active, but it is not added to the totals or to *Needs you now*. **Counts only, never a title, author or branch name**: a watched repo can be someone else's private repo, and this repo and the web page are public. `watchQuery` asks GitHub for `totalCount` alone, so a title cannot leak by accident; keep it that way. A name GitHub does not return to the token (missing, renamed away, or private and unreadable), an archived repo, or a ChadFarrow repo (use `Uses`) is listed under *Note problems*. The web editor leaves the line alone; edit it in the file or in Obsidian.
 
 End each header line with two spaces, or GitHub runs them into one line.
 
@@ -73,7 +74,9 @@ One GitHub Actions workflow, **`sync-all.yml`**, runs every 4 hours (GitHub star
 
 The sync makes one paginated GraphQL query (`REPOS_QUERY` in `scripts/lib/github.mjs`) over `user.repositories(ownerAffiliations: [OWNER], isArchived: false)`, 25 repos per page — a page of 100 took 9.1 s against GitHub's 10 s limit. Nested lists (50 PRs, 50 issues, 100 branches per repo) are not paginated; if a repo has more, the list is marked truncated under *Note problems*. PR and issue bodies are read for `For:` markers and then dropped — they are never written to the repo.
 
-**A fetch failure stops the run, and the run writes nothing.** There are no partial outputs.
+**A fetch failure stops the run, and the run writes nothing.** There are no partial outputs. The one exception is a `**Watch:**` repo that GitHub reports as NOT_FOUND: `gh` exits 1 for it, `ghJson(…, { partial: true })` keeps the body it printed, and `normalizeWatched` turns that repo into a *Note problem*. Any other GraphQL error in that query still stops the run.
+
+The watched repos come from a second query, `watchQuery` in `scripts/lib/github.mjs` — one `repository(owner, name)` alias per distinct `**Watch:**` entry across all notes, sent only when a note has one. `AUDIT_TOKEN` reads a private watched repo only while ChadFarrow is a collaborator on it.
 
 The sync needs the **`AUDIT_TOKEN`** secret (a classic PAT with `repo` scope — it has to read private repos). `pickToken` in `scripts/lib/github.mjs` probes it with `gh api rate_limit` before doing anything and falls back to `GITHUB_TOKEN` if it is empty *or rejected*. The probe matters because PATs expire: a YAML-level `secrets.AUDIT_TOKEN || secrets.GITHUB_TOKEN` default only covers an unset secret, so an expired one used to fail the whole sync on the first `gh` call with `HTTP 401: Bad credentials`.
 

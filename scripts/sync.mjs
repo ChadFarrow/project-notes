@@ -10,8 +10,9 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
-import { fetchRepos, fetchStars, pickToken, probeToken } from './lib/github.mjs';
-import { normalizeRepos } from './lib/model.mjs';
+import { fetchRepos, fetchStars, fetchWatched, pickToken, probeToken } from './lib/github.mjs';
+import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
+import { parseHeader } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
 import { buildSiteFiles, siteDirProblem } from './lib/site.mjs';
 
@@ -33,15 +34,17 @@ if (siteFlag >= 0) {
 const { token, degradedReason, warning } = pickToken(process.env, probeToken);
 if (warning) console.log(`::warning::${warning}`);
 
-// Fetch everything before writing anything: a failed fetch must leave the repo untouched.
-const repos = normalizeRepos(await fetchRepos(token, OWNER));
-const stars = await fetchStars(token, OWNER);
-
 const listMd = (dir) => (existsSync(dir)
   ? readdirSync(dir, { withFileTypes: true }).filter((d) => d.isFile() && d.name.endsWith('.md')).map((d) => d.name)
   : []);
 const projectsDir = path.join(root, 'projects');
 const notes = listMd(projectsDir).map((file) => ({ file, text: readFileSync(path.join(projectsDir, file), 'utf8') }));
+
+// Fetch everything before writing anything: a failed fetch must leave the repo untouched.
+const repos = normalizeRepos(await fetchRepos(token, OWNER));
+const stars = await fetchStars(token, OWNER);
+const watchNames = [...new Map(notes.flatMap((n) => parseHeader(n.text).watch).map((w) => [w.toLowerCase(), w])).values()];
+const watched = watchNames.length ? normalizeWatched(await fetchWatched(token, watchNames, OWNER), watchNames) : new Map();
 
 const { files, problems, siteData } = buildOutputs({
   owner: OWNER,
@@ -51,6 +54,7 @@ const { files, problems, siteData } = buildOutputs({
   notes,
   auditFiles: listMd(path.join(root, 'audits')),
   degradedReason,
+  watched,
 });
 
 let changed = 0;

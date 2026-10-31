@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickToken, REPOS_QUERY } from '../scripts/lib/github.mjs';
+import { pickToken, REPOS_QUERY, watchQuery } from '../scripts/lib/github.mjs';
 
 const never = () => { throw new Error('probe must not run'); };
 
@@ -36,4 +36,13 @@ test('the repos query pages with $endCursor and keeps pageInfo first', () => {
   assert.match(REPOS_QUERY, /isArchived: false/);
   assert.equal(REPOS_QUERY.match(/pageInfo/g).length, 1);
   assert.ok(REPOS_QUERY.indexOf('pageInfo') < REPOS_QUERY.indexOf('nodes'));
+});
+
+test('watchQuery passes every name as a variable and asks for counts, never a title', () => {
+  const q = watchQuery(2);
+  assert.match(q, /^query\(\$me: String!, \$o0: String!, \$n0: String!, \$o1: String!, \$n1: String!\)/);
+  assert.match(q, /r0: repository\(owner: \$o0, name: \$n0\)/);
+  assert.match(q, /r1: repository\(owner: \$o1, name: \$n1\)/);
+  assert.match(q, /mine: issues\(states: OPEN, filterBy: \{createdBy: \$me\}\)/);
+  assert.doesNotMatch(q, /title|body|nodes|refs/);
 });
