@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-01 02:54 UTC
+# Dashboard — 2026-11-01 10:51 UTC
 
-21 open PRs · 9 open issues · 24 branches with no PR · 37 tracked repos (14 not tracked)
+20 open PRs · 9 open issues · 24 branches with no PR · 37 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -52,7 +52,7 @@
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 32 days ago · draft
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 39 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 49 days ago · draft · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 50 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 #### [helipad](projects/helipad.md)
@@ -83,21 +83,20 @@
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-4 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+3 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#298 Fix the nightly reparse: time-boxed calls, Wavlake only when PI says it changed](https://github.com/ChadFarrow/stablekraft-app/pull/298) — opened just now · checks pending
-- PR [#294 Dead-feed check: move a feed to its new home by podcast:guid, else hide it](https://github.com/ChadFarrow/stablekraft-app/pull/294) — opened 4 hours ago · draft
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 42 days ago · draft
+- PR [#294 Dead-feed check: move a feed to its new home by podcast:guid, else hide it](https://github.com/ChadFarrow/stablekraft-app/pull/294) — opened 12 hours ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 43 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 53 days ago
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-5 PRs · 2 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 1 issue)
+5 PRs · 2 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
-- PR [#507 Read item-level \<podcast:funding\> and list support links in the boost modal](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 6 hours ago · draft
-- PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 23 hours ago · draft · merge conflict
+- PR [#507 Read item-level \<podcast:funding\> and list support links in the boost modal](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 14 hours ago · draft
+- PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 1 day ago · draft · merge conflict
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 35 days ago · draft
 - PR [#442 Add OPML import and export of favorite shows](https://github.com/ChadFarrow/boostmebitch/pull/442) — opened 37 days ago
@@ -156,7 +155,7 @@
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 1 issue)
+1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
 - Branch [`spec/comparison-refresh`](https://github.com/ChadFarrow/PC20-Nostr/tree/spec/comparison-refresh) — no PR
 
@@ -195,9 +194,9 @@
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
-1 PR · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 5 issues · 1 opened by you)
+1 PR · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 4 issues · 1 opened by you)
 
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 4 hours ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 12 hours ago
 
 ### Quiet — no open work
 
