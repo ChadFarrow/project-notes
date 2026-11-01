@@ -26,10 +26,10 @@ Stablekraft application
 
 ### Pull requests (4)
 
+- [#298 Fix the nightly reparse: time-boxed calls, Wavlake only when PI says it changed](https://github.com/ChadFarrow/stablekraft-app/pull/298) — opened 2026-11-01 · checks pending
 - [#294 Dead-feed check: move a feed to its new home by podcast:guid, else hide it](https://github.com/ChadFarrow/stablekraft-app/pull/294) — opened 2026-10-31 · draft
-- [#293 Show a feed's \<podcast:funding\> links on the album page and in the boost dialog](https://github.com/ChadFarrow/stablekraft-app/pull/293) — opened 2026-10-31 · draft
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
-- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08 · merge conflict
+- [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
 
 ### Issues (1)
 
