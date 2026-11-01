@@ -82,6 +82,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`) · not tracked
 - [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`) · not tracked
 - [small-group-scoop](projects/small-group-scoop.md) - No description (`Python`) · fork · private
+- [vibe-kit](projects/vibe-kit.md) - Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, status line, tools (`JavaScript`) · private
 
 ---
 
