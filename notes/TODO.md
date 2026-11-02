@@ -12,9 +12,8 @@ detail from a private repo.
 - [ ] Test [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×) on an Android phone with the screen locked, then merge it. The preview link is on the PR. Also test the iPhone Home Screen app, and listen for a click at the switch.
 - [ ] Beta site: in [Vercel](https://vercel.com/chadfs-projects/boostmebitch/settings/environment-variables), add `GITHUB_BUG_TOKEN` for Preview, branch `beta`. Bug reports on beta need it. Vercel cannot show the Production value, so use your saved copy or make a new token. Then redeploy `beta`, because a variable change does not redeploy it.
 - [ ] Beta site, optional: add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` the same way, if beta must read like production. Without them it reads through the direct Podcast Index path, and it still works.
-- [ ] Test #512, #507 and #505 together on your phones at https://beta.boostmebitch.com, after the DNS record works. Sign in and connect the wallet again there, because browser storage is per site. Use small boosts: beta spends real sats, and it writes to your real favorites and backups.
+- [ ] Test #512, #507 and #505 together on your phones at https://beta.boostmebitch.com. Sign in and connect the wallet again there, because browser storage is per site. Use small boosts: beta spends real sats, and it writes to your real favorites and backups.
 - [ ] Beta site, only if Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
-- [ ] [Remove `libre.boostmebitch.com`](https://vercel.com/chadfs-projects/boostmebitch/settings/domains) from the Vercel project. The Libre site is already offline; this only clears the leftover entry. Keep the branch and PR #120.
 
 ## thelounge-candr
 
