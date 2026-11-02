@@ -17,8 +17,6 @@ detail from a private repo.
 
 ## thelounge-candr
 
-- [ ] Confirm the lit-bot blacklist on a real post. When a blocked show next goes live, `#BowlAfterBowl` must stay quiet.
-
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
 ## Laptop
