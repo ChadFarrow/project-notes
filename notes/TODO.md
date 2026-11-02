@@ -23,4 +23,3 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## project-notes
 
-- [ ] Tap this box on [the dashboard](https://notes.podtards.com), then delete this line. This tests a real save and the page update. The device needs the editing token.
