@@ -38,15 +38,16 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#507 Read item-level \<podcast:funding\> and list support links in the boost modal](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2026-10-31 · draft
 - [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 2026-10-31 · draft
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (2)
 
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (4)
+### Branches with no open PR (5)
 
+- [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo)
 - [`claude/opml-import-export-s2kapj`](https://github.com/ChadFarrow/boostmebitch/tree/claude/opml-import-export-s2kapj)
 - [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
