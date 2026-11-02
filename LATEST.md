@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-01 23:11 UTC
+# Dashboard — 2026-11-02 03:00 UTC
 
 19 open PRs · 9 open issues · 22 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -19,7 +19,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 30 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 31 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 59 days ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
@@ -49,7 +49,7 @@
 3 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 33 days ago · draft
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 39 days ago · merge conflict
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 40 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 50 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
@@ -74,7 +74,7 @@
 
 1 PR · 2 issues · 1 branch with no PR
 
-- PR [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 3 months ago · draft
+- PR [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 4 months ago · draft
 - Branch [`feat/lsps2-jit-m1`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/lsps2-jit-m1) — no PR
 
 ### Music apps & sites
@@ -167,8 +167,8 @@
 
 3 PRs
 
-- PR [#64 lit-bot: phifer++ reminder on Sundays at 11:00 AM ET, in #voidzero only](https://github.com/ChadFarrow/thelounge-candr/pull/64) — opened 7 hours ago
-- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 1 day ago · draft
+- PR [#64 lit-bot: phifer++ reminder on Sundays at 11:00 AM ET, in #voidzero only](https://github.com/ChadFarrow/thelounge-candr/pull/64) — opened 11 hours ago
+- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 2 days ago · draft
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 3 days ago
 
 ### Websites
