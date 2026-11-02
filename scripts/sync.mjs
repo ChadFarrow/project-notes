@@ -39,6 +39,8 @@ const listMd = (dir) => (existsSync(dir)
   : []);
 const projectsDir = path.join(root, 'projects');
 const notes = listMd(projectsDir).map((file) => ({ file, text: readFileSync(path.join(projectsDir, file), 'utf8') }));
+const todoFile = path.join(root, 'notes/TODO.md');
+const todoText = existsSync(todoFile) ? readFileSync(todoFile, 'utf8') : '';
 
 // Fetch everything before writing anything: a failed fetch must leave the repo untouched.
 const repos = normalizeRepos(await fetchRepos(token, OWNER));
@@ -55,6 +57,7 @@ const { files, problems, siteData } = buildOutputs({
   auditFiles: listMd(path.join(root, 'audits')),
   degradedReason,
   watched,
+  todoText,
 });
 
 let changed = 0;

@@ -281,7 +281,7 @@ function renderContent() {
   const visible = new Set(data.projects.filter((p) => p.track !== 'no' && matches(p)));
   const active = visibleActive();
 
-  const out = [h('h2', { text: 'Needs you now' }), readySection(visible, byName)];
+  const out = [todoSection(), h('h2', { text: 'Needs you now' }), readySection(visible, byName)];
   if (view.status === 'all') out.push(issuesSection(visible, byName));
   else out.push(h('p', { class: 'note-line', text: 'Issues are hidden while a PR filter is on.' }));
 
@@ -306,6 +306,46 @@ function renderContent() {
   const allOpen = active.length && active.every((p) => opened.has(p.name));
   $('#toggle-all').textContent = allOpen ? 'Close all' : 'Open all';
   $('#toggle-all').hidden = filtering() || !active.length;
+}
+
+// notes/TODO.md, read-only, and the same under every filter: it is not a list of projects.
+// A relative link resolves against that file on GitHub. A link that is not http(s) stays
+// plain text.
+function todoLink(part) {
+  let url;
+  try {
+    url = new URL(part.href, `${REPO_URL}/blob/main/notes/TODO.md`);
+  } catch {
+    return withCode(part.text);
+  }
+  return /^https?:$/.test(url.protocol) ? h('a', { href: url.href }, withCode(part.text)) : withCode(part.text);
+}
+const todoParts = (parts) => parts.map((part) => (part.href ? todoLink(part) : withCode(part.text)));
+
+function todoSection() {
+  const heading = h('h2', { text: 'To do' });
+  const sections = data.todo || [];
+  if (!sections.length) return h('section', { id: 'todo-list' }, heading, h('p', { class: 'empty', text: 'None.' }));
+  const panel = h('div', { class: 'panel' });
+  for (const section of sections) {
+    if (section.title) panel.append(h('p', { class: 'group-title', text: section.title }));
+    let list = null;
+    for (const entry of section.entries) {
+      if (entry.type === 'item') {
+        if (!list) {
+          list = h('ul', { class: 'list' });
+          panel.append(list);
+        }
+        list.append(h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
+          h('span', { class: 'todo-box', 'aria-hidden': 'true' }),
+          h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts))));
+      } else {
+        panel.append(h('p', { class: 'note-line' }, todoParts(entry.parts)));
+        list = null;
+      }
+    }
+  }
+  return h('section', { id: 'todo-list' }, heading, panel);
 }
 
 function readySection(visible, byName) {

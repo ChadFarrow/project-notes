@@ -307,7 +307,8 @@ export function renderAuditsReadme(files) {
 
 // notes: [{ file, text }] from projects/. auditFiles: names already in audits/.
 // watched: the `normalizeWatched` map for the notes' `**Watch:**` entries.
-export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degradedReason, watched }) {
+// todoText: notes/TODO.md. Only the web page shows it; no markdown file here repeats it.
+export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degradedReason, watched, todoText }) {
   const parsed = notes.map((n) => ({ ...n, header: parseHeader(n.text) }));
   const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason), watched });
   const problems = [...model.problems];
@@ -334,6 +335,6 @@ export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degr
   files.set('INDEX.md', renderIndex(model));
   files.set('references/starred.md', renderStarred(stars, generatedAt));
   // The web dashboard's data: published with the site, never committed.
-  const siteData = renderSiteData(model, { ...opts, generatedAtIso: now.toISOString() });
+  const siteData = renderSiteData(model, { ...opts, generatedAtIso: now.toISOString(), todoText });
   return { files, problems, siteData };
 }
