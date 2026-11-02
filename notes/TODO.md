@@ -21,8 +21,6 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## Laptop
 
-- [ ] Delete `~/Vibe/LIT_Bot`. It is a clean clone of an archived repo, made by mistake.
-
 ## project-notes
 
 - [ ] Tap this box on [the dashboard](https://notes.podtards.com), then delete this line. This tests a real save and the page update. The device needs the editing token.
