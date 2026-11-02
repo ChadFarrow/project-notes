@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { normalizeRepos, normalizeWatched } from '../scripts/lib/model.mjs';
+import { removeTodoItem } from '../scripts/lib/notes.mjs';
 import { buildOutputs } from '../scripts/lib/render.mjs';
 import { buildSiteFiles, parseTodoList, siteDirProblem } from '../scripts/lib/site.mjs';
 
@@ -185,17 +186,17 @@ test('siteDirProblem allows only _site inside the repo, and nothing above it', (
 test('the to-do list keeps the sections and items, and leaves out the words above the first heading', () => {
   assert.deepEqual(parseTodoList('# To do\n\n#todo\n\nWords for editors.\n\n## One\n\n- [ ] First\n- [ ] Second\n\n## Two\n\n- [ ] Third\n'), [
     { title: 'One', entries: [
-      { type: 'item', done: false, parts: [{ text: 'First' }] },
-      { type: 'item', done: false, parts: [{ text: 'Second' }] },
+      { type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] },
+      { type: 'item', done: false, lines: ['- [ ] Second'], parts: [{ text: 'Second' }] },
     ] },
-    { title: 'Two', entries: [{ type: 'item', done: false, parts: [{ text: 'Third' }] }] },
+    { title: 'Two', entries: [{ type: 'item', done: false, lines: ['- [ ] Third'], parts: [{ text: 'Third' }] }] },
   ]);
 });
 
 test('the to-do list keeps an item above the first heading, so it never goes missing', () => {
   assert.deepEqual(parseTodoList('# To do\n\nWords.\n\n- [ ] Added on the phone\n\n## One\n\n- [ ] First\n'), [
-    { title: '', entries: [{ type: 'item', done: false, parts: [{ text: 'Added on the phone' }] }] },
-    { title: 'One', entries: [{ type: 'item', done: false, parts: [{ text: 'First' }] }] },
+    { title: '', entries: [{ type: 'item', done: false, lines: ['- [ ] Added on the phone'], parts: [{ text: 'Added on the phone' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] }] },
   ]);
 });
 
@@ -234,7 +235,7 @@ test('the to-do list reads Windows line endings, and takes an indented item as a
 
 test('the to-do list drops an empty item and a heading with nothing under it', () => {
   assert.deepEqual(parseTodoList('## Empty\n\n## One\n- [ ]\n-\n- [ ] Real\n'), [
-    { title: 'One', entries: [{ type: 'item', done: false, parts: [{ text: 'Real' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], parts: [{ text: 'Real' }] }] },
   ]);
 });
 
@@ -254,4 +255,46 @@ test('the to-do list stays out of the generated markdown', () => {
   const { files } = run();
   const markdown = [...files.values()].join('\n');
   assert.ok(!markdown.includes('only-in-the-todo-file'));
+});
+
+test('the to-do list keeps the source lines of an item, wrapped lines too, so the page can delete it', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] Starts here\n  and goes on\n\nA line of text\n');
+  assert.deepEqual(entries[0].lines, ['- [ ] Starts here', 'and goes on']);
+  assert.equal(entries[1].lines, undefined);
+});
+
+test('removeTodoItem deletes the line and leaves every other byte as it was', () => {
+  const before = '# To do  \r\n\r\n## One\n\n- [ ] First\n- [ ] Second  \r\n\n## Two\n- [ ] Third';
+  assert.equal(removeTodoItem(before, ['- [ ] First']), '# To do  \r\n\r\n## One\n\n- [ ] Second  \r\n\n## Two\n- [ ] Third');
+  assert.equal(removeTodoItem(before, ['- [ ] Second']), '# To do  \r\n\r\n## One\n\n- [ ] First\n\n## Two\n- [ ] Third');
+  assert.equal(removeTodoItem(before, ['- [ ] Third']), '# To do  \r\n\r\n## One\n\n- [ ] First\n- [ ] Second  \r\n\n## Two\n');
+});
+
+test('removeTodoItem deletes the wrapped lines of an item with it', () => {
+  assert.equal(removeTodoItem('## One\n- [ ] Starts here\n  and goes on\n- [ ] Next\n', ['- [ ] Starts here', 'and goes on']), '## One\n- [ ] Next\n');
+});
+
+test('removeTodoItem returns null when the item is not in the file any more', () => {
+  assert.equal(removeTodoItem('## One\n- [ ] Other\n', ['- [ ] Gone']), null);
+  assert.equal(removeTodoItem('', ['- [ ] Gone']), null);
+});
+
+test('removeTodoItem compares whole lines, so a longer line with the same start stays', () => {
+  assert.equal(removeTodoItem('- [ ] Test the app on a phone\n', ['- [ ] Test the app']), null);
+  assert.equal(removeTodoItem('- [ ] Starts here\n  and went elsewhere\n', ['- [ ] Starts here', 'and goes on']), null);
+});
+
+test('removeTodoItem deletes only the first of two identical items', () => {
+  assert.equal(removeTodoItem('- [ ] Same\n- [ ] Same\n', ['- [ ] Same']), '- [ ] Same\n');
+});
+
+test('an item parsed from the file can be deleted from it, and the rest of the list stays', () => {
+  const text = '# To do\n\nWords.\n\n- [ ] Up here\n\n## One\n\n- [ ] Test [PR #7](https://example.com/7) on a phone\n  and goes on\n- [x] Ticked\n\nA line.\n\n## Two\n\n- Plain `code`\n';
+  const items = parseTodoList(text).flatMap((s) => s.entries).filter((e) => e.type === 'item');
+  assert.equal(items.length, 4);
+  for (const item of items) {
+    const after = parseTodoList(removeTodoItem(text, item.lines)).flatMap((s) => s.entries).filter((e) => e.type === 'item');
+    assert.equal(after.length, items.length - 1, item.lines[0]);
+    assert.ok(!after.some((e) => e.lines[0] === item.lines[0]), item.lines[0]);
+  }
 });

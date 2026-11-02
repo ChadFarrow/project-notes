@@ -449,3 +449,16 @@ export function matchCategory(input, known) {
   const key = (s) => s.toLowerCase().replace(/\s+/g, '');
   return known.find((k) => key(k) === key(clean)) || clean;
 }
+
+// Deletes one item from the text of notes/TODO.md and returns the new text, or null when
+// the item is not there any more. `lines`: the item's source lines, trimmed, from
+// `parseTodoList`. It compares whole trimmed lines. Every other byte stays as it was.
+export function removeTodoItem(source, lines) {
+  const chunks = source.match(/[^\n]*\n|[^\n]+$/g) || [];
+  for (let i = 0; i + lines.length <= chunks.length; i++) {
+    if (lines.every((line, k) => chunks[i + k].trim() === line)) {
+      return [...chunks.slice(0, i), ...chunks.slice(i + lines.length)].join('');
+    }
+  }
+  return null;
+}

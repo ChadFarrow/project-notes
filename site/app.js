@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, matchCategory, readNoteForm } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, matchCategory, readNoteForm, removeTodoItem } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -173,6 +173,7 @@ async function start() {
         h('a', { href: `${REPO_URL}/blob/main/LATEST.md` }, 'LATEST.md on GitHub'), '.')));
     return;
   }
+  hideRemovedTodos();
   renderHeader();
   setupControls();
   renderContent();
@@ -308,9 +309,9 @@ function renderContent() {
   $('#toggle-all').hidden = filtering() || !active.length;
 }
 
-// notes/TODO.md, read-only, and the same under every filter: it is not a list of projects.
-// A relative link resolves against that file on GitHub. A link that is not http(s) stays
-// plain text.
+// notes/TODO.md, the same under every filter: it is not a list of projects. A relative
+// link resolves against that file on GitHub. A link that is not http(s) stays plain text.
+// The box of an item deletes its line from the file (`askRemoveTodo`).
 function todoLink(part) {
   let url;
   try {
@@ -321,6 +322,29 @@ function todoLink(part) {
   return /^https?:$/.test(url.protocol) ? h('a', { href: url.href }, withCode(part.text)) : withCode(part.text);
 }
 const todoParts = (parts) => parts.map((part) => (part.href ? todoLink(part) : withCode(part.text)));
+const todoWords = (entry) => entry.parts.map((part) => part.text).join('');
+const todoKey = (entry) => (entry.lines || []).join('\n');
+
+function dropTodoItems(keys) {
+  data.todo = (data.todo || [])
+    .map((s) => ({ ...s, entries: s.entries.filter((e) => !keys.has(todoKey(e))) }))
+    .filter((s) => s.entries.length);
+}
+
+// A deleted item stays in data.json until the next sync has run, so this browser remembers
+// the delete until newer data arrives. Without storage the item only comes back for those
+// minutes, and a second delete then finds nothing to do.
+function hideRemovedTodos() {
+  const removed = store.get('todoRemoved', []).filter((r) => r.at > data.generatedAtIso);
+  store.set('todoRemoved', removed);
+  dropTodoItems(new Set(removed.map((r) => r.key)));
+}
+
+function rememberRemovedTodo(entry) {
+  const key = todoKey(entry);
+  store.set('todoRemoved', [...store.get('todoRemoved', []), { key, at: new Date().toISOString() }]);
+  dropTodoItems(new Set([key]));
+}
 
 function todoSection() {
   const heading = h('h2', { text: 'To do' });
@@ -337,7 +361,7 @@ function todoSection() {
           panel.append(list);
         }
         list.append(h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
-          h('span', { class: 'todo-box', 'aria-hidden': 'true' }),
+          h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
           h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts))));
       } else {
         panel.append(h('p', { class: 'note-line' }, todoParts(entry.parts)));
@@ -590,6 +614,29 @@ function putNote(file, text, sha, message) {
   });
 }
 
+const TODO_PATH = `/repos/${REPO}/contents/notes/TODO.md`;
+
+// Deletes an item from the file on GitHub, and returns false when the file does not have
+// it any more. It reads the file first, because this page's data can be hours older, and
+// again after a conflict. The push starts the sync (`notes/TODO.md` is in the workflow's
+// push paths), so this needs no dispatch and no Actions access.
+async function deleteTodoItem(entry) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const res = await gh(`${TODO_PATH}?ref=main`);
+    if (!res.ok) throw await apiError(res, 'read the to-do list');
+    const file = await res.json();
+    const text = removeTodoItem(decodeBase64(file.content), entry.lines);
+    if (text === null) return false;
+    const put = await gh(TODO_PATH, {
+      method: 'PUT',
+      body: JSON.stringify({ message: `To do, done: ${todoWords(entry).slice(0, 60)}`, content: encodeBase64(text), sha: file.sha, branch: 'main' }),
+    });
+    if (put.ok) return true;
+    if (put.status !== 409 && put.status !== 422) throw await apiError(put, 'save the to-do list');
+  }
+  throw new UserError('The to-do list kept changing on GitHub, so nothing is saved. Try again.');
+}
+
 async function startSync() {
   const res = await gh(`/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, {
     method: 'POST',
@@ -754,6 +801,47 @@ async function saveChanges(p, note, opened, changes) {
       : 'Saved. The dashboard shows the change after the next sync (within about 5 hours), because this token cannot start the sync.';
   }
   return 'Saved.';
+}
+
+// A tap on a to-do box asks first, so a mistaken tap removes nothing.
+function askRemoveTodo(entry) {
+  if (!token) {
+    openTokenDialog(() => askRemoveTodo(entry));
+    return;
+  }
+  const dlg = $('#todo-dialog');
+  setupSheet(dlg);
+  const status = h('p', { class: 'status', role: 'status' });
+  const remove = h('button', { type: 'button', class: 'primary' }, 'Delete the line');
+  const newToken = h('button', { type: 'button', hidden: true, onclick: () => openTokenDialog() }, 'Paste a new token');
+  const cancel = h('button', { type: 'button', class: 'cancel-button', onclick: () => dlg.close() }, 'Cancel');
+  sheet(dlg, 'todo-title', 'Mark this done?',
+    h('div', { class: 'sheet-body' },
+      h('p', { class: 'item-title' }, withCode(todoWords(entry))),
+      h('p', { class: 'note-line', text: 'This deletes the line from notes/TODO.md on GitHub.' })),
+    h('div', { class: 'sheet-foot' }, status, newToken, cancel, remove));
+  remove.addEventListener('click', async () => {
+    remove.disabled = true;
+    newToken.hidden = true;
+    setStatus(status, '', 'Saving…');
+    try {
+      const deleted = await deleteTodoItem(entry);
+      rememberRemovedTodo(entry);
+      renderContent();
+      if (deleted) {
+        dlg.close();
+        return;
+      }
+      setStatus(status, '', 'This line is not in the file on GitHub any more, so nothing changed. It may be deleted or reworded already.');
+      remove.hidden = true;
+      cancel.textContent = 'Close';
+    } catch (err) {
+      setStatus(status, 'bad', messageFor(err));
+      newToken.hidden = err.kind !== 'auth';
+      remove.disabled = false;
+    }
+  });
+  if (!dlg.open) dlg.showModal();
 }
 
 function field(labelText, control, ...rest) {
