@@ -56,7 +56,9 @@ function todoParts(text) {
 // text, and the page never reads it as HTML. The words above the first heading are for
 // whoever edits the file, so only list items are kept from there: an item added in the
 // wrong place must still show. A link stays as written; the page resolves a relative one
-// against the file on GitHub and shows any link that is not http(s) as plain text.
+// against the file on GitHub and shows any link that is not http(s) as plain text. An
+// item keeps its source `lines`, trimmed, so the page can find it and delete it from the
+// file (`removeTodoItem` in notes.mjs).
 export function parseTodoList(text) {
   let section = { title: '', entries: [] };
   const sections = [section];
@@ -74,10 +76,11 @@ export function parseTodoList(text) {
       aboveFirstHeading = false;
       open = null;
     } else if (item) {
-      open = { type: 'item', done: /x/i.test(item[1] ?? ''), text: item[2] ?? '' };
+      open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: item[2] ?? '' };
       section.entries.push(open);
     } else if (open) {
       open.text += ` ${line}`;
+      open.lines?.push(line);
     } else if (!aboveFirstHeading) {
       open = { type: 'text', text: line };
       section.entries.push(open);

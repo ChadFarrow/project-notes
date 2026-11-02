@@ -169,6 +169,9 @@ const api = {
   revoked: false,
   goodToken: 'good-token',
   nextSha: 100,
+  todo: { text: TODO_TEXT, sha: 'todo-0' },
+  todoPuts: [],
+  todoConflictOnce: false,
 };
 
 // The tokens the stand-in knows, and what each may do. Any other token is refused.
@@ -190,7 +193,26 @@ function answer(method, url, auth, body) {
     api.probes++;
     return may.write ? [409, { message: 'README.md does not match' }] : FORBIDDEN;
   }
-  const note = /^\/repos\/ChadFarrow\/project-notes\/contents\/projects\/(.+)$/.exec(u.pathname);
+  if (u.pathname === `/repos/${REPO}/contents/notes/TODO.md`) {
+    if (method === 'GET') return [200, { encoding: 'base64', content: b64(api.todo.text).replace(/(.{60})/g, '$1\n'), sha: api.todo.sha }];
+    if (method === 'PUT') {
+      if (!may.write) return FORBIDDEN;
+      const put = JSON.parse(body);
+      api.todoPuts.push({ ...put, text: fromB64(put.content) });
+      if (api.todoConflictOnce) {
+        // Someone else saved the file first.
+        api.todoConflictOnce = false;
+        api.todo.text = `${api.todo.text}\n- [ ] Added in Obsidian\n`;
+        api.todo.sha = `todo-${api.nextSha++}`;
+        return [409, { message: 'is at a different sha' }];
+      }
+      if (put.sha !== api.todo.sha) return [409, { message: 'sha does not match' }];
+      api.todo.text = fromB64(put.content);
+      api.todo.sha = `todo-${api.nextSha++}`;
+      return [200, { content: { sha: api.todo.sha } }];
+    }
+  }
+  const note =/^\/repos\/ChadFarrow\/project-notes\/contents\/projects\/(.+)$/.exec(u.pathname);
   if (note) {
     const file = decodeURIComponent(note[1]);
     const stored = api.notes.get(file);
@@ -441,6 +463,7 @@ async function main() {
     const todoItems = (data.todo || []).flatMap((s) => s.entries).filter((e) => e.type === 'item').length;
     check('the to-do list comes first on the board', (await text('#content h2')) === 'To do');
     check('the to-do list shows every item', (await count('#todo-list .todo-item')) === todoItems, `${todoItems} items`);
+    check('every to-do item has a box to mark it done', (await count('#todo-list .todo-item button.todo-box')) === todoItems);
 
     if (!HOST && !DATA_FILE) {
       check('the to-do list shows the sections in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)')) === js(['app-one', 'Laptop']));
@@ -527,6 +550,10 @@ async function main() {
     if (EDITOR_CHECKS) {
       await clearStorage();
       await go();
+      await click('#todo-list .todo-box');
+      check('a to-do box without a token asks for one', await waitFor('document.querySelector("#token-dialog").open'));
+      check('the to-do sheet waits for the token', !(await evaluate('document.querySelector("#todo-dialog").open')));
+      await evaluate('document.querySelector("#token-dialog").close()');
       await click('article.project[data-project="app-one"] .edit-button');
       check('Edit without a token asks for one', await waitFor('document.querySelector("#token-dialog").open'));
       await fill('#t-token', 'wrong-token');
@@ -666,6 +693,89 @@ async function main() {
         && (await evaluate('localStorage.getItem("pn:token")')) === js('nosync-token'));
       await click('#token-dialog .primary');
       await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+
+      // ---- deleting a to-do item ----
+      const tapBox = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')]
+        .find((li) => li.textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
+      const showsItem = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].some((li) => li.textContent.includes(${js(words)}))`);
+      const sheetOpen = 'document.querySelector("#todo-dialog").open';
+      const FOLDER = 'Delete a folder.';
+      const withoutFolder = TODO_TEXT.replace(`- [ ] ${FOLDER}\n`, '');
+
+      await go();
+      await tapBox(FOLDER);
+      check('a to-do box asks first and saves nothing', await waitFor(sheetOpen)
+        && (await text('#todo-dialog'))?.includes(FOLDER) && api.todoPuts.length === 0);
+      await click('#todo-dialog .cancel-button');
+      check('Cancel keeps the item and saves nothing', await waitFor(`!${sheetOpen}`) && (await showsItem(FOLDER)) && api.todoPuts.length === 0);
+
+      const dispatchesBefore = api.dispatches;
+      await tapBox(FOLDER);
+      await waitFor(sheetOpen);
+      await shoot('todo-sheet', { full: false });
+      await click('#todo-dialog .primary');
+      check('Delete closes the sheet', await waitFor(`!${sheetOpen}`));
+      check('the saved bytes are the file without that line', api.todoPuts.length === 1 && api.todoPuts[0].text === withoutFolder && api.todo.text === withoutFolder);
+      check('the delete commits to main and names the item', api.todoPuts[0]?.branch === 'main' && api.todoPuts[0]?.message.includes(FOLDER));
+      check('the page starts no sync: the push does that', api.dispatches === dispatchesBefore);
+      check('the item leaves the page at once', !(await showsItem(FOLDER)));
+      check('a section with nothing left leaves the page', !(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].some((t) => t.textContent === "Laptop")')));
+      await go();
+      check('the item stays away after a reload, while the data is older than the delete', !(await showsItem(FOLDER)));
+
+      // Data newer than the delete decides again. Here the data still has the line.
+      await evaluate(`localStorage.setItem('pn:todoRemoved', JSON.stringify(JSON.parse(localStorage.getItem('pn:todoRemoved')).map((r) => ({ ...r, at: '2000-01-01T00:00:00.000Z' }))))`);
+      await go();
+      check('newer data ends the memory of a delete', await showsItem(FOLDER));
+      check('the memory of an old delete is cleared', (await evaluate('localStorage.getItem("pn:todoRemoved")')) === '[]');
+
+      // The page still shows the line, but the file on GitHub has lost it.
+      const putsBefore = api.todoPuts.length;
+      await tapBox(FOLDER);
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('an item that left the file is not saved again, and the sheet says so',
+        await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("not in the file")') && api.todoPuts.length === putsBefore);
+      check('that item leaves the page too', !(await showsItem(FOLDER)));
+      await click('#todo-dialog .cancel-button');
+
+      // Someone else saved the file while the sheet was open.
+      api.todoConflictOnce = true;
+      await tapBox('A finished item');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a conflict is retried and keeps the other edit', await waitFor(`!${sheetOpen}`)
+        && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A finished item'));
+
+      // The token stops working.
+      api.revoked = true;
+      await tapBox('PR #7');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a revoked token says what to do and offers a new one', await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("token")')
+        && await evaluate(`[...document.querySelectorAll('#todo-dialog .sheet-foot button')].some((b) => b.textContent === 'Paste a new token' && !b.hidden)`));
+      check('the item stays when the save fails', await showsItem('PR #7'));
+      api.revoked = false;
+      await click('#todo-dialog .cancel-button');
+
+      // A token that may read but not write.
+      await evaluate(`localStorage.setItem('pn:token', ${js(js('readonly-token'))})`);
+      await go();
+      await tapBox('PR #7');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a token that cannot write says so', await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("Contents")'));
+      await click('#todo-dialog .cancel-button');
+      await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+      await go();
+
+      await tapBox('<img src=x');
+      await waitFor(sheetOpen);
+      check('HTML in the to-do sheet stays text', await evaluate('!document.querySelector("#todo-dialog img") && window.__xss === undefined')
+        && (await text('#todo-dialog'))?.includes('<img src=x'));
+      const strayTodo = await strayText('document.querySelector("#todo-dialog")');
+      check('no stray null or undefined text in the to-do sheet', strayTodo.length === 0, strayTodo.join(', '));
+      await click('#todo-dialog .cancel-button');
     }
 
     // ---- plain http: no token is taken ----
@@ -706,6 +816,16 @@ async function main() {
       const smallInEditor = await smallTargets();
       check('every control in the editor is at least 24 by 24 px', smallInEditor.length === 0, smallInEditor.map((s) => s.join(' ')).join(' | '));
       await shoot('editor-mobile', { full: false });
+      await evaluate('document.querySelector("#editor").close()');
+
+      await click('#todo-list .todo-box');
+      await waitFor('document.querySelector("#todo-dialog").open');
+      const todoSheetOverflow = await evaluate('(() => { const d = document.querySelector("#todo-dialog .sheet-body"); return d.scrollWidth - d.clientWidth; })()');
+      check('the to-do sheet fits the phone width', todoSheetOverflow <= 0, `${todoSheetOverflow}px`);
+      const smallInTodo = await smallTargets();
+      check('every control in the to-do sheet is at least 24 by 24 px', smallInTodo.length === 0, smallInTodo.map((s) => s.join(' ')).join(' | '));
+      await shoot('todo-sheet-mobile', { full: false });
+      await click('#todo-dialog .cancel-button');
     }
     await send('Emulation.clearDeviceMetricsOverride');
 
