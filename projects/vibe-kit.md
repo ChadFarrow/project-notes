@@ -22,5 +22,9 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-_No open work._
+### Branches with no open PR (3)
+
+- [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule)
+- [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main)
+- [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope)
 <!-- AUTO:END -->

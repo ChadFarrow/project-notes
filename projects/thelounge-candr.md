@@ -34,9 +34,8 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (3)
+### Pull requests (2)
 
-- [#64 lit-bot: phifer++ reminder on Sundays at 11:00 AM ET, in #voidzero only](https://github.com/ChadFarrow/thelounge-candr/pull/64) — opened 2026-11-01
 - [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 2026-10-31 · draft
 - [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 2026-10-29
 <!-- AUTO:END -->
