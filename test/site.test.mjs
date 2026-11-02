@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { normalizeRepos, normalizeWatched } from '../scripts/lib/model.mjs';
 import { buildOutputs } from '../scripts/lib/render.mjs';
-import { buildSiteFiles, siteDirProblem } from '../scripts/lib/site.mjs';
+import { buildSiteFiles, parseTodoList, siteDirProblem } from '../scripts/lib/site.mjs';
 
 const pages = JSON.parse(readFileSync(new URL('./fixtures/repos-pages.json', import.meta.url)));
 const NOW = new Date('2026-09-27T12:00:00Z');
@@ -19,10 +19,25 @@ const WATCHED = normalizeWatched({ data: { r0: {
   pushedAt: '2026-09-27T08:00:00Z', pullRequests: { totalCount: 0 }, issues: { totalCount: 4 }, mine: { totalCount: 1 },
 } } }, ['upstream/thing']);
 
+const TODO_TEXT = [
+  '# To do',
+  '',
+  '#todo',
+  '',
+  'Words for whoever edits this file.',
+  '',
+  '## app-one',
+  '',
+  '- [ ] Test [PR #7](https://example.com/only-in-the-todo-file) on a phone.',
+  '',
+  'More in [the note](../projects/app-one.md).',
+  '',
+].join('\n');
+
 function run(degradedReason = null) {
   const out = buildOutputs({
     owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], notes: NOTES,
-    auditFiles: [], degradedReason, watched: WATCHED,
+    auditFiles: [], degradedReason, watched: WATCHED, todoText: TODO_TEXT,
   });
   return { ...out, data: JSON.parse(out.siteData) };
 }
@@ -120,9 +135,9 @@ test('site data never carries bodies, marker sources or untracked work', () => {
   assert.doesNotMatch(siteData, /hidden-repo\/(issues|pull)/);
 });
 
-test('every URL in the site data is already public in the generated markdown', () => {
+test('every URL in the site data is already public in the markdown of the repo', () => {
   const { siteData, files } = run();
-  const markdown = [...files.values()].join('\n');
+  const markdown = [...files.values(), TODO_TEXT].join('\n');
   const urls = [...siteData.matchAll(/"(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
   assert.ok(urls.length > 10);
   for (const url of urls) assert.ok(markdown.includes(url), url);
@@ -165,4 +180,78 @@ test('siteDirProblem allows only _site inside the repo, and nothing above it', (
   for (const dir of ['/work/project-notes/_site', '/work/project-notes/_site/x', '/tmp/runner/site', '/work/project-notes-site']) {
     assert.equal(siteDirProblem(root, dir), null, dir);
   }
+});
+
+test('the to-do list keeps the sections and items, and leaves out the words above the first heading', () => {
+  assert.deepEqual(parseTodoList('# To do\n\n#todo\n\nWords for editors.\n\n## One\n\n- [ ] First\n- [ ] Second\n\n## Two\n\n- [ ] Third\n'), [
+    { title: 'One', entries: [
+      { type: 'item', done: false, parts: [{ text: 'First' }] },
+      { type: 'item', done: false, parts: [{ text: 'Second' }] },
+    ] },
+    { title: 'Two', entries: [{ type: 'item', done: false, parts: [{ text: 'Third' }] }] },
+  ]);
+});
+
+test('the to-do list keeps an item above the first heading, so it never goes missing', () => {
+  assert.deepEqual(parseTodoList('# To do\n\nWords.\n\n- [ ] Added on the phone\n\n## One\n\n- [ ] First\n'), [
+    { title: '', entries: [{ type: 'item', done: false, parts: [{ text: 'Added on the phone' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, parts: [{ text: 'First' }] }] },
+  ]);
+});
+
+test('the to-do list marks a ticked item as done and takes a plain bullet as an open item', () => {
+  const [{ entries }] = parseTodoList('## One\n- [x] Ticked\n- [X] Also ticked\n- [ ] Open\n* Plain\n');
+  assert.deepEqual(entries.map((e) => [e.done, e.parts[0].text]), [
+    [true, 'Ticked'], [true, 'Also ticked'], [false, 'Open'], [false, 'Plain'],
+  ]);
+});
+
+test('the to-do list splits links from the text and keeps a relative link as written', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] Test [PR #7](https://example.com/7) in `~/x`, see [note](../projects/a.md).\n');
+  assert.deepEqual(entries[0].parts, [
+    { text: 'Test ' },
+    { text: 'PR #7', href: 'https://example.com/7' },
+    { text: ' in `~/x`, see ' },
+    { text: 'note', href: '../projects/a.md' },
+    { text: '.' },
+  ]);
+});
+
+test('the to-do list keeps a line of text in a section', () => {
+  const [{ entries }] = parseTodoList('## One\n\nFive more in [the note](../a.md).\n');
+  assert.deepEqual(entries, [{ type: 'text', parts: [{ text: 'Five more in ' }, { text: 'the note', href: '../a.md' }, { text: '.' }] }]);
+});
+
+test('the to-do list joins a wrapped line to the item or text above it', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] Starts here\n  and goes on\n\nA line\nof text\n');
+  assert.deepEqual(entries.map((e) => e.parts[0].text), ['Starts here and goes on', 'A line of text']);
+});
+
+test('the to-do list reads Windows line endings, and takes an indented item as an item', () => {
+  const [{ entries }] = parseTodoList('## One\r\n- [ ] First\r\n  - [ ] Inner\r\n');
+  assert.deepEqual(entries.map((e) => [e.type, e.parts[0].text]), [['item', 'First'], ['item', 'Inner']]);
+});
+
+test('the to-do list drops an empty item and a heading with nothing under it', () => {
+  assert.deepEqual(parseTodoList('## Empty\n\n## One\n- [ ]\n-\n- [ ] Real\n'), [
+    { title: 'One', entries: [{ type: 'item', done: false, parts: [{ text: 'Real' }] }] },
+  ]);
+});
+
+test('the to-do list is empty when the file is empty or missing', () => {
+  assert.deepEqual(parseTodoList(''), []);
+  assert.deepEqual(parseTodoList(null), []);
+  assert.deepEqual(parseTodoList('# To do\n\nOnly words.\n'), []);
+});
+
+test('site data carries the to-do list', () => {
+  const { data } = run();
+  assert.deepEqual(data.todo, parseTodoList(TODO_TEXT));
+  assert.equal(data.todo[0].title, 'app-one');
+});
+
+test('the to-do list stays out of the generated markdown', () => {
+  const { files } = run();
+  const markdown = [...files.values()].join('\n');
+  assert.ok(!markdown.includes('only-in-the-todo-file'));
 });

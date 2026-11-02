@@ -7,12 +7,13 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch:  # Manual trigger; the web dashboard and the vault sync also start it
   push:
-    # A change to the page or the generator redeploys the web dashboard. Not
-    # projects/**: every Obsidian save would then start a run.
+    # A change to the page, the generator or the to-do list redeploys the web dashboard.
+    # Not projects/**: every Obsidian save would then start a run.
     branches: [main]
     paths:
       - 'site/**'
       - 'scripts/**'
+      - 'notes/TODO.md'
       - '.github/workflows/sync-all.yml'
 
 concurrency:

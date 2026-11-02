@@ -1,6 +1,6 @@
 // Pure JSON output for the web dashboard: model → the data.json that site/app.js reads.
-// It carries only what LATEST.md, INDEX.md and the note AUTO blocks already publish:
-// the site is public, and some of these repos are private. Item bodies never get here.
+// It carries only what LATEST.md, INDEX.md, the note AUTO blocks and notes/TODO.md already
+// publish: the site is public, and some of these repos are private. Item bodies never get here.
 
 import { createHash } from 'node:crypto';
 import {
@@ -33,6 +33,64 @@ export function siteDirProblem(root, dir) {
   if (inside(dir, root)) return `--site ${dir} is the repo or a folder above it`;
   if (inside(root, dir) && !inside(`${root}/_site`, dir)) return `--site ${dir} is inside the repo; use _site or a folder outside it`;
   return null;
+}
+
+const TODO_HEADING = /^##+\s+(.*)$/;
+const TODO_ITEM = /^[-*+](?:\s+(?:\[([ xX])\](?:\s+|$))?(.*))?$/;
+const TODO_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+function todoParts(text) {
+  const parts = [];
+  let at = 0;
+  for (const m of text.matchAll(TODO_LINK)) {
+    if (m.index > at) parts.push({ text: text.slice(at, m.index) });
+    parts.push({ text: m[1], href: m[2] });
+    at = m.index + m[0].length;
+  }
+  if (at < text.length) parts.push({ text: text.slice(at) });
+  return parts;
+}
+
+// notes/TODO.md → the To do list on the web page. A small reader, not a Markdown parser:
+// `## ` headings, list items, lines of text and [links](url). Everything else stays plain
+// text, and the page never reads it as HTML. The words above the first heading are for
+// whoever edits the file, so only list items are kept from there: an item added in the
+// wrong place must still show. A link stays as written; the page resolves a relative one
+// against the file on GitHub and shows any link that is not http(s) as plain text.
+export function parseTodoList(text) {
+  let section = { title: '', entries: [] };
+  const sections = [section];
+  let aboveFirstHeading = true;
+  let open = null; // The entry that a wrapped line continues.
+  for (const raw of String(text ?? '').split(/\r?\n/)) {
+    const line = raw.trim();
+    const heading = TODO_HEADING.exec(line);
+    const item = TODO_ITEM.exec(line);
+    if (!line) {
+      open = null;
+    } else if (heading) {
+      section = { title: heading[1], entries: [] };
+      sections.push(section);
+      aboveFirstHeading = false;
+      open = null;
+    } else if (item) {
+      open = { type: 'item', done: /x/i.test(item[1] ?? ''), text: item[2] ?? '' };
+      section.entries.push(open);
+    } else if (open) {
+      open.text += ` ${line}`;
+    } else if (!aboveFirstHeading) {
+      open = { type: 'text', text: line };
+      section.entries.push(open);
+    }
+  }
+  return sections
+    .map(({ title, entries }) => ({
+      title,
+      entries: entries
+        .filter((e) => e.text.trim())
+        .map(({ text: words, ...entry }) => ({ ...entry, parts: todoParts(words.trim()) })),
+    }))
+    .filter((s) => s.entries.length);
 }
 
 const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
@@ -69,7 +127,7 @@ function projectData(p, model) {
   };
 }
 
-export function renderSiteData(model, { generatedAt, generatedAtIso, degradedReason, problems }) {
+export function renderSiteData(model, { generatedAt, generatedAtIso, degradedReason, problems, todoText }) {
   const tracked = model.projects.filter((p) => p.track !== 'no');
   const active = activeProjects(tracked);
   const rest = model.projects.filter((p) => !active.includes(p));
@@ -83,6 +141,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     generatedAtIso,
     degradedReason: degradedReason || null,
     thresholds: { idleDays: IDLE_DAYS, staleDays: STALE_DAYS },
+    todo: parseTodoList(todoText),
     totals: {
       prs: sum((p) => p.prsTotal),
       issues: sum((p) => p.issuesTotal),

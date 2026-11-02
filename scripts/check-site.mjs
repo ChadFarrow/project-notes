@@ -91,6 +91,30 @@ const NOTES = [
   { file: 'upstream-fork.md', text: '# upstream-fork\n\n**Track:** upstream  \n**Watch:** upstream/thing  \n' },
 ];
 
+// The to-do list: a real link, a relative one, a ticked item, and text that must stay text.
+const TODO_TEXT = [
+  '# To do',
+  '',
+  '#todo',
+  '',
+  'Words for whoever edits this file.',
+  '',
+  '## app-one',
+  '',
+  '- [ ] Test [PR #7](https://github.com/ChadFarrow/app-one/pull/7) on a phone, in `~/Vibe/app-one`.',
+  '- [x] A finished item',
+  '- [ ] <img src=x onerror="window.__xss=1"> stays text',
+  '- [ ] A [bad link](javascript:window.__xss=1) stays text',
+  `- [ ] A long path \`~/Vibe/${'a'.repeat(120)}\` wraps`,
+  '',
+  'Two older items are in [the app-one note](../projects/app-one.md).',
+  '',
+  '## Laptop',
+  '',
+  '- [ ] Delete a folder.',
+  '',
+].join('\n');
+
 // What fetchWatched would return for that Watch line: a private repo, counts only.
 const WATCHED = normalizeWatched({ data: { r0: {
   nameWithOwner: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
@@ -110,7 +134,7 @@ async function siteFiles() {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
     ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
-      auditFiles: [], degradedReason: null, watched: WATCHED,
+      auditFiles: [], degradedReason: null, watched: WATCHED, todoText: TODO_TEXT,
     }));
   }
   const notesSource = await readFile(path.join(ROOT, 'scripts/lib/notes.mjs'), 'utf8');
@@ -413,7 +437,24 @@ async function main() {
     check('no stray null or undefined text on the board', strayOnLoad.length === 0, strayOnLoad.join(', '));
     await shoot('board-desktop');
 
+    // `todo || []`: the live site's data may predate the field (--host).
+    const todoItems = (data.todo || []).flatMap((s) => s.entries).filter((e) => e.type === 'item').length;
+    check('the to-do list comes first on the board', (await text('#content h2')) === 'To do');
+    check('the to-do list shows every item', (await count('#todo-list .todo-item')) === todoItems, `${todoItems} items`);
+
     if (!HOST && !DATA_FILE) {
+      check('the to-do list shows the sections in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)')) === js(['app-one', 'Laptop']));
+      check('the to-do list leaves out the words for editors', !(await text('#todo-list'))?.includes('Words for whoever edits'));
+      check('a line of text in the to-do list shows', (await text('#todo-list'))?.includes('Two older items are in the app-one note.'));
+      check('a link in the to-do list goes to its address', await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/ChadFarrow/app-one/pull/7"]')`));
+      check('a relative link in the to-do list goes to the file on GitHub',
+        await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/${REPO}/blob/main/projects/app-one.md"]')`));
+      check('a link that is not http(s) stays plain text', await evaluate(`![...document.querySelectorAll('#todo-list a')].some((a) => !a.href.startsWith('https:'))`)
+        && (await text('#todo-list'))?.includes('A bad link stays text'));
+      check('HTML in the to-do list stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined`)
+        && (await text('#todo-list'))?.includes('<img src=x'));
+      check('a code span in the to-do list is marked as code', await evaluate(`[...document.querySelectorAll('#todo-list code')].some((c) => c.textContent === '~/Vibe/app-one')`));
+      check('a ticked item in the to-do list looks done', (await text('#todo-list .todo-item.done'))?.includes('A finished item') && (await count('#todo-list .todo-item.done')) === 1);
       check('a conflicting PR lights a red lamp', await evaluate(`[...document.querySelectorAll('[data-project="app-one"] .disclose .lamp.bad')].some((l) => l.title.startsWith('#3:'))`));
       check('a running check lights an amber lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.wait[title^="#10:"]')`));
       check('a draft shows a hollow lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.draft[title^="#2:"]')`));
@@ -445,6 +486,7 @@ async function main() {
         && [...b.querySelectorAll('.item > .lamp')].every((l) => l.classList.contains('bad')))`));
     const strayFiltered = await strayText();
     check('no stray null or undefined text with a filter on', strayFiltered.length === 0, strayFiltered.join(', '));
+    check('the to-do list stays while a filter is on', (await count('#todo-list .todo-item')) === todoItems);
     await go();
     check('the chosen filter is remembered after a reload', await evaluate('document.querySelector(\'#status-filter input[value="conflict"]\').checked'));
     await click('#status-filter input[value="all"]');
@@ -641,6 +683,8 @@ async function main() {
     await go();
     const overflow = () => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
     check('the phone layout has no sideways scroll', (await overflow()) <= 0, `${await overflow()}px`);
+    const todoOverflow = await evaluate('(() => { const l = document.querySelector("#todo-list"); return l ? l.scrollWidth - l.clientWidth : 1; })()');
+    check('the to-do list fits the phone width', todoOverflow <= 0, `${todoOverflow}px`);
     await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=false]")) b.click();
       for (const d of document.querySelectorAll("details")) d.open = true;`);
     await sleep(150);
