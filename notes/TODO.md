@@ -32,6 +32,7 @@ blank line ends the group.
   - [ ] Open the full player with the Safari bar shown. Its bottom is not behind the bar. Close it, and the page is at the same place.
   - [ ] Rotate to landscape. The dock is one row, and no control is under the notch.
   - [ ] Scroll to the end of a page with nothing playing. The footer is clear of the home indicator.
+- [ ] After Spencer merges the OPML PR, import the live OPML link into your podcast app and on iPhone Safari, then tell Claude the result.
 
 ## thelounge-candr
 
