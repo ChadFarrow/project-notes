@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-02 23:56 UTC
+# Dashboard — 2026-11-03 00:23 UTC
 
 20 open PRs · 9 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -83,9 +83,9 @@
 
 5 PRs · 2 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 2 days ago · draft
 - PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 6 hours ago
-- PR [#507 Read item-level \<podcast:funding\> and list support links in the boost modal](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
+- PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
+- PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 2 days ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 37 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
