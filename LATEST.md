@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-03 04:19 UTC
+# Dashboard — 2026-11-03 04:50 UTC
 
 21 open PRs · 10 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -85,7 +85,7 @@
 4 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
-- PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 10 hours ago
+- PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 11 hours ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 37 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
@@ -109,8 +109,8 @@
 
 5 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 1 hour ago
-- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 1 hour ago
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 2 hours ago
+- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 2 hours ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 32 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
@@ -191,12 +191,6 @@
 
 ### Uncategorized
 
-#### [small-group-scoop](projects/small-group-scoop.md)
-
-1 PR · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 4 issues · 1 opened by you)
-
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2 days ago
-
 #### [vibe-kit](projects/vibe-kit.md)
 
 3 branches with no PR
@@ -204,6 +198,12 @@
 - Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
 - Branch [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main) — no PR
 - Branch [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule) — no PR
+
+#### [small-group-scoop](projects/small-group-scoop.md)
+
+1 PR · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 6 issues · 3 opened by you)
+
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2 days ago
 
 ### Quiet — no open work
 
