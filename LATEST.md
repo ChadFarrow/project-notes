@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-03 00:36 UTC
+# Dashboard — 2026-11-03 01:07 UTC
 
-20 open PRs · 9 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
+19 open PRs · 9 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -28,7 +28,7 @@
 
 **[libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)**
 
-- [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 3 months ago
+- [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 4 months ago
 - [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 4 months ago
 
 **[MSP-2.0](projects/MSP-2.0.md)**
@@ -49,7 +49,7 @@
 3 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 34 days ago · draft
-- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 40 days ago · merge conflict
+- PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 41 days ago · merge conflict
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 51 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
@@ -81,12 +81,11 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-5 PRs · 2 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+4 PRs · 2 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 7 hours ago
 - PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
-- PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 2 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 37 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo) — no PR
@@ -178,7 +177,7 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 10 hours ago
+- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 11 hours ago
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
 #### [localbitcoiners](projects/localbitcoiners.md)
