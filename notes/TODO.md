@@ -28,7 +28,6 @@ blank line ends the group.
 ## small-group-scoop
 
 - [ ] Test the iPhone layout demo in Safari on `/before/` and `/after/`, then tell Claude the result. Claude then prepares the layout PR for Spencer. The address is in the demo branch's README.
-  - [ ] Press play. Scroll until the Safari bar collapses. The dock's bottom row stays on the screen and clear of the home indicator.
   - [ ] Type in the newsletter email field, then close the keyboard. The page does not stay zoomed in, and the dock returns to the bottom.
   - [ ] Open the full player with the Safari bar shown. Its bottom is not behind the bar. Close it, and the page is at the same place.
   - [ ] Rotate to landscape. The dock is one row, and no control is under the notch.
