@@ -29,7 +29,6 @@ blank line ends the group.
 
 - [ ] Test the iPhone layout demo in Safari on `/before/` and `/after/`, then tell Claude the result. Claude then prepares the layout PR for Spencer. The address is in the demo branch's README.
   - [ ] Type in the newsletter email field, then close the keyboard. The page does not stay zoomed in, and the dock returns to the bottom.
-  - [ ] Open the full player with the Safari bar shown. Its bottom is not behind the bar. Close it, and the page is at the same place.
   - [ ] Rotate to landscape. The dock is one row, and no control is under the notch.
   - [ ] Scroll to the end of a page with nothing playing. The footer is clear of the home indicator.
 - [ ] Test the live site on your iPhone. Include the marquee: tap a show name, and check that its menu opens and its items work.
