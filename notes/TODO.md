@@ -24,10 +24,10 @@ blank line ends the group.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] Test [PR #518](https://github.com/ChadFarrow/boostmebitch/pull/518) (paste an OPML link, no photo options) on [its preview](https://boostmebitch-git-feat-opml-link-chadfs-projects.vercel.app/favorites), then tell Claude the result. It is not on beta yet. The auto mode guard refused the rebuild, so run `npm run beta -- add 518` if you want it there.
-  - [ ] iPhone: paste `https://chadfarrow.github.io/chadf-musicl-playlists/small-group-scoop-shows.opml` into the link box, and press IMPORT LINK. The panel says 19 shows are ready to add, and the page does not stay zoomed in.
-  - [ ] iPhone: press IMPORT OPML. Files opens with no Photo Library or Take Photo or Video option.
-  - [ ] iPhone: save that OPML file to Files, then press IMPORT OPML. The file is not grey, and you can pick it.
-  - [ ] Android: press IMPORT OPML. An `.opml` file is not grey, and you can pick it.
+  - [ ] iPhone: check the new layout. IMPORT LINK is bright after you paste a link, and CHOOSE A FILE is above the link box, under its own label.
+  - [ ] iPhone: press CHOOSE A FILE. Files opens with no Photo Library or Take Photo or Video option.
+  - [ ] iPhone: save an OPML file to Files, then press CHOOSE A FILE. The file is not grey, and you can pick it.
+  - [ ] Android: press CHOOSE A FILE. An `.opml` file is not grey, and you can pick it.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 
 ## small-group-scoop
@@ -35,8 +35,6 @@ blank line ends the group.
 - [ ] Test the iPhone layout demo in Safari on `/before/` and `/after/`, then tell Claude the result. Claude then prepares the layout PR for Spencer. The address is in the demo branch's README.
   - [ ] Type in the newsletter email field, then close the keyboard. The page does not stay zoomed in, and the dock returns to the bottom.
 - [ ] Test the live site on your iPhone. Include the marquee: tap a show name, and check that its menu opens and its items work.
-- [ ] Open the static OPML link on your iPhone, and import it into a podcast app. The link is in `chadf-musicl-playlists/FEEDS.md`.
-- [ ] Import the live OPML link into your podcast app and on iPhone Safari, then tell Claude the result. Spencer merged the OPML PR on 2026-11-03, and the link is on the site's shows page.
 
 ## thelounge-candr
 
