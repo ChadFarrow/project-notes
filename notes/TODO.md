@@ -7,13 +7,22 @@ line when a task stops for that reason, and delete the line when it is done. Bug
 do not go here. This repo is public, so write nothing private here: no addresses, no keys, and no
 detail from a private repo.
 
+Give one PR one line, and put each test on its own indented line under it, so each test has its own
+box. The box on a line deletes that line. The box on the PR line deletes it and the lines under it. A
+blank line ends the group.
+
 ## boostmebitch
 
-- [ ] Test [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×) in the iPhone Home Screen app on https://beta.boostmebitch.com, and listen for a click at the switch. Then tell Claude to merge it. Android with the screen locked passed on 2026-11-02.
-- [ ] Beta site, optional: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy, if beta must read like production. Without them it reads through the direct Podcast Index path, and it still works.
-- [ ] Test #507 on your phones at https://beta.boostmebitch.com. Sign in and connect the wallet again there, because browser storage is per site. Use small boosts: beta spends real sats, and it writes to your real favorites and backups.
+- [ ] Test [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×) on [beta](https://beta.boostmebitch.com), then tell Claude to merge it. Android with the screen locked passed on 2026-11-02.
+  - [ ] iPhone Home Screen app, screen locked: on Homegrown Hits at 2×, the speed drops to 1× in a song and returns after it.
+  - [ ] iPhone: listen for a click when the speed changes.
+- [ ] Test [PR #507](https://github.com/ChadFarrow/boostmebitch/pull/507) (a track's own funding link) on [beta](https://beta.boostmebitch.com), then tell Claude to merge it. It needs no sign-in, wallet or boost. Android passed on 2026-11-02.
+  - [ ] iPhone: on [Jam with Nate](https://beta.boostmebitch.com/?podcast=dbfd9254-6f92-5b76-9b1a-25d86299f988), press SUPPORT on the show page. The link opens in a new tab.
+  - [ ] iPhone: open a track of that show, and press SUPPORT there. The link opens in a new tab.
+- [ ] Beta site, optional setup. Beta works without these.
+  - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
+  - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
-- [ ] Beta site, only if Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 
 ## thelounge-candr
 
