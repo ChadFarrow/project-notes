@@ -28,6 +28,10 @@ blank line ends the group.
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
+## Mac mini
+
+- [ ] Run `git -C ~/Vibe/vibe-kit pull`. It brings in the rule change that was merged on 2026-11-02.
+
 ## Laptop
 
 ## project-notes
