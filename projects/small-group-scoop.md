@@ -22,7 +22,7 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 ## Live status
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
-- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
+- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 6 issues · 3 opened by you)
 
 ### Pull requests (1)
 
