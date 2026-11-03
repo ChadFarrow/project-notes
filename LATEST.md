@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-03 23:43 UTC
+# Dashboard — 2026-11-03 23:49 UTC
 
 21 open PRs · 10 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -86,7 +86,7 @@
 
 - PR [#518 Import OPML from a pasted link, and drop the photo options from the picker](https://github.com/ChadFarrow/boostmebitch/pull/518) — opened 2 hours ago
 - PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 38 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`brand/stamp-logo`](https://github.com/ChadFarrow/boostmebitch/tree/brand/stamp-logo) — no PR
