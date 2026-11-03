@@ -58,29 +58,38 @@ function todoParts(text) {
 // wrong place must still show. A link stays as written; the page resolves a relative one
 // against the file on GitHub and shows any link that is not http(s) as plain text. An
 // item keeps its source `lines`, trimmed, so the page can find it and delete it from the
-// file (`removeTodoItem` in notes.mjs).
+// file (`removeTodoItem` in notes.mjs). An item indented under another item gets `under`, the
+// lines of that item. There is one level: deeper items sit under the same top item. A blank
+// line, a heading or a line at the left margin ends the group.
 export function parseTodoList(text) {
   let section = { title: '', entries: [] };
   const sections = [section];
   let aboveFirstHeading = true;
   let open = null; // The entry that a wrapped line continues.
+  let top = null; // The item that an indented item sits under, and its indent.
   for (const raw of String(text ?? '').split(/\r?\n/)) {
     const line = raw.trim();
+    const indent = raw.length - raw.trimStart().length;
     const heading = TODO_HEADING.exec(line);
     const item = TODO_ITEM.exec(line);
     if (!line) {
       open = null;
+      top = null;
     } else if (heading) {
       section = { title: heading[1], entries: [] };
       sections.push(section);
       aboveFirstHeading = false;
       open = null;
+      top = null;
     } else if (item) {
       open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: item[2] ?? '' };
+      if (top && indent > top.indent) open.under = top.lines;
+      else top = item[2]?.trim() ? { lines: open.lines, indent } : null;
       section.entries.push(open);
     } else if (open) {
       open.text += ` ${line}`;
       open.lines?.push(line);
+      if (!indent) top = null;
     } else if (!aboveFirstHeading) {
       open = { type: 'text', text: line };
       section.entries.push(open);

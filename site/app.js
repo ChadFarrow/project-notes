@@ -311,7 +311,7 @@ function renderContent() {
 
 // notes/TODO.md, the same under every filter: it is not a list of projects. A relative
 // link resolves against that file on GitHub. A link that is not http(s) stays plain text.
-// The box of an item deletes its line from the file (`askRemoveTodo`).
+// The box of an item deletes its line from the file (`askRemoveTodo`), with its sub-items.
 function todoLink(part) {
   let url;
   try {
@@ -323,7 +323,8 @@ function todoLink(part) {
 }
 const todoParts = (parts) => parts.map((part) => (part.href ? todoLink(part) : withCode(part.text)));
 const todoWords = (entry) => entry.parts.map((part) => part.text).join('');
-const todoKey = (entry) => (entry.lines || []).join('\n');
+// A sub-item's key names its top item, so the same words under another item stay on the page.
+const todoKey = (entry) => [...(entry.under || []), ...(entry.lines || [])].join('\n');
 
 function dropTodoItems(keys) {
   data.todo = (data.todo || [])
@@ -340,12 +341,32 @@ function hideRemovedTodos() {
   dropTodoItems(new Set(removed.map((r) => r.key)));
 }
 
-function rememberRemovedTodo(entry) {
-  const key = todoKey(entry);
-  store.set('todoRemoved', [...store.get('todoRemoved', []), { key, at: new Date().toISOString() }]);
-  dropTodoItems(new Set([key]));
+function rememberRemovedTodo(entries) {
+  const keys = entries.map(todoKey);
+  const at = new Date().toISOString();
+  store.set('todoRemoved', [...store.get('todoRemoved', []), ...keys.map((key) => ({ key, at }))]);
+  dropTodoItems(new Set(keys));
 }
 
+// The sub-items of a top item: the entries right after it in its section that have `under`.
+function todoSubItems(entry) {
+  if (entry.under) return [];
+  for (const section of data.todo || []) {
+    const at = section.entries.indexOf(entry);
+    if (at < 0) continue;
+    const rest = section.entries.slice(at + 1);
+    const end = rest.findIndex((e) => !e.under);
+    return end < 0 ? rest : rest.slice(0, end);
+  }
+  return [];
+}
+const todoTopOf = (entry) => entry.under && (data.todo || []).flatMap((s) => s.entries)
+  .find((e) => !e.under && (e.lines || []).join('\n') === entry.under.join('\n'));
+function todoRow(entry) {
+  return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
+    h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
+    h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts)));
+}
 function todoSection() {
   const heading = h('h2', { text: 'To do' });
   const sections = data.todo || [];
@@ -354,18 +375,31 @@ function todoSection() {
   for (const section of sections) {
     if (section.title) panel.append(h('p', { class: 'group-title', text: section.title }));
     let list = null;
+    let topRow = null; // The row of the last top item, and the list of sub-items inside it.
+    let subList = null;
     for (const entry of section.entries) {
       if (entry.type === 'item') {
         if (!list) {
           list = h('ul', { class: 'list' });
           panel.append(list);
         }
-        list.append(h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
-          h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
-          h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts))));
+        const row = todoRow(entry);
+        if (entry.under && topRow) {
+          if (!subList) {
+            subList = h('ul', { class: 'list todo-subs' });
+            topRow.append(subList);
+          }
+          subList.append(row);
+        } else {
+          list.append(row);
+          topRow = entry.under ? null : row;
+          subList = null;
+        }
       } else {
         panel.append(h('p', { class: 'note-line' }, todoParts(entry.parts)));
         list = null;
+        topRow = null;
+        subList = null;
       }
     }
   }
@@ -620,12 +654,13 @@ const TODO_PATH = `/repos/${REPO}/contents/notes/TODO.md`;
 // it any more. It reads the file first, because this page's data can be hours older, and
 // again after a conflict. The push starts the sync (`notes/TODO.md` is in the workflow's
 // push paths), so this needs no dispatch and no Actions access.
-async function deleteTodoItem(entry) {
+async function deleteTodoItem(entry, group) {
+  const lines = group.flatMap((e) => e.lines);
   for (let attempt = 0; attempt < 3; attempt++) {
     const res = await gh(`${TODO_PATH}?ref=main`);
     if (!res.ok) throw await apiError(res, 'read the to-do list');
     const file = await res.json();
-    const text = removeTodoItem(decodeBase64(file.content), entry.lines);
+    const text = removeTodoItem(decodeBase64(file.content), lines, entry.under);
     if (text === null) return false;
     const put = await gh(TODO_PATH, {
       method: 'PUT',
@@ -812,21 +847,27 @@ function askRemoveTodo(entry) {
   const dlg = $('#todo-dialog');
   setupSheet(dlg);
   const status = h('p', { class: 'status', role: 'status' });
-  const remove = h('button', { type: 'button', class: 'primary' }, 'Delete the line');
+  const subItems = todoSubItems(entry);
+  const group = [entry, ...subItems];
+  const top = todoTopOf(entry);
+  const remove = h('button', { type: 'button', class: 'primary' }, subItems.length ? `Delete all ${group.length}` : 'Delete the line');
   const newToken = h('button', { type: 'button', hidden: true, onclick: () => openTokenDialog() }, 'Paste a new token');
   const cancel = h('button', { type: 'button', class: 'cancel-button', onclick: () => dlg.close() }, 'Cancel');
   sheet(dlg, 'todo-title', 'Mark this done?',
     h('div', { class: 'sheet-body' },
+      top ? h('p', { class: 'note-line todo-top' }, withCode(todoWords(top))) : null,
       h('p', { class: 'item-title' }, withCode(todoWords(entry))),
-      h('p', { class: 'note-line', text: 'This deletes the line from notes/TODO.md on GitHub.' })),
+      h('p', { class: 'note-line', text: subItems.length
+        ? `This deletes the line and its ${plural(subItems.length, 'sub-item')} from notes/TODO.md on GitHub.`
+        : 'This deletes the line from notes/TODO.md on GitHub.' })),
     h('div', { class: 'sheet-foot' }, status, newToken, cancel, remove));
   remove.addEventListener('click', async () => {
     remove.disabled = true;
     newToken.hidden = true;
     setStatus(status, '', 'Saving…');
     try {
-      const deleted = await deleteTodoItem(entry);
-      rememberRemovedTodo(entry);
+      const deleted = await deleteTodoItem(entry, group);
+      rememberRemovedTodo(group);
       renderContent();
       if (deleted) {
         dlg.close();
