@@ -29,7 +29,6 @@ blank line ends the group.
 
 - [ ] Test the iPhone layout demo in Safari on `/before/` and `/after/`, then tell Claude the result. Claude then prepares the layout PR for Spencer. The address is in the demo branch's README.
   - [ ] Type in the newsletter email field, then close the keyboard. The page does not stay zoomed in, and the dock returns to the bottom.
-  - [ ] Scroll to the end of a page with nothing playing. The footer is clear of the home indicator.
 - [ ] Test the live site on your iPhone. Include the marquee: tap a show name, and check that its menu opens and its items work.
 - [ ] Open the static OPML link on your iPhone, and import it into a podcast app. The link is in `chadf-musicl-playlists/FEEDS.md`.
 - [ ] After Spencer merges the OPML PR, import the live OPML link into your podcast app and on iPhone Safari, then tell Claude the result.
