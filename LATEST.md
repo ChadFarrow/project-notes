@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-03 20:19 UTC
+# Dashboard — 2026-11-03 20:21 UTC
 
 21 open PRs · 10 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -109,8 +109,8 @@
 
 5 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 17 hours ago
-- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 17 hours ago
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 18 hours ago
+- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 18 hours ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 32 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
