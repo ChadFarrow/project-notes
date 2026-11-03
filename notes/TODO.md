@@ -14,9 +14,7 @@ blank line ends the group.
 ## boostmebitch
 
 - [ ] Send one real boost and stream sats for one minute with your wallet, on a podcast episode and on a playlist track. PR #516 and PR #517 changed where payees come from, and no real payment tested them. Then tell Claude the result.
-- [ ] Test [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×) on [beta](https://beta.boostmebitch.com), then tell Claude to merge it. Android with the screen locked passed on 2026-11-02.
-  - [ ] iPhone Home Screen app: add beta to the Home Screen first, because an icon from `www` does not have this PR. With the screen locked, on Homegrown Hits at 2×, the speed drops to 1× in a song and returns after it.
-  - [ ] iPhone: listen for a click when the speed changes.
+- [ ] Tell Claude to merge [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×). Android passed on 2026-11-02, and a spare iPhone 11 passed on 2026-11-03: locked screen, Home Screen app, no click.
 - [ ] Beta site, optional setup. Beta works without these.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
