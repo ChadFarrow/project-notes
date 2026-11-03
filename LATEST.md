@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-03 00:23 UTC
+# Dashboard — 2026-11-03 00:36 UTC
 
 20 open PRs · 9 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -29,7 +29,7 @@
 **[libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)**
 
 - [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 3 months ago
-- [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 3 months ago
+- [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 4 months ago
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
@@ -83,7 +83,7 @@
 
 5 PRs · 2 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 6 hours ago
+- PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 7 hours ago
 - PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
 - PR [#505 Playback log for Report a bug, and an adb driver for the locked-screen queue advance](https://github.com/ChadFarrow/boostmebitch/pull/505) — opened 2 days ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
