@@ -106,6 +106,14 @@ const TODO_TEXT = [
   '- [ ] <img src=x onerror="window.__xss=1"> stays text',
   '- [ ] A [bad link](javascript:window.__xss=1) stays text',
   `- [ ] A long path \`~/Vibe/${'a'.repeat(120)}\` wraps`,
+  '- [ ] Test PR #8',
+  '  - [ ] On the iPhone',
+  '  - [ ] On the Pixel',
+  `  - [ ] A long sub-item path \`~/Vibe/${'b'.repeat(120)}\` wraps`,
+  '- [ ] Test PR #9',
+  '  - [ ] On the iPhone',
+  '- [x] Ticked PR #10',
+  '  - [ ] Still open under it',
   '',
   'Two older items are in [the app-one note](../projects/app-one.md).',
   '',
@@ -477,7 +485,24 @@ async function main() {
       check('HTML in the to-do list stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined`)
         && (await text('#todo-list'))?.includes('<img src=x'));
       check('a code span in the to-do list is marked as code', await evaluate(`[...document.querySelectorAll('#todo-list code')].some((c) => c.textContent === '~/Vibe/app-one')`));
-      check('a ticked item in the to-do list looks done', (await text('#todo-list .todo-item.done'))?.includes('A finished item') && (await count('#todo-list .todo-item.done')) === 1);
+      check('a ticked item in the to-do list looks done', (await text('#todo-list .todo-item.done'))?.includes('A finished item') && (await count('#todo-list .todo-item.done')) === 2);
+      const subFacts = await evaluate(`(() => {
+        const row = (words) => [...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(words));
+        const top = row('Test PR #8');
+        const subs = [...top.querySelectorAll(':scope > .todo-subs > .todo-item')];
+        const open = row('Still open under it');
+        return {
+          subs: subs.length,
+          boxes: subs.filter((li) => li.querySelector(':scope > button.todo-box')).length,
+          indent: subs[0].querySelector('.todo-box').getBoundingClientRect().left - top.querySelector('.todo-box').getBoundingClientRect().left,
+          openIsDone: open.classList.contains('done'),
+          openLine: getComputedStyle(open.querySelector('.item-title')).textDecorationLine,
+          doneLine: getComputedStyle(row('Ticked PR #10').querySelector(':scope > .item-title')).textDecorationLine,
+        };
+      })()`);
+      check('an indented item shows under its item, with its own box', subFacts.subs === 3 && subFacts.boxes === 3, js(subFacts));
+      check('a sub-item is indented to the words of its item', subFacts.indent >= 24, js(subFacts));
+      check('a ticked top item does not mark its open sub-item done', !subFacts.openIsDone && subFacts.openLine === 'none' && subFacts.doneLine === 'line-through', js(subFacts));
       check('a conflicting PR lights a red lamp', await evaluate(`[...document.querySelectorAll('[data-project="app-one"] .disclose .lamp.bad')].some((l) => l.title.startsWith('#3:'))`));
       check('a running check lights an amber lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.wait[title^="#10:"]')`));
       check('a draft shows a hollow lamp', await evaluate(`!!document.querySelector('[data-project="app-one"] .disclose .lamp.draft[title^="#2:"]')`));
@@ -695,9 +720,15 @@ async function main() {
       await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
 
       // ---- deleting a to-do item ----
+      const ownWords = `:scope > .item-title`;
       const tapBox = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')]
-        .find((li) => li.textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
-      const showsItem = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].some((li) => li.textContent.includes(${js(words)}))`);
+        .find((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
+      const showsItem = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].some((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))`);
+      const subRows = (top) => `[...document.querySelectorAll('#todo-list .todo-item')]
+        .find((li) => li.querySelector('${ownWords}').textContent.includes(${js(top)}))
+        ?.querySelectorAll(':scope > .todo-subs > .todo-item')`;
+      const showsSub = (top, words) => evaluate(`[...(${subRows(top)} || [])].some((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))`);
+      const tapSub = (top, words) => evaluate(`[...(${subRows(top)} || [])].find((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
       const sheetOpen = 'document.querySelector("#todo-dialog").open';
       const FOLDER = 'Delete a folder.';
       const withoutFolder = TODO_TEXT.replace(`- [ ] ${FOLDER}\n`, '');
@@ -747,6 +778,59 @@ async function main() {
       check('a conflict is retried and keeps the other edit', await waitFor(`!${sheetOpen}`)
         && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A finished item'));
 
+      // ---- sub-items: the same words sit under PR #8 and PR #9 ----
+      const IPHONE = 'On the iPhone';
+      const under9 = '- [ ] Test PR #9\n  - [ ] On the iPhone\n';
+      let puts = api.todoPuts.length;
+      await tapSub('Test PR #9', IPHONE);
+      await waitFor(sheetOpen);
+      check('the sheet of a sub-item names the item it sits under', (await text('#todo-dialog .todo-top'))?.includes('Test PR #9')
+        && (await text('#todo-dialog'))?.includes(IPHONE) && api.todoPuts.length === puts);
+      await shoot('todo-sheet-sub', { full: false });
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      check('a sub-item is deleted from under its own item only', api.todoPuts.length === puts + 1
+        && !api.todo.text.includes(under9) && api.todo.text.includes('- [ ] Test PR #9\n')
+        && api.todo.text.includes('- [ ] Test PR #8\n  - [ ] On the iPhone\n'));
+      check('the same words under another item stay on the page', (await showsSub('Test PR #8', IPHONE)) && !(await showsSub('Test PR #9', IPHONE)));
+      check('the top item stays when its last sub-item goes', await showsItem('Test PR #9'));
+      await go();
+      check('the sub-item stays away after a reload, and only that one', (await showsSub('Test PR #8', IPHONE)) && !(await showsSub('Test PR #9', IPHONE)));
+
+      puts = api.todoPuts.length;
+      await tapBox('Test PR #8');
+      await waitFor(sheetOpen);
+      check('the sheet of a top item counts its sub-items', (await text('#todo-dialog'))?.includes('its 3 sub-items')
+        && (await text('#todo-dialog .primary')) === 'Delete all 4' && api.todoPuts.length === puts);
+      await click('#todo-dialog .cancel-button');
+      await waitFor(`!${sheetOpen}`);
+      check('Cancel keeps the top item and its sub-items', (await showsItem('Test PR #8')) && (await showsSub('Test PR #8', 'On the Pixel')) && api.todoPuts.length === puts);
+
+      // Another machine added a line inside the group, so the group on the page is out of date.
+      const beforeOther = api.todo.text;
+      api.todo.text = beforeOther.replace('  - [ ] On the Pixel\n', '  - [ ] On the Pixel\n  - [ ] New on the other machine\n');
+      await tapBox('Test PR #8');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a group that changed in the file is not deleted', await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("not in the file")')
+        && api.todoPuts.length === puts && api.todo.text.includes('New on the other machine'));
+      await click('#todo-dialog .cancel-button');
+      await waitFor(`!${sheetOpen}`);
+      api.todo.text = beforeOther;
+      await evaluate(`localStorage.setItem('pn:todoRemoved', JSON.stringify(JSON.parse(localStorage.getItem('pn:todoRemoved')).filter((r) => !r.key.includes('Test PR #8'))))`);
+      await go();
+
+      await tapBox('Test PR #8');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      check('a top item is deleted with its sub-items, and the next item stays', api.todoPuts.length === puts + 1
+        && !api.todo.text.includes('Test PR #8') && !api.todo.text.includes('On the Pixel') && !api.todo.text.includes('A long sub-item path')
+        && api.todo.text.includes('- [ ] Test PR #9\n'));
+      check('the group leaves the page at once', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
+      await go();
+      check('the group stays away after a reload', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
+
       // The token stops working.
       api.revoked = true;
       await tapBox('PR #7');
@@ -791,10 +875,19 @@ async function main() {
     // ---- the phone ----
     await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 3, mobile: true });
     await go();
+    // The delete checks hid items. Show the whole list, so the long sub-item is measured too.
+    await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+    await go();
     const overflow = () => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
     check('the phone layout has no sideways scroll', (await overflow()) <= 0, `${await overflow()}px`);
     const todoOverflow = await evaluate('(() => { const l = document.querySelector("#todo-list"); return l ? l.scrollWidth - l.clientWidth : 1; })()');
     check('the to-do list fits the phone width', todoOverflow <= 0, `${todoOverflow}px`);
+    const subBox = await evaluate(`(() => { const b = document.querySelector('#todo-list .todo-subs .todo-box'); if (!b) return null; const r = b.getBoundingClientRect(); return [r.width, r.height]; })()`);
+    if (!HOST && !DATA_FILE) {
+      check('a sub-item box is at least 24 by 24 px on the phone', subBox && subBox[0] >= 24 && subBox[1] >= 24, js(subBox));
+      const longSubRight = await evaluate(`(() => { const c = document.querySelector('#todo-list .todo-subs code'); return c ? c.closest('.todo-item').getBoundingClientRect().right : null; })()`);
+      check('a long sub-item wraps inside the phone width', longSubRight !== null && longSubRight <= 390, js(longSubRight));
+    }
     await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=false]")) b.click();
       for (const d of document.querySelectorAll("details")) d.open = true;`);
     await sleep(150);

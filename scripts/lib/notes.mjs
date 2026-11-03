@@ -453,12 +453,26 @@ export function matchCategory(input, known) {
 // Deletes one item from the text of notes/TODO.md and returns the new text, or null when
 // the item is not there any more. `lines`: the item's source lines, trimmed, from
 // `parseTodoList`. It compares whole trimmed lines. Every other byte stays as it was.
-export function removeTodoItem(source, lines) {
+// `under`: the `under` lines of a sub-item. The search then starts only in the indented lines
+// right below those lines, so the same words under another item stay.
+export function removeTodoItem(source, lines, under) {
   const chunks = source.match(/[^\n]*\n|[^\n]+$/g) || [];
-  for (let i = 0; i + lines.length <= chunks.length; i++) {
-    if (lines.every((line, k) => chunks[i + k].trim() === line)) {
-      return [...chunks.slice(0, i), ...chunks.slice(i + lines.length)].join('');
+  const find = (want, from, to) => {
+    for (let i = from; i < to && i + want.length <= chunks.length; i++) {
+      if (want.every((line, k) => chunks[i + k].trim() === line)) return i;
     }
+    return -1;
+  };
+  let from = 0;
+  let to = chunks.length;
+  if (under) {
+    const top = find(under, 0, to);
+    if (top < 0) return null;
+    from = top + under.length;
+    to = from;
+    while (to < chunks.length && /^[ \t]+\S/.test(chunks[to])) to++;
   }
-  return null;
+  const at = find(lines, from, to);
+  if (at < 0) return null;
+  return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
 }

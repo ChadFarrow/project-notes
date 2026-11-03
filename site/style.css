@@ -240,8 +240,11 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.85; 
 .todo-box:hover { border: 0; }
 .todo-box::before { content: ""; box-sizing: border-box; width: 16px; height: 16px; border: 2px solid var(--muted); border-radius: 3px; }
 .todo-box:hover::before { border-color: var(--good); }
-.todo-item.done .todo-box::before { background: var(--muted); }
-.todo-item.done .item-title { color: var(--muted); text-decoration: line-through; }
+.todo-item.done > .todo-box::before { background: var(--muted); }
+.todo-item.done > .item-title { color: var(--muted); text-decoration: line-through; }
+/* Sub-items sit in the column of the words, so each box lines up under the words above it. */
+.todo-subs { grid-column: 2; margin-top: 4px; }
+.todo-subs .item { padding: 6px 0; border-top: 0; }
 #todo-list .note-line { margin: 4px 0 10px; overflow-wrap: anywhere; }
 
 /* ---------- project rows ---------- */

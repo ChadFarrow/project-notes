@@ -233,6 +233,42 @@ test('the to-do list reads Windows line endings, and takes an indented item as a
   assert.deepEqual(entries.map((e) => [e.type, e.parts[0].text]), [['item', 'First'], ['item', 'Inner']]);
 });
 
+test('the to-do list marks an indented item as a sub-item of the item above it', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] PR line\n  - [ ] First\n\t- [x] Second\n- [ ] Next\n');
+  assert.deepEqual(entries.map((e) => [e.parts[0].text, e.under ?? null, e.done]), [
+    ['PR line', null, false],
+    ['First', ['- [ ] PR line'], false],
+    ['Second', ['- [ ] PR line'], true],
+    ['Next', null, false],
+  ]);
+  assert.deepEqual(entries[1].lines, ['- [ ] First'], 'a sub-item keeps only its own lines');
+});
+
+test('a sub-item of a sub-item stays under the same top item', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] Top\n  - [ ] Middle\n    - [ ] Deep\n');
+  assert.deepEqual(entries.map((e) => e.under ?? null), [null, ['- [ ] Top'], ['- [ ] Top']]);
+});
+
+test('a wrapped line stays with its item, and a sub-item names every line of the item above it', () => {
+  const [{ entries }] = parseTodoList('## One\n- [ ] Top\n  and more\n  - [ ] Sub\n    goes on\n  - [ ] Other\n');
+  assert.deepEqual(entries.map((e) => [e.parts[0].text, e.under ?? null]), [
+    ['Top and more', null],
+    ['Sub goes on', ['- [ ] Top', 'and more']],
+    ['Other', ['- [ ] Top', 'and more']],
+  ]);
+});
+
+test('an indented item with nothing above it to sit under stays a plain item', () => {
+  const plain = (text) => parseTodoList(text).flatMap((s) => s.entries).map((e) => e.under ?? null);
+  assert.deepEqual(plain('## One\n  - [ ] First\n'), [null], 'first in the section');
+  assert.deepEqual(plain('## One\n  - [ ] A\n  - [ ] B\n'), [null, null], 'the same indent');
+  assert.deepEqual(plain('## One\n    - [ ] A\n  - [ ] B\n'), [null, null], 'less indent');
+  assert.deepEqual(plain('## One\n- [ ] A\n\n  - [ ] B\n'), [null, null], 'a blank line ends the group');
+  assert.deepEqual(plain('## One\n- [ ] A\n## Two\n  - [ ] B\n'), [null, null], 'a heading ends the group');
+  assert.deepEqual(plain('## One\n- [ ] A\nat the margin\n  - [ ] B\n'), [null, null], 'a line at the margin ends the group');
+  assert.deepEqual(plain('## One\n- [ ]\n  - [ ] B\n'), [null], 'an empty item is dropped, so nothing can hold B');
+});
+
 test('the to-do list drops an empty item and a heading with nothing under it', () => {
   assert.deepEqual(parseTodoList('## Empty\n\n## One\n- [ ]\n-\n- [ ] Real\n'), [
     { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], parts: [{ text: 'Real' }] }] },
@@ -286,6 +322,48 @@ test('removeTodoItem compares whole lines, so a longer line with the same start 
 
 test('removeTodoItem deletes only the first of two identical items', () => {
   assert.equal(removeTodoItem('- [ ] Same\n- [ ] Same\n', ['- [ ] Same']), '- [ ] Same\n');
+});
+
+test('removeTodoItem keeps a sub-item to the item it sits under, so the same words elsewhere stay', () => {
+  const text = '## One\n- [ ] PR 1\n  - [ ] On the iPhone\n- [ ] PR 2\n  - [ ] On the iPhone\n  - [ ] Other\n';
+  assert.equal(removeTodoItem(text, ['- [ ] On the iPhone'], ['- [ ] PR 2']),
+    '## One\n- [ ] PR 1\n  - [ ] On the iPhone\n- [ ] PR 2\n  - [ ] Other\n');
+  assert.equal(removeTodoItem(text, ['- [ ] On the iPhone'], ['- [ ] PR 1']),
+    '## One\n- [ ] PR 1\n- [ ] PR 2\n  - [ ] On the iPhone\n  - [ ] Other\n');
+});
+
+test('removeTodoItem changes nothing when the sub-item left its item, even if the same words are under another', () => {
+  const text = '- [ ] PR 1\n  - [ ] Other\n- [ ] PR 2\n  - [ ] On the iPhone\n';
+  assert.equal(removeTodoItem(text, ['- [ ] On the iPhone'], ['- [ ] PR 1']), null);
+  assert.equal(removeTodoItem(text, ['- [ ] On the iPhone'], ['- [ ] PR 9']), null);
+  assert.equal(removeTodoItem('- [ ] PR 1\n\n  - [ ] On the iPhone\n', ['- [ ] On the iPhone'], ['- [ ] PR 1']), null, 'a blank line ends the group');
+});
+
+test('removeTodoItem deletes a sub-item whose wrapped line is at the left margin', () => {
+  assert.equal(removeTodoItem('- [ ] Top\n  - [ ] Sub\nat the margin\n- [ ] Next\n', ['- [ ] Sub', 'at the margin'], ['- [ ] Top']), '- [ ] Top\n- [ ] Next\n');
+});
+
+test('removeTodoItem deletes an item and its sub-items together, and every other byte stays', () => {
+  const text = '## One  \r\n- [ ] Top\r\n  - [ ] A\r\n    goes on\r\n  - [ ] B\r\n- [ ] Next\r\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Top', '- [ ] A', 'goes on', '- [ ] B']), '## One  \r\n- [ ] Next\r\n');
+});
+
+test('removeTodoItem leaves the file as it was when the group changed since the page read it', () => {
+  const text = '- [ ] Top\n  - [ ] A\n  - [ ] New on the other machine\n  - [ ] B\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Top', '- [ ] A', '- [ ] B']), null);
+});
+
+test('a sub-item parsed from the file can be deleted from it with the item it sits under', () => {
+  const text = '## One\n\n- [ ] PR 1\n  - [ ] Same words\n- [ ] PR 2\n  and more\n  - [ ] Same words\n  - [x] Last\n- [ ] End\n';
+  const items = parseTodoList(text).flatMap((s) => s.entries);
+  assert.equal(items.length, 6);
+  items.forEach((item, index) => {
+    const after = parseTodoList(removeTodoItem(text, item.lines, item.under)).flatMap((s) => s.entries);
+    const key = (e) => JSON.stringify([e.under, e.lines]);
+    const expected = items.filter((_, i) => i !== index);
+    // Deleting a top item leaves its sub-items in the file, so this looks only at sub-items.
+    if (item.under) assert.deepEqual(after.map(key), expected.map(key), item.lines[0]);
+  });
 });
 
 test('an item parsed from the file can be deleted from it, and the rest of the list stays', () => {
