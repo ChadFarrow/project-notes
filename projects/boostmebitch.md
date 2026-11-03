@@ -32,8 +32,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (4)
+### Pull requests (5)
 
+- [#518 Import OPML from a pasted link, and drop the photo options from the picker](https://github.com/ChadFarrow/boostmebitch/pull/518) — opened 2026-11-03
 - [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 2026-11-02
 - [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2026-10-31 · draft
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft

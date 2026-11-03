@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-03 20:21 UTC
+# Dashboard — 2026-11-03 21:04 UTC
 
-21 open PRs · 10 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
+22 open PRs · 10 open issues · 26 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -82,10 +82,11 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+5 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
+- PR [#518 Import OPML from a pasted link, and drop the photo options from the picker](https://github.com/ChadFarrow/boostmebitch/pull/518) — opened 3 minutes ago
 - PR [#512 Play music at 1× when the listener sets a faster speed](https://github.com/ChadFarrow/boostmebitch/pull/512) — opened 1 day ago
-- PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 2 days ago · draft
+- PR [#507 Read item-level \<podcast:funding\>, and prefer an item's own link on the episode page](https://github.com/ChadFarrow/boostmebitch/pull/507) — opened 3 days ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 38 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
