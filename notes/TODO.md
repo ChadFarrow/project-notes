@@ -13,6 +13,7 @@ blank line ends the group.
 
 ## boostmebitch
 
+- [ ] Send one real boost and stream sats for one minute with your wallet, on a podcast episode and on a playlist track. PR #516 and PR #517 changed where payees come from, and no real payment tested them. Then tell Claude the result.
 - [ ] Test [PR #512](https://github.com/ChadFarrow/boostmebitch/pull/512) (music plays at 1×) on [beta](https://beta.boostmebitch.com), then tell Claude to merge it. Android with the screen locked passed on 2026-11-02.
   - [ ] iPhone Home Screen app: add beta to the Home Screen first, because an icon from `www` does not have this PR. With the screen locked, on Homegrown Hits at 2×, the speed drops to 1× in a song and returns after it.
   - [ ] iPhone: listen for a click when the speed changes.
