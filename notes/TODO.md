@@ -36,7 +36,7 @@ blank line ends the group.
   - [ ] Type in the newsletter email field, then close the keyboard. The page does not stay zoomed in, and the dock returns to the bottom.
 - [ ] Test the live site on your iPhone. Include the marquee: tap a show name, and check that its menu opens and its items work.
 - [ ] Open the static OPML link on your iPhone, and import it into a podcast app. The link is in `chadf-musicl-playlists/FEEDS.md`.
-- [ ] After Spencer merges the OPML PR, import the live OPML link into your podcast app and on iPhone Safari, then tell Claude the result.
+- [ ] Import the live OPML link into your podcast app and on iPhone Safari, then tell Claude the result. Spencer merged the OPML PR on 2026-11-03, and the link is on the site's shows page.
 
 ## thelounge-candr
 
