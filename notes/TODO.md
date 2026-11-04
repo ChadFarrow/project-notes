@@ -18,6 +18,7 @@ blank line ends the group.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
+- [ ] Review and merge PR #520, the fix for NWC failing until you paste it again. Then test it in the Zapstore app: leave the app in the background overnight, return, and send one boost. Do not paste the connection again first.
 
 ## small-group-scoop
 
