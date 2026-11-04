@@ -27,6 +27,13 @@ blank line ends the group.
   - [ ] Check that the change shows on v4vmusic.com within about 5 minutes of the save.
 - [ ] When the v4vmusic dev answers your note, tell Claude. Live At Rockpile and The EP (Amnesia) stay out of date there until the dev changes their feed URLs.
 
+## msp-podping-service
+
+- [ ] Finish PR #7, which keeps the podping viewer up when a Postgres connection drops. Do these in order, then tell Claude.
+  - [ ] In Railway, project `pp.musicsideproject.com`, service `msp-podping-service`: Settings, Deploy, set Restart Policy to Always. The Railway CLI has no command for this.
+  - [ ] Add `.github/workflows/viewer-health.yml` to branch `viewer-survive-db-drops`, with the YAML from the PR. Claude's GitHub connection has no workflow permission. To let Claude try `gh api` instead, tell Claude so; that needs your yes because it is outside the push rule.
+  - [ ] Merge the PR, or tell Claude to. The merge redeploys the viewer and restarts the podping pusher.
+
 ## small-group-scoop
 
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
