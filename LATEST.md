@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-04 18:58 UTC
+# Dashboard — 2026-11-04 19:29 UTC
 
-21 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
+22 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -190,9 +190,10 @@
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
-2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
+3 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
 
-- PR [#2 Phase 10 - lightning and v4v functionality scaffolded out, passing smoke tests and end-to-end in dev, will need real-world testing in production](https://github.com/ChadFarrow/small-group-scoop/pull/2) — opened 8 hours ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 1 minute ago · draft
+- PR [#2 Phase 10 - lightning and v4v functionality scaffolded out, passing smoke tests and end-to-end in dev, will need real-world testing in production](https://github.com/ChadFarrow/small-group-scoop/pull/2) — opened 9 hours ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 3 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
