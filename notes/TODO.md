@@ -20,6 +20,13 @@ blank line ends the group.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 - [ ] Test PR #520, the fix for NWC failing until you paste it again, in the Zapstore app: leave the app in the background overnight, return, and send one boost. Do not paste the connection again first.
 
+## MSP-2.0
+
+- [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
+  - [ ] Save a real change to one hosted feed, such as a new song. The ping lands on Hive about 2 minutes later, not about 15 s later.
+  - [ ] Check that the change shows on v4vmusic.com within about 5 minutes of the save.
+- [ ] When the v4vmusic dev answers your note, tell Claude. Live At Rockpile and The EP (Amnesia) stay out of date there until the dev changes their feed URLs.
+
 ## small-group-scoop
 
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
@@ -35,4 +42,3 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 ## Laptop
 
 ## project-notes
-
