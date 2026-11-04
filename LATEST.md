@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-04 03:38 UTC
+# Dashboard — 2026-11-04 11:40 UTC
 
-19 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
+20 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -51,7 +51,7 @@
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 35 days ago · draft
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 42 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 52 days ago · draft · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 53 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 #### [helipad](projects/helipad.md)
@@ -94,7 +94,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 45 days ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 46 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 56 days ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -189,8 +189,9 @@
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
-1 PR · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 6 issues · 3 opened by you)
+2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
 
+- PR [#2 Phase 10 - lightning and v4v functionality scaffolded out, passing smoke tests and end-to-end in dev, will need real-world testing in production](https://github.com/ChadFarrow/small-group-scoop/pull/2) — opened 1 hour ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 3 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
