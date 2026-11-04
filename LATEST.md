@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-04 01:02 UTC
+# Dashboard — 2026-11-04 01:06 UTC
 
-20 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
+19 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -82,9 +82,8 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-3 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+2 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#520 fix(wallet): one failed NWC dial no longer strands the wallet until a re-paste](https://github.com/ChadFarrow/boostmebitch/pull/520) — opened 2 minutes ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 38 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
