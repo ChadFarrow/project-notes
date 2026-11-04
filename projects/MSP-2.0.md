@@ -29,7 +29,7 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0](https://github.com/ChadFarrow/MSP-2.0) · TypeScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (2 PRs)
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 - **Watch:** [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
@@ -37,9 +37,9 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 
 - [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 2026-11-03
 - [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 2026-11-03
-- [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · by InTheMorning
-- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft
-- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft
+- [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 2026-10-01 · merge conflict · by InTheMorning
+- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
+- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
 
 ### Issues (2)
 
