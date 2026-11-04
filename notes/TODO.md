@@ -39,6 +39,9 @@ blank line ends the group.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] Test branch `live-podping` on your fork (podping live status), then tell Claude the result. Claude then prepares the PR for Spencer.
   - [ ] Run the site and `watch_live`. When a show goes live before its scheduled start, it shows as LIVE within about a minute.
+- [ ] Test draft PR #3 on your fork (every show on The Board), then tell Claude the result. Do not merge it into `live-podping`: that adds it to the PR for Spencer. The PR has the commands.
+  - [ ] Open `/board/` and check each show's starting day and time. Change a wrong one in the admin, or tell Claude.
+  - [ ] When a dashed show gets a pending live, check that its line turns solid.
 
 ## thelounge-candr
 
