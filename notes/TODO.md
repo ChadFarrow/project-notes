@@ -20,10 +20,6 @@ blank line ends the group.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 - [ ] Test PR #520, the fix for NWC failing until you paste it again, in the Zapstore app: leave the app in the background overnight, return, and send one boost. Do not paste the connection again first.
 
-## candr.space
-
-- [ ] Merge PR #64, then open `/boosts` and check that the boost you saw twice shows once. Tell Claude the result.
-
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
