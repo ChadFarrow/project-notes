@@ -19,6 +19,12 @@ blank line ends the group.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 - [ ] Test PR #520, the fix for NWC failing until you paste it again, in the Zapstore app: leave the app in the background overnight, return, and send one boost. Do not paste the connection again first.
+- [ ] Test PR #522, the quick buttons on Favorites, on your iPhone, from the PR's Vercel preview.
+  - [ ] Scroll far down a long list and press SHOWS. The row stays under the header, and the list opens at its top.
+  - [ ] Tell Claude if you want TRACKS and PODCASTS in place of SINGLES and SHOWS. One word changes the buttons, the menu and the headings.
+- [ ] Test PR #521, the heart and queue on more home feed notes, on your iPhone, from the PR's Vercel preview.
+  - [ ] Find a bot's boost note, such as Boostr_Bot. It shows FAVORITE and QUEUE under the label. Press QUEUE.
+  - [ ] Find a track boost with a 🎵 line. Its card names the episode. Press its heart, and check Favorites shows the episode and not the track. Signed in, this changes your real favorites list.
 
 ## candr.space
 
