@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-04 19:29 UTC
+# Dashboard — 2026-11-05 00:35 UTC
 
-22 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
+21 open PRs · 10 open issues · 24 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (2)
 
-- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 30 days · no checks
+- **msp-podping-service** [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — idle 31 days · no checks
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 12 days · checks passing
 
 ### Open issues (10)
@@ -21,7 +21,7 @@
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 16 days ago
+- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 17 days ago
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -107,7 +107,7 @@
 
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 1 day ago
 - PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 1 day ago
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 33 days ago · merge conflict · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 34 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 
@@ -115,8 +115,8 @@
 
 2 PRs · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 2 hours ago · draft
-- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 30 days ago
+- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 7 hours ago · draft
+- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 31 days ago
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
@@ -190,11 +190,10 @@
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
-3 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
+2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 7 issues · 4 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 1 minute ago · draft
-- PR [#2 Phase 10 - lightning and v4v functionality scaffolded out, passing smoke tests and end-to-end in dev, will need real-world testing in production](https://github.com/ChadFarrow/small-group-scoop/pull/2) — opened 9 hours ago · merge conflict
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 3 days ago
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 5 hours ago · merge conflict
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 4 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
 

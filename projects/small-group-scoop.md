@@ -22,11 +22,10 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 ## Live status
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
-- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
+- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 7 issues · 4 opened by you)
 
-### Pull requests (3)
+### Pull requests (2)
 
-- [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · draft
-- [#2 Phase 10 - lightning and v4v functionality scaffolded out, passing smoke tests and end-to-end in dev, will need real-world testing in production](https://github.com/ChadFarrow/small-group-scoop/pull/2) — opened 2026-11-04 · merge conflict
+- [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
 - [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31
 <!-- AUTO:END -->
