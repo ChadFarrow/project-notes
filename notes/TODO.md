@@ -31,7 +31,8 @@ blank line ends the group.
 
 ## candr.space
 
-- [ ] Merge PR #66, then open `/boosts` and check the listener names on the cards. Tell Claude the result.
+- [ ] Open `/boosts` and check the listener names on the cards. PR #66 is merged. Tell Claude the result.
+- [ ] Find out why the boost you told Claude about on 2026-11-05 was not on `/boosts`. Ask Claude for the command that searches Helipad for that listener, run it in the console on your signed-in Helipad page, and paste the output. Also say where you saw the boost and about when.
 
 ## MSP-2.0
 
