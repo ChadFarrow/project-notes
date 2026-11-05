@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-05 19:10 UTC
+# Dashboard — 2026-11-05 21:35 UTC
 
 24 open PRs · 10 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -85,8 +85,8 @@
 
 4 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 6 hours ago
-- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 6 hours ago
+- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 9 hours ago
+- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 9 hours ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 40 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
@@ -140,7 +140,7 @@
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 8 hours ago · draft
+- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 11 hours ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -202,7 +202,7 @@
 
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 23 hours ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 1 day ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 4 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
