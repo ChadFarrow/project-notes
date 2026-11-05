@@ -26,8 +26,7 @@ Podping notification service for MSP-2.0 — notifies subscribers when podcast/m
 - **Repo:** [ChadFarrow/msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) · TypeScript
 - **Used by:** [MSP-2.0](MSP-2.0.md), [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md), [musicL-playlist-updater](musicL-playlist-updater.md), [stablekraft-app](stablekraft-app.md)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 2026-11-04 · draft
 - [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 2026-10-04
 <!-- AUTO:END -->
