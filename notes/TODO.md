@@ -50,7 +50,10 @@ blank line ends the group.
 
 ## small-group-scoop
 
-- [ ] Test the quiz demo with 10 questions on your phone (branch `vercel-demo`), then tell Claude the result. Claude then adds the fun questions and the new tie-break question to quiz PR #1. They are not in that PR yet.
+- [ ] Test the quiz demo on your iPhone (branch `vercel-demo`), then tell Claude the result. Claude then moves the demo changes into quiz PR #1: the fun questions, the tie-break question, the steady layout and the hover fix. None of them are in that PR yet.
+  - [ ] Every run has 10 questions, and Next stays in one spot from question to question.
+  - [ ] No answer looks picked when a new question opens. Chrome could not reproduce this, so only a real phone can confirm the fix.
+- [ ] On the Mac mini, throw away the unpushed quiz questions from 2026-11-04 in `small-group-scoop`. The demo has new ones, and the old ones would conflict with `vercel-demo`.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] Test branch `live-podping` on your fork (podping live status), then tell Claude the result. Claude then prepares the PR for Spencer.
   - [ ] Run the site and `watch_live`. When a show goes live before its scheduled start, it shows as LIVE within about a minute.
