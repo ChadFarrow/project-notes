@@ -25,5 +25,7 @@ MusicL playlists repository
 - **Repo:** [ChadFarrow/chadf-musicl-playlists](https://github.com/ChadFarrow/chadf-musicl-playlists) · Python
 - **Used by:** [boostmebitch](boostmebitch.md), [musicL-playlist-updater](musicL-playlist-updater.md), [stablekraft-app](stablekraft-app.md)
 
-_No open work._
+### Pull requests (1)
+
+- [#6 Add the OnlyBoosts top songs musicL playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/6) — opened 2026-11-05 · draft
 <!-- AUTO:END -->

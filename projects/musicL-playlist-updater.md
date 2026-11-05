@@ -25,7 +25,7 @@ Playlist updater tool
 ## Live status
 
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (1 PR)
 
 _No open work._
 <!-- AUTO:END -->
