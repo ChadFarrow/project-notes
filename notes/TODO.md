@@ -43,11 +43,10 @@ blank line ends the group.
 
 ## msp-podping-service
 
-- [ ] Deploy draft PR #8, which sends MSP podpings to the podping gossip network as well as to Hive. It changes nothing until the key is set. Then tell Claude the result.
-  - [ ] Make a key with `openssl rand -hex 32` and keep a copy. Set it as `GOSSIP_SIGNING_KEY` on the Railway pusher service.
-  - [ ] Mark the PR ready and merge it. In the Railway logs, find `[gossip] enabled` and `Subscribed to gossip topic.`, and copy the `Sender pubkey` line.
-  - [ ] Send that pubkey to the gossip operators and ask them to trust it. Until they do, gossip watchers drop MSP podpings.
-  - [ ] After they trust it, send one podping from MSP and check that a gossip watcher shows it.
+- [ ] Get MSP's gossip key trusted. PR #8 is live since 2026-11-05, so MSP podpings now go to the podping gossip network as well as to Hive. Gossip watchers drop them until they trust the key.
+  - [ ] Send the pubkey `0f9516b8034bf448ec1f15e705fcd072e05ca5c405357d5e4a92b171c1af5d24` to the gossip operators, and ask them to add it to their trusted publishers.
+  - [ ] Copy `GOSSIP_SIGNING_KEY` from the Railway variables of the `podping` project into your password manager. Railway holds the only copy, and a new key needs trust again.
+  - [ ] After they trust it, send one podping from MSP and check that a gossip watcher shows it. Then tell Claude.
 
 ## small-group-scoop
 
