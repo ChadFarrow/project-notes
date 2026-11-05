@@ -50,6 +50,7 @@ blank line ends the group.
 
 ## small-group-scoop
 
+- [ ] On the Mac mini, push the new quiz questions from 2026-11-04 to a branch on your fork (quiz PR #1), then tell Claude the branch. They are on no remote yet. Claude then adds them to the demo so you can test them.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] Test branch `live-podping` on your fork (podping live status), then tell Claude the result. Claude then prepares the PR for Spencer.
   - [ ] Run the site and `watch_live`. When a show goes live before its scheduled start, it shows as LIVE within about a minute.
