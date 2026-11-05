@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-05 12:34 UTC
+# Dashboard — 2026-11-05 13:26 UTC
 
 24 open PRs · 10 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -84,8 +84,8 @@
 
 4 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 5 minutes ago
-- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 6 minutes ago
+- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 57 minutes ago
+- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 58 minutes ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 39 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
@@ -117,7 +117,7 @@
 
 2 PRs · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 19 hours ago · draft
+- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 20 hours ago · draft
 - PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 31 days ago
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
@@ -139,7 +139,7 @@
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 2 hours ago · draft
+- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 3 hours ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
