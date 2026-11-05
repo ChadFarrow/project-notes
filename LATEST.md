@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-05 05:54 UTC
+# Dashboard — 2026-11-05 11:41 UTC
 
-23 open PRs · 10 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
+22 open PRs · 10 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -115,7 +115,7 @@
 
 2 PRs · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 13 hours ago · draft
+- PR [#7 Keep the viewer up when a Postgres connection drops, and report when it falls behind](https://github.com/ChadFarrow/msp-podping-service/pull/7) — opened 18 hours ago · draft
 - PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 31 days ago
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
@@ -137,7 +137,7 @@
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#6 Add the OnlyBoosts top songs musicL playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/6) — opened 4 hours ago · draft
+- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 1 hour ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -181,9 +181,8 @@
 
 #### [candr.space](projects/candr.space.md)
 
-2 PRs · 2 branches with no PR
+1 PR · 2 branches with no PR
 
-- PR [#66 /boosts: show a Fountain listener's Nostr name beside their handle](https://github.com/ChadFarrow/candr.space/pull/66) — opened just now · draft
 - PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 2 days ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
@@ -200,7 +199,7 @@
 
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 10 hours ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 16 hours ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 4 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)

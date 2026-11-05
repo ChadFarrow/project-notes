@@ -27,5 +27,5 @@ MusicL playlists repository
 
 ### Pull requests (1)
 
-- [#6 Add the OnlyBoosts top songs musicL playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/6) — opened 2026-11-05 · draft
+- [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 2026-11-05 · draft
 <!-- AUTO:END -->
