@@ -41,6 +41,14 @@ blank line ends the group.
   - [ ] Check that the change shows on v4vmusic.com within about 5 minutes of the save.
 - [ ] When the v4vmusic dev answers your note, tell Claude. Live At Rockpile and The EP (Amnesia) stay out of date there until the dev changes their feed URLs.
 
+## msp-podping-service
+
+- [ ] Deploy draft PR #8, which sends MSP podpings to the podping gossip network as well as to Hive. It changes nothing until the key is set. Then tell Claude the result.
+  - [ ] Make a key with `openssl rand -hex 32` and keep a copy. Set it as `GOSSIP_SIGNING_KEY` on the Railway pusher service.
+  - [ ] Mark the PR ready and merge it. In the Railway logs, find `[gossip] enabled` and `Subscribed to gossip topic.`, and copy the `Sender pubkey` line.
+  - [ ] Send that pubkey to the gossip operators and ask them to trust it. Until they do, gossip watchers drop MSP podpings.
+  - [ ] After they trust it, send one podping from MSP and check that a gossip watcher shows it.
+
 ## small-group-scoop
 
 - [ ] Test the quiz demo on your iPhone (branch `vercel-demo`), then tell Claude the result. Claude then moves the demo changes into quiz PR #1: the fun questions, the tie-break question, the steady layout and the hover fix. None of them are in that PR yet.
