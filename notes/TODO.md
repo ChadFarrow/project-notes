@@ -40,7 +40,9 @@ blank line ends the group.
   - [ ] Save a real change to one hosted feed, such as a new song. The ping lands on Hive about 2 minutes later, not about 15 s later.
   - [ ] Check that the change shows on v4vmusic.com within about 5 minutes of the save.
 - [ ] When the v4vmusic dev answers your note, tell Claude. Live At Rockpile and The EP (Amnesia) stay out of date there until the dev changes their feed URLs.
-- [ ] Tell the v4vmusic dev that v4vmusic.com may miss podpings for feed URLs with spaces. Podcast Index stores those URLs with raw spaces, but every podping carries `%20` (details in issue #179). Then tell Claude the answer.
+- [ ] Ask the v4vmusic dev how v4vmusic.com picks up podpings, because MSP users say podping.me works better there. Then tell Claude the answers.
+  - [ ] Does v4vmusic accept podpings signed by `chadf` with id `pp_music_update`? podping.me sends through podping.cloud, so its podpings are signed by `podping.aaa` to `podping.eee`, always as `pp_podcast_update`, and they are also on gossip.
+  - [ ] Podcast Index stores feed URLs with spaces as raw spaces, but every podping carries `%20` (issue #179). Does v4vmusic match on the stored URL?
 - [ ] Decide issue #179: should MSP offer to send a feed URL with spaces as `%20` (B), or keep refusing it with a better message (A)? Tell Claude A or B.
 
 ## msp-podping-service
