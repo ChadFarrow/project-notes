@@ -26,7 +26,5 @@ Podping notification service for MSP-2.0 — notifies subscribers when podcast/m
 - **Repo:** [ChadFarrow/msp-podping-service](https://github.com/ChadFarrow/msp-podping-service) · TypeScript
 - **Used by:** [MSP-2.0](MSP-2.0.md), [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md), [musicL-playlist-updater](musicL-playlist-updater.md), [stablekraft-app](stablekraft-app.md)
 
-### Pull requests (1)
-
-- [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 2026-10-04
+_No open work._
 <!-- AUTO:END -->

@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-_No open work._
+### Pull requests (1)
+
+- [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 2026-11-06
 <!-- AUTO:END -->

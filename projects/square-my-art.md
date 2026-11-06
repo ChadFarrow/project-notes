@@ -22,5 +22,7 @@ Upload any image to make it square to use as art in a podcast
 
 - **Repo:** [ChadFarrow/square-my-art](https://github.com/ChadFarrow/square-my-art) · HTML
 
-_No open work._
+### Pull requests (1)
+
+- [#1 Add CLAUDE.md](https://github.com/ChadFarrow/square-my-art/pull/1) — opened 2026-11-06
 <!-- AUTO:END -->
