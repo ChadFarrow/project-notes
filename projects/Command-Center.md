@@ -22,7 +22,8 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Branches with no open PR (1)
+### Branches with no open PR (2)
 
 - [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board)
+- [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
 <!-- AUTO:END -->
