@@ -59,11 +59,8 @@ blank line ends the group.
   - [ ] Every run has 10 questions, and Next stays in one spot from question to question.
   - [ ] No answer looks picked when a new question opens. Chrome could not reproduce this, so only a real phone can confirm the fix.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
-- [ ] Test branch `live-podping` on your fork (podping live status), then tell Claude the result. Claude then prepares the PR for Spencer.
-  - [ ] Run the site and `watch_live`. When a show goes live before its scheduled start, it shows as LIVE within about a minute.
-- [ ] Test draft PR #3 on your fork (every show on The Board), then tell Claude the result. Do not merge it into `live-podping`: that adds it to the PR for Spencer. The PR has the commands.
-  - [ ] Open `/board/` and check each show's starting day and time. Change a wrong one in the admin, or tell Claude.
-  - [ ] When a dashed show gets a pending live, check that its line turns solid.
+- [ ] PR #25 (The Board) waits for Spencer. When he decides what to do with it, tell Claude.
+- [ ] Approve the draft bug issue that Claude showed you in the chat on 2026-11-06, or tell Claude what to change. Claude files it only after you approve.
 
 ## thelounge-candr
 
