@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-06 12:31 UTC
+# Dashboard — 2026-11-06 13:35 UTC
 
 23 open PRs · 11 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -16,7 +16,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 12 hours ago
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 13 hours ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
