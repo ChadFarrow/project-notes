@@ -51,7 +51,6 @@ blank line ends the group.
   - [ ] Ask the musicindex.org gossip-watcher operator whether their watcher saw the test podping: 2026-11-05 23:59 UTC, `TFT-music-playlist.xml`, sender `0f9516b8`. If their watcher filters on trusted publishers, ask them to add the pubkey `0f9516b8034bf448ec1f15e705fcd072e05ca5c405357d5e4a92b171c1af5d24`. Then tell Claude the answer.
   - [ ] Copy `GOSSIP_SIGNING_KEY` from the Railway variables of the `podping` project into your password manager. Railway holds the only copy, and a new key needs trust again.
   - [ ] When the podping.cloud team answers your question, tell Claude. Their answer decides between trusting MSP's gossip key, a podping.cloud token for MSP, or no change.
-- [ ] Merge PR #4 (viewer index that makes `/health` fast), or tell Claude to close it. It has waited since 2026-10-04 and merges cleanly onto the new `main`. A merge to `main` also redeploys the pusher, with a short restart.
 
 ## small-group-scoop
 
