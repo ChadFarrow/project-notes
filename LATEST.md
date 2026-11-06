@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-05 23:00 UTC
+# Dashboard — 2026-11-06 00:06 UTC
 
-23 open PRs · 10 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
+23 open PRs · 11 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -12,7 +12,13 @@
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 13 days · checks passing
 - **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 7 days · no checks
 
-### Open issues (10)
+### Open issues (11)
+
+**[MSP-2.0](projects/MSP-2.0.md)**
+
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 2 minutes ago
+- [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
+- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
 **[boostmebitch](projects/boostmebitch.md)**
 
@@ -32,11 +38,6 @@
 
 - [#14 move NWC connects to setting page with webLN](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/14) — opened 4 months ago
 - [#13 clear invoices in extension when paid](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/issues/13) — opened 4 months ago
-
-**[MSP-2.0](projects/MSP-2.0.md)**
-
-- [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
-- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
 **[RSS-music-site-template](projects/RSS-music-site-template.md)**
 
@@ -85,8 +86,8 @@
 
 4 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 10 hours ago
-- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 10 hours ago
+- PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 11 hours ago
+- PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 11 hours ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 40 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
@@ -104,15 +105,9 @@
 
 ### Music publishing
 
-#### [msp-podping-service](projects/msp-podping-service.md)
-
-1 PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
-
-- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 32 days ago
-
 #### [MSP-2.0](projects/MSP-2.0.md)
 
-5 PRs · 2 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+5 PRs · 3 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 2 days ago
 - PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 2 days ago
@@ -120,9 +115,15 @@
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 
+#### [msp-podping-service](projects/msp-podping-service.md)
+
+1 PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
+
+- PR [#4 perf(viewer): index block\_num, so /health and the collector's resume stop reading the whole table](https://github.com/ChadFarrow/msp-podping-service/pull/4) — opened 32 days ago
+
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 2 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
+1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
 - PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 13 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
@@ -139,7 +140,7 @@
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 12 hours ago · draft
+- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 13 hours ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
