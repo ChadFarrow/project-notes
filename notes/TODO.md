@@ -40,13 +40,15 @@ blank line ends the group.
   - [ ] Save a real change to one hosted feed, such as a new song. The ping lands on Hive about 2 minutes later, not about 15 s later.
   - [ ] Check that the change shows on v4vmusic.com within about 5 minutes of the save.
 - [ ] When the v4vmusic dev answers your note, tell Claude. Live At Rockpile and The EP (Amnesia) stay out of date there until the dev changes their feed URLs.
+- [ ] Tell the v4vmusic dev that v4vmusic.com may miss podpings for feed URLs with spaces. Podcast Index stores those URLs with raw spaces, but every podping carries `%20` (details in issue #179). Then tell Claude the answer.
+- [ ] Decide issue #179: should MSP offer to send a feed URL with spaces as `%20` (B), or keep refusing it with a better message (A)? Tell Claude A or B.
 
 ## msp-podping-service
 
-- [ ] Get MSP's gossip key trusted. PR #8 is live since 2026-11-05, so MSP podpings now go to the podping gossip network as well as to Hive. Gossip watchers drop them until they trust the key.
-  - [ ] Send the pubkey `0f9516b8034bf448ec1f15e705fcd072e05ca5c405357d5e4a92b171c1af5d24` to the gossip operators, and ask them to add it to their trusted publishers.
+- [ ] Finish the gossip setup from PR #8. It is live and tested: MSP podpings reach Hive and the podping gossip network, and a deploy keeps the same key.
+  - [ ] Ask the musicindex.org gossip-watcher operator whether their watcher saw the test podping: 2026-11-05 23:59 UTC, `TFT-music-playlist.xml`, sender `0f9516b8`. If their watcher filters on trusted publishers, ask them to add the pubkey `0f9516b8034bf448ec1f15e705fcd072e05ca5c405357d5e4a92b171c1af5d24`. Then tell Claude the answer.
   - [ ] Copy `GOSSIP_SIGNING_KEY` from the Railway variables of the `podping` project into your password manager. Railway holds the only copy, and a new key needs trust again.
-  - [ ] After they trust it, send one podping from MSP and check that a gossip watcher shows it. Then tell Claude.
+- [ ] Merge PR #4 (viewer index that makes `/health` fast), or tell Claude to close it. It has waited since 2026-10-04 and merges cleanly onto the new `main`. A merge to `main` also redeploys the pusher, with a short restart.
 
 ## small-group-scoop
 
