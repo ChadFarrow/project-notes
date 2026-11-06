@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-06 13:35 UTC
+# Dashboard — 2026-11-06 13:59 UTC
 
 23 open PRs · 11 open issues · 25 branches with no PR · 38 tracked repos (14 not tracked)
 
@@ -186,7 +186,7 @@
 
 1 PR · 2 branches with no PR
 
-- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 3 days ago · merge conflict
+- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 4 days ago · merge conflict
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
