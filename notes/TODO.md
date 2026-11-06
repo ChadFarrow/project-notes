@@ -60,7 +60,6 @@ blank line ends the group.
   - [ ] No answer looks picked when a new question opens. Chrome could not reproduce this, so only a real phone can confirm the fix.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] PR #25 (The Board) waits for Spencer. When he decides what to do with it, tell Claude.
-- [ ] Approve the draft bug issue that Claude showed you in the chat on 2026-11-06, or tell Claude what to change. Claude files it only after you approve.
 
 ## thelounge-candr
 
