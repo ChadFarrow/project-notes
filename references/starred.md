@@ -53,7 +53,7 @@
 - [lnzap](https://github.com/ericpp/lnzap) - No description
 - [icloud-for-linux](https://github.com/cross-platform/icloud-for-linux) - Access all of your favourite iCloud apps from Linux
 - [Libre-Soundboard](https://github.com/Kolomona/Libre-Soundboard) - LibreSoundboard is a native Linux desktop JACK enabled soundboard application.
-- [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Open-source Nostr commerce clients for signed listings, private orders, and direct Lightning payments.
+- [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Frontend applications and shared libraries for Conduit’s marketplace and merchant portal.
 - [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
 - [napstr](https://github.com/lnbits/napstr) - No description
 - [hanami](https://github.com/Letdown2491/hanami) - No description
@@ -114,4 +114,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-06 18:37 UTC*
+*Last synced: 2026-11-06 23:22 UTC*
