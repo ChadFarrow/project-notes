@@ -22,7 +22,9 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Branches with no open PR (1)
+### Branches with no open PR (3)
 
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
+- [`worktree-clearer-feedback`](https://github.com/ChadFarrow/Command-Center/tree/worktree-clearer-feedback)
+- [`worktree-iso-file-names`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-file-names)
 <!-- AUTO:END -->

@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-07 03:48 UTC
+# Dashboard — 2026-11-07 10:45 UTC
 
-24 open PRs · 11 open issues · 27 branches with no PR · 40 tracked repos (14 not tracked)
+24 open PRs · 11 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -52,7 +52,7 @@
 
 - PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 38 days ago · draft
 - PR [#33 fix(bot): cover art from Podcast Index when the sent feed has none; link v4vmusic boosts](https://github.com/ChadFarrow/boostbox/pull/33) — opened 45 days ago · merge conflict
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 55 days ago · draft · merge conflict
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 56 days ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 #### [helipad](projects/helipad.md)
@@ -97,7 +97,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 48 days ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 49 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 59 days ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -133,7 +133,7 @@
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 1 day ago · draft
+- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 2 days ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -170,7 +170,7 @@
 
 1 PR
 
-- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 4 hours ago
+- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 11 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -199,15 +199,17 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-1 branch with no PR
+3 branches with no PR
 
+- Branch [`worktree-iso-file-names`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-file-names) — no PR
+- Branch [`worktree-clearer-feedback`](https://github.com/ChadFarrow/Command-Center/tree/worktree-clearer-feedback) — no PR
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 
 #### [square-my-art](projects/square-my-art.md)
 
 1 PR · 1 branch with no PR
 
-- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 3 hours ago
+- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 10 hours ago
 - Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
