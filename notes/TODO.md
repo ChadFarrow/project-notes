@@ -36,8 +36,8 @@ blank line ends the group.
 
 ## Command-Center
 
-- [ ] Test draft PR #2 on your iPad before you merge it. Follow the "Before merge" steps in the PR, then tell Claude the result.
-- [ ] Test draft PR #3 on your iPad after PR #2, then tell Claude the result. It is based on PR #2, so merge PR #2 first.
+- [ ] Test draft PR #4 in a browser on the Mac mini, then tell Claude the result. It holds PR #2 and PR #3 too, so merge #2, then #3, then #4.
+- [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
 
 ## MSP-2.0
 
