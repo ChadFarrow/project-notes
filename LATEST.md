@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-07 00:13 UTC
+# Dashboard — 2026-11-07 00:16 UTC
 
 25 open PRs · 11 open issues · 28 branches with no PR · 40 tracked repos (14 not tracked)
 
@@ -170,7 +170,7 @@
 
 1 PR
 
-- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 48 minutes ago
+- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 51 minutes ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -197,20 +197,20 @@
 
 ### Uncategorized
 
-#### [Command-Center](projects/Command-Center.md)
-
-1 PR · 2 branches with no PR
-
-- PR [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened just now · draft
-- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
-- Branch [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board) — no PR
-
 #### [square-my-art](projects/square-my-art.md)
 
 1 PR · 1 branch with no PR
 
-- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 8 minutes ago
+- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 12 minutes ago
 - Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
+
+#### [Command-Center](projects/Command-Center.md)
+
+1 PR · 2 branches with no PR
+
+- PR [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 4 minutes ago · draft
+- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
+- Branch [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
