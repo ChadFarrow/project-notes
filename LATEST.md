@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-07 03:29 UTC
+# Dashboard — 2026-11-07 03:46 UTC
 
-27 open PRs · 11 open issues · 28 branches with no PR · 40 tracked repos (14 not tracked)
+24 open PRs · 11 open issues · 32 branches with no PR · 40 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -199,11 +199,12 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-3 PRs · 2 branches with no PR
+6 branches with no PR
 
-- PR [#4 Desktop one-screen board with one-press Chapter](https://github.com/ChadFarrow/Command-Center/pull/4) — opened 2 hours ago · draft
-- PR [#3 Move the jingles to an ISO soundboard view](https://github.com/ChadFarrow/Command-Center/pull/3) — opened 2 hours ago · draft
-- PR [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 3 hours ago · draft
+- Branch [`feat-vault-notes`](https://github.com/ChadFarrow/Command-Center/tree/feat-vault-notes) — no PR
+- Branch [`feat-one-screen`](https://github.com/ChadFarrow/Command-Center/tree/feat-one-screen) — no PR
+- Branch [`feat-iso-board`](https://github.com/ChadFarrow/Command-Center/tree/feat-iso-board) — no PR
+- Branch [`fix-board-review`](https://github.com/ChadFarrow/Command-Center/tree/fix-board-review) — no PR
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 - Branch [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board) — no PR
 
