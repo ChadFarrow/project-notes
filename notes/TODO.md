@@ -60,6 +60,13 @@ blank line ends the group.
 - [ ] Tell Claude to prepare the iPhone layout PR for Spencer. The demo tests passed on `/after/` on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] PR #25 (The Board) waits for Spencer. When he decides what to do with it, tell Claude.
 
+## square-my-art
+
+- [ ] Test PR #2, the fixes for Save, window screenshots and Copy, in Safari on the Mac and on your iPad before you merge it, then tell Claude the result. Open https://square-my-art-git-worktree-fix-save-alpha-copy-chadfs-projects.vercel.app/ and sign in to Vercel, because the preview is behind its login. Headless Chrome passed every test; only real Safari can test these.
+  - [ ] On the iPad, set JPEG and turn on "Keep JPEG at 500 KB or less". Move a slider, then press Save image at once. The file saves, it is 500 KB or less, and it has the new setting.
+  - [ ] On the Mac, take a window screenshot (⌘⇧4, then Space, then click a window) and drop it on the page. With JPEG, in Blur and in Crop, the space around the window is not black. Turn on the drop shadow: no black box shows behind the window.
+  - [ ] Press Copy image, and paste the image into Notes or the Podhome upload box. On the iPad, check that the copy works.
+
 ## thelounge-candr
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
