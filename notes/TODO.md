@@ -66,10 +66,9 @@ blank line ends the group.
 
 ## square-my-art
 
-- [ ] Test PR #2, the fixes for Save, window screenshots and Copy, in Safari on the Mac and on your iPad before you merge it, then tell Claude the result. Open https://square-my-art-git-worktree-fix-save-alpha-copy-chadfs-projects.vercel.app/ and sign in to Vercel, because the preview is behind its login. Headless Chrome passed every test; only real Safari can test these.
-  - [ ] On the iPad, set JPEG and turn on "Keep JPEG at 500 KB or less". Move a slider, then press Save image at once. The file saves, it is 500 KB or less, and it has the new setting.
-  - [ ] On the Mac, take a window screenshot (⌘⇧4, then Space, then click a window) and drop it on the page. With JPEG, in Blur and in Crop, the space around the window is not black. Turn on the drop shadow: no black box shows behind the window.
-  - [ ] Press Copy image, and paste the image into Notes or the Podhome upload box. On the iPad, check that the copy works.
+- [ ] Test PR #2, the fixes for Save, window screenshots and Copy, in your desktop browser before you merge it, then tell Claude the result. Open https://square-my-art-git-worktree-fix-save-alpha-copy-chadfs-projects.vercel.app/ and sign in to Vercel, because the preview is behind its login. Headless Chrome passed every test.
+  - [ ] Take a real window screenshot (⌘⇧4, then Space, then click a window) and drop it on the page. With JPEG, in Blur and in Crop, the space around the window is not black. Turn on the drop shadow: no black box shows behind the window.
+  - [ ] Only if your browser is Safari: set JPEG and turn on "Keep JPEG at 500 KB or less". Move a slider, then click Save image at once. The file saves, and it is 500 KB or less.
 
 ## thelounge-candr
 
