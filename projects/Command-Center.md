@@ -22,12 +22,7 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Branches with no open PR (6)
+### Branches with no open PR (1)
 
-- [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board)
-- [`feat-iso-board`](https://github.com/ChadFarrow/Command-Center/tree/feat-iso-board)
-- [`feat-one-screen`](https://github.com/ChadFarrow/Command-Center/tree/feat-one-screen)
-- [`feat-vault-notes`](https://github.com/ChadFarrow/Command-Center/tree/feat-vault-notes)
-- [`fix-board-review`](https://github.com/ChadFarrow/Command-Center/tree/fix-board-review)
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
 <!-- AUTO:END -->
