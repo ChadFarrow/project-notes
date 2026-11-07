@@ -36,7 +36,7 @@ blank line ends the group.
 
 ## Command-Center
 
-- [ ] Test draft PR #4 in a browser on the Mac mini, then tell Claude the result. It holds PR #2 and PR #3 too, so merge #2, then #3, then #4.
+- [ ] Install the always-on board agent: run the two commands in the Command-Center README, "Always on (Mac mini)". Auto mode does not let Claude add a login agent. Then open http://localhost:8000/ in Safari.
 - [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
 
 ## MSP-2.0
