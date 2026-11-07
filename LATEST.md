@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-06 23:51 UTC
+# Dashboard — 2026-11-07 00:06 UTC
 
-24 open PRs · 11 open issues · 27 branches with no PR · 40 tracked repos (14 not tracked)
+24 open PRs · 11 open issues · 28 branches with no PR · 40 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -15,7 +15,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 23 hours ago
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 1 day ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
@@ -170,7 +170,7 @@
 
 1 PR
 
-- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 26 minutes ago
+- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 41 minutes ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -197,18 +197,19 @@
 
 ### Uncategorized
 
+#### [square-my-art](projects/square-my-art.md)
+
+1 PR · 1 branch with no PR
+
+- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 1 minute ago
+- Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
+
 #### [Command-Center](projects/Command-Center.md)
 
 2 branches with no PR
 
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 - Branch [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board) — no PR
-
-#### [square-my-art](projects/square-my-art.md)
-
-1 PR
-
-- PR [#1 Add CLAUDE.md](https://github.com/ChadFarrow/square-my-art/pull/1) — opened 6 minutes ago
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 

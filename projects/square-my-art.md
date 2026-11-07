@@ -24,5 +24,9 @@ Upload any image to make it square to use as art in a podcast
 
 ### Pull requests (1)
 
-- [#1 Add CLAUDE.md](https://github.com/ChadFarrow/square-my-art/pull/1) — opened 2026-11-06
+- [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 2026-11-07
+
+### Branches with no open PR (1)
+
+- [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md)
 <!-- AUTO:END -->
