@@ -22,6 +22,10 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
+### Pull requests (1)
+
+- [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 2026-11-07 · draft
+
 ### Branches with no open PR (2)
 
 - [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board)
