@@ -34,6 +34,10 @@ blank line ends the group.
 - [ ] Open `/boosts` and check the listener names on the cards. PR #66 is merged. Tell Claude the result.
 - [ ] Find out why the boost you told Claude about on 2026-11-05 was not on `/boosts`. Ask Claude for the command that searches Helipad for that listener, run it in the console on your signed-in Helipad page, and paste the output. Also say where you saw the boost and about when.
 
+## Command-Center
+
+- [ ] Test draft PR #2 on your iPad before you merge it. Follow the "Before merge" steps in the PR, then tell Claude the result.
+
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
