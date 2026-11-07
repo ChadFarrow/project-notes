@@ -22,8 +22,9 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Pull requests (2)
+### Pull requests (3)
 
+- [#4 Desktop one-screen board with one-press Chapter](https://github.com/ChadFarrow/Command-Center/pull/4) — opened 2026-11-07 · draft
 - [#3 Move the jingles to an ISO soundboard view](https://github.com/ChadFarrow/Command-Center/pull/3) — opened 2026-11-07 · draft
 - [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 2026-11-07 · draft
 
