@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-07 01:09 UTC
+# Dashboard — 2026-11-07 03:29 UTC
 
 27 open PRs · 11 open issues · 28 branches with no PR · 40 tracked repos (14 not tracked)
 
@@ -21,8 +21,8 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#515 \[BMB\] Pause not working](https://github.com/ChadFarrow/boostmebitch/issues/515) — opened 3 days ago · 1 comment
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 35 days ago
+- [#515 \[BMB\] Pause not working](https://github.com/ChadFarrow/boostmebitch/issues/515) — opened 4 days ago · 1 comment
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 36 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
 **[stablekraft-app](projects/stablekraft-app.md)**
@@ -108,8 +108,8 @@
 
 5 PRs · 3 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 3 days ago
-- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 3 days ago
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 4 days ago
+- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 4 days ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 36 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
@@ -170,13 +170,13 @@
 
 1 PR
 
-- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 1 hour ago
+- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 4 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
 2 PRs
 
-- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 6 days ago · draft
+- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 7 days ago · draft
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 8 days ago
 
 ### Websites
@@ -201,9 +201,9 @@
 
 3 PRs · 2 branches with no PR
 
-- PR [#4 Desktop one-screen board with one-press Chapter](https://github.com/ChadFarrow/Command-Center/pull/4) — opened just now · draft
-- PR [#3 Move the jingles to an ISO soundboard view](https://github.com/ChadFarrow/Command-Center/pull/3) — opened 38 minutes ago · draft
-- PR [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 56 minutes ago · draft
+- PR [#4 Desktop one-screen board with one-press Chapter](https://github.com/ChadFarrow/Command-Center/pull/4) — opened 2 hours ago · draft
+- PR [#3 Move the jingles to an ISO soundboard view](https://github.com/ChadFarrow/Command-Center/pull/3) — opened 2 hours ago · draft
+- PR [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 3 hours ago · draft
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 - Branch [`add-live-board`](https://github.com/ChadFarrow/Command-Center/tree/add-live-board) — no PR
 
@@ -211,7 +211,7 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 1 hour ago
+- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 3 hours ago
 - Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
