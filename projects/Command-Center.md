@@ -22,8 +22,9 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Pull requests (1)
+### Pull requests (2)
 
+- [#3 Move the jingles to an ISO soundboard view](https://github.com/ChadFarrow/Command-Center/pull/3) — opened 2026-11-07 · draft
 - [#2 Fix the live-board review issues; add CLAUDE.md](https://github.com/ChadFarrow/Command-Center/pull/2) — opened 2026-11-07 · draft
 
 ### Branches with no open PR (2)
