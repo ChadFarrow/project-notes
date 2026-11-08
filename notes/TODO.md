@@ -74,10 +74,6 @@ blank line ends the group.
 
 - [ ] PR #67 is deployed: the next time Accidentally Interesting goes live, check that LIT_Bot's notice shows in #OffTopic.
 
-- [ ] PR #70 is deployed, and nothing sends a NickServ password now. LIT_Bot gets its own account (ZeroNode allows one per email, so use the other address). In order, scripts in `thelounge-candr/tools/znc/` (PR #71):
-  - [ ] From your own IRC client, logged in as ChadF: `/msg NickServ HELP DROP`, then `/msg NickServ DROP LIT_Bot`. Keep `LIT_Bot` in it: a bare DROP deletes ChadF.
-  - [ ] At once, in a Mac Terminal: `register-litbot.sh`. Then `confirm-litbot.sh` if NickServ emails a code.
-  - [ ] `set-sasl.sh`, account LIT_Bot, the same password. It must end with a "330 ... is logged in as" line.
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
