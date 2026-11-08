@@ -23,7 +23,6 @@ blank line ends the group.
 
 ## chadf-landing-page
 
-- [ ] Merge PR #8 (the Square My Art card and Homegrown Hits Episode 156). Then open https://chadf.podtards.com and click Homegrown Hits, Episode 156. pod.link must open Episode 156. Claude could not test that link, because pod.link blocks automated requests.
 
 ## Command-Center
 
