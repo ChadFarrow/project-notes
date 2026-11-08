@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-08 02:14 UTC
+# Dashboard — 2026-11-08 02:50 UTC
 
-26 open PRs · 12 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
+25 open PRs · 12 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -16,7 +16,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 52 minutes ago
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 1 hour ago
 - [#515 \[BMB\] Pause not working](https://github.com/ChadFarrow/boostmebitch/issues/515) — opened 5 days ago · 1 comment
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 37 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
@@ -87,7 +87,7 @@
 
 5 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (3 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#524 Add issue forms for bugs, feature requests and tasks](https://github.com/ChadFarrow/boostmebitch/pull/524) — opened 41 minutes ago
+- PR [#524 Add issue forms for bugs, feature requests and tasks](https://github.com/ChadFarrow/boostmebitch/pull/524) — opened 1 hour ago
 - PR [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 2 days ago
 - PR [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 2 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
@@ -111,8 +111,8 @@
 
 5 PRs · 3 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 4 days ago
-- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 4 days ago
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 5 days ago
+- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 5 days ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 37 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
@@ -177,10 +177,9 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-3 PRs
+2 PRs
 
-- PR [#71 tools/znc: register LIT\_Bot as its own NickServ account](https://github.com/ChadFarrow/thelounge-candr/pull/71) — opened just now
-- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 7 days ago · draft · merge conflict
+- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 8 days ago · draft
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 9 days ago
 
 ### Websites
