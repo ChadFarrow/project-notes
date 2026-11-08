@@ -72,6 +72,10 @@ blank line ends the group.
 
 ## thelounge-candr
 
+- [ ] PR #67, lit-bot sends Accidentally Interesting to #OffTopic too: merge it, then run the bots deploy.
+  - [ ] After the deploy, check that the lit-bot log says `Successfully joined IRC channel: #offtopic`. If ZeroNode refuses the bot, tell Claude.
+  - [ ] The next time Accidentally Interesting goes live, check that the notice shows in #OffTopic.
+
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
 ## Mac mini
