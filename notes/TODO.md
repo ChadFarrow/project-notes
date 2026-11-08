@@ -17,10 +17,6 @@ blank line ends the group.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
-- [ ] Test PR #521, the heart and queue on more home feed notes, on your iPhone before you merge it, then tell Claude the result. Open https://boostmebitch-git-fix-feed-note-buttons-chadfs-projects.vercel.app/ and sign in only for the heart test.
-  - [ ] Find a bot's boost note, such as Boostr_Bot. It shows FAVORITE and QUEUE under the label. Press QUEUE, and check Listen shows the episode.
-  - [ ] Find a track boost with a 🎵 line. Its card names the episode. Press its heart, and check Favorites shows the episode and not the track. Signed in, this changes your real favorites list, so press the heart again after the test.
-  - [ ] Tell Claude if you want a show heart on a note that tags only a show. PR #521 leaves it out, and such a note can never have a queue button.
 
 ## candr.space
 
