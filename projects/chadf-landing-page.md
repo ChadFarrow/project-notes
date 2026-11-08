@@ -21,5 +21,7 @@ Personal landing page
 
 - **Repo:** [ChadFarrow/chadf-landing-page](https://github.com/ChadFarrow/chadf-landing-page) · TypeScript
 
-_No open work._
+### Pull requests (1)
+
+- [#8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 2026-11-08 · for [square-my-art](square-my-art.md)
 <!-- AUTO:END -->

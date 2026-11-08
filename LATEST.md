@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-08 18:23 UTC
+# Dashboard — 2026-11-08 18:52 UTC
 
-20 open PRs · 11 open issues · 35 branches with no PR · 41 tracked repos (14 not tracked)
+19 open PRs · 11 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -166,11 +166,9 @@
 
 #### [square-my-art](projects/square-my-art.md)
 
-1 PR · 2 branches with no PR
 
-- PR [#3 Let the screenshot size slider zoom in](https://github.com/ChadFarrow/square-my-art/pull/3) — opened 1 minute ago
-- Branch [`worktree-fix-save-alpha-copy`](https://github.com/ChadFarrow/square-my-art/tree/worktree-fix-save-alpha-copy) — no PR
-- Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
+
+- Opened elsewhere: [chadf-landing-page #8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 1 minute ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -179,6 +177,12 @@
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 days ago · merge conflict
 
 ### Websites
+
+#### [chadf-landing-page](projects/chadf-landing-page.md)
+
+1 PR
+
+- PR [#8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 1 minute ago · for [square-my-art](projects/square-my-art.md)
 
 #### [candr.space](projects/candr.space.md)
 
@@ -197,15 +201,8 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-1 PR · 7 branches with no PR
+1 branch with no PR
 
-- PR [#10 Number the ISOs by place, and move them by dragging the card](https://github.com/ChadFarrow/Command-Center/pull/10) — opened 34 minutes ago
-- Branch [`worktree-iso-folder`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-folder) — no PR
-- Branch [`worktree-music-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-music-level) — no PR
-- Branch [`worktree-iso-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-level) — no PR
-- Branch [`worktree-pad-delete-file`](https://github.com/ChadFarrow/Command-Center/tree/worktree-pad-delete-file) — no PR
-- Branch [`worktree-iso-file-names`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-file-names) — no PR
-- Branch [`worktree-clearer-feedback`](https://github.com/ChadFarrow/Command-Center/tree/worktree-clearer-feedback) — no PR
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 
 #### [onlyboosts](projects/onlyboosts.md)
@@ -231,7 +228,7 @@
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

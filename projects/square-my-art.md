@@ -23,12 +23,7 @@ Upload any image to make it square to use as art in a podcast
 
 - **Repo:** [ChadFarrow/square-my-art](https://github.com/ChadFarrow/square-my-art) · HTML
 
-### Pull requests (1)
+### Opened elsewhere for this project (1)
 
-- [#3 Let the screenshot size slider zoom in](https://github.com/ChadFarrow/square-my-art/pull/3) — opened 2026-11-08
-
-### Branches with no open PR (2)
-
-- [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md)
-- [`worktree-fix-save-alpha-copy`](https://github.com/ChadFarrow/square-my-art/tree/worktree-fix-save-alpha-copy)
+- [chadf-landing-page #8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 2026-11-08
 <!-- AUTO:END -->
