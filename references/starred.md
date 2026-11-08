@@ -44,6 +44,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [fsearch](https://github.com/cboxdoerfer/fsearch) - A fast file search utility for Unix-like systems based on GTK3
 - [luxe](https://github.com/evanwhittaker/luxe) - A  coding agent for your terminal. Write, review, and ship code with a single, intuitive workflow.
 - [musicindex-studio](https://github.com/InTheMorning/musicindex-studio) - No description
 - [small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) - No description
@@ -114,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-08 22:44 UTC*
+*Last synced: 2026-11-08 23:15 UTC*
