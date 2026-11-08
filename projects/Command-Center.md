@@ -22,10 +22,17 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · HTML · private
 
-### Branches with no open PR (4)
+### Pull requests (1)
+
+- [#10 Number the ISOs by place, and move them by dragging the card](https://github.com/ChadFarrow/Command-Center/pull/10) — opened 2026-11-08
+
+### Branches with no open PR (7)
 
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
 - [`worktree-clearer-feedback`](https://github.com/ChadFarrow/Command-Center/tree/worktree-clearer-feedback)
 - [`worktree-iso-file-names`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-file-names)
+- [`worktree-iso-folder`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-folder)
+- [`worktree-iso-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-level)
+- [`worktree-music-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-music-level)
 - [`worktree-pad-delete-file`](https://github.com/ChadFarrow/Command-Center/tree/worktree-pad-delete-file)
 <!-- AUTO:END -->

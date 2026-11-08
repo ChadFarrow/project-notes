@@ -25,9 +25,10 @@ Upload any image to make it square to use as art in a podcast
 
 ### Pull requests (1)
 
-- [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 2026-11-07
+- [#3 Let the screenshot size slider zoom in](https://github.com/ChadFarrow/square-my-art/pull/3) — opened 2026-11-08
 
-### Branches with no open PR (1)
+### Branches with no open PR (2)
 
 - [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md)
+- [`worktree-fix-save-alpha-copy`](https://github.com/ChadFarrow/square-my-art/tree/worktree-fix-save-alpha-copy)
 <!-- AUTO:END -->

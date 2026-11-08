@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-08 17:19 UTC
+# Dashboard — 2026-11-08 18:23 UTC
 
-19 open PRs · 11 open issues · 31 branches with no PR · 41 tracked repos (14 not tracked)
+20 open PRs · 11 open issues · 35 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -8,14 +8,14 @@
 
 ### Ready to merge — idle 7+ days (2)
 
-- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 15 days · checks passing
+- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 16 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 7 days · no checks
 
 ### Open issues (11)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 15 hours ago
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 17 hours ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 37 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
@@ -116,7 +116,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 15 days ago
+- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 16 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
@@ -164,18 +164,19 @@
 
 ### Tools & self-hosting
 
+#### [square-my-art](projects/square-my-art.md)
+
+1 PR · 2 branches with no PR
+
+- PR [#3 Let the screenshot size slider zoom in](https://github.com/ChadFarrow/square-my-art/pull/3) — opened 1 minute ago
+- Branch [`worktree-fix-save-alpha-copy`](https://github.com/ChadFarrow/square-my-art/tree/worktree-fix-save-alpha-copy) — no PR
+- Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
+
 #### [thelounge-candr](projects/thelounge-candr.md)
 
 1 PR
 
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 days ago · merge conflict
-
-#### [square-my-art](projects/square-my-art.md)
-
-1 PR · 1 branch with no PR
-
-- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 1 day ago
-- Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
 
 ### Websites
 
@@ -196,8 +197,12 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-4 branches with no PR
+1 PR · 7 branches with no PR
 
+- PR [#10 Number the ISOs by place, and move them by dragging the card](https://github.com/ChadFarrow/Command-Center/pull/10) — opened 34 minutes ago
+- Branch [`worktree-iso-folder`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-folder) — no PR
+- Branch [`worktree-music-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-music-level) — no PR
+- Branch [`worktree-iso-level`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-level) — no PR
 - Branch [`worktree-pad-delete-file`](https://github.com/ChadFarrow/Command-Center/tree/worktree-pad-delete-file) — no PR
 - Branch [`worktree-iso-file-names`](https://github.com/ChadFarrow/Command-Center/tree/worktree-iso-file-names) — no PR
 - Branch [`worktree-clearer-feedback`](https://github.com/ChadFarrow/Command-Center/tree/worktree-clearer-feedback) — no PR
