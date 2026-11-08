@@ -67,6 +67,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [HGH-checker](projects/HGH-checker.md) - No description (`JavaScript`)
 - [obsidian-candr](projects/obsidian-candr.md) - Obsidian vault: candr · private
 - [project-notes](projects/project-notes.md) - No description (`JavaScript`)
+- [square-my-art](projects/square-my-art.md) - Upload any image to make it square to use as art in a podcast (`HTML`)
 - [stacks](projects/stacks.md) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. (`TypeScript`) · fork · not tracked
 - [stacks-pc20](projects/stacks-pc20.md) - stacks templet for podcasting 2.0 (`TypeScript`) · not tracked
 - [thelounge-candr](projects/thelounge-candr.md) - Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode (`JavaScript`) · private
@@ -83,7 +84,6 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`) · not tracked
 - [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`) · not tracked
 - [small-group-scoop](projects/small-group-scoop.md) - No description (`Python`) · fork · private
-- [square-my-art](projects/square-my-art.md) - Upload any image to make it square to use as art in a podcast (`HTML`)
 - [vibe-kit](projects/vibe-kit.md) - Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, status line, tools (`JavaScript`) · private
 
 ---

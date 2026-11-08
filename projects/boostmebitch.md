@@ -32,13 +32,10 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (3 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (1 PR), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (5)
+### Pull requests (2)
 
-- [#524 Add issue forms for bugs, feature requests and tasks](https://github.com/ChadFarrow/boostmebitch/pull/524) — opened 2026-11-08
-- [#522 Add quick buttons to the favorites page](https://github.com/ChadFarrow/boostmebitch/pull/522) — opened 2026-11-05
-- [#521 Show the heart and queue on more home feed notes](https://github.com/ChadFarrow/boostmebitch/pull/521) — opened 2026-11-05
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
 ### Issues (4)
 
