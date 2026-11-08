@@ -72,6 +72,9 @@ blank line ends the group.
 ## thelounge-candr
 
 - [ ] PR #67 is deployed: the next time Accidentally Interesting goes live, check that LIT_Bot's notice shows in #OffTopic.
+- [ ] Deploy PR #79 (Pod Around off #BowlAfterBowl). It is merged, but auto mode blocks Claude's SSH to the box.
+  - [ ] In the Mac Terminal, run `cd ~/Vibe/thelounge-candr && ./deploy-bots.sh 104.237.150.197`. Then `ssh root@104.237.150.197 'cat /opt/bots/src/DEPLOYED_FROM'` must print `48f75200…`. Tell Claude, so the deploy goes into the repo's CLAUDE.md.
+  - [ ] The next time Pod Around goes live, check that no LIT_Bot line shows in #BowlAfterBowl.
 
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
