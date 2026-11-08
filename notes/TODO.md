@@ -24,6 +24,12 @@ blank line ends the group.
 ## chadf-landing-page
 
 
+## chadf-musicl-playlists
+
+- [ ] Review and merge PR #7 before Monday 2026-11-09 at 05:00 UTC (midnight Eastern). It is a draft, and its checks pass. It adds the 30-day OnlyBoosts top songs playlist, and it fixes a defect on `main`: a feed that times out takes its song off the all-time list. Without the merge, the Monday run uses the old rule.
+  - [ ] After the merge, check that the new playlist's cover shows in an app. The cover returns HTTP 404 until the merge.
+  - [ ] After the Monday run, ask Claude to read its log: both lists written, and how many rows are `KEPT`.
+
 ## Command-Center
 
 - [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
