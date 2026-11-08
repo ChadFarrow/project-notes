@@ -30,10 +30,6 @@ blank line ends the group.
   - [ ] After the merge, check that the new playlist's cover shows in an app. The cover returns HTTP 404 until the merge.
   - [ ] After the Monday run, ask Claude to read its log: both lists written, and how many rows are `KEPT`.
 
-## Command-Center
-
-- [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
-
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
