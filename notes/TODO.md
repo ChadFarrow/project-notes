@@ -20,7 +20,9 @@ blank line ends the group.
 
 ## candr.space
 
-- [ ] Find out why the boost you told Claude about on 2026-11-05 was not on `/boosts`. Ask Claude for the command that searches Helipad for that listener, run it in the console on your signed-in Helipad page, and paste the output. Also say where you saw the boost and about when.
+- [ ] Put the lost boost of 2026-10-30 on `/boosts`. Helipad has both of its payments (index 13525 and 13526), but its one-time webhook never reached the Worker. Claude saved the two records to `~/Downloads/helipad-boost-13525-13526.json`.
+  - [ ] In the Mac Terminal, run `cd ~/Vibe/candr.space && read -rs "HELIPAD_WEBHOOK_TOKEN?Token: " && echo && export HELIPAD_WEBHOOK_TOKEN && node tools/replay-helipad.mjs ~/Downloads/helipad-boost-13525-13526.json`. Paste the token from the Helipad trigger whose URL is exactly `https://candr.space/api/helipad`. Expect `Stored 2, skipped by the Worker 0, failed 0`.
+  - [ ] Open the "Read on air Wed, Nov 4" list on `/boosts`. The boost shows there as 500 sats, unread, not under "To read next". Tell Claude the result.
 
 ## Command-Center
 
