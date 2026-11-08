@@ -22,6 +22,10 @@ blank line ends the group.
 
 - [ ] PR #62 is merged and set up, and Podhome's hook test started the archive run. After the next episode goes out (Friday 2026-11-13), ask Claude to check that Podhome's webhook started the archive run soon after the publish.
 
+## chadf-landing-page
+
+- [ ] Merge PR #8 (the Square My Art card and Homegrown Hits Episode 156). Then open https://chadf.podtards.com and click Homegrown Hits, Episode 156. pod.link must open Episode 156. Claude could not test that link, because pod.link blocks automated requests.
+
 ## Command-Center
 
 - [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
