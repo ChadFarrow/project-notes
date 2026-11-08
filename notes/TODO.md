@@ -74,9 +74,10 @@ blank line ends the group.
 
 - [ ] PR #67 is deployed: the next time Accidentally Interesting goes live, check that LIT_Bot's notice shows in #OffTopic.
 
-- [ ] PR #70 is deployed, and nothing sends a NickServ password now. LIT_Bot is not logged in until these two are done, in order:
-  - [ ] Give LIT_Bot its own NickServ account and password (it is grouped to ChadF now). From your own IRC client, logged in as ChadF: `/msg NickServ INFO LIT_Bot`, `/msg NickServ HELP UNGROUP`, then `/msg NickServ UNGROUP LIT_Bot`. Then `/msg NickServ IDENTIFY LIT_Bot <ChadF password>`, `/msg NickServ SET PASSWORD <new bot password>`, and `/msg NickServ IDENTIFY ChadF <ChadF password>`. Type with care: each wrong IDENTIFY counts against your own connection.
-  - [ ] Run `tools/znc/set-sasl.sh` in a Mac Terminal (from `~/Vibe/thelounge-candr` after a pull). It must end with a "330 ... is logged in as" line.
+- [ ] PR #70 is deployed, and nothing sends a NickServ password now. LIT_Bot gets its own account (ZeroNode allows one per email, so use the other address). In order, scripts in `thelounge-candr/tools/znc/` (PR #71):
+  - [ ] From your own IRC client, logged in as ChadF: `/msg NickServ HELP DROP`, then `/msg NickServ DROP LIT_Bot`. Keep `LIT_Bot` in it: a bare DROP deletes ChadF.
+  - [ ] At once, in a Mac Terminal: `register-litbot.sh`. Then `confirm-litbot.sh` if NickServ emails a code.
+  - [ ] `set-sasl.sh`, account LIT_Bot, the same password. It must end with a "330 ... is logged in as" line.
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
