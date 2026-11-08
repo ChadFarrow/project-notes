@@ -53,7 +53,7 @@ blank line ends the group.
 
 ## square-my-art
 
-- [ ] Try PR #3, the zoom on the Screenshot size slider, with your own screenshots before you merge it, then tell Claude the result. Open https://square-my-art-git-worktree-zoom-slider-chadfs-projects.vercel.app/ and sign in to Vercel, because the preview is behind its login. Headless Chrome passed every test. The last two tests are for PR #2, which is merged and live, and this preview has those fixes too.
+- [ ] Try the zoom (PR #3) and the fixes of PR #2 with your own screenshots on the live site, https://square-my-art.vercel.app, then tell Claude the result. Both PRs are merged and live, and headless Chrome passed every test. Tick a test that you already did.
   - [ ] Drop a full-screen screenshot and move Screenshot size to the right of Fit. The image zooms in, its sides are cut off, and the blurred bands get smaller. At Fill they are gone.
   - [ ] With a zoom, move Crop position to the left and to the right. The cut moves with it.
   - [ ] Drop a real window screenshot (⌘⇧4, then Space, then click a window). With JPEG, in Blur and in Crop, the space around the window is not black. Turn on the drop shadow: no black box shows behind the window.
