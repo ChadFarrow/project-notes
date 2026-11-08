@@ -1,9 +1,10 @@
 # square-my-art
 
-**Category:** Uncategorized  
+**Category:** Tools & self-hosting  
 **Uses:**  
 **Track:** yes  
-**Repo:** https://github.com/ChadFarrow/square-my-art
+**Repo:** https://github.com/ChadFarrow/square-my-art  
+**Deployed:** https://square-my-art.vercel.app
 
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
