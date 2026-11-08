@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-08 02:50 UTC
+# Dashboard — 2026-11-08 02:57 UTC
 
 25 open PRs · 12 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
 
@@ -179,7 +179,7 @@
 
 2 PRs
 
-- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 8 days ago · draft
+- PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 8 days ago · draft · merge conflict
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 9 days ago
 
 ### Websites
