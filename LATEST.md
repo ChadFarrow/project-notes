@@ -1,21 +1,22 @@
-# Dashboard — 2026-11-08 18:55 UTC
+# Dashboard — 2026-11-08 19:59 UTC
 
-19 open PRs · 11 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
+18 open PRs · 11 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (2)
+### Ready to merge — idle 7+ days (3)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 16 days · checks passing
+- **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 10 days · no checks
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 7 days · no checks
 
 ### Open issues (11)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 17 hours ago
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 18 hours ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 37 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
@@ -164,25 +165,13 @@
 
 ### Tools & self-hosting
 
-#### [square-my-art](projects/square-my-art.md)
-
-
-
-- Opened elsewhere: [chadf-landing-page #8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 4 minutes ago
-
 #### [thelounge-candr](projects/thelounge-candr.md)
 
 1 PR
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 days ago · merge conflict
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 10 days ago
 
 ### Websites
-
-#### [chadf-landing-page](projects/chadf-landing-page.md)
-
-1 PR
-
-- PR [#8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 4 minutes ago · for [square-my-art](projects/square-my-art.md)
 
 #### [candr.space](projects/candr.space.md)
 
@@ -215,7 +204,7 @@
 
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 8 issues · 5 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 3 days ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 4 days ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 7 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
@@ -228,7 +217,7 @@
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [square-my-art](projects/square-my-art.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

@@ -23,7 +23,5 @@ Upload any image to make it square to use as art in a podcast
 
 - **Repo:** [ChadFarrow/square-my-art](https://github.com/ChadFarrow/square-my-art) · HTML
 
-### Opened elsewhere for this project (1)
-
-- [chadf-landing-page #8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 2026-11-08
+_No open work._
 <!-- AUTO:END -->
