@@ -83,6 +83,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [Command-Center](projects/Command-Center.md) - No description (`HTML`) · private
 - [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`) · not tracked
 - [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`) · not tracked
+- [onlyboosts](projects/onlyboosts.md) - A nostr client of only podcasting 2.0 boosts with stats, social features and podcasts.  (`JavaScript`) · fork
 - [small-group-scoop](projects/small-group-scoop.md) - No description (`Python`) · fork · private
 - [vibe-kit](projects/vibe-kit.md) - Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, status line, tools (`JavaScript`) · private
 
