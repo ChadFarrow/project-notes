@@ -18,6 +18,10 @@ blank line ends the group.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 
+## candr.space
+
+- [ ] PR #62 is merged and set up, and Podhome's hook test started the archive run. After the next episode goes out (Friday 2026-11-13), ask Claude to check that Podhome's webhook started the archive run soon after the publish.
+
 ## Command-Center
 
 - [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
