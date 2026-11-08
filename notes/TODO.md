@@ -18,12 +18,6 @@ blank line ends the group.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 
-## candr.space
-
-- [ ] Put the lost boost of 2026-10-30 on `/boosts`. Helipad has both of its payments (index 13525 and 13526), but its one-time webhook never reached the Worker. Claude saved the two records to `~/Downloads/helipad-boost-13525-13526.json`.
-  - [ ] In the Mac Terminal, run `cd ~/Vibe/candr.space && read -rs "HELIPAD_WEBHOOK_TOKEN?Token: " && echo && export HELIPAD_WEBHOOK_TOKEN && node tools/replay-helipad.mjs ~/Downloads/helipad-boost-13525-13526.json`. Paste the token from the Helipad trigger whose URL is exactly `https://candr.space/api/helipad`. Expect `Stored 2, skipped by the Worker 0, failed 0`.
-  - [ ] Open the "Read on air Wed, Nov 4" list on `/boosts`. The boost shows there as 500 sats, unread, not under "To read next". Tell Claude the result.
-
 ## Command-Center
 
 - [ ] Set up the audio route on the Mac mini (steps in the Command-Center README, "Audio into the show") and make a short Riverside test recording. Then tell Claude how the music sounds.
