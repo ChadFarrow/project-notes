@@ -30,6 +30,12 @@ blank line ends the group.
   - [ ] After the merge, check that the new playlist's cover shows in an app. The cover returns HTTP 404 until the merge.
   - [ ] After the Monday run, ask Claude to read its log: both lists written, and how many rows are `KEPT`.
 
+## Command-Center
+
+- [ ] Before the first show, make one Riverside test recording with the final Audio Hijack levels (set on 2026-11-08). Keep Audio Hijack's Recorder on. Then give Claude your Riverside track and the Audio Hijack recording of the same test, to compare.
+  - [ ] Talk, then play the Intro to its end, one ISO, the Music and the Outro, with talk between them. Riverside must keep the music at the same level as the Audio Hijack recording: no cuts, no pumping.
+  - [ ] Ask Reed whether the clips are clear and at a good level against your voice on his side of the call.
+
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
