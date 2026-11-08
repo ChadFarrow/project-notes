@@ -1,21 +1,22 @@
-# Dashboard — 2026-11-07 23:11 UTC
+# Dashboard — 2026-11-08 00:54 UTC
 
-24 open PRs · 11 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
+25 open PRs · 11 open issues · 29 branches with no PR · 40 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (2)
+### Ready to merge — idle 7+ days (3)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 15 days · checks passing
 - **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 9 days · no checks
+- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 7 days · no checks
 
 ### Open issues (11)
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 1 day ago
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 2 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
@@ -170,12 +171,13 @@
 
 1 PR
 
-- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 23 hours ago
+- PR [#20 Put square-my-art under Tools & self-hosting](https://github.com/ChadFarrow/project-notes/pull/20) — opened 1 day ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-2 PRs
+3 PRs
 
+- PR [#67 lit-bot: Accidentally Interesting also posts to #OffTopic](https://github.com/ChadFarrow/thelounge-candr/pull/67) — opened 1 minute ago
 - PR [#63 candr-boost, boost-after-boost: tag the payer with \["sender", npub\]; keep the item guid as sent](https://github.com/ChadFarrow/thelounge-candr/pull/63) — opened 7 days ago · draft
 - PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 9 days ago
 
@@ -185,7 +187,7 @@
 
 1 PR · 2 branches with no PR
 
-- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 5 days ago
+- PR [#62 Start the archive run from Podhome's webhook](https://github.com/ChadFarrow/candr.space/pull/62) — opened 5 days ago · merge conflict
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
@@ -209,7 +211,7 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 23 hours ago
+- PR [#2 Fix Save with the 500 KB option, transparent sources, and Copy](https://github.com/ChadFarrow/square-my-art/pull/2) — opened 1 day ago
 - Branch [`worktree-claude-md`](https://github.com/ChadFarrow/square-my-art/tree/worktree-claude-md) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
