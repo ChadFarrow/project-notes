@@ -13,7 +13,6 @@ blank line ends the group.
 
 ## boostmebitch
 
-- [ ] Send one real boost and stream sats for one minute with your wallet, on a podcast episode and on a playlist track. PR #516 and PR #517 changed where payees come from, and no real payment tested them. Then tell Claude the result.
 - [ ] Beta site, optional setup. Beta works without these.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
