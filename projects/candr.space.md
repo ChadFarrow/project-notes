@@ -4,7 +4,7 @@
 **Repo:** https://github.com/ChadFarrow/candr.space
 
 ## Description
-Coming soon page for the Chad and Reeds Podcast, served via GitHub Pages at [candr.space](https://candr.space). Dark, modern, self-contained single-page site with no build step.
+Website for the Chad and Reeds Podcast at [candr.space](https://candr.space). One self-contained `index.html` with no framework and no build step, served by a Cloudflare Worker (not GitHub Pages). It reads the podhome RSS feed on every load: the newest episode with its player, chapters, show notes and transcript, every past episode, the live show, a search of every transcript, and Lightning boosts and Nostr zaps that pay the feed's value splits. The Apps, Listens and Resources cards live in Cloudflare KV and are edited in a signed-in browser editor.
 
 ## PC2.0 Specs Used
 <!-- None yet -->
