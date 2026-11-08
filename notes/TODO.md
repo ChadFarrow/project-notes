@@ -20,7 +20,6 @@ blank line ends the group.
 
 ## candr.space
 
-- [ ] PR #62 is merged and set up, and Podhome's hook test started the archive run. After the next episode goes out (Friday 2026-11-13), ask Claude to check that Podhome's webhook started the archive run soon after the publish.
 
 ## chadf-landing-page
 
