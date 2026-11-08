@@ -74,6 +74,13 @@ blank line ends the group.
 
 - [ ] PR #67 is deployed: the next time Accidentally Interesting goes live, check that LIT_Bot's notice shows in #OffTopic.
 
+- [ ] PR #70, LIT_Bot logs in to NickServ with SASL in ZNC. Do these in order; the PR body has the details.
+  - [ ] Run `tools/znc/clear-nickserv.sh` from the Mac, so ZNC stops sending the wrong NickServ password.
+  - [ ] Merge PR #70 and run the bots deploy, so lit-bot stops sending it too.
+  - [ ] Give LIT_Bot its own NickServ account and password (it is grouped to ChadF now).
+  - [ ] Run `tools/znc/set-sasl.sh` in a Mac Terminal. It must end with a "330 ... is logged in as" line.
+  - [ ] Delete `IRC_NICKSERV_PASSWORD` from `/opt/bots/env/lit.env` on the box.
+
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
 
 ## Mac mini
