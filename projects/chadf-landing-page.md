@@ -23,5 +23,5 @@ Personal landing page
 
 ### Pull requests (1)
 
-- [#8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 2026-11-08 · for [square-my-art](square-my-art.md)
+- [#8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 2026-11-08 · for [square-my-art](square-my-art.md)
 <!-- AUTO:END -->

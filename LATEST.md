@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-08 18:52 UTC
+# Dashboard — 2026-11-08 18:55 UTC
 
 19 open PRs · 11 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -168,7 +168,7 @@
 
 
 
-- Opened elsewhere: [chadf-landing-page #8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 1 minute ago
+- Opened elsewhere: [chadf-landing-page #8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — PR · opened 4 minutes ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -182,7 +182,7 @@
 
 1 PR
 
-- PR [#8 Add the Square My Art card to Apps](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 1 minute ago · for [square-my-art](projects/square-my-art.md)
+- PR [#8 Add the Square My Art card and Homegrown Hits Episode 156](https://github.com/ChadFarrow/chadf-landing-page/pull/8) — opened 4 minutes ago · for [square-my-art](projects/square-my-art.md)
 
 #### [candr.space](projects/candr.space.md)
 
