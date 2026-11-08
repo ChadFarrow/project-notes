@@ -32,8 +32,8 @@ blank line ends the group.
 
 ## Command-Center
 
-- [ ] Before the first show, make one Riverside test recording with the final Audio Hijack levels (set on 2026-11-08). Keep Audio Hijack's Recorder on. Then give Claude your Riverside track and the Audio Hijack recording of the same test, to compare.
-  - [ ] Talk, then play the Intro to its end, one ISO, the Music and the Outro, with talk between them. Riverside must keep the music at the same level as the Audio Hijack recording: no cuts, no pumping.
+- [ ] First real recording with the final Audio Hijack levels (set on 2026-11-08). The Riverside trial cannot export, so this is the first Riverside check. Keep Audio Hijack's Recorder on during the show: it records what goes into Riverside.
+  - [ ] Listen to your Riverside track: the clips and the music sit at about the level of your voice, with no cuts and no pumping. If not, give Claude the Riverside track and the Audio Hijack recording.
   - [ ] Ask Reed whether the clips are clear and at a good level against your voice on his side of the call.
 
 ## MSP-2.0
