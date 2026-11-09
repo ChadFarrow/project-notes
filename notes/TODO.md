@@ -26,9 +26,9 @@ blank line ends the group.
 
 ## chadf-musicl-playlists
 
-- [ ] Review and merge PR #7 before Monday 2026-11-16 at 05:00 UTC (midnight Eastern). It is a draft, and its checks pass. It adds the 30-day OnlyBoosts top songs playlist, and it fixes a defect on `main`: a feed that times out takes its song off the all-time list. Without the merge, the Monday run uses the old rule.
-  - [ ] After the merge, check that the new playlist's cover shows in an app. The cover returns HTTP 404 until the merge.
-  - [ ] After the Monday run, ask Claude to read its log: both lists written, and how many rows are `KEPT`.
+- [ ] PR #7 is merged (2026-11-09): the 30-day OnlyBoosts top songs playlist, and only a clear answer now takes a song off a list. Two checks are left.
+  - [ ] Open the new playlist in an app and check that its cover shows. The cover file answers HTTP 200 since the merge.
+  - [ ] After the run on Monday 2026-11-16, ask Claude to read its log: both lists written, and how many rows are `KEPT`.
 
 ## Command-Center
 
