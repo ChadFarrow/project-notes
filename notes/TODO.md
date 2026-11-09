@@ -70,11 +70,6 @@ blank line ends the group.
 
 ## square-my-art
 
-- [ ] Try the zoom (PR #3) and the fixes of PR #2 with your own screenshots on the live site, https://square-my-art.vercel.app, then tell Claude the result. Both PRs are merged and live, and headless Chrome passed every test. Tick a test that you already did.
-  - [ ] Drop a full-screen screenshot and move Screenshot size to the right of Fit. The image zooms in, its sides are cut off, and the blurred bands get smaller. At Fill they are gone.
-  - [ ] With a zoom, move Crop position to the left and to the right. The cut moves with it.
-  - [ ] Drop a real window screenshot (⌘⇧4, then Space, then click a window). With JPEG, in Blur and in Crop, the space around the window is not black. Turn on the drop shadow: no black box shows behind the window.
-  - [ ] Only if your browser is Safari: set JPEG and turn on "Keep JPEG at 500 KB or less". Move a slider, then click Save image at once. The file saves, and it is 500 KB or less.
 
 ## thelounge-candr
 
