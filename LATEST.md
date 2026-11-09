@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-09 21:33 UTC
+# Dashboard — 2026-11-09 22:03 UTC
 
 17 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -6,16 +6,17 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (2)
+### Ready to merge — idle 7+ days (3)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 17 days · checks passing
+- **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 11 days · no checks
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 8 days · no checks
 
 ### Open issues (12)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 2 hours ago · 1 comment
+- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 3 hours ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 1 day ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 38 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
@@ -28,7 +29,7 @@
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 21 days ago
+- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 22 days ago
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -108,7 +109,7 @@
 
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 6 days ago
 - PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 6 days ago
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 38 days ago · merge conflict · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 39 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 4 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 
@@ -168,7 +169,7 @@
 
 1 PR
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago · merge conflict
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago
 
 ### Websites
 
@@ -204,7 +205,7 @@
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 5 days ago · merge conflict
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 8 days ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 9 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
 
