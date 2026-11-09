@@ -41,6 +41,8 @@ blank line ends the group.
   - [ ] Press Go Live, then "Board + Podhome". Within a few seconds the light says "Podhome: live", and the top row says "Podhome is live: 014.". If not, the top row says why: use the button on the Podhome website, and give Claude the message.
   - [ ] At the end, press End Show two times ("End show + Podhome?"). The light says "Podhome: ended".
 
+- [ ] Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
+
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
