@@ -36,6 +36,8 @@ blank line ends the group.
   - [ ] Listen to your Riverside track: the clips and the music sit at about the level of your voice, with no cuts and no pumping. If not, give Claude the Riverside track and the Audio Hijack recording.
   - [ ] Ask Reed whether the clips are clear and at a good level against your voice on his side of the call.
 
+- [ ] Ask Podhome for API calls that start and end a live episode, the same as the Go Live and End Live buttons on its website. Its API has none (checked 2026-11-09). When Podhome answers, tell Claude: then the board's Go Live and End Show can do it. The plan is saved in the Command-Center repo.
+
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
