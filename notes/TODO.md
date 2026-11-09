@@ -36,7 +36,10 @@ blank line ends the group.
   - [ ] Listen to your Riverside track: the clips and the music sit at about the level of your voice, with no cuts and no pumping. If not, give Claude the Riverside track and the Audio Hijack recording.
   - [ ] Ask Reed whether the clips are clear and at a good level against your voice on his side of the call.
 
-- [ ] Ask Podhome for API calls that start and end a live episode, the same as the Go Live and End Live buttons on its website. Its API has none (checked 2026-11-09). When Podhome answers, tell Claude: then the board's Go Live and End Show can do it. The plan is saved in the Command-Center repo.
+- [ ] First show with the board's Podhome controls (Command-Center PR #26, live on the board since 2026-11-09). Every test passed against a fake Podhome; only the real show can test the real go live and end live. Reload the board in Safari once before the show.
+  - [ ] Before the show, the light next to On Air says "Podhome: pending".
+  - [ ] Press Go Live, then "Board + Podhome". Within a few seconds the light says "Podhome: live", and the top row says "Podhome is live: 014.". If not, the top row says why: use the button on the Podhome website, and give Claude the message.
+  - [ ] At the end, press End Show two times ("End show + Podhome?"). The light says "Podhome: ended".
 
 ## MSP-2.0
 
