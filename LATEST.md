@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-09 22:06 UTC
+# Dashboard — 2026-11-09 22:07 UTC
 
-17 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
+16 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -83,7 +83,7 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-2 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+2 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 44 days ago · draft
@@ -93,7 +93,7 @@
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 51 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
@@ -126,12 +126,6 @@
 - Branch [`claude/clone-repository-2O3bN`](https://github.com/ChadFarrow/RSS-music-site-template/tree/claude/clone-repository-2O3bN) — no PR
 
 ### musicL playlists
-
-#### [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-
-1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
-
-- PR [#7 Add the OnlyBoosts top songs of the month playlist](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/7) — opened 4 days ago · draft
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -216,7 +210,7 @@
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [square-my-art](projects/square-my-art.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [square-my-art](projects/square-my-art.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
