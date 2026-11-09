@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-09 22:03 UTC
+# Dashboard — 2026-11-09 22:05 UTC
 
 17 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -6,10 +6,9 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (3)
+### Ready to merge — idle 7+ days (2)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 17 days · checks passing
-- **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 11 days · no checks
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 8 days · no checks
 
 ### Open issues (12)
@@ -169,7 +168,7 @@
 
 1 PR
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago · merge conflict
 
 ### Websites
 
