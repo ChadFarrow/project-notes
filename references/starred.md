@@ -82,7 +82,7 @@
 - [podverse](https://github.com/podverse/podverse) - Podverse monorepo for all infrastructure, modules, applications, and deployments
 - [builder-skill](https://github.com/getAlby/builder-skill) - Add capabilities to send and receive bitcoin payments to your apps with your favorite agent.
 - [superpowers](https://github.com/obra/superpowers) - An agentic skills framework & software development methodology that works.
-- [yantr](https://github.com/besoeasy/yantr) - A self-hosted homelab app store for rootless Podman — runs alongside your OS, not instead of it.
+- [yantr](https://github.com/besoeasy/yantr) - One command, and you're self-hosting.
 - [pimonitor](https://github.com/Podcastindex-org/pimonitor) - Monitors incoming feeds to the Podcast Index API for triage and management.
 - [genre-list](https://github.com/wavlake/genre-list) - Genre list for Wavlake's music catalog
 - [live-updates](https://github.com/thebells1111/live-updates) - No description
@@ -115,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-10 04:58 UTC*
+*Last synced: 2026-11-10 15:54 UTC*

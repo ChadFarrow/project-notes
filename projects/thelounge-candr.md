@@ -34,7 +34,7 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (1)
+### Branches with no open PR (1)
 
-- [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 2026-10-29
+- [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag)
 <!-- AUTO:END -->
