@@ -75,6 +75,7 @@ blank line ends the group.
 
 - [ ] PR #67 is deployed: the next time Accidentally Interesting goes live, check that LIT_Bot's notice shows in #OffTopic.
 - [ ] PR #79 is deployed: the next time Pod Around goes live, check that no LIT_Bot line shows in #BowlAfterBowl.
+- [ ] PR #81 is deployed: the next time Boomer Bunker Live goes live, check that no LIT_Bot line shows in #BowlAfterBowl.
 
 
 Five older items are in [the thelounge-candr note](../projects/thelounge-candr.md).
