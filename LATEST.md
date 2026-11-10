@@ -1,29 +1,28 @@
-# Dashboard — 2026-11-09 23:53 UTC
+# Dashboard — 2026-11-10 01:12 UTC
 
-16 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
+17 open PRs · 12 open issues · 27 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (3)
+### Ready to merge — idle 7+ days (2)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 17 days · checks passing
-- **thelounge-candr** [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — idle 11 days · no checks
-- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 8 days · no checks
+- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 9 days · no checks
 
 ### Open issues (12)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 4 hours ago · 1 comment
+- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 6 hours ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 1 day ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 38 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 3 days ago
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 4 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
 
@@ -161,9 +160,10 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 PR
+2 PRs
 
-- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago
+- PR [#82 docs: record the Boomer Bunker Live deploy (79053d1, 2026-11-10 01:09Z)](https://github.com/ChadFarrow/thelounge-candr/pull/82) — opened 2 minutes ago
+- PR [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 11 days ago · merge conflict
 
 ### Websites
 
