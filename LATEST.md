@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-10 15:54 UTC
+# Dashboard — 2026-11-10 21:31 UTC
 
-15 open PRs · 12 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
+15 open PRs · 13 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -8,16 +8,17 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 17 days · checks passing
+- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 18 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 9 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 7 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 7 days · checks passing
 
-### Open issues (12)
+### Open issues (13)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 20 hours ago · 1 comment
+- [#529 \[BMB\] I searched for "Top 100 Songs on Onlyboosts" and the playlist is not showing …](https://github.com/ChadFarrow/boostmebitch/issues/529) — opened 3 hours ago · 1 comment
+- [#527 \[BMB\] e2e: playback log check](https://github.com/ChadFarrow/boostmebitch/issues/527) — opened 1 day ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 39 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
@@ -85,7 +86,7 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-2 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+2 PRs · 5 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 45 days ago · draft
@@ -118,7 +119,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 17 days ago
+- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 18 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
@@ -199,7 +200,7 @@
 
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 5 days ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 6 days ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 9 days ago
 
 #### [vibe-kit](projects/vibe-kit.md)
