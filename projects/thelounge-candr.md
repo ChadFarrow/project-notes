@@ -34,8 +34,7 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#82 docs: record the Boomer Bunker Live deploy (79053d1, 2026-11-10 01:09Z)](https://github.com/ChadFarrow/thelounge-candr/pull/82) — opened 2026-11-10
-- [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 2026-10-29 · merge conflict
+- [#57 candr-boost: tag notes with \["sender", npub\]](https://github.com/ChadFarrow/thelounge-candr/pull/57) — opened 2026-10-29
 <!-- AUTO:END -->
