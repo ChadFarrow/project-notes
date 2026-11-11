@@ -22,6 +22,10 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
+### Pull requests (1)
+
+- [#6 Stop what a session starts: a Stop hook, an hourly disk-guard, and a NAS rule](https://github.com/ChadFarrow/vibe-kit/pull/6) — opened 2026-11-11
+
 ### Branches with no open PR (4)
 
 - [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start)
