@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-11 21:58 UTC
+# Dashboard — 2026-11-11 22:01 UTC
 
-17 open PRs · 11 open issues · 30 branches with no PR · 41 tracked repos (14 not tracked)
+15 open PRs · 11 open issues · 31 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -170,9 +170,8 @@
 
 #### [candr.space](projects/candr.space.md)
 
-1 PR · 2 branches with no PR
+2 branches with no PR
 
-- PR [#73 CLAUDE.md: start headless Chrome without a code-sign copy, and quit it cleanly](https://github.com/ChadFarrow/candr.space/pull/73) — opened 1 minute ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
@@ -186,9 +185,9 @@
 
 #### [vibe-kit](projects/vibe-kit.md)
 
-1 PR · 4 branches with no PR
+5 branches with no PR
 
-- PR [#6 Stop what a session starts: a Stop hook, an hourly disk-guard, and a NAS rule](https://github.com/ChadFarrow/vibe-kit/pull/6) — opened 2 minutes ago
+- Branch [`feat/disk-guard`](https://github.com/ChadFarrow/vibe-kit/tree/feat/disk-guard) — no PR
 - Branch [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start) — no PR
 - Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
 - Branch [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main) — no PR
@@ -199,7 +198,7 @@
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 7 days ago · merge conflict
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 10 days ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 11 days ago
 
 #### [Command-Center](projects/Command-Center.md)
 
