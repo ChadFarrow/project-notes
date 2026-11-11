@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-11 18:56 UTC
+# Dashboard — 2026-11-11 21:24 UTC
 
-16 open PRs · 11 open issues · 29 branches with no PR · 41 tracked repos (14 not tracked)
+15 open PRs · 11 open issues · 30 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -160,12 +160,6 @@
 
 ### Tools & self-hosting
 
-#### [project-notes](projects/project-notes.md)
-
-1 PR
-
-- PR [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 16 hours ago
-
 #### [thelounge-candr](projects/thelounge-candr.md)
 
 1 branch with no PR
@@ -189,11 +183,20 @@
 
 ### Uncategorized
 
+#### [vibe-kit](projects/vibe-kit.md)
+
+4 branches with no PR
+
+- Branch [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start) — no PR
+- Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
+- Branch [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main) — no PR
+- Branch [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule) — no PR
+
 #### [small-group-scoop](projects/small-group-scoop.md)
 
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 6 days ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 7 days ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 10 days ago
 
 #### [Command-Center](projects/Command-Center.md)
@@ -208,17 +211,9 @@
 
 - Branch [`docs/chadf-relay-bots-sender-tag`](https://github.com/ChadFarrow/onlyboosts/tree/docs/chadf-relay-bots-sender-tag) — no PR
 
-#### [vibe-kit](projects/vibe-kit.md)
-
-3 branches with no PR
-
-- Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
-- Branch [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main) — no PR
-- Branch [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule) — no PR
-
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [square-my-art](projects/square-my-art.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [chadf-landing-page](projects/chadf-landing-page.md) · [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [square-my-art](projects/square-my-art.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

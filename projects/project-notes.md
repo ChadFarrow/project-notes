@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-### Pull requests (1)
-
-- [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 2026-11-11
+_No open work._
 <!-- AUTO:END -->
