@@ -20,10 +20,6 @@ blank line ends the group.
 
 ## candr.space
 
-- [ ] Send a Fountain test boost to Chad and Reeds, then check its amount on `/boosts` (fix merged 2026-11-11, PR #70).
-  - [ ] Boost an amount that is not a round hundred, for example 180 or 421 sats. `/boosts` should read within 1 sat of it (180 reads 179). Before the fix it read the nearest hundred.
-  - [ ] If the amount is more than 1 sat off, tell Claude the amount you sent, the time, and what `/boosts` shows.
-
 ## chadf-landing-page
 
 
