@@ -83,6 +83,8 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## Laptop
 
-- [ ] Pull vibe-kit: `git -C ~/Vibe/vibe-kit pull`. After vibe-kit PR #6 is merged, also run `~/Vibe/vibe-kit/install.sh`: it adds the leftover check (a Stop hook). Do not install disk-guard on the laptop.
+- [ ] Update vibe-kit on the laptop: PRs #5, #6 and #7 are merged (2026-11-11). Do not install disk-guard or follow the NAS rule there; both are for the Mac mini. The Chrome flag in the other repos needs nothing on the laptop, because Linux Chrome makes no code-sign copy.
+  - [ ] Run `git -C ~/Vibe/vibe-kit pull`.
+  - [ ] Run `~/Vibe/vibe-kit/install.sh`. Its output must say "leftover check stops a turn that leaves its own process running".
 
 ## project-notes
