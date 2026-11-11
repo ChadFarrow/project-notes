@@ -49,8 +49,7 @@ blank line ends the group.
 ## helipad-startos
 
 - [ ] Sideload Helipad `0.2.2:12.1` (PR #1 in the fork, built 2026-11-11): Helipad main, which reads Fountain's fractional totals. The files are in `~/Downloads` on the laptop; the build artifacts expire on 2026-11-25.
-  - [ ] Back up Helipad in StartOS first.
-  - [ ] Sideload `helipad_0.2.2-12.1_x86_64.s9pk` (or `_aarch64` on an ARM node). Helipad starts, and its boost list loads.
+  - [ ] Sideloaded and running (2026-11-11). Sign in to Helipad: its boost list loads and shows today's boosts, which proves the new LND connection works.
   - [ ] The next Fountain boost shows close to its real amount on ChadF's row in Helipad, not a third of it. If Helipad cannot reach LND, install `0.2.2:12` from the Community Registry again and tell Claude.
 
 ## MSP-2.0
