@@ -359,6 +359,11 @@ async function main() {
 
   const browser = spawn(chrome, [
     '--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check',
+    // No 1.4 GB code-sign copy of Chrome under $TMPDIR/../X/ on macOS. Chrome makes one per
+    // start and only CDP Browser.close removes it; the SIGTERM in `finally` leaves it
+    // (measured 2026-11-11). Other platforms ignore the name. Chrome keeps only the LAST
+    // --disable-features, so add any other feature to this list.
+    '--disable-features=MacAppCodeSignClone',
     ...(process.env.CHROME_FLAGS ? process.env.CHROME_FLAGS.split(/\s+/) : []),
     '--window-size=1280,900',
     // notes.test is this machine over plain http: a page that is not a secure context.
