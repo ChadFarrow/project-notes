@@ -46,12 +46,6 @@ blank line ends the group.
 
 - [ ] Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
 
-## helipad-startos
-
-- [ ] Sideload Helipad `0.2.2:12.1` (PR #1 in the fork, built 2026-11-11): Helipad main, which reads Fountain's fractional totals. The files are in `~/Downloads` on the laptop; the build artifacts expire on 2026-11-25.
-  - [ ] Sideloaded and running (2026-11-11). Sign in to Helipad: its boost list loads and shows today's boosts, which proves the new LND connection works.
-  - [ ] The next Fountain boost shows close to its real amount on ChadF's row in Helipad, not a third of it. If Helipad cannot reach LND, install `0.2.2:12` from the Community Registry again and tell Claude.
-
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
