@@ -81,8 +81,12 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## Mac mini
 
+- [ ] vibe-kit PR #6 (the leftover check and the hourly disk-guard) waits for your review. Tests pass on macOS and Linux. After you merge it:
+  - [ ] Run `~/Vibe/vibe-kit/install.sh` in a terminal. It adds the leftover check (a Stop hook); Claude cannot change `~/.claude/settings.json`.
+  - [ ] Tell Claude to pull vibe-kit, run `install-disk-guard.sh`, and read the first run in `~/Library/Logs/disk-guard.log`.
+
 ## Laptop
 
-- [ ] Pull vibe-kit: `git -C ~/Vibe/vibe-kit pull`. It brings the "Stop what you start" rule in `global.md` (vibe-kit PR #5, merged 2026-11-11). Only `global.md` changed, so `install.sh` does not need to run again.
+- [ ] Pull vibe-kit: `git -C ~/Vibe/vibe-kit pull`. After vibe-kit PR #6 is merged, also run `~/Vibe/vibe-kit/install.sh`: it adds the leftover check (a Stop hook). Do not install disk-guard on the laptop.
 
 ## project-notes
