@@ -6,7 +6,7 @@
 - [tailrelay-startos](https://github.com/sudocarlos/tailrelay-startos) - StartOS wrapper for tailrelay
 - [tailrelay](https://github.com/sudocarlos/tailrelay) - connect to services within your docker network without exposing any ports on the host. uses `tailscale serve` to relay tcp endpoints and enable tls encryption for http servers,
 - [bloom](https://github.com/Letdown2491/bloom) - Bloom offers a familiar file‑manager interface that lets users quickly interact with files and blobs stored on Blossom and NIP‑96 servers. You can edit metadata, share items directly from Bloom, create shareable folders, and much more.
-- [nostr-vault](https://github.com/btcforplebs/nostr-vault) - High Availability Vault for Events on Nostr
+- [nostr-vault](https://github.com/btcforplebs/nostr-vault) - Your own Nostr relay on your phone, Mac and browser, with a private mesh between your devices and a web of trust.
 - [vnak](https://github.com/fiatjaf/vnak) - visual nostr army knife with qt
 - [blossom](https://github.com/hzrd149/blossom) - Blobs stored simply on mediaservers
 - [Amber](https://github.com/greenart7c3/Amber) - No description
@@ -115,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-11 16:21 UTC*
+*Last synced: 2026-11-11 16:52 UTC*
