@@ -83,4 +83,6 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## Laptop
 
+- [ ] Pull vibe-kit: `git -C ~/Vibe/vibe-kit pull`. It brings the "Stop what you start" rule in `global.md` (vibe-kit PR #5, merged 2026-11-11). Only `global.md` changed, so `install.sh` does not need to run again.
+
 ## project-notes
