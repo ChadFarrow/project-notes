@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-11 17:15 UTC
+# Dashboard — 2026-11-11 17:18 UTC
 
 18 open PRs · 11 open issues · 29 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -52,7 +52,7 @@
 
 1 PR · 3 branches with no PR
 
-- PR [#1 Sideload build: Helipad main for fractional totals (0.2.2:12.1)](https://github.com/ChadFarrow/helipad-startos/pull/1) — opened 38 minutes ago
+- PR [#1 Sideload build: Helipad main for fractional totals (0.2.2:12.1)](https://github.com/ChadFarrow/helipad-startos/pull/1) — opened 40 minutes ago
 - Branch [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master) — no PR
 - Branch [`fix/move-0.3.5-database`](https://github.com/ChadFarrow/helipad-startos/tree/fix/move-0.3.5-database) — no PR
 - Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
@@ -179,7 +179,7 @@
 
 1 PR · 2 branches with no PR
 
-- PR [#71 CLAUDE.md: the Fountain replay fixed boosts from 2026-10-30 on, not the older invoices](https://github.com/ChadFarrow/candr.space/pull/71) — opened 55 minutes ago
+- PR [#71 CLAUDE.md: the Fountain replay fixed boosts from 2026-10-30 on, not the older invoices](https://github.com/ChadFarrow/candr.space/pull/71) — opened 57 minutes ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
