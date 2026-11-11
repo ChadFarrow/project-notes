@@ -15,11 +15,25 @@ Music Side Project Studio - RSS feed generator for decentralized music releases
 - `<podcast:guid>` - unique identifier
 
 ## Notes
-<!-- Add your notes here -->
+
+### Open findings (2026-11-10) — not acted on yet
+From a review of musicindex-studio and the feed-corpus round-trip test (PR #180). Each was checked against MSP `master` and live data on that date.
+
+- **The legacy-node migration can move a person's split to MSP.** `LEGACY_MSP_NODE_PUBKEY` (`035ad2c954…e9d8`, `src/types/feed.ts`) is also the node `steven@getalby.com` resolves to (`getalby.com/.well-known/keysend/steven`). `parseRecipient()` rewrites any recipient on that node to `MSP 2.0` / `musicsideproject@getalby.com` and keeps the split. In the Podhome feed "The Satellite Skirmish" (`src/test/feed-corpus/podhome-podcast-satellite-skirmish.xml`), which MSP did not write, "StevenB" is one of 19 payees (split 6); after one import and save, that share pays MSP. PR #180's body calls this migration "by design" — wrong for feeds MSP 1.0 did not write. Decide: limit the migration to MSP 1.0 feeds, or confirm with Steven.
+- **A track reorder gives each track two numbers.** `REORDER_TRACKS` (`src/store/feedStore.tsx`) renumbers `podcast:episode`, but `itunes:episode` is not modelled and passes through unchanged. Tested on `fountain-music-feast-of-hammers.xml`: one swap of tracks 1 and 2 left all 13 tracks disagreeing (`podcast:episode`/`itunes:episode` = `1/5`, `2/12`, `3/7` …). A save with no edit stays consistent. Studio hit the same bug (its ADR 0079) and now writes both from the track order.
+- **A dead shared node is still paid.** `030a58b8…677a3` (the pre-Hub `getalby.com` node) has 0 active channels on mempool.space. The Podhome feed routes 7 payees through it (`customKey 696969`). Feed-check idea: a "Should fix" item asking that person for a Lightning address. Also worth a warning: a Lightning address with no keysend lookup (Strike, Wallet of Satoshi) can be paid only by LNURL-pay.
+- **A deleted hosted feed stays in musicindex with its last payees.** `api/hosted/[feedId].ts` answers `404` for a missing feed. musicindex retires an entry on a `404` only for `wavlake.com`; two `410`s 24 h apart retire it from any host, and so does `podcast:block` `yes` at the feed URL (Studio ADR 0131). Fix idea: answer `410`, or block before delete (see PR #150).
+- **`<podcast:season>1</podcast:season>` on every track** (`src/utils/xmlGenerator.ts`). No music app is known to read it as a disc; apps can show "Season 1" (Studio ADR 0080). Low priority.
+- What MSP drops from 22 real feeds is pinned in `src/utils/__snapshots__/feedCorpus.roundTrip.test.ts.snap` — for example thunderroad's publisher-feed `<item>`, `itunes:owner`, item `podcast:images`, and item persons in `example-feed.xml`.
+
+### Watching musicindex-studio
+Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take ideas, never code. Its work lands as direct commits to `main` with no PRs or issues, so the `**Watch:**` line and GitHub notifications show only its pre-releases. Read the commits feed below; MSP-related decisions appear in its `docs/adr/` and `docs/research/`. Its `crates/core/src/msp.rs` imports MSP backup files, so keep these stable: the fields `feedId`/`feed_id`, `editToken`/`edit_token`, `msp_hosted_feed_backup.*`, `feedUrl`, and the `musicsideproject.com/api/hosted/{id}.xml` address.
 
 ## Resources
 <!-- Add links, docs, tutorials -->
 - [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) — Music Index Studio, a Rust app that edits hosted Podcasting 2.0 music feeds. Related to MSP; followed by the `**Watch:**` line above.
+- [musicindex-studio commits (Atom)](https://github.com/InTheMorning/musicindex-studio/commits/main.atom) — its real activity; the Watch line cannot show it.
+- [MSP 2.0 parity research](https://github.com/InTheMorning/musicindex-studio/blob/main/docs/research/2026-10-28-msp-parity-and-nostr-identities.md) — Studio's list of what MSP has that Studio lacks, and the reverse.
 
 ## TODOs
 - [ ] 
