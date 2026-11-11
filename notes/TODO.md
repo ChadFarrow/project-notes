@@ -20,8 +20,7 @@ blank line ends the group.
 
 ## candr.space
 
-- [ ] PR #70 (Fountain boost amounts). The old boosts change only after a replay.
-  - [ ] Merge PR #70, and let it deploy.
+- [ ] PR #70 (Fountain boost amounts) is merged and deployed (2026-11-11). The old boosts change only after a replay.
   - [ ] Replay the Helipad history into `/boosts` (the replay tool in the repo; save the two Helipad API answers first). Then ask Claude to check three old Fountain boosts against their real amounts.
 
 ## chadf-landing-page
