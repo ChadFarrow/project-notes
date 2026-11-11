@@ -81,8 +81,6 @@ Five older items are in [the thelounge-candr note](../projects/thelounge-candr.m
 
 ## Mac mini
 
-- [ ] Run `~/Vibe/vibe-kit/install.sh` again in a terminal. vibe-kit PR #6 is merged and pulled (2026-11-11), but the first run used the checkout from before it, so the leftover check (a Stop hook) is not in `~/.claude/settings.json` yet. The output must say "leftover check stops a turn". Claude cannot change that file. disk-guard is installed and its first run passed.
-
 ## Laptop
 
 - [ ] Pull vibe-kit: `git -C ~/Vibe/vibe-kit pull`. After vibe-kit PR #6 is merged, also run `~/Vibe/vibe-kit/install.sh`: it adds the leftover check (a Stop hook). Do not install disk-guard on the laptop.
