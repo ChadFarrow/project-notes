@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-11 16:17 UTC
+# Dashboard — 2026-11-11 16:21 UTC
 
-16 open PRs · 11 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
+17 open PRs · 11 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -175,8 +175,9 @@
 
 #### [candr.space](projects/candr.space.md)
 
-2 branches with no PR
+1 PR · 2 branches with no PR
 
+- PR [#71 CLAUDE.md: the Fountain replay fixed boosts from 2026-10-30 on, not the older invoices](https://github.com/ChadFarrow/candr.space/pull/71) — opened 1 minute ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
