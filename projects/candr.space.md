@@ -24,10 +24,6 @@ Website for the Chad and Reeds Podcast at [candr.space](https://candr.space). On
 
 - **Repo:** [ChadFarrow/candr.space](https://github.com/ChadFarrow/candr.space) · JavaScript · private
 
-### Pull requests (1)
-
-- [#71 CLAUDE.md: the Fountain replay fixed boosts from 2026-10-30 on, not the older invoices](https://github.com/ChadFarrow/candr.space/pull/71) — opened 2026-11-11
-
 ### Branches with no open PR (2)
 
 - [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool)

@@ -22,10 +22,6 @@ Helipad packaged for Start9's StartOS.
 
 - **Repo:** [ChadFarrow/helipad-startos](https://github.com/ChadFarrow/helipad-startos) · Makefile · fork of Podcastindex-org/helipad-startos
 
-### Pull requests (1)
-
-- [#1 Sideload build: Helipad main for fractional totals (0.2.2:12.1)](https://github.com/ChadFarrow/helipad-startos/pull/1) — opened 2026-11-11
-
 ### Branches with no open PR (3)
 
 - [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master)

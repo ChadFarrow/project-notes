@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-11 17:18 UTC
+# Dashboard — 2026-11-11 18:02 UTC
 
-18 open PRs · 11 open issues · 29 branches with no PR · 41 tracked repos (14 not tracked)
+16 open PRs · 11 open issues · 29 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 18 days · checks passing
+- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 19 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 10 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 8 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 8 days · checks passing
@@ -50,9 +50,8 @@
 
 #### [helipad-startos](projects/helipad-startos.md)
 
-1 PR · 3 branches with no PR
+3 branches with no PR
 
-- PR [#1 Sideload build: Helipad main for fractional totals (0.2.2:12.1)](https://github.com/ChadFarrow/helipad-startos/pull/1) — opened 40 minutes ago
 - Branch [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master) — no PR
 - Branch [`fix/move-0.3.5-database`](https://github.com/ChadFarrow/helipad-startos/tree/fix/move-0.3.5-database) — no PR
 - Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
@@ -109,7 +108,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 18 days ago
+- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 19 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [MSP-2.0](projects/MSP-2.0.md)
@@ -165,7 +164,7 @@
 
 1 PR
 
-- PR [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 15 hours ago
+- PR [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 16 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -177,9 +176,8 @@
 
 #### [candr.space](projects/candr.space.md)
 
-1 PR · 2 branches with no PR
+2 branches with no PR
 
-- PR [#71 CLAUDE.md: the Fountain replay fixed boosts from 2026-10-30 on, not the older invoices](https://github.com/ChadFarrow/candr.space/pull/71) — opened 57 minutes ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
