@@ -1,13 +1,14 @@
-# Dashboard — 2026-11-11 22:03 UTC
+# Dashboard — 2026-11-11 22:15 UTC
 
-15 open PRs · 11 open issues · 31 branches with no PR · 41 tracked repos (14 not tracked)
+16 open PRs · 11 open issues · 31 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (4)
+### Ready to merge — idle 7+ days (5)
 
+- **stablekraft-app** [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — idle 64 days · checks passing
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 19 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 10 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 8 days · checks passing
@@ -83,24 +84,24 @@
 
 ### Music apps & sites
 
-#### [boostmebitch](projects/boostmebitch.md)
-
-2 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
-
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 46 days ago · draft
-- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
-- Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
-- Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
-
 #### [stablekraft-app](projects/stablekraft-app.md)
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 53 days ago · draft
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
+
+#### [boostmebitch](projects/boostmebitch.md)
+
+2 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 46 days ago · draft
+- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
+- Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
+- Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
 
 ### Music publishing
 
@@ -183,10 +184,17 @@
 
 ### Uncategorized
 
+#### [Command-Center](projects/Command-Center.md)
+
+1 branch with no PR
+
+- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
+
 #### [vibe-kit](projects/vibe-kit.md)
 
-5 branches with no PR
+1 PR · 5 branches with no PR
 
+- PR [#7 global.md: download a large tool image once to the NAS; /Volumes/NAS/ISOs is audio](https://github.com/ChadFarrow/vibe-kit/pull/7) — opened 1 minute ago
 - Branch [`feat/disk-guard`](https://github.com/ChadFarrow/vibe-kit/tree/feat/disk-guard) — no PR
 - Branch [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start) — no PR
 - Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
@@ -199,12 +207,6 @@
 
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 7 days ago · merge conflict
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 11 days ago
-
-#### [Command-Center](projects/Command-Center.md)
-
-1 branch with no PR
-
-- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 
 #### [onlyboosts](projects/onlyboosts.md)
 

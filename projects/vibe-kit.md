@@ -22,6 +22,10 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
+### Pull requests (1)
+
+- [#7 global.md: download a large tool image once to the NAS; /Volumes/NAS/ISOs is audio](https://github.com/ChadFarrow/vibe-kit/pull/7) — opened 2026-11-11
+
 ### Branches with no open PR (5)
 
 - [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start)
