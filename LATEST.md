@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-11 11:31 UTC
+# Dashboard — 2026-11-11 16:07 UTC
 
-16 open PRs · 11 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
+17 open PRs · 11 open issues · 28 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -52,7 +52,7 @@
 
 2 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 42 days ago · draft
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 43 days ago · draft
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2 months ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
@@ -87,7 +87,7 @@
 2 PRs · 3 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 3 months ago · draft · merge conflict
-- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 45 days ago · draft
+- PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 46 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
 - Branch [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover) — no PR
@@ -163,7 +163,7 @@
 
 1 PR
 
-- PR [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 9 hours ago
+- PR [#22 MSP-2.0: record the open findings from the musicindex-studio review](https://github.com/ChadFarrow/project-notes/pull/22) — opened 14 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -175,8 +175,9 @@
 
 #### [candr.space](projects/candr.space.md)
 
-2 branches with no PR
+1 PR · 2 branches with no PR
 
+- PR [#70 /boosts: take Fountain's total from Chad's leg, out of the TLV](https://github.com/ChadFarrow/candr.space/pull/70) — opened 1 minute ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
