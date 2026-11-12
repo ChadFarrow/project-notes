@@ -42,6 +42,12 @@ blank line ends the group.
 
 - [ ] Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
 
+- [ ] Command-Center PRs #28–30 are live on the board since 2026-11-11: ISO trim, ISO pages and more show pads. All tests passed in Chrome and WebKit, but not in your own Safari, with your real board or with your number pad. Quit Safari and open the board once, then tell Claude what does not work.
+  - [ ] At the first load, the top row says the ISOs are on pages now. Your first nine ISOs keep their keys on page 1; key 0 shows page 2.
+  - [ ] Keys 1–9 and 0 on your number pad play and flip as on the top row.
+  - [ ] Trim a song in ISO Edit: Play part, then Done, then press the ISO. It plays only the part, at once, and the ISO folder gets "<name> part.mp3".
+  - [ ] In Show Edit, "+ Add pad" a song: it plays on R. Remove it with two presses.
+
 ## MSP-2.0
 
 - [ ] Test PR #178, which holds a hosted feed's podping for about 100 s after a save. It is live, and the wait passed through `/api/pubnotify`, but no real save has run it. Then tell Claude the save time and the result.
