@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-_No open work._
+### Pull requests (1)
+
+- [#24 To do: groups, place marks, filters, PR links and titles](https://github.com/ChadFarrow/project-notes/pull/24) — opened 2026-11-13
 <!-- AUTO:END -->
