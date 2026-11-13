@@ -22,10 +22,6 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (1)
-
-- [#31 Level a mono ISO as two channels (dual mono)](https://github.com/ChadFarrow/Command-Center/pull/31) — opened 2026-11-13 · draft
-
 ### Branches with no open PR (1)
 
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
