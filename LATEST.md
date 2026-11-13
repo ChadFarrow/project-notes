@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-13 04:43 UTC
+# Dashboard — 2026-11-13 04:45 UTC
 
-21 open PRs · 12 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
+20 open PRs · 12 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -86,9 +86,8 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-8 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+7 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#543 Live player: say how far behind, and a GO LIVE button](https://github.com/ChadFarrow/boostmebitch/pull/543) — opened 1 minute ago · draft
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 hours ago
 - PR [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 2 hours ago

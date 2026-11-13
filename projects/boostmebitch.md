@@ -34,9 +34,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (8)
+### Pull requests (7)
 
-- [#543 Live player: say how far behind, and a GO LIVE button](https://github.com/ChadFarrow/boostmebitch/pull/543) — opened 2026-11-13 · draft
 - [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 2026-11-13 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 2026-11-13
