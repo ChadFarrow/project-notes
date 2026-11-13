@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-13 03:32 UTC
+# Dashboard — 2026-11-13 03:49 UTC
 
 22 open PRs · 12 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -88,13 +88,13 @@
 
 9 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 3 minutes ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 hour ago
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 hour ago
 - PR [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 1 hour ago
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 hour ago
 - PR [#537 Community playlists 1/4: store, feeds and API](https://github.com/ChadFarrow/boostmebitch/pull/537) — opened 1 hour ago
-- PR [#536 Buddy: let the Bitch site's browser call the two signing routes (CORS)](https://github.com/ChadFarrow/boostmebitch/pull/536) — opened 1 hour ago
-- PR [#533 Home: move BROWSE PLAYLISTS into its own Playlists section](https://github.com/ChadFarrow/boostmebitch/pull/533) — opened 14 hours ago
+- PR [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 20 minutes ago · draft
+- PR [#536 Buddy: let the Bitch site's browser call the two signing routes (CORS)](https://github.com/ChadFarrow/boostmebitch/pull/536) — opened 2 hours ago
+- PR [#533 Home: move BROWSE PLAYLISTS into its own Playlists section](https://github.com/ChadFarrow/boostmebitch/pull/533) — opened 15 hours ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 47 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
