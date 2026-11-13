@@ -13,16 +13,14 @@ blank line ends the group.
 
 ## boostmebitch
 
-- [ ] Community playlists (PRs #537–#540) are on beta since 2026-11-12, with a test database. Test them, then tell Claude what does not work.
+- [ ] Community playlists are on beta since 2026-11-12 (#537 is merged; #538–#540 are open). Beta and the main site share one real database, so a playlist made on beta keeps its address on boostmebuddy.com at launch. Test them, then tell Claude what does not work.
   - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
   - [ ] Publish with a playlist art link that is not square or has a transparent background: it is accepted, and the feed's `itunes:image` is your own link.
   - [ ] In the maker and in Add songs, tap a song's cover: only that song plays, from the start, and it stops at its end.
   - [ ] Favorite a community playlist and one of its songs.
   - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
   - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
-  - [ ] Before the test database is wiped, take your hearts off the test playlists.
 - [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
-- [ ] Before community playlists launch on the main site: merge PR #536 and deploy it to Boost Me Buddy first.
 - [ ] Test PR #541, ⤮ SHUFFLE for the favorite singles, on your iPhone. Its browser tests passed in Chrome, but Chrome cannot test the iOS press. Then tell Claude what does not work, or mark the PR ready and merge it.
   - [ ] In Safari, on the PR's Vercel preview: open `/favorites`, press SINGLES, then ⤮ SHUFFLE. The first track plays at once, with no second ▶.
   - [ ] Lock the screen: when a track ends, the next shuffled track starts.
