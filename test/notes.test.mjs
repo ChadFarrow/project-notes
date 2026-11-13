@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl, todoProjects,
+  todoTitleQuery, readTodoTitles, todoMark,
 } from '../scripts/lib/notes.mjs';
 
 // ---------- parseHeader ----------
@@ -269,4 +270,102 @@ test('groupTodo hides text lines under a place filter', () => {
 test('todoProjects counts the top items of each section', () => {
   assert.deepEqual(todoProjects(todoSections), [{ title: 'app-one', count: 4 }, { title: 'Laptop', count: 2 }]);
   assert.deepEqual(todoProjects(undefined), []);
+});
+
+// ---------- titles and out-of-date marks ----------
+
+const R = 'ChadFarrow/app-one';
+const DAY = 86400000;
+const NOW = Date.parse('2026-11-13T12:00:00Z');
+const ago = (days) => new Date(NOW - days * DAY).toISOString();
+const titles = (entries) => new Map(Object.entries(entries));
+const pr = (state, mergedAt = null) => ({ kind: 'pr', title: 'T', state, mergedAt });
+
+test('todoTitleQuery asks once per repo and once per number', () => {
+  const { query, aliases } = todoTitleQuery([
+    { repo: R, number: 8 }, { repo: R, number: 9 }, { repo: R, number: 8 }, { repo: 'Upstream/thing', number: 4 },
+  ]);
+  assert.equal(query.match(/repository\(/g).length, 2);
+  assert.equal(query.match(/issueOrPullRequest\(/g).length, 3);
+  assert.match(query, /repository\(owner: "ChadFarrow", name: "app-one"\)/);
+  assert.match(query, /__typename/);
+  assert.match(query, /isDraft/);
+  assert.match(query, /mergedAt/);
+  assert.equal(aliases.length, 3);
+  assert.deepEqual(aliases.map((a) => [a.repo, a.number]), [[R, 8], [R, 9], ['Upstream/thing', 4]]);
+  assert.equal(aliases[0].repoAlias, aliases[1].repoAlias);
+  assert.notEqual(aliases[0].repoAlias, aliases[2].repoAlias);
+});
+
+test('readTodoTitles reads PRs and issues, and skips a repo the token cannot see', () => {
+  const { aliases } = todoTitleQuery([{ repo: R, number: 8 }, { repo: R, number: 5 }, { repo: 'Upstream/thing', number: 4 }]);
+  const [a8, a5, a4] = aliases;
+  const json = {
+    data: {
+      [a8.repoAlias]: {
+        [a8.numberAlias]: { __typename: 'PullRequest', title: 'A PR', state: 'MERGED', isDraft: false, mergedAt: '2026-11-01T00:00:00Z' },
+        [a5.numberAlias]: { __typename: 'Issue', title: 'An issue', state: 'CLOSED' },
+      },
+      [a4.repoAlias]: null,
+    },
+    errors: [{ type: 'NOT_FOUND' }],
+  };
+  const map = readTodoTitles(json, aliases);
+  assert.deepEqual(map.get(`${R}#8`), { kind: 'pr', title: 'A PR', state: 'merged', mergedAt: '2026-11-01T00:00:00Z' });
+  assert.deepEqual(map.get(`${R}#5`), { kind: 'issue', title: 'An issue', state: 'closed', mergedAt: null });
+  assert.equal(map.has('Upstream/thing#4'), false);
+  assert.equal(map.size, 2);
+});
+
+test('readTodoTitles calls an open draft PR draft', () => {
+  const { aliases } = todoTitleQuery([{ repo: R, number: 1 }, { repo: R, number: 2 }]);
+  const json = { data: { [aliases[0].repoAlias]: {
+    [aliases[0].numberAlias]: { __typename: 'PullRequest', title: 'D', state: 'OPEN', isDraft: true, mergedAt: null },
+    [aliases[1].numberAlias]: { __typename: 'PullRequest', title: 'O', state: 'OPEN', isDraft: false, mergedAt: null },
+  } } };
+  const map = readTodoTitles(json, aliases);
+  assert.equal(map.get(`${R}#1`).state, 'draft');
+  assert.equal(map.get(`${R}#2`).state, 'open');
+});
+
+const line = (group, numbers, repo = R) => ({ type: 'item', group, repo, refs: numbers.map((number) => ({ repo, number })) });
+
+test('todoMark marks a before-merge line when every PR on it is merged or closed', () => {
+  const t = titles({ [`${R}#537`]: pr('merged', ago(1)), [`${R}#538`]: pr('closed'), [`${R}#540`]: pr('merged', ago(2)) });
+  assert.deepEqual(todoMark(line('before', [537]), t, NOW), { tone: 'wait', text: 'PR #537 is merged: is this still needed?' });
+  assert.equal(todoMark(line('before', [538]), t, NOW).text, 'PR #538 is closed: is this still needed?');
+  assert.equal(todoMark(line('before', [537, 538, 540]), t, NOW).text, 'PRs #537, #538 and #540 are merged or closed: is this still needed?');
+  assert.equal(todoMark(line('before', [537, 538]), t, NOW).text, 'PRs #537 and #538 are merged or closed: is this still needed?');
+});
+
+test('todoMark leaves a before-merge line alone when only some PRs are merged', () => {
+  const t = titles({ [`${R}#1`]: pr('merged', ago(1)), [`${R}#2`]: pr('open'), [`${R}#3`]: pr('draft') });
+  assert.equal(todoMark(line('before', [1, 2]), t, NOW), null);
+  assert.equal(todoMark(line('before', [3]), t, NOW), null);
+});
+
+test('todoMark ignores issues', () => {
+  const t = titles({ [`${R}#1`]: pr('merged', ago(1)), [`${R}#5`]: { kind: 'issue', title: 'I', state: 'closed', mergedAt: null } });
+  assert.equal(todoMark(line('before', [5]), t, NOW), null);
+  assert.equal(todoMark(line('before', [1, 5]), t, NOW).text, 'PR #1 is merged: is this still needed?');
+  assert.equal(todoMark(line('before', [1, 99]), t, NOW).text, 'PR #1 is merged: is this still needed?');
+});
+
+test('todoMark gives an after-merge line its age, and the warning after 14 days', () => {
+  const at = (days) => titles({ [`${R}#9`]: pr('merged', ago(days)) });
+  assert.deepEqual(todoMark(line('after', [9]), at(0), NOW), { tone: 'quiet', text: 'merged today' });
+  assert.deepEqual(todoMark(line('after', [9]), at(1), NOW), { tone: 'quiet', text: 'merged 1 day ago' });
+  assert.deepEqual(todoMark(line('after', [9]), at(14), NOW), { tone: 'quiet', text: 'merged 14 days ago' });
+  assert.deepEqual(todoMark(line('after', [9]), at(15), NOW), { tone: 'wait', text: 'merged 15 days ago' });
+  const two = titles({ [`${R}#9`]: pr('merged', ago(30)), [`${R}#10`]: pr('merged', ago(3)) });
+  assert.equal(todoMark(line('after', [9, 10]), two, NOW).text, 'merged 3 days ago');
+  assert.equal(todoMark(line('after', [9]), titles({ [`${R}#9`]: pr('open') }), NOW), null);
+});
+
+test('todoMark gives nothing to a line with no PR', () => {
+  assert.equal(todoMark({ type: 'item', group: 'before' }, titles({}), NOW), null);
+  assert.equal(todoMark(line('before', [1]), titles({}), NOW), null);
+  assert.equal(todoMark(line('dev', [1]), titles({ [`${R}#1`]: pr('merged', ago(1)) }), NOW), null);
+  assert.equal(todoMark(line(null, [1]), titles({ [`${R}#1`]: pr('merged', ago(1)) }), NOW), null);
+  assert.equal(todoMark(line('before', [1]), null, NOW), null);
 });

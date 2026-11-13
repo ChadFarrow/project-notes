@@ -179,6 +179,16 @@ const api = {
   goodToken: 'good-token',
   nextSha: 100,
   readProbes: 0,
+  // The titles the alias query answers, by 'owner/name#N'. `mergedDaysAgo` counts from the run.
+  // A repo with no entry answers null plus an `errors` item, as a repo the token cannot see does.
+  titles: {
+    'ChadFarrow/app-one#8': { type: 'PullRequest', title: 'Fixture title eight', state: 'OPEN', isDraft: true },
+    'ChadFarrow/app-one#9': { type: 'PullRequest', title: 'Fixture title nine', state: 'MERGED', mergedDaysAgo: 20 },
+    'ChadFarrow/app-one#11': { type: 'PullRequest', title: 'Fixture title eleven', state: 'MERGED', mergedDaysAgo: 5 },
+    'ChadFarrow/app-one#12': { type: 'PullRequest', title: `Fixture title twelve ${'w'.repeat(100)}`, state: 'MERGED', mergedDaysAgo: 3 },
+    'ChadFarrow/app-one#13': { type: 'PullRequest', title: 'Fixture title thirteen', state: 'CLOSED' },
+  },
+  titleRequests: 0,
   todo: { text: TODO_TEXT, sha: 'todo-0' },
   todoPuts: [],
   todoConflictOnce: false,
@@ -263,6 +273,30 @@ function answer(method, url, auth, body) {
     api.readProbes++;
     const flag = u.pathname.endsWith('/issues') ? may.issues : may.pulls;
     return flag ? [422, { message: 'Validation Failed' }] : FORBIDDEN;
+  }
+  if (method === 'POST' && u.pathname === '/graphql' && !JSON.parse(body).query.includes('viewer')) {
+    // The page's alias query for titles: `rN: repository(owner, name) { nM: issueOrPullRequest(number) … }`.
+    api.titleRequests++;
+    const data = {};
+    const errors = [];
+    for (const block of JSON.parse(body).query.split(/(?= r\d+: repository\()/).slice(1)) {
+      const [, alias, owner, name] = /(r\d+): repository\(owner: "([^"]+)", name: "([^"]+)"\)/.exec(block);
+      const numbers = [...block.matchAll(/(n\d+): issueOrPullRequest\(number: (\d+)\)/g)];
+      if (!numbers.some(([, , n]) => api.titles[`${owner}/${name}#${n}`])) {
+        data[alias] = null;
+        errors.push({ type: 'NOT_FOUND', path: [alias], message: `Could not resolve to a Repository with the name '${owner}/${name}'.` });
+        continue;
+      }
+      data[alias] = {};
+      for (const [, numberAlias, n] of numbers) {
+        const t = api.titles[`${owner}/${name}#${n}`];
+        data[alias][numberAlias] = t && {
+          __typename: t.type, title: t.title, state: t.state, isDraft: !!t.isDraft,
+          mergedAt: t.mergedDaysAgo === undefined ? null : new Date(Date.now() - t.mergedDaysAgo * 86400000).toISOString(),
+        };
+      }
+    }
+    return [200, errors.length ? { data, errors } : { data }];
   }
   if (method === 'POST' && u.pathname === '/graphql') {
     api.readProbes++;
@@ -824,6 +858,44 @@ async function main() {
         && (await evaluate('localStorage.getItem("pn:token")')) === editingBefore);
       await evaluate('document.querySelector("#token-dialog").close()');
 
+      // ---- titles and out-of-date marks (the read token is set only for this part) ----
+      const row = (words) => `[...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(${js(words)}))`;
+      const refLines = (words) => evaluate(`[...(${row(words)}?.querySelectorAll(':scope > .todo-refs > .todo-ref') || [])].map((p) => p.textContent)`);
+      const mark = (words) => evaluate(`(() => { const m = ${row(words)}?.querySelector(':scope > .item-title > .todo-mark'); return m ? [m.textContent, m.className] : null; })()`);
+      await go();
+      const requestsBefore = api.titleRequests;
+      check('without a read token there are no title lines', (await count('#todo-list .todo-ref')) === 0 && (await count('#todo-list .todo-mark')) === 0
+        && (await count('#todo-list .todo-note')) === 0 && (await count('#todo-list .todo-item')) > 0 && api.titleRequests === requestsBefore);
+      await evaluate(`localStorage.setItem('pn:readToken', ${js(js('read-token'))})`);
+      await go();
+      check('with a read token, each PR shows its title and state', await waitFor(`document.querySelector('#todo-list .todo-ref')`)
+        && js(await refLines('Test PR #8')) === js(['#8 Fixture title eight · draft'])
+        && js(await refLines('Test PR #9')) === js(['#9 Fixture title nine · merged'])
+        && js(await refLines('PRs #11')) === js(['#11 Fixture title eleven · merged', `#12 Fixture title twelve ${'w'.repeat(100)} · merged`, '#13 Fixture title thirteen · closed']),
+      js([await refLines('Test PR #8'), await refLines('PRs #11')]));
+      check('a PR the token cannot see keeps its link and gets no title',
+        await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/Upstream/thing/issues/4"]')`)
+        && !(await evaluate(`[...document.querySelectorAll('#todo-list .todo-ref')].some((p) => p.textContent.includes('Upstream'))`)));
+      check('a before-merge line whose PRs all merged or closed is marked',
+        js(await mark('PRs #11')) === js(['PRs #11, #12 and #13 are merged or closed: is this still needed?', 'todo-mark wait'])
+        && (await mark('Test PR #8')) === null);
+      check('an after-merge line shows its age with the warning colour after 14 days',
+        js(await mark('Test PR #9')) === js(['merged 20 days ago', 'todo-mark wait']));
+      check('a title is text, and the page asks GitHub once for all of them', (await count('#todo-list .todo-ref *')) === 0 && api.titleRequests === requestsBefore + 1);
+      const served = await evaluate(`fetch('data.json', { cache: 'no-store' }).then((r) => r.text())`);
+      check('no title reaches data.json', typeof served === 'string' && served.length > 0 && !served.includes('Fixture title'));
+      api.revoked = true;
+      await go();
+      check('a refused read token shows one line and the list still works', await waitFor(`document.querySelector('#todo-list .todo-note')`)
+        && (await count('#todo-list .todo-note')) === 1 && (await text('#todo-list .todo-note'))?.includes('GitHub refused the read token.')
+        && (await count('#todo-list .todo-ref')) === 0 && (await count('#todo-list .todo-box')) > 0);
+      await click('#todo-list .todo-note button');
+      check('that line offers the token sheet', await waitFor('document.querySelector("#token-dialog").open'));
+      await evaluate('document.querySelector("#token-dialog").close()');
+      api.revoked = false;
+      await evaluate('localStorage.removeItem("pn:readToken")');
+      await go();
+
       // ---- deleting a to-do item ----
       const ownWords = `:scope > .item-title`;
       const tapBox = (words) => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')]
@@ -996,8 +1068,11 @@ async function main() {
     await go();
     // The delete checks hid items. Show the whole list, so the long sub-item is measured too.
     await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+    // With a read token, so the title lines (one has a 100-letter word) are measured too.
+    if (EDITOR_CHECKS) await evaluate(`localStorage.setItem('pn:readToken', ${js(js('read-token'))})`);
     await go();
-    const overflow = () => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
+    if (EDITOR_CHECKS) await waitFor(`document.querySelector('#todo-list .todo-ref')`);
+    const overflow =() => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
     check('the phone layout has no sideways scroll', (await overflow()) <= 0, `${await overflow()}px`);
     const todoOverflow = await evaluate('(() => { const l = document.querySelector("#todo-list"); return l ? l.scrollWidth - l.clientWidth : 1; })()');
     check('the to-do list fits the phone width', todoOverflow <= 0, `${todoOverflow}px`);
@@ -1006,6 +1081,10 @@ async function main() {
       check('a sub-item box is at least 24 by 24 px on the phone', subBox && subBox[0] >= 24 && subBox[1] >= 24, js(subBox));
       const longSubRight = await evaluate(`(() => { const c = document.querySelector('#todo-list .todo-subs code'); return c ? c.closest('.todo-item').getBoundingClientRect().right : null; })()`);
       check('a long sub-item wraps inside the phone width', longSubRight !== null && longSubRight <= 390, js(longSubRight));
+    }
+    if (EDITOR_CHECKS) {
+      const refRight = await evaluate(`Math.max(...[...document.querySelectorAll('#todo-list .todo-ref, #todo-list .todo-mark')].map((p) => p.getBoundingClientRect().right))`);
+      check('long title lines and marks wrap inside the phone width', (await count('#todo-list .todo-ref')) >= 4 && refRight <= 390, js(refRight));
     }
     await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=false]")) b.click();
       for (const d of document.querySelectorAll("details")) d.open = true;`);
@@ -1040,6 +1119,7 @@ async function main() {
       await click('#todo-dialog .cancel-button');
     }
     await send('Emulation.clearDeviceMetricsOverride');
+    if (EDITOR_CHECKS) await evaluate('localStorage.removeItem("pn:readToken")');
 
     check('no errors during the whole run', logErrors.length === 0, logErrors.join(' | '));
     check('the security policy blocked nothing during the whole run', (await evaluate('window.__csp.length')) === 0);

@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, removeTodoItem, TODO_PLACES, todoProjects, todoRefUrl } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, readTodoTitles, removeTodoItem, TODO_PLACES, todoMark, todoProjects, todoRefUrl, todoTitleQuery } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -152,6 +152,11 @@ let readToken = store.get('readToken', '');
 const view = { q: '', status: 'all', category: 'all', ...store.get('view', {}) };
 const todoView = { project: 'all', place: 'all', ...store.get('todoView', {}) };
 const opened = new Set(store.get('open', []));
+// Titles and states of the PRs the to-do list names. They live in this page's memory only:
+// a private repo's title must never reach a file. null = not loaded (no read token, or a failure).
+let todoTitles = null;
+let todoNote = null; // null, 'auth', or the reason the titles did not load
+let titleRun = 0;
 
 const saveView = () => store.set('view', { q: view.q, status: view.status, category: view.category });
 const saveTodoView = () => store.set('todoView', { project: todoView.project, place: todoView.place });
@@ -183,6 +188,7 @@ async function start() {
   renderHeader();
   setupControls();
   renderContent();
+  loadTodoTitles();
 }
 
 function updateTokenButton() {
@@ -369,18 +375,72 @@ function todoSubItems(entry) {
 }
 const todoTopOf = (entry) => entry.under && (data.todo || []).flatMap((s) => s.entries)
   .find((e) => !e.under && (e.lines || []).join('\n') === entry.under.join('\n'));
+// One line per ref that GitHub answered: #N, the title, and the state. The title is GitHub's
+// text, written by other people, so it only ever goes in as text.
+function todoRefLines(entry) {
+  if (!todoTitles) return null;
+  const lines = (entry.refs || []).map((ref) => {
+    const info = todoTitles.get(`${ref.repo}#${ref.number}`);
+    if (!info) return null;
+    const name = ref.repo === entry.repo ? `#${ref.number}` : `${ref.repo}#${ref.number}`;
+    return h('p', { class: 'todo-ref', text: `${name} ${info.title} · ${info.state}` });
+  }).filter(Boolean);
+  return lines.length ? h('div', { class: 'todo-refs' }, lines) : null;
+}
 function todoRow(entry, section) {
   const place = TODO_PLACES[entry.place];
+  const mark = todoMark(entry, todoTitles, Date.now());
   return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
     h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
     h('div', { class: 'item-title' },
       entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null,
       section && section.title ? h('span', { class: 'todo-repo', text: section.title }) : null,
       place ? h('span', { class: 'todo-place', 'data-place': entry.place }, `${place[0]} ${place[1]}`) : null,
-      todoParts(entry.parts)));
+      todoParts(entry.parts),
+      mark ? h('span', { class: `todo-mark ${mark.tone}`, text: mark.text }) : null),
+    todoRefLines(entry));
+}
+const redrawTodoPanel = () => $('#todo-panel')?.replaceWith(todoPanel());
+
+// Fetches the titles with the read token, 100 numbers to a request. Without a token it asks for
+// nothing. A failure leaves one line above the list and never blocks the list or a box.
+async function loadTodoTitles() {
+  const run = ++titleRun;
+  todoTitles = null;
+  todoNote = null;
+  const refs = new Map();
+  for (const section of data.todo || []) {
+    for (const entry of section.entries) for (const ref of entry.refs || []) refs.set(`${ref.repo}#${ref.number}`, ref);
+  }
+  if (readToken && refs.size) {
+    const all = [...refs.values()];
+    try {
+      const loaded = new Map();
+      for (let i = 0; i < all.length; i += 100) {
+        const { query, aliases } = todoTitleQuery(all.slice(i, i + 100));
+        const res = await gh('/graphql', { method: 'POST', body: JSON.stringify({ query }) }, readToken);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!json.data) throw new Error(json.errors?.[0]?.message || 'no answer');
+        for (const [key, info] of readTodoTitles(json, aliases)) loaded.set(key, info);
+      }
+      if (run === titleRun) todoTitles = loaded;
+    } catch (err) {
+      if (run === titleRun) todoNote = err.kind === 'auth' ? 'auth' : err instanceof UserError ? 'GitHub did not answer' : err.message;
+    }
+  }
+  if (run === titleRun) redrawTodoPanel();
+}
+function todoNoteLine() {
+  if (!todoNote) return null;
+  if (todoNote === 'auth') {
+    return h('p', { class: 'note-line todo-note' }, 'GitHub refused the read token. ',
+      h('button', { type: 'button', class: 'quiet-button', onclick: () => openTokenDialog() }, 'Paste a new token'));
+  }
+  return h('p', { class: 'note-line todo-note', text: `Titles did not load (${todoNote}).` });
 }
 function todoPanel() {
-  const panel = h('div', { class: 'panel', id: 'todo-panel' });
+  const panel = h('div', { class: 'panel', id: 'todo-panel' }, todoNoteLine());
   const groups = groupTodo(data.todo || [], todoView);
   if (!groups.some((g) => g.items.length)) panel.append(h('p', { class: 'empty', text: 'None.' }));
   for (const group of groups) {
@@ -1077,6 +1137,7 @@ function readTokenPart() {
     type: 'button', class: 'danger', onclick: () => {
       readToken = '';
       store.remove('readToken');
+      loadTodoTitles();
       forget.remove();
       setStatus(status, 'good', 'The titles token is removed from this browser.');
     },
@@ -1099,6 +1160,7 @@ function readTokenPart() {
     }
     readToken = value;
     store.set('readToken', value);
+    loadTodoTitles();
     input.value = '';
     buttons.append(forget);
     setStatus(status, 'good', 'The titles token is saved. It reads titles and writes nothing.');

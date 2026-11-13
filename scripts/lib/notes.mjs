@@ -517,3 +517,70 @@ export const todoProjects = (sections) => (sections || []).map((section) => ({
 }));
 
 export const todoRefUrl = (ref) => `https://github.com/${ref.repo}/issues/${ref.number}`;
+
+// ---------- titles from GitHub ----------
+// The page asks GitHub for these with the read token and keeps them in memory only. Nothing here
+// touches the network, the page or the clock: the page passes `nowMs`.
+
+// One GraphQL query for a list of refs ({ repo: 'owner/name', number }): one `repository` per
+// repo and one `issueOrPullRequest` per number. `aliases` says where each answer will sit.
+export function todoTitleQuery(refs) {
+  const repos = new Map();
+  for (const ref of refs || []) {
+    if (!repos.has(ref.repo)) repos.set(ref.repo, new Set());
+    repos.get(ref.repo).add(ref.number);
+  }
+  const aliases = [];
+  const blocks = [];
+  let r = 0;
+  for (const [repo, numbers] of repos) {
+    const repoAlias = `r${r++}`;
+    const [owner, name] = repo.split('/');
+    const asks = [...numbers].map((number) => {
+      const numberAlias = `n${number}`;
+      aliases.push({ repoAlias, numberAlias, repo, number });
+      return `${numberAlias}: issueOrPullRequest(number: ${Number(number)}) { __typename ... on Issue { title state } ... on PullRequest { title state isDraft mergedAt } }`;
+    });
+    blocks.push(`${repoAlias}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { ${asks.join(' ')} }`);
+  }
+  return { query: `{ ${blocks.join(' ')} }`, aliases };
+}
+
+// GitHub's answer → Map 'owner/name#N' → { kind, title, state, mergedAt }. A repo or number the
+// token cannot see comes back null, and is left out.
+export function readTodoTitles(json, aliases) {
+  const map = new Map();
+  for (const { repoAlias, numberAlias, repo, number } of aliases || []) {
+    const node = json?.data?.[repoAlias]?.[numberAlias];
+    if (!node || typeof node.title !== 'string') continue;
+    const isPr = node.__typename === 'PullRequest';
+    let state = String(node.state).toLowerCase();
+    if (isPr && state === 'open' && node.isDraft) state = 'draft';
+    map.set(`${repo}#${number}`, { kind: isPr ? 'pr' : 'issue', title: node.title, state, mergedAt: node.mergedAt ?? null });
+  }
+  return map;
+}
+
+// The out-of-date mark of a to-do line, from the PRs it names (issues and refs the token cannot
+// see do not count). Before merge: every PR merged or closed. After merge: how long ago the
+// newest merge was, and `wait` after more than 14 days. → null | { tone: 'quiet'|'wait', text }
+export function todoMark(entry, titles, nowMs) {
+  if (!titles || (entry.group !== 'before' && entry.group !== 'after')) return null;
+  const prs = (entry.refs || [])
+    .map((ref) => ({ ref, info: titles.get(`${ref.repo}#${ref.number}`) }))
+    .filter((p) => p.info && p.info.kind === 'pr');
+  if (!prs.length) return null;
+  if (entry.group === 'before') {
+    if (!prs.every((p) => p.info.state === 'merged' || p.info.state === 'closed')) return null;
+    const name = ({ ref }) => (ref.repo === entry.repo ? `#${ref.number}` : `${ref.repo}#${ref.number}`);
+    if (prs.length === 1) return { tone: 'wait', text: `PR ${name(prs[0])} is ${prs[0].info.state}: is this still needed?` };
+    const names = prs.map(name);
+    const list = `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`;
+    return { tone: 'wait', text: `PRs ${list} are merged or closed: is this still needed?` };
+  }
+  const merged = prs.filter((p) => p.info.state === 'merged' && p.info.mergedAt).map((p) => Date.parse(p.info.mergedAt));
+  if (!merged.length) return null;
+  const days = Math.max(0, Math.floor((nowMs - Math.max(...merged)) / 86400000));
+  const text = days === 0 ? 'merged today' : days === 1 ? 'merged 1 day ago' : `merged ${days} days ago`;
+  return { tone: days > 14 ? 'wait' : 'quiet', text };
+}

@@ -252,6 +252,14 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.85; 
 /* The repo of a top item and the place of a test, as small labels before the words. */
 .todo-repo, .todo-place { display: inline-block; margin-right: 6px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 4px; color: var(--muted); font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
 .todo-item.done .todo-repo, .todo-item.done .todo-place { text-decoration: none; }
+/* Titles from GitHub: one muted line per PR under the words, in the column of the words. */
+.todo-refs { grid-column: 2; margin-top: 2px; }
+.todo-ref { margin: 0; color: var(--muted); font-size: 0.85rem; overflow-wrap: anywhere; }
+/* The out-of-date mark, after the words of its line. */
+.todo-mark { display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
+.todo-mark.quiet { background: var(--draft-soft); color: var(--muted); }
+.todo-mark.wait { background: var(--wait-soft); color: var(--wait); }
+#todo-list .todo-note { margin: 0 0 10px; color: var(--bad); }
 
 /* ---------- project rows ---------- */
 
