@@ -77,8 +77,10 @@ blank line ends the group.
   - [ ] In Show Edit, "+ Add pad" a song: it plays on R, at about the loudness of the Music pad. Remove it with two presses.
   - [ ] With 6 pads at half screen, the whole ISO page still shows, and in Show Edit the Show panel scrolls inside itself.
 
-- [ ] Audio Hijack has a new chain since 2026-11-13: AUPeakLimiter (Pre-Gain +10 dB), then Volume 75 %. Its test recording met the level targets, but no Riverside export confirms them yet.
-  - [ ] Record a short Riverside test: your voice, an ISO, the intro, a song and the outro. Export it as WAV HD with Normalize off, and give the file to Claude to measure.
+- [ ] Audio Hijack has a new chain since 2026-11-13: AUPeakLimiter (Pre-Gain +10 dB), then Volume 75 %. Its test recording met the level targets, but no Riverside export confirms them yet. Do one Riverside test with this setup, with Reed if he can join.
+  - [ ] Click Run in Audio Hijack and keep its Recorder on for the whole test, so Claude gets both files of the same audio.
+  - [ ] In Riverside, talk normally for about 30 s, then laugh or talk loudly once. Play an ISO, the intro (let it fade), about 30 s of a song and the outro, with silence between. Reed talks for about 30 s.
+  - [ ] Export as WAV HD with Normalize audio levels off, noise removal off and Magic Audio off on your track. Give Claude the export's path and the time of the test.
 
 ## MSP-2.0
 
