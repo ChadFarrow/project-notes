@@ -492,7 +492,8 @@ export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
     const entries = section.entries || [];
     for (let i = 0; i < entries.length; i++) {
       const top = entries[i];
-      if (top.under) continue;
+      // A sub-item with no item right before it has lost its top item (a delete can do that): it shows as its own item.
+      if (top.under && entries[i - 1]?.type === 'item') continue;
       const subs = [];
       if (top.type === 'item') {
         while (i + 1 < entries.length && entries[i + 1].under) subs.push(entries[++i]);

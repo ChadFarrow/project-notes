@@ -481,7 +481,7 @@ function todoSection() {
   };
   const project = h('select', { id: 'todo-project', 'aria-label': 'Project' },
     h('option', { value: 'all', text: 'All projects' }),
-    projects.map((p) => h('option', { value: p.title, text: `${p.title} (${p.count})` })));
+    projects.map((p) => h('option', { value: p.title, text: `${p.title || 'No heading'} (${p.count})` })));
   project.value = todoView.project;
   project.addEventListener('change', () => { todoView.project = project.value; redraw(); });
   const place = h('select', { id: 'todo-place', 'aria-label': 'Where' },
@@ -803,8 +803,13 @@ async function checkReadToken(value) {
       body: JSON.stringify({ query: '{ viewer { repositories(privacy: PRIVATE, first: 1) { totalCount } } }' }),
     }, value);
     if (!count.ok) return `GitHub could not check this token (HTTP ${count.status}).`;
-    const total = (await count.json())?.data?.viewer?.repositories?.totalCount;
-    if (!total) return 'Pick All repositories.';
+    const answer = await count.json();
+    if (!answer?.data) return `GitHub could not check this token: ${String(answer?.errors?.[0]?.message ?? 'no answer')}`;
+    // A count above 0 only proves the token sees some private repo. It must see every private
+    // project of the dashboard, or the titles of the others go missing with no message.
+    const total = answer.data.viewer?.repositories?.totalCount;
+    const privateProjects = (data.projects || []).filter((p) => p.isPrivate).length;
+    if (!total || total < privateProjects) return 'Pick All repositories.';
     const write = await gh(`/repos/${REPO}/contents/README.md`, {
       method: 'PUT',
       body: JSON.stringify({ message: 'Access check from the web dashboard', content: '', sha: '0'.repeat(40), branch: 'main' }),

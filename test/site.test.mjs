@@ -448,3 +448,35 @@ test('an item parsed from the file can be deleted from it, and the rest of the l
     assert.ok(!after.some((e) => e.lines[0] === item.lines[0]), item.lines[0]);
   }
 });
+
+test('a parent line with only a group or place word keeps its box, and its tests sit under it', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] Before merge:\n  - [ ] Phone: Lock the screen\n- [ ] Phone:\n');
+  assert.equal(entries.length, 3);
+  assert.deepEqual(entries[0].lines, ['- [ ] Before merge:']);
+  assert.equal(entries[0].group, 'before');
+  assert.equal(entries[0].parts.map((p) => p.text).join(''), 'Before merge:');
+  assert.deepEqual(entries[1].under, ['- [ ] Before merge:']);
+  assert.equal(entries[1].group, 'before');
+  assert.equal(entries[1].place, 'phone');
+  assert.equal(entries[2].place, 'phone');
+  assert.equal(entries[2].parts.map((p) => p.text).join(''), 'Phone:');
+});
+
+test('removeTodoItem deletes the right test under a bare group-word parent', () => {
+  const text = '## boostmebitch\n- [ ] Before merge: Test PR #1\n  - [ ] Phone: Lock the screen\n\n- [ ] Before merge:\n  - [ ] Phone: Lock the screen\n';
+  const [{ entries }] = parseTodoList(text, { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  const second = entries[entries.length - 1];
+  assert.deepEqual(second.under, ['- [ ] Before merge:']);
+  assert.equal(removeTodoItem(text, second.lines, second.under),
+    '## boostmebitch\n- [ ] Before merge: Test PR #1\n  - [ ] Phone: Lock the screen\n\n- [ ] Before merge:\n');
+});
+
+test('a slug range keeps both ends in the slug repo', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] See Spencer/small#1-#3 now\n', { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  assert.deepEqual(entries[0].refs, [1, 2, 3].map((number) => ({ repo: 'Spencer/small', number })));
+});
+
+test('a number above the GraphQL Int is not a reference', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] Big #2147483648 and #2147483647 and a/b#99999999999\n', { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  assert.deepEqual(entries[0].refs, [{ repo: 'ChadFarrow/boostmebitch', number: 2147483647 }]);
+});

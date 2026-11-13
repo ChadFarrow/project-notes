@@ -369,3 +369,10 @@ test('todoMark gives nothing to a line with no PR', () => {
   assert.equal(todoMark(line(null, [1]), titles({ [`${R}#1`]: pr('merged', ago(1)) }), NOW), null);
   assert.equal(todoMark(line('before', [1]), null, NOW), null);
 });
+
+test('groupTodo shows a sub-item whose top item is gone as its own item', () => {
+  const groups = groupTodo([{ title: 'x', entries: [todoItem('orphan', { under: ['- [ ] gone'], group: 'dev' })] }]);
+  assert.deepEqual(names(groups[2]), ['orphan']);
+  const after = groupTodo([{ title: 'x', entries: [{ type: 'text', parts: [{ text: 'note' }] }, todoItem('orphan2', { under: ['- [ ] gone'] })] }]);
+  assert.deepEqual(names(after[3]), ['note', 'orphan2']);
+});

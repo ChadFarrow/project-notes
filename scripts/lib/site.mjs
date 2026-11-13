@@ -65,8 +65,9 @@ function todoPrefix(text) {
 // What counts as a reference in plain text (not in `code`, not in a link), first match at a
 // position wins: a range `#537–#540` (en dash or hyphen), `owner/repo#N`, a bare `#N` that is
 // not part of a word or path (so `#BowlAfterBowl` and `a/b#1` are not bare).
-const TODO_REF = /(?<![\w/])#(\d+)[–-]#(\d+)\b|(?<![\w/.-])([\w.-]+\/[\w.-]+)#(\d+)\b|(?<![\w/])#(\d+)\b/g;
+const TODO_REF = /(?<![\w/])#(\d+)[–-]#(\d+)\b|(?<![\w/.-])([\w.-]+\/[\w.-]+)#(\d+)[–-]#(\d+)\b|(?<![\w/.-])([\w.-]+\/[\w.-]+)#(\d+)\b|(?<![\w/])#(\d+)\b/g;
 const TODO_CODE = /`[^`]*`/g;
+const MAX_NUMBER = 2147483647; // Above this a number is not a reference: GitHub's GraphQL Int ends here.
 const RANGE_MAX = 10; // A range of more numbers than this names only its two ends.
 
 // Split plain text into parts; a reference becomes { text, ref: { repo, number } }, with no href.
@@ -77,22 +78,34 @@ function refParts(text, repo, owner, refs) {
   const add = (r, number) => {
     if (!refs.some((x) => x.repo === r && x.number === number)) refs.push({ repo: r, number });
   };
+  // The ends of a range: every number in it, or only the two ends when it holds more than RANGE_MAX.
+  const rangeOf = (repoName, from, to, whole) => {
+    const [a, b] = [Number(from), Number(to)];
+    const numbers = b >= a && b - a < RANGE_MAX ? Array.from({ length: b - a + 1 }, (_, i) => a + i) : [a, b];
+    numbers.forEach((n) => add(repoName, n));
+    const start = whole.indexOf('#'); // A slug sits before it; a bare range starts here.
+    const end = whole.lastIndexOf('#');
+    return [
+      ...(start ? [{ text: whole.slice(0, start) }] : []),
+      { text: whole.slice(start, start + from.length + 1), ref: { repo: repoName, number: a } },
+      { text: whole.slice(start + from.length + 1, end) },
+      { text: whole.slice(end), ref: { repo: repoName, number: b } },
+    ];
+  };
+  const big = (...ns) => ns.some((n) => Number(n) > MAX_NUMBER);
   for (const m of text.matchAll(TODO_REF)) {
-    const [whole, from, to, slug, slugNumber, bare] = m;
+    const [whole, from, to, rangeSlug, slugFrom, slugTo, slug, slugNumber, bare] = m;
     let made;
-    if (from !== undefined && repo && owner) {
-      const [a, b] = [Number(from), Number(to)];
-      const numbers = b >= a && b - a < RANGE_MAX ? Array.from({ length: b - a + 1 }, (_, i) => a + i) : [a, b];
-      numbers.forEach((n) => add(repo, n));
-      made = [
-        { text: `#${from}`, ref: { repo, number: a } },
-        { text: whole.slice(from.length + 1, whole.length - to.length - 1) },
-        { text: `#${to}`, ref: { repo, number: b } },
-      ];
+    if (from !== undefined) {
+      if (repo && owner && !big(from, to)) made = rangeOf(repo, from, to, whole);
+    } else if (rangeSlug !== undefined) {
+      if (!big(slugFrom, slugTo)) made = rangeOf(rangeSlug, slugFrom, slugTo, whole);
     } else if (slug !== undefined) {
-      add(slug, Number(slugNumber));
-      made = [{ text: whole, ref: { repo: slug, number: Number(slugNumber) } }];
-    } else if (bare !== undefined && repo && owner) {
+      if (!big(slugNumber)) {
+        add(slug, Number(slugNumber));
+        made = [{ text: whole, ref: { repo: slug, number: Number(slugNumber) } }];
+      }
+    } else if (bare !== undefined && repo && owner && !big(bare)) {
       add(repo, Number(bare));
       made = [{ text: whole, ref: { repo, number: Number(bare) } }];
     }
@@ -171,7 +184,8 @@ export function parseTodoList(text, { owner, repos = [] } = {}) {
       top = null;
     } else if (item) {
       const { text: words, ...prefix } = todoPrefix(item[2] ?? '');
-      open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: words };
+      // A line of only group or place words keeps them as its text, so it keeps its box.
+      open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: words.trim() ? words : (item[2] ?? '') };
       if (top && indent > top.indent) {
         // A sub-item has the group of its item, and its own place or else the item's.
         open.under = top.lines;
@@ -179,7 +193,7 @@ export function parseTodoList(text, { owner, repos = [] } = {}) {
         if (prefix.place ?? top.place) open.place = prefix.place ?? top.place;
       } else {
         Object.assign(open, prefix);
-        top = words.trim() ? { lines: open.lines, indent, group: prefix.group, place: prefix.place } : null;
+        top = (item[2] ?? '').trim() ? { lines: open.lines, indent, group: prefix.group, place: prefix.place } : null;
       }
       section.entries.push(open);
     } else if (open) {

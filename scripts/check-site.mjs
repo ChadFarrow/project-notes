@@ -145,6 +145,10 @@ async function siteFiles() {
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
       auditFiles: [], degradedReason: null, watched: WATCHED, todoText: TODO_TEXT,
     }));
+    // A second private project, so that a token which sees only one private repo can be refused.
+    const parsed = JSON.parse(siteData);
+    parsed.projects.find((p) => p.name === 'svc-core').isPrivate = true;
+    siteData = JSON.stringify(parsed);
   }
   const notesSource = await readFile(path.join(ROOT, 'scripts/lib/notes.mjs'), 'utf8');
   const files = new Map();
@@ -203,6 +207,8 @@ const TOKENS = {
 for (const may of Object.values(TOKENS)) Object.assign(may, { issues: false, pulls: false, private: true });
 Object.assign(TOKENS, {
   'read-token': { write: false, sync: false, issues: false, pulls: false, private: true },
+  'read-few-token': { write: false, sync: false, issues: false, pulls: false, private: true, privateCount: 1 },
+  'read-error-token': { write: false, sync: false, issues: false, pulls: false, private: true, graphqlError: true },
   'read-public-token': { write: false, sync: false, issues: false, pulls: false, private: false },
   'read-write-token': { write: true, sync: false, issues: true, pulls: true, private: true },
 });
@@ -300,7 +306,8 @@ function answer(method, url, auth, body) {
   }
   if (method === 'POST' && u.pathname === '/graphql') {
     api.readProbes++;
-    return [200, { data: { viewer: { repositories: { totalCount: may.private ? 3 : 0 } } } }];
+    if (may.graphqlError) return [200, { errors: [{ message: 'Resource limit <b>boom</b>' }] }];
+    return [200, { data: { viewer: { repositories: { totalCount: may.private ? (may.privateCount ?? 3) : 0 } } } }];
   }
   if (method === 'POST' && u.pathname === `/repos/${REPO}/actions/workflows/sync-all.yml/dispatches`) {
     if (!may.sync) return FORBIDDEN;
@@ -839,6 +846,18 @@ async function main() {
       await click(readGo);
       check('a read token without All repositories is refused',
         await waitFor(`document.querySelector("${readStatus}").textContent.includes("All repositories")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      if (!DATA_FILE) {
+        await fill('#t-read-token', 'read-few-token');
+        await click(readGo);
+        check('a read token that sees fewer private repos than the dashboard has is refused',
+          await waitFor(`document.querySelector("${readStatus}").textContent.includes("All repositories")`)
+          && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      }
+      await fill('#t-read-token', 'read-error-token');
+      await click(readGo);
+      check('a GraphQL answer with errors and no data says GitHub could not check, as text',
+        await waitFor(`document.querySelector("${readStatus}").textContent === "GitHub could not check this token: Resource limit <b>boom</b>"`)
         && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
       await fill('#t-read-token', 'wrong-token');
       await click(readGo);
