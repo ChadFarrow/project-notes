@@ -178,6 +178,7 @@ const api = {
   revoked: false,
   goodToken: 'good-token',
   nextSha: 100,
+  readProbes: 0,
   todo: { text: TODO_TEXT, sha: 'todo-0' },
   todoPuts: [],
   todoConflictOnce: false,
@@ -189,6 +190,12 @@ const TOKENS = {
   'readonly-token': { write: false, sync: false },
   'nosync-token': { write: true, sync: false },
 };
+for (const may of Object.values(TOKENS)) Object.assign(may, { issues: false, pulls: false, private: true });
+Object.assign(TOKENS, {
+  'read-token': { write: false, sync: false, issues: false, pulls: false, private: true },
+  'read-public-token': { write: false, sync: false, issues: false, pulls: false, private: false },
+  'read-write-token': { write: true, sync: false, issues: true, pulls: true, private: true },
+});
 const FORBIDDEN = [403, { message: 'Resource not accessible by personal access token' }];
 
 // → [status, body object or null]
@@ -250,6 +257,16 @@ function answer(method, url, auth, body) {
       stored.sha = `sha-${api.nextSha++}`;
       return [200, { content: { sha: stored.sha } }];
     }
+  }
+  // The read-token probes. They count apart from api.probes: no write, no sync.
+  if (method === 'POST' && (u.pathname === `/repos/${REPO}/issues` || u.pathname === `/repos/${REPO}/pulls`)) {
+    api.readProbes++;
+    const flag = u.pathname.endsWith('/issues') ? may.issues : may.pulls;
+    return flag ? [422, { message: 'Validation Failed' }] : FORBIDDEN;
+  }
+  if (method === 'POST' && u.pathname === '/graphql') {
+    api.readProbes++;
+    return [200, { data: { viewer: { repositories: { totalCount: may.private ? 3 : 0 } } } }];
   }
   if (method === 'POST' && u.pathname === `/repos/${REPO}/actions/workflows/sync-all.yml/dispatches`) {
     if (!may.sync) return FORBIDDEN;
@@ -632,16 +649,16 @@ async function main() {
       await click('article.project[data-project="app-one"] .edit-button');
       check('Edit without a token asks for one', await waitFor('document.querySelector("#token-dialog").open'));
       await fill('#t-token', 'wrong-token');
-      await click('#token-dialog .primary');
-      check('a refused token gets a clear message', await waitFor('document.querySelector("#token-dialog .status").textContent.includes("refused")'));
+      await click('#token-dialog .sheet-foot .primary');
+      check('a refused token gets a clear message', await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("refused")'));
       await shoot('token', { full: false });
       await fill('#t-token', 'readonly-token');
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a token that cannot write is refused at setup',
-        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot save notes")'));
+        await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("cannot save notes")'));
       check('a refused token is not kept', (await evaluate('localStorage.getItem("pn:token")')) === null);
       await fill('#t-token', api.goodToken);
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a good token opens the editor', await waitFor('document.querySelector("#editor").open && document.querySelector("#f-category")'));
       check('the token is kept in this browser', (await evaluate('localStorage.getItem("pn:token")')) === js(api.goodToken));
       check('the access probes start no sync and write nothing', api.probes > 0 && api.dispatches === 0 && api.puts.length === 0);
@@ -734,7 +751,7 @@ async function main() {
       check('the token sheet opens over the editor', await waitFor('document.querySelector("#token-dialog").open && document.querySelector("#editor").open'));
       api.revoked = false;
       await fill('#t-token', api.goodToken);
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       await waitFor('!document.querySelector("#token-dialog").open');
       check('the edit is still there after the new token', (await evaluate('document.querySelector("#f-s1").value')) === 'Kept across a new token');
       await click('#editor .sheet-foot .primary');
@@ -761,13 +778,51 @@ async function main() {
       await click('#token-button');
       await waitFor('document.querySelector("#token-dialog").open');
       await fill('#t-token', 'nosync-token');
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a token without Actions is kept, with a warning',
-        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot start the sync")')
-        && (await text('#token-dialog .primary')) === 'Continue'
+        await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("cannot start the sync")')
+        && (await text('#token-dialog .sheet-foot .primary')) === 'Continue'
         && (await evaluate('localStorage.getItem("pn:token")')) === js('nosync-token'));
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+
+      // ---- the read token ----
+      const sideBefore = [api.dispatches, api.puts.length];
+      const editingBefore = await evaluate('localStorage.getItem("pn:token")');
+      await click('#token-button');
+      await waitFor('document.querySelector("#token-dialog").open');
+      check('the token sheet has a part for the read token', await evaluate('!!document.querySelector("#token-dialog #read-token-part #t-read-token")'
+        + ' && document.querySelector("#read-token-part h3").textContent === "Titles of PRs and issues"'
+        + ' && document.querySelector("#read-token-part").textContent.includes("All repositories")'));
+      const readStatus = '#read-token-part .status';
+      const readGo = '#read-token-part .primary';
+      await fill('#t-read-token', 'read-write-token');
+      await click(readGo);
+      check('a read token that can write is refused',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("Make a read-only one")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      await fill('#t-read-token', 'read-public-token');
+      await click(readGo);
+      check('a read token without All repositories is refused',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("All repositories")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      await fill('#t-read-token', 'wrong-token');
+      await click(readGo);
+      check('a wrong read token is refused by GitHub',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("GitHub refused this token")`));
+      await fill('#t-read-token', 'read-token');
+      await click(readGo);
+      check('a good read token is kept',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("is saved")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === js('read-token'));
+      check('the editing token is untouched by the read token', (await evaluate('localStorage.getItem("pn:token")')) === editingBefore);
+      check('the read-token probes start no sync and write nothing', api.readProbes > 0 && api.dispatches === sideBefore[0] && api.puts.length === sideBefore[1]);
+      await click('#read-token-part .danger');
+      check('the read token can be forgotten',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("removed")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null
+        && (await evaluate('localStorage.getItem("pn:token")')) === editingBefore);
+      await evaluate('document.querySelector("#token-dialog").close()');
 
       // ---- deleting a to-do item ----
       const ownWords = `:scope > .item-title`;

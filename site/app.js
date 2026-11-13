@@ -15,6 +15,9 @@ const ACTIONS_URL = `${REPO_URL}/actions/workflows/${WORKFLOW}`;
 // itself still has to be picked by hand (GitHub has no parameter for it).
 const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+web+editor'
   + '&description=Edits+notes+from+notes.podtards.com&target_name=ChadFarrow&expires_in=90&contents=write&actions=write';
+// The second token only reads: PR and issue titles of every repo, public and private.
+const NEW_READ_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+titles'
+  + '&description=Reads+PR+and+issue+titles+for+notes.podtards.com&target_name=ChadFarrow&expires_in=90&issues=read&pull_requests=read';
 const DATA_VERSION = 1;
 // GitHub drops a scheduled run now and then, so warn only after two missed runs.
 const OLD_DATA_HOURS = 9;
@@ -145,6 +148,7 @@ const badgeList = (badges) => h('span', { class: 'badges' }, badges.map(([tone, 
 
 let data = null;
 let token = store.get('token', '');
+let readToken = store.get('readToken', '');
 const view = { q: '', status: 'all', category: 'all', ...store.get('view', {}) };
 const todoView = { project: 'all', place: 'all', ...store.get('todoView', {}) };
 const opened = new Set(store.get('open', []));
@@ -722,6 +726,40 @@ async function probeToken(auth) {
   };
 }
 
+// Whether a token may be the read token: it must read, and it must write nothing. The
+// probes are requests GitHub refuses either way, so they change nothing. Observed on
+// real GitHub on 2026-11-13 with a token that can write:
+//   POST /repos/ChadFarrow/project-notes/issues with {}  -> 422 ("title" wasn't supplied)
+//   POST /repos/ChadFarrow/project-notes/pulls with {}   -> 422 ("base", "head" weren't supplied)
+//   GraphQL viewer.repositories(privacy: PRIVATE)        -> totalCount 13
+// A fine-grained token without the permission gets 403 "Resource not accessible by
+// personal access token" (GitHub's documented answer; not yet observed here).
+// → null when the token is accepted, else the reason to show.
+async function checkReadToken(value) {
+  const refused = 'GitHub refused this token.';
+  try {
+    const count = await gh('/graphql', {
+      method: 'POST',
+      body: JSON.stringify({ query: '{ viewer { repositories(privacy: PRIVATE, first: 1) { totalCount } } }' }),
+    }, value);
+    if (!count.ok) return `GitHub could not check this token (HTTP ${count.status}).`;
+    const total = (await count.json())?.data?.viewer?.repositories?.totalCount;
+    if (!total) return 'Pick All repositories.';
+    const write = await gh(`/repos/${REPO}/contents/README.md`, {
+      method: 'PUT',
+      body: JSON.stringify({ message: 'Access check from the web dashboard', content: '', sha: '0'.repeat(40), branch: 'main' }),
+    }, value);
+    if (write.status !== 403 && write.status !== 404) return 'This token can change files. Make a read-only one.';
+    for (const kind of ['issues', 'pulls']) {
+      const res = await gh(`/repos/${REPO}/${kind}`, { method: 'POST', body: '{}' }, value);
+      if (res.status !== 403 && res.status !== 404) return 'This token can change issues or PRs. Make a read-only one.';
+    }
+    return null;
+  } catch (err) {
+    return err.kind === 'auth' ? refused : messageFor(err);
+  }
+}
+
 // ---------- the editor ----------
 
 // The editor that is open, if any: guards unsaved edits against a page reload.
@@ -1029,6 +1067,64 @@ function todoEditor(section, index) {
 
 // ---------- the token ----------
 
+// The second part of the token sheet: a token that reads titles and writes nothing.
+function readTokenPart() {
+  const status = h('p', { class: 'status', role: 'status' });
+  const input = h('input', { type: 'password', id: 't-read-token', autocomplete: 'off', spellcheck: 'false', placeholder: 'github_pat_…' });
+  const check = h('button', { type: 'button', class: 'primary' }, 'Check and save');
+  const buttons = h('div', { class: 'token-buttons' }, check);
+  const forget = h('button', {
+    type: 'button', class: 'danger', onclick: () => {
+      readToken = '';
+      store.remove('readToken');
+      forget.remove();
+      setStatus(status, 'good', 'The titles token is removed from this browser.');
+    },
+  }, 'Forget the titles token');
+  if (readToken) buttons.append(forget);
+  check.addEventListener('click', async () => {
+    const value = input.value.trim();
+    if (!value) {
+      setStatus(status, 'bad', 'Paste the token first.');
+      input.focus();
+      return;
+    }
+    check.disabled = true;
+    setStatus(status, '', 'Checking the token…');
+    const reason = await checkReadToken(value);
+    check.disabled = false;
+    if (reason) {
+      setStatus(status, 'bad', reason);
+      return;
+    }
+    readToken = value;
+    store.set('readToken', value);
+    input.value = '';
+    buttons.append(forget);
+    setStatus(status, 'good', 'The titles token is saved. It reads titles and writes nothing.');
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      check.click();
+    }
+  });
+  return h('section', { class: 'token-part', id: 'read-token-part' },
+    h('h3', { text: 'Titles of PRs and issues' }),
+    h('p', { text: readToken
+      ? 'Titles are set up in this browser. To use a different token, paste it below.'
+      : 'To show PR and issue titles in the to-do list, give this page a second token. It is separate from the editing token, so the token that reads titles can write nothing.' }),
+    h('ol', { class: 'steps' },
+      h('li', {}, 'Open ', h('a', { href: NEW_READ_TOKEN_URL, target: '_blank', rel: 'noopener' }, 'a new read-only token on GitHub'),
+        '. The link fills in the name, a 90-day life and the permissions.'),
+      h('li', {}, 'For “Repository access”, choose ', h('strong', { text: 'All repositories' }), ', so that it can see the private ones.'),
+      h('li', {}, 'Make sure that ', h('strong', { text: 'Issues' }), ' and ', h('strong', { text: 'Pull requests' }),
+        ' are “Read-only”, and add nothing else.'),
+      h('li', { text: 'Generate the token, copy it, and paste it here.' })),
+    h('div', { class: 'field' }, h('label', { class: 'label', for: 't-read-token', text: 'Titles token' }), input),
+    buttons, status);
+}
+
 function openTokenDialog(then) {
   const dlg = $('#token-dialog');
   setupSheet(dlg);
@@ -1122,7 +1218,8 @@ function openTokenDialog(then) {
         ' are “Read and write”, and add nothing else. Actions lets this page start the sync after you save.'),
       h('li', { text: 'Generate the token, copy it, and paste it here.' })),
     h('div', { class: 'field' }, h('label', { class: 'label', for: 't-token', text: 'Token' }), input),
-    h('p', { class: 'hint', text: 'On an iPhone, add this page to the Home Screen. Safari clears the storage of a site that you do not visit for 7 days.' }));
+    h('p', { class: 'hint', text: 'On an iPhone, add this page to the Home Screen. Safari clears the storage of a site that you do not visit for 7 days.' }),
+    readTokenPart());
 
   sheet(dlg, 'token-title', token ? 'Editing token' : 'Set up editing', body, h('div', { class: 'sheet-foot' }, foot));
   if (!dlg.open) dlg.showModal();
