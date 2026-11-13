@@ -106,3 +106,8 @@ blank line ends the group.
 - [ ] PR #81 is deployed, and Boomer Bunker Live went live after it, on 2026-11-10 at 21:39 UTC (16:39 EST). Check that #BowlAfterBowl has no LIT_Bot line at that time.
 - [ ] Push-gap test: close the iPhone app, send DMs at 10, 40 and 90 s, check which push arrives; build plan Task 7 only if one is missing.
 - [ ] End of the IRCCloud trial: The Lounge takes `ChadF` with NickServ, channel order, cancel IRCCloud.
+
+## project-notes
+
+- [ ] Before merge: PR #24, To do groups, place marks, filters, PR links and titles. Read its body, merge it, then tell Claude. Claude then adds the group and place words to this list (you see the full file first) and the phone rule to vibe-kit.
+- [ ] After merge: Make the read token with the link in the token sheet (choose All repositories), and paste it on the live page. Then tell Claude whether the sheet accepted it and whether titles show under a Command-Center item.
