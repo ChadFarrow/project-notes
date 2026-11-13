@@ -380,7 +380,7 @@ function todoPanel() {
   const groups = groupTodo(data.todo || [], todoView);
   if (!groups.some((g) => g.items.length)) panel.append(h('p', { class: 'empty', text: 'None.' }));
   for (const group of groups) {
-    if (!group.items.length && (todoView.place !== 'all' || todoView.project !== 'all')) continue;
+    if (!group.items.length && todoView.place !== 'all') continue;
     panel.append(h('p', { class: 'group-title', text: `${group.title} (${group.items.length})` }));
     if (!group.items.length) {
       panel.append(h('p', { class: 'empty todo-empty', text: 'None.' }));

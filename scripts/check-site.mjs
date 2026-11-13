@@ -564,6 +564,9 @@ async function main() {
       check('the project filter shows one project, without repo labels', (await count('#todo-list .todo-item')) === 1
         && (await text('#todo-list'))?.includes('Delete a folder.') && (await repoLabels()) === 0
         && (await text('#todo-project'))?.includes('app-one (') && (await text('#todo-project'))?.includes('Laptop (1)'));
+      check('a one-project view still shows the empty groups', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)'))
+        === js(['Before merge (0)', 'After merge (0)', 'In development (1)', 'Not sorted (0)'].filter((t) => !t.startsWith('Not sorted')))
+        && (await count('#todo-list .todo-empty')) === 2);
       await fill('#todo-project', 'all');
       await fill('#todo-place', 'phone');
       const phoneFacts = await evaluate(`(() => {
