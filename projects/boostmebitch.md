@@ -34,10 +34,13 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (9)
+### Pull requests (12)
 
+- [#549 The avatar on the now-playing screen opens the account menu](https://github.com/ChadFarrow/boostmebitch/pull/549) — opened 2026-11-13 · draft
+- [#548 Community playlists: name Boost Me Buddy as the feed generator](https://github.com/ChadFarrow/boostmebitch/pull/548) — opened 2026-11-13
+- [#547 Previous and next on the lock screen for music](https://github.com/ChadFarrow/boostmebitch/pull/547) — opened 2026-11-13 · draft
 - [#545 A dead file does not stop a list that plays on its own](https://github.com/ChadFarrow/boostmebitch/pull/545) — opened 2026-11-13 · draft
-- [#544 The big cover holds its picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13 · draft
+- [#544 The now-playing covers hold their picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13 · draft
 - [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 2026-11-13 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 2026-11-13
@@ -46,8 +49,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
-### Issues (4)
+### Issues (5)
 
+- [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 2026-11-13
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2026-11-12
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
