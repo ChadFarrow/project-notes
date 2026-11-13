@@ -19,7 +19,7 @@ blank line ends the group.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
 - [ ] Community playlists (PRs #537–#540) are on beta since 2026-11-12. Set beta up first, then test, then tell Claude what does not work.
   - [ ] Setup: create a test Postgres database and run `npm run community:schema` against it once.
-  - [ ] Setup: in Vercel, project boostmebitch, Preview, branch `beta` only, add `COMMUNITY_DB_URL`, `NEXT_PUBLIC_COMMUNITY_FEED_ORIGIN` = `https://beta.boostmebitch.com`, `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` = `on` and `ADMIN_NPUBS` = your npub, then redeploy beta. Do not skip the feed origin: without it, Buddy's key signs beta notes.
+  - [ ] Setup: in Vercel, project boostmebitch, Preview, branch `beta` only, add `COMMUNITY_DB_URL` (Sensitive) with the test database's address, then tell Claude, who redeploys beta. Claude set the other three on 2026-11-12: the feed origin, the switch and `ADMIN_NPUBS`.
   - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
   - [ ] Favorite a community playlist and one of its songs.
   - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
