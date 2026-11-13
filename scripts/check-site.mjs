@@ -1117,6 +1117,15 @@ async function main() {
       check('every control in the to-do sheet is at least 24 by 24 px', smallInTodo.length === 0, smallInTodo.map((s) => s.join(' ')).join(' | '));
       await shoot('todo-sheet-mobile', { full: false });
       await click('#todo-dialog .cancel-button');
+
+      await click('#token-button');
+      await waitFor('document.querySelector("#token-dialog").open');
+      const tokenSheetOverflow = await evaluate('(() => { const d = document.querySelector("#token-dialog .sheet-body"); return d.scrollWidth - d.clientWidth; })()');
+      check('the token sheet fits the phone width', tokenSheetOverflow <= 0, `${tokenSheetOverflow}px`);
+      const smallInToken = await smallTargets();
+      check('every control in the token sheet is at least 24 by 24 px', smallInToken.length === 0, smallInToken.map((s) => s.join(' ')).join(' | '));
+      await shoot('token-sheet-mobile', { full: false });
+      await evaluate('document.querySelector("#token-dialog").close()');
     }
     await send('Emulation.clearDeviceMetricsOverride');
     if (EDITOR_CHECKS) await evaluate('localStorage.removeItem("pn:readToken")');
