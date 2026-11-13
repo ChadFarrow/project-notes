@@ -22,10 +22,15 @@ blank line ends the group.
   - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
 - [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
 - [ ] Test PR #541, ⤮ SHUFFLE for the favorite singles, on your iPhone. Its browser tests passed in Chrome, but Chrome cannot test the iOS press. Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] In Safari, on the PR's Vercel preview: open `/favorites`, press SINGLES, then ⤮ SHUFFLE. The first track plays at once, with no second ▶.
+  - [ ] On beta.boostmebitch.com: open `/favorites`, press SINGLES, then ⤮ SHUFFLE. The first track plays at once, with no second ▶.
   - [ ] Lock the screen: when a track ends, the next shuffled track starts.
   - [ ] Open BOOST on a shuffled track: the splits name that track's artist, not another album.
   - [ ] After the merge, press SHUFFLE in the Home Screen app: the first track plays at once.
+- [ ] Test PR #544 on your iPhone, on beta.boostmebitch.com: the big cover must not flash. Its browser tests passed in Chrome. Then tell Claude what does not work, or mark the PR ready and merge it.
+  - [ ] Open the full-screen player and press ⏭ several times: the cover changes once per track and is never empty.
+- [ ] Test PR #545 on your iPhone, on beta.boostmebitch.com: a dead track does not stop the music. Its browser tests passed in Chrome and on beta, but not on a phone. Then tell Claude what does not work, or mark the PR ready and merge it.
+  - [ ] With the screen locked, let a shuffle reach a dead track, such as "Winds of Change" by Herbivore: the next track plays without opening the app.
+  - [ ] Tap a dead track in an album: the next track plays.
 - [ ] PR #543 is merged (2026-11-13): "N s behind" and ⏭ GO LIVE under a live show. Test it on your iPhone during the next live show. Its browser tests passed in Chrome against a test stream, but not in Safari, on the lock screen or on a real broadcast. Then tell Claude what does not work.
   - [ ] In Safari or the Home Screen app, on boostmebitch.com, play a live show. While it plays on time, the row says `● LIVE` and shows no button.
   - [ ] When the audio stops to buffer for more than 5 s, the second line then says "N s behind live" and ⏭ GO LIVE shows. Press it: the audio jumps ahead, and the line goes back to the show name.
