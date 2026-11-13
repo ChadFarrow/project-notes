@@ -36,8 +36,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 
 ### Pull requests (12)
 
+- [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 2026-11-13 · draft
 - [#549 The avatar on the now-playing screen opens the account menu](https://github.com/ChadFarrow/boostmebitch/pull/549) — opened 2026-11-13 · draft
-- [#548 Community playlists: name Boost Me Buddy as the feed generator](https://github.com/ChadFarrow/boostmebitch/pull/548) — opened 2026-11-13
 - [#547 Previous and next on the lock screen for music](https://github.com/ChadFarrow/boostmebitch/pull/547) — opened 2026-11-13 · draft
 - [#545 A dead file does not stop a list that plays on its own](https://github.com/ChadFarrow/boostmebitch/pull/545) — opened 2026-11-13 · draft
 - [#544 The now-playing covers hold their picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13 · draft
