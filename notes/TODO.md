@@ -82,6 +82,10 @@ blank line ends the group.
   - [ ] In Riverside, talk normally for about 30 s, then laugh or talk loudly once. Play an ISO, the intro (let it fade), about 30 s of a song and the outro, with silence between. Reed talks for about 30 s.
   - [ ] Export as WAV HD with Normalize audio levels off, noise removal off and Magic Audio off on your track. Give Claude the export's path and the time of the test.
 
+- [ ] Command-Center PR #33: the Music pad is levelled on its mono mix, and a loudness meter sits next to Edit on the Show panel. Its tests passed in Chrome and WebKit, but not in your own Safari. Merge it, reload the board in Safari, then tell Claude what does not work.
+  - [ ] Off air, play the Intro, an ISO and the song: the meter shows each one near the white line (−16 LUFS), and "— LUFS" a few seconds after Stop.
+  - [ ] In Show Edit, the song's line says "levelled" about −3.6 dB (it was −4.8 dB): the song now plays about 1.2 dB louder.
+
 ## MSP-2.0
 
 - [ ] The v4vmusic dev: tell Claude each answer.
