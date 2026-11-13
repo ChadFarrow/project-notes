@@ -41,7 +41,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#536 Buddy: let the Bitch site's browser call the two signing routes (CORS)](https://github.com/ChadFarrow/boostmebitch/pull/536) — opened 2026-11-13
 - [#533 Home: move BROWSE PLAYLISTS into its own Playlists section](https://github.com/ChadFarrow/boostmebitch/pull/533) — opened 2026-11-12
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (4)
 
