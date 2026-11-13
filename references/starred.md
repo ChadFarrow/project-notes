@@ -105,7 +105,7 @@
 - [km-todo](https://github.com/Kolomona/km-todo) - No description
 - [bitchat](https://github.com/permissionlesstech/bitchat) - bluetooth mesh chat, IRC vibes
 - [raspiblitz](https://github.com/raspiblitz/raspiblitz) - Get your own Bitcoin & Lightning Node running - on a RaspberryPi with a nice LCD
-- [Rocket.Chat](https://github.com/RocketChat/Rocket.Chat) - The Secure CommsOS™ for mission-critical operations
+- [Rocket.Chat](https://github.com/RocketChat/Rocket.Chat) - Interoperable by design. Governed by you. Open-source, secure platform for messaging, voice, video and governed AI, built for defense and government.
 - [noscl](https://github.com/fiatjaf/noscl) - Command line client for Nostr.
 - [lnbeats](https://github.com/thebells1111/lnbeats) - No description
 - [nak](https://github.com/fiatjaf/nak) - a command line tool for doing all things nostr
@@ -115,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-13 04:45 UTC*
+*Last synced: 2026-11-13 11:14 UTC*
