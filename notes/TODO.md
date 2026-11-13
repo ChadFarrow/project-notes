@@ -15,6 +15,8 @@ blank line ends the group.
 
 - [ ] Community playlists (PRs #537–#540) are on beta since 2026-11-12, with a test database. Test them, then tell Claude what does not work.
   - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
+  - [ ] Publish with a playlist art link that is not square or has a transparent background: it is accepted, and the feed's `itunes:image` is your own link.
+  - [ ] In the maker and in Add songs, tap a song's cover: only that song plays, from the start, and it stops at its end.
   - [ ] Favorite a community playlist and one of its songs.
   - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
   - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
