@@ -34,7 +34,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (12)
+### Pull requests (10)
 
 - [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 2026-11-13 · draft
 - [#549 The avatar on the now-playing screen opens the account menu](https://github.com/ChadFarrow/boostmebitch/pull/549) — opened 2026-11-13 · draft
@@ -43,9 +43,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#544 The now-playing covers hold their picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13 · draft
 - [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 2026-11-13 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
-- [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 2026-11-13
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13
-- [#533 Home: move BROWSE PLAYLISTS into its own Playlists section](https://github.com/ChadFarrow/boostmebitch/pull/533) — opened 2026-11-12
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
@@ -57,11 +55,12 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (5)
+### Branches with no open PR (6)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
 - [`favorites-shuffle-beta`](https://github.com/ChadFarrow/boostmebitch/tree/favorites-shuffle-beta)
 - [`fix/skip-dead-tracks-beta`](https://github.com/ChadFarrow/boostmebitch/tree/fix/skip-dead-tracks-beta)
 - [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover)
+- [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
 <!-- AUTO:END -->
