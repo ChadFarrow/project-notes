@@ -17,6 +17,16 @@ blank line ends the group.
   - [ ] If beta must read like production: in Vercel, add `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA` for Preview, branch `beta` only, then redeploy. Without them it reads through the direct Podcast Index path.
   - [ ] If Google sign-in must work there: add `https://beta.boostmebitch.com` to the OAuth client's authorized JavaScript origins in the Google console.
 - [ ] The next time the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report now carries the playback log (#505).
+- [ ] Community playlists (PRs #537–#540) are on beta since 2026-11-12. Set beta up first, then test, then tell Claude what does not work.
+  - [ ] Setup: create a test Postgres database and run `npm run community:schema` against it once.
+  - [ ] Setup: in Vercel, project boostmebitch, Preview, branch `beta` only, add `COMMUNITY_DB_URL`, `NEXT_PUBLIC_COMMUNITY_FEED_ORIGIN` = `https://beta.boostmebitch.com`, `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` = `on` and `ADMIN_NPUBS` = your npub, then redeploy beta. Do not skip the feed origin: without it, Buddy's key signs beta notes.
+  - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
+  - [ ] Favorite a community playlist and one of its songs.
+  - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
+  - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
+  - [ ] Before the test database is wiped, take your hearts off the test playlists.
+- [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
+- [ ] Before community playlists launch on the main site: merge PR #536 and deploy it to Boost Me Buddy first.
 
 ## candr.space
 
