@@ -25,6 +25,11 @@ blank line ends the group.
   - [ ] Before the test database is wiped, take your hearts off the test playlists.
 - [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
 - [ ] Before community playlists launch on the main site: merge PR #536 and deploy it to Boost Me Buddy first.
+- [ ] Test PR #541, ⤮ SHUFFLE for the favorite singles, on your iPhone. Its browser tests passed in Chrome, but Chrome cannot test the iOS press. Then tell Claude what does not work, or mark the PR ready and merge it.
+  - [ ] In Safari, on the PR's Vercel preview: open `/favorites`, press SINGLES, then ⤮ SHUFFLE. The first track plays at once, with no second ▶.
+  - [ ] Lock the screen: when a track ends, the next shuffled track starts.
+  - [ ] Open BOOST on a shuffled track: the splits name that track's artist, not another album.
+  - [ ] After the merge, press SHUFFLE in the Home Screen app: the first track plays at once.
 
 ## candr.space
 
