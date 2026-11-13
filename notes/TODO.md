@@ -77,6 +77,13 @@ blank line ends the group.
   - [ ] In Show Edit, "+ Add pad" a song: it plays on R, at about the loudness of the Music pad. Remove it with two presses.
   - [ ] With 6 pads at half screen, the whole ISO page still shows, and in Show Edit the Show panel scrolls inside itself.
 
+- [ ] Command-Center PR #31 (draft): a mono ISO now plays as loud as a stereo ISO. Before, it played 3 dB louder. Its tests passed in Chrome and WebKit, but not in your own Safari. Mark it ready and merge it, then test it. Tell Claude what does not work.
+  - [ ] After the merge, run `launchctl kickstart -k gui/$(id -u)/com.chadfarrow.command-center`, then reload the board.
+  - [ ] Play IveGotInformation: it is about 3 dB quieter than before, at the level of the other ISOs.
+
+- [ ] Audio Hijack has a new chain since 2026-11-13: AUPeakLimiter (Pre-Gain +10 dB), then Volume 75 %. Its test recording met the level targets, but no Riverside export confirms them yet.
+  - [ ] Record a short Riverside test: your voice, an ISO, the intro, a song and the outro. Export it as WAV HD with Normalize off, and give the file to Claude to measure.
+
 ## MSP-2.0
 
 - [ ] The v4vmusic dev: tell Claude each answer.
