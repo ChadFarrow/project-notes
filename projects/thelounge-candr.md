@@ -22,9 +22,8 @@ Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker 
 - Design and plan: `docs/superpowers/specs/` and `docs/superpowers/plans/` in the repo (2026-10-25).
 
 ## TODOs
-- [ ] Push-gap test: close the iPhone app, send DMs at 10, 40 and 90 s, check which push arrives; build plan Task 7 only if one is missing
+Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `notes/TODO.md` on 2026-11-12. These are for Claude:
 - [ ] Faster search (FTS index patch): a search in #NoAgenda takes about 14 s and pauses the private Lounge
-- [ ] End of the IRCCloud trial: The Lounge takes `ChadF` with NickServ, channel order, cancel IRCCloud
 - [ ] Before an import for Reed: make the importer's time zone and mention pattern settings
 - [ ] Two out-of-date comments (`private/config.js`, `docker-compose.yml`): fix with the next real deploy
 

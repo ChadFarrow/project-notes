@@ -17,7 +17,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - Boostagrams (TLV record over keysend)
 
 ## Notes
-<!-- Add your notes here -->
+- The beta site works without `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA`: it then reads through the direct Podcast Index path. To make beta read like production, add them in Vercel for Preview, branch `beta` only, and redeploy (table in `docs/ops.md`). They were not set on 2026-11-12.
+- Google sign-in on beta needs `https://beta.boostmebitch.com` in the OAuth client's authorized JavaScript origins in the Google console.
+- When the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report carries the playback log (#505).
 
 ## Resources
 - Listed in podcastindex.org/apps via PR #557 (Podcastindex-org/web-ui)
