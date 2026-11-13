@@ -246,6 +246,10 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.85; 
 .todo-subs { grid-column: 2; margin-top: 4px; }
 .todo-subs .item { padding: 6px 0; border-top: 0; }
 #todo-list .note-line { margin: 4px 0 10px; overflow-wrap: anywhere; }
+#todo-list .todo-empty { padding: 4px 0 8px; }
+/* The repo of a top item and the place of a test, as small labels before the words. */
+.todo-repo, .todo-place { display: inline-block; margin-right: 6px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 4px; color: var(--muted); font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+.todo-item.done .todo-repo, .todo-item.done .todo-place { text-decoration: none; }
 
 /* ---------- project rows ---------- */
 

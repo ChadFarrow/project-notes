@@ -106,12 +106,13 @@ const TODO_TEXT = [
   '- [ ] <img src=x onerror="window.__xss=1"> stays text',
   '- [ ] A [bad link](javascript:window.__xss=1) stays text',
   `- [ ] A long path \`~/Vibe/${'a'.repeat(120)}\` wraps`,
-  '- [ ] Test PR #8',
+  '- [ ] Before merge: Test PR #8',
+  '  - [ ] Phone: On the iPhone',
+  '  - [ ] Phone: On the Pixel',
+  `  - [ ] Computer: A long sub-item path \`~/Vibe/${'b'.repeat(120)}\` wraps`,
+  '- [ ] After merge: Test PR #9',
   '  - [ ] On the iPhone',
-  '  - [ ] On the Pixel',
-  `  - [ ] A long sub-item path \`~/Vibe/${'b'.repeat(120)}\` wraps`,
-  '- [ ] Test PR #9',
-  '  - [ ] On the iPhone',
+  '- [ ] Before merge: PRs #11–#13 and Upstream/thing#4',
   '- [x] Ticked PR #10',
   '  - [ ] Still open under it',
   '',
@@ -119,7 +120,7 @@ const TODO_TEXT = [
   '',
   '## Laptop',
   '',
-  '- [ ] Delete a folder.',
+  '- [ ] In development: Delete a folder.',
   '',
 ].join('\n');
 
@@ -479,7 +480,20 @@ async function main() {
     check('every to-do item has a box to mark it done', (await count('#todo-list .todo-item button.todo-box')) === todoItems);
 
     if (!HOST && !DATA_FILE) {
-      check('the to-do list shows the sections in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)')) === js(['app-one', 'Laptop']));
+      check('the to-do list shows the groups in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)'))
+        === js(['Before merge (2)', 'After merge (1)', 'In development (1)', 'Not sorted (7)']));
+      check('each top item names its repo', await evaluate(`(() => {
+        const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        const label = (words) => rows.find((li) => li.querySelector(':scope > .item-title').textContent.includes(words))?.querySelector(':scope > .item-title > .todo-repo')?.textContent;
+        return rows.length > 0 && rows.every((li) => li.querySelector(':scope > .item-title > .todo-repo')) && label('Test PR #8') === 'app-one' && label('Delete a folder.') === 'Laptop';
+      })()`));
+      check('a test shows where to do it', await evaluate(`(() => {
+        const mark = (words) => [...document.querySelectorAll('#todo-list .todo-subs .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(words))?.querySelector('.todo-place')?.textContent;
+        return mark('On the iPhone') === '📱 Phone' && mark('On the Pixel') === '📱 Phone' && mark('A long sub-item path') === '💻 Computer';
+      })()`));
+      check('#N links to the issue path of the heading repo', await evaluate(`[...document.querySelectorAll('#todo-list a[href="https://github.com/ChadFarrow/app-one/issues/8"]')].some((a) => a.textContent === '#8')`));
+      check('a range links both ends', await evaluate(`['11', '13'].every((n) => document.querySelector('#todo-list a[href="https://github.com/ChadFarrow/app-one/issues/' + n + '"]'))`));
+      check('owner/repo#N links that repo', await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/Upstream/thing/issues/4"]')`));
       check('the to-do list leaves out the words for editors', !(await text('#todo-list'))?.includes('Words for whoever edits'));
       check('a line of text in the to-do list shows', (await text('#todo-list'))?.includes('Two older items are in the app-one note.'));
       check('a link in the to-do list goes to its address', await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/ChadFarrow/app-one/pull/7"]')`));
@@ -736,7 +750,7 @@ async function main() {
       const tapSub = (top, words) => evaluate(`[...(${subRows(top)} || [])].find((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
       const sheetOpen = 'document.querySelector("#todo-dialog").open';
       const FOLDER = 'Delete a folder.';
-      const withoutFolder = TODO_TEXT.replace(`- [ ] ${FOLDER}\n`, '');
+      const withoutFolder = TODO_TEXT.replace(`- [ ] In development: ${FOLDER}\n`, '');
 
       await go();
       await tapBox(FOLDER);
@@ -755,7 +769,8 @@ async function main() {
       check('the delete commits to main and names the item', api.todoPuts[0]?.branch === 'main' && api.todoPuts[0]?.message.includes(FOLDER));
       check('the page starts no sync: the push does that', api.dispatches === dispatchesBefore);
       check('the item leaves the page at once', !(await showsItem(FOLDER)));
-      check('a section with nothing left leaves the page', !(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].some((t) => t.textContent === "Laptop")')));
+      check('a group with nothing left stays, and says None.', (await evaluate('[...document.querySelectorAll("#todo-list .group-title")].some((t) => t.textContent === "In development (0)")'))
+        && (await text('#todo-list .todo-empty')) === 'None.');
       await go();
       check('the item stays away after a reload, while the data is older than the delete', !(await showsItem(FOLDER)));
 
@@ -785,7 +800,7 @@ async function main() {
 
       // ---- sub-items: the same words sit under PR #8 and PR #9 ----
       const IPHONE = 'On the iPhone';
-      const under9 = '- [ ] Test PR #9\n  - [ ] On the iPhone\n';
+      const under9 = '- [ ] After merge: Test PR #9\n  - [ ] On the iPhone\n';
       let puts = api.todoPuts.length;
       await tapSub('Test PR #9', IPHONE);
       await waitFor(sheetOpen);
@@ -795,8 +810,8 @@ async function main() {
       await click('#todo-dialog .primary');
       await waitFor(`!${sheetOpen}`);
       check('a sub-item is deleted from under its own item only', api.todoPuts.length === puts + 1
-        && !api.todo.text.includes(under9) && api.todo.text.includes('- [ ] Test PR #9\n')
-        && api.todo.text.includes('- [ ] Test PR #8\n  - [ ] On the iPhone\n'));
+        && !api.todo.text.includes(under9) && api.todo.text.includes('- [ ] After merge: Test PR #9\n')
+        && api.todo.text.includes('- [ ] Before merge: Test PR #8\n  - [ ] Phone: On the iPhone\n'));
       check('the same words under another item stay on the page', (await showsSub('Test PR #8', IPHONE)) && !(await showsSub('Test PR #9', IPHONE)));
       check('the top item stays when its last sub-item goes', await showsItem('Test PR #9'));
       await go();
@@ -813,7 +828,7 @@ async function main() {
 
       // Another machine added a line inside the group, so the group on the page is out of date.
       const beforeOther = api.todo.text;
-      api.todo.text = beforeOther.replace('  - [ ] On the Pixel\n', '  - [ ] On the Pixel\n  - [ ] New on the other machine\n');
+      api.todo.text = beforeOther.replace('  - [ ] Phone: On the Pixel\n', '  - [ ] Phone: On the Pixel\n  - [ ] New on the other machine\n');
       await tapBox('Test PR #8');
       await waitFor(sheetOpen);
       await click('#todo-dialog .primary');
@@ -831,7 +846,7 @@ async function main() {
       await waitFor(`!${sheetOpen}`);
       check('a top item is deleted with its sub-items, and the next item stays', api.todoPuts.length === puts + 1
         && !api.todo.text.includes('Test PR #8') && !api.todo.text.includes('On the Pixel') && !api.todo.text.includes('A long sub-item path')
-        && api.todo.text.includes('- [ ] Test PR #9\n'));
+        && api.todo.text.includes('- [ ] After merge: Test PR #9\n'));
       check('the group leaves the page at once', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
       await go();
       check('the group stays away after a reload', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));

@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, matchCategory, readNoteForm, removeTodoItem } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, removeTodoItem, TODO_PLACES, todoRefUrl } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -321,7 +321,8 @@ function todoLink(part) {
   }
   return /^https?:$/.test(url.protocol) ? h('a', { href: url.href }, withCode(part.text)) : withCode(part.text);
 }
-const todoParts = (parts) => parts.map((part) => (part.href ? todoLink(part) : withCode(part.text)));
+// A ref part links to the issue path of its repo. The page builds the address, so it is always one of ours.
+const todoParts = (parts) => parts.map((part) => (part.ref ? h('a', { href: todoRefUrl(part.ref) }, part.text) : part.href ? todoLink(part) : withCode(part.text)));
 const todoWords = (entry) => entry.parts.map((part) => part.text).join('');
 // A sub-item's key names its top item, so the same words under another item stay on the page.
 const todoKey = (entry) => [...(entry.under || []), ...(entry.lines || [])].join('\n');
@@ -362,45 +363,41 @@ function todoSubItems(entry) {
 }
 const todoTopOf = (entry) => entry.under && (data.todo || []).flatMap((s) => s.entries)
   .find((e) => !e.under && (e.lines || []).join('\n') === entry.under.join('\n'));
-function todoRow(entry) {
+function todoRow(entry, section) {
+  const place = TODO_PLACES[entry.place];
   return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
     h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
-    h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts)));
+    h('div', { class: 'item-title' },
+      entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null,
+      section && section.title ? h('span', { class: 'todo-repo', text: section.title }) : null,
+      place ? h('span', { class: 'todo-place', 'data-place': entry.place }, `${place[0]} ${place[1]}`) : null,
+      todoParts(entry.parts)));
 }
 function todoSection() {
   const heading = h('h2', { text: 'To do' });
   const sections = data.todo || [];
   if (!sections.length) return h('section', { id: 'todo-list' }, heading, h('p', { class: 'empty', text: 'None.' }));
   const panel = h('div', { class: 'panel' });
-  for (const section of sections) {
-    if (section.title) panel.append(h('p', { class: 'group-title', text: section.title }));
+  for (const group of groupTodo(sections)) {
+    panel.append(h('p', { class: 'group-title', text: `${group.title} (${group.items.length})` }));
+    if (!group.items.length) {
+      panel.append(h('p', { class: 'empty todo-empty', text: 'None.' }));
+      continue;
+    }
     let list = null;
-    let topRow = null; // The row of the last top item, and the list of sub-items inside it.
-    let subList = null;
-    for (const entry of section.entries) {
-      if (entry.type === 'item') {
-        if (!list) {
-          list = h('ul', { class: 'list' });
-          panel.append(list);
-        }
-        const row = todoRow(entry);
-        if (entry.under && topRow) {
-          if (!subList) {
-            subList = h('ul', { class: 'list todo-subs' });
-            topRow.append(subList);
-          }
-          subList.append(row);
-        } else {
-          list.append(row);
-          topRow = entry.under ? null : row;
-          subList = null;
-        }
-      } else {
-        panel.append(h('p', { class: 'note-line' }, todoParts(entry.parts)));
+    for (const { top, subs, section } of group.items) {
+      if (top.type !== 'item') {
+        panel.append(h('p', { class: 'note-line' }, todoParts(top.parts)));
         list = null;
-        topRow = null;
-        subList = null;
+        continue;
       }
+      if (!list) {
+        list = h('ul', { class: 'list' });
+        panel.append(list);
+      }
+      const row = todoRow(top, section);
+      if (subs.length) row.append(h('ul', { class: 'list todo-subs' }, subs.map((sub) => todoRow(sub))));
+      list.append(row);
     }
   }
   return h('section', { id: 'todo-list' }, heading, panel);

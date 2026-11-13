@@ -476,3 +476,33 @@ export function removeTodoItem(source, lines, under) {
   if (at < 0) return null;
   return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
 }
+
+export const TODO_GROUPS = [['before', 'Before merge'], ['after', 'After merge'], ['dev', 'In development'], [null, 'Not sorted']];
+export const TODO_PLACES = { phone: ['📱', 'Phone'], computer: ['💻', 'Computer'], air: ['🎙', 'On air'] };
+
+// The to-do sections (`data.todo`) as groups. An item is a top item with its sub-items (the
+// entries right after it that have `under`), and a text line is an item with no sub-items.
+// `view`: a project (a section title) and a place; 'all' keeps everything. The first three
+// groups always come back; Not sorted only when it has items.
+export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
+  const { project = 'all', place = 'all' } = view;
+  const groups = TODO_GROUPS.map(([key, title]) => ({ key, title, items: [] }));
+  for (const section of sections || []) {
+    if (project !== 'all' && section.title !== project) continue;
+    const entries = section.entries || [];
+    for (let i = 0; i < entries.length; i++) {
+      const top = entries[i];
+      if (top.under) continue;
+      const subs = [];
+      if (top.type === 'item') {
+        while (i + 1 < entries.length && entries[i + 1].under) subs.push(entries[++i]);
+      }
+      if (place !== 'all' && top.place !== place && !subs.some((s) => s.place === place)) continue;
+      const group = groups.find((g) => g.key === (top.type === 'item' ? top.group || null : null));
+      group.items.push({ top, subs, section });
+    }
+  }
+  return groups.filter((g) => g.key !== null || g.items.length);
+}
+
+export const todoRefUrl = (ref) => `https://github.com/${ref.repo}/issues/${ref.number}`;

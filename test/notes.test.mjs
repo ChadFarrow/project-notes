@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END,
+  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl,
 } from '../scripts/lib/notes.mjs';
 
 // ---------- parseHeader ----------
@@ -178,4 +178,53 @@ test('indexNoteFiles maps lower-case repo names to file names', () => {
   assert.equal(map.get('msp-2.0'), 'MSP-2.0.md');
   assert.equal(map.get('castr.me'), 'castr.me.md');
   assert.equal(map.size, 2);
+});
+
+// ---------- groupTodo, todoRefUrl ----------
+
+const todoItem = (name, extra = {}) => ({ type: 'item', parts: [{ text: name }], lines: [`- [ ] ${name}`], ...extra });
+const todoSections = [
+  { title: 'app-one', entries: [
+    todoItem('a1', { group: 'after' }),
+    todoItem('b1', { group: 'before', place: 'phone' }),
+    todoItem('b1 sub', { group: 'before', place: 'phone', under: ['- [ ] b1'] }),
+    todoItem('d1', { group: 'dev' }),
+    todoItem('b2', { group: 'before' }),
+  ] },
+  { title: 'Laptop', entries: [
+    { type: 'text', parts: [{ text: 'a note' }] },
+    todoItem('u1'),
+  ] },
+];
+const names = (g) => g.items.map((i) => i.top.parts[0].text);
+
+test('groupTodo puts items in the three groups in order, and Not sorted last', () => {
+  const groups = groupTodo(todoSections);
+  assert.deepEqual(groups.map((g) => g.title), ['Before merge', 'After merge', 'In development', 'Not sorted']);
+  assert.deepEqual(groups.map((g) => g.key), ['before', 'after', 'dev', null]);
+  assert.deepEqual(names(groups[1]), ['a1']);
+  assert.deepEqual(names(groups[2]), ['d1']);
+  assert.equal(groups[0].items[0].subs.length, 1);
+  assert.equal(groups[0].items[0].section, todoSections[0]);
+});
+
+test('groupTodo keeps the file order inside a group', () => {
+  assert.deepEqual(names(groupTodo(todoSections)[0]), ['b1', 'b2']);
+});
+
+test('groupTodo puts a text line under Not sorted', () => {
+  const g = groupTodo(todoSections)[3];
+  assert.deepEqual(g.items.map((i) => i.top.type), ['text', 'item']);
+  assert.deepEqual(g.items[0].subs, []);
+});
+
+test('groupTodo leaves Not sorted out when it is empty', () => {
+  const groups = groupTodo([{ title: 'x', entries: [todoItem('a', { group: 'dev' })] }]);
+  assert.equal(groups.length, 3);
+  assert.deepEqual(names(groups[0]), []);
+  assert.equal(groupTodo([]).length, 3);
+});
+
+test('todoRefUrl links the issue path', () => {
+  assert.equal(todoRefUrl({ repo: 'A/b', number: 3 }), 'https://github.com/A/b/issues/3');
 });
