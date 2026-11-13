@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-13 03:50 UTC
+# Dashboard — 2026-11-13 04:11 UTC
 
-22 open PRs · 12 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
+20 open PRs · 12 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -86,16 +86,14 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-9 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+7 PRs · 4 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 hours ago
 - PR [#539 Community playlists 3/4: admin page (delete, ban, unban)](https://github.com/ChadFarrow/boostmebitch/pull/539) — opened 2 hours ago
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 hours ago
-- PR [#537 Community playlists 1/4: store, feeds and API](https://github.com/ChadFarrow/boostmebitch/pull/537) — opened 2 hours ago
-- PR [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 21 minutes ago · draft
-- PR [#536 Buddy: let the Bitch site's browser call the two signing routes (CORS)](https://github.com/ChadFarrow/boostmebitch/pull/536) — opened 2 hours ago
+- PR [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 42 minutes ago · draft
 - PR [#533 Home: move BROWSE PLAYLISTS into its own Playlists section](https://github.com/ChadFarrow/boostmebitch/pull/533) — opened 15 hours ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 47 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
@@ -105,7 +103,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 54 days ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 55 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
