@@ -22,6 +22,10 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
+### Pull requests (1)
+
+- [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 2026-11-13
+
 ### Branches with no open PR (1)
 
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
