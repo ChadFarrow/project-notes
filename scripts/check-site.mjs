@@ -558,6 +558,34 @@ async function main() {
     check('the chosen filter is remembered after a reload', await evaluate('document.querySelector(\'#status-filter input[value="conflict"]\').checked'));
     await click('#status-filter input[value="all"]');
 
+    if (!HOST && !DATA_FILE) {
+      const repoLabels = () => count('#todo-list .todo-item > .item-title > .todo-repo');
+      await fill('#todo-project', 'Laptop');
+      check('the project filter shows one project, without repo labels', (await count('#todo-list .todo-item')) === 1
+        && (await text('#todo-list'))?.includes('Delete a folder.') && (await repoLabels()) === 0
+        && (await text('#todo-project'))?.includes('app-one (') && (await text('#todo-project'))?.includes('Laptop (1)'));
+      await fill('#todo-project', 'all');
+      await fill('#todo-place', 'phone');
+      const phoneFacts = await evaluate(`(() => {
+        const top = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        const subs = [...document.querySelectorAll('#todo-list .todo-subs .todo-item')];
+        return { top: top.length, subs: subs.length, allPhone: subs.every((li) => li.querySelector('.todo-place')?.dataset.place === 'phone'),
+          text: document.querySelector('#todo-list .note-line') !== null };
+      })()`);
+      check('the place filter shows only phone tests', phoneFacts.top === 1 && phoneFacts.subs === 2 && phoneFacts.allPhone && !phoneFacts.text
+        && !(await text('#todo-list'))?.includes('A long sub-item path'), js(phoneFacts));
+      await go();
+      check('the to-do filters are remembered after a reload', (await evaluate('document.querySelector("#todo-place").value')) === 'phone'
+        && (await count('#todo-list .todo-item')) === 3);
+      await fill('#todo-place', 'all');
+      await evaluate(`localStorage.setItem('pn:todoView', ${js(js({ project: 'gone' }))})`);
+      await go();
+      check('a stored project that is gone falls back to all', (await evaluate('document.querySelector("#todo-project").value')) === 'all'
+        && (await count('#todo-list .todo-item')) === todoItems);
+      await evaluate('localStorage.removeItem("pn:todoView")');
+      await go();
+    }
+
     const category = data.categories.find((c) => active.some((p) => p.category === c && c !== 'Uncategorized')) || data.categories[0];
     await fill('#category', category);
     await sleep(100);
@@ -758,6 +786,19 @@ async function main() {
         && (await text('#todo-dialog'))?.includes(FOLDER) && api.todoPuts.length === 0);
       await click('#todo-dialog .cancel-button');
       check('Cancel keeps the item and saves nothing', await waitFor(`!${sheetOpen}`) && (await showsItem(FOLDER)) && api.todoPuts.length === 0);
+
+      // R4: press the box under a place filter, read the count, and cancel. Nothing is deleted.
+      await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+      await go();
+      await fill('#todo-place', 'phone');
+      await tapBox('Test PR #8');
+      await waitFor(sheetOpen);
+      check('deleting an item under a place filter still counts every test under it', (await text('#todo-dialog'))?.includes('its 3 sub-items')
+        && (await text('#todo-dialog .primary')) === 'Delete all 4' && api.todoPuts.length === 0);
+      await click('#todo-dialog .cancel-button');
+      await waitFor(`!${sheetOpen}`);
+      await fill('#todo-place', 'all');
+      await go();
 
       const dispatchesBefore = api.dispatches;
       await tapBox(FOLDER);

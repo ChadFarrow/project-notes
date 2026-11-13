@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, removeTodoItem, TODO_PLACES, todoRefUrl } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, removeTodoItem, TODO_PLACES, todoProjects, todoRefUrl } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -146,9 +146,11 @@ const badgeList = (badges) => h('span', { class: 'badges' }, badges.map(([tone, 
 let data = null;
 let token = store.get('token', '');
 const view = { q: '', status: 'all', category: 'all', ...store.get('view', {}) };
+const todoView = { project: 'all', place: 'all', ...store.get('todoView', {}) };
 const opened = new Set(store.get('open', []));
 
 const saveView = () => store.set('view', { q: view.q, status: view.status, category: view.category });
+const saveTodoView = () => store.set('todoView', { project: todoView.project, place: todoView.place });
 const saveOpened = () => store.set('open', [...opened]);
 
 // ---------- start ----------
@@ -373,12 +375,12 @@ function todoRow(entry, section) {
       place ? h('span', { class: 'todo-place', 'data-place': entry.place }, `${place[0]} ${place[1]}`) : null,
       todoParts(entry.parts)));
 }
-function todoSection() {
-  const heading = h('h2', { text: 'To do' });
-  const sections = data.todo || [];
-  if (!sections.length) return h('section', { id: 'todo-list' }, heading, h('p', { class: 'empty', text: 'None.' }));
-  const panel = h('div', { class: 'panel' });
-  for (const group of groupTodo(sections)) {
+function todoPanel() {
+  const panel = h('div', { class: 'panel', id: 'todo-panel' });
+  const groups = groupTodo(data.todo || [], todoView);
+  if (!groups.some((g) => g.items.length)) panel.append(h('p', { class: 'empty', text: 'None.' }));
+  for (const group of groups) {
+    if (!group.items.length && (todoView.place !== 'all' || todoView.project !== 'all')) continue;
     panel.append(h('p', { class: 'group-title', text: `${group.title} (${group.items.length})` }));
     if (!group.items.length) {
       panel.append(h('p', { class: 'empty todo-empty', text: 'None.' }));
@@ -395,12 +397,36 @@ function todoSection() {
         list = h('ul', { class: 'list' });
         panel.append(list);
       }
-      const row = todoRow(top, section);
+      const row = todoRow(top, todoView.project === 'all' ? section : null);
       if (subs.length) row.append(h('ul', { class: 'list todo-subs' }, subs.map((sub) => todoRow(sub))));
       list.append(row);
     }
   }
-  return h('section', { id: 'todo-list' }, heading, panel);
+  return panel;
+}
+function todoSection() {
+  const heading = h('h2', { text: 'To do' });
+  const sections = data.todo || [];
+  if (!sections.length) return h('section', { id: 'todo-list' }, heading, h('p', { class: 'empty', text: 'None.' }));
+  const projects = todoProjects(sections);
+  if (todoView.project !== 'all' && !projects.some((p) => p.title === todoView.project)) todoView.project = 'all';
+  if (todoView.place !== 'all' && !TODO_PLACES[todoView.place]) todoView.place = 'all';
+  const redraw = () => {
+    saveTodoView();
+    $('#todo-panel').replaceWith(todoPanel());
+  };
+  const project = h('select', { id: 'todo-project', 'aria-label': 'Project' },
+    h('option', { value: 'all', text: 'All projects' }),
+    projects.map((p) => h('option', { value: p.title, text: `${p.title} (${p.count})` })));
+  project.value = todoView.project;
+  project.addEventListener('change', () => { todoView.project = project.value; redraw(); });
+  const place = h('select', { id: 'todo-place', 'aria-label': 'Where' },
+    h('option', { value: 'all', text: 'All places' }),
+    Object.entries(TODO_PLACES).map(([key, [mark, name]]) => h('option', { value: key, text: `${mark} ${name}` })));
+  place.value = todoView.place;
+  place.addEventListener('change', () => { todoView.place = place.value; redraw(); });
+  return h('section', { id: 'todo-list' }, heading,
+    h('div', { class: 'todo-filters' }, project, place), todoPanel());
 }
 
 function readySection(visible, byName) {

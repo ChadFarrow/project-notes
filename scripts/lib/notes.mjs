@@ -497,12 +497,23 @@ export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
       if (top.type === 'item') {
         while (i + 1 < entries.length && entries[i + 1].under) subs.push(entries[++i]);
       }
-      if (place !== 'all' && top.place !== place && !subs.some((s) => s.place === place)) continue;
+      let shown = subs;
+      if (place !== 'all') {
+        if (top.type !== 'item') continue;
+        shown = subs.filter((s) => s.place === place);
+        if (top.place !== place && !shown.length) continue;
+      }
       const group = groups.find((g) => g.key === (top.type === 'item' ? top.group || null : null));
-      group.items.push({ top, subs, section });
+      group.items.push({ top, subs: shown, section });
     }
   }
   return groups.filter((g) => g.key !== null || g.items.length);
 }
+
+// The to-do projects for the filter: each section title with its count of top items.
+export const todoProjects = (sections) => (sections || []).map((section) => ({
+  title: section.title,
+  count: (section.entries || []).filter((e) => !e.under).length,
+}));
 
 export const todoRefUrl = (ref) => `https://github.com/${ref.repo}/issues/${ref.number}`;

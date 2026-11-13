@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl,
+  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl, todoProjects,
 } from '../scripts/lib/notes.mjs';
 
 // ---------- parseHeader ----------
@@ -227,4 +227,46 @@ test('groupTodo leaves Not sorted out when it is empty', () => {
 
 test('todoRefUrl links the issue path', () => {
   assert.equal(todoRefUrl({ repo: 'A/b', number: 3 }), 'https://github.com/A/b/issues/3');
+});
+
+const mixed = [{ title: 'p', entries: [
+  todoItem('t8', { group: 'before' }),
+  todoItem('s1', { group: 'before', place: 'phone', under: ['- [ ] t8'] }),
+  todoItem('s2', { group: 'before', place: 'computer', under: ['- [ ] t8'] }),
+  todoItem('s3', { group: 'before', place: 'phone', under: ['- [ ] t8'] }),
+  todoItem('own', { group: 'after', place: 'computer' }),
+  todoItem('own sub', { group: 'after', place: 'computer', under: ['- [ ] own'] }),
+  { type: 'text', parts: [{ text: 'a note' }] },
+] }];
+
+test('groupTodo shows one project only', () => {
+  const groups = groupTodo(todoSections, { project: 'Laptop', place: 'all' });
+  assert.deepEqual(groups.map((g) => names(g)), [[], [], [], ['a note', 'u1']]);
+  assert.deepEqual(groupTodo(todoSections, { project: 'gone', place: 'all' }).length, 3);
+});
+
+test('groupTodo with a place keeps an item whose test has it, and hides the other tests', () => {
+  const groups = groupTodo(mixed, { project: 'all', place: 'phone' });
+  assert.deepEqual(names(groups[0]), ['t8']);
+  assert.deepEqual(groups[0].items[0].subs.map((s) => s.parts[0].text), ['s1', 's3']);
+  assert.deepEqual(names(groups[1]), []);
+});
+
+test('groupTodo with a place keeps an item whose own place matches, with its tests of that place', () => {
+  const groups = groupTodo(mixed, { project: 'all', place: 'computer' });
+  assert.deepEqual(names(groups[1]), ['own']);
+  assert.deepEqual(groups[1].items[0].subs.map((s) => s.parts[0].text), ['own sub']);
+  assert.deepEqual(groups[0].items[0].subs.map((s) => s.parts[0].text), ['s2']);
+});
+
+test('groupTodo hides text lines under a place filter', () => {
+  const groups = groupTodo(mixed, { project: 'all', place: 'air' });
+  assert.equal(groups.length, 3);
+  assert.ok(groups.every((g) => g.items.length === 0));
+  assert.equal(groupTodo(mixed)[3].items.length, 1);
+});
+
+test('todoProjects counts the top items of each section', () => {
+  assert.deepEqual(todoProjects(todoSections), [{ title: 'app-one', count: 4 }, { title: 'Laptop', count: 2 }]);
+  assert.deepEqual(todoProjects(undefined), []);
 });
