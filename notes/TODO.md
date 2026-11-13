@@ -38,6 +38,9 @@ blank line ends the group.
 - [ ] Test PR #549 on your iPhone, on beta.boostmebitch.com: your avatar on the now-playing screen opens the account menu. Its browser tests passed in Chrome. Then tell Claude what does not work, or mark the PR ready and merge it.
   - [ ] Press the avatar on the now-playing screen: the menu opens, the same as on the home screen but with no theme link.
   - [ ] Press "my boosts": the player closes and your boosts page opens.
+- [ ] Test PR #550 on your iPhone, on beta.boostmebitch.com: the background stall of bug #546. It is an experiment, and only a phone can show if it helps. About 30 s before a track ends, beta downloads the whole next file, so it costs extra data. Then tell Claude the result. If it does not help, Claude removes it.
+  - [ ] In the Home Screen app, start a favorites shuffle, then lock the screen or go to another app. Listen through five or more track changes.
+  - [ ] If a track does not start, open the app and send a bug report at once. If all tracks play, send a bug report too. The report carries the playback log, which shows if each early download finished.
 - [ ] PR #543 is merged (2026-11-13): "N s behind" and ⏭ GO LIVE under a live show. Test it on your iPhone during the next live show. Its browser tests passed in Chrome against a test stream, but not in Safari, on the lock screen or on a real broadcast. Then tell Claude what does not work.
   - [ ] In Safari or the Home Screen app, on boostmebitch.com, play a live show. While it plays on time, the row says `● LIVE` and shows no button.
   - [ ] When the audio stops to buffer for more than 5 s, the second line then says "N s behind live" and ⏭ GO LIVE shows. Press it: the audio jumps ahead, and the line goes back to the show name.
