@@ -36,7 +36,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 
 ### Pull requests (7)
 
-- [#565 Save a default amount for each boost surface](https://github.com/ChadFarrow/boostmebitch/pull/565) — opened 2026-11-14 · draft
+- [#565 Save a default amount for each boost surface](https://github.com/ChadFarrow/boostmebitch/pull/565) — opened 2026-11-14 · draft · checks pending
 - [#564 feat(gifs): ask GIPHY for pg-13 on boostmebuddy.com too](https://github.com/ChadFarrow/boostmebitch/pull/564) — opened 2026-11-14
 - [#562 feat(boost): play the GIF under the mouse in the GIF picker](https://github.com/ChadFarrow/boostmebitch/pull/562) — opened 2026-11-14
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
