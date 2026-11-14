@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl, todoProjects,
+  parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl, todoProjects, todoNoteName, todoFileUrlPath, TODO_FILE,
   todoTitleQuery, readTodoTitles, todoMark,
 } from '../scripts/lib/notes.mjs';
 
@@ -270,6 +270,54 @@ test('groupTodo hides text lines under a place filter', () => {
 test('todoProjects counts the top items of each section', () => {
   assert.deepEqual(todoProjects(todoSections), [{ title: 'app-one', count: 4 }, { title: 'Laptop', count: 2 }]);
   assert.deepEqual(todoProjects(undefined), []);
+});
+
+// ---------- to-do folder helpers, hidden ticks ----------
+
+const refused = ['notes/other.md', 'notes/todo/sub/x.md', 'notes/todo/.x.md', 'notes/todo/x.txt', 'projects/a.md', '../x'];
+
+test('todoNoteName names a note directly in notes/todo', () => {
+  assert.equal(todoNoteName('notes/todo/boostmebitch - playlist tests.md'), 'boostmebitch - playlist tests');
+  for (const p of ['notes/TODO.md', ...refused]) assert.equal(todoNoteName(p), null, p);
+});
+
+test('todoFileUrlPath encodes each segment and refuses other paths', () => {
+  assert.equal(todoFileUrlPath('notes/todo/boostmebitch - playlist tests.md'), 'notes/todo/boostmebitch%20-%20playlist%20tests.md');
+  assert.equal(todoFileUrlPath('notes/TODO.md'), 'notes/TODO.md');
+  assert.equal(TODO_FILE, 'notes/TODO.md');
+  for (const p of refused) assert.equal(todoFileUrlPath(p), null, p);
+});
+
+test('groupTodo hides a ticked item with nothing open, and ticked sub-items', () => {
+  const sections = [{ title: 'p', entries: [
+    todoItem('done top', { group: 'dev', done: true }),
+    todoItem('open top', { group: 'dev' }),
+    todoItem('done sub', { group: 'dev', done: true, under: ['- [ ] open top'] }),
+    todoItem('open sub', { group: 'dev', under: ['- [ ] open top'] }),
+  ] }];
+  const groups = groupTodo(sections);
+  assert.deepEqual(names(groups[2]), ['open top']);
+  assert.deepEqual(groups[2].items[0].subs.map((s) => s.parts[0].text), ['open sub']);
+});
+
+test('groupTodo keeps a ticked item that still has an open sub-item', () => {
+  const sections = [{ title: 'p', entries: [
+    todoItem('done top', { group: 'dev', done: true }),
+    todoItem('open sub', { group: 'dev', under: ['- [x] done top'] }),
+    todoItem('done sub', { group: 'dev', done: true, under: ['- [x] done top'] }),
+  ] }];
+  const groups = groupTodo(sections);
+  assert.deepEqual(names(groups[2]), ['done top']);
+  assert.deepEqual(groups[2].items[0].subs.map((s) => s.parts[0].text), ['open sub']);
+});
+
+test('todoProjects merges sections with one title and drops a count of 0', () => {
+  const sections = [
+    { title: 'a', entries: [todoItem('x1'), todoItem('x2', { done: true })] },
+    { title: 'b', entries: [todoItem('y', { done: true })] },
+    { title: 'a', entries: [todoItem('x3')] },
+  ];
+  assert.deepEqual(todoProjects(sections), [{ title: 'a', count: 2 }]);
 });
 
 // ---------- titles and out-of-date marks ----------
