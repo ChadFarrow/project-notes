@@ -19,7 +19,7 @@ import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
-import { applyNoteForm } from './lib/notes.mjs';
+import { applyNoteForm, groupTodo } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
 import { buildSiteFiles } from './lib/site.mjs';
 
@@ -124,6 +124,56 @@ const TODO_TEXT = [
   '',
 ].join('\n');
 
+// The folder notes (notes/todo/): a note per repo, headings with group and place words, a plain
+// bullet, a callout, a tab-indented test, a ticked test, and HTML in a heading.
+const LONG_WORD = 'h'.repeat(90);
+const SVC_NOTE = [
+  '- [ ] Before merge: Test #5',
+  '  - [ ] Phone: On the svc phone',
+  '- [ ] Before merge: Test #6',
+  '  - [ ] Phone: On the svc phone',
+  '- [ ] Same words twice',
+  '',
+  'Notes are in [the svc note](../../projects/svc-core.md).',
+  '',
+].join('\n');
+const PLAYLIST_NOTE = [
+  '# app-one - playlist tests',
+  '',
+  'Intro for this note, and [the mac note](Mac%20mini.md).',
+  '',
+  '- A plain bullet with [a guide](https://example.com/guide)',
+  '',
+  '> [!warning] Beta is real',
+  '',
+  `## Before merge: Phone: 1. The maker (#8), ${LONG_WORD} a long heading`,
+  '- [ ] Test the maker #8',
+  '- [ ] Play the whole list',
+  '\t- [ ] Tab-indented test',
+  '\t- [x] Ticked sibling test',
+  '- [ ] Same words twice',
+  '- [ ] Same in two sections',
+  '',
+  '## Already works',
+  '',
+  '- [x] It publishes',
+  '',
+  '## Words <img src=x onerror="window.__xss=1"> in a heading',
+  '- [ ] An item under the odd heading',
+  '',
+  '## Second section',
+  '- [ ] Same in two sections',
+  '',
+].join('\n');
+const PLAYLIST_TITLE = 'app-one - playlist tests';
+const MAC_NOTE = '- [ ] Check the dock, see #3\n';
+const TODO_FILES = [
+  { path: 'notes/TODO.md', text: TODO_TEXT },
+  { path: 'notes/todo/svc-core.md', text: SVC_NOTE },
+  { path: 'notes/todo/app-one - playlist tests.md', text: PLAYLIST_NOTE },
+  { path: 'notes/todo/Mac mini.md', text: MAC_NOTE },
+];
+
 // What fetchWatched would return for that Watch line: a private repo, counts only.
 const WATCHED = normalizeWatched({ data: { r0: {
   nameWithOwner: 'Upstream/thing', url: 'https://github.com/Upstream/thing', isPrivate: true, isArchived: false,
@@ -143,7 +193,7 @@ async function siteFiles() {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
     ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
-      auditFiles: [], degradedReason: null, watched: WATCHED, todoText: TODO_TEXT,
+      auditFiles: [], degradedReason: null, watched: WATCHED, todoFiles: TODO_FILES,
     }));
     // A second private project, so that a token which sees only one private repo can be refused.
     const parsed = JSON.parse(siteData);
@@ -193,7 +243,9 @@ const api = {
     'ChadFarrow/app-one#13': { type: 'PullRequest', title: 'Fixture title thirteen', state: 'CLOSED' },
   },
   titleRequests: 0,
-  todo: { text: TODO_TEXT, sha: 'todo-0' },
+  // The to-do files by path. `api.todo` is notes/TODO.md.
+  todoFiles: new Map(TODO_FILES.map((f, i) => [f.path, { text: f.text, sha: `todo-${i}` }])),
+  get todo() { return this.todoFiles.get('notes/TODO.md'); },
   todoPuts: [],
   todoConflictOnce: false,
 };
@@ -225,23 +277,27 @@ function answer(method, url, auth, body) {
     api.probes++;
     return may.write ? [409, { message: 'README.md does not match' }] : FORBIDDEN;
   }
-  if (u.pathname === `/repos/${REPO}/contents/notes/TODO.md`) {
-    if (method === 'GET') return [200, { encoding: 'base64', content: b64(api.todo.text).replace(/(.{60})/g, '$1\n'), sha: api.todo.sha }];
+  const todoPath = /^\/repos\/ChadFarrow\/project-notes\/contents\/(notes\/(?:TODO\.md|todo\/[^/]+))$/.exec(u.pathname);
+  if (todoPath) {
+    // `path` stays as the page wrote it, so a check can see that the page encoded it.
+    const stored = api.todoFiles.get(decodeURIComponent(todoPath[1]));
+    if (!stored) return [404, { message: 'Not Found' }];
+    if (method === 'GET') return [200, { encoding: 'base64', content: b64(stored.text).replace(/(.{60})/g, '$1\n'), sha: stored.sha }];
     if (method === 'PUT') {
       if (!may.write) return FORBIDDEN;
       const put = JSON.parse(body);
-      api.todoPuts.push({ ...put, text: fromB64(put.content) });
+      api.todoPuts.push({ ...put, path: todoPath[1], text: fromB64(put.content) });
       if (api.todoConflictOnce) {
         // Someone else saved the file first.
         api.todoConflictOnce = false;
-        api.todo.text = `${api.todo.text}\n- [ ] Added in Obsidian\n`;
-        api.todo.sha = `todo-${api.nextSha++}`;
+        stored.text = `${stored.text}\n- [ ] Added in Obsidian\n`;
+        stored.sha = `todo-${api.nextSha++}`;
         return [409, { message: 'is at a different sha' }];
       }
-      if (put.sha !== api.todo.sha) return [409, { message: 'sha does not match' }];
-      api.todo.text = fromB64(put.content);
-      api.todo.sha = `todo-${api.nextSha++}`;
-      return [200, { content: { sha: api.todo.sha } }];
+      if (put.sha !== stored.sha) return [409, { message: 'sha does not match' }];
+      stored.text = fromB64(put.content);
+      stored.sha = `todo-${api.nextSha++}`;
+      return [200, { content: { sha: stored.sha } }];
     }
   }
   const note =/^\/repos\/ChadFarrow\/project-notes\/contents\/projects\/(.+)$/.exec(u.pathname);
@@ -532,14 +588,17 @@ async function main() {
     await shoot('board-desktop');
 
     // `todo || []`: the live site's data may predate the field (--host).
-    const todoItems = (data.todo || []).flatMap((s) => s.entries).filter((e) => e.type === 'item').length;
+    // What the page shows: a finished line is hidden, so count what `groupTodo` keeps.
+    const shownGroups = groupTodo(data.todo || []);
+    const todoItems = shownGroups.flatMap((g) => g.items).reduce((n, { top, subs }) => n + (top.type === 'item' ? 1 + subs.length : 0), 0);
     check('the to-do list comes first on the board', (await text('#content h2')) === 'To do');
     check('the to-do list shows every item', (await count('#todo-list .todo-item')) === todoItems, `${todoItems} items`);
     check('every to-do item has a box to mark it done', (await count('#todo-list .todo-item button.todo-box')) === todoItems);
 
     if (!HOST && !DATA_FILE) {
       check('the to-do list shows the groups in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)'))
-        === js(['Before merge (2)', 'After merge (1)', 'In development (1)', 'Not sorted (7)']));
+        === js(shownGroups.map((g) => `${g.title} (${g.items.length})`))
+        && js(shownGroups.slice(0, 3).map((g) => g.title)) === js(['Before merge', 'After merge', 'In development']));
       check('each top item names its repo', await evaluate(`(() => {
         const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
         const label = (words) => rows.find((li) => li.querySelector(':scope > .item-title').textContent.includes(words))?.querySelector(':scope > .item-title > .todo-repo')?.textContent;
@@ -562,7 +621,63 @@ async function main() {
       check('HTML in the to-do list stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined`)
         && (await text('#todo-list'))?.includes('<img src=x'));
       check('a code span in the to-do list is marked as code', await evaluate(`[...document.querySelectorAll('#todo-list code')].some((c) => c.textContent === '~/Vibe/app-one')`));
-      check('a ticked item in the to-do list looks done', (await text('#todo-list .todo-item.done'))?.includes('A finished item') && (await count('#todo-list .todo-item.done')) === 2);
+      check('a finished line in the to-do list is hidden', !(await text('#todo-list'))?.includes('A finished item'));
+      check('a ticked item with an open test stays, struck through', (await text('#todo-list .todo-item.done'))?.includes('Ticked PR #10') && (await count('#todo-list .todo-item.done')) === 1);
+      // ---- the folder notes ----
+      const rowJs = (words) => `[...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(${js(words)}))`;
+      const noteLineJs = (words) => `[...document.querySelectorAll('#todo-list .note-line')].find((p) => p.textContent.includes(${js(words)}))`;
+      const PLAYLIST = 'app-one - playlist tests';
+      const projectOptions = await evaluate(`[...document.querySelectorAll('#todo-project option')].map((o) => [o.value, o.textContent])`);
+      check('each folder note is a project in the filter, named after the file',
+        ['svc-core', PLAYLIST, 'Mac mini', 'app-one'].every((name) => projectOptions.some(([value, label]) => value === name && label.startsWith(`${name} (`))), js(projectOptions));
+      check('#N in a folder note links that note’s repo, and #3 in Mac mini stays text', await evaluate(`(() => {
+        const five = ${rowJs('Test #5')};
+        const link = five?.querySelector('a[href="https://github.com/ChadFarrow/svc-core/issues/5"]');
+        const mac = ${rowJs('Check the dock')};
+        return link?.textContent === '#5' && !!mac && mac.textContent.includes('#3') && !mac.querySelector('a');
+      })()`));
+      check('a heading shows once, without its words, and its items are in Before merge with the phone mark', await evaluate(`(() => {
+        const heads = [...document.querySelectorAll('#todo-list .todo-heading')].filter((p) => p.textContent.includes('The maker (#8)'));
+        if (heads.length !== 1) return false;
+        let before = heads[0].previousElementSibling;
+        while (before && !before.classList.contains('group-title')) before = before.previousElementSibling;
+        const list = heads[0].nextElementSibling;
+        const maker = ${rowJs('Test the maker #8')};
+        return before?.textContent.startsWith('Before merge') && list?.contains(maker) && maker.querySelector('.todo-place')?.dataset.place === 'phone'
+          && !/Before merge|Phone:/.test(heads[0].textContent) && heads[0].textContent.startsWith('1. The maker (#8)') && heads[0].tagName === 'P';
+      })()`));
+      check('the heading above each row belongs to the row’s own file', await evaluate(`(() => {
+        const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        let headed = 0;
+        for (const li of rows) {
+          if (!li.dataset.file) return false;
+          let el = li.parentElement.previousElementSibling;
+          while (el && !el.classList.contains('todo-heading') && !el.classList.contains('group-title')) el = el.previousElementSibling;
+          if (el?.classList.contains('todo-heading')) {
+            headed++;
+            if (el.dataset.file !== li.dataset.file) return false;
+          }
+        }
+        return rows.length > 0 && headed > 0;
+      })()`));
+      check('a plain bullet shows as text with no box', await evaluate(`(() => {
+        const p = ${noteLineJs('A plain bullet')};
+        return !!p && !p.querySelector('button') && !p.closest('.todo-item') && p.querySelector('a')?.getAttribute('href') === 'https://example.com/guide';
+      })()`));
+      check('a callout shows without its markers', await evaluate(`${noteLineJs('Beta is real')}?.textContent === 'Beta is real'`));
+      check('a tab-indented test sits under its item', await evaluate(`(() => {
+        const top = ${rowJs('Play the whole list')};
+        return [...(top?.querySelectorAll(':scope > .todo-subs > .todo-item') || [])].map((li) => li.textContent.trim()).some((t) => t.includes('Tab-indented test'));
+      })()`));
+      const listText = (await text('#todo-list')) || '';
+      check('a ticked test and the Already works line are hidden', !listText.includes('Ticked sibling test') && !listText.includes('It publishes') && !listText.includes('Already works'));
+      check('HTML in a heading stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined
+        && [...document.querySelectorAll('#todo-list .todo-heading')].some((p) => p.textContent === 'Words <img src=x onerror="window.__xss=1"> in a heading')`));
+      check('a relative link in a folder note resolves against that note', await evaluate(`(() => {
+        const links = [...document.querySelectorAll('#todo-list a')].map((a) => a.getAttribute('href'));
+        return links.includes('https://github.com/${REPO}/blob/main/projects/svc-core.md') && links.includes('https://github.com/${REPO}/blob/main/notes/todo/Mac%20mini.md');
+      })()`));
+
       const subFacts = await evaluate(`(() => {
         const row = (words) => [...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(words));
         const top = row('Test PR #8');
@@ -633,11 +748,13 @@ async function main() {
         return { top: top.length, subs: subs.length, allPhone: subs.every((li) => li.querySelector('.todo-place')?.dataset.place === 'phone'),
           text: document.querySelector('#todo-list .note-line') !== null };
       })()`);
-      check('the place filter shows only phone tests', phoneFacts.top === 1 && phoneFacts.subs === 2 && phoneFacts.allPhone && !phoneFacts.text
+      const phoneShown = groupTodo(data.todo, { project: 'all', place: 'phone' }).flatMap((g) => g.items);
+      const phoneSubs = phoneShown.reduce((n, { subs }) => n + subs.length, 0);
+      check('the place filter shows only phone tests', phoneFacts.top === phoneShown.length && phoneFacts.subs === phoneSubs && phoneSubs >= 2 && phoneFacts.allPhone && !phoneFacts.text
         && !(await text('#todo-list'))?.includes('A long sub-item path'), js(phoneFacts));
       await go();
       check('the to-do filters are remembered after a reload', (await evaluate('document.querySelector("#todo-place").value')) === 'phone'
-        && (await count('#todo-list .todo-item')) === 3);
+        && (await count('#todo-list .todo-item')) === phoneShown.length + phoneSubs);
       await fill('#todo-place', 'all');
       await evaluate(`localStorage.setItem('pn:todoView', ${js(js({ project: 'gone' }))})`);
       await go();
@@ -982,11 +1099,11 @@ async function main() {
 
       // Someone else saved the file while the sheet was open.
       api.todoConflictOnce = true;
-      await tapBox('A finished item');
+      await tapBox('A bad link');
       await waitFor(sheetOpen);
       await click('#todo-dialog .primary');
       check('a conflict is retried and keeps the other edit', await waitFor(`!${sheetOpen}`)
-        && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A finished item'));
+        && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A [bad link]'));
 
       // ---- sub-items: the same words sit under PR #8 and PR #9 ----
       const IPHONE = 'On the iPhone';
@@ -1040,6 +1157,88 @@ async function main() {
       check('the group leaves the page at once', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
       await go();
       check('the group stays away after a reload', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
+
+      // ---- the folder notes: each delete goes to its own file ----
+      const NOTE = 'notes/todo/app-one - playlist tests.md';
+      const SVC = 'notes/todo/svc-core.md';
+      const noteText = (file) => api.todoFiles.get(file).text;
+      const mainSha = api.todo.sha;
+      const mainText = api.todo.text;
+      const noteBefore = noteText(NOTE);
+      puts = api.todoPuts.length;
+      await tapBox('Test the maker #8');
+      await waitFor(sheetOpen);
+      check('the sheet of a folder note names its file', (await text('#todo-dialog'))?.includes(NOTE) && api.todoPuts.length === puts);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      check('deleting in a folder note PUTs only that file, without that line, and names the file', api.todoPuts.length === puts + 1
+        && api.todoPuts[puts].path === 'notes/todo/app-one%20-%20playlist%20tests.md'
+        && api.todoPuts[puts].text === noteBefore.replace('- [ ] Test the maker #8\n', '') && noteText(NOTE) === api.todoPuts[puts].text
+        && api.todoPuts[puts].message.includes('Test the maker') && api.todoPuts[puts].branch === 'main'
+        && api.todo.sha === mainSha && api.todo.text === mainText && noteText(SVC) === SVC_NOTE, `${api.todoPuts[puts]?.path}`);
+
+      // The same sub-test under two items of one note: the second item's goes, the first's stays.
+      puts = api.todoPuts.length;
+      await tapSub('Test #6', 'On the svc phone');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      const sub = '  - [ ] Phone: On the svc phone\n';
+      const svcSecond = SVC_NOTE.lastIndexOf(sub);
+      check('a test is deleted only from under its own item', api.todoPuts.length === puts + 1 && api.todoPuts[puts].path === SVC
+        && noteText(SVC) === SVC_NOTE.slice(0, svcSecond) + SVC_NOTE.slice(svcSecond + sub.length)
+        && (await showsSub('Test #5', 'On the svc phone')) && !(await showsSub('Test #6', 'On the svc phone')));
+
+      // The same words in two notes: the one in svc-core goes, the one in the playlist note stays, also after a reload.
+      const twice = () => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same words twice'))
+        .map((li) => li.querySelector(':scope > .item-title > .todo-repo')?.textContent).sort()`);
+      puts = api.todoPuts.length;
+      check('both lines of the same words show, one per note', js(await twice()) === js([PLAYLIST_TITLE, 'svc-core']));
+      await fill('#todo-project', 'svc-core');
+      await tapBox('Same words twice');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      await fill('#todo-project', 'all');
+      const leftAfterDelete = js(await twice());
+      await go();
+      check('the same words in two notes: deleting one leaves the other, also after a reload', api.todoPuts.length === puts + 1
+        && !noteText(SVC).includes('Same words twice') && noteText(NOTE).includes('- [ ] Same words twice\n')
+        && leftAfterDelete === js([PLAYLIST_TITLE]) && js(await twice()) === js([PLAYLIST_TITLE]));
+
+      // The same words under two headings of one note: the second one goes.
+      const SAME = '- [ ] Same in two sections\n';
+      const sameRows = () => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same in two sections')).length`);
+      const noteNow = noteText(NOTE);
+      const firstAt = noteNow.indexOf(SAME);
+      const secondAt = noteNow.indexOf(SAME, firstAt + 1);
+      puts = api.todoPuts.length;
+      check('both lines under two headings show', (await sameRows()) === 2 && firstAt >= 0 && secondAt > firstAt);
+      await evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same in two sections'))[1].querySelector('.todo-box').click()`);
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      const keptFirst = noteNow.slice(0, secondAt) + noteNow.slice(secondAt + SAME.length);
+      check('the same words under two headings of one note: deleting the second leaves the first', api.todoPuts.length === puts + 1
+        && api.todoPuts[puts].text === keptFirst && noteText(NOTE) === keptFirst && (await sameRows()) === 1);
+      await go();
+      check('the first of the two stays after a reload', (await sameRows()) === 1);
+
+      // A note was deleted in Obsidian, and the page is older than that.
+      const MAC_PATH = 'notes/todo/Mac mini.md';
+      const macFile = api.todoFiles.get(MAC_PATH);
+      api.todoFiles.delete(MAC_PATH);
+      puts = api.todoPuts.length;
+      await tapBox('Check the dock');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a note deleted in Obsidian says the line is not in the file, with no HTTP message',
+        await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("not in the file")')
+        && !(await text('#todo-dialog .status'))?.includes('404') && api.todoPuts.length === puts && !(await showsItem('Check the dock')));
+      await click('#todo-dialog .cancel-button');
+      api.todoFiles.set(MAC_PATH, macFile);
+      await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+      await go();
 
       // The token stops working.
       api.revoked = true;
@@ -1100,6 +1299,14 @@ async function main() {
       check('a sub-item box is at least 24 by 24 px on the phone', subBox && subBox[0] >= 24 && subBox[1] >= 24, js(subBox));
       const longSubRight = await evaluate(`(() => { const c = document.querySelector('#todo-list .todo-subs code'); return c ? c.closest('.todo-item').getBoundingClientRect().right : null; })()`);
       check('a long sub-item wraps inside the phone width', longSubRight !== null && longSubRight <= 390, js(longSubRight));
+      const wide = await evaluate(`(() => {
+        const heads = [...document.querySelectorAll('#todo-list .todo-heading')];
+        const labels = [...document.querySelectorAll('#todo-list .todo-repo')].filter((el) => el.textContent.includes('playlist tests'));
+        const right = (els) => Math.max(...els.map((el) => el.getBoundingClientRect().right));
+        return { heads: heads.length, labels: labels.length, headRight: right(heads), labelRight: right(labels),
+          longHead: heads.some((el) => el.textContent.includes(${js(LONG_WORD)})) };
+      })()`);
+      check('a long heading and a long note label wrap within 390 px', wide.heads > 0 && wide.longHead && wide.labels > 0 && wide.headRight <= 390 && wide.labelRight <= 390, js(wide));
     }
     if (EDITOR_CHECKS) {
       const refRight = await evaluate(`Math.max(...[...document.querySelectorAll('#todo-list .todo-ref, #todo-list .todo-mark')].map((p) => p.getBoundingClientRect().right))`);

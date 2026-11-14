@@ -455,7 +455,9 @@ export function matchCategory(input, known) {
 // `parseTodoList`. It compares whole trimmed lines. Every other byte stays as it was.
 // `under`: the `under` lines of a sub-item. The search then starts only in the indented lines
 // right below those lines, so the same words under another item stay.
-export function removeTodoItem(source, lines, under) {
+// `after`: the trimmed heading line of the item; only the lines under that heading count, so the
+// same words under another heading stay. It returns null when that heading is not in the file.
+export function removeTodoItem(source, lines, under, after) {
   const chunks = source.match(/[^\n]*\n|[^\n]+$/g) || [];
   const find = (want, from, to) => {
     for (let i = from; i < to && i + want.length <= chunks.length; i++) {
@@ -463,18 +465,33 @@ export function removeTodoItem(source, lines, under) {
     }
     return -1;
   };
-  let from = 0;
-  let to = chunks.length;
-  if (under) {
-    const top = find(under, 0, to);
-    if (top < 0) return null;
-    from = top + under.length;
-    to = from;
-    while (to < chunks.length && /^[ \t]+\S/.test(chunks[to])) to++;
+  const scopes = [];
+  if (after) {
+    // Every heading with these words has a scope: the lines below it, up to the next heading.
+    chunks.forEach((c, head) => {
+      if (c.trim() !== after) return;
+      let end = head + 1;
+      while (end < chunks.length && !/^#{1,6}\s/.test(chunks[end].trim())) end++;
+      scopes.push([head + 1, end]);
+    });
+    if (!scopes.length) return null;
+  } else {
+    scopes.push([0, chunks.length]);
   }
-  const at = find(lines, from, to);
-  if (at < 0) return null;
-  return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
+  for (const [start, end] of scopes) {
+    let from = start;
+    let to = end;
+    if (under) {
+      const top = find(under, start, end);
+      if (top < 0) continue;
+      from = top + under.length;
+      to = from;
+      while (to < end && /^[ \t]+\S/.test(chunks[to])) to++;
+    }
+    const at = find(lines, from, to);
+    if (at >= 0) return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
+  }
+  return null;
 }
 
 export const TODO_GROUPS = [['before', 'Before merge'], ['after', 'After merge'], ['dev', 'In development'], [null, 'Not sorted']];
@@ -489,15 +506,7 @@ export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
   const groups = TODO_GROUPS.map(([key, title]) => ({ key, title, items: [] }));
   for (const section of sections || []) {
     if (project !== 'all' && section.title !== project) continue;
-    const entries = section.entries || [];
-    for (let i = 0; i < entries.length; i++) {
-      const top = entries[i];
-      // A sub-item with no item right before it has lost its top item (a delete can do that): it shows as its own item.
-      if (top.under && entries[i - 1]?.type === 'item') continue;
-      const subs = [];
-      if (top.type === 'item') {
-        while (i + 1 < entries.length && entries[i + 1].under) subs.push(entries[++i]);
-      }
+    for (const { top, subs } of todoTops(section.entries || [])) {
       let shown = subs;
       if (place !== 'all') {
         if (top.type !== 'item') continue;
@@ -511,11 +520,51 @@ export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
   return groups.filter((g) => g.key !== null || g.items.length);
 }
 
-// The to-do projects for the filter: each section title with its count of top items.
-export const todoProjects = (sections) => (sections || []).map((section) => ({
-  title: section.title,
-  count: (section.entries || []).filter((e) => !e.under).length,
-}));
+// The entries of one section as top items with their open sub-items. Finished (ticked) lines
+// are left out: a ticked sub-item, and a ticked item that has no open sub-item. A ticked item
+// with an open sub-item stays, so the open work keeps its context.
+function todoTops(entries) {
+  const tops = [];
+  for (let i = 0; i < entries.length; i++) {
+    const top = entries[i];
+    // A sub-item with no item right before it has lost its top item (a delete can do that): it shows as its own item.
+    if (top.under && entries[i - 1]?.type === 'item') continue;
+    const subs = [];
+    if (top.type === 'item') {
+      while (i + 1 < entries.length && entries[i + 1].under) {
+        const sub = entries[++i];
+        if (!sub.done) subs.push(sub);
+      }
+    }
+    if (top.done && !subs.length) continue;
+    tops.push({ top, subs });
+  }
+  return tops;
+}
+
+// The to-do projects for the filter: each section title with its count of shown top items.
+// Sections with one title merge, and a title with a count of 0 is left out.
+export function todoProjects(sections) {
+  const counts = new Map();
+  for (const section of sections || []) {
+    counts.set(section.title, (counts.get(section.title) || 0) + todoTops(section.entries || []).length);
+  }
+  return [...counts].filter(([, count]) => count > 0).map(([title, count]) => ({ title, count }));
+}
+
+export const TODO_FILE = 'notes/TODO.md';
+
+// The note name (no `.md`) of `notes/todo/<name>.md` directly in the folder, or null.
+export function todoNoteName(path) {
+  const m = /^notes\/todo\/([^/]+)\.md$/.exec(String(path));
+  return m && !m[1].startsWith('.') ? m[1] : null;
+}
+
+// The path for a URL, each segment encoded, for the to-do file or a note in the folder; else null.
+export function todoFileUrlPath(path) {
+  if (path !== TODO_FILE && todoNoteName(path) === null) return null;
+  return path.split('/').map(encodeURIComponent).join('/');
+}
 
 export const todoRefUrl = (ref) => `https://github.com/${ref.repo}/issues/${ref.number}`;
 
