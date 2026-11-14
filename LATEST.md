@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-14 20:19 UTC
+# Dashboard — 2026-11-14 22:19 UTC
 
-20 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
+21 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -17,13 +17,13 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 20 hours ago · 1 comment
-- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 20 hours ago · 1 comment
-- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 20 hours ago · 1 comment
-- [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 21 hours ago · 1 comment
+- [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 22 hours ago · 1 comment
+- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 22 hours ago · 1 comment
+- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 22 hours ago · 1 comment
+- [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 23 hours ago · 1 comment
 - [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 1 day ago · 1 comment
 - [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 1 day ago · 1 comment
-- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 1 day ago · 1 comment
+- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2 days ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 6 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 43 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
@@ -36,7 +36,7 @@
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 26 days ago
+- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 27 days ago
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -92,15 +92,17 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-6 PRs · 10 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+7 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#564 feat(gifs): ask GIPHY for pg-13 on boostmebuddy.com too](https://github.com/ChadFarrow/boostmebitch/pull/564) — opened 43 minutes ago
-- PR [#562 feat(boost): play the GIF under the mouse in the GIF picker](https://github.com/ChadFarrow/boostmebitch/pull/562) — opened 1 hour ago
+- PR [#568 Follow a favorite whose feed host closed (RSS Blue)](https://github.com/ChadFarrow/boostmebitch/pull/568) — opened 1 minute ago · draft
+- PR [#567 feat(gifs): playing GIF grid; boostmebitch.com searches gifs.nostr.build](https://github.com/ChadFarrow/boostmebitch/pull/567) — opened 59 minutes ago · draft
+- PR [#564 feat(gifs): ask GIPHY for pg-13 on boostmebuddy.com too](https://github.com/ChadFarrow/boostmebitch/pull/564) — opened 2 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago · merge conflict
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 49 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
+- Branch [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
@@ -122,7 +124,7 @@
 
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 11 days ago
 - PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 11 days ago
-- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 43 days ago · merge conflict · by InTheMorning
+- PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 44 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 
@@ -218,7 +220,7 @@
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 7 issues · 4 opened by you)
 
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 10 days ago · merge conflict
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 13 days ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 14 days ago
 
 #### [onlyboosts](projects/onlyboosts.md)
 
