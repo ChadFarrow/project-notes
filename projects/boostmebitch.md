@@ -34,33 +34,39 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (10)
+### Pull requests (12)
 
+- [#554 /api/art: cut a GIF over the 12 MB ceiling to frame one instead of refusing it](https://github.com/ChadFarrow/boostmebitch/pull/554) — opened 2026-11-13
+- [#552 Hover only where a pointer can hover: a button switched off no longer looks on (iOS)](https://github.com/ChadFarrow/boostmebitch/pull/552) — opened 2026-11-13
 - [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 2026-11-13 · draft
-- [#549 The avatar on the now-playing screen opens the account menu](https://github.com/ChadFarrow/boostmebitch/pull/549) — opened 2026-11-13 · draft
-- [#547 Previous and next on the lock screen for music](https://github.com/ChadFarrow/boostmebitch/pull/547) — opened 2026-11-13 · draft
-- [#545 A dead file does not stop a list that plays on its own](https://github.com/ChadFarrow/boostmebitch/pull/545) — opened 2026-11-13 · draft
-- [#544 The now-playing covers hold their picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13 · draft
-- [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 2026-11-13 · draft
+- [#549 The avatar on the now-playing screen opens the account menu](https://github.com/ChadFarrow/boostmebitch/pull/549) — opened 2026-11-13
+- [#547 Previous and next on the lock screen for music](https://github.com/ChadFarrow/boostmebitch/pull/547) — opened 2026-11-13
+- [#545 A dead file does not stop a list that plays on its own](https://github.com/ChadFarrow/boostmebitch/pull/545) — opened 2026-11-13
+- [#544 The now-playing covers hold their picture until the next one loads](https://github.com/ChadFarrow/boostmebitch/pull/544) — opened 2026-11-13
+- [#541 Shuffle the favorite singles](https://github.com/ChadFarrow/boostmebitch/pull/541) — opened 2026-11-13
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
-### Issues (5)
+### Issues (10)
 
+- [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 2026-11-14
+- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 2026-11-13
+- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 2026-11-13
+- [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 2026-11-13
+- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 2026-11-13
 - [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 2026-11-13
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2026-11-12
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (6)
+### Branches with no open PR (5)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
 - [`favorites-shuffle-beta`](https://github.com/ChadFarrow/boostmebitch/tree/favorites-shuffle-beta)
 - [`fix/skip-dead-tracks-beta`](https://github.com/ChadFarrow/boostmebitch/tree/fix/skip-dead-tracks-beta)
-- [`fix/tile-sticky-hover`](https://github.com/ChadFarrow/boostmebitch/tree/fix/tile-sticky-hover)
 - [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
 <!-- AUTO:END -->
