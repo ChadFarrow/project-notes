@@ -1,0 +1,5 @@
+- [ ] In development: The v4vmusic dev: tell Claude each answer.
+  - [ ] Your note about Live At Rockpile and The EP (Amnesia): both stay out of date on v4vmusic.com until the dev changes their feed URLs.
+  - [ ] Ask how v4vmusic.com picks up podpings, because MSP users say podping.me works better there. Does v4vmusic accept podpings signed by `chadf` with id `pp_music_update`? podping.me sends through podping.cloud, so its podpings are signed by `podping.aaa` to `podping.eee`, always as `pp_podcast_update`, and they are also on gossip.
+  - [ ] Podcast Index stores feed URLs with spaces as raw spaces, but every podping carries `%20` (issue #179). Does v4vmusic match on the stored URL?
+- [ ] In development: Decide issue #179: should MSP offer to send a feed URL with spaces as `%20` (B), or keep refusing it with a better message (A)? Tell Claude A or B.

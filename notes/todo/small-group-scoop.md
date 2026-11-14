@@ -1,0 +1,5 @@
+- [ ] Before merge: Phone: Test the quiz demo (branch `vercel-demo` of your fork) on your iPhone, then tell Claude the result. Claude then moves the demo changes into PR #1 of your fork.
+  - [ ] Every run has 10 questions, and Next stays in one spot from question to question.
+  - [ ] No answer looks picked when a new question opens. Chrome could not reproduce this, so only a real phone can confirm the fix.
+- [ ] In development: Tell Claude to prepare the iPhone layout PR for Spencer. Its demo tests passed on 2026-11-03, on your phone and on a spare iPhone 11.
+- [ ] In development: SpencerPearson/small-group-scoop#25 waits for Spencer. When he decides what to do with it, tell Claude.
