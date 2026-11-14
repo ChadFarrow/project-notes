@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { normalizeRepos, normalizeWatched } from '../scripts/lib/model.mjs';
 import { removeTodoItem } from '../scripts/lib/notes.mjs';
 import { buildOutputs } from '../scripts/lib/render.mjs';
-import { buildSiteFiles, parseTodoList, siteDirProblem } from '../scripts/lib/site.mjs';
+import { buildSiteFiles, parseTodoFiles, parseTodoList, siteDirProblem } from '../scripts/lib/site.mjs';
 
 const pages = JSON.parse(readFileSync(new URL('./fixtures/repos-pages.json', import.meta.url)));
 const NOW = new Date('2026-09-27T12:00:00Z');
@@ -30,15 +30,22 @@ const TODO_TEXT = [
   '## app-one',
   '',
   '- [ ] Test [PR #7](https://example.com/only-in-the-todo-file) on a phone.',
+  '- [ ] Before merge: Test PR #8',
   '',
   'More in [the note](../projects/app-one.md).',
   '',
 ].join('\n');
 
+const TODO_FILES = [
+  { path: 'notes/todo/App-One - playlist tests.md', text: '- [ ] Phone: Test PR #4 in the player\n' },
+  { path: 'notes/TODO.md', text: TODO_TEXT },
+  { path: 'notes/todo/app-one.md', text: '# app-one\n\n- [ ] Open [PR #9](https://example.com/only-in-the-todo-folder) now.\n' },
+];
+
 function run(degradedReason = null) {
   const out = buildOutputs({
     owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], notes: NOTES,
-    auditFiles: [], degradedReason, watched: WATCHED, todoText: TODO_TEXT,
+    auditFiles: [], degradedReason, watched: WATCHED, todoFiles: TODO_FILES,
   });
   return { ...out, data: JSON.parse(out.siteData) };
 }
@@ -138,7 +145,7 @@ test('site data never carries bodies, marker sources or untracked work', () => {
 
 test('every URL in the site data is already public in the markdown of the repo', () => {
   const { siteData, files } = run();
-  const markdown = [...files.values(), TODO_TEXT].join('\n');
+  const markdown = [...files.values(), ...TODO_FILES.map((f) => f.text)].join('\n');
   const urls = [...siteData.matchAll(/"(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
   assert.ok(urls.length > 10);
   for (const url of urls) assert.ok(markdown.includes(url), url);
@@ -186,17 +193,17 @@ test('siteDirProblem allows only _site inside the repo, and nothing above it', (
 test('the to-do list keeps the sections and items, and leaves out the words above the first heading', () => {
   assert.deepEqual(parseTodoList('# To do\n\n#todo\n\nWords for editors.\n\n## One\n\n- [ ] First\n- [ ] Second\n\n## Two\n\n- [ ] Third\n'), [
     { title: 'One', entries: [
-      { type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] },
-      { type: 'item', done: false, lines: ['- [ ] Second'], parts: [{ text: 'Second' }] },
+      { type: 'item', done: false, lines: ['- [ ] First'], headingLine: '## One', parts: [{ text: 'First' }] },
+      { type: 'item', done: false, lines: ['- [ ] Second'], headingLine: '## One', parts: [{ text: 'Second' }] },
     ] },
-    { title: 'Two', entries: [{ type: 'item', done: false, lines: ['- [ ] Third'], parts: [{ text: 'Third' }] }] },
+    { title: 'Two', entries: [{ type: 'item', done: false, lines: ['- [ ] Third'], headingLine: '## Two', parts: [{ text: 'Third' }] }] },
   ]);
 });
 
 test('the to-do list keeps an item above the first heading, so it never goes missing', () => {
   assert.deepEqual(parseTodoList('# To do\n\nWords.\n\n- [ ] Added on the phone\n\n## One\n\n- [ ] First\n'), [
     { title: '', entries: [{ type: 'item', done: false, lines: ['- [ ] Added on the phone'], parts: [{ text: 'Added on the phone' }] }] },
-    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] First'], headingLine: '## One', parts: [{ text: 'First' }] }] },
   ]);
 });
 
@@ -220,7 +227,7 @@ test('the to-do list splits links from the text and keeps a relative link as wri
 
 test('the to-do list keeps a line of text in a section', () => {
   const [{ entries }] = parseTodoList('## One\n\nFive more in [the note](../a.md).\n');
-  assert.deepEqual(entries, [{ type: 'text', parts: [{ text: 'Five more in ' }, { text: 'the note', href: '../a.md' }, { text: '.' }] }]);
+  assert.deepEqual(entries, [{ type: 'text', headingLine: '## One', parts: [{ text: 'Five more in ' }, { text: 'the note', href: '../a.md' }, { text: '.' }] }]);
 });
 
 test('the to-do list joins a wrapped line to the item or text above it', () => {
@@ -271,7 +278,7 @@ test('an indented item with nothing above it to sit under stays a plain item', (
 
 test('the to-do list drops an empty item and a heading with nothing under it', () => {
   assert.deepEqual(parseTodoList('## Empty\n\n## One\n- [ ]\n-\n- [ ] Real\n'), [
-    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], parts: [{ text: 'Real' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], headingLine: '## One', parts: [{ text: 'Real' }] }] },
   ]);
 });
 
@@ -281,16 +288,88 @@ test('the to-do list is empty when the file is empty or missing', () => {
   assert.deepEqual(parseTodoList('# To do\n\nOnly words.\n'), []);
 });
 
+const OPTS = { owner: 'ChadFarrow', repos: ['app-one', 'Command-Center'] };
+const entriesOf = (text, opts = OPTS) => parseTodoList(text, opts).flatMap((s) => s.entries);
+
+test('the to-do list reads the group and the place words, and drops them from the text', () => {
+  const e = entriesOf('## app-one\n- [ ] Before merge: Phone: Test it\n- [ ] after merge: Later\n- [ ] In development: Ask\n- [ ] No word\n');
+  assert.deepEqual(e.map((x) => x.group), ['before', 'after', 'dev', undefined]);
+  assert.equal(e[0].place, 'phone');
+  assert.equal(e[0].parts[0].text, 'Test it');
+  assert.equal(e[0].lines[0], '- [ ] Before merge: Phone: Test it');
+  assert.ok(!('group' in e[3]) && !('place' in e[3]));
+});
+
+test('a sub-item takes the group and the place of its item, and its own place wins', () => {
+  const e = entriesOf('## app-one\n- [ ] Before merge: Phone: Top\n  - [ ] One\n  - [ ] Computer: Two\n  - [ ] After merge: Three\n');
+  assert.deepEqual(e.slice(1).map((x) => [x.group, x.place]), [['before', 'phone'], ['before', 'computer'], ['before', 'phone']]);
+  assert.equal(e[3].parts[0].text, 'Three');
+});
+
+test('only the six words count, at the start of the item', () => {
+  for (const text of ['Phone without a colon', 'Before merging: x', 'Start\n  Phone: wrapped']) {
+    const [e] = entriesOf(`## app-one\n- [ ] ${text}\n`);
+    assert.ok(!('place' in e) && !('group' in e), text);
+  }
+});
+
+test('a bare #N points to the repo of the heading', () => {
+  const [e] = entriesOf('## app-one\n- [ ] Test PR #541 (#505)\n');
+  assert.deepEqual(e.refs, [{ repo: 'ChadFarrow/app-one', number: 541 }, { repo: 'ChadFarrow/app-one', number: 505 }]);
+  assert.ok(e.parts.some((p) => p.text === '#541' && p.ref.repo === 'ChadFarrow/app-one' && p.ref.number === 541 && !('href' in p)));
+});
+
+test('a heading matches its repo in any case', () => {
+  const [e] = entriesOf('## command-center\n- [ ] PR #28\n');
+  assert.equal(e.repo, 'ChadFarrow/Command-Center');
+  assert.deepEqual(e.refs, [{ repo: 'ChadFarrow/Command-Center', number: 28 }]);
+});
+
+test('owner/repo#N points to that repo under any heading', () => {
+  const [e] = entriesOf('## Laptop\n- [ ] SpencerPearson/small-group-scoop#25 waits\n');
+  assert.deepEqual(e.refs, [{ repo: 'SpencerPearson/small-group-scoop', number: 25 }]);
+  assert.equal(e.parts[0].text, 'SpencerPearson/small-group-scoop#25');
+  assert.ok(!('repo' in e));
+});
+
+test('a range names every number, and only the ends above 10', () => {
+  const [a] = entriesOf('## app-one\n- [ ] #537–#540\n');
+  assert.deepEqual(a.refs.map((r) => r.number), [537, 538, 539, 540]);
+  assert.deepEqual(a.parts.map((p) => [p.text, p.ref?.number]), [['#537', 537], ['–', undefined], ['#540', 540]]);
+  const [b] = entriesOf('## app-one\n- [ ] #1-#20\n');
+  assert.deepEqual(b.refs.map((r) => r.number), [1, 20]);
+});
+
+test('the same number twice on a line is one reference', () => {
+  const [e] = entriesOf('## app-one\n- [ ] PR #540 waits, before #540 merges\n');
+  assert.equal(e.refs.length, 1);
+});
+
+test('no reference inside code, inside a link, in a channel name, or under an unknown heading', () => {
+  const e = entriesOf('## app-one\n- [ ] `#12` [PR #7](https://x/7) #BowlAfterBowl\n## Laptop\n- [ ] #9\n');
+  assert.equal(e.length, 2);
+  for (const x of e) assert.ok(!('refs' in x));
+});
+
+test('a bare #N stays text without options', () => {
+  const [e] = entriesOf('## app-one\n- [ ] PR #5\n', {});
+  assert.ok(!('refs' in e));
+  assert.deepEqual(e.parts, [{ text: 'PR #5' }]);
+});
+
 test('site data carries the to-do list', () => {
   const { data } = run();
-  assert.deepEqual(data.todo, parseTodoList(TODO_TEXT));
+  assert.deepEqual(data.todo, parseTodoFiles(TODO_FILES, { owner: 'ChadFarrow', repos: data.repos }));
   assert.equal(data.todo[0].title, 'app-one');
+  const entry = data.todo[0].entries.find((e) => e.group === 'before');
+  assert.deepEqual(entry.refs, [{ repo: 'ChadFarrow/app-one', number: 8 }]);
 });
 
 test('the to-do list stays out of the generated markdown', () => {
   const { files } = run();
   const markdown = [...files.values()].join('\n');
   assert.ok(!markdown.includes('only-in-the-todo-file'));
+  assert.ok(!markdown.includes('only-in-the-todo-folder'));
 });
 
 test('the to-do list keeps the source lines of an item, wrapped lines too, so the page can delete it', () => {
@@ -375,4 +454,195 @@ test('an item parsed from the file can be deleted from it, and the rest of the l
     assert.equal(after.length, items.length - 1, item.lines[0]);
     assert.ok(!after.some((e) => e.lines[0] === item.lines[0]), item.lines[0]);
   }
+});
+
+test('a parent line with only a group or place word keeps its box, and its tests sit under it', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] Before merge:\n  - [ ] Phone: Lock the screen\n- [ ] Phone:\n');
+  assert.equal(entries.length, 3);
+  assert.deepEqual(entries[0].lines, ['- [ ] Before merge:']);
+  assert.equal(entries[0].group, 'before');
+  assert.equal(entries[0].parts.map((p) => p.text).join(''), 'Before merge:');
+  assert.deepEqual(entries[1].under, ['- [ ] Before merge:']);
+  assert.equal(entries[1].group, 'before');
+  assert.equal(entries[1].place, 'phone');
+  assert.equal(entries[2].place, 'phone');
+  assert.equal(entries[2].parts.map((p) => p.text).join(''), 'Phone:');
+});
+
+test('removeTodoItem deletes the right test under a bare group-word parent', () => {
+  const text = '## boostmebitch\n- [ ] Before merge: Test PR #1\n  - [ ] Phone: Lock the screen\n\n- [ ] Before merge:\n  - [ ] Phone: Lock the screen\n';
+  const [{ entries }] = parseTodoList(text, { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  const second = entries[entries.length - 1];
+  assert.deepEqual(second.under, ['- [ ] Before merge:']);
+  assert.equal(removeTodoItem(text, second.lines, second.under),
+    '## boostmebitch\n- [ ] Before merge: Test PR #1\n  - [ ] Phone: Lock the screen\n\n- [ ] Before merge:\n');
+});
+
+test('a slug range keeps both ends in the slug repo', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] See Spencer/small#1-#3 now\n', { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  assert.deepEqual(entries[0].refs, [1, 2, 3].map((number) => ({ repo: 'Spencer/small', number })));
+});
+
+test('a number above the GraphQL Int is not a reference', () => {
+  const [{ entries }] = parseTodoList('## boostmebitch\n- [ ] Big #2147483648 and #2147483647 and a/b#99999999999\n', { owner: 'ChadFarrow', repos: ['boostmebitch'] });
+  assert.deepEqual(entries[0].refs, [{ repo: 'ChadFarrow/boostmebitch', number: 2147483647 }]);
+});
+
+const FOLDER = { ...OPTS };
+const folder = (title, text, opts = FOLDER) => parseTodoList(text, { ...opts, title });
+
+test('a folder file is one section named after the file, and its #N points to its repo', () => {
+  const [s] = folder('app-one', '- [ ] Test PR #3\n');
+  assert.equal(s.title, 'app-one');
+  assert.ok(!('heading' in s));
+  assert.equal(s.entries[0].repo, 'ChadFarrow/app-one');
+  assert.deepEqual(s.entries[0].refs, [{ repo: 'ChadFarrow/app-one', number: 3 }]);
+});
+
+test('a second file for one repo takes the repo before the first space', () => {
+  const [s] = folder('app-one - playlist tests', '- [ ] Test PR #3\n');
+  assert.equal(s.title, 'app-one - playlist tests');
+  assert.equal(s.entries[0].repo, 'ChadFarrow/app-one');
+});
+
+test('a folder file named in another case still finds its repo', () => {
+  const [s] = folder('App-One', '- [ ] Test PR #3\n');
+  assert.equal(s.entries[0].repo, 'ChadFarrow/app-one');
+});
+
+test('a folder file whose name is no repo still shows, and its #N stays text', () => {
+  const [s] = folder('random-ideas', '- [ ] Test PR #3\n');
+  assert.equal(s.title, 'random-ideas');
+  assert.ok(!('repo' in s.entries[0]) && !('refs' in s.entries[0]));
+  assert.deepEqual(s.entries[0].parts, [{ text: 'Test PR #3' }]);
+});
+
+test('headings inside a folder file keep the title, repo and file, and end a group', () => {
+  const sections = parseTodoFiles([{ path: 'notes/todo/app-one.md', text: '- [ ] Top\n## Later\n  - [ ] Indented\n- [ ] Next\n' }], OPTS);
+  assert.deepEqual(sections.map((s) => [s.title, s.heading]), [['app-one', undefined], ['app-one', 'Later']]);
+  const [a, b] = sections;
+  assert.ok(!('heading' in a));
+  assert.ok(!('under' in b.entries[0]));
+  assert.ok(sections.flatMap((s) => s.entries).every((e) => e.repo === 'ChadFarrow/app-one' && e.file === 'notes/todo/app-one.md'));
+});
+
+test('heading words give their group and place to the items below that have none', () => {
+  const [, s] = folder('app-one', '- [ ] Above\n## Before merge: Phone: Checks\n- [ ] One\n- [ ] After merge: Computer: Two\n- [ ] Top\n  - [ ] Sub\n  - [ ] On air: Sub two\n## Plain\n- [ ] Three\n');
+  assert.equal(s.heading, 'Checks');
+  assert.deepEqual(s.entries.map((e) => [e.group, e.place]), [
+    ['before', 'phone'], ['after', 'computer'], ['before', 'phone'], ['before', 'phone'], ['before', 'air'],
+  ]);
+  const sections = folder('app-one', '## Before merge:\n- [ ] One\n## Plain\n- [ ] Three\n');
+  assert.ok(!('heading' in sections[0]) || sections[0].heading === undefined);
+  assert.equal(sections[0].entries[0].group, 'before');
+  assert.equal(sections[1].heading, 'Plain');
+  assert.ok(!('group' in sections[1].entries[0]));
+});
+
+test('a folder file keeps the lines above its first heading', () => {
+  const [s] = folder('app-one', 'Some words first.\n\n- [ ] Item\n\n## One\n- [ ] Two\n');
+  assert.deepEqual(s.entries.map((e) => e.type), ['text', 'item']);
+  assert.equal(s.entries[0].parts[0].text, 'Some words first.');
+});
+
+test('in a folder file a plain bullet is text, and an indented plain bullet continues its item', () => {
+  const [s] = folder('app-one', '- Left margin note\n- [ ] Item\n  - detail one\n  - detail two\n- [ ] Next\n');
+  assert.deepEqual(s.entries.map((e) => e.type), ['text', 'item', 'item']);
+  assert.equal(s.entries[0].parts[0].text, 'Left margin note');
+  assert.deepEqual(s.entries[1].lines, ['- [ ] Item', '- detail one', '- detail two']);
+  assert.equal(s.entries[1].parts[0].text, 'Item detail one detail two');
+});
+
+test('callout markers are hidden and the lines stay raw', () => {
+  const [s] = folder('app-one', '> [!warning] Careful\n> more words\n\n- [ ] Item\n  > [!note]- body\n  > second\n');
+  assert.equal(s.entries[0].parts[0].text, 'Careful more words');
+  assert.deepEqual(s.entries[1].lines, ['- [ ] Item', '> [!note]- body', '> second']);
+  assert.equal(s.entries[1].parts[0].text, 'Item body second');
+});
+
+const BMB = [
+  '# boostmebitch',
+  '',
+  'Intro words about [the repo](https://example.com/bmb).',
+  '- [Link bullet](https://example.com/x)',
+  '',
+  '> [!warning] Heads up',
+  '> be careful',
+  '',
+  '## Before merge: Phone',
+  '- [ ] Test lock screen',
+  '\t- [ ] Computer: Sub test',
+  '\t- [ ] Another sub',
+  '- [ ] PR #12 check',
+  '  more words',
+  '',
+  '## Already works',
+  '- [x] Boosts send',
+  '- [x] Zaps show',
+  '',
+].join('\n');
+
+test('a BMB-shaped file parses, and every item deletes cleanly with removeTodoItem', () => {
+  const opts = { owner: 'ChadFarrow', repos: ['boostmebitch'] };
+  const all = (text) => parseTodoList(text, { ...opts, title: 'boostmebitch' }).flatMap((s) => s.entries).filter((e) => e.type === 'item');
+  const items = all(BMB);
+  assert.equal(items.length, 6);
+  assert.ok(items.every((e) => e.repo === 'ChadFarrow/boostmebitch'));
+  assert.equal(items[0].group, 'before');
+  items.forEach((item, index) => {
+    const next = removeTodoItem(BMB, item.lines, item.under);
+    assert.notEqual(next, null, item.lines[0]);
+    const after = all(next);
+    assert.equal(after.length, items.length - 1, item.lines[0]);
+    assert.ok(after.length < items.length, item.lines[0]);
+    assert.ok(next.includes('Intro words'));
+    assert.equal(items.filter((_, i) => i !== index).every((e) => next.includes(e.lines[0])), true, item.lines[0]);
+  });
+});
+
+test('notes/TODO.md still reads as before inside parseTodoFiles, with its file', () => {
+  const plain = parseTodoList(TODO_TEXT, OPTS);
+  const viaFiles = parseTodoFiles([{ path: 'notes/TODO.md', text: TODO_TEXT }], OPTS);
+  assert.deepEqual(viaFiles.map(({ entries, ...s }) => s), plain.map(({ entries, ...s }) => s));
+  assert.deepEqual(viaFiles.flatMap((s) => s.entries), plain.flatMap((s) => s.entries.map((e) => ({ ...e, file: 'notes/TODO.md' }))));
+});
+
+test('parseTodoFiles orders notes/TODO.md first, then by lower-case path, and ignores other paths', () => {
+  const f = (path) => ({ path, text: '- [ ] x\n' });
+  const sections = parseTodoFiles([
+    f('notes/todo/b.md'), f('notes/todo/sub/c.md'), f('notes/todo/.hidden.md'), f('notes/other.md'),
+    f('notes/todo/A.md'), { path: 'notes/TODO.md', text: '## H\n- [ ] x\n' },
+  ], OPTS);
+  assert.deepEqual(sections.map((s) => [s.title, s.entries[0].file]), [
+    ['H', 'notes/TODO.md'], ['A', 'notes/todo/A.md'], ['b', 'notes/todo/b.md'],
+  ]);
+  assert.deepEqual(parseTodoFiles(undefined), []);
+  assert.deepEqual(parseTodoFiles([]), []);
+});
+
+test('an entry under a heading carries that heading line, trimmed; an entry above any heading has none', () => {
+  const todo = parseTodoFiles([{ path: 'notes/TODO.md', text: 'Intro\n- [ ] Above\n## app-one  \n- [ ] A\n## Other\n- [ ] B\n' }], OPTS);
+  const all = todo.flatMap((s) => s.entries.filter((e) => e.type === 'item'));
+  assert.deepEqual(all.map((e) => [e.lines[0], e.headingLine]), [['- [ ] Above', undefined], ['- [ ] A', '## app-one'], ['- [ ] B', '## Other']]);
+});
+
+test('in a folder note every heading level gives a headingLine, and an item above any heading has none', () => {
+  const text = '- [ ] Top\n## Before merge: Phone: One\n- [ ] Same\n   ### Deep   \n- [ ] Same\n';
+  const items = parseTodoFiles([{ path: 'notes/todo/app-one.md', text }], OPTS).flatMap((s) => s.entries.filter((e) => e.type === 'item'));
+  assert.deepEqual(items.map((e) => e.headingLine), [undefined, '## Before merge: Phone: One', '### Deep']);
+  assert.equal('headingLine' in items[0], false);
+  assert.deepEqual(items.map((e) => e.lines), [['- [ ] Top'], ['- [ ] Same'], ['- [ ] Same']]);
+});
+
+test('a folder note: a callout, a numbered line or a table row right below an item starts its own text line', () => {
+  for (const next of ['> [!note] Careful.', '1. Numbered', '2) Numbered', '| a | b |']) {
+    const [s] = folder('app-one', `- [ ] Item\n${next}\n`);
+    assert.equal(s.entries.length, 2, next);
+    assert.deepEqual(s.entries[0].lines, ['- [ ] Item'], next);
+    assert.equal(s.entries[1].type, 'text', next);
+    assert.ok(!('lines' in s.entries[1]), next);
+  }
+  const [s] = folder('app-one', '- [ ] Item\nwrapped words\n');
+  assert.equal(s.entries.length, 1, 'plain wrapped words still join');
+  assert.deepEqual(s.entries[0].lines, ['- [ ] Item', 'wrapped words']);
 });

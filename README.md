@@ -34,7 +34,7 @@ For: ChadFarrow/<project-repo>
 
 ## Obsidian
 
-The iCloud vault `project-notes` holds a copy of this repo for Obsidian on the Mac and the phone. Notes that you write there reach GitHub within minutes: new notes go in `notes/`, and your text in a project note goes to its file in `projects/`. The dashboard and the live blocks flow the other way only. The Mac mini does the sync, so it must be on.
+The iCloud vault `project-notes` holds a copy of this repo for Obsidian on the Mac and the phone. Notes that you write there reach GitHub within minutes: new notes go in `notes/`, and your text in a project note goes to its file in `projects/`. The dashboard and the live blocks flow the other way only. The Mac mini does the sync, so it must be on. The To do list is the folder `notes/todo/`, one note per repo: tick a box when it is done.
 
 ## How it updates
 

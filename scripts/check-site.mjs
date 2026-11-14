@@ -19,7 +19,7 @@ import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
-import { applyNoteForm } from './lib/notes.mjs';
+import { applyNoteForm, groupTodo } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
 import { buildSiteFiles } from './lib/site.mjs';
 
@@ -106,12 +106,13 @@ const TODO_TEXT = [
   '- [ ] <img src=x onerror="window.__xss=1"> stays text',
   '- [ ] A [bad link](javascript:window.__xss=1) stays text',
   `- [ ] A long path \`~/Vibe/${'a'.repeat(120)}\` wraps`,
-  '- [ ] Test PR #8',
+  '- [ ] Before merge: Test PR #8',
+  '  - [ ] Phone: On the iPhone',
+  '  - [ ] Phone: On the Pixel',
+  `  - [ ] Computer: A long sub-item path \`~/Vibe/${'b'.repeat(120)}\` wraps`,
+  '- [ ] After merge: Test PR #9',
   '  - [ ] On the iPhone',
-  '  - [ ] On the Pixel',
-  `  - [ ] A long sub-item path \`~/Vibe/${'b'.repeat(120)}\` wraps`,
-  '- [ ] Test PR #9',
-  '  - [ ] On the iPhone',
+  '- [ ] Before merge: PRs #11–#13 and Upstream/thing#4',
   '- [x] Ticked PR #10',
   '  - [ ] Still open under it',
   '',
@@ -119,9 +120,59 @@ const TODO_TEXT = [
   '',
   '## Laptop',
   '',
-  '- [ ] Delete a folder.',
+  '- [ ] In development: Delete a folder.',
   '',
 ].join('\n');
+
+// The folder notes (notes/todo/): a note per repo, headings with group and place words, a plain
+// bullet, a callout, a tab-indented test, a ticked test, and HTML in a heading.
+const LONG_WORD = 'h'.repeat(90);
+const SVC_NOTE = [
+  '- [ ] Before merge: Test #5',
+  '  - [ ] Phone: On the svc phone',
+  '- [ ] Before merge: Test #6',
+  '  - [ ] Phone: On the svc phone',
+  '- [ ] Same words twice',
+  '',
+  'Notes are in [the svc note](../../projects/svc-core.md).',
+  '',
+].join('\n');
+const PLAYLIST_NOTE = [
+  '# app-one - playlist tests',
+  '',
+  'Intro for this note, and [the mac note](Mac%20mini.md).',
+  '',
+  '- A plain bullet with [a guide](https://example.com/guide)',
+  '',
+  '> [!warning] Beta is real',
+  '',
+  `## Before merge: Phone: 1. The maker (#8), ${LONG_WORD} a long heading`,
+  '- [ ] Test the maker #8',
+  '- [ ] Play the whole list',
+  '\t- [ ] Tab-indented test',
+  '\t- [x] Ticked sibling test',
+  '- [ ] Same words twice',
+  '- [ ] Same in two sections',
+  '',
+  '## Already works',
+  '',
+  '- [x] It publishes',
+  '',
+  '## Words <img src=x onerror="window.__xss=1"> in a heading',
+  '- [ ] An item under the odd heading',
+  '',
+  '## Second section',
+  '- [ ] Same in two sections',
+  '',
+].join('\n');
+const PLAYLIST_TITLE = 'app-one - playlist tests';
+const MAC_NOTE = '- [ ] Check the dock, see #3\n';
+const TODO_FILES = [
+  { path: 'notes/TODO.md', text: TODO_TEXT },
+  { path: 'notes/todo/svc-core.md', text: SVC_NOTE },
+  { path: 'notes/todo/app-one - playlist tests.md', text: PLAYLIST_NOTE },
+  { path: 'notes/todo/Mac mini.md', text: MAC_NOTE },
+];
 
 // What fetchWatched would return for that Watch line: a private repo, counts only.
 const WATCHED = normalizeWatched({ data: { r0: {
@@ -142,8 +193,12 @@ async function siteFiles() {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
     ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
-      auditFiles: [], degradedReason: null, watched: WATCHED, todoText: TODO_TEXT,
+      auditFiles: [], degradedReason: null, watched: WATCHED, todoFiles: TODO_FILES,
     }));
+    // A second private project, so that a token which sees only one private repo can be refused.
+    const parsed = JSON.parse(siteData);
+    parsed.projects.find((p) => p.name === 'svc-core').isPrivate = true;
+    siteData = JSON.stringify(parsed);
   }
   const notesSource = await readFile(path.join(ROOT, 'scripts/lib/notes.mjs'), 'utf8');
   const files = new Map();
@@ -177,7 +232,20 @@ const api = {
   revoked: false,
   goodToken: 'good-token',
   nextSha: 100,
-  todo: { text: TODO_TEXT, sha: 'todo-0' },
+  readProbes: 0,
+  // The titles the alias query answers, by 'owner/name#N'. `mergedDaysAgo` counts from the run.
+  // A repo with no entry answers null plus an `errors` item, as a repo the token cannot see does.
+  titles: {
+    'ChadFarrow/app-one#8': { type: 'PullRequest', title: 'Fixture title eight', state: 'OPEN', isDraft: true },
+    'ChadFarrow/app-one#9': { type: 'PullRequest', title: 'Fixture title nine', state: 'MERGED', mergedDaysAgo: 20 },
+    'ChadFarrow/app-one#11': { type: 'PullRequest', title: 'Fixture title eleven', state: 'MERGED', mergedDaysAgo: 5 },
+    'ChadFarrow/app-one#12': { type: 'PullRequest', title: `Fixture title twelve ${'w'.repeat(100)}`, state: 'MERGED', mergedDaysAgo: 3 },
+    'ChadFarrow/app-one#13': { type: 'PullRequest', title: 'Fixture title thirteen', state: 'CLOSED' },
+  },
+  titleRequests: 0,
+  // The to-do files by path. `api.todo` is notes/TODO.md.
+  todoFiles: new Map(TODO_FILES.map((f, i) => [f.path, { text: f.text, sha: `todo-${i}` }])),
+  get todo() { return this.todoFiles.get('notes/TODO.md'); },
   todoPuts: [],
   todoConflictOnce: false,
 };
@@ -188,6 +256,14 @@ const TOKENS = {
   'readonly-token': { write: false, sync: false },
   'nosync-token': { write: true, sync: false },
 };
+for (const may of Object.values(TOKENS)) Object.assign(may, { issues: false, pulls: false, private: true });
+Object.assign(TOKENS, {
+  'read-token': { write: false, sync: false, issues: false, pulls: false, private: true },
+  'read-few-token': { write: false, sync: false, issues: false, pulls: false, private: true, privateCount: 1 },
+  'read-error-token': { write: false, sync: false, issues: false, pulls: false, private: true, graphqlError: true },
+  'read-public-token': { write: false, sync: false, issues: false, pulls: false, private: false },
+  'read-write-token': { write: true, sync: false, issues: true, pulls: true, private: true },
+});
 const FORBIDDEN = [403, { message: 'Resource not accessible by personal access token' }];
 
 // → [status, body object or null]
@@ -201,23 +277,27 @@ function answer(method, url, auth, body) {
     api.probes++;
     return may.write ? [409, { message: 'README.md does not match' }] : FORBIDDEN;
   }
-  if (u.pathname === `/repos/${REPO}/contents/notes/TODO.md`) {
-    if (method === 'GET') return [200, { encoding: 'base64', content: b64(api.todo.text).replace(/(.{60})/g, '$1\n'), sha: api.todo.sha }];
+  const todoPath = /^\/repos\/ChadFarrow\/project-notes\/contents\/(notes\/(?:TODO\.md|todo\/[^/]+))$/.exec(u.pathname);
+  if (todoPath) {
+    // `path` stays as the page wrote it, so a check can see that the page encoded it.
+    const stored = api.todoFiles.get(decodeURIComponent(todoPath[1]));
+    if (!stored) return [404, { message: 'Not Found' }];
+    if (method === 'GET') return [200, { encoding: 'base64', content: b64(stored.text).replace(/(.{60})/g, '$1\n'), sha: stored.sha }];
     if (method === 'PUT') {
       if (!may.write) return FORBIDDEN;
       const put = JSON.parse(body);
-      api.todoPuts.push({ ...put, text: fromB64(put.content) });
+      api.todoPuts.push({ ...put, path: todoPath[1], text: fromB64(put.content) });
       if (api.todoConflictOnce) {
         // Someone else saved the file first.
         api.todoConflictOnce = false;
-        api.todo.text = `${api.todo.text}\n- [ ] Added in Obsidian\n`;
-        api.todo.sha = `todo-${api.nextSha++}`;
+        stored.text = `${stored.text}\n- [ ] Added in Obsidian\n`;
+        stored.sha = `todo-${api.nextSha++}`;
         return [409, { message: 'is at a different sha' }];
       }
-      if (put.sha !== api.todo.sha) return [409, { message: 'sha does not match' }];
-      api.todo.text = fromB64(put.content);
-      api.todo.sha = `todo-${api.nextSha++}`;
-      return [200, { content: { sha: api.todo.sha } }];
+      if (put.sha !== stored.sha) return [409, { message: 'sha does not match' }];
+      stored.text = fromB64(put.content);
+      stored.sha = `todo-${api.nextSha++}`;
+      return [200, { content: { sha: stored.sha } }];
     }
   }
   const note =/^\/repos\/ChadFarrow\/project-notes\/contents\/projects\/(.+)$/.exec(u.pathname);
@@ -249,6 +329,41 @@ function answer(method, url, auth, body) {
       stored.sha = `sha-${api.nextSha++}`;
       return [200, { content: { sha: stored.sha } }];
     }
+  }
+  // The read-token probes. They count apart from api.probes: no write, no sync.
+  if (method === 'POST' && (u.pathname === `/repos/${REPO}/issues` || u.pathname === `/repos/${REPO}/pulls`)) {
+    api.readProbes++;
+    const flag = u.pathname.endsWith('/issues') ? may.issues : may.pulls;
+    return flag ? [422, { message: 'Validation Failed' }] : FORBIDDEN;
+  }
+  if (method === 'POST' && u.pathname === '/graphql' && !JSON.parse(body).query.includes('viewer')) {
+    // The page's alias query for titles: `rN: repository(owner, name) { nM: issueOrPullRequest(number) … }`.
+    api.titleRequests++;
+    const data = {};
+    const errors = [];
+    for (const block of JSON.parse(body).query.split(/(?= r\d+: repository\()/).slice(1)) {
+      const [, alias, owner, name] = /(r\d+): repository\(owner: "([^"]+)", name: "([^"]+)"\)/.exec(block);
+      const numbers = [...block.matchAll(/(n\d+): issueOrPullRequest\(number: (\d+)\)/g)];
+      if (!numbers.some(([, , n]) => api.titles[`${owner}/${name}#${n}`])) {
+        data[alias] = null;
+        errors.push({ type: 'NOT_FOUND', path: [alias], message: `Could not resolve to a Repository with the name '${owner}/${name}'.` });
+        continue;
+      }
+      data[alias] = {};
+      for (const [, numberAlias, n] of numbers) {
+        const t = api.titles[`${owner}/${name}#${n}`];
+        data[alias][numberAlias] = t && {
+          __typename: t.type, title: t.title, state: t.state, isDraft: !!t.isDraft,
+          mergedAt: t.mergedDaysAgo === undefined ? null : new Date(Date.now() - t.mergedDaysAgo * 86400000).toISOString(),
+        };
+      }
+    }
+    return [200, errors.length ? { data, errors } : { data }];
+  }
+  if (method === 'POST' && u.pathname === '/graphql') {
+    api.readProbes++;
+    if (may.graphqlError) return [200, { errors: [{ message: 'Resource limit <b>boom</b>' }] }];
+    return [200, { data: { viewer: { repositories: { totalCount: may.private ? (may.privateCount ?? 3) : 0 } } } }];
   }
   if (method === 'POST' && u.pathname === `/repos/${REPO}/actions/workflows/sync-all.yml/dispatches`) {
     if (!may.sync) return FORBIDDEN;
@@ -473,13 +588,29 @@ async function main() {
     await shoot('board-desktop');
 
     // `todo || []`: the live site's data may predate the field (--host).
-    const todoItems = (data.todo || []).flatMap((s) => s.entries).filter((e) => e.type === 'item').length;
+    // What the page shows: a finished line is hidden, so count what `groupTodo` keeps.
+    const shownGroups = groupTodo(data.todo || []);
+    const todoItems = shownGroups.flatMap((g) => g.items).reduce((n, { top, subs }) => n + (top.type === 'item' ? 1 + subs.length : 0), 0);
     check('the to-do list comes first on the board', (await text('#content h2')) === 'To do');
     check('the to-do list shows every item', (await count('#todo-list .todo-item')) === todoItems, `${todoItems} items`);
     check('every to-do item has a box to mark it done', (await count('#todo-list .todo-item button.todo-box')) === todoItems);
 
     if (!HOST && !DATA_FILE) {
-      check('the to-do list shows the sections in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)')) === js(['app-one', 'Laptop']));
+      check('the to-do list shows the groups in order', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)'))
+        === js(shownGroups.map((g) => `${g.title} (${g.items.length})`))
+        && js(shownGroups.slice(0, 3).map((g) => g.title)) === js(['Before merge', 'After merge', 'In development']));
+      check('each top item names its repo', await evaluate(`(() => {
+        const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        const label = (words) => rows.find((li) => li.querySelector(':scope > .item-title').textContent.includes(words))?.querySelector(':scope > .item-title > .todo-repo')?.textContent;
+        return rows.length > 0 && rows.every((li) => li.querySelector(':scope > .item-title > .todo-repo')) && label('Test PR #8') === 'app-one' && label('Delete a folder.') === 'Laptop';
+      })()`));
+      check('a test shows where to do it', await evaluate(`(() => {
+        const mark = (words) => [...document.querySelectorAll('#todo-list .todo-subs .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(words))?.querySelector('.todo-place')?.textContent;
+        return mark('On the iPhone') === '📱 Phone' && mark('On the Pixel') === '📱 Phone' && mark('A long sub-item path') === '💻 Computer';
+      })()`));
+      check('#N links to the issue path of the heading repo', await evaluate(`[...document.querySelectorAll('#todo-list a[href="https://github.com/ChadFarrow/app-one/issues/8"]')].some((a) => a.textContent === '#8')`));
+      check('a range links both ends', await evaluate(`['11', '13'].every((n) => document.querySelector('#todo-list a[href="https://github.com/ChadFarrow/app-one/issues/' + n + '"]'))`));
+      check('owner/repo#N links that repo', await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/Upstream/thing/issues/4"]')`));
       check('the to-do list leaves out the words for editors', !(await text('#todo-list'))?.includes('Words for whoever edits'));
       check('a line of text in the to-do list shows', (await text('#todo-list'))?.includes('Two older items are in the app-one note.'));
       check('a link in the to-do list goes to its address', await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/ChadFarrow/app-one/pull/7"]')`));
@@ -490,7 +621,63 @@ async function main() {
       check('HTML in the to-do list stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined`)
         && (await text('#todo-list'))?.includes('<img src=x'));
       check('a code span in the to-do list is marked as code', await evaluate(`[...document.querySelectorAll('#todo-list code')].some((c) => c.textContent === '~/Vibe/app-one')`));
-      check('a ticked item in the to-do list looks done', (await text('#todo-list .todo-item.done'))?.includes('A finished item') && (await count('#todo-list .todo-item.done')) === 2);
+      check('a finished line in the to-do list is hidden', !(await text('#todo-list'))?.includes('A finished item'));
+      check('a ticked item with an open test stays, struck through', (await text('#todo-list .todo-item.done'))?.includes('Ticked PR #10') && (await count('#todo-list .todo-item.done')) === 1);
+      // ---- the folder notes ----
+      const rowJs = (words) => `[...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(${js(words)}))`;
+      const noteLineJs = (words) => `[...document.querySelectorAll('#todo-list .note-line')].find((p) => p.textContent.includes(${js(words)}))`;
+      const PLAYLIST = 'app-one - playlist tests';
+      const projectOptions = await evaluate(`[...document.querySelectorAll('#todo-project option')].map((o) => [o.value, o.textContent])`);
+      check('each folder note is a project in the filter, named after the file',
+        ['svc-core', PLAYLIST, 'Mac mini', 'app-one'].every((name) => projectOptions.some(([value, label]) => value === name && label.startsWith(`${name} (`))), js(projectOptions));
+      check('#N in a folder note links that note’s repo, and #3 in Mac mini stays text', await evaluate(`(() => {
+        const five = ${rowJs('Test #5')};
+        const link = five?.querySelector('a[href="https://github.com/ChadFarrow/svc-core/issues/5"]');
+        const mac = ${rowJs('Check the dock')};
+        return link?.textContent === '#5' && !!mac && mac.textContent.includes('#3') && !mac.querySelector('a');
+      })()`));
+      check('a heading shows once, without its words, and its items are in Before merge with the phone mark', await evaluate(`(() => {
+        const heads = [...document.querySelectorAll('#todo-list .todo-heading')].filter((p) => p.textContent.includes('The maker (#8)'));
+        if (heads.length !== 1) return false;
+        let before = heads[0].previousElementSibling;
+        while (before && !before.classList.contains('group-title')) before = before.previousElementSibling;
+        const list = heads[0].nextElementSibling;
+        const maker = ${rowJs('Test the maker #8')};
+        return before?.textContent.startsWith('Before merge') && list?.contains(maker) && maker.querySelector('.todo-place')?.dataset.place === 'phone'
+          && !/Before merge|Phone:/.test(heads[0].textContent) && heads[0].textContent.startsWith('1. The maker (#8)') && heads[0].tagName === 'P';
+      })()`));
+      check('the heading above each row belongs to the row’s own file', await evaluate(`(() => {
+        const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        let headed = 0;
+        for (const li of rows) {
+          if (!li.dataset.file) return false;
+          let el = li.parentElement.previousElementSibling;
+          while (el && !el.classList.contains('todo-heading') && !el.classList.contains('group-title')) el = el.previousElementSibling;
+          if (el?.classList.contains('todo-heading')) {
+            headed++;
+            if (el.dataset.file !== li.dataset.file) return false;
+          }
+        }
+        return rows.length > 0 && headed > 0;
+      })()`));
+      check('a plain bullet shows as text with no box', await evaluate(`(() => {
+        const p = ${noteLineJs('A plain bullet')};
+        return !!p && !p.querySelector('button') && !p.closest('.todo-item') && p.querySelector('a')?.getAttribute('href') === 'https://example.com/guide';
+      })()`));
+      check('a callout shows without its markers', await evaluate(`${noteLineJs('Beta is real')}?.textContent === 'Beta is real'`));
+      check('a tab-indented test sits under its item', await evaluate(`(() => {
+        const top = ${rowJs('Play the whole list')};
+        return [...(top?.querySelectorAll(':scope > .todo-subs > .todo-item') || [])].map((li) => li.textContent.trim()).some((t) => t.includes('Tab-indented test'));
+      })()`));
+      const listText = (await text('#todo-list')) || '';
+      check('a ticked test and the Already works line are hidden', !listText.includes('Ticked sibling test') && !listText.includes('It publishes') && !listText.includes('Already works'));
+      check('HTML in a heading stays text', await evaluate(`!document.querySelector('#todo-list img') && window.__xss === undefined
+        && [...document.querySelectorAll('#todo-list .todo-heading')].some((p) => p.textContent === 'Words <img src=x onerror="window.__xss=1"> in a heading')`));
+      check('a relative link in a folder note resolves against that note', await evaluate(`(() => {
+        const links = [...document.querySelectorAll('#todo-list a')].map((a) => a.getAttribute('href'));
+        return links.includes('https://github.com/${REPO}/blob/main/projects/svc-core.md') && links.includes('https://github.com/${REPO}/blob/main/notes/todo/Mac%20mini.md');
+      })()`));
+
       const subFacts = await evaluate(`(() => {
         const row = (words) => [...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(words));
         const top = row('Test PR #8');
@@ -544,6 +731,39 @@ async function main() {
     check('the chosen filter is remembered after a reload', await evaluate('document.querySelector(\'#status-filter input[value="conflict"]\').checked'));
     await click('#status-filter input[value="all"]');
 
+    if (!HOST && !DATA_FILE) {
+      const repoLabels = () => count('#todo-list .todo-item > .item-title > .todo-repo');
+      await fill('#todo-project', 'Laptop');
+      check('the project filter shows one project, without repo labels', (await count('#todo-list .todo-item')) === 1
+        && (await text('#todo-list'))?.includes('Delete a folder.') && (await repoLabels()) === 0
+        && (await text('#todo-project'))?.includes('app-one (') && (await text('#todo-project'))?.includes('Laptop (1)'));
+      check('a one-project view still shows the empty groups', js(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].map((t) => t.textContent)'))
+        === js(['Before merge (0)', 'After merge (0)', 'In development (1)', 'Not sorted (0)'].filter((t) => !t.startsWith('Not sorted')))
+        && (await count('#todo-list .todo-empty')) === 2);
+      await fill('#todo-project', 'all');
+      await fill('#todo-place', 'phone');
+      const phoneFacts = await evaluate(`(() => {
+        const top = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        const subs = [...document.querySelectorAll('#todo-list .todo-subs .todo-item')];
+        return { top: top.length, subs: subs.length, allPhone: subs.every((li) => li.querySelector('.todo-place')?.dataset.place === 'phone'),
+          text: document.querySelector('#todo-list .note-line') !== null };
+      })()`);
+      const phoneShown = groupTodo(data.todo, { project: 'all', place: 'phone' }).flatMap((g) => g.items);
+      const phoneSubs = phoneShown.reduce((n, { subs }) => n + subs.length, 0);
+      check('the place filter shows only phone tests', phoneFacts.top === phoneShown.length && phoneFacts.subs === phoneSubs && phoneSubs >= 2 && phoneFacts.allPhone && !phoneFacts.text
+        && !(await text('#todo-list'))?.includes('A long sub-item path'), js(phoneFacts));
+      await go();
+      check('the to-do filters are remembered after a reload', (await evaluate('document.querySelector("#todo-place").value')) === 'phone'
+        && (await count('#todo-list .todo-item')) === phoneShown.length + phoneSubs);
+      await fill('#todo-place', 'all');
+      await evaluate(`localStorage.setItem('pn:todoView', ${js(js({ project: 'gone' }))})`);
+      await go();
+      check('a stored project that is gone falls back to all', (await evaluate('document.querySelector("#todo-project").value')) === 'all'
+        && (await count('#todo-list .todo-item')) === todoItems);
+      await evaluate('localStorage.removeItem("pn:todoView")');
+      await go();
+    }
+
     const category = data.categories.find((c) => active.some((p) => p.category === c && c !== 'Uncategorized')) || data.categories[0];
     await fill('#category', category);
     await sleep(100);
@@ -587,16 +807,16 @@ async function main() {
       await click('article.project[data-project="app-one"] .edit-button');
       check('Edit without a token asks for one', await waitFor('document.querySelector("#token-dialog").open'));
       await fill('#t-token', 'wrong-token');
-      await click('#token-dialog .primary');
-      check('a refused token gets a clear message', await waitFor('document.querySelector("#token-dialog .status").textContent.includes("refused")'));
+      await click('#token-dialog .sheet-foot .primary');
+      check('a refused token gets a clear message', await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("refused")'));
       await shoot('token', { full: false });
       await fill('#t-token', 'readonly-token');
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a token that cannot write is refused at setup',
-        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot save notes")'));
+        await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("cannot save notes")'));
       check('a refused token is not kept', (await evaluate('localStorage.getItem("pn:token")')) === null);
       await fill('#t-token', api.goodToken);
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a good token opens the editor', await waitFor('document.querySelector("#editor").open && document.querySelector("#f-category")'));
       check('the token is kept in this browser', (await evaluate('localStorage.getItem("pn:token")')) === js(api.goodToken));
       check('the access probes start no sync and write nothing', api.probes > 0 && api.dispatches === 0 && api.puts.length === 0);
@@ -689,7 +909,7 @@ async function main() {
       check('the token sheet opens over the editor', await waitFor('document.querySelector("#token-dialog").open && document.querySelector("#editor").open'));
       api.revoked = false;
       await fill('#t-token', api.goodToken);
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       await waitFor('!document.querySelector("#token-dialog").open');
       check('the edit is still there after the new token', (await evaluate('document.querySelector("#f-s1").value')) === 'Kept across a new token');
       await click('#editor .sheet-foot .primary');
@@ -716,13 +936,101 @@ async function main() {
       await click('#token-button');
       await waitFor('document.querySelector("#token-dialog").open');
       await fill('#t-token', 'nosync-token');
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       check('a token without Actions is kept, with a warning',
-        await waitFor('document.querySelector("#token-dialog .status").textContent.includes("cannot start the sync")')
-        && (await text('#token-dialog .primary')) === 'Continue'
+        await waitFor('document.querySelector("#token-dialog .sheet-foot .status").textContent.includes("cannot start the sync")')
+        && (await text('#token-dialog .sheet-foot .primary')) === 'Continue'
         && (await evaluate('localStorage.getItem("pn:token")')) === js('nosync-token'));
-      await click('#token-dialog .primary');
+      await click('#token-dialog .sheet-foot .primary');
       await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+
+      // ---- the read token ----
+      const sideBefore = [api.dispatches, api.puts.length];
+      const editingBefore = await evaluate('localStorage.getItem("pn:token")');
+      await click('#token-button');
+      await waitFor('document.querySelector("#token-dialog").open');
+      check('the token sheet has a part for the read token', await evaluate('!!document.querySelector("#token-dialog #read-token-part #t-read-token")'
+        + ' && document.querySelector("#read-token-part h3").textContent === "Titles of PRs and issues"'
+        + ' && document.querySelector("#read-token-part").textContent.includes("All repositories")'));
+      const readStatus = '#read-token-part .status';
+      const readGo = '#read-token-part .primary';
+      await fill('#t-read-token', 'read-write-token');
+      await click(readGo);
+      check('a read token that can write is refused',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("Make a read-only one")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      await fill('#t-read-token', 'read-public-token');
+      await click(readGo);
+      check('a read token without All repositories is refused',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("All repositories")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      if (!DATA_FILE) {
+        await fill('#t-read-token', 'read-few-token');
+        await click(readGo);
+        check('a read token that sees fewer private repos than the dashboard has is refused',
+          await waitFor(`document.querySelector("${readStatus}").textContent.includes("All repositories")`)
+          && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      }
+      await fill('#t-read-token', 'read-error-token');
+      await click(readGo);
+      check('a GraphQL answer with errors and no data says GitHub could not check, as text',
+        await waitFor(`document.querySelector("${readStatus}").textContent === "GitHub could not check this token: Resource limit <b>boom</b>"`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null);
+      await fill('#t-read-token', 'wrong-token');
+      await click(readGo);
+      check('a wrong read token is refused by GitHub',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("GitHub refused this token")`));
+      await fill('#t-read-token', 'read-token');
+      await click(readGo);
+      check('a good read token is kept',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("is saved")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === js('read-token'));
+      check('the editing token is untouched by the read token', (await evaluate('localStorage.getItem("pn:token")')) === editingBefore);
+      check('the read-token probes start no sync and write nothing', api.readProbes > 0 && api.dispatches === sideBefore[0] && api.puts.length === sideBefore[1]);
+      await click('#read-token-part .danger');
+      check('the read token can be forgotten',
+        await waitFor(`document.querySelector("${readStatus}").textContent.includes("removed")`)
+        && (await evaluate('localStorage.getItem("pn:readToken")')) === null
+        && (await evaluate('localStorage.getItem("pn:token")')) === editingBefore);
+      await evaluate('document.querySelector("#token-dialog").close()');
+
+      // ---- titles and out-of-date marks (the read token is set only for this part) ----
+      const row = (words) => `[...document.querySelectorAll('#todo-list .todo-item')].find((li) => li.querySelector(':scope > .item-title').textContent.includes(${js(words)}))`;
+      const refLines = (words) => evaluate(`[...(${row(words)}?.querySelectorAll(':scope > .todo-refs > .todo-ref') || [])].map((p) => p.textContent)`);
+      const mark = (words) => evaluate(`(() => { const m = ${row(words)}?.querySelector(':scope > .item-title > .todo-mark'); return m ? [m.textContent, m.className] : null; })()`);
+      await go();
+      const requestsBefore = api.titleRequests;
+      check('without a read token there are no title lines', (await count('#todo-list .todo-ref')) === 0 && (await count('#todo-list .todo-mark')) === 0
+        && (await count('#todo-list .todo-note')) === 0 && (await count('#todo-list .todo-item')) > 0 && api.titleRequests === requestsBefore);
+      await evaluate(`localStorage.setItem('pn:readToken', ${js(js('read-token'))})`);
+      await go();
+      check('with a read token, each PR shows its title and state', await waitFor(`document.querySelector('#todo-list .todo-ref')`)
+        && js(await refLines('Test PR #8')) === js(['#8 Fixture title eight · draft'])
+        && js(await refLines('Test PR #9')) === js(['#9 Fixture title nine · merged'])
+        && js(await refLines('PRs #11')) === js(['#11 Fixture title eleven · merged', `#12 Fixture title twelve ${'w'.repeat(100)} · merged`, '#13 Fixture title thirteen · closed']),
+      js([await refLines('Test PR #8'), await refLines('PRs #11')]));
+      check('a PR the token cannot see keeps its link and gets no title',
+        await evaluate(`!!document.querySelector('#todo-list a[href="https://github.com/Upstream/thing/issues/4"]')`)
+        && !(await evaluate(`[...document.querySelectorAll('#todo-list .todo-ref')].some((p) => p.textContent.includes('Upstream'))`)));
+      check('a before-merge line whose PRs all merged or closed is marked',
+        js(await mark('PRs #11')) === js(['PRs #11, #12 and #13 are merged or closed: is this still needed?', 'todo-mark wait'])
+        && (await mark('Test PR #8')) === null);
+      check('an after-merge line shows its age with the warning colour after 14 days',
+        js(await mark('Test PR #9')) === js(['merged 20 days ago', 'todo-mark wait']));
+      check('a title is text, and the page asks GitHub once for all of them', (await count('#todo-list .todo-ref *')) === 0 && api.titleRequests === requestsBefore + 1);
+      const served = await evaluate(`fetch('data.json', { cache: 'no-store' }).then((r) => r.text())`);
+      check('no title reaches data.json', typeof served === 'string' && served.length > 0 && !served.includes('Fixture title'));
+      api.revoked = true;
+      await go();
+      check('a refused read token shows one line and the list still works', await waitFor(`document.querySelector('#todo-list .todo-note')`)
+        && (await count('#todo-list .todo-note')) === 1 && (await text('#todo-list .todo-note'))?.includes('GitHub refused the read token.')
+        && (await count('#todo-list .todo-ref')) === 0 && (await count('#todo-list .todo-box')) > 0);
+      await click('#todo-list .todo-note button');
+      check('that line offers the token sheet', await waitFor('document.querySelector("#token-dialog").open'));
+      await evaluate('document.querySelector("#token-dialog").close()');
+      api.revoked = false;
+      await evaluate('localStorage.removeItem("pn:readToken")');
+      await go();
 
       // ---- deleting a to-do item ----
       const ownWords = `:scope > .item-title`;
@@ -736,7 +1044,7 @@ async function main() {
       const tapSub = (top, words) => evaluate(`[...(${subRows(top)} || [])].find((li) => li.querySelector('${ownWords}').textContent.includes(${js(words)}))?.querySelector('.todo-box')?.click()`);
       const sheetOpen = 'document.querySelector("#todo-dialog").open';
       const FOLDER = 'Delete a folder.';
-      const withoutFolder = TODO_TEXT.replace(`- [ ] ${FOLDER}\n`, '');
+      const withoutFolder = TODO_TEXT.replace(`- [ ] In development: ${FOLDER}\n`, '');
 
       await go();
       await tapBox(FOLDER);
@@ -744,6 +1052,19 @@ async function main() {
         && (await text('#todo-dialog'))?.includes(FOLDER) && api.todoPuts.length === 0);
       await click('#todo-dialog .cancel-button');
       check('Cancel keeps the item and saves nothing', await waitFor(`!${sheetOpen}`) && (await showsItem(FOLDER)) && api.todoPuts.length === 0);
+
+      // R4: press the box under a place filter, read the count, and cancel. Nothing is deleted.
+      await evaluate(`localStorage.setItem('pn:token', ${js(js(api.goodToken))})`);
+      await go();
+      await fill('#todo-place', 'phone');
+      await tapBox('Test PR #8');
+      await waitFor(sheetOpen);
+      check('deleting an item under a place filter still counts every test under it', (await text('#todo-dialog'))?.includes('its 3 sub-items')
+        && (await text('#todo-dialog .primary')) === 'Delete all 4' && api.todoPuts.length === 0);
+      await click('#todo-dialog .cancel-button');
+      await waitFor(`!${sheetOpen}`);
+      await fill('#todo-place', 'all');
+      await go();
 
       const dispatchesBefore = api.dispatches;
       await tapBox(FOLDER);
@@ -755,7 +1076,8 @@ async function main() {
       check('the delete commits to main and names the item', api.todoPuts[0]?.branch === 'main' && api.todoPuts[0]?.message.includes(FOLDER));
       check('the page starts no sync: the push does that', api.dispatches === dispatchesBefore);
       check('the item leaves the page at once', !(await showsItem(FOLDER)));
-      check('a section with nothing left leaves the page', !(await evaluate('[...document.querySelectorAll("#todo-list .group-title")].some((t) => t.textContent === "Laptop")')));
+      check('a group with nothing left stays, and says None.', (await evaluate('[...document.querySelectorAll("#todo-list .group-title")].some((t) => t.textContent === "In development (0)")'))
+        && (await text('#todo-list .todo-empty')) === 'None.');
       await go();
       check('the item stays away after a reload, while the data is older than the delete', !(await showsItem(FOLDER)));
 
@@ -777,15 +1099,15 @@ async function main() {
 
       // Someone else saved the file while the sheet was open.
       api.todoConflictOnce = true;
-      await tapBox('A finished item');
+      await tapBox('A bad link');
       await waitFor(sheetOpen);
       await click('#todo-dialog .primary');
       check('a conflict is retried and keeps the other edit', await waitFor(`!${sheetOpen}`)
-        && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A finished item'));
+        && api.todo.text.includes('- [ ] Added in Obsidian') && !api.todo.text.includes('A [bad link]'));
 
       // ---- sub-items: the same words sit under PR #8 and PR #9 ----
       const IPHONE = 'On the iPhone';
-      const under9 = '- [ ] Test PR #9\n  - [ ] On the iPhone\n';
+      const under9 = '- [ ] After merge: Test PR #9\n  - [ ] On the iPhone\n';
       let puts = api.todoPuts.length;
       await tapSub('Test PR #9', IPHONE);
       await waitFor(sheetOpen);
@@ -795,8 +1117,8 @@ async function main() {
       await click('#todo-dialog .primary');
       await waitFor(`!${sheetOpen}`);
       check('a sub-item is deleted from under its own item only', api.todoPuts.length === puts + 1
-        && !api.todo.text.includes(under9) && api.todo.text.includes('- [ ] Test PR #9\n')
-        && api.todo.text.includes('- [ ] Test PR #8\n  - [ ] On the iPhone\n'));
+        && !api.todo.text.includes(under9) && api.todo.text.includes('- [ ] After merge: Test PR #9\n')
+        && api.todo.text.includes('- [ ] Before merge: Test PR #8\n  - [ ] Phone: On the iPhone\n'));
       check('the same words under another item stay on the page', (await showsSub('Test PR #8', IPHONE)) && !(await showsSub('Test PR #9', IPHONE)));
       check('the top item stays when its last sub-item goes', await showsItem('Test PR #9'));
       await go();
@@ -813,7 +1135,7 @@ async function main() {
 
       // Another machine added a line inside the group, so the group on the page is out of date.
       const beforeOther = api.todo.text;
-      api.todo.text = beforeOther.replace('  - [ ] On the Pixel\n', '  - [ ] On the Pixel\n  - [ ] New on the other machine\n');
+      api.todo.text = beforeOther.replace('  - [ ] Phone: On the Pixel\n', '  - [ ] Phone: On the Pixel\n  - [ ] New on the other machine\n');
       await tapBox('Test PR #8');
       await waitFor(sheetOpen);
       await click('#todo-dialog .primary');
@@ -831,10 +1153,92 @@ async function main() {
       await waitFor(`!${sheetOpen}`);
       check('a top item is deleted with its sub-items, and the next item stays', api.todoPuts.length === puts + 1
         && !api.todo.text.includes('Test PR #8') && !api.todo.text.includes('On the Pixel') && !api.todo.text.includes('A long sub-item path')
-        && api.todo.text.includes('- [ ] Test PR #9\n'));
+        && api.todo.text.includes('- [ ] After merge: Test PR #9\n'));
       check('the group leaves the page at once', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
       await go();
       check('the group stays away after a reload', !(await showsItem('Test PR #8')) && !(await evaluate(`document.querySelector('#todo-list').textContent.includes('On the Pixel')`)));
+
+      // ---- the folder notes: each delete goes to its own file ----
+      const NOTE = 'notes/todo/app-one - playlist tests.md';
+      const SVC = 'notes/todo/svc-core.md';
+      const noteText = (file) => api.todoFiles.get(file).text;
+      const mainSha = api.todo.sha;
+      const mainText = api.todo.text;
+      const noteBefore = noteText(NOTE);
+      puts = api.todoPuts.length;
+      await tapBox('Test the maker #8');
+      await waitFor(sheetOpen);
+      check('the sheet of a folder note names its file', (await text('#todo-dialog'))?.includes(NOTE) && api.todoPuts.length === puts);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      check('deleting in a folder note PUTs only that file, without that line, and names the file', api.todoPuts.length === puts + 1
+        && api.todoPuts[puts].path === 'notes/todo/app-one%20-%20playlist%20tests.md'
+        && api.todoPuts[puts].text === noteBefore.replace('- [ ] Test the maker #8\n', '') && noteText(NOTE) === api.todoPuts[puts].text
+        && api.todoPuts[puts].message.includes('Test the maker') && api.todoPuts[puts].branch === 'main'
+        && api.todo.sha === mainSha && api.todo.text === mainText && noteText(SVC) === SVC_NOTE, `${api.todoPuts[puts]?.path}`);
+
+      // The same sub-test under two items of one note: the second item's goes, the first's stays.
+      puts = api.todoPuts.length;
+      await tapSub('Test #6', 'On the svc phone');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      const sub = '  - [ ] Phone: On the svc phone\n';
+      const svcSecond = SVC_NOTE.lastIndexOf(sub);
+      check('a test is deleted only from under its own item', api.todoPuts.length === puts + 1 && api.todoPuts[puts].path === SVC
+        && noteText(SVC) === SVC_NOTE.slice(0, svcSecond) + SVC_NOTE.slice(svcSecond + sub.length)
+        && (await showsSub('Test #5', 'On the svc phone')) && !(await showsSub('Test #6', 'On the svc phone')));
+
+      // The same words in two notes: the one in svc-core goes, the one in the playlist note stays, also after a reload.
+      const twice = () => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same words twice'))
+        .map((li) => li.querySelector(':scope > .item-title > .todo-repo')?.textContent).sort()`);
+      puts = api.todoPuts.length;
+      check('both lines of the same words show, one per note', js(await twice()) === js([PLAYLIST_TITLE, 'svc-core']));
+      await fill('#todo-project', 'svc-core');
+      await tapBox('Same words twice');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      await fill('#todo-project', 'all');
+      const leftAfterDelete = js(await twice());
+      await go();
+      check('the same words in two notes: deleting one leaves the other, also after a reload', api.todoPuts.length === puts + 1
+        && !noteText(SVC).includes('Same words twice') && noteText(NOTE).includes('- [ ] Same words twice\n')
+        && leftAfterDelete === js([PLAYLIST_TITLE]) && js(await twice()) === js([PLAYLIST_TITLE]));
+
+      // The same words under two headings of one note: the second one goes.
+      const SAME = '- [ ] Same in two sections\n';
+      const sameRows = () => evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same in two sections')).length`);
+      const noteNow = noteText(NOTE);
+      const firstAt = noteNow.indexOf(SAME);
+      const secondAt = noteNow.indexOf(SAME, firstAt + 1);
+      puts = api.todoPuts.length;
+      check('both lines under two headings show', (await sameRows()) === 2 && firstAt >= 0 && secondAt > firstAt);
+      await evaluate(`[...document.querySelectorAll('#todo-list .todo-item')].filter((li) => li.querySelector(':scope > .item-title').textContent.includes('Same in two sections'))[1].querySelector('.todo-box').click()`);
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      await waitFor(`!${sheetOpen}`);
+      const keptFirst = noteNow.slice(0, secondAt) + noteNow.slice(secondAt + SAME.length);
+      check('the same words under two headings of one note: deleting the second leaves the first', api.todoPuts.length === puts + 1
+        && api.todoPuts[puts].text === keptFirst && noteText(NOTE) === keptFirst && (await sameRows()) === 1);
+      await go();
+      check('the first of the two stays after a reload', (await sameRows()) === 1);
+
+      // A note was deleted in Obsidian, and the page is older than that.
+      const MAC_PATH = 'notes/todo/Mac mini.md';
+      const macFile = api.todoFiles.get(MAC_PATH);
+      api.todoFiles.delete(MAC_PATH);
+      puts = api.todoPuts.length;
+      await tapBox('Check the dock');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a note deleted in Obsidian says the line is not in the file, with no HTTP message',
+        await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("not in the file")')
+        && !(await text('#todo-dialog .status'))?.includes('404') && api.todoPuts.length === puts && !(await showsItem('Check the dock')));
+      await click('#todo-dialog .cancel-button');
+      api.todoFiles.set(MAC_PATH, macFile);
+      await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+      await go();
 
       // The token stops working.
       api.revoked = true;
@@ -882,8 +1286,11 @@ async function main() {
     await go();
     // The delete checks hid items. Show the whole list, so the long sub-item is measured too.
     await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+    // With a read token, so the title lines (one has a 100-letter word) are measured too.
+    if (EDITOR_CHECKS) await evaluate(`localStorage.setItem('pn:readToken', ${js(js('read-token'))})`);
     await go();
-    const overflow = () => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
+    if (EDITOR_CHECKS) await waitFor(`document.querySelector('#todo-list .todo-ref')`);
+    const overflow =() => evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth');
     check('the phone layout has no sideways scroll', (await overflow()) <= 0, `${await overflow()}px`);
     const todoOverflow = await evaluate('(() => { const l = document.querySelector("#todo-list"); return l ? l.scrollWidth - l.clientWidth : 1; })()');
     check('the to-do list fits the phone width', todoOverflow <= 0, `${todoOverflow}px`);
@@ -892,6 +1299,18 @@ async function main() {
       check('a sub-item box is at least 24 by 24 px on the phone', subBox && subBox[0] >= 24 && subBox[1] >= 24, js(subBox));
       const longSubRight = await evaluate(`(() => { const c = document.querySelector('#todo-list .todo-subs code'); return c ? c.closest('.todo-item').getBoundingClientRect().right : null; })()`);
       check('a long sub-item wraps inside the phone width', longSubRight !== null && longSubRight <= 390, js(longSubRight));
+      const wide = await evaluate(`(() => {
+        const heads = [...document.querySelectorAll('#todo-list .todo-heading')];
+        const labels = [...document.querySelectorAll('#todo-list .todo-repo')].filter((el) => el.textContent.includes('playlist tests'));
+        const right = (els) => Math.max(...els.map((el) => el.getBoundingClientRect().right));
+        return { heads: heads.length, labels: labels.length, headRight: right(heads), labelRight: right(labels),
+          longHead: heads.some((el) => el.textContent.includes(${js(LONG_WORD)})) };
+      })()`);
+      check('a long heading and a long note label wrap within 390 px', wide.heads > 0 && wide.longHead && wide.labels > 0 && wide.headRight <= 390 && wide.labelRight <= 390, js(wide));
+    }
+    if (EDITOR_CHECKS) {
+      const refRight = await evaluate(`Math.max(...[...document.querySelectorAll('#todo-list .todo-ref, #todo-list .todo-mark')].map((p) => p.getBoundingClientRect().right))`);
+      check('long title lines and marks wrap inside the phone width', (await count('#todo-list .todo-ref')) >= 4 && refRight <= 390, js(refRight));
     }
     await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=false]")) b.click();
       for (const d of document.querySelectorAll("details")) d.open = true;`);
@@ -924,8 +1343,18 @@ async function main() {
       check('every control in the to-do sheet is at least 24 by 24 px', smallInTodo.length === 0, smallInTodo.map((s) => s.join(' ')).join(' | '));
       await shoot('todo-sheet-mobile', { full: false });
       await click('#todo-dialog .cancel-button');
+
+      await click('#token-button');
+      await waitFor('document.querySelector("#token-dialog").open');
+      const tokenSheetOverflow = await evaluate('(() => { const d = document.querySelector("#token-dialog .sheet-body"); return d.scrollWidth - d.clientWidth; })()');
+      check('the token sheet fits the phone width', tokenSheetOverflow <= 0, `${tokenSheetOverflow}px`);
+      const smallInToken = await smallTargets();
+      check('every control in the token sheet is at least 24 by 24 px', smallInToken.length === 0, smallInToken.map((s) => s.join(' ')).join(' | '));
+      await shoot('token-sheet-mobile', { full: false });
+      await evaluate('document.querySelector("#token-dialog").close()');
     }
     await send('Emulation.clearDeviceMetricsOverride');
+    if (EDITOR_CHECKS) await evaluate('localStorage.removeItem("pn:readToken")');
 
     check('no errors during the whole run', logErrors.length === 0, logErrors.join(' | '));
     check('the security policy blocked nothing during the whole run', (await evaluate('window.__csp.length')) === 0);
