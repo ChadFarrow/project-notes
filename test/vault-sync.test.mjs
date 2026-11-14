@@ -90,6 +90,17 @@ test('a new note and a note edit from the vault reach the remote', () => {
   assert.equal(read(seed, 'projects/a.md'), note('mine, plus a TODO', 'block v1'));
 });
 
+test('a note made in notes/todo/ in the vault reaches the remote, and so does a tick in it', () => {
+  write(vault, 'notes/todo/app one.md', '- [ ] Test it\n');
+  assert.equal(run().status, 0);
+  git(seed, 'pull', '-q', '--rebase', 'origin', 'main');
+  assert.equal(read(seed, 'notes/todo/app one.md'), '- [ ] Test it\n');
+  write(vault, 'notes/todo/app one.md', '- [x] Test it\n');
+  assert.equal(run().status, 0);
+  git(seed, 'pull', '-q', '--rebase', 'origin', 'main');
+  assert.equal(read(seed, 'notes/todo/app one.md'), '- [x] Test it\n');
+});
+
 test('a new AUTO block and dashboard from the remote reach the vault and keep the vault text', () => {
   pushFromSeed({ 'projects/a.md': note('mine, plus a TODO', 'block v2'), 'LATEST.md': 'dashboard v2\n' }, 'Auto-sync');
   const commits = originLog();

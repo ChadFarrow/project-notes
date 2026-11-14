@@ -4,8 +4,9 @@
   Two-way sync between ~/Vibe/project-notes and the iCloud vault "project-notes".
   Edit this template, not the copy in ~/Library/LaunchAgents.
 
-  WatchPaths is the fast path: it fires when the vault's projects/ or notes/ folder
-  changes, which covers a note saved on the phone once iCloud brings it down. It is
+  WatchPaths is the fast path: it fires when the vault's projects/, notes/ or notes/todo/
+  folder changes (notes/todo/ is listed on its own because a tick in a to-do note
+  changes that folder, not notes/), which covers a note saved on the phone once iCloud brings it down. It is
   not recursive and does not see every in-place write, so StartInterval is the
   backstop. The script waits 30 s after a trigger, so a burst of saves is one sync.
   A run with nothing to do writes nothing and logs nothing.
@@ -36,6 +37,7 @@
     <array>
         <string>/Users/chad-mini/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes/projects</string>
         <string>/Users/chad-mini/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes/notes</string>
+        <string>/Users/chad-mini/Library/Mobile Documents/iCloud~md~obsidian/Documents/project-notes/notes/todo</string>
     </array>
 
     <key>StartInterval</key>
