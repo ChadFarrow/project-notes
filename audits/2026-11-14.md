@@ -96,7 +96,7 @@
 
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 49 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
