@@ -2,3 +2,7 @@
   - [ ] In Safari or the Home Screen app, on boostmebitch.com, play a live show. While it plays on time, the row says `● LIVE` and shows no button.
   - [ ] When the audio stops to buffer for more than 5 s, the second line then says "N s behind live" and ⏭ GO LIVE shows. Press it: the audio jumps ahead, and the line goes back to the show name.
   - [ ] Lock the screen for a few minutes, then open the player: the number is right, and GO LIVE still works.
+
+- [ ] After merge: Computer: #568 (follow a favorite whose feed host closed, RSS Blue) is deployed. Test it in the browser that showed the missing covers, signed in as yourself; the browser tests used a throwaway key and a copy of your list, never your own browser's saved rows.
+  - [ ] Computer: open /favorites. Worried (Suzanne Santo) shows the Fountain cover after one load, and it plays.
+  - [ ] Computer: Mr. Videoman, Runaway Train and Keep Searching show "RSS Blue closed. Found:" with REPLACE. Press REPLACE on one: the album moves to the new copy, keeps its place in the list, and plays.
