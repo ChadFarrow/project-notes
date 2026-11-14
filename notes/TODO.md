@@ -20,7 +20,7 @@ blank line ends the group.
   - [ ] Favorite a community playlist and one of its songs.
   - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
   - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
-- [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
+- [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); may the `CLAUDE.md` word limit go up so its Names line can be fixed. (Decided 2026-11-14: UNBAN does not ask first.)
 - [ ] PR #541, ⤮ SHUFFLE for the favorite singles, is merged (2026-11-14). It passed on your iPhone on beta. One check waited for the merge:
   - [ ] In the Home Screen app on boostmebitch.com, open `/favorites`, press SINGLES, then ⤮ SHUFFLE: the first track plays at once, with no second ▶.
 - [ ] Decide on PR #550 (beta only: the next track's file downloads about 30 s early), and tell Claude: keep it on beta, make it a real feature, or close it. In your background tests every normal track change after an early download started at once (bug reports #555 and #557).
