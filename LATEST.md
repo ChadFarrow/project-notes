@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 17:34 UTC
+# Dashboard — 2026-11-14 17:38 UTC
 
 19 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -19,7 +19,7 @@
 
 - [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 17 hours ago · 1 comment
 - [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 17 hours ago · 1 comment
-- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 17 hours ago · 1 comment
+- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 18 hours ago · 1 comment
 - [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 18 hours ago · 1 comment
 - [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 21 hours ago · 1 comment
 - [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 1 day ago · 1 comment
