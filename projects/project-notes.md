@@ -22,7 +22,8 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-### Pull requests (1)
+### Pull requests (2)
 
+- [#25 To do: one Obsidian note per repo (notes/todo/)](https://github.com/ChadFarrow/project-notes/pull/25) — opened 2026-11-14
 - [#24 To do: groups, place marks, filters, PR links and titles](https://github.com/ChadFarrow/project-notes/pull/24) — opened 2026-11-13
 <!-- AUTO:END -->
