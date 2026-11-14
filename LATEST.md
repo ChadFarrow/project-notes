@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-14 23:12 UTC
+# Dashboard — 2026-11-14 23:28 UTC
 
-20 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+21 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -92,13 +92,14 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-6 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+7 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#567 feat(gifs): playing GIF grid; boostmebitch.com searches gifs.nostr.build](https://github.com/ChadFarrow/boostmebitch/pull/567) — opened 1 hour ago · draft
+- PR [#569 feat(episode): the album/show name on the episode page opens its page](https://github.com/ChadFarrow/boostmebitch/pull/569) — opened 2 minutes ago · draft
+- PR [#567 feat(gifs): playing GIF grid; boostmebitch.com searches gifs.nostr.build](https://github.com/ChadFarrow/boostmebitch/pull/567) — opened 2 hours ago · draft
 - PR [#564 feat(gifs): ask GIPHY for pg-13 on boostmebuddy.com too](https://github.com/ChadFarrow/boostmebitch/pull/564) — opened 3 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 49 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview) — no PR
