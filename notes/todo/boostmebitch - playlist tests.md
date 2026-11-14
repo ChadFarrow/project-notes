@@ -22,7 +22,8 @@ Community playlists, beta test list. Written 2026-11-14.
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
 - [ ] Reload the page while you build a playlist. The draft must come back
 - [ ] Set an art link: a square PNG or JPEG, 1400–3000 px. The cover must show that art
-- [ ] Set a small or non-square art link. The site must refuse it
+- [ ] Set a non-square art link, or one with a transparent background. The site must accept it, and the feed's `itunes:image` must be your own link
+- [ ] Set an art link whose shortest side is under 300 px, or one that is not a PNG or JPEG. The site must refuse it and give the reason
 - [ ] Open one playlist in EDIT on two devices. Save on the first, then on the second. The second must say "changed elsewhere"
 - [ ] Tap SHARE and the copy buttons. The link must reach the clipboard
 - [ ] Delete a test playlist. Its feed must then answer 410
