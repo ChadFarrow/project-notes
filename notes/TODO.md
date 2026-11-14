@@ -33,10 +33,6 @@ blank line ends the group.
 
 ## Command-Center
 
-- [ ] Episode 014 (recorded 2026-11-11) is the first show with the final Audio Hijack levels (set on 2026-11-08). Its files are on the candr share in `episodes/014/`. Audio Hijack's folder has no recording of that show, so keep its Recorder on at the next show: it records what goes into Riverside.
-  - [ ] Listen to episode 014: the clips and the music sit at about the level of your voice, with no cuts and no pumping. If not, tell Claude which file you heard.
-  - [ ] Ask Reed whether the clips are clear and at a good level against your voice on his side of the call.
-
 - [ ] Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
 
 - [ ] Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
