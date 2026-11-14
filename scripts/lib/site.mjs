@@ -255,9 +255,11 @@ export function parseTodoList(text, { owner, repos = [], title } = {}) {
 }
 
 // The to-do files → sections: notes/TODO.md first (read as before), then each note of
-// notes/todo/ by lower-case path. Any other path is ignored. Every entry carries its `file`.
+// notes/todo/ by lower-case note name. Any other path is ignored. Every entry carries its `file`.
 export function parseTodoFiles(files, { owner, repos = [] } = {}) {
-  const rank = (path) => (path === TODO_FILE ? '' : path.toLowerCase());
+  // By the note name, not the path: in a path the space of "boostmebitch - playlist tests.md"
+  // sorts before the "." of "boostmebitch.md", and the main note should come first.
+  const rank = (path) => (path === TODO_FILE ? '' : todoNoteName(path).toLowerCase());
   return (files ?? [])
     .filter((f) => f.path === TODO_FILE || todoNoteName(f.path) !== null)
     .sort((a, b) => (rank(a.path) < rank(b.path) ? -1 : rank(a.path) > rank(b.path) ? 1 : 0))

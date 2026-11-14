@@ -69,8 +69,10 @@ He still wants the website.
 ### Data
 
 13. `parseTodoFiles(files, { owner, repos })` takes `[{ path, text }]`, keeps `notes/TODO.md` and
-    valid folder files, orders `notes/TODO.md` first then folder files by lower-case path (the same
-    order on macOS and Linux), and puts `file: <path>` on every entry. `undefined` or `[]` → `[]`.
+    valid folder files, orders `notes/TODO.md` first then folder files by lower-case note name (the
+    same order on macOS and Linux), and puts `file: <path>` on every entry. `undefined` or `[]` → `[]`.
+    (Changed the same day at Chad's request from "by lower-case path", which put
+    `boostmebitch - playlist tests` before `boostmebitch`: a space sorts before `.`.)
 14. No title, state, date or new URL enters `data.json`; the privacy test covers the folder text.
 
 ### Website
