@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import {
   activeProjects, branchUrl, compareCategories, hasWork, IDLE_DAYS, issueGroups, STALE_DAYS,
 } from './model.mjs';
+import { TODO_FILE, todoNoteName } from './notes.mjs';
 
 export const SITE_DATA_VERSION = 1;
 
@@ -36,6 +37,8 @@ export function siteDirProblem(root, dir) {
 }
 
 const TODO_HEADING = /^##+\s+(.*)$/;
+const FOLDER_HEADING = /^#{1,6}\s+(.*)$/;
+const CALLOUT = /^>\s?(?:\[![\w-]+\][+-]?\s*)?/;
 const TODO_ITEM = /^[-*+](?:\s+(?:\[([ xX])\](?:\s+|$))?(.*))?$/;
 const TODO_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
@@ -158,56 +161,84 @@ function todoParts(text, repo, owner) {
 // file (`removeTodoItem` in notes.mjs). An item indented under another item gets `under`, the
 // lines of that item. There is one level: deeper items sit under the same top item. A blank
 // line, a heading or a line at the left margin ends the group.
-export function parseTodoList(text, { owner, repos = [] } = {}) {
-  const repoOf = (title) => {
-    const name = owner && repos.find((r) => r.toLowerCase() === title.trim().toLowerCase());
-    return name ? `${owner}/${name}` : null;
+//
+// With `title` the text is one file of notes/todo/ (a note in Obsidian), named `title`. The repo
+// is the part of the title before the first space, in any case. Nothing is dropped above the
+// first heading. A heading of any level starts a section with the same title and repo, and
+// its own `heading`; the group and place words in it are the defaults for the items below it.
+// Only a line with a box is an item. A plain bullet at the left margin is a line of text, and
+// an indented plain bullet under an item goes on with that item. A `> ` quote mark and a
+// `[!callout]` marker are hidden in the text; the `lines` stay as written.
+export function parseTodoList(text, { owner, repos = [], title } = {}) {
+  const folder = title !== undefined;
+  const repoOf = (name) => {
+    const found = owner && repos.find((r) => r.toLowerCase() === name.trim().toLowerCase());
+    return found ? `${owner}/${found}` : null;
   };
-  let section = { title: '', entries: [], repo: null };
+  const fileRepo = folder ? repoOf(title.split(' ')[0]) : null;
+  let section = { title: folder ? title : '', entries: [], repo: fileRepo };
   const sections = [section];
-  let aboveFirstHeading = true;
+  let aboveFirstHeading = !folder;
+  let defaults = {}; // Group and place from the heading (folder files).
   let open = null; // The entry that a wrapped line continues.
   let top = null; // The item that an indented item sits under, and its indent.
+  const shown = (line) => (folder ? line.replace(CALLOUT, '') : line);
   for (const raw of String(text ?? '').split(/\r?\n/)) {
     const line = raw.trim();
     const indent = raw.length - raw.trimStart().length;
-    const heading = TODO_HEADING.exec(line);
+    const heading = (folder ? FOLDER_HEADING : TODO_HEADING).exec(line);
     const item = TODO_ITEM.exec(line);
+    const boxed = !folder || (item && item[1] !== undefined);
     if (!line) {
       open = null;
       top = null;
     } else if (heading) {
-      section = { title: heading[1], entries: [], repo: repoOf(heading[1]) };
+      if (folder) {
+        const { text: rest, ...words } = todoPrefix(heading[1]);
+        section = { title, entries: [], repo: fileRepo };
+        if (rest.trim()) section.heading = rest.trim();
+        defaults = words;
+      } else {
+        section = { title: heading[1], entries: [], repo: repoOf(heading[1]) };
+      }
       sections.push(section);
       aboveFirstHeading = false;
       open = null;
       top = null;
-    } else if (item) {
-      const { text: words, ...prefix } = todoPrefix(item[2] ?? '');
+    } else if (item && boxed) {
+      const { text: words, ...own } = todoPrefix(item[2] ?? '');
+      const prefix = { ...defaults, ...own };
       // A line of only group or place words keeps them as its text, so it keeps its box.
       open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: words.trim() ? words : (item[2] ?? '') };
       if (top && indent > top.indent) {
         // A sub-item has the group of its item, and its own place or else the item's.
         open.under = top.lines;
         if (top.group) open.group = top.group;
-        if (prefix.place ?? top.place) open.place = prefix.place ?? top.place;
+        if (own.place ?? top.place) open.place = own.place ?? top.place;
       } else {
         Object.assign(open, prefix);
         top = (item[2] ?? '').trim() ? { lines: open.lines, indent, group: prefix.group, place: prefix.place } : null;
       }
       section.entries.push(open);
+    } else if (item && !(open && indent > 0)) {
+      // Folder files: a plain bullet at the left margin is text.
+      open = { type: 'text', text: shown(item[2] ?? '') };
+      top = null;
+      section.entries.push(open);
     } else if (open) {
-      open.text += ` ${line}`;
+      const more = shown(item ? (item[2] ?? '') : line);
+      if (more.trim()) open.text += ` ${more}`;
       open.lines?.push(line);
       if (!indent) top = null;
     } else if (!aboveFirstHeading) {
-      open = { type: 'text', text: line };
+      open = { type: 'text', text: shown(line) };
       section.entries.push(open);
     }
   }
   return sections
-    .map(({ title, entries, repo }) => ({
-      title,
+    .map(({ title: name, heading, entries, repo }) => ({
+      title: name,
+      ...(heading && { heading }),
       entries: entries
         .filter((e) => e.text.trim())
         .map(({ text: words, ...entry }) => {
@@ -216,6 +247,17 @@ export function parseTodoList(text, { owner, repos = [] } = {}) {
         }),
     }))
     .filter((s) => s.entries.length);
+}
+
+// The to-do files → sections: notes/TODO.md first (read as before), then each note of
+// notes/todo/ by lower-case path. Any other path is ignored. Every entry carries its `file`.
+export function parseTodoFiles(files, { owner, repos = [] } = {}) {
+  const rank = (path) => (path === TODO_FILE ? '' : path.toLowerCase());
+  return (files ?? [])
+    .filter((f) => f.path === TODO_FILE || todoNoteName(f.path) !== null)
+    .sort((a, b) => (rank(a.path) < rank(b.path) ? -1 : rank(a.path) > rank(b.path) ? 1 : 0))
+    .flatMap(({ path, text }) => parseTodoList(text, { owner, repos, title: todoNoteName(path) ?? undefined })
+      .map((s) => ({ ...s, entries: s.entries.map((e) => ({ ...e, file: path })) })));
 }
 
 const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
@@ -252,7 +294,7 @@ function projectData(p, model) {
   };
 }
 
-export function renderSiteData(model, { generatedAt, generatedAtIso, degradedReason, problems, todoText }) {
+export function renderSiteData(model, { generatedAt, generatedAtIso, degradedReason, problems, todoFiles }) {
   const tracked = model.projects.filter((p) => p.track !== 'no');
   const active = activeProjects(tracked);
   const rest = model.projects.filter((p) => !active.includes(p));
@@ -266,7 +308,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     generatedAtIso,
     degradedReason: degradedReason || null,
     thresholds: { idleDays: IDLE_DAYS, staleDays: STALE_DAYS },
-    todo: parseTodoList(todoText, { owner: model.owner, repos: model.projects.map((p) => p.name) }),
+    todo: parseTodoFiles(todoFiles, { owner: model.owner, repos: model.projects.map((p) => p.name) }),
     totals: {
       prs: sum((p) => p.prsTotal),
       issues: sum((p) => p.issuesTotal),

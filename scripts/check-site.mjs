@@ -143,7 +143,7 @@ async function siteFiles() {
     const pages = JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/repos-pages.json'), 'utf8'));
     ({ siteData } = buildOutputs({
       owner: 'ChadFarrow', now: new Date(), repos: normalizeRepos(pages), stars: [], notes: NOTES,
-      auditFiles: [], degradedReason: null, watched: WATCHED, todoText: TODO_TEXT,
+      auditFiles: [], degradedReason: null, watched: WATCHED, todoFiles: [{ path: 'notes/TODO.md', text: TODO_TEXT }],
     }));
     // A second private project, so that a token which sees only one private repo can be refused.
     const parsed = JSON.parse(siteData);

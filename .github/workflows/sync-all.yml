@@ -14,6 +14,7 @@ on:
       - 'site/**'
       - 'scripts/**'
       - 'notes/TODO.md'
+      - 'notes/todo/**'
       - '.github/workflows/sync-all.yml'
 
 concurrency:
