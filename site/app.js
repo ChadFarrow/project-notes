@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, readTodoTitles, removeTodoItem, TODO_PLACES, todoMark, todoProjects, todoRefUrl, todoTitleQuery } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, readTodoTitles, removeTodoItem, TODO_FILE, TODO_PLACES, todoFileUrlPath, todoMark, todoProjects, todoRefUrl, todoTitleQuery } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -321,23 +321,25 @@ function renderContent() {
   $('#toggle-all').hidden = filtering() || !active.length;
 }
 
-// notes/TODO.md, the same under every filter: it is not a list of projects. A relative
-// link resolves against that file on GitHub. A link that is not http(s) stays plain text.
+// The to-do list (notes/TODO.md and the notes of notes/todo/), the same under every filter. A relative
+// link resolves against the file of its entry on GitHub. A link that is not http(s) stays plain text.
 // The box of an item deletes its line from the file (`askRemoveTodo`), with its sub-items.
-function todoLink(part) {
+function todoLink(part, file) {
   let url;
   try {
-    url = new URL(part.href, `${REPO_URL}/blob/main/notes/TODO.md`);
+    url = new URL(part.href, `${REPO_URL}/blob/main/${todoFileUrlPath(file) ?? TODO_FILE}`);
   } catch {
     return withCode(part.text);
   }
   return /^https?:$/.test(url.protocol) ? h('a', { href: url.href }, withCode(part.text)) : withCode(part.text);
 }
 // A ref part links to the issue path of its repo. The page builds the address, so it is always one of ours.
-const todoParts = (parts) => parts.map((part) => (part.ref ? h('a', { href: todoRefUrl(part.ref) }, part.text) : part.href ? todoLink(part) : withCode(part.text)));
+const todoParts = (parts, file) => parts.map((part) => (part.ref ? h('a', { href: todoRefUrl(part.ref) }, part.text) : part.href ? todoLink(part, file) : withCode(part.text)));
 const todoWords = (entry) => entry.parts.map((part) => part.text).join('');
-// A sub-item's key names its top item, so the same words under another item stay on the page.
-const todoKey = (entry) => [...(entry.under || []), ...(entry.lines || [])].join('\n');
+// The key names the file and the heading, and a sub-item's key names its top item, so the same words
+// in another note, under another heading or under another item stay on the page.
+const todoKey = (entry) => [entry.file ?? TODO_FILE, entry.headingLine ?? '', ...(entry.under || []), ...(entry.lines || [])].join('\n');
+const sameSpot = (a, b) => (a.file ?? TODO_FILE) === (b.file ?? TODO_FILE) && (a.headingLine ?? '') === (b.headingLine ?? '');
 
 function dropTodoItems(keys) {
   data.todo = (data.todo || [])
@@ -374,7 +376,7 @@ function todoSubItems(entry) {
   return [];
 }
 const todoTopOf = (entry) => entry.under && (data.todo || []).flatMap((s) => s.entries)
-  .find((e) => !e.under && (e.lines || []).join('\n') === entry.under.join('\n'));
+  .find((e) => !e.under && sameSpot(e, entry) && (e.lines || []).join('\n') === entry.under.join('\n'));
 // One line per ref that GitHub answered: #N, the title, and the state. The title is GitHub's
 // text, written by other people, so it only ever goes in as text.
 function todoRefLines(entry) {
@@ -390,13 +392,13 @@ function todoRefLines(entry) {
 function todoRow(entry, section) {
   const place = TODO_PLACES[entry.place];
   const mark = todoMark(entry, todoTitles, Date.now());
-  return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
+  return h('li', { class: `item todo-item${entry.done ? ' done' : ''}`, 'data-file': entry.file || '' },
     h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
     h('div', { class: 'item-title' },
       entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null,
       section && section.title ? h('span', { class: 'todo-repo', text: section.title }) : null,
       place ? h('span', { class: 'todo-place', 'data-place': entry.place }, `${place[0]} ${place[1]}`) : null,
-      todoParts(entry.parts),
+      todoParts(entry.parts, entry.file),
       mark ? h('span', { class: `todo-mark ${mark.tone}`, text: mark.text }) : null),
     todoRefLines(entry));
 }
@@ -451,9 +453,23 @@ function todoPanel() {
       continue;
     }
     let list = null;
+    let last = null;
+    let headed = false; // A heading showed above in this group.
     for (const { top, subs, section } of group.items) {
+      // A heading shows once, above its items in this group. A new section ends the list, so its
+      // rows never sit under the heading of the section before. After a heading showed in this
+      // group, a section with no heading of its own shows its title instead.
+      if (section !== last) {
+        last = section;
+        list = null;
+        const words = section.heading || (headed ? section.title : '');
+        if (words) {
+          panel.append(h('p', { class: 'todo-heading', 'data-file': top.file || '', text: words }));
+          headed = true;
+        }
+      }
       if (top.type !== 'item') {
-        panel.append(h('p', { class: 'note-line' }, todoParts(top.parts)));
+        panel.append(h('p', { class: 'note-line' }, todoParts(top.parts, top.file)));
         list = null;
         continue;
       }
@@ -735,21 +751,24 @@ function putNote(file, text, sha, message) {
   });
 }
 
-const TODO_PATH = `/repos/${REPO}/contents/notes/TODO.md`;
-
-// Deletes an item from the file on GitHub, and returns false when the file does not have
-// it any more. It reads the file first, because this page's data can be hours older, and
-// again after a conflict. The push starts the sync (`notes/TODO.md` is in the workflow's
-// push paths), so this needs no dispatch and no Actions access.
+// Deletes an item from its own file on GitHub (`notes/TODO.md` or a note of `notes/todo/`), and
+// returns false when the file does not have it any more. It reads the file first, because this
+// page's data can be hours older, and again after a conflict. The item is looked for under its own
+// heading. The push starts the sync (both paths are in the workflow's push paths), so this needs no
+// dispatch and no Actions access.
 async function deleteTodoItem(entry, group) {
   const lines = group.flatMap((e) => e.lines);
+  const urlPath = todoFileUrlPath(entry.file ?? TODO_FILE);
+  if (urlPath === null) throw new UserError('This line comes from a file that this page does not change.');
+  const path = `/repos/${REPO}/contents/${urlPath}`;
   for (let attempt = 0; attempt < 3; attempt++) {
-    const res = await gh(`${TODO_PATH}?ref=main`);
+    const res = await gh(`${path}?ref=main`);
+    if (res.status === 404) return false; // The note was deleted in Obsidian.
     if (!res.ok) throw await apiError(res, 'read the to-do list');
     const file = await res.json();
-    const text = removeTodoItem(decodeBase64(file.content), lines, entry.under);
+    const text = removeTodoItem(decodeBase64(file.content), lines, entry.under, entry.headingLine);
     if (text === null) return false;
-    const put = await gh(TODO_PATH, {
+    const put = await gh(path, {
       method: 'PUT',
       body: JSON.stringify({ message: `To do, done: ${todoWords(entry).slice(0, 60)}`, content: encodeBase64(text), sha: file.sha, branch: 'main' }),
     });
@@ -984,8 +1003,8 @@ function askRemoveTodo(entry) {
       top ? h('p', { class: 'note-line todo-top' }, withCode(todoWords(top))) : null,
       h('p', { class: 'item-title' }, withCode(todoWords(entry))),
       h('p', { class: 'note-line', text: subItems.length
-        ? `This deletes the line and its ${plural(subItems.length, 'sub-item')} from notes/TODO.md on GitHub.`
-        : 'This deletes the line from notes/TODO.md on GitHub.' })),
+        ? `This deletes the line and its ${plural(subItems.length, 'sub-item')} from ${entry.file ?? TODO_FILE} on GitHub.`
+        : `This deletes the line from ${entry.file ?? TODO_FILE} on GitHub.` })),
     h('div', { class: 'sheet-foot' }, status, newToken, cancel, remove));
   remove.addEventListener('click', async () => {
     remove.disabled = true;

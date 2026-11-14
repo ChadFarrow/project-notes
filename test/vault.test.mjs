@@ -25,6 +25,7 @@ test('zoneOf sorts generated, note and free files, and ignores the rest', () => 
   for (const p of ['README.md', 'PC2.0-SPECS.md', 'references/nostr.md', 'notes/idea.md', 'notes/img/a.png', 'projects/archived/LIT_Bot.md']) {
     assert.equal(zoneOf(p), 'free', p);
   }
+  assert.equal(zoneOf('notes/todo/boostmebitch - playlist tests.md'), 'free');
   for (const p of ['CLAUDE.md', 'Untitled.md', 'conflicts/x.md', 'scripts/sync.mjs', '.obsidian/app.json', 'notes/.DS_Store', '.gitignore']) {
     assert.equal(zoneOf(p), null, p);
   }

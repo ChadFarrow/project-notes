@@ -12,7 +12,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import path from 'node:path';
 import { fetchRepos, fetchStars, fetchWatched, pickToken, probeToken } from './lib/github.mjs';
 import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
-import { parseHeader } from './lib/notes.mjs';
+import { parseHeader, TODO_FILE } from './lib/notes.mjs';
 import { buildOutputs } from './lib/render.mjs';
 import { buildSiteFiles, siteDirProblem } from './lib/site.mjs';
 
@@ -39,8 +39,10 @@ const listMd = (dir) => (existsSync(dir)
   : []);
 const projectsDir = path.join(root, 'projects');
 const notes = listMd(projectsDir).map((file) => ({ file, text: readFileSync(path.join(projectsDir, file), 'utf8') }));
-const todoFile = path.join(root, 'notes/TODO.md');
-const todoText = existsSync(todoFile) ? readFileSync(todoFile, 'utf8') : '';
+const todoFiles = [
+  ...(existsSync(path.join(root, TODO_FILE)) ? [TODO_FILE] : []),
+  ...listMd(path.join(root, 'notes/todo')).map((name) => `notes/todo/${name}`),
+].map((rel) => ({ path: rel, text: readFileSync(path.join(root, rel), 'utf8') }));
 
 // Fetch everything before writing anything: a failed fetch must leave the repo untouched.
 const repos = normalizeRepos(await fetchRepos(token, OWNER));
@@ -57,7 +59,7 @@ const { files, problems, siteData } = buildOutputs({
   auditFiles: listMd(path.join(root, 'audits')),
   degradedReason,
   watched,
-  todoText,
+  todoFiles,
 });
 
 let changed = 0;
