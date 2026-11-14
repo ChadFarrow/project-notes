@@ -455,7 +455,9 @@ export function matchCategory(input, known) {
 // `parseTodoList`. It compares whole trimmed lines. Every other byte stays as it was.
 // `under`: the `under` lines of a sub-item. The search then starts only in the indented lines
 // right below those lines, so the same words under another item stay.
-export function removeTodoItem(source, lines, under) {
+// `after`: the trimmed heading line of the item; only the lines under that heading count, so the
+// same words under another heading stay. It returns null when that heading is not in the file.
+export function removeTodoItem(source, lines, under, after) {
   const chunks = source.match(/[^\n]*\n|[^\n]+$/g) || [];
   const find = (want, from, to) => {
     for (let i = from; i < to && i + want.length <= chunks.length; i++) {
@@ -463,14 +465,24 @@ export function removeTodoItem(source, lines, under) {
     }
     return -1;
   };
-  let from = 0;
-  let to = chunks.length;
+  let start = 0;
+  let end = chunks.length;
+  // `after`: a trimmed heading line. The search then stays under that heading, up to the next heading.
+  if (after) {
+    const head = chunks.findIndex((c) => c.trim() === after);
+    if (head < 0) return null;
+    start = head + 1;
+    end = start;
+    while (end < chunks.length && !/^#{1,6}\s/.test(chunks[end])) end++;
+  }
+  let from = start;
+  let to = end;
   if (under) {
-    const top = find(under, 0, to);
+    const top = find(under, start, end);
     if (top < 0) return null;
     from = top + under.length;
     to = from;
-    while (to < chunks.length && /^[ \t]+\S/.test(chunks[to])) to++;
+    while (to < end && /^[ \t]+\S/.test(chunks[to])) to++;
   }
   const at = find(lines, from, to);
   if (at < 0) return null;

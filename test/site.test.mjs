@@ -193,17 +193,17 @@ test('siteDirProblem allows only _site inside the repo, and nothing above it', (
 test('the to-do list keeps the sections and items, and leaves out the words above the first heading', () => {
   assert.deepEqual(parseTodoList('# To do\n\n#todo\n\nWords for editors.\n\n## One\n\n- [ ] First\n- [ ] Second\n\n## Two\n\n- [ ] Third\n'), [
     { title: 'One', entries: [
-      { type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] },
-      { type: 'item', done: false, lines: ['- [ ] Second'], parts: [{ text: 'Second' }] },
+      { type: 'item', done: false, lines: ['- [ ] First'], headingLine: '## One', parts: [{ text: 'First' }] },
+      { type: 'item', done: false, lines: ['- [ ] Second'], headingLine: '## One', parts: [{ text: 'Second' }] },
     ] },
-    { title: 'Two', entries: [{ type: 'item', done: false, lines: ['- [ ] Third'], parts: [{ text: 'Third' }] }] },
+    { title: 'Two', entries: [{ type: 'item', done: false, lines: ['- [ ] Third'], headingLine: '## Two', parts: [{ text: 'Third' }] }] },
   ]);
 });
 
 test('the to-do list keeps an item above the first heading, so it never goes missing', () => {
   assert.deepEqual(parseTodoList('# To do\n\nWords.\n\n- [ ] Added on the phone\n\n## One\n\n- [ ] First\n'), [
     { title: '', entries: [{ type: 'item', done: false, lines: ['- [ ] Added on the phone'], parts: [{ text: 'Added on the phone' }] }] },
-    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] First'], parts: [{ text: 'First' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] First'], headingLine: '## One', parts: [{ text: 'First' }] }] },
   ]);
 });
 
@@ -227,7 +227,7 @@ test('the to-do list splits links from the text and keeps a relative link as wri
 
 test('the to-do list keeps a line of text in a section', () => {
   const [{ entries }] = parseTodoList('## One\n\nFive more in [the note](../a.md).\n');
-  assert.deepEqual(entries, [{ type: 'text', parts: [{ text: 'Five more in ' }, { text: 'the note', href: '../a.md' }, { text: '.' }] }]);
+  assert.deepEqual(entries, [{ type: 'text', headingLine: '## One', parts: [{ text: 'Five more in ' }, { text: 'the note', href: '../a.md' }, { text: '.' }] }]);
 });
 
 test('the to-do list joins a wrapped line to the item or text above it', () => {
@@ -278,7 +278,7 @@ test('an indented item with nothing above it to sit under stays a plain item', (
 
 test('the to-do list drops an empty item and a heading with nothing under it', () => {
   assert.deepEqual(parseTodoList('## Empty\n\n## One\n- [ ]\n-\n- [ ] Real\n'), [
-    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], parts: [{ text: 'Real' }] }] },
+    { title: 'One', entries: [{ type: 'item', done: false, lines: ['- [ ] Real'], headingLine: '## One', parts: [{ text: 'Real' }] }] },
   ]);
 });
 
@@ -618,4 +618,18 @@ test('parseTodoFiles orders notes/TODO.md first, then by lower-case path, and ig
   ]);
   assert.deepEqual(parseTodoFiles(undefined), []);
   assert.deepEqual(parseTodoFiles([]), []);
+});
+
+test('an entry under a heading carries that heading line, trimmed; an entry above any heading has none', () => {
+  const todo = parseTodoFiles([{ path: 'notes/TODO.md', text: 'Intro\n- [ ] Above\n## app-one  \n- [ ] A\n## Other\n- [ ] B\n' }], OPTS);
+  const all = todo.flatMap((s) => s.entries.filter((e) => e.type === 'item'));
+  assert.deepEqual(all.map((e) => [e.lines[0], e.headingLine]), [['- [ ] Above', undefined], ['- [ ] A', '## app-one'], ['- [ ] B', '## Other']]);
+});
+
+test('in a folder note every heading level gives a headingLine, and an item above any heading has none', () => {
+  const text = '- [ ] Top\n## Before merge: Phone: One\n- [ ] Same\n   ### Deep   \n- [ ] Same\n';
+  const items = parseTodoFiles([{ path: 'notes/todo/app-one.md', text }], OPTS).flatMap((s) => s.entries.filter((e) => e.type === 'item'));
+  assert.deepEqual(items.map((e) => e.headingLine), [undefined, '## Before merge: Phone: One', '### Deep']);
+  assert.equal('headingLine' in items[0], false);
+  assert.deepEqual(items.map((e) => e.lines), [['- [ ] Top'], ['- [ ] Same'], ['- [ ] Same']]);
 });

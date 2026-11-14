@@ -195,11 +195,11 @@ export function parseTodoList(text, { owner, repos = [], title } = {}) {
     } else if (heading) {
       if (folder) {
         const { text: rest, ...words } = todoPrefix(heading[1]);
-        section = { title, entries: [], repo: fileRepo };
+        section = { title, entries: [], repo: fileRepo, headingLine: line };
         if (rest.trim()) section.heading = rest.trim();
         defaults = words;
       } else {
-        section = { title: heading[1], entries: [], repo: repoOf(heading[1]) };
+        section = { title: heading[1], entries: [], repo: repoOf(heading[1]), headingLine: line };
       }
       sections.push(section);
       aboveFirstHeading = false;
@@ -236,14 +236,14 @@ export function parseTodoList(text, { owner, repos = [], title } = {}) {
     }
   }
   return sections
-    .map(({ title: name, heading, entries, repo }) => ({
+    .map(({ title: name, heading, entries, repo, headingLine }) => ({
       title: name,
       ...(heading && { heading }),
       entries: entries
         .filter((e) => e.text.trim())
         .map(({ text: words, ...entry }) => {
           const { parts, refs } = todoParts(words.trim(), repo, owner);
-          return { ...entry, ...(repo && { repo }), ...(refs.length && { refs }), parts };
+          return { ...entry, ...(repo && { repo }), ...(headingLine && { headingLine }), ...(refs.length && { refs }), parts };
         }),
     }))
     .filter((s) => s.entries.length);

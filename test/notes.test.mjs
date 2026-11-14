@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   parseHeader, spliceAutoBlock, stubNote, indexNoteFiles, AUTO_START, AUTO_END, groupTodo, todoRefUrl, todoProjects, todoNoteName, todoFileUrlPath, TODO_FILE,
-  todoTitleQuery, readTodoTitles, todoMark,
+  todoTitleQuery, readTodoTitles, todoMark, removeTodoItem,
 } from '../scripts/lib/notes.mjs';
 
 // ---------- parseHeader ----------
@@ -423,4 +423,23 @@ test('groupTodo shows a sub-item whose top item is gone as its own item', () => 
   assert.deepEqual(names(groups[2]), ['orphan']);
   const after = groupTodo([{ title: 'x', entries: [{ type: 'text', parts: [{ text: 'note' }] }, todoItem('orphan2', { under: ['- [ ] gone'] })] }]);
   assert.deepEqual(names(after[3]), ['note', 'orphan2']);
+});
+
+test('removeTodoItem with a heading deletes from under that heading only', () => {
+  const text = '## One\n- [ ] Same\n## Two\n- [ ] Same\n- [ ] Other\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## Two'), '## One\n- [ ] Same\n## Two\n- [ ] Other\n');
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## One'), '## One\n## Two\n- [ ] Same\n- [ ] Other\n');
+  assert.equal(removeTodoItem(text, ['- [ ] Same']), '## One\n## Two\n- [ ] Same\n- [ ] Other\n', 'without a heading the first line goes, as before');
+});
+
+test('removeTodoItem with a heading looks for the item and its top inside that heading', () => {
+  const text = '## One\n- [ ] Top\n  - [ ] Sub\n## Two\n- [ ] Top\n  - [ ] Sub\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Sub'], ['- [ ] Top'], '## Two'), '## One\n- [ ] Top\n  - [ ] Sub\n## Two\n- [ ] Top\n');
+});
+
+test('removeTodoItem with a heading returns null when the heading is gone or the line is under another heading', () => {
+  const text = '## One\n- [ ] Same\n## Two\n- [ ] Other\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## Three'), null);
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## Two'), null, 'the line is under One, not Two');
+  assert.equal(removeTodoItem('## One  \r\n- [ ] Same\r\n', ['- [ ] Same'], undefined, '## One'), '## One  \r\n');
 });

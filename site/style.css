@@ -251,6 +251,8 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.85; 
 #todo-list .todo-filters select { flex: 1 1 160px; width: auto; min-width: 0; }
 /* The repo of a top item and the place of a test, as small labels before the words. */
 .todo-repo, .todo-place { display: inline-block; margin-right: 6px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 4px; color: var(--muted); font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+.todo-repo { white-space: normal; overflow-wrap: anywhere; }
+.todo-heading { margin: 8px 0 2px; color: var(--muted); font-weight: 600; overflow-wrap: anywhere; }
 .todo-item.done .todo-repo, .todo-item.done .todo-place { text-decoration: none; }
 /* Titles from GitHub: one muted line per PR under the words, in the column of the words. */
 .todo-refs { grid-column: 2; margin-top: 2px; }
