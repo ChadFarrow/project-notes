@@ -34,15 +34,13 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (7)
+### Pull requests (5)
 
-- [#569 feat(episode): the album/show name on the episode page opens its page](https://github.com/ChadFarrow/boostmebitch/pull/569) — opened 2026-11-14 · draft
-- [#567 feat(gifs): playing GIF grid; boostmebitch.com searches gifs.nostr.build](https://github.com/ChadFarrow/boostmebitch/pull/567) — opened 2026-11-14 · draft
-- [#564 feat(gifs): ask GIPHY for pg-13 on boostmebuddy.com too](https://github.com/ChadFarrow/boostmebitch/pull/564) — opened 2026-11-14
+- [#571 feat(player): ⤮ SHUFFLE on an album](https://github.com/ChadFarrow/boostmebitch/pull/571) — opened 2026-11-14 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · merge conflict
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
 ### Issues (10)
 
