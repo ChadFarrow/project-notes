@@ -13,8 +13,6 @@ blank line ends the group.
 
 ## boostmebitch
 
-- [ ] Boost Me Buddy 0.1.1 (the new app icon) is published on Zapstore since 2026-11-14, and the relay holds its listing, release and file. One check is left:
-  - [ ] On your phone, update Boost Me Buddy from Zapstore: the smiling-bolt icon shows on the home screen.
 - [ ] Community playlists are on beta since 2026-11-12 (#537 is merged, and #539 is merged into #538; #538 and #540 are open). Beta and the main site share one real database, so a playlist made on beta keeps its address on boostmebuddy.com at launch. Test them, then tell Claude what does not work.
   - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
   - [ ] Publish with a playlist art link that is not square or has a transparent background: it is accepted, and the feed's `itunes:image` is your own link.
