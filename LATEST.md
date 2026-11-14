@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 01:43 UTC
+# Dashboard — 2026-11-14 01:46 UTC
 
 20 open PRs · 18 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -97,7 +97,7 @@
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 23 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 23 hours ago
 - PR [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 12 hours ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 48 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
