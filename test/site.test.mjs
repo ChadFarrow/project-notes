@@ -607,7 +607,13 @@ test('notes/TODO.md still reads as before inside parseTodoFiles, with its file',
   assert.deepEqual(viaFiles.flatMap((s) => s.entries), plain.flatMap((s) => s.entries.map((e) => ({ ...e, file: 'notes/TODO.md' }))));
 });
 
-test('parseTodoFiles orders notes/TODO.md first, then by lower-case path, and ignores other paths', () => {
+test('parseTodoFiles puts a repo’s main note before its second note', () => {
+  const f = (path) => ({ path, text: '- [ ] x\n' });
+  const sections = parseTodoFiles([f('notes/todo/app-one - playlist tests.md'), f('notes/todo/App-One.md'), f('notes/todo/apps.md')], OPTS);
+  assert.deepEqual(sections.map((s) => s.title), ['App-One', 'app-one - playlist tests', 'apps']);
+});
+
+test('parseTodoFiles orders notes/TODO.md first, then by lower-case note name, and ignores other paths', () => {
   const f = (path) => ({ path, text: '- [ ] x\n' });
   const sections = parseTodoFiles([
     f('notes/todo/b.md'), f('notes/todo/sub/c.md'), f('notes/todo/.hidden.md'), f('notes/other.md'),
