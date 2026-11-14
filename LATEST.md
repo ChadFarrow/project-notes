@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 14:51 UTC
+# Dashboard — 2026-11-14 14:53 UTC
 
 20 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -18,7 +18,7 @@
 **[boostmebitch](projects/boostmebitch.md)**
 
 - [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 14 hours ago · 1 comment
-- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 14 hours ago · 1 comment
+- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 15 hours ago · 1 comment
 - [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 15 hours ago · 1 comment
 - [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 15 hours ago · 1 comment
 - [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 19 hours ago · 1 comment
@@ -94,7 +94,7 @@
 
 5 PRs · 10 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#560 fix(player): keep Android's lock-screen player across track changes](https://github.com/ChadFarrow/boostmebitch/pull/560) — opened 4 minutes ago · draft
+- PR [#560 fix(player): keep Android's lock-screen player across track changes](https://github.com/ChadFarrow/boostmebitch/pull/560) — opened 6 minutes ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
