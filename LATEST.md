@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 13:19 UTC
+# Dashboard — 2026-11-14 13:34 UTC
 
 21 open PRs · 18 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -94,7 +94,7 @@
 
 6 PRs · 10 issues · 3 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#558 fix(player): ⏮/⏭ walk past a file this tab knows is dead](https://github.com/ChadFarrow/boostmebitch/pull/558) — opened 1 minute ago · draft
+- PR [#558 fix(player): ⏮/⏭ walk past a file this tab knows is dead](https://github.com/ChadFarrow/boostmebitch/pull/558) — opened 16 minutes ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
 - PR [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 1 day ago · draft
