@@ -17,7 +17,8 @@ blank line ends the group.
   - [ ] In Terminal: `cd ~/Vibe/boostmebitch`, `git pull`, then `gh release download v0.1.1 -p app-release-signed-buddy.apk -O android/app-release-signed-buddy.apk --clobber`. Then `zsp publish --check zapstore-buddy.yaml` must print `com.boostmebuddy`. Then `SIGN_WITH=browser zsp publish zapstore-buddy.yaml`, and sign the 3 events in your browser.
   - [ ] On your phone, update Boost Me Buddy from Zapstore: the smiling-bolt icon shows.
 - [ ] PR #560 (draft, on beta since 2026-11-14): on Android, the lock-screen player stays during a track change. Its browser tests passed in Chrome, but no browser here draws a lock screen. Test it on your Android phone, then tell Claude what does not work.
-  - [ ] In Chrome on Android, open beta.boostmebitch.com, and play an album or a favorites shuffle. Lock the phone, then press ⏭ on the lock screen: the lock-screen player stays, and the next song plays.
+  - [ ] Baseline: in Vanadium (the GrapheneOS browser), open boostmebitch.com, play an album, lock the phone, and press ⏭ on the lock screen: the lock-screen player disappears for a moment. If it does not, tell Claude before the next checks.
+  - [ ] In Vanadium, open beta.boostmebitch.com, and play an album or a favorites shuffle. Lock the phone, then press ⏭ on the lock screen: the lock-screen player stays, and the next song plays.
   - [ ] With the phone locked, let a song end: the lock-screen player stays while the next song starts.
   - [ ] Press ⏸ on the lock screen, then ▶: both work, and the button shows the right state.
 - [ ] Community playlists are on beta since 2026-11-12 (#537 is merged, and #539 is merged into #538; #538 and #540 are open). Beta and the main site share one real database, so a playlist made on beta keeps its address on boostmebuddy.com at launch. Test them, then tell Claude what does not work.
