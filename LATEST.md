@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 01:51 UTC
+# Dashboard — 2026-11-14 11:02 UTC
 
 20 open PRs · 18 open issues · 32 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -10,19 +10,19 @@
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 21 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 13 days · no checks
-- **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 10 days · checks passing
-- **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 10 days · checks passing
+- **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 11 days · checks passing
+- **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 11 days · checks passing
 
 ### Open issues (18)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 1 hour ago · 1 comment
-- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 1 hour ago · 1 comment
-- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 2 hours ago · 1 comment
-- [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 2 hours ago · 1 comment
-- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 6 hours ago · 1 comment
-- [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 14 hours ago · 1 comment
+- [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 10 hours ago · 1 comment
+- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 11 hours ago · 1 comment
+- [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 11 hours ago · 1 comment
+- [#553 \[BMB\] Beta test about lock screen freeze](https://github.com/ChadFarrow/boostmebitch/issues/553) — opened 12 hours ago · 1 comment
+- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 15 hours ago · 1 comment
+- [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 23 hours ago · 1 comment
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 1 day ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 6 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 43 days ago
@@ -96,7 +96,7 @@
 
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
-- PR [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 12 hours ago · draft
+- PR [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 21 hours ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 48 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
@@ -107,7 +107,7 @@
 
 2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 55 days ago · draft
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 56 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -118,8 +118,8 @@
 
 5 PRs · 3 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 10 days ago
-- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 10 days ago
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 11 days ago
+- PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 11 days ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 43 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
@@ -174,7 +174,7 @@
 
 1 PR
 
-- PR [#24 To do: groups, place marks, filters, PR links and titles](https://github.com/ChadFarrow/project-notes/pull/24) — opened 12 hours ago
+- PR [#24 To do: groups, place marks, filters, PR links and titles](https://github.com/ChadFarrow/project-notes/pull/24) — opened 21 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -203,7 +203,7 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 7 hours ago
+- PR [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 16 hours ago
 - Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
