@@ -13,7 +13,7 @@ blank line ends the group.
 
 ## boostmebitch
 
-- [ ] Community playlists are on beta since 2026-11-12 (#537 is merged; #538–#540 are open). Beta and the main site share one real database, so a playlist made on beta keeps its address on boostmebuddy.com at launch. Test them, then tell Claude what does not work.
+- [ ] Community playlists are on beta since 2026-11-12 (#537 is merged, and #539 is merged into #538; #538 and #540 are open). Beta and the main site share one real database, so a playlist made on beta keeps its address on boostmebuddy.com at launch. Test them, then tell Claude what does not work.
   - [ ] Make a playlist with 10 or more songs from search and from favorites, then publish, edit and delete it. The first publish also proves the sign-in check works behind Vercel.
   - [ ] Publish with a playlist art link that is not square or has a transparent background: it is accepted, and the feed's `itunes:image` is your own link.
   - [ ] In the maker and in Add songs, tap a song's cover: only that song plays, from the start, and it stops at its end.
@@ -21,26 +21,9 @@ blank line ends the group.
   - [ ] On `/admin`, delete a playlist, then ban and unban a test account.
   - [ ] Boost a song from one of your playlists and from a community playlist: the note names the song's album and says "Heard on" the playlist.
 - [ ] Decide before PR #540 merges, and tell Claude: the "Heard on" line and the album header also change notes for the playlists that exist now (yes or no); should UNBAN ask first; may the `CLAUDE.md` word limit go up so its Names line can be fixed.
-- [ ] Test PR #541, ⤮ SHUFFLE for the favorite singles, on your iPhone. Its browser tests passed in Chrome, but Chrome cannot test the iOS press. Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] On beta.boostmebitch.com: open `/favorites`, press SINGLES, then ⤮ SHUFFLE. The first track plays at once, with no second ▶.
-  - [ ] Lock the screen: when a track ends, the next shuffled track starts.
-  - [ ] Open BOOST on a shuffled track: the splits name that track's artist, not another album.
-  - [ ] After the merge, press SHUFFLE in the Home Screen app: the first track plays at once.
-- [ ] Test PR #544 on your iPhone, on beta.boostmebitch.com: the art must not flash. Its tests passed in Chrome and in WebKit (Safari's engine). Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] Open the full-screen player and press ⏭ several times: the cover changes once per track and is never empty.
-  - [ ] Close the player and press ⏭ in the mini bar several times: the small picture is never empty.
-- [ ] Test PR #545 on your iPhone, on beta.boostmebitch.com: a dead track does not stop the music. Its browser tests passed in Chrome and on beta, but not on a phone. Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] With the screen locked, let a shuffle reach a dead track, such as "Winds of Change" by Herbivore: the next track plays without opening the app.
-  - [ ] Tap a dead track in an album: the next track plays.
-- [ ] Test PR #547 on your iPhone, on beta.boostmebitch.com: ⏮/⏭ on the lock screen for music. Its browser tests passed in Chrome, but no browser here draws a lock screen. Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] Play music and lock the screen: it shows ⏮ and ⏭, and they go to the previous and next track.
-  - [ ] Play a podcast episode and lock the screen: it still shows the skip buttons.
-- [ ] Test PR #549 on your iPhone, on beta.boostmebitch.com: your avatar on the now-playing screen opens the account menu. Its browser tests passed in Chrome. Then tell Claude what does not work, or mark the PR ready and merge it.
-  - [ ] Press the avatar on the now-playing screen: the menu opens, the same as on the home screen but with no theme link.
-  - [ ] Press "my boosts": the player closes and your boosts page opens.
-- [ ] Test PR #550 on your iPhone, on beta.boostmebitch.com: the background stall of bug #546. It is an experiment, and only a phone can show if it helps. About 30 s before a track ends, beta downloads the whole next file, so it costs extra data. Then tell Claude the result. If it does not help, Claude removes it.
-  - [ ] In the Home Screen app, start a favorites shuffle, then lock the screen or go to another app. Listen through five or more track changes.
-  - [ ] If a track does not start, open the app and send a bug report at once. If all tracks play, send a bug report too. The report carries the playback log, which shows if each early download finished.
+- [ ] PR #541, ⤮ SHUFFLE for the favorite singles, is merged (2026-11-14). It passed on your iPhone on beta. One check waited for the merge:
+  - [ ] In the Home Screen app on boostmebitch.com, open `/favorites`, press SINGLES, then ⤮ SHUFFLE: the first track plays at once, with no second ▶.
+- [ ] Decide on PR #550 (beta only: the next track's file downloads about 30 s early), and tell Claude: keep it on beta, make it a real feature, or close it. In your background tests every normal track change after an early download started at once (bug reports #555 and #557).
 - [ ] PR #543 is merged (2026-11-13): "N s behind" and ⏭ GO LIVE under a live show. Test it on your iPhone during the next live show. Its browser tests passed in Chrome against a test stream, but not in Safari, on the lock screen or on a real broadcast. Then tell Claude what does not work.
   - [ ] In Safari or the Home Screen app, on boostmebitch.com, play a live show. While it plays on time, the row says `● LIVE` and shows no button.
   - [ ] When the audio stops to buffer for more than 5 s, the second line then says "N s behind live" and ⏭ GO LIVE shows. Press it: the audio jumps ahead, and the line goes back to the show name.
