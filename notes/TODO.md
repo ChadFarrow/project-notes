@@ -93,5 +93,5 @@ blank line ends the group.
 
 ## project-notes
 
-- [ ] Before merge: PR #24, To do groups, place marks, filters, PR links and titles. Read its body, merge it, then tell Claude. Claude then adds the group and place words to this list (you see the full file first) and the phone rule to vibe-kit.
+- [ ] Before merge: PR #24 (To do groups, place marks, filters, PR links and titles), then PR #25 (this list as one Obsidian note per repo in `notes/todo/`; it is stacked on #24). Read their bodies, merge #24 first and then #25, then tell Claude. Claude then moves this list into `notes/todo/` (you see every file first, and you confirm that your BMB playlist note may become public), reinstalls the vault agent and updates the vibe-kit rule.
 - [ ] After merge: Make the read token with the link in the token sheet (choose All repositories), and paste it on the live page. Then tell Claude whether the sheet accepted it and whether titles show under a Command-Center item.
