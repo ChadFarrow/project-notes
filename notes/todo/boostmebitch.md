@@ -5,4 +5,3 @@
 
 - [ ] After merge: Computer: #568 (follow a favorite whose feed host closed, RSS Blue) is deployed. Test it in the browser that showed the missing covers, signed in as yourself; the browser tests used a throwaway key and a copy of your list, never your own browser's saved rows.
   - [ ] Computer: open /favorites. Worried (Suzanne Santo) shows the Fountain cover after one load, and it plays.
-  - [ ] Computer: Mr. Videoman, Runaway Train and Keep Searching show "RSS Blue closed. Found:" with REPLACE. Press REPLACE on one: the album moves to the new copy, keeps its place in the list, and plays.
