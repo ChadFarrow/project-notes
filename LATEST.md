@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-14 17:24 UTC
+# Dashboard — 2026-11-14 17:34 UTC
 
 19 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 21 days · checks passing
+- **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 22 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 13 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 11 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 11 days · checks passing
@@ -128,7 +128,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 21 days ago
+- PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 22 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
