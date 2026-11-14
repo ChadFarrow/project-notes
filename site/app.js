@@ -4,7 +4,7 @@
 // Every string from GitHub goes into the page through textContent or a Text node,
 // never as HTML: PR and issue titles are written by other people.
 
-import { applyNoteForm, conflictingFields, diffNoteForm, matchCategory, readNoteForm, removeTodoItem } from './lib/notes.js?v=__BUILD__';
+import { applyNoteForm, conflictingFields, diffNoteForm, groupTodo, matchCategory, readNoteForm, readTodoTitles, removeTodoItem, TODO_PLACES, todoMark, todoProjects, todoRefUrl, todoTitleQuery } from './lib/notes.js?v=__BUILD__';
 
 const REPO = 'ChadFarrow/project-notes';
 const API = 'https://api.github.com';
@@ -15,6 +15,9 @@ const ACTIONS_URL = `${REPO_URL}/actions/workflows/${WORKFLOW}`;
 // itself still has to be picked by hand (GitHub has no parameter for it).
 const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+web+editor'
   + '&description=Edits+notes+from+notes.podtards.com&target_name=ChadFarrow&expires_in=90&contents=write&actions=write';
+// The second token only reads: PR and issue titles of every repo, public and private.
+const NEW_READ_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+titles'
+  + '&description=Reads+PR+and+issue+titles+for+notes.podtards.com&target_name=ChadFarrow&expires_in=90&issues=read&pull_requests=read';
 const DATA_VERSION = 1;
 // GitHub drops a scheduled run now and then, so warn only after two missed runs.
 const OLD_DATA_HOURS = 9;
@@ -145,10 +148,18 @@ const badgeList = (badges) => h('span', { class: 'badges' }, badges.map(([tone, 
 
 let data = null;
 let token = store.get('token', '');
+let readToken = store.get('readToken', '');
 const view = { q: '', status: 'all', category: 'all', ...store.get('view', {}) };
+const todoView = { project: 'all', place: 'all', ...store.get('todoView', {}) };
 const opened = new Set(store.get('open', []));
+// Titles and states of the PRs the to-do list names. They live in this page's memory only:
+// a private repo's title must never reach a file. null = not loaded (no read token, or a failure).
+let todoTitles = null;
+let todoNote = null; // null, 'auth', or the reason the titles did not load
+let titleRun = 0;
 
 const saveView = () => store.set('view', { q: view.q, status: view.status, category: view.category });
+const saveTodoView = () => store.set('todoView', { project: todoView.project, place: todoView.place });
 const saveOpened = () => store.set('open', [...opened]);
 
 // ---------- start ----------
@@ -177,6 +188,7 @@ async function start() {
   renderHeader();
   setupControls();
   renderContent();
+  loadTodoTitles();
 }
 
 function updateTokenButton() {
@@ -321,7 +333,8 @@ function todoLink(part) {
   }
   return /^https?:$/.test(url.protocol) ? h('a', { href: url.href }, withCode(part.text)) : withCode(part.text);
 }
-const todoParts = (parts) => parts.map((part) => (part.href ? todoLink(part) : withCode(part.text)));
+// A ref part links to the issue path of its repo. The page builds the address, so it is always one of ours.
+const todoParts = (parts) => parts.map((part) => (part.ref ? h('a', { href: todoRefUrl(part.ref) }, part.text) : part.href ? todoLink(part) : withCode(part.text)));
 const todoWords = (entry) => entry.parts.map((part) => part.text).join('');
 // A sub-item's key names its top item, so the same words under another item stay on the page.
 const todoKey = (entry) => [...(entry.under || []), ...(entry.lines || [])].join('\n');
@@ -362,48 +375,122 @@ function todoSubItems(entry) {
 }
 const todoTopOf = (entry) => entry.under && (data.todo || []).flatMap((s) => s.entries)
   .find((e) => !e.under && (e.lines || []).join('\n') === entry.under.join('\n'));
-function todoRow(entry) {
+// One line per ref that GitHub answered: #N, the title, and the state. The title is GitHub's
+// text, written by other people, so it only ever goes in as text.
+function todoRefLines(entry) {
+  if (!todoTitles) return null;
+  const lines = (entry.refs || []).map((ref) => {
+    const info = todoTitles.get(`${ref.repo}#${ref.number}`);
+    if (!info) return null;
+    const name = ref.repo === entry.repo ? `#${ref.number}` : `${ref.repo}#${ref.number}`;
+    return h('p', { class: 'todo-ref', text: `${name} ${info.title} · ${info.state}` });
+  }).filter(Boolean);
+  return lines.length ? h('div', { class: 'todo-refs' }, lines) : null;
+}
+function todoRow(entry, section) {
+  const place = TODO_PLACES[entry.place];
+  const mark = todoMark(entry, todoTitles, Date.now());
   return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
     h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
-    h('div', { class: 'item-title' }, entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null, todoParts(entry.parts)));
+    h('div', { class: 'item-title' },
+      entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null,
+      section && section.title ? h('span', { class: 'todo-repo', text: section.title }) : null,
+      place ? h('span', { class: 'todo-place', 'data-place': entry.place }, `${place[0]} ${place[1]}`) : null,
+      todoParts(entry.parts),
+      mark ? h('span', { class: `todo-mark ${mark.tone}`, text: mark.text }) : null),
+    todoRefLines(entry));
+}
+const redrawTodoPanel = () => $('#todo-panel')?.replaceWith(todoPanel());
+
+// Fetches the titles with the read token, 100 numbers to a request. Without a token it asks for
+// nothing. A failure leaves one line above the list and never blocks the list or a box.
+async function loadTodoTitles() {
+  const run = ++titleRun;
+  todoTitles = null;
+  todoNote = null;
+  const refs = new Map();
+  for (const section of data.todo || []) {
+    for (const entry of section.entries) for (const ref of entry.refs || []) refs.set(`${ref.repo}#${ref.number}`, ref);
+  }
+  if (readToken && refs.size) {
+    const all = [...refs.values()];
+    try {
+      const loaded = new Map();
+      for (let i = 0; i < all.length; i += 100) {
+        const { query, aliases } = todoTitleQuery(all.slice(i, i + 100));
+        const res = await gh('/graphql', { method: 'POST', body: JSON.stringify({ query }) }, readToken);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (!json.data) throw new Error(json.errors?.[0]?.message || 'no answer');
+        for (const [key, info] of readTodoTitles(json, aliases)) loaded.set(key, info);
+      }
+      if (run === titleRun) todoTitles = loaded;
+    } catch (err) {
+      if (run === titleRun) todoNote = err.kind === 'auth' ? 'auth' : err instanceof UserError ? 'GitHub did not answer' : err.message;
+    }
+  }
+  if (run === titleRun) redrawTodoPanel();
+}
+function todoNoteLine() {
+  if (!todoNote) return null;
+  if (todoNote === 'auth') {
+    return h('p', { class: 'note-line todo-note' }, 'GitHub refused the read token. ',
+      h('button', { type: 'button', class: 'quiet-button', onclick: () => openTokenDialog() }, 'Paste a new token'));
+  }
+  return h('p', { class: 'note-line todo-note', text: `Titles did not load (${todoNote}).` });
+}
+function todoPanel() {
+  const panel = h('div', { class: 'panel', id: 'todo-panel' }, todoNoteLine());
+  const groups = groupTodo(data.todo || [], todoView);
+  if (!groups.some((g) => g.items.length)) panel.append(h('p', { class: 'empty', text: 'None.' }));
+  for (const group of groups) {
+    if (!group.items.length && todoView.place !== 'all') continue;
+    panel.append(h('p', { class: 'group-title', text: `${group.title} (${group.items.length})` }));
+    if (!group.items.length) {
+      panel.append(h('p', { class: 'empty todo-empty', text: 'None.' }));
+      continue;
+    }
+    let list = null;
+    for (const { top, subs, section } of group.items) {
+      if (top.type !== 'item') {
+        panel.append(h('p', { class: 'note-line' }, todoParts(top.parts)));
+        list = null;
+        continue;
+      }
+      if (!list) {
+        list = h('ul', { class: 'list' });
+        panel.append(list);
+      }
+      const row = todoRow(top, todoView.project === 'all' ? section : null);
+      if (subs.length) row.append(h('ul', { class: 'list todo-subs' }, subs.map((sub) => todoRow(sub))));
+      list.append(row);
+    }
+  }
+  return panel;
 }
 function todoSection() {
   const heading = h('h2', { text: 'To do' });
   const sections = data.todo || [];
   if (!sections.length) return h('section', { id: 'todo-list' }, heading, h('p', { class: 'empty', text: 'None.' }));
-  const panel = h('div', { class: 'panel' });
-  for (const section of sections) {
-    if (section.title) panel.append(h('p', { class: 'group-title', text: section.title }));
-    let list = null;
-    let topRow = null; // The row of the last top item, and the list of sub-items inside it.
-    let subList = null;
-    for (const entry of section.entries) {
-      if (entry.type === 'item') {
-        if (!list) {
-          list = h('ul', { class: 'list' });
-          panel.append(list);
-        }
-        const row = todoRow(entry);
-        if (entry.under && topRow) {
-          if (!subList) {
-            subList = h('ul', { class: 'list todo-subs' });
-            topRow.append(subList);
-          }
-          subList.append(row);
-        } else {
-          list.append(row);
-          topRow = entry.under ? null : row;
-          subList = null;
-        }
-      } else {
-        panel.append(h('p', { class: 'note-line' }, todoParts(entry.parts)));
-        list = null;
-        topRow = null;
-        subList = null;
-      }
-    }
-  }
-  return h('section', { id: 'todo-list' }, heading, panel);
+  const projects = todoProjects(sections);
+  if (todoView.project !== 'all' && !projects.some((p) => p.title === todoView.project)) todoView.project = 'all';
+  if (todoView.place !== 'all' && !TODO_PLACES[todoView.place]) todoView.place = 'all';
+  const redraw = () => {
+    saveTodoView();
+    $('#todo-panel').replaceWith(todoPanel());
+  };
+  const project = h('select', { id: 'todo-project', 'aria-label': 'Project' },
+    h('option', { value: 'all', text: 'All projects' }),
+    projects.map((p) => h('option', { value: p.title, text: `${p.title || 'No heading'} (${p.count})` })));
+  project.value = todoView.project;
+  project.addEventListener('change', () => { todoView.project = project.value; redraw(); });
+  const place = h('select', { id: 'todo-place', 'aria-label': 'Where' },
+    h('option', { value: 'all', text: 'All places' }),
+    Object.entries(TODO_PLACES).map(([key, [mark, name]]) => h('option', { value: key, text: `${mark} ${name}` })));
+  place.value = todoView.place;
+  place.addEventListener('change', () => { todoView.place = place.value; redraw(); });
+  return h('section', { id: 'todo-list' }, heading,
+    h('div', { class: 'todo-filters' }, project, place), todoPanel());
 }
 
 function readySection(visible, byName) {
@@ -697,6 +784,45 @@ async function probeToken(auth) {
     canWrite: write.status !== 403 && write.status !== 404,
     canSync: dispatch.status !== 403 && dispatch.status !== 404,
   };
+}
+
+// Whether a token may be the read token: it must read, and it must write nothing. The
+// probes are requests GitHub refuses either way, so they change nothing. Observed on
+// real GitHub on 2026-11-13 with a token that can write:
+//   POST /repos/ChadFarrow/project-notes/issues with {}  -> 422 ("title" wasn't supplied)
+//   POST /repos/ChadFarrow/project-notes/pulls with {}   -> 422 ("base", "head" weren't supplied)
+//   GraphQL viewer.repositories(privacy: PRIVATE)        -> totalCount 13
+// A fine-grained token without the permission gets 403 "Resource not accessible by
+// personal access token" (GitHub's documented answer; not yet observed here).
+// → null when the token is accepted, else the reason to show.
+async function checkReadToken(value) {
+  const refused = 'GitHub refused this token.';
+  try {
+    const count = await gh('/graphql', {
+      method: 'POST',
+      body: JSON.stringify({ query: '{ viewer { repositories(privacy: PRIVATE, first: 1) { totalCount } } }' }),
+    }, value);
+    if (!count.ok) return `GitHub could not check this token (HTTP ${count.status}).`;
+    const answer = await count.json();
+    if (!answer?.data) return `GitHub could not check this token: ${String(answer?.errors?.[0]?.message ?? 'no answer')}`;
+    // A count above 0 only proves the token sees some private repo. It must see every private
+    // project of the dashboard, or the titles of the others go missing with no message.
+    const total = answer.data.viewer?.repositories?.totalCount;
+    const privateProjects = (data.projects || []).filter((p) => p.isPrivate).length;
+    if (!total || total < privateProjects) return 'Pick All repositories.';
+    const write = await gh(`/repos/${REPO}/contents/README.md`, {
+      method: 'PUT',
+      body: JSON.stringify({ message: 'Access check from the web dashboard', content: '', sha: '0'.repeat(40), branch: 'main' }),
+    }, value);
+    if (write.status !== 403 && write.status !== 404) return 'This token can change files. Make a read-only one.';
+    for (const kind of ['issues', 'pulls']) {
+      const res = await gh(`/repos/${REPO}/${kind}`, { method: 'POST', body: '{}' }, value);
+      if (res.status !== 403 && res.status !== 404) return 'This token can change issues or PRs. Make a read-only one.';
+    }
+    return null;
+  } catch (err) {
+    return err.kind === 'auth' ? refused : messageFor(err);
+  }
 }
 
 // ---------- the editor ----------
@@ -1006,6 +1132,66 @@ function todoEditor(section, index) {
 
 // ---------- the token ----------
 
+// The second part of the token sheet: a token that reads titles and writes nothing.
+function readTokenPart() {
+  const status = h('p', { class: 'status', role: 'status' });
+  const input = h('input', { type: 'password', id: 't-read-token', autocomplete: 'off', spellcheck: 'false', placeholder: 'github_pat_…' });
+  const check = h('button', { type: 'button', class: 'primary' }, 'Check and save');
+  const buttons = h('div', { class: 'token-buttons' }, check);
+  const forget = h('button', {
+    type: 'button', class: 'danger', onclick: () => {
+      readToken = '';
+      store.remove('readToken');
+      loadTodoTitles();
+      forget.remove();
+      setStatus(status, 'good', 'The titles token is removed from this browser.');
+    },
+  }, 'Forget the titles token');
+  if (readToken) buttons.append(forget);
+  check.addEventListener('click', async () => {
+    const value = input.value.trim();
+    if (!value) {
+      setStatus(status, 'bad', 'Paste the token first.');
+      input.focus();
+      return;
+    }
+    check.disabled = true;
+    setStatus(status, '', 'Checking the token…');
+    const reason = await checkReadToken(value);
+    check.disabled = false;
+    if (reason) {
+      setStatus(status, 'bad', reason);
+      return;
+    }
+    readToken = value;
+    store.set('readToken', value);
+    loadTodoTitles();
+    input.value = '';
+    buttons.append(forget);
+    setStatus(status, 'good', 'The titles token is saved. It reads titles and writes nothing.');
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      check.click();
+    }
+  });
+  return h('section', { class: 'token-part', id: 'read-token-part' },
+    h('h3', { text: 'Titles of PRs and issues' }),
+    h('p', { text: readToken
+      ? 'Titles are set up in this browser. To use a different token, paste it below.'
+      : 'To show PR and issue titles in the to-do list, give this page a second token. It is separate from the editing token, so the token that reads titles can write nothing.' }),
+    h('ol', { class: 'steps' },
+      h('li', {}, 'Open ', h('a', { href: NEW_READ_TOKEN_URL, target: '_blank', rel: 'noopener' }, 'a new read-only token on GitHub'),
+        '. The link fills in the name, a 90-day life and the permissions.'),
+      h('li', {}, 'For “Repository access”, choose ', h('strong', { text: 'All repositories' }), ', so that it can see the private ones.'),
+      h('li', {}, 'Make sure that ', h('strong', { text: 'Issues' }), ' and ', h('strong', { text: 'Pull requests' }),
+        ' are “Read-only”, and add nothing else.'),
+      h('li', { text: 'Generate the token, copy it, and paste it here.' })),
+    h('div', { class: 'field' }, h('label', { class: 'label', for: 't-read-token', text: 'Titles token' }), input),
+    buttons, status);
+}
+
 function openTokenDialog(then) {
   const dlg = $('#token-dialog');
   setupSheet(dlg);
@@ -1099,7 +1285,8 @@ function openTokenDialog(then) {
         ' are “Read and write”, and add nothing else. Actions lets this page start the sync after you save.'),
       h('li', { text: 'Generate the token, copy it, and paste it here.' })),
     h('div', { class: 'field' }, h('label', { class: 'label', for: 't-token', text: 'Token' }), input),
-    h('p', { class: 'hint', text: 'On an iPhone, add this page to the Home Screen. Safari clears the storage of a site that you do not visit for 7 days.' }));
+    h('p', { class: 'hint', text: 'On an iPhone, add this page to the Home Screen. Safari clears the storage of a site that you do not visit for 7 days.' }),
+    readTokenPart());
 
   sheet(dlg, 'token-title', token ? 'Editing token' : 'Set up editing', body, h('div', { class: 'sheet-foot' }, foot));
   if (!dlg.open) dlg.showModal();

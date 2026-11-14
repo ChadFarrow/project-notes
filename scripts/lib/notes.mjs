@@ -476,3 +476,112 @@ export function removeTodoItem(source, lines, under) {
   if (at < 0) return null;
   return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
 }
+
+export const TODO_GROUPS = [['before', 'Before merge'], ['after', 'After merge'], ['dev', 'In development'], [null, 'Not sorted']];
+export const TODO_PLACES = { phone: ['📱', 'Phone'], computer: ['💻', 'Computer'], air: ['🎙', 'On air'] };
+
+// The to-do sections (`data.todo`) as groups. An item is a top item with its sub-items (the
+// entries right after it that have `under`), and a text line is an item with no sub-items.
+// `view`: a project (a section title) and a place; 'all' keeps everything. The first three
+// groups always come back; Not sorted only when it has items.
+export function groupTodo(sections, view = { project: 'all', place: 'all' }) {
+  const { project = 'all', place = 'all' } = view;
+  const groups = TODO_GROUPS.map(([key, title]) => ({ key, title, items: [] }));
+  for (const section of sections || []) {
+    if (project !== 'all' && section.title !== project) continue;
+    const entries = section.entries || [];
+    for (let i = 0; i < entries.length; i++) {
+      const top = entries[i];
+      // A sub-item with no item right before it has lost its top item (a delete can do that): it shows as its own item.
+      if (top.under && entries[i - 1]?.type === 'item') continue;
+      const subs = [];
+      if (top.type === 'item') {
+        while (i + 1 < entries.length && entries[i + 1].under) subs.push(entries[++i]);
+      }
+      let shown = subs;
+      if (place !== 'all') {
+        if (top.type !== 'item') continue;
+        shown = subs.filter((s) => s.place === place);
+        if (top.place !== place && !shown.length) continue;
+      }
+      const group = groups.find((g) => g.key === (top.type === 'item' ? top.group || null : null));
+      group.items.push({ top, subs: shown, section });
+    }
+  }
+  return groups.filter((g) => g.key !== null || g.items.length);
+}
+
+// The to-do projects for the filter: each section title with its count of top items.
+export const todoProjects = (sections) => (sections || []).map((section) => ({
+  title: section.title,
+  count: (section.entries || []).filter((e) => !e.under).length,
+}));
+
+export const todoRefUrl = (ref) => `https://github.com/${ref.repo}/issues/${ref.number}`;
+
+// ---------- titles from GitHub ----------
+// The page asks GitHub for these with the read token and keeps them in memory only. Nothing here
+// touches the network, the page or the clock: the page passes `nowMs`.
+
+// One GraphQL query for a list of refs ({ repo: 'owner/name', number }): one `repository` per
+// repo and one `issueOrPullRequest` per number. `aliases` says where each answer will sit.
+export function todoTitleQuery(refs) {
+  const repos = new Map();
+  for (const ref of refs || []) {
+    if (!repos.has(ref.repo)) repos.set(ref.repo, new Set());
+    repos.get(ref.repo).add(ref.number);
+  }
+  const aliases = [];
+  const blocks = [];
+  let r = 0;
+  for (const [repo, numbers] of repos) {
+    const repoAlias = `r${r++}`;
+    const [owner, name] = repo.split('/');
+    const asks = [...numbers].map((number) => {
+      const numberAlias = `n${number}`;
+      aliases.push({ repoAlias, numberAlias, repo, number });
+      return `${numberAlias}: issueOrPullRequest(number: ${Number(number)}) { __typename ... on Issue { title state } ... on PullRequest { title state isDraft mergedAt } }`;
+    });
+    blocks.push(`${repoAlias}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { ${asks.join(' ')} }`);
+  }
+  return { query: `{ ${blocks.join(' ')} }`, aliases };
+}
+
+// GitHub's answer → Map 'owner/name#N' → { kind, title, state, mergedAt }. A repo or number the
+// token cannot see comes back null, and is left out.
+export function readTodoTitles(json, aliases) {
+  const map = new Map();
+  for (const { repoAlias, numberAlias, repo, number } of aliases || []) {
+    const node = json?.data?.[repoAlias]?.[numberAlias];
+    if (!node || typeof node.title !== 'string') continue;
+    const isPr = node.__typename === 'PullRequest';
+    let state = String(node.state).toLowerCase();
+    if (isPr && state === 'open' && node.isDraft) state = 'draft';
+    map.set(`${repo}#${number}`, { kind: isPr ? 'pr' : 'issue', title: node.title, state, mergedAt: node.mergedAt ?? null });
+  }
+  return map;
+}
+
+// The out-of-date mark of a to-do line, from the PRs it names (issues and refs the token cannot
+// see do not count). Before merge: every PR merged or closed. After merge: how long ago the
+// newest merge was, and `wait` after more than 14 days. → null | { tone: 'quiet'|'wait', text }
+export function todoMark(entry, titles, nowMs) {
+  if (!titles || (entry.group !== 'before' && entry.group !== 'after')) return null;
+  const prs = (entry.refs || [])
+    .map((ref) => ({ ref, info: titles.get(`${ref.repo}#${ref.number}`) }))
+    .filter((p) => p.info && p.info.kind === 'pr');
+  if (!prs.length) return null;
+  if (entry.group === 'before') {
+    if (!prs.every((p) => p.info.state === 'merged' || p.info.state === 'closed')) return null;
+    const name = ({ ref }) => (ref.repo === entry.repo ? `#${ref.number}` : `${ref.repo}#${ref.number}`);
+    if (prs.length === 1) return { tone: 'wait', text: `PR ${name(prs[0])} is ${prs[0].info.state}: is this still needed?` };
+    const names = prs.map(name);
+    const list = `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`;
+    return { tone: 'wait', text: `PRs ${list} are merged or closed: is this still needed?` };
+  }
+  const merged = prs.filter((p) => p.info.state === 'merged' && p.info.mergedAt).map((p) => Date.parse(p.info.mergedAt));
+  if (!merged.length) return null;
+  const days = Math.max(0, Math.floor((nowMs - Math.max(...merged)) / 86400000));
+  const text = days === 0 ? 'merged today' : days === 1 ? 'merged 1 day ago' : `merged ${days} days ago`;
+  return { tone: days > 14 ? 'wait' : 'quiet', text };
+}

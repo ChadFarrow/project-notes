@@ -39,16 +39,113 @@ const TODO_HEADING = /^##+\s+(.*)$/;
 const TODO_ITEM = /^[-*+](?:\s+(?:\[([ xX])\](?:\s+|$))?(.*))?$/;
 const TODO_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
-function todoParts(text) {
+// The words at the start of an item. Group: `Before merge:`, `After merge:`, `In development:`.
+// Place: `Phone:`, `Computer:`, `On air:`. Any case; nothing else counts.
+const TODO_GROUP = /^(before merge|after merge|in development):\s*/i;
+const TODO_PLACE = /^(phone|computer|on air):\s*/i;
+const GROUP_OF = { 'before merge': 'before', 'after merge': 'after', 'in development': 'dev' };
+const PLACE_OF = { phone: 'phone', computer: 'computer', 'on air': 'air' };
+
+// Group, then place, from the start of an item's text → { group, place, text } (keys left out when absent).
+function todoPrefix(text) {
+  const out = {};
+  const g = TODO_GROUP.exec(text);
+  if (g) {
+    out.group = GROUP_OF[g[1].toLowerCase()];
+    text = text.slice(g[0].length);
+  }
+  const p = TODO_PLACE.exec(text);
+  if (p) {
+    out.place = PLACE_OF[p[1].toLowerCase()];
+    text = text.slice(p[0].length);
+  }
+  return { ...out, text };
+}
+
+// What counts as a reference in plain text (not in `code`, not in a link), first match at a
+// position wins: a range `#537–#540` (en dash or hyphen), `owner/repo#N`, a bare `#N` that is
+// not part of a word or path (so `#BowlAfterBowl` and `a/b#1` are not bare).
+const TODO_REF = /(?<![\w/])#(\d+)[–-]#(\d+)\b|(?<![\w/.-])([\w.-]+\/[\w.-]+)#(\d+)[–-]#(\d+)\b|(?<![\w/.-])([\w.-]+\/[\w.-]+)#(\d+)\b|(?<![\w/])#(\d+)\b/g;
+const TODO_CODE = /`[^`]*`/g;
+const MAX_NUMBER = 2147483647; // Above this a number is not a reference: GitHub's GraphQL Int ends here.
+const RANGE_MAX = 10; // A range of more numbers than this names only its two ends.
+
+// Split plain text into parts; a reference becomes { text, ref: { repo, number } }, with no href.
+// A bare #N needs `repo`; `owner/repo#N` always resolves. Pushes each ref into `refs`.
+function refParts(text, repo, owner, refs) {
   const parts = [];
   let at = 0;
-  for (const m of text.matchAll(TODO_LINK)) {
+  const add = (r, number) => {
+    if (!refs.some((x) => x.repo === r && x.number === number)) refs.push({ repo: r, number });
+  };
+  // The ends of a range: every number in it, or only the two ends when it holds more than RANGE_MAX.
+  const rangeOf = (repoName, from, to, whole) => {
+    const [a, b] = [Number(from), Number(to)];
+    const numbers = b >= a && b - a < RANGE_MAX ? Array.from({ length: b - a + 1 }, (_, i) => a + i) : [a, b];
+    numbers.forEach((n) => add(repoName, n));
+    const start = whole.indexOf('#'); // A slug sits before it; a bare range starts here.
+    const end = whole.lastIndexOf('#');
+    return [
+      ...(start ? [{ text: whole.slice(0, start) }] : []),
+      { text: whole.slice(start, start + from.length + 1), ref: { repo: repoName, number: a } },
+      { text: whole.slice(start + from.length + 1, end) },
+      { text: whole.slice(end), ref: { repo: repoName, number: b } },
+    ];
+  };
+  const big = (...ns) => ns.some((n) => Number(n) > MAX_NUMBER);
+  for (const m of text.matchAll(TODO_REF)) {
+    const [whole, from, to, rangeSlug, slugFrom, slugTo, slug, slugNumber, bare] = m;
+    let made;
+    if (from !== undefined) {
+      if (repo && owner && !big(from, to)) made = rangeOf(repo, from, to, whole);
+    } else if (rangeSlug !== undefined) {
+      if (!big(slugFrom, slugTo)) made = rangeOf(rangeSlug, slugFrom, slugTo, whole);
+    } else if (slug !== undefined) {
+      if (!big(slugNumber)) {
+        add(slug, Number(slugNumber));
+        made = [{ text: whole, ref: { repo: slug, number: Number(slugNumber) } }];
+      }
+    } else if (bare !== undefined && repo && owner && !big(bare)) {
+      add(repo, Number(bare));
+      made = [{ text: whole, ref: { repo, number: Number(bare) } }];
+    }
+    if (!made) continue;
     if (m.index > at) parts.push({ text: text.slice(at, m.index) });
-    parts.push({ text: m[1], href: m[2] });
-    at = m.index + m[0].length;
+    parts.push(...made);
+    at = m.index + whole.length;
   }
   if (at < text.length) parts.push({ text: text.slice(at) });
   return parts;
+}
+
+// The text of an item → parts: links split out (kept as before), then in the rest, outside
+// `code`, the references. `repo` is the Owner/name of the heading, or null.
+function todoParts(text, repo, owner) {
+  const raw = [];
+  const refs = [];
+  let at = 0;
+  const plain = (chunk) => {
+    let c = 0;
+    for (const m of chunk.matchAll(TODO_CODE)) {
+      raw.push(...refParts(chunk.slice(c, m.index), repo, owner, refs), { text: m[0] });
+      c = m.index + m[0].length;
+    }
+    raw.push(...refParts(chunk.slice(c), repo, owner, refs));
+  };
+  for (const m of text.matchAll(TODO_LINK)) {
+    if (m.index > at) plain(text.slice(at, m.index));
+    raw.push({ text: m[1], href: m[2] });
+    at = m.index + m[0].length;
+  }
+  if (at < text.length) plain(text.slice(at));
+  // Neighbouring plain pieces are one part again.
+  const parts = [];
+  for (const p of raw) {
+    const last = parts[parts.length - 1];
+    if (last && !last.ref && !last.href && !p.ref && !p.href) last.text += p.text;
+    else parts.push({ ...p });
+  }
+  return { parts, refs };
 }
 
 // notes/TODO.md → the To do list on the web page. A small reader, not a Markdown parser:
@@ -61,8 +158,12 @@ function todoParts(text) {
 // file (`removeTodoItem` in notes.mjs). An item indented under another item gets `under`, the
 // lines of that item. There is one level: deeper items sit under the same top item. A blank
 // line, a heading or a line at the left margin ends the group.
-export function parseTodoList(text) {
-  let section = { title: '', entries: [] };
+export function parseTodoList(text, { owner, repos = [] } = {}) {
+  const repoOf = (title) => {
+    const name = owner && repos.find((r) => r.toLowerCase() === title.trim().toLowerCase());
+    return name ? `${owner}/${name}` : null;
+  };
+  let section = { title: '', entries: [], repo: null };
   const sections = [section];
   let aboveFirstHeading = true;
   let open = null; // The entry that a wrapped line continues.
@@ -76,15 +177,24 @@ export function parseTodoList(text) {
       open = null;
       top = null;
     } else if (heading) {
-      section = { title: heading[1], entries: [] };
+      section = { title: heading[1], entries: [], repo: repoOf(heading[1]) };
       sections.push(section);
       aboveFirstHeading = false;
       open = null;
       top = null;
     } else if (item) {
-      open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: item[2] ?? '' };
-      if (top && indent > top.indent) open.under = top.lines;
-      else top = item[2]?.trim() ? { lines: open.lines, indent } : null;
+      const { text: words, ...prefix } = todoPrefix(item[2] ?? '');
+      // A line of only group or place words keeps them as its text, so it keeps its box.
+      open = { type: 'item', done: /x/i.test(item[1] ?? ''), lines: [line], text: words.trim() ? words : (item[2] ?? '') };
+      if (top && indent > top.indent) {
+        // A sub-item has the group of its item, and its own place or else the item's.
+        open.under = top.lines;
+        if (top.group) open.group = top.group;
+        if (prefix.place ?? top.place) open.place = prefix.place ?? top.place;
+      } else {
+        Object.assign(open, prefix);
+        top = (item[2] ?? '').trim() ? { lines: open.lines, indent, group: prefix.group, place: prefix.place } : null;
+      }
       section.entries.push(open);
     } else if (open) {
       open.text += ` ${line}`;
@@ -96,11 +206,14 @@ export function parseTodoList(text) {
     }
   }
   return sections
-    .map(({ title, entries }) => ({
+    .map(({ title, entries, repo }) => ({
       title,
       entries: entries
         .filter((e) => e.text.trim())
-        .map(({ text: words, ...entry }) => ({ ...entry, parts: todoParts(words.trim()) })),
+        .map(({ text: words, ...entry }) => {
+          const { parts, refs } = todoParts(words.trim(), repo, owner);
+          return { ...entry, ...(repo && { repo }), ...(refs.length && { refs }), parts };
+        }),
     }))
     .filter((s) => s.entries.length);
 }
@@ -153,7 +266,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     generatedAtIso,
     degradedReason: degradedReason || null,
     thresholds: { idleDays: IDLE_DAYS, staleDays: STALE_DAYS },
-    todo: parseTodoList(todoText),
+    todo: parseTodoList(todoText, { owner: model.owner, repos: model.projects.map((p) => p.name) }),
     totals: {
       prs: sum((p) => p.prsTotal),
       issues: sum((p) => p.issuesTotal),
