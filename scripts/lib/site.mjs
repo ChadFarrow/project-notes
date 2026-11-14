@@ -1,6 +1,7 @@
 // Pure JSON output for the web dashboard: model → the data.json that site/app.js reads.
-// It carries only what LATEST.md, INDEX.md, the note AUTO blocks and notes/TODO.md already
-// publish: the site is public, and some of these repos are private. Item bodies never get here.
+// It carries only what LATEST.md, INDEX.md, the note AUTO blocks and the to-do files
+// (notes/TODO.md and notes/todo/) already publish: the site is public, and some of these repos
+// are private. Item bodies never get here.
 
 import { createHash } from 'node:crypto';
 import {
@@ -39,6 +40,9 @@ export function siteDirProblem(root, dir) {
 const TODO_HEADING = /^##+\s+(.*)$/;
 const FOLDER_HEADING = /^#{1,6}\s+(.*)$/;
 const CALLOUT = /^>\s?(?:\[![\w-]+\][+-]?\s*)?/;
+// Folder files: a margin line right below an item that starts a new Markdown block (quote, numbered
+// line, table row) is a line of text, not a continuation of the item.
+const NEW_BLOCK = /^(?:>|\||\d+[.)]\s)/;
 const TODO_ITEM = /^[-*+](?:\s+(?:\[([ xX])\](?:\s+|$))?(.*))?$/;
 const TODO_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
@@ -225,13 +229,14 @@ export function parseTodoList(text, { owner, repos = [], title } = {}) {
       open = { type: 'text', text: shown(item[2] ?? '') };
       top = null;
       section.entries.push(open);
-    } else if (open) {
+    } else if (open && !(folder && open.type === 'item' && !indent && NEW_BLOCK.test(line))) {
       const more = shown(item ? (item[2] ?? '') : line);
       if (more.trim()) open.text += ` ${more}`;
       open.lines?.push(line);
       if (!indent) top = null;
     } else if (!aboveFirstHeading) {
       open = { type: 'text', text: shown(line) };
+      top = null;
       section.entries.push(open);
     }
   }

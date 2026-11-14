@@ -646,6 +646,20 @@ async function main() {
         return before?.textContent.startsWith('Before merge') && list?.contains(maker) && maker.querySelector('.todo-place')?.dataset.place === 'phone'
           && !/Before merge|Phone:/.test(heads[0].textContent) && heads[0].textContent.startsWith('1. The maker (#8)') && heads[0].tagName === 'P';
       })()`));
+      check('the heading above each row belongs to the row’s own file', await evaluate(`(() => {
+        const rows = [...document.querySelectorAll('#todo-list .todo-item')].filter((li) => !li.parentElement.classList.contains('todo-subs'));
+        let headed = 0;
+        for (const li of rows) {
+          if (!li.dataset.file) return false;
+          let el = li.parentElement.previousElementSibling;
+          while (el && !el.classList.contains('todo-heading') && !el.classList.contains('group-title')) el = el.previousElementSibling;
+          if (el?.classList.contains('todo-heading')) {
+            headed++;
+            if (el.dataset.file !== li.dataset.file) return false;
+          }
+        }
+        return rows.length > 0 && headed > 0;
+      })()`));
       check('a plain bullet shows as text with no box', await evaluate(`(() => {
         const p = ${noteLineJs('A plain bullet')};
         return !!p && !p.querySelector('button') && !p.closest('.todo-item') && p.querySelector('a')?.getAttribute('href') === 'https://example.com/guide';
@@ -1209,6 +1223,22 @@ async function main() {
         && api.todoPuts[puts].text === keptFirst && noteText(NOTE) === keptFirst && (await sameRows()) === 1);
       await go();
       check('the first of the two stays after a reload', (await sameRows()) === 1);
+
+      // A note was deleted in Obsidian, and the page is older than that.
+      const MAC_PATH = 'notes/todo/Mac mini.md';
+      const macFile = api.todoFiles.get(MAC_PATH);
+      api.todoFiles.delete(MAC_PATH);
+      puts = api.todoPuts.length;
+      await tapBox('Check the dock');
+      await waitFor(sheetOpen);
+      await click('#todo-dialog .primary');
+      check('a note deleted in Obsidian says the line is not in the file, with no HTTP message',
+        await waitFor('document.querySelector("#todo-dialog .status").textContent.includes("not in the file")')
+        && !(await text('#todo-dialog .status'))?.includes('404') && api.todoPuts.length === puts && !(await showsItem('Check the dock')));
+      await click('#todo-dialog .cancel-button');
+      api.todoFiles.set(MAC_PATH, macFile);
+      await evaluate(`localStorage.removeItem('pn:todoRemoved')`);
+      await go();
 
       // The token stops working.
       api.revoked = true;

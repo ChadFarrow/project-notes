@@ -392,7 +392,7 @@ function todoRefLines(entry) {
 function todoRow(entry, section) {
   const place = TODO_PLACES[entry.place];
   const mark = todoMark(entry, todoTitles, Date.now());
-  return h('li', { class: `item todo-item${entry.done ? ' done' : ''}` },
+  return h('li', { class: `item todo-item${entry.done ? ' done' : ''}`, 'data-file': entry.file || '' },
     h('button', { type: 'button', class: 'todo-box', title: 'Mark done', 'aria-label': `Mark done: ${todoWords(entry)}`, onclick: () => askRemoveTodo(entry) }),
     h('div', { class: 'item-title' },
       entry.done ? h('span', { class: 'visually-hidden', text: 'Done: ' }) : null,
@@ -454,13 +454,18 @@ function todoPanel() {
     }
     let list = null;
     let last = null;
+    let headed = false; // A heading showed above in this group.
     for (const { top, subs, section } of group.items) {
-      // A heading of a folder note shows once, above its items in this group.
+      // A heading shows once, above its items in this group. A new section ends the list, so its
+      // rows never sit under the heading of the section before. After a heading showed in this
+      // group, a section with no heading of its own shows its title instead.
       if (section !== last) {
         last = section;
-        if (section.heading) {
-          panel.append(h('p', { class: 'todo-heading', text: section.heading }));
-          list = null;
+        list = null;
+        const words = section.heading || (headed ? section.title : '');
+        if (words) {
+          panel.append(h('p', { class: 'todo-heading', 'data-file': top.file || '', text: words }));
+          headed = true;
         }
       }
       if (top.type !== 'item') {
@@ -758,6 +763,7 @@ async function deleteTodoItem(entry, group) {
   const path = `/repos/${REPO}/contents/${urlPath}`;
   for (let attempt = 0; attempt < 3; attempt++) {
     const res = await gh(`${path}?ref=main`);
+    if (res.status === 404) return false; // The note was deleted in Obsidian.
     if (!res.ok) throw await apiError(res, 'read the to-do list');
     const file = await res.json();
     const text = removeTodoItem(decodeBase64(file.content), lines, entry.under, entry.headingLine);

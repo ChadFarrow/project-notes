@@ -633,3 +633,16 @@ test('in a folder note every heading level gives a headingLine, and an item abov
   assert.equal('headingLine' in items[0], false);
   assert.deepEqual(items.map((e) => e.lines), [['- [ ] Top'], ['- [ ] Same'], ['- [ ] Same']]);
 });
+
+test('a folder note: a callout, a numbered line or a table row right below an item starts its own text line', () => {
+  for (const next of ['> [!note] Careful.', '1. Numbered', '2) Numbered', '| a | b |']) {
+    const [s] = folder('app-one', `- [ ] Item\n${next}\n`);
+    assert.equal(s.entries.length, 2, next);
+    assert.deepEqual(s.entries[0].lines, ['- [ ] Item'], next);
+    assert.equal(s.entries[1].type, 'text', next);
+    assert.ok(!('lines' in s.entries[1]), next);
+  }
+  const [s] = folder('app-one', '- [ ] Item\nwrapped words\n');
+  assert.equal(s.entries.length, 1, 'plain wrapped words still join');
+  assert.deepEqual(s.entries[0].lines, ['- [ ] Item', 'wrapped words']);
+});

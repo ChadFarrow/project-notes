@@ -443,3 +443,16 @@ test('removeTodoItem with a heading returns null when the heading is gone or the
   assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## Two'), null, 'the line is under One, not Two');
   assert.equal(removeTodoItem('## One  \r\n- [ ] Same\r\n', ['- [ ] Same'], undefined, '## One'), '## One  \r\n');
 });
+
+test('removeTodoItem with a heading tries every heading that has the same words', () => {
+  const text = '### Phone\n- [ ] A\n### Other\n- [ ] B\n### Phone\n- [ ] Same\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '### Phone'), '### Phone\n- [ ] A\n### Other\n- [ ] B\n### Phone\n');
+  assert.equal(removeTodoItem(text, ['- [ ] A'], undefined, '### Phone'), '### Phone\n### Other\n- [ ] B\n### Phone\n- [ ] Same\n');
+  assert.equal(removeTodoItem(text, ['- [ ] B'], undefined, '### Phone'), null);
+});
+
+test('removeTodoItem with a heading ends the scope at an indented heading', () => {
+  const text = '## One\n- [ ] A\n  ## Two\n- [ ] Same\n';
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## One'), null, 'the line is under the indented heading');
+  assert.equal(removeTodoItem(text, ['- [ ] Same'], undefined, '## Two'), '## One\n- [ ] A\n  ## Two\n');
+});

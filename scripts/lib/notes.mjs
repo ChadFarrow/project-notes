@@ -465,28 +465,33 @@ export function removeTodoItem(source, lines, under, after) {
     }
     return -1;
   };
-  let start = 0;
-  let end = chunks.length;
-  // `after`: a trimmed heading line. The search then stays under that heading, up to the next heading.
+  const scopes = [];
   if (after) {
-    const head = chunks.findIndex((c) => c.trim() === after);
-    if (head < 0) return null;
-    start = head + 1;
-    end = start;
-    while (end < chunks.length && !/^#{1,6}\s/.test(chunks[end])) end++;
+    // Every heading with these words has a scope: the lines below it, up to the next heading.
+    chunks.forEach((c, head) => {
+      if (c.trim() !== after) return;
+      let end = head + 1;
+      while (end < chunks.length && !/^#{1,6}\s/.test(chunks[end].trim())) end++;
+      scopes.push([head + 1, end]);
+    });
+    if (!scopes.length) return null;
+  } else {
+    scopes.push([0, chunks.length]);
   }
-  let from = start;
-  let to = end;
-  if (under) {
-    const top = find(under, start, end);
-    if (top < 0) return null;
-    from = top + under.length;
-    to = from;
-    while (to < end && /^[ \t]+\S/.test(chunks[to])) to++;
+  for (const [start, end] of scopes) {
+    let from = start;
+    let to = end;
+    if (under) {
+      const top = find(under, start, end);
+      if (top < 0) continue;
+      from = top + under.length;
+      to = from;
+      while (to < end && /^[ \t]+\S/.test(chunks[to])) to++;
+    }
+    const at = find(lines, from, to);
+    if (at >= 0) return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
   }
-  const at = find(lines, from, to);
-  if (at < 0) return null;
-  return [...chunks.slice(0, at), ...chunks.slice(at + lines.length)].join('');
+  return null;
 }
 
 export const TODO_GROUPS = [['before', 'Before merge'], ['after', 'After merge'], ['dev', 'In development'], [null, 'Not sorted']];
