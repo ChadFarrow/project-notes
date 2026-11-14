@@ -23,6 +23,9 @@ blank line ends the group.
 - [ ] PR #541, ⤮ SHUFFLE for the favorite singles, is merged (2026-11-14). It passed on your iPhone on beta. One check waited for the merge:
   - [ ] In the Home Screen app on boostmebitch.com, open `/favorites`, press SINGLES, then ⤮ SHUFFLE: the first track plays at once, with no second ▶.
 - [ ] Decide on PR #550 (beta only: the next track's file downloads about 30 s early), and tell Claude: keep it on beta, make it a real feature, or close it. In your background tests every normal track change after an early download started at once (bug reports #555 and #557).
+- [ ] PR #558 (draft): ⏮ and ⏭ pass over a dead file, in the app and on the lock screen. Its browser tests passed in Chrome, but not on an iPhone. Tell Claude to put it on beta, test it there in the Home Screen app, then tell Claude what does not work.
+  - [ ] Shuffle your favorite singles until a dead track (Herbivore's "Winds of Change") is skipped. Press ⏮ on the track after it: the track before the dead one plays, and it stays.
+  - [ ] Lock the screen, then press ⏮ and ⏭ on the lock screen across the dead track: the audio goes on, with no stop at 0:00.
 - [ ] PR #543 is merged (2026-11-13): "N s behind" and ⏭ GO LIVE under a live show. Test it on your iPhone during the next live show. Its browser tests passed in Chrome against a test stream, but not in Safari, on the lock screen or on a real broadcast. Then tell Claude what does not work.
   - [ ] In Safari or the Home Screen app, on boostmebitch.com, play a live show. While it plays on time, the row says `● LIVE` and shows no button.
   - [ ] When the audio stops to buffer for more than 5 s, the second line then says "N s behind live" and ⏭ GO LIVE shows. Press it: the audio jumps ahead, and the line goes back to the show name.
