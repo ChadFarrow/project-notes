@@ -34,13 +34,12 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (5)
+### Pull requests (4)
 
-- [#550 Beta only: download the next track's file ~30 s before this one ends (#546 experiment)](https://github.com/ChadFarrow/boostmebitch/pull/550) — opened 2026-11-13 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (10)
 
@@ -55,9 +54,10 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (3)
+### Branches with no open PR (4)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
+- [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
 - [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
 <!-- AUTO:END -->
