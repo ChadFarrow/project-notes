@@ -4,6 +4,8 @@
 
 - [ ] In development: Computer: Post-show agent, later: the NAS ↔ Proton copy job. Compare the candr folder on the NAS (`/Volumes/candr`) with the candr folder in your Proton Drive (shared with Reed), and decide: a full sync, or only defined folders in defined directions (new files from Reed → NAS; your art and transcripts → Proton; no deletes). The watcher for `candr/episodes/Final Audio` comes first (#44).
 
+- [ ] In development: Computer: The full screen layout for the board (1920 × 1080). The mockup is the Claude canvas "Command-Center Full Screen Layout", board "Full screen layout (starting point)": https://claude.ai/artifact/NLeqJqyr4Rs5QYa9Ecz8xL (you approved it as the starting point on 2026-11-15). Look at it on your desktop at full size, and decide what goes in the empty space under the ISO pads, or nothing. Then tell Claude to write the design doc and build it, after the 015 show on 2026-11-18.
+
 - [ ] After merge: Computer: Command-Center PR #40, the show file for the after-show step, is merged, and the board server runs it since 2026-11-15 (`/api/post` says "available"). Reload the board in Safari before the 015 show on Wednesday 2026-11-18.
   - [ ] Computer: After the 015 show, `~/Library/Application Support/candr-post/shows/` holds one show file, and `pads/` holds the Intro, Outro and song. Tell Claude what is missing.
 
