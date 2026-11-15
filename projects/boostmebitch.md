@@ -34,8 +34,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (1 PR), [stablekraft-app](stablekraft-app.md) (3 PRs, 1 issue)
 
-### Pull requests (6)
+### Pull requests (7)
 
+- [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2026-11-15
 - [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13

@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-15 18:50 UTC
+# Dashboard — 2026-11-15 19:20 UTC
 
-27 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -32,7 +32,7 @@
 
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 9 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
-- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 9 months ago · by Kolomona
+- [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
@@ -92,10 +92,11 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-6 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
+7 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
-- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2 hours ago
-- PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2 hours ago
+- PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 1 minute ago
+- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 3 hours ago
+- PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 3 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 days ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 days ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
@@ -154,13 +155,13 @@
 
 1 PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR)
 
-- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 5 hours ago
+- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 6 hours ago
 
 #### [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 5 hours ago
+- PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 6 hours ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -201,8 +202,9 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 branch with no PR
+1 PR · 1 branch with no PR
 
+- PR [#85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — opened 29 minutes ago · for [Command-Center](projects/Command-Center.md)
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites
@@ -227,7 +229,8 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 1 hour ago
+- PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2 hours ago
+- Opened elsewhere: [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 29 minutes ago
 - Branch [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)

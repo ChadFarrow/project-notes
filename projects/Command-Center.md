@@ -26,6 +26,10 @@
 
 - [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15
 
+### Opened elsewhere for this project (1)
+
+- [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 2026-11-15
+
 ### Branches with no open PR (1)
 
 - [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3)
