@@ -16,7 +16,6 @@
   - [ ] Phone: Run `/candr-post 15 --dry-run` in a Claude session and read the list; then run `/candr-post 15` and answer with the numbers to keep.
   - [ ] Computer: After the split write, open the episode in the Podhome website: the split must still point to the song. Tell Claude "the split is fine" or "the split lost the song". Then publish or schedule the episode yourself.
 
-- [ ] Before merge: Computer: Read and merge #44, the post-show agent phase 3 (the Final Audio watcher). It is on `main` now, with no conflicts, and every test suite passes.
 - [ ] After merge: Computer: Start the watcher (#44) only after 015 is Published. Then tell Claude: Claude writes the folder path, runs the dry run, and installs the agent; you get one DM with the first-start count. The first real run is 016: Reed (or you) puts `candr-016.mp3` in `candr/episodes/Final Audio`.
 
 - [ ] After merge: Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
