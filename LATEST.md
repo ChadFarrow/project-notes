@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-15 00:10 UTC
+# Dashboard — 2026-11-15 02:10 UTC
 
-18 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+19 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -9,7 +9,7 @@
 ### Ready to merge — idle 7+ days (4)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 22 days · checks passing
-- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 13 days · no checks
+- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 14 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 11 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 11 days · checks passing
 
@@ -24,8 +24,8 @@
 - [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 1 day ago · 1 comment
 - [#546 \[BMB\] Next track didn't play](https://github.com/ChadFarrow/boostmebitch/issues/546) — opened 1 day ago · 1 comment
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2 days ago · 1 comment
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 6 days ago
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 43 days ago
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 7 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 44 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
 **[MSP-2.0](projects/MSP-2.0.md)**
@@ -94,9 +94,9 @@
 
 4 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 1 day ago
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 days ago
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 days ago
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 49 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview) — no PR
@@ -194,6 +194,14 @@
 
 ### Uncategorized
 
+#### [Command-Center](projects/Command-Center.md)
+
+2 PRs · 1 branch with no PR
+
+- PR [#35 Level every clip on its mono mix, Intro and Outro too](https://github.com/ChadFarrow/Command-Center/pull/35) — opened 1 minute ago · draft
+- PR [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 1 day ago
+- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
+
 #### [vibe-kit](projects/vibe-kit.md)
 
 6 branches with no PR
@@ -204,13 +212,6 @@
 - Branch [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope) — no PR
 - Branch [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main) — no PR
 - Branch [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule) — no PR
-
-#### [Command-Center](projects/Command-Center.md)
-
-1 PR · 1 branch with no PR
-
-- PR [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 1 day ago
-- Branch [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
