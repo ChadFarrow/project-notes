@@ -1,5 +1,10 @@
 - [ ] In development: Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
 
+- [ ] In development: Send the Podhome developer the post-show request (written by Claude on 2026-11-15): "Can `POST /api/modify_v4v` time splits (and `GET /api/v4v`) carry a remote item, the feed GUID and item GUID of a song, so a script can add a song's value time split by itself? And can chapters take `toc` (false = an image-only chapter, not in the table of contents) and `endTime`, as in the Podcasting 2.0 JSON chapters spec?" When Podhome answers, tell Claude: the post-show agent then sets the song split and the screenshot chapters by itself.
+
+- [ ] After merge: Computer: Merge Command-Center PR #40, the show file for the after-show step, before the 015 show on Wednesday 2026-11-18. Then tell Claude: Claude restarts the board server and checks that `/api/post` says "available". Then reload the board in Safari.
+  - [ ] Computer: After the 015 show, `~/Library/Application Support/candr-post/shows/` holds one show file, and `pads/` holds the Intro, Outro and song. Tell Claude what is missing.
+
 - [ ] After merge: Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
   - [ ] Computer: Trim a song in ISO Edit: Play part, then Done, then press the ISO. It plays only the part, and it starts at once.
   - [ ] On air: Listen on air (your headphones and the Audio Hijack recording): the part starts and ends with no click, at about the level of the other ISOs.
