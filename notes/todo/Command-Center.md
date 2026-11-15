@@ -17,11 +17,10 @@
   - [ ] In Show Edit, "+ Add pad" a song: it plays on R, at about the loudness of the Music pad. Remove it with two presses.
   - [ ] With 6 pads at half screen, the whole ISO page still shows, and in Show Edit the Show panel scrolls inside itself.
 
-- [ ] After merge: Computer: Audio Hijack has a new chain since 2026-11-13: AUPeakLimiter (Pre-Gain +10 dB), then Volume 75 %. Its test recording met the level targets, but no Riverside export confirms them yet. Do one Riverside test with this setup, with Reed if he can join.
-  - [ ] Click Run in Audio Hijack and keep its Recorder on for the whole test, so Claude gets both files of the same audio.
-  - [ ] In Riverside, talk normally for about 30 s, then laugh or talk loudly once. Play an ISO, the intro (let it fade), about 30 s of a song and the outro, with silence between. Reed talks for about 30 s.
-  - [ ] Export as WAV HD with Normalize audio levels off, noise removal off and Magic Audio off on your track. Give Claude the export's path and the time of the test.
-
 - [ ] Before merge: Computer: Command-Center PR #33: the Music pad is levelled on its mono mix, and a loudness meter sits next to Edit on the Show panel. Its tests passed in Chrome and WebKit, but not in your own Safari. Merge it, reload the board in Safari, then tell Claude what does not work.
   - [ ] Off air, play the Intro, an ISO and the song: the meter shows each one near the white line (−16 LUFS), and "— LUFS" a few seconds after Stop.
   - [ ] In Show Edit, the song's line says "levelled" about −3.6 dB (it was −4.8 dB): the song now plays about 1.2 dB louder.
+
+- [ ] Before merge: Computer: Command-Center PR #35: every clip on the board is levelled on its mono mix, the Intro and Outro too. It sits on #33: merge #33 first, then #35, and reload the board in Safari. Its tests passed in Chrome and WebKit, but not in your own Safari or in a Riverside export. Tell Claude what does not work.
+  - [ ] Computer: In Show Edit, the Intro's line says "levelled +1.1 dB" and the Outro's "levelled +0.3 dB". In ISO Edit, "POKEMON THEME" says about "levelled -8.9 dB" (it was about -10.9 dB).
+  - [ ] Computer: Record a short Riverside test with the Audio Hijack Recorder on: talk, then the Intro, the song, an ISO and the Outro. Export WAV HD with Normalize audio levels off, and give Claude the path. Each clip should be within 1 dB of the others.
