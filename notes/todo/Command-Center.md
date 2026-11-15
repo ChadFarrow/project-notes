@@ -46,7 +46,7 @@
   - [ ] On air: Start a test stream and press Rec: it shows "○ Rec: waiting", then the time in red. Stop it with two presses, and play the WAV file from the livestream folder.
   - [ ] On air: During a test recording, disconnect the NAS share once: Rec stops, and the status line says it could not write to the NAS.
 
-- [ ] Before merge: Computer: Command-Center PR #42, Ears: Reed and the board in your headphones, set from the board. Its tests passed in Chrome and WebKit, and a real check on your Audio Hijack worked. Merge it, then tell Claude "merged": the board server needs a restart.
-  - [ ] Computer: After the restart, reload the board in Safari. "Ears  Reed − +6 +  Board − +6 +" shows next to the meter.
+- [ ] After merge: Computer: Command-Center PR #42, Ears: Reed and the board in your headphones, set from the board, is live on the board since 2026-11-15 (board server restarted; the Shortcut ran from it with no popup). Its tests passed in Chrome and WebKit, but not in your own Safari or in a show. Tell Claude what does not work.
+  - [ ] Computer: Reload the board in Safari. "Ears  Reed − +6 +  Board − +6 +" shows next to the meter.
   - [ ] Computer: In Audio Hijack, raise "Reed" to 100 % and "Board to ears" to 62 %. Then click both numbers on the board once: both show 0, and it sounds as before.
   - [ ] On air: In a show, change Reed with − and + (or the keys [ and ]). Only Reed changes in your headphones, and Reed hears no change.
