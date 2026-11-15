@@ -22,11 +22,9 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (3)
+### Pull requests (1)
 
-- [#46 Ears: 6 dB a press (blocks -6/-12/-24, range +6 to -36)](https://github.com/ChadFarrow/Command-Center/pull/46) — opened 2026-11-15
-- [#45 Song from storage: a new \<audio\> element for each replay](https://github.com/ChadFarrow/Command-Center/pull/45) — opened 2026-11-15
-- [#44 Post-show phase 3: the Final Audio watcher (upload + Podhome AI + prepare + DMs)](https://github.com/ChadFarrow/Command-Center/pull/44) — opened 2026-11-15 · merge conflict
+- [#44 Post-show phase 3: the Final Audio watcher (upload + Podhome AI + prepare + DMs)](https://github.com/ChadFarrow/Command-Center/pull/44) — opened 2026-11-15
 
 ### Opened elsewhere for this project (1)
 
