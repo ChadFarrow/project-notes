@@ -12,9 +12,9 @@ Community playlists, beta test list. Written 2026-11-14.
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
-- [ ] Add songs from SEARCH (an album, then single songs)
+- [ ] Add a whole album's songs from SEARCH, one after another
 - [ ] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
-- [ ] Move songs with ↑ ↓, and remove one with ×
+- [ ] Move songs with ↑ ↓
 - [ ] Try to publish 9 songs. The site must refuse and give the reason
 - [ ] Paste an `nsec` into the title. The site must show a refusal
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
@@ -80,6 +80,9 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] iPhone, beta (2026-11-15): ↑ UPLOAD PICTURE from the camera roll put the art on your own Blossom server (podtards.com, from your kind:10063), and SAVE took it. The GPS data was removed. Branch `claude/clever-clarke-82rdrg`, on beta
 - [x] iPhone, beta (2026-11-15): "BMB test playlist" played songs 1 to 9 on its own, with no taps
 - [x] iPhone, beta (2026-11-15): song 10 ("Mr. Videoman", its RSS Blue feed and file answer 410) is passed over: ⏭ showed disabled during song 9, and the playlist stopped at the end of song 9
+- [x] iPhone, beta (2026-11-15): EDIT marks a song that died after it went in ("Mr. Videoman": "⚠ Track not found. Remove it with ×." and the count above the list); × removed it, + ADD from SEARCH added a new song, and SAVE took both
+- [x] iPhone, beta (2026-11-15): the mini-player names a dead song in plain words: "Track not found."
+- [x] iPhone, beta (2026-11-15): a second ↑ UPLOAD PICTURE went to podtards.com
 - [x] iPhone, beta (2026-11-15): ⏭ on the lock screen moves to the next song of the playlist
 
 ## Before merge: Fix before #540 merges
