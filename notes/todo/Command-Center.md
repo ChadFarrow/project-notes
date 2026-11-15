@@ -23,4 +23,9 @@
 
 - [ ] After merge: Computer: Command-Center PR #35, every clip on the board levelled on its mono mix (the Intro and Outro too), is live on the board since 2026-11-14. Its tests passed in Chrome and WebKit, but not in your own Safari or in a Riverside export. Reload the board in Safari, then tell Claude what does not work.
   - [ ] Computer: In Show Edit, the Intro's line says "levelled +1.1 dB" and the Outro's "levelled +0.3 dB". In ISO Edit, "POKEMON THEME" says about "levelled -8.9 dB" (it was about -10.9 dB).
-  - [ ] Computer: Record a short Riverside test with the Audio Hijack Recorder on: talk, then the Intro, the song, an ISO and the Outro. Export WAV HD with Normalize audio levels off, and give Claude the path. Each clip should be within 1 dB of the others.
+  - [ ] Computer: Record a short Riverside test with the Audio Hijack Recorder on: talk, then the Intro, the song, an ISO and the Outro. Before it, ask Reed to raise his clips by about 8 dB, and look at two Riverside settings: echo cancellation for you, and noise reduction (Studio settings → Recording). Do not change eqMac during the test. Export WAV HD with Normalize audio levels off, and give Claude the path and the two settings. Each clip should be within 1 dB of the others.
+
+- [ ] After merge: On air: Command-Center PR #36, the Rec control that records the live stream as a WAV file in the livestream folder on the NAS, is live on the board since 2026-11-14. Its tests passed in Chrome and WebKit with a fake stream, but not with the real stream or in your own Safari. Tell Claude what does not work.
+  - [ ] Computer: Reload the board in Safari: Rec shows in the top row, before Export.
+  - [ ] On air: Start a test stream and press Rec: it shows "○ Rec: waiting", then the time in red. Stop it with two presses, and play the WAV file from the livestream folder.
+  - [ ] On air: During a test recording, disconnect the NAS share once: Rec stops, and the status line says it could not write to the NAS.
