@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-_No open work._
+### Pull requests (1)
+
+- [#40 Save the show file and pad audio for the after-show step](https://github.com/ChadFarrow/Command-Center/pull/40) — opened 2026-11-15
 <!-- AUTO:END -->
