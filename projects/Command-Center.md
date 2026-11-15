@@ -22,9 +22,8 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#42 Ears: Reed and the board in Chad's headphones, from the board](https://github.com/ChadFarrow/Command-Center/pull/42) — opened 2026-11-15
 - [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15
 
 ### Opened elsewhere for this project (1)

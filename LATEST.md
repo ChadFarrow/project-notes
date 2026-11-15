@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-15 20:23 UTC
+# Dashboard — 2026-11-15 20:27 UTC
 
-30 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -227,9 +227,8 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-2 PRs · 1 branch with no PR
+1 PR · 1 branch with no PR
 
-- PR [#42 Ears: Reed and the board in Chad's headphones, from the board](https://github.com/ChadFarrow/Command-Center/pull/42) — opened just now
 - PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 3 hours ago
 - Opened elsewhere: [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 1 hour ago
 - Branch [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3) — no PR
