@@ -37,7 +37,6 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 
 ## Before merge: 7. The PUBLISH popup and the signed-out maker (#574)
 - [ ] #574: PUBLISH with something missing opens a list of the three things a playlist needs (Nostr sign-in, a title, 10 songs), each with its fix button. A visitor who is not signed in can now build a playlist, and the draft moves to the account at sign-in. The robot test passed 305/305 in Chrome with phone emulation, with a fake extension signer
-	- [ ] Computer: put #574 on beta. The local `beta` on the Mac mini already holds it: in Terminal, `cd ~/Vibe/boostmebitch && git push --force-with-lease=beta:7feda27dc6616399a2074b15835fe42f02dbc924 origin beta`. If that push is refused, run `npm run beta -- add 574` and push the command it prints
 	- [ ] Phone: on Android, signed out on beta, build a playlist with a title and 10 songs, press PUBLISH, then SIGN IN with Amber from the popup. When Amber comes back (maybe in a new tab), the playlist must still be on the form, and PUBLISH must publish it. Amber was not tested: the robot only reloaded into a signed-in session
 	- [ ] Phone: on iPhone, the same with your iPhone signer. Only the extension sign-in was tested
 
