@@ -2,7 +2,7 @@
 
 - [ ] In development: Send the Podhome developer the post-show request (written by Claude on 2026-11-15): "Can `POST /api/modify_v4v` time splits (and `GET /api/v4v`) carry a remote item, the feed GUID and item GUID of a song, so a script can add a song's value time split by itself? And can chapters take `toc` (false = an image-only chapter, not in the table of contents) and `endTime`, as in the Podcasting 2.0 JSON chapters spec?" When Podhome answers, tell Claude: the post-show agent then sets the song split and the screenshot chapters by itself.
 
-- [ ] After merge: Computer: Merge Command-Center PR #40, the show file for the after-show step, before the 015 show on Wednesday 2026-11-18. Then tell Claude: Claude restarts the board server and checks that `/api/post` says "available". Then reload the board in Safari.
+- [ ] After merge: Computer: Command-Center PR #40, the show file for the after-show step, is merged, and the board server runs it since 2026-11-15 (`/api/post` says "available"). Reload the board in Safari before the 015 show on Wednesday 2026-11-18.
   - [ ] Computer: After the 015 show, `~/Library/Application Support/candr-post/shows/` holds one show file, and `pads/` holds the Intro, Outro and song. Tell Claude what is missing.
 
 - [ ] After merge: Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
