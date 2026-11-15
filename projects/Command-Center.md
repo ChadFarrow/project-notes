@@ -24,7 +24,7 @@
 
 ### Pull requests (1)
 
-- [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15
+- [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15 · merge conflict
 
 ### Opened elsewhere for this project (1)
 
