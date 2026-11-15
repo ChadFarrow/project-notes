@@ -7,7 +7,6 @@
 - [ ] After merge: Computer: Command-Center PR #40, the show file for the after-show step, is merged, and the board server runs it since 2026-11-15 (`/api/post` says "available"). Reload the board in Safari before the 015 show on Wednesday 2026-11-18.
   - [ ] Computer: After the 015 show, `~/Library/Application Support/candr-post/shows/` holds one show file, and `pads/` holds the Intro, Outro and song. Tell Claude what is missing.
 
-- [ ] Before merge: Computer: Read and merge Command-Center PR #41, the post-show agent phase 2 (`/candr-post`), before Thursday 2026-11-19. Then tell Claude: Claude pulls `main` and runs `sh post/install-skill.sh` in `~/Vibe/Command-Center`, so the command stops pointing at the PR's worktree.
 - [ ] After merge: On air: The 015 show on Wednesday 2026-11-18, so `/candr-post` has what it needs (PR #41).
   - [ ] On air: Press Go Live and pick "Board + Podhome" (the show file then names the episode).
   - [ ] On air: Load the song on a show pad, and tick `- [x] Track - <title> by <artist>` in the episode note.
@@ -17,7 +16,7 @@
   - [ ] Phone: Run `/candr-post 15 --dry-run` in a Claude session and read the list; then run `/candr-post 15` and answer with the numbers to keep.
   - [ ] Computer: After the split write, open the episode in the Podhome website: the split must still point to the song. Tell Claude "the split is fine" or "the split lost the song". Then publish or schedule the episode yourself.
 
-- [ ] Before merge: Computer: Read and merge #44, the post-show agent phase 3 (the Final Audio watcher). It is stacked on #41: merge #41 first, then tell Claude; Claude moves #44 onto `main`.
+- [ ] Before merge: Computer: Read and merge #44, the post-show agent phase 3 (the Final Audio watcher). It is on `main` now, with no conflicts, and every test suite passes.
 - [ ] After merge: Computer: Start the watcher (#44) only after 015 is Published. Then tell Claude: Claude writes the folder path, runs the dry run, and installs the agent; you get one DM with the first-start count. The first real run is 016: Reed (or you) puts `candr-016.mp3` in `candr/episodes/Final Audio`.
 
 - [ ] After merge: Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
