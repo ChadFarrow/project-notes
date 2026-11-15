@@ -12,9 +12,7 @@ Community playlists, beta test list. Written 2026-11-14.
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
-- [ ] Tap `+ MAKE PLAYLIST` on Home
 - [ ] Add songs from SEARCH (an album, then single songs)
-- [ ] Add songs from FAVORITES
 - [ ] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
 - [ ] Move songs with ↑ ↓, and remove one with ×
 - [ ] Try to publish 9 songs. The site must refuse and give the reason
@@ -22,7 +20,6 @@ Community playlists, beta test list. Written 2026-11-14.
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
 - [ ] Reload the page while you build a playlist. The draft must come back
 - [ ] Set an art link: a square PNG or JPEG, 1400–3000 px. The cover must show that art
-- [ ] Set a non-square art link, or one with a transparent background. The site must accept it, and the feed's `itunes:image` must be your own link
 - [ ] Set an art link whose shortest side is under 300 px, or one that is not a PNG or JPEG. The site must refuse it and give the reason
 - [ ] Open one playlist in EDIT on two devices. Save on the first, then on the second. The second must say "changed elsewhere"
 - [ ] Tap SHARE and the copy buttons. The link must reach the clipboard
@@ -66,6 +63,11 @@ Community playlists, beta test list. Written 2026-11-14.
 - [x] The cover with no art link (a grid of 4 song covers): 200
 - [x] Buddy lets beta and www call `site-sign` and `zap-receipt-sign` (CORS)
 - [x] Robot tests: `e2e:communityui` 202/202, `e2e:communitynote` 84/84 and 36/36, `e2e:communityapi` 96/96
+- [x] iPhone, beta (2026-11-15): `+ MAKE PLAYLIST` on Home opens the maker
+- [x] iPhone, beta (2026-11-15): add songs from FAVORITES
+- [x] iPhone, beta (2026-11-15): a non-square art link (1206 x 1371) is accepted, the feed's `itunes:image` is your own link, and the cover is 1400 x 1400 from it ("Test playlist from my phone.")
+- [x] iPhone, beta (2026-11-15): the first playlist made, published and edited from a phone
+- [x] iPhone, beta (2026-11-15): ↑ UPLOAD PICTURE from the camera roll put the art on your own Blossom server (podtards.com, from your kind:10063), and SAVE took it. The GPS data was removed. Branch `claude/clever-clarke-82rdrg`, on beta
 
 ## Before merge: Fix before #540 merges
 - [ ] Two docs say a beta playlist keeps BoostMeBitch words: `docs/ops.md` ("The beta site") and the `noteBrandFor` paragraph in `docs/nostr.md`. Since #542, the feed origin on beta is boostmebuddy.com, so a beta playlist boost uses Buddy's words and Buddy's key. Correct the two paragraphs.
