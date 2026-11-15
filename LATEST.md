@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-15 22:41 UTC
+# Dashboard — 2026-11-15 22:49 UTC
 
-29 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
+28 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -227,9 +227,8 @@
 
 #### [Command-Center](projects/Command-Center.md)
 
-1 PR
 
-- PR [#44 Post-show phase 3: the Final Audio watcher (upload + Podhome AI + prepare + DMs)](https://github.com/ChadFarrow/Command-Center/pull/44) — opened 1 hour ago
+
 - Opened elsewhere: [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 3 hours ago
 
 #### [small-group-scoop](projects/small-group-scoop.md)

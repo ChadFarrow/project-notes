@@ -22,10 +22,6 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (1)
-
-- [#44 Post-show phase 3: the Final Audio watcher (upload + Podhome AI + prepare + DMs)](https://github.com/ChadFarrow/Command-Center/pull/44) — opened 2026-11-15
-
 ### Opened elsewhere for this project (1)
 
 - [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 2026-11-15
