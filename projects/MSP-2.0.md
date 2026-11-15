@@ -43,7 +43,7 @@ Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take id
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0](https://github.com/ChadFarrow/MSP-2.0) · TypeScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (no open work)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR)
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 - **Watch:** [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 

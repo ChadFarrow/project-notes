@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-_No open work._
+### Pull requests (1)
+
+- [#27 Add RUNNING.md: how the sync job runs](https://github.com/ChadFarrow/project-notes/pull/27) — opened 2026-11-15
 <!-- AUTO:END -->

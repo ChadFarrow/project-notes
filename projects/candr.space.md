@@ -24,6 +24,10 @@ Website for the Chad and Reeds Podcast at [candr.space](https://candr.space). On
 
 - **Repo:** [ChadFarrow/candr.space](https://github.com/ChadFarrow/candr.space) · JavaScript · private
 
+### Pull requests (1)
+
+- [#74 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/candr.space/pull/74) — opened 2026-11-15
+
 ### Branches with no open PR (2)
 
 - [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool)
