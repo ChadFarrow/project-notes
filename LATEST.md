@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-15 17:17 UTC
+# Dashboard — 2026-11-15 17:24 UTC
 
 27 open PRs · 18 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -94,7 +94,7 @@
 
 6 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
-- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 59 minutes ago
+- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 1 hour ago
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 1 hour ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 days ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2 days ago
@@ -110,7 +110,7 @@
 
 3 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#308 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/stablekraft-app/pull/308) — opened 3 hours ago
+- PR [#308 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/stablekraft-app/pull/308) — opened 4 hours ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 57 days ago · draft
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
@@ -122,7 +122,7 @@
 
 2 PRs · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
-- PR [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 3 hours ago
+- PR [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 4 hours ago
 - PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 22 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
@@ -130,7 +130,7 @@
 
 1 PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#10 Add RUNNING.md: how the health check runs](https://github.com/ChadFarrow/msp-podping-service/pull/10) — opened 3 hours ago
+- PR [#10 Add RUNNING.md: how the health check runs](https://github.com/ChadFarrow/msp-podping-service/pull/10) — opened 4 hours ago
 
 #### [MSP-2.0](projects/MSP-2.0.md)
 
@@ -154,13 +154,13 @@
 
 1 PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR)
 
-- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 3 hours ago
+- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 4 hours ago
 
 #### [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 3 hours ago
+- PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 4 hours ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -197,7 +197,7 @@
 
 1 PR
 
-- PR [#27 Add RUNNING.md: how the sync job runs](https://github.com/ChadFarrow/project-notes/pull/27) — opened 3 hours ago
+- PR [#27 Add RUNNING.md: how the sync job runs](https://github.com/ChadFarrow/project-notes/pull/27) — opened 4 hours ago
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
@@ -211,7 +211,7 @@
 
 1 PR · 2 branches with no PR
 
-- PR [#74 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/candr.space/pull/74) — opened 3 hours ago
+- PR [#74 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/candr.space/pull/74) — opened 4 hours ago
 - Branch [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data) — no PR
 - Branch [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool) — no PR
 
@@ -227,7 +227,7 @@
 
 1 PR
 
-- PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 1 minute ago
+- PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 7 minutes ago
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
