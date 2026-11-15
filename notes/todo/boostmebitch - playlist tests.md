@@ -29,7 +29,7 @@ Community playlists, beta test list. Written 2026-11-14.
 Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
 - [ ] Play the playlist from `/playlists`. It goes from song to song with no taps
 - [ ] ⏮ and ⏭ in the app work, and the right song plays
-- [ ] ⏮ and ⏭ on the lock screen work, and the lock screen shows the right song and art
+- [ ] ⏮ on the lock screen works, and the lock screen shows the right song and art
 - [ ] Shuffle the playlist. Every song plays once before any song plays again
 - [ ] Lock the phone and let it play several songs. The music does not stop
 - [ ] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
@@ -79,6 +79,8 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] iPhone, beta (2026-11-15): a non-square art link (1206 x 1371) is accepted, the feed's `itunes:image` is your own link, and the cover is 1400 x 1400 from it ("Test playlist from my phone.")
 - [x] iPhone, beta (2026-11-15): the first playlist made, published and edited from a phone
 - [x] iPhone, beta (2026-11-15): ↑ UPLOAD PICTURE from the camera roll put the art on your own Blossom server (podtards.com, from your kind:10063), and SAVE took it. The GPS data was removed. Branch `claude/clever-clarke-82rdrg`, on beta
+- [x] iPhone, beta (2026-11-15): "BMB test playlist" went from song 1 to song 2 on its own
+- [x] iPhone, beta (2026-11-15): ⏭ on the lock screen moves to the next song of the playlist
 
 ## Before merge: Fix before #540 merges
 - [ ] Two docs say a beta playlist keeps BoostMeBitch words: `docs/ops.md` ("The beta site") and the `noteBrandFor` paragraph in `docs/nostr.md`. Since #542, the feed origin on beta is boostmebuddy.com, so a beta playlist boost uses Buddy's words and Buddy's key. Correct the two paragraphs.
