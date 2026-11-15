@@ -26,10 +26,6 @@
 
 - [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15
 
-### Opened elsewhere for this project (1)
-
-- [thelounge-candr #84 candr-boost: direct messages for the after-show watcher (POST /notify + VPS helper)](https://github.com/ChadFarrow/thelounge-candr/pull/84) — PR · opened 2026-11-15
-
 ### Branches with no open PR (1)
 
 - [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3)

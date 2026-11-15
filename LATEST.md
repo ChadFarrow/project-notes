@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-15 18:36 UTC
+# Dashboard — 2026-11-15 18:50 UTC
 
-28 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+27 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -201,9 +201,8 @@
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 PR · 1 branch with no PR
+1 branch with no PR
 
-- PR [#84 candr-boost: direct messages for the after-show watcher (POST /notify + VPS helper)](https://github.com/ChadFarrow/thelounge-candr/pull/84) — opened 1 minute ago · for [Command-Center](projects/Command-Center.md)
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites
@@ -229,7 +228,6 @@
 1 PR · 1 branch with no PR
 
 - PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 1 hour ago
-- Opened elsewhere: [thelounge-candr #84 candr-boost: direct messages for the after-show watcher (POST /notify + VPS helper)](https://github.com/ChadFarrow/thelounge-candr/pull/84) — PR · opened 1 minute ago
 - Branch [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
