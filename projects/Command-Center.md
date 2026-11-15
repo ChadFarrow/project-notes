@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (1)
-
-- [#37 Ignore .DS\_Store](https://github.com/ChadFarrow/Command-Center/pull/37) — opened 2026-11-15
+_No open work._
 <!-- AUTO:END -->
