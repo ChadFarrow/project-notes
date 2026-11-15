@@ -5,6 +5,16 @@
 - [ ] After merge: Computer: Command-Center PR #40, the show file for the after-show step, is merged, and the board server runs it since 2026-11-15 (`/api/post` says "available"). Reload the board in Safari before the 015 show on Wednesday 2026-11-18.
   - [ ] Computer: After the 015 show, `~/Library/Application Support/candr-post/shows/` holds one show file, and `pads/` holds the Intro, Outro and song. Tell Claude what is missing.
 
+- [ ] Before merge: Computer: Read and merge Command-Center PR #41, the post-show agent phase 2 (`/candr-post`), before Thursday 2026-11-19. Then tell Claude: Claude pulls `main` and runs `sh post/install-skill.sh` in `~/Vibe/Command-Center`, so the command stops pointing at the PR's worktree.
+- [ ] After merge: On air: The 015 show on Wednesday 2026-11-18, so `/candr-post` has what it needs (PR #41).
+  - [ ] On air: Press Go Live and pick "Board + Podhome" (the show file then names the episode).
+  - [ ] On air: Load the song on a show pad, and tick `- [x] Track - <title> by <artist>` in the episode note.
+  - [ ] On air: Press Chapter when the topic changes, and take screenshots as usual.
+- [ ] After merge: Computer: Post-production of 015 on Thursday 2026-11-19 with PR #41.
+  - [ ] Computer: Upload the MP3 with Podhome AI as usual, and check that the episode number is 15. Add the song's split in Podhome (pick the song; any start time).
+  - [ ] Phone: Run `/candr-post 15 --dry-run` in a Claude session and read the list; then run `/candr-post 15` and answer with the numbers to keep.
+  - [ ] Computer: After the split write, open the episode in the Podhome website: the split must still point to the song. Tell Claude "the split is fine" or "the split lost the song". Then publish or schedule the episode yourself.
+
 - [ ] After merge: Command-Center PR #28, ISO trim, is live on the board since 2026-11-11. Its tests passed in Chrome and WebKit, but not in your own Safari, on air or with the real ISO folder. Tell Claude what does not work.
   - [ ] Computer: Trim a song in ISO Edit: Play part, then Done, then press the ISO. It plays only the part, and it starts at once.
   - [ ] On air: Listen on air (your headphones and the Audio Hijack recording): the part starts and ends with no click, at about the level of the other ISOs.
