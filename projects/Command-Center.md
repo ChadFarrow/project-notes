@@ -22,7 +22,5 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Opened elsewhere for this project (1)
-
-- [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 2026-11-15
+_No open work._
 <!-- AUTO:END -->
