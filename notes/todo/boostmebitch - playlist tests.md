@@ -86,3 +86,12 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 ## In development: Before launch (not a beta test)
 - [ ] Find which method (GET or POST) Podcast Index `add/byfeedurl` uses, and confirm that the key can add feeds
 - [ ] BAN AND DELETE ALL sends no Podcast Index notification. Fix this before `COMMUNITY_PI_NOTIFY=on`
+
+## In development: Feed template suggestions (review: add or not)
+Compared on 2026-11-15 with a v4vmusic.com playlist ("New Music Nudge Unit") and the ChadF Homegrown Hits playlist. The song lines (`podcast:remoteItem` with `feedGuid`, `itemGuid`, `feedUrl`, `medium`) already match v4vmusic. Every BMB feed is built from one template (`buildPlaylistFeedXml` in `lib/community/feed-doc.ts`), so one change updates every playlist; set `FEED_TEMPLATE_UPDATED_AT` with it.
+- [ ] `<itunes:category text="Music"/>`: v4vmusic has it. Always true for a `musicL` playlist
+- [ ] `<pubDate>`: v4vmusic and HGH have it. v4vmusic writes the same value as `lastBuildDate`
+- [ ] `<itunes:author>`: v4vmusic writes the curator's name. BMB stores only the maker's npub, so this needs the Nostr display name saved at publish and at save
+- [ ] `<itunes:explicit>`: v4vmusic writes `false` on every playlist. That is a claim about the songs, and a listener's playlist can hold explicit songs. Suggestion: leave it out, unless the aim is to copy v4vmusic exactly
+- [ ] `<link>`: v4vmusic points to the playlist's web page. BMB points to the feed's own XML address, because there is no page per playlist yet
+- [ ] Namespace address: v4vmusic uses the older GitHub address, BMB and HGH use `https://podcastindex.org/namespace/1.0`. Both are valid. No change suggested
