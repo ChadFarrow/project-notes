@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-15 19:20 UTC
+# Dashboard — 2026-11-15 19:21 UTC
 
 29 open PRs · 18 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -94,7 +94,7 @@
 
 7 PRs · 10 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
-- PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 1 minute ago
+- PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 minutes ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 3 hours ago
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 3 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2 days ago
@@ -204,7 +204,7 @@
 
 1 PR · 1 branch with no PR
 
-- PR [#85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — opened 29 minutes ago · for [Command-Center](projects/Command-Center.md)
+- PR [#85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — opened 30 minutes ago · for [Command-Center](projects/Command-Center.md)
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites
@@ -230,7 +230,7 @@
 1 PR · 1 branch with no PR
 
 - PR [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2 hours ago
-- Opened elsewhere: [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 29 minutes ago
+- Opened elsewhere: [thelounge-candr #85 docs: record the candr-boost /notify deploy (ec85a42, 2026-11-15 18:45Z)](https://github.com/ChadFarrow/thelounge-candr/pull/85) — PR · opened 30 minutes ago
 - Branch [`worktree-post-show-phase3`](https://github.com/ChadFarrow/Command-Center/tree/worktree-post-show-phase3) — no PR
 
 #### [small-group-scoop](projects/small-group-scoop.md)
