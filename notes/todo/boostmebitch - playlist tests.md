@@ -25,6 +25,17 @@ Community playlists, beta test list. Written 2026-11-14.
 - [ ] Tap SHARE and the copy buttons. The link must reach the clipboard
 - [ ] Delete a test playlist. Its feed must then answer 410
 
+## Before merge: Phone: 6. Playback (#538), on a real phone
+Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
+- [ ] Play the playlist from `/playlists`. It goes from song to song with no taps
+- [ ] ⏮ and ⏭ in the app work, and the right song plays
+- [ ] ⏮ and ⏭ on the lock screen work, and the lock screen shows the right song and art
+- [ ] Shuffle the playlist. Every song plays once before any song plays again
+- [ ] Lock the phone and let it play several songs. The music does not stop
+- [ ] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
+- [ ] Heart one song while it plays. In favorites, it shows under its own album, not under the playlist
+- [ ] Boost one song. The split preview names the song's own artists, not you as the maker
+
 ## Before merge: 2. The list and the hearts (#538)
 - [ ] `/playlists` shows community playlists first, newest first
 - [ ] EDIT shows only on your own playlists
