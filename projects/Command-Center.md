@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-_No open work._
+### Pull requests (1)
+
+- [#41 Post-show agent phase 2: the prepare step and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/41) — opened 2026-11-15
 <!-- AUTO:END -->
