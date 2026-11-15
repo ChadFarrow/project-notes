@@ -22,10 +22,6 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (1)
-
-- [#36 Record the live stream: Rec control and recorder (WAV to the NAS)](https://github.com/ChadFarrow/Command-Center/pull/36) — opened 2026-11-15 · draft · merge conflict
-
 ### Branches with no open PR (1)
 
 - [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
