@@ -33,6 +33,10 @@ Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `no
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
+### Pull requests (1)
+
+- [#84 candr-boost: direct messages for the after-show watcher (POST /notify + VPS helper)](https://github.com/ChadFarrow/thelounge-candr/pull/84) — opened 2026-11-15 · for [Command-Center](Command-Center.md)
+
 ### Branches with no open PR (1)
 
 - [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag)
