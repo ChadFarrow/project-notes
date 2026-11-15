@@ -22,10 +22,9 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#35 Level every clip on its mono mix, Intro and Outro too](https://github.com/ChadFarrow/Command-Center/pull/35) — opened 2026-11-15 · draft
-- [#33 Level the Music pad on its mono mix, and add a loudness meter](https://github.com/ChadFarrow/Command-Center/pull/33) — opened 2026-11-13
+- [#36 Record the live stream: Rec control and recorder (WAV to the NAS)](https://github.com/ChadFarrow/Command-Center/pull/36) — opened 2026-11-15 · draft
 
 ### Branches with no open PR (1)
 
