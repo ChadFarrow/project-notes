@@ -22,7 +22,7 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Branches with no open PR (1)
+### Pull requests (1)
 
-- [`worktree-add-claude-md`](https://github.com/ChadFarrow/Command-Center/tree/worktree-add-claude-md)
+- [#37 Ignore .DS\_Store](https://github.com/ChadFarrow/Command-Center/pull/37) — opened 2026-11-15
 <!-- AUTO:END -->
