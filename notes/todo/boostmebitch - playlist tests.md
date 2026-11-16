@@ -11,6 +11,13 @@ Community playlists, beta test list. Written 2026-11-14.
 > [!warning] Beta is real
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
+## In development: #575 MADE BY on beta, in this order
+Step 2 before step 1 breaks every community playlist read on beta and production. Step 1 is safe at any time. Branch `claude/dazzling-allen-hj91e4` passed typecheck, lint, all 51 `check:*` and `next build` on 2026-11-15.
+- [ ] #575: the `owner_name` column, then beta (#576), then the two test playlists
+	- [ ] Computer: in the Neon SQL Editor (the database in `COMMUNITY_DB_URL`), run `alter table community_playlists add column if not exists owner_name text;`. The check query in #575 must return `owner_name`
+	- [ ] Computer: add the branch to beta (`npm run beta -- add claude/dazzling-allen-hj91e4`) and push `beta` with the command it prints. A Claude session can do this after step 1
+	- [ ] Computer: open "BMB test playlist" and "Test playlist from my phone." in the maker, type your name in MADE BY, and press SAVE. Each feed must then carry `<itunes:author>` and `<pubDate>`, and `/playlists` must show the name
+
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
 
