@@ -36,13 +36,13 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] Boost one song. The split preview names the song's own artists, not you as the maker
 
 ## Before merge: 7. The PUBLISH popup and the signed-out maker (#574)
-- [ ] #574: PUBLISH with something missing opens a list of the three things a playlist needs (Nostr sign-in, a title, 10 songs), each with its fix button. A visitor who is not signed in can now build a playlist, and the draft moves to the account at sign-in. The robot test passed 305/305 in Chrome with phone emulation, with a fake extension signer
-	- [ ] Phone: on Android, signed out on beta, build a playlist with a title and 10 songs, press PUBLISH, then SIGN IN with Amber from the popup. When Amber comes back (maybe in a new tab), the playlist must still be on the form, and PUBLISH must publish it. Amber was not tested: the robot only reloaded into a signed-in session
-	- [ ] Phone: on iPhone, the same with your iPhone signer. Only the extension sign-in was tested
+- [x] #574: PUBLISH with something missing opens a list of the three things a playlist needs (Nostr sign-in, a title, 10 songs), each with its fix button. A visitor who is not signed in can now build a playlist, and the draft moves to the account at sign-in. The robot test passed 305/305 in Chrome with phone emulation, with a fake extension signer
+	- [x] Phone: on Android, signed out on beta, build a playlist with a title and 10 songs, press PUBLISH, then SIGN IN with Amber from the popup. When Amber comes back (maybe in a new tab), the playlist must still be on the form, and PUBLISH must publish it. Amber was not tested: the robot only reloaded into a signed-in session
+	- [x] Phone: on iPhone, the same with your iPhone signer. Only the extension sign-in was tested
 
 ## Before merge: 2. The list and the hearts (#538)
-- [ ] `/playlists` shows community playlists first, newest first
-- [ ] EDIT shows only on your own playlists
+- [x] `/playlists` shows community playlists first, newest first
+- [x] EDIT shows only on your own playlists
 - [ ] Heart a playlist, and heart one song in it
 - [ ] Open your favorites in OnlyBoosts. The song must show under its own album, not under the playlist
 
