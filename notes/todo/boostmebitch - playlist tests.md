@@ -12,8 +12,8 @@ Community playlists, beta test list. Written 2026-11-14.
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
-- [ ] Add a whole album's songs from SEARCH, one after another
-- [ ] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
+- [x] Add a whole album's songs from SEARCH, one after another
+- [x] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
 - [ ] Move songs with ↑ ↓
 - [ ] Try to publish 9 songs. The site must refuse and give the reason
 - [ ] Paste an `nsec` into the title. The site must show a refusal
