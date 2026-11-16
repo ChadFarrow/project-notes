@@ -14,7 +14,7 @@ Community playlists, beta test list. Written 2026-11-14.
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
 - [x] Add a whole album's songs from SEARCH, one after another
 - [x] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
-- [ ] Move songs with ↑ ↓
+- [x] Move songs with ↑ ↓
 - [ ] Try to publish 9 songs. The site must refuse and give the reason
 - [ ] Paste an `nsec` into the title. The site must show a refusal
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
