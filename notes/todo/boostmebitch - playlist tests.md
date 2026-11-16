@@ -30,10 +30,10 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] ⏮ and ⏭ in the app work, and the right song plays
 - [x] ⏮ on the lock screen works, and the lock screen shows the right song and art
 - [ ] Shuffle the playlist. Every song plays once before any song plays again
-- [ ] Lock the phone and let it play several songs. The music does not stop
-- [ ] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
-- [ ] Heart one song while it plays. In favorites, it shows under its own album, not under the playlist
-- [ ] Boost one song. The split preview names the song's own artists, not you as the maker
+- [x] Lock the phone and let it play several songs. The music does not stop
+- [x] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
+- [x] Heart one song while it plays. In favorites, it shows under its own album, not under the playlist
+- [x] Boost one song. The split preview names the song's own artists, not you as the maker
 
 ## Before merge: 7. The PUBLISH popup and the signed-out maker (#574)
 - [ ] #574: PUBLISH with something missing opens a list of the three things a playlist needs (Nostr sign-in, a title, 10 songs), each with its fix button. A visitor who is not signed in can now build a playlist, and the draft moves to the account at sign-in. The robot test passed 305/305 in Chrome with phone emulation, with a fake extension signer
