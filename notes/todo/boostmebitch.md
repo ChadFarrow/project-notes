@@ -7,6 +7,8 @@
   - [ ] Computer: on the Vercel preview of #583, open /demu. The list loads with week headings and a date on each row (the browser test used a saved answer, because Podcast Index rate-limited the test laptop)
   - [ ] Computer: on the same preview, pick DEMU in the search menu and search Longy. 14 albums show and none is from Wavlake. Then press "browse all DeMu →" and check that /demu opens with Longy in the box
 
+- [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
+
 - [ ] Before merge: Phone pass on beta
   - [ ] Phone: #585 in Chrome on Android, open the fullscreen player from /favorites, then use the Android back gesture. The first back closes the player and stays on /favorites, and each later back goes to the page before. The browser test cannot copy a real Android back, which can skip entries that a page added without a tap
 
