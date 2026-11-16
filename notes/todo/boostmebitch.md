@@ -27,6 +27,6 @@
 - #567 GIPHY grid on the boostmebuddy preview plays (2026-11-14).
 - #564 and #567 are merged and live (2026-11-14).
 
-- [ ] After merge: #586 your Boost Me Buddy publisher feed is live (merged 2026-11-16; Claude checked both links). Add it to Podcast Index at podcastindex.org/add
+- [ ] After merge: #586 your Boost Me Buddy publisher feed is live and in Podcast Index (feed 8118324, 2026-11-16)
   - [ ] Computer: open https://www.boostmebuddy.com/feeds/publishers/npub177fz5zkm87jdmf0we2nz7mm7uc2e7l64uzqrv6rvdrsg8qkrg7yqx0aaq7.xml and check that it lists your 2 test playlists
   - [ ] Computer: search that address in Boost Me Bitch, open it as a publisher, and check that both playlists open and play
