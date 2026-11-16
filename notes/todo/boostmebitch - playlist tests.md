@@ -12,37 +12,13 @@ Community playlists, beta test list. Written 2026-11-14.
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
-- [x] Add a whole album's songs from SEARCH, one after another
-- [x] Preview a song in the maker, then start a shuffle and Up Next. Both must still play
-- [x] Move songs with ↑ ↓
-- [x] Try to publish 9 songs. The site must refuse and give the reason
-- [x] Paste an `nsec` into the title. The site must show a refusal
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
-- [x] Reload the page while you build a playlist. The draft must come back
-- [x] Set an art link: a square PNG or JPEG, 1400–3000 px. The cover must show that art
-- [x] Set an art link whose shortest side is under 300 px, or one that is not a PNG or JPEG. The site must refuse it and give the reason
-- [x] Open one playlist in EDIT on two devices. Save on the first, then on the second. The second must say "changed elsewhere"
-- [x] Tap SHARE and the copy buttons. The link must reach the clipboard
-- [x] Delete a test playlist. Its feed must then answer 410
 
 ## Before merge: Phone: 6. Playback (#538), on a real phone
 Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
-- [x] ⏮ and ⏭ in the app work, and the right song plays
-- [x] ⏮ on the lock screen works, and the lock screen shows the right song and art
 - [ ] Shuffle the playlist. Every song plays once before any song plays again
-- [x] Lock the phone and let it play several songs. The music does not stop
-- [x] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
-- [x] Heart one song while it plays. In favorites, it shows under its own album, not under the playlist
-- [x] Boost one song. The split preview names the song's own artists, not you as the maker
-
-## Before merge: 7. The PUBLISH popup and the signed-out maker (#574)
-- [x] #574: PUBLISH with something missing opens a list of the three things a playlist needs (Nostr sign-in, a title, 10 songs), each with its fix button. A visitor who is not signed in can now build a playlist, and the draft moves to the account at sign-in. The robot test passed 305/305 in Chrome with phone emulation, with a fake extension signer
-	- [x] Phone: on Android, signed out on beta, build a playlist with a title and 10 songs, press PUBLISH, then SIGN IN with Amber from the popup. When Amber comes back (maybe in a new tab), the playlist must still be on the form, and PUBLISH must publish it. Amber was not tested: the robot only reloaded into a signed-in session
-	- [x] Phone: on iPhone, the same with your iPhone signer. Only the extension sign-in was tested
 
 ## Before merge: 2. The list and the hearts (#538)
-- [x] `/playlists` shows community playlists first, newest first
-- [x] EDIT shows only on your own playlists
 - [ ] Heart a playlist, and heart one song in it
 - [ ] Open your favorites in OnlyBoosts. The song must show under its own album, not under the playlist
 
@@ -58,13 +34,7 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [ ] Open `/admin` with a second account. It must say "This account is not an admin."
 
 ## Before merge: 4. Boost notes (#540), with a real wallet
-- [x] Play a song from "BMB test playlist" and boost it as yourself. The note must:
-	- [x] name the song's own album as the show
-	- [x] have the `🎧 Heard on <playlist> by <maker>` line
-	- [x] have the playlist link
-	- [x] tag the maker
 - [ ] Boost the same song as Anonymous. Buddy's site key must sign the note, in Buddy's words
-- [x] Boost a song from one of your ChadF playlists. The note must have the Heard-on line in BoostMeBitch words
 - [ ] Look at Helipad on the receiving side. The boostagram must not change: `app_name` BoostMeBitch, and the song's `remote_item_guid`
 - [ ] Open the note in Fountain. Fountain must show the quoted receipt
 
@@ -89,6 +59,14 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] iPhone, beta (2026-11-15): the mini-player names a dead song in plain words: "Track not found."
 - [x] iPhone, beta (2026-11-15): a second ↑ UPLOAD PICTURE went to podtards.com
 - [x] iPhone, beta (2026-11-15): ⏭ on the lock screen moves to the next song of the playlist
+- [x] Phone, beta (2026-11-15), the maker (#538): a whole album's songs added from SEARCH one after another; a preview in the maker, then a shuffle and Up Next, all play; ↑ ↓ move songs; 9 songs and an `nsec` in the title are refused with the reason; a reload brings the draft back
+- [x] Phone, beta (2026-11-15), the maker art (#538): a square PNG or JPEG art link (1400–3000 px) shows on the cover; a link under 300 px or not PNG or JPEG is refused with the reason
+- [x] Phone, beta (2026-11-15), the maker (#538): EDIT on two devices, the second save says "changed elsewhere"; SHARE and the copy buttons reach the clipboard; a deleted test playlist's feed answers 410
+- [x] Phone, beta (2026-11-15), playback (#538): ⏮ and ⏭ in the app play the right song; ⏮ on the lock screen works, with the right song and art; a locked phone plays several songs with no stop; WAV songs 6 and 7 start on mobile data with no long buffer
+- [x] Phone, beta (2026-11-15), playback (#538): a song hearted while it plays shows under its own album in favorites; the boost split preview names the song's own artists, not the maker
+- [x] Beta (2026-11-15), the list (#538): `/playlists` shows community playlists first, newest first; EDIT shows only on your own playlists
+- [x] Android and iPhone, beta (2026-11-15), #574: signed out, build a playlist, PUBLISH, then SIGN IN from the popup (Amber on Android, your iPhone signer): the playlist stays on the form, and PUBLISH publishes it
+- [x] Beta (2026-11-15), boost notes (#540): a boost as yourself from "BMB test playlist" names the song's own album as the show, has the `🎧 Heard on <playlist> by <maker>` line and the playlist link, and tags the maker; a boost from a ChadF playlist has the Heard-on line in BoostMeBitch words
 
 ## Before merge: Fix before #540 merges
 - [ ] Two docs say a beta playlist keeps BoostMeBitch words: `docs/ops.md` ("The beta site") and the `noteBrandFor` paragraph in `docs/nostr.md`. Since #542, the feed origin on beta is boostmebuddy.com, so a beta playlist boost uses Buddy's words and Buddy's key. Correct the two paragraphs.
