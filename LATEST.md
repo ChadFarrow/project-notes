@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-16 01:08 UTC
+# Dashboard — 2026-11-16 01:15 UTC
 
 28 open PRs · 19 open issues · 33 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -17,7 +17,7 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 50 minutes ago
+- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 57 minutes ago
 - [#557 \[BMB\] Dead track](https://github.com/ChadFarrow/boostmebitch/issues/557) — opened 2 days ago · 1 comment
 - [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 2 days ago · 1 comment
 - [#555 \[BMB\] Background play stopped after a few tracks of me just going around different …](https://github.com/ChadFarrow/boostmebitch/issues/555) — opened 2 days ago · 1 comment
@@ -95,7 +95,7 @@
 
 8 PRs · 11 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
 
-- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2 minutes ago
+- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 10 minutes ago
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 5 hours ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 8 hours ago
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 9 hours ago
