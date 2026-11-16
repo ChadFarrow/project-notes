@@ -58,13 +58,13 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [ ] Open `/admin` with a second account. It must say "This account is not an admin."
 
 ## Before merge: 4. Boost notes (#540), with a real wallet
-- [ ] Play a song from "BMB test playlist" and boost it as yourself. The note must:
-	- [ ] name the song's own album as the show
-	- [ ] have the `🎧 Heard on <playlist> by <maker>` line
-	- [ ] have the playlist link
-	- [ ] tag the maker
+- [x] Play a song from "BMB test playlist" and boost it as yourself. The note must:
+	- [x] name the song's own album as the show
+	- [x] have the `🎧 Heard on <playlist> by <maker>` line
+	- [x] have the playlist link
+	- [x] tag the maker
 - [ ] Boost the same song as Anonymous. Buddy's site key must sign the note, in Buddy's words
-- [ ] Boost a song from one of your ChadF playlists. The note must have the Heard-on line in BoostMeBitch words
+- [x] Boost a song from one of your ChadF playlists. The note must have the Heard-on line in BoostMeBitch words
 - [ ] Look at Helipad on the receiving side. The boostagram must not change: `app_name` BoostMeBitch, and the song's `remote_item_guid`
 - [ ] Open the note in Fountain. Fountain must show the quoted receipt
 
