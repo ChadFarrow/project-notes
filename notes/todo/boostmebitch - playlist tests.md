@@ -11,10 +11,6 @@ Community playlists, beta test list. Written 2026-11-14.
 > [!warning] Beta is real
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
-## After merge: #578 MADE BY in the feeds
-The `owner_name` column is in Neon, #576 is on beta, and both test playlists carry MADE BY "ChadF" (2026-11-16). The feeds come from www.boostmebuddy.com (`main`), so the feed half of #576 is its own PR to `main`: #578.
-- [ ] #578: Computer: after it merges and deploys, the feeds of "BMB test playlist" and "Test playlist from my phone." carry `<itunes:author>ChadF</itunes:author>` and `<pubDate>`. Then run `npm run beta -- rebuild` and push it, so beta sits on the new `main`
-
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
 - [ ] #572: on Android, ↑ UPLOAD PICTURE with Amber. The upload asks Amber for one extra signature, and the picture must then show as the art. Only the iPhone signer was tested
@@ -72,6 +68,7 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] Beta (2026-11-15), the list (#538): `/playlists` shows community playlists first, newest first; EDIT shows only on your own playlists
 - [x] Android and iPhone, beta (2026-11-15), #574: signed out, build a playlist, PUBLISH, then SIGN IN from the popup (Amber on Android, your iPhone signer): the playlist stays on the form, and PUBLISH publishes it
 - [x] Beta (2026-11-15), boost notes (#540): a boost as yourself from "BMB test playlist" names the song's own album as the show, has the `🎧 Heard on <playlist> by <maker>` line and the playlist link, and tags the maker; a boost from a ChadF playlist has the Heard-on line in BoostMeBitch words
+- Production (2026-11-16), #575 and #578: the `owner_name` column is in Neon; both test feeds on www.boostmebuddy.com carry `<itunes:author>ChadF</itunes:author>` and `<pubDate>`; beta is rebuilt on that `main`
 
 ## Before merge: Fix before #540 merges
 - [ ] Two docs say a beta playlist keeps BoostMeBitch words: `docs/ops.md` ("The beta site") and the `noteBrandFor` paragraph in `docs/nostr.md`. Since #542, the feed origin on beta is boostmebuddy.com, so a beta playlist boost uses Buddy's words and Buddy's key. Correct the two paragraphs.
