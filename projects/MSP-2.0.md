@@ -55,8 +55,9 @@ Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take id
 - [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
 
-### Issues (3)
+### Issues (4)
 
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 2026-11-06
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 2026-01-27
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 2026-01-19 · by Kolomona

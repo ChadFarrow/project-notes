@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-16 17:37 UTC
+# Dashboard — 2026-11-16 18:18 UTC
 
-36 open PRs · 15 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
+33 open PRs · 20 open issues · 34 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -13,27 +13,41 @@
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 13 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 13 days · checks passing
 
-### Open issues (15)
+### Open issues (20)
 
-**[boostmebitch](projects/boostmebitch.md)**
+**[MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)**
 
-- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 17 hours ago
-- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 2 days ago · 1 comment
-- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 2 days ago · 1 comment
-- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 3 days ago · 1 comment
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 8 days ago
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 45 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
+- [#100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — opened 32 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 32 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 10 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
+- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 34 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 28 days ago
+
+**[Auto-musicL-Maker](projects/Auto-musicL-Maker.md)**
+
+- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 35 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+
+**[musicL-playlist-updater](projects/musicL-playlist-updater.md)**
+
+- [#17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — opened 38 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+
+**[boostmebitch](projects/boostmebitch.md)**
+
+- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 18 hours ago
+- [#556 \[BMB\] Android's "back" action doesn't behave like I'd expect. Nothing happens the f…](https://github.com/ChadFarrow/boostmebitch/issues/556) — opened 2 days ago · 1 comment
+- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 2 days ago · 1 comment
+- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 3 days ago · 1 comment
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 8 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 45 days ago
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -89,24 +103,23 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-14 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (2 PRs), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
+13 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
 
-- PR [#586 feat(community): a publisher feed for each playlist maker, linked both ways](https://github.com/ChadFarrow/boostmebitch/pull/586) — opened 2 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-- PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 12 hours ago · draft
-- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 3 days ago
-- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 16 hours ago
+- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 3 days ago · checks pending
+- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 17 hours ago
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 22 hours ago
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 1 day ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 3 days ago
-- PR [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 6 hours ago
-- PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 6 hours ago
-- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 14 hours ago · draft
+- PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 13 hours ago · draft
+- PR [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 7 hours ago
+- PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 7 hours ago
+- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 15 hours ago · draft
 - PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 15 hours ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 51 days ago · draft
-- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page) — no PR
+- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
@@ -114,7 +127,7 @@
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-3 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (2 PRs), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+3 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
 - PR [#308 Add RUNNING.md: how the scheduled jobs run](https://github.com/ChadFarrow/stablekraft-app/pull/308) — opened 1 day ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 58 days ago · draft
@@ -126,27 +139,27 @@
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-2 PRs · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 3 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
+2 PRs · 1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 4 issues), [msp-podping-service](projects/msp-podping-service.md) (1 PR)
 
 - PR [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 1 day ago
 - PR [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 24 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
-#### [msp-podping-service](projects/msp-podping-service.md)
-
-1 PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
-
-- PR [#10 Add RUNNING.md: how the health check runs](https://github.com/ChadFarrow/msp-podping-service/pull/10) — opened 1 day ago
-
 #### [MSP-2.0](projects/MSP-2.0.md)
 
-5 PRs · 3 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+5 PRs · 4 issues · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 13 days ago
 - PR [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — opened 13 days ago
 - PR [#150 Block/delist support to give artists a way to "delete" their feeds.](https://github.com/ChadFarrow/MSP-2.0/pull/150) — opened 45 days ago · merge conflict · by InTheMorning
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
+
+#### [msp-podping-service](projects/msp-podping-service.md)
+
+1 PR · used by [MSP-2.0](projects/MSP-2.0.md), [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
+
+- PR [#10 Add RUNNING.md: how the health check runs](https://github.com/ChadFarrow/msp-podping-service/pull/10) — opened 1 day ago
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
 
@@ -158,23 +171,24 @@
 
 #### [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
-2 PRs · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
+1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#9 Link the musicL playlists and the publisher feed both ways](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/9) — opened 27 minutes ago
 - PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 1 day ago
-- Opened elsewhere: [boostmebitch #586 feat(community): a publisher feed for each playlist maker, linked both ways](https://github.com/ChadFarrow/boostmebitch/pull/586) — PR · opened 2 minutes ago
-- Opened elsewhere: [musicL-playlist-updater #16 Write the publisher back-link into every rebuilt musicL playlist](https://github.com/ChadFarrow/musicL-playlist-updater/pull/16) — PR · opened 21 minutes ago
+- Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 32 minutes ago
+- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 32 minutes ago
+- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 34 minutes ago
+- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 35 minutes ago
+- Opened elsewhere: [musicL-playlist-updater #17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — issue · opened 38 minutes ago
 
 #### [musicL-playlist-updater](projects/musicL-playlist-updater.md)
 
-2 PRs · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (2 PRs)
+1 PR · 1 issue · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR)
 
-- PR [#16 Write the publisher back-link into every rebuilt musicL playlist](https://github.com/ChadFarrow/musicL-playlist-updater/pull/16) — opened 21 minutes ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 1 day ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
-1 branch with no PR
+1 issue · 1 branch with no PR
 
 - Branch [`claude/localbitcoiners-podcast-playlist-069mwk`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/claude/localbitcoiners-podcast-playlist-069mwk) — no PR
 
@@ -189,7 +203,7 @@
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 1 issue)
+1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
 
 - Branch [`spec/comparison-refresh`](https://github.com/ChadFarrow/PC20-Nostr/tree/spec/comparison-refresh) — no PR
 

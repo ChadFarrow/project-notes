@@ -25,10 +25,13 @@ Playlist updater tool
 ## Live status
 
 - **Repo:** [ChadFarrow/musicL-playlist-updater](https://github.com/ChadFarrow/musicL-playlist-updater) · JavaScript
-- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (2 PRs)
+- **Uses:** [msp-podping-service](msp-podping-service.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (1 PR)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#16 Write the publisher back-link into every rebuilt musicL playlist](https://github.com/ChadFarrow/musicL-playlist-updater/pull/16) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 2026-11-15
+
+### Issues (1)
+
+- [#17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 <!-- AUTO:END -->
