@@ -1,6 +1,3 @@
-- [ ] Before merge: Phone pass on beta
-  - [ ] Phone: #581 Clave on the iPhone, on its preview or on beta (the e2e stub cannot suspend an iOS socket or wake Clave). Leave BMB in the background for some minutes, come back, and boost with "My feed". The note posts with no RECONNECT. If Clave does not answer, the modal stays open with RETRY NOTE
-
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists)
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
   - [ ] Computer: open a NEW MUSIC row, and check that the album page opens
