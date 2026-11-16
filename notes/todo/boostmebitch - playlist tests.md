@@ -20,10 +20,11 @@ Step 2 before step 1 breaks every community playlist read on beta and production
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
+- [ ] #572: on Android, ↑ UPLOAD PICTURE with Amber. The upload asks Amber for one extra signature, and the picture must then show as the art. Only the iPhone signer was tested
 
 ## Before merge: Phone: 6. Playback (#538), on a real phone
 Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
-- [ ] Shuffle the playlist. Every song plays once before any song plays again
+- [ ] #576, when it is on beta (step 2 of #575 above): press the new SHUFFLE button on the playlist. The first song starts at once, and every song plays once before any song plays again. #576 was not tested on a real iPhone
 
 ## Before merge: 2. The list and the hearts (#538)
 - [ ] Heart a playlist, and heart one song in it
@@ -85,8 +86,6 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 ## In development: Feed template suggestions (review: add or not)
 Compared on 2026-11-15 with a v4vmusic.com playlist ("New Music Nudge Unit") and the ChadF Homegrown Hits playlist. The song lines (`podcast:remoteItem` with `feedGuid`, `itemGuid`, `feedUrl`, `medium`) already match v4vmusic. Every BMB feed is built from one template (`buildPlaylistFeedXml` in `lib/community/feed-doc.ts`), so one change updates every playlist; set `FEED_TEMPLATE_UPDATED_AT` with it.
 - [ ] `<itunes:category text="Music"/>`: v4vmusic has it. Always true for a `musicL` playlist
-- [ ] `<pubDate>`: v4vmusic and HGH have it. v4vmusic writes the same value as `lastBuildDate`
-- [ ] `<itunes:author>`: v4vmusic writes the curator's name. BMB stores only the maker's npub, so this needs the Nostr display name saved at publish and at save
 - [ ] `<itunes:explicit>`: v4vmusic writes `false` on every playlist. That is a claim about the songs, and a listener's playlist can hold explicit songs. Suggestion: leave it out, unless the aim is to copy v4vmusic exactly
 - [ ] `<link>`: v4vmusic points to the playlist's web page. BMB points to the feed's own XML address, because there is no page per playlist yet
 - [ ] Namespace address: v4vmusic uses the older GitHub address, BMB and HGH use `https://podcastindex.org/namespace/1.0`. Both are valid. No change suggested
