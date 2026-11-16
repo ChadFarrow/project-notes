@@ -11,9 +11,9 @@ Community playlists, beta test list. Written 2026-11-14.
 > [!warning] Beta is real
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
-## In development: #575 MADE BY on beta
-The `owner_name` column is in Neon, and #576 is on beta (2026-11-16). Reload the maker page before you save: a page loaded before the deploy erases the stored name when it saves.
-- [ ] #575: Computer: on beta, open "BMB test playlist" and "Test playlist from my phone." in the maker, type your name in MADE BY, and press SAVE. `/playlists` on beta must show the name under each title. The feeds come from www.boostmebuddy.com (`main`), so `<itunes:author>` and `<pubDate>` show in them only after #576 reaches `main`
+## After merge: #576 MADE BY in the feeds
+The `owner_name` column is in Neon, #576 is on beta, and both test playlists carry MADE BY "ChadF" (2026-11-16). The feeds come from www.boostmebuddy.com (`main`), so they show the name only after #576 reaches `main`.
+- [ ] #576: Computer: after it reaches `main`, the feeds of "BMB test playlist" and "Test playlist from my phone." carry `<itunes:author>ChadF</itunes:author>` and `<pubDate>`
 
 ## Before merge: Phone: 1. The playlist maker (#538), on a real phone
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
