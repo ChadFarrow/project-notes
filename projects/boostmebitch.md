@@ -60,10 +60,11 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (6)
+### Branches with no open PR (7)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page)
+- [`claude/elegant-fermi-2n35nu`](https://github.com/ChadFarrow/boostmebitch/tree/claude/elegant-fermi-2n35nu)
 - [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
 - [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview)
