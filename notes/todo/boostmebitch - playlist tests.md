@@ -27,8 +27,8 @@ Community playlists, beta test list. Written 2026-11-14.
 
 ## Before merge: Phone: 6. Playback (#538), on a real phone
 Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
-- [ ] ⏮ and ⏭ in the app work, and the right song plays
-- [ ] ⏮ on the lock screen works, and the lock screen shows the right song and art
+- [x] ⏮ and ⏭ in the app work, and the right song plays
+- [x] ⏮ on the lock screen works, and the lock screen shows the right song and art
 - [ ] Shuffle the playlist. Every song plays once before any song plays again
 - [ ] Lock the phone and let it play several songs. The music does not stop
 - [ ] Play songs 6 and 7 (WAV) on mobile data. They start, and they do not stop to buffer for long
