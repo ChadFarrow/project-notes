@@ -30,7 +30,8 @@ MusicL playlists repository
 - [#9 Link the musicL playlists and the publisher feed both ways](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/9) — opened 2026-11-16
 - [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 2026-11-15
 
-### Opened elsewhere for this project (1)
+### Opened elsewhere for this project (2)
 
+- [boostmebitch #586 feat(community): a publisher feed for each playlist maker, linked both ways](https://github.com/ChadFarrow/boostmebitch/pull/586) — PR · opened 2026-11-16
 - [musicL-playlist-updater #16 Write the publisher back-link into every rebuilt musicL playlist](https://github.com/ChadFarrow/musicL-playlist-updater/pull/16) — PR · opened 2026-11-16
 <!-- AUTO:END -->
