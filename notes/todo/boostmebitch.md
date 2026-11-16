@@ -7,6 +7,10 @@
   - [ ] Computer: on the Vercel preview of #583, open /demu. The list loads with week headings and a date on each row (the browser test used a saved answer, because Podcast Index rate-limited the test laptop)
   - [ ] Computer: on the same preview, pick DEMU in the search menu and search Longy. 14 albums show and none is from Wavlake. Then press "browse all DeMu →" and check that /demu opens with Longy in the box
 
+- [ ] In development: #540 is OFF beta since 2026-11-16: its branch `community-playlists-notes` conflicts with main in `components/boost-modal/index.tsx` and `components/boost-all-modal.tsx` (payment code, 6 blocks). Merge main into it and test a boost, then `npm run beta -- add 540`
+
+- [ ] In development: #583 /demu is on beta through the beta-only branch `beta-demu-page` (#583 plus the five beta branches, conflicts resolved). When #583 changes, merge `feat/demu-page` into `beta-demu-page` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #583 merges
+
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
 - [ ] Before merge: Phone pass on beta
@@ -19,7 +23,7 @@
 
 ## Already works
 
-- #538 and #540 (community playlists) merge with main again and are back on beta.boostmebitch.com (2026-11-14).
+- #538 (community playlists) merges with main again and is on beta.boostmebitch.com (2026-11-16; #540 is off beta, see above).
 - #567 GIF picker (2026-11-14, iPhone, Safari, beta): the GIFs play after Play anyway (Reduce Motion is on); ten searches in a row with scrolling, no freeze; the lock-screen ⏮/⏭ stay with the picker open over a playing track; search and scroll feel faster.
 - #567 GIPHY grid on the boostmebuddy preview plays (2026-11-14).
 - #564 and #567 are merged and live (2026-11-14).
