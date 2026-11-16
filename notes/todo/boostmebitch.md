@@ -26,6 +26,3 @@
 - #567 GIF picker (2026-11-14, iPhone, Safari, beta): the GIFs play after Play anyway (Reduce Motion is on); ten searches in a row with scrolling, no freeze; the lock-screen ⏮/⏭ stay with the picker open over a playing track; search and scroll feel faster.
 - #567 GIPHY grid on the boostmebuddy preview plays (2026-11-14).
 - #564 and #567 are merged and live (2026-11-14).
-
-- [ ] After merge: #586 your Boost Me Buddy publisher feed is live and in Podcast Index (feed 8118324, 2026-11-16)
-  - [ ] Computer: in Boost Me Bitch, open your publisher feed (it shows there, Chad 2026-11-16) and check that both playlists play
