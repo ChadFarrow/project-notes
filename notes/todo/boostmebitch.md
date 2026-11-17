@@ -15,13 +15,10 @@
 - [ ] Before merge: #584 the boost screen stays on its track when the track changes
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
-- [ ] Before merge: #590 the site signs only a boost note somebody paid a stamp for: 1% of the boost, at least 1 sat, no maximum. It is stacked on #588: merge #588 first
-  - [ ] Computer: on both Vercel projects, set `SITE_STAMP_LNADDRESS` to a Lightning address that receives the stamps, and on Preview too if beta runs there. Use the address you plan for the stamps only, not your main Alby address. Its provider must support the LUD-21 `verify` link on its own domain (an Alby address does). The stamps arrive as 1% of each boost, so its maximum amount must allow a large one. Without it, every signed-out and Anonymous note posts from a one-time key, not from the site
-
 - [ ] After merge: #590 the note stamp in production
   - [ ] Computer: on boostmebitch.com and on boostmebuddy.com, send one real signed-out boost of 1000 sats. The status shows "Paying the 10-sat stamp (1%)…", 10 sats more leave the wallet, and the note shows the site's name. The browser test used a fake Lightning address, so no real stamp was paid
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
-  - [ ] Computer: when production on both brands and beta carry #590, set `SITE_SIGN_REQUIRE_STAMP=on` on both Vercel projects. A note with no stamp is then refused
+  - [ ] Computer: when you have the Lightning address for the stamps only, put it in `SITE_STAMP_LNADDRESS` on both Vercel projects (Production and Preview), then redeploy both. It is your main Alby address for now (2026-11-17). The new address must have the LUD-21 `verify` link on its own domain
 
 - [ ] Before merge: #591 the site stops serving the old LNbits test Lightning address (its lnurlp path answers 502 now). Review and merge it. It goes to `main`, not to beta first
 
