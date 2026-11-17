@@ -1,12 +1,4 @@
-- [ ] In development: Decisions from the triage of all open PRs on 2026-11-17 (agent boostmebitch-3). Tell Claude each answer
-  - [ ] After your real-wallet test of #584 (below): merge #584 first, and then an agent fixes the one line of `components/player.tsx` in #585? The two conflict in that line, and the fix is tested
-
 - [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
-
-- [ ] Before merge: #592 search finds a misspelled name. It is on beta since 2026-11-17
-  - [ ] Phone: on beta, search `muton` and then `homegrown hitz`. The Mutton, Mead & Music playlist and the ChadF Homegrown Hits playlist show. A misspelled artist or album name (`ainsley costelo`, `tindrebox`) still finds nothing: #592 now covers playlist names only, as you chose on 2026-11-17
-
-- [ ] In development: #592 is on beta through the beta-only branch `beta-typo-search` (#592 plus the #576 chain and `beta-demu-page`, import conflicts resolved). When #592 changes, merge `claude/elegant-fermi-2n35nu` into `beta-typo-search` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #592 merges
 
 - [ ] Before merge: #598 a boost during a song: its BoostBox record names the show's feed in `feed_guid`, not the song's feed. The browser test passes, so it needs no test from you before the merge
 
@@ -24,9 +16,6 @@
 
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
-- [ ] Before merge: Phone pass on beta
-  - [ ] Phone: #585 in Chrome on Android, open the fullscreen player from /favorites, then use the Android back gesture. The first back closes the player and stays on /favorites, and each later back goes to the page before. The browser test cannot copy a real Android back, which can skip entries that a page added without a tap. #585 is on beta since 2026-11-17, without #584: test it on beta.boostmebitch.com
-
 - [ ] Before merge: #584 the boost screen stays on its track when the track changes. #584 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
@@ -42,6 +31,9 @@
 
 ## Already works
 
+- #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
+- #585 merged 2026-11-17 (bacfe81): on the Pixel 6 over adb (Vanadium, Chromium 157, 5 runs, the back key and the edge swipe), the first back closes the full-screen player and stays on /favorites, and each later back goes to the page before. `e2e:history` passes on both production sites (94 checks). Not tested on the phone: /live/<npub> and /stream/<naddr>
+- #584 merges main with #585 (2026-11-17): the one `components/player.tsx` line keeps #585's `closePlayer` and #584's `openBoost`, and `e2e:boosttrack` (90 checks) and `e2e:history` (94 checks) pass on it
 - #591 the old test address is gone everywhere (2026-11-17): production on both brands answers 404, and the DNS record `pay` of boostmebitch.com is deleted (Namecheap's own name servers give no answer since about 16:45 EST)
 - #590 stamp, real signed-out 1000-sat boost on both sites (2026-11-17, computer): each note is signed by its own site key, ends "via BoostMeBitch" or "via BoostMeBuddy", and quotes the site's 1000-sat receipt; both sites refuse a note with no stamp (402)
 - #540, #572, #573, #574 and #576 merge main again (#588 wording, #590 stamp), and beta is rebuilt with its 7 branches (2026-11-17): beta answers 404 for `/.well-known/lnurlp/chadf` and asks a note stamp (402). #573's RSS tile copies the playlist's feed URL (computer, phone size).
