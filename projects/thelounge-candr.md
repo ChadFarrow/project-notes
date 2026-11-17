@@ -35,10 +35,9 @@ Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `no
 
 ### Pull requests (1)
 
-- [#88 docs: show-note DMs and #candr chat log are live](https://github.com/ChadFarrow/thelounge-candr/pull/88) — opened 2026-11-17
+- [#89 candr-boost: !note and !title in #candr](https://github.com/ChadFarrow/thelounge-candr/pull/89) — opened 2026-11-17
 
-### Branches with no open PR (2)
+### Branches with no open PR (1)
 
 - [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag)
-- [`feat/candr-picks`](https://github.com/ChadFarrow/thelounge-candr/tree/feat/candr-picks)
 <!-- AUTO:END -->
