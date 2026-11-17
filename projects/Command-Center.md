@@ -24,5 +24,5 @@
 
 ### Pull requests (1)
 
-- [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2026-11-17
+- [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2026-11-17 · draft
 <!-- AUTO:END -->

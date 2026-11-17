@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-17 22:55 UTC
+# Dashboard — 2026-11-17 23:00 UTC
 
 23 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -102,7 +102,7 @@
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 days ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago · draft
 - PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 1 day ago
-- PR [#598 fix(boostbox): feed\_guid names the feed the listener played, never the song](https://github.com/ChadFarrow/boostmebitch/pull/598) — opened 16 minutes ago
+- PR [#598 fix(boostbox): feed\_guid names the feed the listener played, never the song](https://github.com/ChadFarrow/boostmebitch/pull/598) — opened 21 minutes ago
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
 - PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft · merge conflict
 - PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 1 day ago · merge conflict
@@ -195,7 +195,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR
 
-- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2 hours ago
+- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2 hours ago · draft
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
