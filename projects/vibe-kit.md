@@ -24,7 +24,7 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 ### Pull requests (3)
 
-- [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 2026-11-17 · checks pending
+- [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 2026-11-17
 - [#10 guard-push: fill in VAR=value; in the box; small-group-scoop: Chad writes some code](https://github.com/ChadFarrow/vibe-kit/pull/10) — opened 2026-11-17
 - [#9 guard-push: a hold lock for parked PRs](https://github.com/ChadFarrow/vibe-kit/pull/9) — opened 2026-11-17
 <!-- AUTO:END -->
