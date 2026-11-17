@@ -29,5 +29,5 @@ Lightning implementation for ITDV
 
 ### Pull requests (1)
 
-- [#16 Fix boost metadata; auto boosts post no Nostr note](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 2026-11-17
+- [#17 Write site boost notes in the shared boost note format](https://github.com/ChadFarrow/ITDV-Lightning/pull/17) — opened 2026-11-17
 <!-- AUTO:END -->
