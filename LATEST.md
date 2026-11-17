@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-17 21:57 UTC
+# Dashboard — 2026-11-17 22:12 UTC
 
 24 open PRs · 20 open issues · 21 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -14,7 +14,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 21 hours ago
+- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 22 hours ago
 - [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 1 day ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 11 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
@@ -92,15 +92,6 @@
 
 ### Music apps & sites
 
-#### [stablekraft-app](projects/stablekraft-app.md)
-
-2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
-
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
-- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
-- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
-
 #### [boostmebitch](projects/boostmebitch.md)
 
 13 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
@@ -112,18 +103,27 @@
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2 days ago · draft
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
-- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft · merge conflict
-- PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 1 day ago · merge conflict
+- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft
+- PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 1 day ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2 days ago · draft
 - PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 1 day ago
 - PR [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-typo-search`](https://github.com/ChadFarrow/boostmebitch/tree/beta-typo-search) — no PR
 - Branch [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25) — no PR
+
+#### [stablekraft-app](projects/stablekraft-app.md)
+
+2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
+- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
+- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
 ### Music publishing
 
@@ -205,7 +205,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
 
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 16 days ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 17 days ago
 
 ### Quiet — no open work
 
