@@ -16,7 +16,7 @@
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
 - [ ] Before merge: #590 the site signs only a boost note somebody paid a stamp for: 1% of the boost, at least 1 sat, no maximum. It is stacked on #588: merge #588 first
-  - [ ] Computer: on both Vercel projects, set `SITE_STAMP_LNADDRESS` to a Lightning address that receives the stamps, and on Preview too if beta runs there. Its provider must support the LUD-21 `verify` link on its own domain (an Alby address does; `chadf@boostmebitch.com` does not). The stamps arrive as 1% of each boost, so its maximum amount must allow a large one. Without it, every signed-out and Anonymous note posts from a one-time key, not from the site
+  - [ ] Computer: on both Vercel projects, set `SITE_STAMP_LNADDRESS` to a Lightning address that receives the stamps, and on Preview too if beta runs there. Use the address you plan for the stamps only, not your main Alby address. Its provider must support the LUD-21 `verify` link on its own domain (an Alby address does). The stamps arrive as 1% of each boost, so its maximum amount must allow a large one. Without it, every signed-out and Anonymous note posts from a one-time key, not from the site
 
 - [ ] After merge: #590 the note stamp in production
   - [ ] Computer: on boostmebitch.com and on boostmebuddy.com, send one real signed-out boost of 1000 sats. The status shows "Paying the 10-sat stamp (1%)…", 10 sats more leave the wallet, and the note shows the site's name. The browser test used a fake Lightning address, so no real stamp was paid
