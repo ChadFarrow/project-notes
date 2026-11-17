@@ -8,8 +8,6 @@
 
 - [ ] In development: #592 is on beta through the beta-only branch `beta-typo-search` (#592 plus the #576 chain and `beta-demu-page`, import conflicts resolved). When #592 changes, merge `claude/elegant-fermi-2n35nu` into `beta-typo-search` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #592 merges
 
-- [ ] Before merge: #595 every leg of a boost says the typed amount in `value_msat_total` (bLIP-10). The browser test passes, so it needs no test from you before the merge
-
 - [ ] After merge: #595 Computer: with a real wallet, boost 100 sats while a song plays in an episode whose show split pays your node. Helipad shows 100 sats on that row, with your share under it
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
