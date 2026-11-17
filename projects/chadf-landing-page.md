@@ -21,5 +21,7 @@ Personal landing page
 
 - **Repo:** [ChadFarrow/chadf-landing-page](https://github.com/ChadFarrow/chadf-landing-page) · TypeScript
 
-_No open work._
+### Branches with no open PR (1)
+
+- [`wip/show-website-links-2026-09-27`](https://github.com/ChadFarrow/chadf-landing-page/tree/wip/show-website-links-2026-09-27)
 <!-- AUTO:END -->
