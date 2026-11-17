@@ -1,8 +1,6 @@
 - [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
 
-- [ ] Before merge: #598 a boost during a song: its BoostBox record names the show's feed in `feed_guid`, not the song's feed. The browser test passes, so it needs no test from you before the merge
-
-- [ ] After merge: #598 repeat your real-wallet check of #595. Your test at 21:49 UTC on 2026-11-17 ran the code from before #595, because the app loaded before the deploy. Close the app or reload the tab first
+- [ ] After merge: #598 (live on both sites since 23:36 UTC on 2026-11-17) repeat your real-wallet check of #595. Your test at 21:49 UTC on 2026-11-17 ran the code from before #595, because the app loaded before the deploy. Close the app or reload the tab first
   - [ ] Computer: with a wallet that can keysend (NWC or the Alby extension, not Spark), boost 100 sats in Chad and Reeds Podcast 014 between 2:05:20 and 2:08:53 (the song). Helipad shows 100 sats on that row, with your share under it. The C&R bot's IRC line says 100 sats. Spark cannot pay the song's two node payees, so 96 of the 100 sats do not go
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
