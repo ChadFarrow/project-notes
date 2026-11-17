@@ -27,12 +27,11 @@ Desktop application for MSP-2.0
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0-Desktop-App](https://github.com/ChadFarrow/MSP-2.0-Desktop-App) · TypeScript
-- **Uses:** [MSP-2.0](MSP-2.0.md) (5 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (no open work)
+- **Uses:** [MSP-2.0](MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (no open work)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#102 Port MSP-2.0#176: public CORS on the PI, podping and hosted APIs](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/102) — opened 2026-11-17 · draft
-- [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 2026-11-15
+- [#103 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/103) — opened 2026-11-17 · checks failing
 
 ### Issues (1)
 

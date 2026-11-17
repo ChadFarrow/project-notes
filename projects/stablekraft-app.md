@@ -26,7 +26,7 @@ Stablekraft application
 
 ### Pull requests (3)
 
-- [#310 Stop caching played songs in the browser, and delete the 5 GB already there](https://github.com/ChadFarrow/stablekraft-app/pull/310) — opened 2026-11-17
+- [#311 Warm up the next song once, not 55 times](https://github.com/ChadFarrow/stablekraft-app/pull/311) — opened 2026-11-17
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 - [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
 
