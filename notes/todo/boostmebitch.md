@@ -1,11 +1,10 @@
 - [ ] In development: Decisions from the triage of all open PRs on 2026-11-17 (agent boostmebitch-3). Tell Claude each answer
-  - [ ] Merge #587 (search shows publisher feeds first) now? Its tests pass, and it needs no test from you
-  - [ ] May the main agent add #585 (Android back) to beta without #584, for your Android test? #584 and #585 conflict in one line: merge #584 first, then #585 needs a one-line fix
-  - [ ] #579 NEW MUSIC: does the publisher feed of a playlist maker (#586) count as an "artist"?
-  - [ ] Close #451, the old week-review checklist? Its last items are done
-  - [ ] Delete the branches `wip/e2e-chrome-cleanup-2026-09-24` and `feat/gif-hover-preview` now, and `home-playlists-section` after #538 merges?
-  - [ ] Branch `claude/elegant-fermi-2n35nu` (a search that finds a misspelled name): open a PR after #587 merges, or delete it?
+  - [ ] After your real-wallet test of #584 (below): merge #584 first, and then an agent fixes the one line of `components/player.tsx` in #585? The two conflict in that line, and the fix is tested
   - [ ] Branch `claude/value-msat-total-spec`: the typed amount on every leg (bLIP-10), or the current amount for each group of legs (#403)?
+
+- [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
+
+- [ ] Before merge: #592 search finds a misspelled name (the branch `claude/elegant-fermi-2n35nu`, now up to date with #587). Its tests pass in a real browser, and it needs no test from you
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
