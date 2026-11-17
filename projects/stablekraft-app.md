@@ -24,8 +24,9 @@ Stablekraft application
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
-### Pull requests (3)
+### Pull requests (4)
 
+- [#312 Let the service worker install: precache only what the server serves](https://github.com/ChadFarrow/stablekraft-app/pull/312) — opened 2026-11-17
 - [#311 Warm up the next song once, not 55 times](https://github.com/ChadFarrow/stablekraft-app/pull/311) — opened 2026-11-17
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 - [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
