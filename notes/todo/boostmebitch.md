@@ -22,7 +22,7 @@
 
 - [ ] After merge: #591 the old test address is gone everywhere. Production on both brands answers 404 (2026-11-17)
   - [ ] Computer: at Namecheap, delete the DNS record `pay` of boostmebitch.com (the old LNbits subdomain). Nothing answers on that name now (TLS "unrecognized name", 2026-11-17), and the Start9 node announces its IP, not that name
-  - [ ] Computer: rebuild beta (`npm run beta -- rebuild`, then the push it prints). beta.boostmebitch.com still answers 502 for `/.well-known/lnurlp/chadf`. The rebuild stops now: the branch of #538 conflicts in `CLAUDE.md` with #590 on `main`. Merge `main` into that branch first
+  - [ ] Computer: rebuild beta (`npm run beta -- rebuild`, then the push it prints). beta.boostmebitch.com still answers 502 for `/.well-known/lnurlp/chadf`. #538 merges again (2026-11-17). The rebuild stops now at `beta-demu-page` (#583), which conflicts with `main` in `CLAUDE.md` and `package.json`. After that, #540 conflicts with #588 and #590 in the boost note code
 
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
