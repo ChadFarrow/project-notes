@@ -33,8 +33,9 @@ Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `no
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Pull requests (1)
+### Pull requests (2)
 
+- [#87 candr-boost: log every #candr line for show notes](https://github.com/ChadFarrow/thelounge-candr/pull/87) — opened 2026-11-17
 - [#86 candr-boost: keep show-note DMs from Chad and Reed](https://github.com/ChadFarrow/thelounge-candr/pull/86) — opened 2026-11-17
 
 ### Branches with no open PR (1)
