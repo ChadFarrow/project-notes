@@ -3,3 +3,4 @@
   - [ ] Ask how v4vmusic.com picks up podpings, because MSP users say podping.me works better there. Does v4vmusic accept podpings signed by `chadf` with id `pp_music_update`? podping.me sends through podping.cloud, so its podpings are signed by `podping.aaa` to `podping.eee`, always as `pp_podcast_update`, and they are also on gossip.
   - [ ] Podcast Index stores feed URLs with spaces as raw spaces, but every podping carries `%20` (issue #179). Does v4vmusic match on the stored URL?
 - [ ] In development: Decide issue #179: should MSP offer to send a feed URL with spaces as `%20` (B), or keep refusing it with a better message (A)? Tell Claude A or B.
+- [ ] In development: Several publisher feeds for one album (role feeds for engineers, studios and songwriters): you asked the person who sent this feedback whether the Beta controls miss anything. Tell Claude their answer, then decide issue #182: A (the album side only) or B (MSP also makes role feeds).
