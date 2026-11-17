@@ -4,7 +4,10 @@
 
 - [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
 
-- [ ] Before merge: #592 search finds a misspelled name (the branch `claude/elegant-fermi-2n35nu`, now up to date with #587). Its tests pass in a real browser, and it needs no test from you
+- [ ] Before merge: #592 search finds a misspelled name. It is on beta since 2026-11-17
+  - [ ] Phone: on beta, search `muton` and then `homegrown hitz`. The Mutton, Mead & Music playlist and the ChadF Homegrown Hits playlist show. A misspelled artist or album name (`ainsley costelo`, `tindrebox`) still finds nothing, because Podcast Index's near search gives 0 rows for it
+
+- [ ] In development: #592 is on beta through the beta-only branch `beta-typo-search` (#592 plus the #576 chain and `beta-demu-page`, import conflicts resolved). When #592 changes, merge `claude/elegant-fermi-2n35nu` into `beta-typo-search` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #592 merges
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
