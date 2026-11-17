@@ -22,5 +22,7 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-_No open work._
+### Pull requests (1)
+
+- [#15 disk-guard: delete Time Machine local snapshots after 4 hours](https://github.com/ChadFarrow/vibe-kit/pull/15) — opened 2026-11-17
 <!-- AUTO:END -->
