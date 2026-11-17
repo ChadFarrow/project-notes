@@ -1,0 +1,1 @@
+- [ ] After merge: Computer: On the Linux laptop, run `git pull` in `~/Vibe/vibe-kit`, so the laptop gets the disk and branch rules of 2026-11-17 (no `install.sh` run is needed). Then run `node ~/Vibe/vibe-kit/merged-branches.mjs` there: it lists the local branches of merged PRs, and `--apply` deletes them.
