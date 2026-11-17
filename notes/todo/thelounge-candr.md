@@ -2,3 +2,6 @@
 
 - [ ] Before merge: #86, `candr_boost_bot` keeps the show-note DMs from Chad and Reed. Review and merge. The deploy and `NOTES_ACCOUNTS=ChadF,reed` wait for Chad's yes.
   - [ ] After merge: Computer: after the deploy, DM `candr_boost_bot` a link from IRCCloud and look for the `saved note #N` reply.
+
+- [ ] Before merge: #87, `candr_boost_bot` logs every `#candr` line for show notes. It sits on #86: merge #86 first. The deploy and `LOG_CHANNELS=#candr` wait for Chad's yes.
+  - [ ] After merge: Computer: after the deploy, say a line with a link in `#candr` and ask Claude to fetch it with `candr-notes.sh --chat`.
