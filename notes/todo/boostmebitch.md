@@ -8,7 +8,10 @@
 
 - [ ] In development: #592 is on beta through the beta-only branch `beta-typo-search` (#592 plus the #576 chain and `beta-demu-page`, import conflicts resolved). When #592 changes, merge `claude/elegant-fermi-2n35nu` into `beta-typo-search` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #592 merges
 
-- [ ] In development: the fix PR for #595 (boostmebitch-3 makes it). Your real-wallet test at 21:49 UTC on 2026-11-17 failed: `value_msat_total` was 3000 on a 100-sat boost during a song. When that PR is ready, Computer: with a real wallet, boost 100 sats while a song plays in an episode whose show split pays your node. Helipad shows 100 sats on that row, with your share under it
+- [ ] Before merge: #598 a boost during a song: its BoostBox record names the show's feed in `feed_guid`, not the song's feed. The browser test passes, so it needs no test from you before the merge
+
+- [ ] After merge: #598 repeat your real-wallet check of #595. Your test at 21:49 UTC on 2026-11-17 ran the code from before #595, because the app loaded before the deploy. Close the app or reload the tab first
+  - [ ] Computer: with a real wallet, boost 100 sats in Chad and Reeds Podcast 014 between 2:05:20 and 2:08:53 (the song). Helipad shows 100 sats on that row, with your share under it. The C&R bot's IRC line says 100 sats
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
