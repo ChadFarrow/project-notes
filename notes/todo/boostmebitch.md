@@ -1,6 +1,5 @@
 - [ ] In development: Decisions from the triage of all open PRs on 2026-11-17 (agent boostmebitch-3). Tell Claude each answer
   - [ ] After your real-wallet test of #584 (below): merge #584 first, and then an agent fixes the one line of `components/player.tsx` in #585? The two conflict in that line, and the fix is tested
-  - [ ] Branch `claude/value-msat-total-spec`: the typed amount on every leg (bLIP-10), or the current amount for each group of legs (#403)?
 
 - [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
 
@@ -8,6 +7,10 @@
   - [ ] Phone: on beta, search `muton` and then `homegrown hitz`. The Mutton, Mead & Music playlist and the ChadF Homegrown Hits playlist show. A misspelled artist or album name (`ainsley costelo`, `tindrebox`) still finds nothing, because Podcast Index's near search gives 0 rows for it
 
 - [ ] In development: #592 is on beta through the beta-only branch `beta-typo-search` (#592 plus the #576 chain and `beta-demu-page`, import conflicts resolved). When #592 changes, merge `claude/elegant-fermi-2n35nu` into `beta-typo-search` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #592 merges
+
+- [ ] Before merge: #595 every leg of a boost says the typed amount in `value_msat_total` (bLIP-10). The browser test passes, so it needs no test from you before the merge
+
+- [ ] After merge: #595 Computer: with a real wallet, boost 100 sats while a song plays in an episode whose show split pays your node. Helipad shows 100 sats on that row, with your share under it
 
 - [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
