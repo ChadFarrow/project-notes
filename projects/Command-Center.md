@@ -22,7 +22,8 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-### Pull requests (1)
+### Pull requests (2)
 
+- [#48 After-show: IRC lists (DM notes, !note/!title picks, chat) in the packet and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/48) — opened 2026-11-17
 - [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2026-11-17
 <!-- AUTO:END -->

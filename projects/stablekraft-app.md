@@ -34,8 +34,9 @@ Stablekraft application
 - [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 2026-10-18
 
-### Branches with no open PR (2)
+### Branches with no open PR (3)
 
 - [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter)
 - [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags)
+- [`fix/media-listeners-once`](https://github.com/ChadFarrow/stablekraft-app/tree/fix/media-listeners-once)
 <!-- AUTO:END -->
