@@ -24,8 +24,10 @@ Stablekraft application
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
-### Pull requests (2)
+### Pull requests (4)
 
+- [#314 Turn off next-pwa's two client options; say that its script never runs here](https://github.com/ChadFarrow/stablekraft-app/pull/314) — opened 2026-11-17 · checks pending
+- [#313 Bind the player's media listeners once, not on every tick](https://github.com/ChadFarrow/stablekraft-app/pull/313) — opened 2026-11-17
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 - [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2026-09-08
 
@@ -34,9 +36,8 @@ Stablekraft application
 - [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 2026-10-18
 
-### Branches with no open PR (3)
+### Branches with no open PR (2)
 
 - [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter)
 - [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags)
-- [`fix/media-listeners-once`](https://github.com/ChadFarrow/stablekraft-app/tree/fix/media-listeners-once)
 <!-- AUTO:END -->

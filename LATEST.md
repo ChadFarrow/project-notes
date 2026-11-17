@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-17 21:32 UTC
+# Dashboard — 2026-11-17 21:37 UTC
 
-30 open PRs · 20 open issues · 22 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 20 open issues · 21 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -94,32 +94,32 @@
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-2 PRs · 2 issues · 3 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+4 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
+- PR [#314 Turn off next-pwa's two client options; say that its script never runs here](https://github.com/ChadFarrow/stablekraft-app/pull/314) — opened just now · checks pending
+- PR [#313 Bind the player's media listeners once, not on every tick](https://github.com/ChadFarrow/stablekraft-app/pull/313) — opened 4 minutes ago
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
-- Branch [`fix/media-listeners-once`](https://github.com/ChadFarrow/stablekraft-app/tree/fix/media-listeners-once) — no PR
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-14 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+13 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 2 issues)
 
 - PR [#592 feat(search): find a playlist by a misspelled name](https://github.com/ChadFarrow/boostmebitch/pull/592) — opened 3 hours ago
-- PR [#595 fix(boost): value\_msat\_total is the typed amount on every leg (bLIP-10)](https://github.com/ChadFarrow/boostmebitch/pull/595) — opened 29 minutes ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago · draft
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 4 days ago · draft
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 1 day ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2 days ago · draft
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
-- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft · merge conflict
-- PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 1 day ago · merge conflict
+- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft
+- PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 1 day ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2 days ago · draft
 - PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 1 day ago
 - PR [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 1 day ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-typo-search`](https://github.com/ChadFarrow/boostmebitch/tree/beta-typo-search) — no PR
 - Branch [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page) — no PR
@@ -171,7 +171,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 2 issues)
 
 ### Websites
 
@@ -196,21 +196,19 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
-#### [Command-Center](projects/Command-Center.md)
-
-2 PRs
-
-- PR [#48 After-show: IRC lists (DM notes, !note/!title picks, chat) in the packet and /candr-post](https://github.com/ChadFarrow/Command-Center/pull/48) — opened 3 minutes ago
-- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 57 minutes ago
-
 #### [vibe-kit](projects/vibe-kit.md)
 
-4 PRs
+3 PRs
 
-- PR [#12 guard-push: no box for a plain feature-branch push](https://github.com/ChadFarrow/vibe-kit/pull/12) — opened 11 minutes ago · checks pending
-- PR [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 36 minutes ago
-- PR [#10 guard-push: fill in VAR=value; in the box; small-group-scoop: Chad writes some code](https://github.com/ChadFarrow/vibe-kit/pull/10) — opened 51 minutes ago
-- PR [#9 guard-push: a hold lock for parked PRs](https://github.com/ChadFarrow/vibe-kit/pull/9) — opened 1 hour ago
+- PR [#10 guard-push: fill in VAR=value; in the box; small-group-scoop: Chad writes some code](https://github.com/ChadFarrow/vibe-kit/pull/10) — opened 56 minutes ago · checks pending
+- PR [#12 guard-push: no box for a plain feature-branch push](https://github.com/ChadFarrow/vibe-kit/pull/12) — opened 15 minutes ago · checks failing
+- PR [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 40 minutes ago
+
+#### [Command-Center](projects/Command-Center.md)
+
+1 PR
+
+- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 1 hour ago
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
