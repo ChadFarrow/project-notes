@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-17 17:31 UTC
+# Dashboard — 2026-11-17 17:43 UTC
 
 29 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -33,7 +33,7 @@
 
 **[Auto-musicL-Maker](projects/Auto-musicL-Maker.md)**
 
-- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 23 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 1 day ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
@@ -97,6 +97,16 @@
 
 ### Music apps & sites
 
+#### [stablekraft-app](projects/stablekraft-app.md)
+
+3 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
+- PR [#310 Stop caching played songs in the browser, and delete the 5 GB already there](https://github.com/ChadFarrow/stablekraft-app/pull/310) — opened 25 minutes ago
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
+- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
+- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
+
 #### [boostmebitch](projects/boostmebitch.md)
 
 14 PRs · 7 issues · 8 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
@@ -124,23 +134,13 @@
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec) — no PR
 
-#### [stablekraft-app](projects/stablekraft-app.md)
-
-3 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
-
-- PR [#310 Stop caching played songs in the browser, and delete the 5 GB already there](https://github.com/ChadFarrow/stablekraft-app/pull/310) — opened 14 minutes ago
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
-- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
-- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
-
 ### Music publishing
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
 2 PRs · 1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (5 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#102 Port MSP-2.0#176: public CORS on the PI, podping and hosted APIs](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/102) — opened 28 minutes ago · draft
+- PR [#102 Port MSP-2.0#176: public CORS on the PI, podping and hosted APIs](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/102) — opened 39 minutes ago · draft
 - PR [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 2 days ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
@@ -169,7 +169,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 - Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 23 hours ago
 - Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 23 hours ago
 - Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 23 hours ago
-- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 23 hours ago
+- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 1 day ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
