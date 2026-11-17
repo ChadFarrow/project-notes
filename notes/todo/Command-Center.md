@@ -4,8 +4,9 @@
 
 - [ ] In development: Computer: Post-show agent, later: the NAS ↔ Proton copy job. Compare the candr folder on the NAS (`/Volumes/candr`) with the candr folder in your Proton Drive (shared with Reed), and decide: a full sync, or only defined folders in defined directions (new files from Reed → NAS; your art and transcripts → Proton; no deletes). The watcher for `candr/episodes/Final Audio` comes first (#44).
 
-- [ ] Before merge: Computer: #47, the full screen layout from your mockup, waits for your merge. Merge it after the 015 show, not before. Then pull `main` in `~/Vibe/Command-Center` (or ask Claude), reload the board in Safari, make the window full size (1600 × 860 or more), and tell Claude what differs from the mockup.
-  - [ ] Computer: The places: show pads, the meter and Ears on the left; the show notes with Chapter under them in the middle; the ISOs on the right, with the space under them empty.
+- [ ] Before merge: Computer: #47, the full screen layout, is locked with the `hold` label until after the 015 show. After the show on Wednesday 2026-11-18, remove the `hold` label on GitHub and merge #47. Then tell Claude to switch the live board: Claude pulls `main` in `~/Vibe/Command-Center` and restarts the board service if needed. Then reload the board in Safari, with the window at full size (1600 × 860 or more).
+  - [ ] On air: The top bar with the real services (the preview had fakes): Podhome shows "pending", then "live" after Go Live with "Board + Podhome". Rec shows its time in red during a test stream.
+  - [ ] On air: Ears at full screen: − and + (or the keys [ and ]) change Reed in your headphones, and the ladder lights the new level.
   - [ ] Computer: A message (for example after a Chapter press) shows over the bottom of the show notes for a few seconds. Is that a good place for it?
   - [ ] Computer: Reset is hidden while the show is live and shows after End Show, as in the mockup. Keep it so?
   - [ ] Computer: "+ Add pad" shows in the live view, as in the mockup. Keep it so?
@@ -60,3 +61,7 @@
 - [ ] After merge: Computer: Command-Center PR #45 (the song starts cleanly after Stop and Play) and PR #46 (Ears: 6 dB a press, +6 to −36) are live on the board since 2026-11-15 (board server restarted; Ears reads Reed 0 and Board 0 from the −6/−12/−24 blocks). Their tests passed in Chrome and WebKit, but not in your own Safari or with a real voice. Tell Claude what does not work.
   - [ ] Computer: Reload the board in Safari. Play the Music song, Stop it, and Play it again, two times: each Play starts at 0:00 with no old sound under it (#45).
   - [ ] Computer: Ears shows Reed 0 and Board 0 (#46). Play a talk podcast in Brave and the song on the board, talk into your mic, and set Reed and Board with Ears to the level of your voice. Tell Claude the two numbers.
+
+## Already works
+
+- #47 full screen layout (2026-11-17, computer): you checked it in your own Safari, in a preview with test data, and approved it with one solid bar across the top. The places: show pads, the meter and Ears on the left; the show notes with Chapter under them in the middle; the ISOs on the right, with the space under them empty.
