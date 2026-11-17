@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-17 15:53 UTC
+# Dashboard — 2026-11-17 15:56 UTC
 
-30 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -206,9 +206,8 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 PR · 1 branch with no PR
+1 branch with no PR
 
-- PR [#90 docs: !note and !title are live](https://github.com/ChadFarrow/thelounge-candr/pull/90) — opened just now
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites
