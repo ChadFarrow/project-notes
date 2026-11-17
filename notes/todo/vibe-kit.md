@@ -1,4 +1,4 @@
-- [ ] After merge: Computer: After #9 merges, run `~/Vibe/vibe-kit/install.sh` on the Mac mini, and on the Linux laptop after `git pull` in `~/Vibe/vibe-kit`. The script sends two more GitHub tools to the push guard and gives the guard more time. Every line it prints must start with `ok` or `WARN`.
+- [ ] After merge: Computer: After #9 and #12 merge, run `~/Vibe/vibe-kit/install.sh` on the Mac mini, and on the Linux laptop after `git pull` in `~/Vibe/vibe-kit`. The script sends two more GitHub tools to the push guard, gives the guard more time, and updates the auto-mode text about pushes. Every line it prints must start with `ok` or `WARN`.
 
 - [ ] After merge: Computer: On the Linux laptop, run `git pull` in `~/Vibe/vibe-kit`, so the laptop gets the disk and branch rules of 2026-11-17 (no `install.sh` run is needed). Then run `node ~/Vibe/vibe-kit/merged-branches.mjs` there: it lists the local branches of merged PRs, and `--apply` deletes them.
 
