@@ -16,10 +16,10 @@
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
 - [ ] Before merge: #590 the site signs only a boost note somebody paid a 1-sat stamp for. It is stacked on #588: merge #588 first
-  - [ ] Computer: on both Vercel projects, set `LNBITS_URL` and `LNBITS_INVOICE_KEY`: a separate LNbits stamp wallet for each project, its invoice key only, and on Preview too if beta runs there. Without them, every signed-out and Anonymous note posts from a one-time key, not from the site
+  - [ ] Computer: on both Vercel projects, set `SITE_STAMP_LNADDRESS` to a Lightning address that receives the stamps, and on Preview too if beta runs there. Its provider must support the LUD-21 `verify` link on its own domain (an Alby address does; `chadf@boostmebitch.com` does not). Without it, every signed-out and Anonymous note posts from a one-time key, not from the site
 
 - [ ] After merge: #590 the note stamp in production
-  - [ ] Computer: on boostmebitch.com and on boostmebuddy.com, send one real signed-out boost. The status shows "Paying the 1-sat stamp…", 1 sat leaves the wallet, and the note shows the site's name. The browser test used a fake LNbits, so no real stamp was paid
+  - [ ] Computer: on boostmebitch.com and on boostmebuddy.com, send one real signed-out boost. The status shows "Paying the 1-sat stamp…", 1 sat leaves the wallet, and the note shows the site's name. The browser test used a fake Lightning address, so no real stamp was paid
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
   - [ ] Computer: when production on both brands and beta carry #590, set `SITE_SIGN_REQUIRE_STAMP=on` on both Vercel projects. A note with no stamp is then refused
 
