@@ -27,7 +27,5 @@ Lightning implementation for ITDV
 - **Repo:** [ChadFarrow/ITDV-Lightning](https://github.com/ChadFarrow/ITDV-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-### Pull requests (1)
-
-- [#17 Write site boost notes in the shared boost note format](https://github.com/ChadFarrow/ITDV-Lightning/pull/17) — opened 2026-11-17
+_No open work._
 <!-- AUTO:END -->
