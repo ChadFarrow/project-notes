@@ -34,8 +34,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 2 issues)
 
-### Pull requests (14)
+### Pull requests (15)
 
+- [#588 feat(boost-note): say what was boosted, then where it was found — the shared format](https://github.com/ChadFarrow/boostmebitch/pull/588) — opened 2026-11-17
 - [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 2026-11-17
 - [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 2026-11-16
 - [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2026-11-16
