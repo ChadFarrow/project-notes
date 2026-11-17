@@ -18,7 +18,7 @@
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
 - [ ] Before merge: Phone pass on beta
-  - [ ] Phone: #585 in Chrome on Android, open the fullscreen player from /favorites, then use the Android back gesture. The first back closes the player and stays on /favorites, and each later back goes to the page before. The browser test cannot copy a real Android back, which can skip entries that a page added without a tap. #585 is not on beta yet: test on beta after it is added, or on the Vercel preview of the PR
+  - [ ] Phone: #585 in Chrome on Android, open the fullscreen player from /favorites, then use the Android back gesture. The first back closes the player and stays on /favorites, and each later back goes to the page before. The browser test cannot copy a real Android back, which can skip entries that a page added without a tap. #585 is on beta since 2026-11-17, without #584: test it on beta.boostmebitch.com
 
 - [ ] Before merge: #584 the boost screen stays on its track when the track changes. #584 is not on beta: test on the Vercel preview of the PR
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
