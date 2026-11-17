@@ -42,16 +42,16 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 2026-11-16
 - [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2026-11-16
 - [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 2026-11-16 · draft
-- [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 2026-11-16 · draft
-- [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 2026-11-16
+- [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 2026-11-16 · draft · merge conflict
+- [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 2026-11-16 · merge conflict
 - [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16
 - [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2026-11-15
 - [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
-- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13
+- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · merge conflict
 - [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 2026-09-26 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (7)
 
