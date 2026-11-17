@@ -1,0 +1,4 @@
+- [ ] Before merge: Review and merge #16 (boost metadata fixes). The browser test used a fake wallet, so no real payment ran.
+  - [ ] Decide whether Helipad-to-Nostr-BoostBot posts ITDV auto boosts. After #16 they send action `auto`, and the BoostBot's default rules post `boost` only. Tell Claude: allow `auto` in the BoostBot rules, or leave it.
+- [ ] After merge: Computer: Send one real track boost on the album page with a sender name and a message. Check the site note on /boosts ("Sent by:" and the message, no album words), the Helipad entry (podcast is the album), and the BoostBot note.
+- [ ] After merge: Computer: Turn on auto boost and let one track finish. Check that Helipad shows the boost with the clock icon and readable metadata, not hex.
