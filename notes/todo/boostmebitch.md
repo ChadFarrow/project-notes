@@ -23,6 +23,12 @@
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
   - [ ] Computer: when production on both brands and beta carry #590, set `SITE_SIGN_REQUIRE_STAMP=on` on both Vercel projects. A note with no stamp is then refused
 
+- [ ] Before merge: #591 the site stops serving the old LNbits test Lightning address (its lnurlp path answers 502 now). Review and merge it. It goes to `main`, not to beta first
+
+- [ ] After merge: #591 the old test address is gone everywhere
+  - [ ] Computer: at Namecheap, delete the DNS record `pay` of boostmebitch.com (the old LNbits subdomain). Nothing answers on that name now (TLS "unrecognized name", 2026-11-17), and the Start9 node announces its IP, not that name
+  - [ ] Computer: open `/.well-known/lnurlp/chadf` on www.boostmebitch.com and on www.boostmebuddy.com. Each answers 404 Not found, not 502
+
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
 ## Already works
