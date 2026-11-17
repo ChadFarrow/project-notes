@@ -10,7 +10,7 @@ Website for the Chad and Reeds Podcast at [candr.space](https://candr.space). On
 <!-- None yet -->
 
 ## Notes
-<!-- Add your notes here -->
+- Idea for later, not urgent (Chad, 2026-11-17: the site sees less use than boostmebitch): give `/api/zap-receipt` the note stamp from ChadFarrow/boostmebitch#590. Today that route signs, with the site's key, a summary receipt for any amount up to 1,000,000 sats that a caller's own kind:9734 states, with no proof of payment. With the stamp, the site would sign only after a payment of 1% of that amount, on top of the boost, to the site's own Lightning address. That makes a fake large boost cost in proportion, and it pays for the service.
 
 ## Resources
 <!-- Add links, docs, tutorials -->

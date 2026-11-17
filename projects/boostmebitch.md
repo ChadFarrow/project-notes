@@ -17,6 +17,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - Boostagrams (TLV record over keysend)
 
 ## Notes
+- The note stamp (#590: 1% of the boost, on top, before the site's key signs) may suit Chad's other apps later; not now, they see less use (Chad, 2026-11-17). Found on this Mac: candr.space `/api/zap-receipt` (see its note). Helipad-to-Nostr-BoostBot posts what Helipad sends it, and its guard is the webhook token (the route is open when the token is empty), not a stamp.
 - The beta site works without `NOSTR_INDEX_URL`, `NOSTR_INDEX_KEY`, `PLAYLIST_DB_URL` and `PLAYLIST_DB_CA`: it then reads through the direct Podcast Index path. To make beta read like production, add them in Vercel for Preview, branch `beta` only, and redeploy (table in `docs/ops.md`). They were not set on 2026-11-12.
 - Google sign-in on beta needs `https://beta.boostmebitch.com` in the OAuth client's authorized JavaScript origins in the Google console.
 - When the listen queue stops on a locked screen in the Zapstore app, unlock the phone and press Report a bug right away. The report carries the playback log (#505).
