@@ -1,14 +1,13 @@
-# Dashboard — 2026-11-17 03:24 UTC
+# Dashboard — 2026-11-17 03:33 UTC
 
-30 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (5)
+### Ready to merge — idle 7+ days (4)
 
-- **stablekraft-app** [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — idle 69 days · checks passing
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 24 days · checks passing
 - **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 16 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 14 days · checks passing
@@ -103,7 +102,7 @@
 
 1 PR · uses [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work)
 
-- PR [#16 Fix boost metadata: sender in site notes, per-split amounts, auto boost records](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 1 minute ago
+- PR [#16 Fix boost metadata; auto boosts post no Nostr note](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 11 minutes ago
 
 #### [boostmebitch](projects/boostmebitch.md)
 
@@ -111,7 +110,7 @@
 
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 4 days ago
-- PR [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 2 hours ago
+- PR [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 3 hours ago
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 22 hours ago · draft
 - PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 1 day ago
@@ -137,7 +136,7 @@
 2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 58 days ago · draft
-- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
+- PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago · merge conflict
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
@@ -189,9 +188,8 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 PR · 1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+1 issue · 1 branch with no PR · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
 
-- PR [#51 A boost names what it paid, then where it was found](https://github.com/ChadFarrow/PC20-Nostr/pull/51) — opened 23 minutes ago
 - Branch [`spec/comparison-refresh`](https://github.com/ChadFarrow/PC20-Nostr/tree/spec/comparison-refresh) — no PR
 
 #### [sidecar](projects/sidecar.md)

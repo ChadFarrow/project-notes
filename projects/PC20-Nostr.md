@@ -23,10 +23,6 @@ Repo for code example for my apps
 - **Repo:** [ChadFarrow/PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) · TypeScript
 - **Uses:** [stablekraft-app](stablekraft-app.md) (2 PRs, 2 issues)
 
-### Pull requests (1)
-
-- [#51 A boost names what it paid, then where it was found](https://github.com/ChadFarrow/PC20-Nostr/pull/51) — opened 2026-11-17
-
 ### Issues (1)
 
 - [#44 Vector 27's claim assertions encode one of the two local-state models rule 2 declares conformant](https://github.com/ChadFarrow/PC20-Nostr/issues/44) — opened 2026-09-08

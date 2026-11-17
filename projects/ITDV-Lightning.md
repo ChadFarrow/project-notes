@@ -29,5 +29,5 @@ Lightning implementation for ITDV
 
 ### Pull requests (1)
 
-- [#16 Fix boost metadata: sender in site notes, per-split amounts, auto boost records](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 2026-11-17
+- [#16 Fix boost metadata; auto boosts post no Nostr note](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 2026-11-17
 <!-- AUTO:END -->
