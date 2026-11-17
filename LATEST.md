@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-17 14:10 UTC
+# Dashboard — 2026-11-17 14:19 UTC
 
-30 open PRs · 20 open issues · 39 branches with no PR · 41 tracked repos (14 not tracked)
+32 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -17,7 +17,7 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 13 hours ago
+- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 14 hours ago
 - [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 20 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 11 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
@@ -100,9 +100,10 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-16 PRs · 7 issues · 9 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+17 PRs · 7 issues · 8 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
 
 - PR [#590 feat(site-sign): the site signs only a boost note somebody paid it a 1-sat stamp for](https://github.com/ChadFarrow/boostmebitch/pull/590) — opened 1 hour ago
+- PR [#591 fix(lnaddress): stop serving the dead chadf@boostmebitch.com address](https://github.com/ChadFarrow/boostmebitch/pull/591) — opened 7 minutes ago
 - PR [#588 feat(boost-note): say what was boosted, then where it was found — the shared format](https://github.com/ChadFarrow/boostmebitch/pull/588) — opened 4 hours ago
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago
@@ -118,7 +119,6 @@
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 1 day ago
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - PR [#451 docs(plans): week review of 2026-09-17..26 — checklist to finish](https://github.com/ChadFarrow/boostmebitch/pull/451) — opened 52 days ago · draft
-- Branch [`remove-old-lnaddress`](https://github.com/ChadFarrow/boostmebitch/tree/remove-old-lnaddress) — no PR
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page) — no PR
 - Branch [`wip/e2e-chrome-cleanup-2026-09-24`](https://github.com/ChadFarrow/boostmebitch/tree/wip/e2e-chrome-cleanup-2026-09-24) — no PR
@@ -208,8 +208,9 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [thelounge-candr](projects/thelounge-candr.md)
 
-1 branch with no PR
+1 PR · 1 branch with no PR
 
+- PR [#86 candr-boost: keep show-note DMs from Chad and Reed](https://github.com/ChadFarrow/thelounge-candr/pull/86) — opened 1 minute ago
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites

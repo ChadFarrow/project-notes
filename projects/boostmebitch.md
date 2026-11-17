@@ -35,8 +35,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 2 issues)
 
-### Pull requests (16)
+### Pull requests (17)
 
+- [#591 fix(lnaddress): stop serving the dead chadf@boostmebitch.com address](https://github.com/ChadFarrow/boostmebitch/pull/591) — opened 2026-11-17
 - [#590 feat(site-sign): the site signs only a boost note somebody paid it a 1-sat stamp for](https://github.com/ChadFarrow/boostmebitch/pull/590) — opened 2026-11-17
 - [#588 feat(boost-note): say what was boosted, then where it was found — the shared format](https://github.com/ChadFarrow/boostmebitch/pull/588) — opened 2026-11-17
 - [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 2026-11-17
@@ -64,7 +65,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (9)
+### Branches with no open PR (8)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page)
@@ -73,6 +74,5 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
 - [`feat/gif-hover-preview`](https://github.com/ChadFarrow/boostmebitch/tree/feat/gif-hover-preview)
 - [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
-- [`remove-old-lnaddress`](https://github.com/ChadFarrow/boostmebitch/tree/remove-old-lnaddress)
 - [`wip/e2e-chrome-cleanup-2026-09-24`](https://github.com/ChadFarrow/boostmebitch/tree/wip/e2e-chrome-cleanup-2026-09-24)
 <!-- AUTO:END -->
