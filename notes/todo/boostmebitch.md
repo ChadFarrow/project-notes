@@ -6,6 +6,7 @@
 - [ ] Before merge: #580 DEMU search type and #583 /demu page. Merge #580 first, then change the base of #583 to `main`
   - [ ] Computer: on the Vercel preview of #583, open /demu. The list loads with week headings and a date on each row (the browser test used a saved answer, because Podcast Index rate-limited the test machine)
   - [ ] Computer: on the same preview, pick DEMU in the search menu and search Longy. 14 albums show and none is from Wavlake. Then press "browse all DeMu →" and check that /demu opens with Longy in the box
+  - [ ] Phone: on an iPhone, with nothing playing, open /demu on the #583 preview or on beta and press the cover of an album. The album plays from track 1. If it stops at ▶, a second press on the cover must play it. A press on the rest of the row still opens the album
 
 - [ ] In development: #583 /demu is on beta through the beta-only branch `beta-demu-page` (#583 plus the five beta branches, conflicts resolved). When #583 changes, merge `feat/demu-page` into `beta-demu-page` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #583 merges
 
