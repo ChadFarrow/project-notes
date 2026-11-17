@@ -9,7 +9,7 @@ This file tells you what runs automatically in this repo, what the job needs, an
 | Workflow file | `.github/workflows/sync-all.yml` |
 | Starts when | Every 4 hours. Also by hand, from the web dashboard, and from the vault sync. Also on a push to `main` that changes `site/`, `scripts/`, `notes/TODO.md`, `notes/todo/` or the workflow file. |
 | Runs | `node --test`, then `node scripts/sync.mjs --site "$RUNNER_TEMP/site"` |
-| Runtime | Node 22 (same as the Mac; change both together) |
+| Runtime | Node 22. On the Mac, the vault-sync agent uses `/usr/local/bin/node` (Node 22), but `node` in a terminal is Homebrew's (Node 24), so a sync that you run by hand there uses Node 24. |
 | Writes | `LATEST.md`, `audits/`, `INDEX.md`, `references/starred.md`, and the AUTO block of each note in `projects/`. Commit message: `Auto-sync <date>`. |
 | Publishes | The web dashboard at https://notes.podtards.com, with GitHub Pages (the `deploy` job) |
 
@@ -35,7 +35,7 @@ The web dashboard is on GitHub Pages, with the custom domain `notes.podtards.com
 
 `CLAUDE.md` ("The web dashboard" → "Hosting") has the commands to set up Pages and the domain again.
 
-If you move the job off GitHub, the Pages deploy stops. Then you must serve the `--site` folder from a different host and change the DNS record.
+If you move the job off GitHub and disable the workflow (see *4. Schedule*), the Pages deploy stops. Then you must serve the `--site` folder from a different host and change the DNS record.
 
 ## Run the job locally
 
@@ -70,4 +70,6 @@ To push, the clone needs git credentials. Then serve `/srv/notes-site` with your
 ### 4. Schedule
 Use a systemd timer or cron: `0 */4 * * *`.
 
-If you run the job locally, disable the `schedule:` trigger in the workflow file. If you do not, GitHub and your server make two `Auto-sync` commits for the same data, and you can get push conflicts.
+If you run the job locally, disable the whole workflow on GitHub: **Actions → Sync All Project Data → Disable workflow**, or `gh workflow disable sync-all.yml -R ChadFarrow/project-notes`. It is not enough to remove the `schedule:` trigger. A push to `main` that changes `site/`, `scripts/`, `notes/TODO.md` or `notes/todo/` also starts the workflow, and each to-do tick in Obsidian is such a push. The web dashboard and the vault sync also start it after an edit. If GitHub still runs it, GitHub and your server make two `Auto-sync` commits for the same data, you can get push conflicts, and GitHub still deploys the Pages site.
+
+When the workflow is disabled, the web dashboard and the vault sync cannot start it. They still save the edit, and the next run on your server shows it.
