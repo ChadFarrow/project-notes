@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-17 00:23 UTC
+# Dashboard — 2026-11-17 00:47 UTC
 
-33 open PRs · 21 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
+35 open PRs · 21 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -9,7 +9,7 @@
 ### Ready to merge — idle 7+ days (4)
 
 - **MSP-2.0-Desktop-App** [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — idle 24 days · checks passing
-- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 15 days · no checks
+- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 16 days · no checks
 - **MSP-2.0** [#176 Open the PI, podping and hosted APIs to cross-origin callers](https://github.com/ChadFarrow/MSP-2.0/pull/176) — idle 13 days · checks passing
 - **MSP-2.0** [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — idle 13 days · checks passing
 
@@ -17,28 +17,28 @@
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 11 minutes ago
-- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 6 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 36 minutes ago
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 7 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 11 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
 **[MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)**
 
-- [#100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — opened 6 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — opened 7 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 6 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 7 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 29 days ago
 
 **[Auto-musicL-Maker](projects/Auto-musicL-Maker.md)**
 
-- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 6 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 7 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[musicL-playlist-updater](projects/musicL-playlist-updater.md)**
 
-- [#17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — opened 6 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — opened 7 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
@@ -104,11 +104,12 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-13 PRs · 7 issues · 8 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
+14 PRs · 7 issues · 8 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
 
-- PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 19 hours ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 3 days ago
-- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 21 hours ago · draft
+- PR [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 17 minutes ago
+- PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 19 hours ago · draft
+- PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 22 hours ago · draft
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 23 hours ago
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 1 day ago
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 1 day ago
@@ -172,6 +173,13 @@
 
 ### musicL playlists
 
+#### [musicL-playlist-updater](projects/musicL-playlist-updater.md)
+
+2 PRs · 1 issue · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR)
+
+- PR [#19 Keep preserved tracks in the rebuilt playlist; publish nothing without the raw RSS](https://github.com/ChadFarrow/musicL-playlist-updater/pull/19) — opened 6 minutes ago
+- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 1 day ago
+
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
 1 issue · 2 branches with no PR
@@ -184,17 +192,11 @@
 1 PR · used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
 - PR [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 1 day ago
-- Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 6 hours ago
-- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 6 hours ago
-- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 6 hours ago
-- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 6 hours ago
-- Opened elsewhere: [musicL-playlist-updater #17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — issue · opened 6 hours ago
-
-#### [musicL-playlist-updater](projects/musicL-playlist-updater.md)
-
-1 PR · 1 issue · uses [msp-podping-service](projects/msp-podping-service.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (1 PR)
-
-- PR [#15 Add RUNNING.md: how the daily job runs](https://github.com/ChadFarrow/musicL-playlist-updater/pull/15) — opened 1 day ago
+- Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 7 hours ago
+- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 7 hours ago
+- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 7 hours ago
+- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 7 hours ago
+- Opened elsewhere: [musicL-playlist-updater #17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — issue · opened 7 hours ago
 
 ### Nostr
 
