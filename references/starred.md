@@ -55,7 +55,7 @@
 - [icloud-for-linux](https://github.com/cross-platform/icloud-for-linux) - Access all of your favourite iCloud apps from Linux
 - [Libre-Soundboard](https://github.com/Kolomona/Libre-Soundboard) - LibreSoundboard is a native Linux desktop JACK enabled soundboard application.
 - [conduit-mono](https://github.com/Conduit-BTC/conduit-mono) - Frontend applications and shared libraries for Conduit’s marketplace and merchant portal.
-- [caveman](https://github.com/JuliusBrussee/caveman) - 🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.
+- [caveman](https://github.com/JuliusBrussee/caveman) - why use many token when few token do trick. Skill + local proxy for coding agents: shorter answers, smaller tool output, every original recoverable.
 - [napstr](https://github.com/lnbits/napstr) - No description
 - [hanami](https://github.com/Letdown2491/hanami) - No description
 - [go](https://github.com/getAlby/go) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub.
@@ -115,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-17 21:50 UTC*
+*Last synced: 2026-11-17 21:57 UTC*
