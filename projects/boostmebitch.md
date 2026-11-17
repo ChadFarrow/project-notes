@@ -36,7 +36,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 
 ### Pull requests (16)
 
-- [#590 feat(site-sign): the site signs only a boost note somebody paid it a 1-sat stamp for](https://github.com/ChadFarrow/boostmebitch/pull/590) — opened 2026-11-17
+- [#590 feat(site-sign): the site signs only a boost note somebody paid it a 1-sat stamp for](https://github.com/ChadFarrow/boostmebitch/pull/590) — opened 2026-11-17 · checks pending
 - [#588 feat(boost-note): say what was boosted, then where it was found — the shared format](https://github.com/ChadFarrow/boostmebitch/pull/588) — opened 2026-11-17
 - [#587 feat(search): publisher feeds first, listed under the choice they are for](https://github.com/ChadFarrow/boostmebitch/pull/587) — opened 2026-11-17
 - [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 2026-11-16
