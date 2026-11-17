@@ -33,23 +33,25 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ## Live status
 
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
-- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (3 PRs, 2 issues)
+- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 2 issues)
 
-### Pull requests (13)
+### Pull requests (15)
 
+- [#595 fix(boost): value\_msat\_total is the typed amount on every leg (bLIP-10)](https://github.com/ChadFarrow/boostmebitch/pull/595) — opened 2026-11-17
+- [#594 fix(nostr-index): an index on events(seen\_at), so a feed answer no longer scans the table](https://github.com/ChadFarrow/boostmebitch/pull/594) — opened 2026-11-17 · draft
 - [#592 feat(search): typo-tolerant near matches](https://github.com/ChadFarrow/boostmebitch/pull/592) — opened 2026-11-17
 - [#585 fix(player): make the open fullscreen player a history entry (#556)](https://github.com/ChadFarrow/boostmebitch/pull/585) — opened 2026-11-16
 - [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2026-11-16
 - [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 2026-11-16 · draft
-- [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 2026-11-16 · draft
-- [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 2026-11-16
+- [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 2026-11-16 · draft · merge conflict
+- [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 2026-11-16 · merge conflict
 - [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16 · draft
 - [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2026-11-15 · draft
 - [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15 · draft
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13 · draft
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (7)
 
@@ -61,12 +63,11 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (7)
+### Branches with no open PR (6)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`beta-demu-page`](https://github.com/ChadFarrow/boostmebitch/tree/beta-demu-page)
 - [`beta-typo-search`](https://github.com/ChadFarrow/boostmebitch/tree/beta-typo-search)
-- [`claude/value-msat-total-spec`](https://github.com/ChadFarrow/boostmebitch/tree/claude/value-msat-total-spec)
 - [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
 - [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
