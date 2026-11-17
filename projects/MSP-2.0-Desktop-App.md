@@ -27,11 +27,11 @@ Desktop application for MSP-2.0
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0-Desktop-App](https://github.com/ChadFarrow/MSP-2.0-Desktop-App) · TypeScript
-- **Uses:** [MSP-2.0](MSP-2.0.md) (5 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (1 PR)
+- **Uses:** [MSP-2.0](MSP-2.0.md) (5 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (no open work)
 
 ### Pull requests (2)
 
-- [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 2026-11-15
+- [#99 Add RUNNING.md: how the sync and release jobs run](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/99) — opened 2026-11-15 · checks failing
 - [#85 Say what happened to sync PR #82 after the reconcile](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/85) — opened 2026-10-23
 
 ### Issues (1)

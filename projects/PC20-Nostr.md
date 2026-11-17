@@ -21,7 +21,11 @@ Repo for code example for my apps
 ## Live status
 
 - **Repo:** [ChadFarrow/PC20-Nostr](https://github.com/ChadFarrow/PC20-Nostr) · TypeScript
-- **Uses:** [stablekraft-app](stablekraft-app.md) (3 PRs, 2 issues)
+- **Uses:** [stablekraft-app](stablekraft-app.md) (2 PRs, 2 issues)
+
+### Pull requests (1)
+
+- [#51 A boost names what it paid, then where it was found](https://github.com/ChadFarrow/PC20-Nostr/pull/51) — opened 2026-11-17
 
 ### Issues (1)
 

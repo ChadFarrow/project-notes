@@ -25,15 +25,10 @@ MusicL playlists repository
 - **Repo:** [ChadFarrow/chadf-musicl-playlists](https://github.com/ChadFarrow/chadf-musicl-playlists) · Python
 - **Used by:** [boostmebitch](boostmebitch.md), [musicL-playlist-updater](musicL-playlist-updater.md), [stablekraft-app](stablekraft-app.md)
 
-### Pull requests (1)
-
-- [#8 Add RUNNING.md: how the playlist jobs run](https://github.com/ChadFarrow/chadf-musicl-playlists/pull/8) — opened 2026-11-15
-
-### Opened elsewhere for this project (5)
+### Opened elsewhere for this project (4)
 
 - [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 2026-11-16
 - [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 2026-11-16
 - [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 2026-11-16
-- [musicL-playlist-updater #17 Tracks marked "Preserved" are dropped from the rebuilt playlist (a failed raw-RSS fetch can publish an empty playlist)](https://github.com/ChadFarrow/musicL-playlist-updater/issues/17) — issue · opened 2026-11-16
 - [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 2026-11-16
 <!-- AUTO:END -->

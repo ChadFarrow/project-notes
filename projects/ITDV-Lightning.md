@@ -27,5 +27,7 @@ Lightning implementation for ITDV
 - **Repo:** [ChadFarrow/ITDV-Lightning](https://github.com/ChadFarrow/ITDV-Lightning) · TypeScript
 - **Uses:** [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 
-_No open work._
+### Pull requests (1)
+
+- [#16 Fix boost metadata: sender in site notes, per-split amounts, auto boost records](https://github.com/ChadFarrow/ITDV-Lightning/pull/16) — opened 2026-11-17
 <!-- AUTO:END -->
