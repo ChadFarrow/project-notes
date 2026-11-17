@@ -20,8 +20,6 @@
 
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
-- [ ] Before merge: #540 ask Claude on the Mac to run `npm run e2e:communitynote` on the PR branch, with a local Postgres. The 84/84 in the PR is from before the 2026-11-16 merge with main. That merge was checked with `e2e:boostnote` only, because the laptop has no Postgres
-
 ## Already works
 
 - #538 and #540 (community playlists) merge with main again and are on beta.boostmebitch.com (2026-11-16). #540's boost modals keep main's signer check and RETRY NOTE plus the note's brand and sender name: `e2e:boostnote` 47/47 with a stub signer and wallet.
