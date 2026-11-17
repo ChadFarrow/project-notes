@@ -22,12 +22,7 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-### Branches with no open PR (6)
+### Pull requests (1)
 
-- [`docs/nas-downloads`](https://github.com/ChadFarrow/vibe-kit/tree/docs/nas-downloads)
-- [`docs/stop-what-you-start`](https://github.com/ChadFarrow/vibe-kit/tree/docs/stop-what-you-start)
-- [`docs/todo-rule`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule)
-- [`docs/todo-rule-main`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-main)
-- [`docs/todo-rule-scope`](https://github.com/ChadFarrow/vibe-kit/tree/docs/todo-rule-scope)
-- [`feat/disk-guard`](https://github.com/ChadFarrow/vibe-kit/tree/feat/disk-guard)
+- [#9 guard-push: a hold lock for parked PRs](https://github.com/ChadFarrow/vibe-kit/pull/9) — opened 2026-11-17 · checks pending
 <!-- AUTO:END -->

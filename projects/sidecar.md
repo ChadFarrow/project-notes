@@ -22,8 +22,5 @@ A classy Nostr keystore and signer that lives in your browser sidebar 🍸
 
 - **Repo:** [ChadFarrow/sidecar](https://github.com/ChadFarrow/sidecar) · JavaScript · fork of dmnyc/sidecar
 
-### Branches with no open PR (2)
-
-- [`fix/custom-emoji-reactions`](https://github.com/ChadFarrow/sidecar/tree/fix/custom-emoji-reactions)
-- [`local/demo-funds`](https://github.com/ChadFarrow/sidecar/tree/local/demo-funds)
+_No open work._
 <!-- AUTO:END -->

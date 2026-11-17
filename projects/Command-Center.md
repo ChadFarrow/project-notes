@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · JavaScript · private
 
-_No open work._
+### Pull requests (1)
+
+- [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2026-11-17
 <!-- AUTO:END -->

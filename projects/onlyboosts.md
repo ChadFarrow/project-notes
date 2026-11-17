@@ -22,7 +22,5 @@ A nostr client of only podcasting 2.0 boosts with stats, social features and pod
 
 - **Repo:** [ChadFarrow/onlyboosts](https://github.com/ChadFarrow/onlyboosts) · JavaScript · fork of ReedBTC/onlyboosts
 
-### Branches with no open PR (1)
-
-- [`docs/chadf-relay-bots-sender-tag`](https://github.com/ChadFarrow/onlyboosts/tree/docs/chadf-relay-bots-sender-tag)
+_No open work._
 <!-- AUTO:END -->

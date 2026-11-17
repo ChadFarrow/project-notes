@@ -23,7 +23,5 @@ A public reference for Podcasting 2.0 — the namespace, the payments, and the p
 - **Repo:** [ChadFarrow/pc20-wiki](https://github.com/ChadFarrow/pc20-wiki) · JavaScript
 - **Uses:** [pc20-archive](pc20-archive.md) (no open work)
 
-### Branches with no open PR (1)
-
-- [`fix/search-word-bounds`](https://github.com/ChadFarrow/pc20-wiki/tree/fix/search-word-bounds)
+_No open work._
 <!-- AUTO:END -->

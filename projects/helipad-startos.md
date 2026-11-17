@@ -22,9 +22,8 @@ Helipad packaged for Start9's StartOS.
 
 - **Repo:** [ChadFarrow/helipad-startos](https://github.com/ChadFarrow/helipad-startos) · Makefile · fork of Podcastindex-org/helipad-startos
 
-### Branches with no open PR (3)
+### Branches with no open PR (2)
 
 - [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master)
 - [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build)
-- [`fix/move-0.3.5-database`](https://github.com/ChadFarrow/helipad-startos/tree/fix/move-0.3.5-database)
 <!-- AUTO:END -->

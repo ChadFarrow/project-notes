@@ -33,7 +33,5 @@ Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `no
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · JavaScript · private
 
-### Branches with no open PR (1)
-
-- [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag)
+_No open work._
 <!-- AUTO:END -->
