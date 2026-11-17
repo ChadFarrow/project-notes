@@ -1,5 +1,3 @@
-- [ ] Before merge: Computer: #48, the IRC lists in the episode packet (your and Reed's DM notes to the bot, the `!note` links, the `!title` ideas and the show chat), waits for your review and merge. Merge it before the post-production of 015 on Thursday 2026-11-19, so `/candr-post 15` shows them. Then pull `main` in `~/Vibe/Command-Center` (or ask Claude).
-
 - [ ] In development: Send the Podhome developer the follow-up request (written by Claude on 2026-11-09): create a live episode through the API, with its live status and times; show the live times in the episode list; and does a new show from the API get its own key. When Podhome answers, tell Claude: then a test episode or a test show can test the board's Podhome controls without the real feed.
 
 - [ ] In development: Send the Podhome developer the post-show request (written by Claude on 2026-11-15): "Can `POST /api/modify_v4v` time splits (and `GET /api/v4v`) carry a remote item, the feed GUID and item GUID of a song, so a script can add a song's value time split by itself? And can chapters take `toc` (false = an image-only chapter, not in the table of contents) and `endTime`, as in the Podcasting 2.0 JSON chapters spec?" When Podhome answers, tell Claude: the post-show agent then sets the song split and the screenshot chapters by itself.
@@ -22,7 +20,7 @@
 - [ ] After merge: Computer: Post-production of 015 on Thursday 2026-11-19 with PR #41.
   - [ ] Computer: Upload the MP3 with Podhome AI as usual, and check that the episode number is 15. Add the song's split in Podhome (pick the song; any start time).
   - [ ] Phone: Run `/candr-post 15 --dry-run` in a Claude session and read the list; then run `/candr-post 15` and answer with the numbers to keep.
-  - [ ] Phone: With #48 merged, the list also shows group G (links from IRC) and group H (title ideas). `all` does not approve them: give their numbers. Tell Claude what is wrong or missing in them.
+  - [ ] Phone: The list also shows group G (links from IRC) and group H (title ideas), merged in #48. `all` does not approve them: give their numbers. Tell Claude what is wrong or missing in them.
   - [ ] Computer: After the split write, open the episode in the Podhome website: the split must still point to the song. Tell Claude "the split is fine" or "the split lost the song". Then publish or schedule the episode yourself.
 
 - [ ] After merge: Computer: Start the watcher (#44) only after 015 is Published. Then tell Claude: Claude writes the folder path, runs the dry run, and installs the agent; you get one DM with the first-start count. The first real run is 016: Reed (or you) puts `candr-016.mp3` in `candr/episodes/Final Audio`.
