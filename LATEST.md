@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-17 14:19 UTC
+# Dashboard — 2026-11-17 14:29 UTC
 
 32 open PRs · 20 open issues · 38 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -103,7 +103,7 @@
 17 PRs · 7 issues · 8 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
 
 - PR [#590 feat(site-sign): the site signs only a boost note somebody paid it a 1-sat stamp for](https://github.com/ChadFarrow/boostmebitch/pull/590) — opened 1 hour ago
-- PR [#591 fix(lnaddress): stop serving the dead chadf@boostmebitch.com address](https://github.com/ChadFarrow/boostmebitch/pull/591) — opened 7 minutes ago
+- PR [#591 fix(lnaddress): stop serving the dead chadf@boostmebitch.com address](https://github.com/ChadFarrow/boostmebitch/pull/591) — opened 18 minutes ago
 - PR [#588 feat(boost-note): say what was boosted, then where it was found — the shared format](https://github.com/ChadFarrow/boostmebitch/pull/588) — opened 4 hours ago
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago
@@ -210,7 +210,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR · 1 branch with no PR
 
-- PR [#86 candr-boost: keep show-note DMs from Chad and Reed](https://github.com/ChadFarrow/thelounge-candr/pull/86) — opened 1 minute ago
+- PR [#86 candr-boost: keep show-note DMs from Chad and Reed](https://github.com/ChadFarrow/thelounge-candr/pull/86) — opened 11 minutes ago
 - Branch [`candr-boost-sender-tag`](https://github.com/ChadFarrow/thelounge-candr/tree/candr-boost-sender-tag) — no PR
 
 ### Websites
