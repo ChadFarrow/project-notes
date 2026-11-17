@@ -3,3 +3,4 @@
   - [ ] No answer looks picked when a new question opens. Chrome could not reproduce this, so only a real phone can confirm the fix.
 - [ ] In development: Tell Claude to prepare the iPhone layout PR for Spencer. Its demo tests passed on 2026-11-03, on your phone and on a spare iPhone 11.
 - [ ] In development: SpencerPearson/small-group-scoop#25 waits for Spencer. When he decides what to do with it, tell Claude.
+- [ ] In development: Computer: On the Mac mini, read the scope that Claude wrote on 2026-11-17 for two todos of Scoop: `~/Vibe/agent-dispatcher/notes/scoop-scope-2026-11-17.md`. It has draft claim comments and questions for Spencer. Pick the todo to take first, and approve its claim comment. Then tell the dispatcher.
