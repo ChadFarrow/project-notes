@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-17 21:39 UTC
+# Dashboard — 2026-11-17 21:50 UTC
 
-28 open PRs · 20 open issues · 21 branches with no PR · 41 tracked repos (14 not tracked)
+27 open PRs · 20 open issues · 21 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -94,10 +94,9 @@
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-4 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+3 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#314 Turn off next-pwa's two client options; say that its script never runs here](https://github.com/ChadFarrow/stablekraft-app/pull/314) — opened 2 minutes ago
-- PR [#313 Bind the player's media listeners once, not on every tick](https://github.com/ChadFarrow/stablekraft-app/pull/313) — opened 6 minutes ago
+- PR [#314 Turn off next-pwa's two client options; say that its script never runs here](https://github.com/ChadFarrow/stablekraft-app/pull/314) — opened 13 minutes ago
 - PR [#257 Write a feed entry only for a feed the user chose](https://github.com/ChadFarrow/stablekraft-app/pull/257) — opened 2 months ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
@@ -105,7 +104,7 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-13 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 2 issues)
+13 PRs · 7 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
 
 - PR [#592 feat(search): find a playlist by a misspelled name](https://github.com/ChadFarrow/boostmebitch/pull/592) — opened 3 hours ago
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago · draft
@@ -171,7 +170,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (4 PRs, 2 issues)
+1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (3 PRs, 2 issues)
 
 ### Websites
 
@@ -200,8 +199,8 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 2 PRs
 
-- PR [#12 guard-push: no box for a plain feature-branch push](https://github.com/ChadFarrow/vibe-kit/pull/12) — opened 17 minutes ago · checks pending
-- PR [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 42 minutes ago
+- PR [#12 guard-push: no box for a plain feature-branch push](https://github.com/ChadFarrow/vibe-kit/pull/12) — opened 28 minutes ago
+- PR [#11 statusline: show the 5-hour and weekly plan usage](https://github.com/ChadFarrow/vibe-kit/pull/11) — opened 53 minutes ago
 
 #### [Command-Center](projects/Command-Center.md)
 

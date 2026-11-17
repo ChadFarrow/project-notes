@@ -33,7 +33,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ## Live status
 
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
-- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (4 PRs, 2 issues)
+- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (3 PRs, 2 issues)
 
 ### Pull requests (13)
 
