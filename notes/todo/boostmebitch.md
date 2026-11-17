@@ -20,11 +20,9 @@
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
   - [ ] Computer: when you have the Lightning address for the stamps only, put it in `SITE_STAMP_LNADDRESS` on both Vercel projects (Production and Preview), then redeploy both. It is your main Alby address for now (2026-11-17). The new address must have the LUD-21 `verify` link on its own domain
 
-- [ ] Before merge: #591 the site stops serving the old LNbits test Lightning address (its lnurlp path answers 502 now). Review and merge it. It goes to `main`, not to beta first
-
-- [ ] After merge: #591 the old test address is gone everywhere
+- [ ] After merge: #591 the old test address is gone everywhere. Production on both brands answers 404 (2026-11-17)
   - [ ] Computer: at Namecheap, delete the DNS record `pay` of boostmebitch.com (the old LNbits subdomain). Nothing answers on that name now (TLS "unrecognized name", 2026-11-17), and the Start9 node announces its IP, not that name
-  - [ ] Computer: open `/.well-known/lnurlp/chadf` on www.boostmebitch.com and on www.boostmebuddy.com. Each answers 404 Not found, not 502
+  - [ ] Computer: rebuild beta (`npm run beta -- rebuild`, then the push it prints). beta.boostmebitch.com still answers 502 for `/.well-known/lnurlp/chadf`. The rebuild stops now: the branch of #538 conflicts in `CLAUDE.md` with #590 on `main`. Merge `main` into that branch first
 
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
