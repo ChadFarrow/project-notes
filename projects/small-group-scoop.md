@@ -26,12 +26,12 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 ### Pull requests (9)
 
-- [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2026-11-18 · merge conflict
-- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18 · merge conflict
+- [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2026-11-18
+- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18
 - [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2026-11-18
 - [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 2026-11-18
 - [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 2026-11-18
-- [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
+- [#6 Thunder Road Media watch page: a CRT TV that surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
 - [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2026-11-18
 - [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
 - [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31 · merge conflict
