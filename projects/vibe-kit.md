@@ -22,8 +22,5 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-### Pull requests (2)
-
-- [#19 global.md: Chad's Nostr signers for tests](https://github.com/ChadFarrow/vibe-kit/pull/19) — opened 2026-11-18
-- [#18 guard-push: a function in a heredoc or a quote no longer boxes a plain push](https://github.com/ChadFarrow/vibe-kit/pull/18) — opened 2026-11-18 · checks failing
+_No open work._
 <!-- AUTO:END -->
