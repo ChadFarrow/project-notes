@@ -24,10 +24,15 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
 - **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
 
-### Pull requests (4)
+### Pull requests (5)
 
+- [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 2026-11-18
 - [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
 - [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2026-11-18
 - [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
 - [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31 · merge conflict
+
+### Opened elsewhere for this project (1)
+
+- [vibe-kit #16 guard-push: agents never submit PRs to Spencer's small-group-scoop; fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 2026-11-18
 <!-- AUTO:END -->
