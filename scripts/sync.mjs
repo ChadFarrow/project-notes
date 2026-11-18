@@ -10,6 +10,7 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { gitIgnored } from './lib/gitignored.mjs';
 import { fetchRepos, fetchStars, fetchWatched, pickToken, probeToken } from './lib/github.mjs';
 import { normalizeRepos, normalizeWatched } from './lib/model.mjs';
 import { parseHeader, TODO_FILE } from './lib/notes.mjs';
@@ -39,10 +40,15 @@ const listMd = (dir) => (existsSync(dir)
   : []);
 const projectsDir = path.join(root, 'projects');
 const notes = listMd(projectsDir).map((file) => ({ file, text: readFileSync(path.join(projectsDir, file), 'utf8') }));
-const todoFiles = [
+// A git-ignored to-do note belongs to a private repo: it is on this Mac only, never on
+// GitHub, so a local build leaves it out too and matches the public page.
+const todoPaths = [
   ...(existsSync(path.join(root, TODO_FILE)) ? [TODO_FILE] : []),
   ...listMd(path.join(root, 'notes/todo')).map((name) => `notes/todo/${name}`),
-].map((rel) => ({ path: rel, text: readFileSync(path.join(root, rel), 'utf8') }));
+];
+const privateTodo = gitIgnored(root, todoPaths);
+const todoFiles = todoPaths.filter((rel) => !privateTodo.has(rel))
+  .map((rel) => ({ path: rel, text: readFileSync(path.join(root, rel), 'utf8') }));
 
 // Fetch everything before writing anything: a failed fetch must leave the repo untouched.
 const repos = normalizeRepos(await fetchRepos(token, OWNER));

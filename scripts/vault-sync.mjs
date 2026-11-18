@@ -21,6 +21,7 @@ import {
 import { homedir, tmpdir } from 'node:os';
 import path from 'node:path';
 import { setTimeout as sleep } from 'node:timers/promises';
+import { gitIgnored } from './lib/gitignored.mjs';
 import { planSync, zoneOf } from './lib/vault.mjs';
 
 const env = process.env;
@@ -170,11 +171,17 @@ async function sync() {
 
   if (plan.toRepo.size) {
     applyWrites(REPO, plan.toRepo);
-    const paths = [...plan.toRepo.keys()];
-    git('add', '-A', '--', ...paths);
-    const n = paths.length;
-    git('commit', '-q', '-m', `Sync ${n} file${n === 1 ? '' : 's'} from the Obsidian vault`);
-    log(`committed: ${paths.join(', ')}`);
+    // A git-ignored file (the to-do note of a private repo) stays in the checkout and the
+    // vault. `git add` refuses it, and a failed add would leave the rest staged.
+    const ignored = gitIgnored(REPO, [...plan.toRepo.keys()]);
+    if (ignored.size) log(`kept local, git-ignored: ${[...ignored].join(', ')}`);
+    const paths = [...plan.toRepo.keys()].filter((p) => !ignored.has(p));
+    if (paths.length) {
+      git('add', '-A', '--', ...paths);
+      const n = paths.length;
+      git('commit', '-q', '-m', `Sync ${n} file${n === 1 ? '' : 's'} from the Obsidian vault`);
+      log(`committed: ${paths.join(', ')}`);
+    }
   }
   writeFileSync(`${STATE}.tmp`, `${JSON.stringify(plan.state, null, 1)}\n`);
   renameSync(`${STATE}.tmp`, STATE);

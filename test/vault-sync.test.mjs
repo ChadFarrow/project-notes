@@ -101,6 +101,41 @@ test('a note made in notes/todo/ in the vault reaches the remote, and so does a 
   assert.equal(read(seed, 'notes/todo/app one.md'), '- [x] Test it\n');
 });
 
+test('a git-ignored to-do note syncs with the vault, but never reaches the remote', () => {
+  pushFromSeed({ '.gitignore': 'notes/todo/secret.md\n' }, 'Keep a private to-do note out of git');
+  assert.equal(run().status, 0);
+  const tracked = () => git(seed, 'ls-tree', '-r', '--name-only', 'origin/main');
+  const commits = originLog();
+
+  // A new private note and a public note in one run: only the public one is committed.
+  write(vault, 'notes/todo/secret.md', '- [ ] Private test\n');
+  write(vault, 'notes/public.md', 'public\n');
+  let r = run();
+  assert.equal(r.status, 0, r.out);
+  assert.equal(read(repo, 'notes/todo/secret.md'), '- [ ] Private test\n');
+  assert.equal(originLog().split('\n')[0], 'Sync 1 file from the Obsidian vault');
+  assert.ok(tracked().split('\n').includes('notes/public.md'));
+  assert.ok(!tracked().includes('secret'));
+  assert.equal(git(repo, 'status', '--porcelain'), '');
+
+  // A tick on the phone reaches the checkout, with no commit.
+  const after = originLog();
+  write(vault, 'notes/todo/secret.md', '- [x] Private test\n');
+  r = run();
+  assert.equal(r.status, 0, r.out);
+  assert.equal(read(repo, 'notes/todo/secret.md'), '- [x] Private test\n');
+  assert.equal(originLog(), after);
+
+  // A line an agent writes in the checkout reaches the vault, with no commit.
+  write(repo, 'notes/todo/secret.md', '- [ ] Written by an agent\n');
+  r = run();
+  assert.equal(r.status, 0, r.out);
+  assert.equal(read(vault, 'notes/todo/secret.md'), '- [ ] Written by an agent\n');
+  assert.equal(originLog(), after);
+  assert.notEqual(after, commits);
+  assert.equal(git(repo, 'status', '--porcelain'), '');
+});
+
 test('a new AUTO block and dashboard from the remote reach the vault and keep the vault text', () => {
   pushFromSeed({ 'projects/a.md': note('mine, plus a TODO', 'block v2'), 'LATEST.md': 'dashboard v2\n' }, 'Auto-sync');
   const commits = originLog();

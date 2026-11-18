@@ -1,2 +1,8 @@
 .DS_Store
 _site/
+
+# The To do notes of private repos. This repo is public, so these notes never go to
+# GitHub: they live in this checkout and the Obsidian vault only (CLAUDE.md, "Private
+# To do notes"). Never `git add -f` them.
+notes/todo/small-group-scoop.md
+notes/todo/small-group-scoop *.md
