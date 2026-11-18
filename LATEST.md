@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-18 15:13 UTC
+# Dashboard — 2026-11-18 16:27 UTC
 
-31 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+29 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -76,7 +76,7 @@ _None._
 
 2 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 49 days ago · draft
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 50 days ago · draft
 - PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2 months ago · draft · merge conflict
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
@@ -91,14 +91,22 @@ _None._
 
 ### Music apps & sites
 
+#### [stablekraft-app](projects/stablekraft-app.md)
+
+1 PR · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+
+- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2 months ago · draft
+- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
+- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
+
 #### [boostmebitch](projects/boostmebitch.md)
 
-11 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+11 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
 
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2 days ago · draft
-- PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2 days ago · draft
+- PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 3 days ago · draft
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 5 days ago · draft
-- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2 days ago · draft
+- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 3 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 days ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 5 days ago · draft
 - PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2 days ago
@@ -112,22 +120,12 @@ _None._
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25) — no PR
 
-#### [stablekraft-app](projects/stablekraft-app.md)
-
-2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
-
-- PR [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 15 hours ago
-- PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2 months ago · draft
-- Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
-- Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
-
 ### Music publishing
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-1 PR · 1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
+1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#105 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/105) — opened 2 minutes ago · checks pending
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [MSP-2.0](projects/MSP-2.0.md)
@@ -166,7 +164,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
+1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
 
 ### Websites
 
@@ -195,13 +193,13 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 9 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
 
-- PR [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2 minutes ago
-- PR [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 5 hours ago
-- PR [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 1 hour ago · merge conflict
-- PR [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 1 hour ago
-- PR [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 3 hours ago
-- PR [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 3 hours ago
-- PR [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 5 hours ago
+- PR [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 6 hours ago
+- PR [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 1 hour ago
+- PR [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2 hours ago
+- PR [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2 hours ago
+- PR [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 4 hours ago
+- PR [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 4 hours ago
+- PR [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 6 hours ago
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 17 days ago · merge conflict
 - PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
 
@@ -209,13 +207,13 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR
 
-- PR [#17 scoop-preview: move the Scoop preview kit into vibe-kit](https://github.com/ChadFarrow/vibe-kit/pull/17) — opened 41 minutes ago
+- PR [#18 guard-push: a function in a heredoc or a quote no longer boxes a plain push](https://github.com/ChadFarrow/vibe-kit/pull/18) — opened 48 minutes ago · checks pending
 
 #### [Command-Center](projects/Command-Center.md)
 
 1 PR
 
-- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 18 hours ago · draft
+- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 19 hours ago · draft
 
 ### Quiet — no open work
 

@@ -24,9 +24,8 @@ Stablekraft application
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 2026-11-17
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 
 ### Issues (2)
