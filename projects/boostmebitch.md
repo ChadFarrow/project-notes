@@ -35,8 +35,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 2 issues)
 
-### Pull requests (11)
+### Pull requests (12)
 
+- [#599 feat(boost): a slow split no longer holds the boost; ask the wallet about a ? leg, and RETRY it under the same hash; skip a silent signer's note](https://github.com/ChadFarrow/boostmebitch/pull/599) — opened 2026-11-18 · checks pending
 - [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2026-11-16
 - [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 2026-11-16 · draft
 - [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 2026-11-16 · draft · merge conflict
