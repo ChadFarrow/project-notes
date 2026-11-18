@@ -17,7 +17,7 @@
   - [ ] Phone: Play a video in Safari, then tap the right half of the TV's dial. Check that the next part plays and that the knob turns. Then try fullscreen. Chrome phone emulation cannot test iOS video or fullscreen. Tell Claude the result.
   - [ ] Phone: Play a Jukebox song, then tap the right half of the TV's dial. Check that the static sound does not turn the song down. Chrome cannot test iOS audio. Tell Claude the result.
 - [ ] In development: #11 on your fork makes the TRM page take over the site. The Scoop header, ticker, footer and Jukebox bar go, a sign hangs above the TV, and a "◀ Scoop" tag leads back. It is an option next to #6. The Mac mini preview serves it all the time on port 8011; ask Claude for the link. Decide if you keep it, then tell Claude.
-  - [ ] Phone: On the iPhone in Safari, scroll the TRM page up and down. Check that the "◀ Scoop" tag stays clear of the notch and of Safari's bar. Chrome emulation cannot show Safari's moving bar.
+  - [ ] Phone: On the iPhone in Safari, scroll the TRM page down, then up. Check that the "◀ Scoop" tag hides, then comes back clear of the notch and of Safari's bar. Chrome emulation cannot show Safari's moving bar or the iPhone's bounce.
   - [ ] Phone: On the iPhone, turn the phone sideways. Check that the tag and the TV stay clear of the notch and the home indicator. Chrome emulation cannot show the real safe areas.
   - [ ] Phone: On the iPhone, open the TRM icon from the home screen. Check that the "◀ Scoop" tag is not under the status bar. Chrome cannot test iOS home-screen apps.
   - [ ] Phone: On the Android phone in Chrome, turn the dial to a new channel. Check that the colour of Chrome's top bar changes with the room. Chrome emulation has no top bar.
