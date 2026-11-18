@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-18 11:52 UTC
+# Dashboard — 2026-11-18 12:23 UTC
 
 27 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -190,23 +190,23 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
-#### [small-group-scoop](projects/small-group-scoop.md)
-
-6 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
-
-- PR [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 3 minutes ago
-- PR [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 23 minutes ago
-- PR [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2 hours ago
-- PR [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2 hours ago
-- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 17 days ago · merge conflict
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
-- Opened elsewhere: [vibe-kit #16 guard-push: agents never submit PRs to Spencer's small-group-scoop; fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 1 hour ago
-
 #### [vibe-kit](projects/vibe-kit.md)
 
 1 PR
 
-- PR [#16 guard-push: agents never submit PRs to Spencer's small-group-scoop; fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — opened 1 hour ago · for [small-group-scoop](projects/small-group-scoop.md)
+- PR [#16 guard-push: protect Spencer's small-group-scoop (no agent PRs, merges, approvals or pushes); fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — opened 1 hour ago · for [small-group-scoop](projects/small-group-scoop.md)
+
+#### [small-group-scoop](projects/small-group-scoop.md)
+
+6 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
+
+- PR [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 35 minutes ago
+- PR [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 54 minutes ago
+- PR [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2 hours ago
+- PR [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2 hours ago
+- PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 17 days ago · merge conflict
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
+- Opened elsewhere: [vibe-kit #16 guard-push: protect Spencer's small-group-scoop (no agent PRs, merges, approvals or pushes); fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 1 hour ago
 
 #### [Command-Center](projects/Command-Center.md)
 

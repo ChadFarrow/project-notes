@@ -35,5 +35,5 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 ### Opened elsewhere for this project (1)
 
-- [vibe-kit #16 guard-push: agents never submit PRs to Spencer's small-group-scoop; fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 2026-11-18
+- [vibe-kit #16 guard-push: protect Spencer's small-group-scoop (no agent PRs, merges, approvals or pushes); fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 2026-11-18
 <!-- AUTO:END -->
