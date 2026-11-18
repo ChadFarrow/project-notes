@@ -22,7 +22,5 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-### Pull requests (1)
-
-- [#16 guard-push: protect Spencer's small-group-scoop (no agent PRs, merges, approvals or pushes); fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — opened 2026-11-18 · for [small-group-scoop](small-group-scoop.md)
+_No open work._
 <!-- AUTO:END -->

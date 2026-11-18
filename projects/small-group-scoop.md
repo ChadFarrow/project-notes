@@ -32,8 +32,4 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 - [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2026-11-18
 - [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
 - [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31 · merge conflict
-
-### Opened elsewhere for this project (1)
-
-- [vibe-kit #16 guard-push: protect Spencer's small-group-scoop (no agent PRs, merges, approvals or pushes); fork workflow and test phones in global.md](https://github.com/ChadFarrow/vibe-kit/pull/16) — PR · opened 2026-11-18
 <!-- AUTO:END -->
