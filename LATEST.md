@@ -1,14 +1,14 @@
-# Dashboard — 2026-11-18 09:18 UTC
+# Dashboard — 2026-11-18 09:48 UTC
 
-22 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+24 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (1)
+### Ready to merge — idle 7+ days (0)
 
-- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 17 days · no checks
+_None._
 
 ### Open issues (19)
 
@@ -116,7 +116,7 @@
 
 2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 9 hours ago
+- PR [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 10 hours ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2 months ago · draft
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -192,16 +192,18 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
-2 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 4 PRs, 6 issues · 3 opened by you)
+4 PRs · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
 
-- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
+- PR [#6 Thunder Road Media watch page: a CRT TV with seven channels](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2 minutes ago
+- PR [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2 minutes ago
 - PR [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 17 days ago
+- PR [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 13 days ago · merge conflict
 
 #### [Command-Center](projects/Command-Center.md)
 
 1 PR
 
-- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 12 hours ago · draft
+- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 13 hours ago · draft
 
 ### Quiet — no open work
 
