@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-18 00:12 UTC
+# Dashboard — 2026-11-18 01:55 UTC
 
 22 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (1)
 
-- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 16 days · no checks
+- **small-group-scoop** [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — idle 17 days · no checks
 
 ### Open issues (19)
 
@@ -35,11 +35,11 @@
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 1 day ago
+- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 2 days ago
 - [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 4 days ago · 1 comment
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 5 days ago · 1 comment
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 9 days ago
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 46 days ago
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 10 days ago
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 47 days ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
@@ -95,12 +95,12 @@
 
 11 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 2 issues)
 
-- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 1 day ago · draft
+- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2 days ago · draft
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 4 days ago · draft
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 5 days ago · draft
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2 days ago · draft
-- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 4 days ago · draft
+- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 5 days ago · draft
 - PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 1 day ago
 - PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 1 day ago · draft
 - PR [#580 Search: DEMU type for self-hosted music](https://github.com/ChadFarrow/boostmebitch/pull/580) — opened 1 day ago · draft · merge conflict
@@ -116,7 +116,7 @@
 
 2 PRs · 2 issues · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
-- PR [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 42 minutes ago
+- PR [#315 NIP-46: a request that comes too soon waits for its slot, not throws](https://github.com/ChadFarrow/stablekraft-app/pull/315) — opened 2 hours ago
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 59 days ago · draft
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
@@ -194,7 +194,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR
 
-- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 3 hours ago · draft
+- PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 5 hours ago · draft
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 

@@ -71,7 +71,7 @@
 - [podroll-atlas](https://github.com/albertobeta/podroll-atlas) - The Podroll ecosystem: who recommends whom in podcasting, mapped in your browser from the podcast:podroll recommendation tag. Static web app, no backend, no tracking.
 - [localbitcoiners](https://github.com/ReedBTC/localbitcoiners) - Local Bitcoiners Website
 - [clave](https://github.com/DocNR/clave) - Push-based iOS NIP-46 Nostr remote signer. Wakes a Notification Service Extension via APNs to sign events in the background.
-- [zapstore](https://github.com/zapstore/zapstore) - The open app store
+- [zapstore](https://github.com/zapstore/zapstore) - The private app store
 - [start-technologies](https://github.com/Start9Labs/start-technologies) - Monorepo for StartOS, StartWRT, StartTunnel, start-sdk, start-docs, start-cli, start-registry, patch-db, and various shared libraries
 - [etcher](https://github.com/balena-io/etcher) - Flash OS images to SD cards & USB drives, safely and easily.
 - [stophammer](https://github.com/InTheMorning/stophammer) - V4V music feed index — index and community node (Rust + SQLite, signed event log)
@@ -115,4 +115,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-18 00:12 UTC*
+*Last synced: 2026-11-18 01:55 UTC*
