@@ -26,8 +26,8 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 ### Pull requests (4)
 
-- [#6 Thunder Road Media watch page: a CRT TV with seven channels](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
+- [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
 - [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2026-11-18
 - [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
-- [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31
+- [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31 · merge conflict
 <!-- AUTO:END -->
