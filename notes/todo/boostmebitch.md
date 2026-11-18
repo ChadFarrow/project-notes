@@ -26,7 +26,7 @@
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
   - [ ] Computer: when you have the Lightning address for the stamps only, put it in `SITE_STAMP_LNADDRESS` on both Vercel projects (Production and Preview), then redeploy both. It is your main Alby address for now (2026-11-17). The new address must have the LUD-21 `verify` link on its own domain
 
-- [ ] Before merge: #599 a slow split no longer holds the boost, a ? split is checked with your wallet and has RETRY, and STOP WAITING skips a silent signer's note. #599 is not on beta: test on the Vercel preview of the PR
+- [ ] After merge: #599 a slow split no longer holds the boost, a ? split is checked with your wallet and has RETRY, and STOP WAITING skips a silent signer's note. It is live on both production sites (merged 2026-11-18)
   - [ ] Computer: with your Alby Hub NWC connection, the next time a split shows ?, read the line under it. It says what your wallet answered: ✓ when paid, RETRY when failed, or "Look in your wallet's history". The browser test used a stub wallet, so it is not known if Alby Hub finds a keysend by the app's payment hash
   - [ ] Phone: on the iPhone Home Screen app with NWC, send a boost and go to another app at once. Come back after one minute. The panel is still open, the other splits are paid, and each ? split is checked. iOS was not tested
   - [ ] Phone: with Clave or Amber, send a boost and do not approve the note. After 10 s STOP WAITING shows. Press it, then RETRY NOTE, and approve. One note posts. The browser test used a stand-in signer
