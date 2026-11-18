@@ -24,8 +24,10 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
 - **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
 
-### Pull requests (6)
+### Pull requests (8)
 
+- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18
+- [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2026-11-18
 - [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 2026-11-18
 - [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 2026-11-18
 - [#6 Thunder Road Media watch page: a CRT TV whose dial surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
