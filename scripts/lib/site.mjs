@@ -267,6 +267,24 @@ export function parseTodoFiles(files, { owner, repos = [] } = {}) {
       .map((s) => ({ ...s, entries: s.entries.map((e) => ({ ...e, file: path })) })));
 }
 
+// The to-do sections the page may show, and the files that hold lines of a private repo.
+// This repo is public, so those lines belong in a git-ignored note (CLAUDE.md, "Private To
+// do notes"); a line that still gets here is left out, and its file becomes a note problem.
+// A degraded run does not know the private repos: there the .gitignore is the only guard.
+export function publicTodo(todoFiles, model) {
+  const secret = new Set(model.projects.filter((p) => p.isPrivate).map((p) => `${model.owner}/${p.name}`));
+  const privateFiles = new Set();
+  const keep = (entry) => {
+    if (!secret.has(entry.repo)) return true;
+    privateFiles.add(entry.file);
+    return false;
+  };
+  const sections = parseTodoFiles(todoFiles, { owner: model.owner, repos: model.projects.map((p) => p.name) })
+    .map((s) => ({ ...s, entries: s.entries.filter(keep) }))
+    .filter((s) => s.entries.length);
+  return { sections, privateFiles: [...privateFiles].sort() };
+}
+
 const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
 
 // What INDEX.md shows for every repo, tracked or not.
@@ -315,7 +333,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     generatedAtIso,
     degradedReason: degradedReason || null,
     thresholds: { idleDays: IDLE_DAYS, staleDays: STALE_DAYS },
-    todo: parseTodoFiles(todoFiles, { owner: model.owner, repos: model.projects.map((p) => p.name) }),
+    todo: publicTodo(todoFiles, model).sections,
     totals: {
       prs: sum((p) => p.prsTotal),
       issues: sum((p) => p.issuesTotal),

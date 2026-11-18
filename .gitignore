@@ -3,6 +3,27 @@ _site/
 
 # The To do notes of private repos. This repo is public, so these notes never go to
 # GitHub: they live in this checkout and the Obsidian vault only (CLAUDE.md, "Private
-# To do notes"). Never `git add -f` them.
+# To do notes"). Never `git add -f` them. List every private ChadFarrow repo here, two
+# lines each (its note, and a second note "<repo> <anything>.md"), even before it has a
+# note. A repo that turns private: add it here, then `git rm --cached` its notes.
+# The dashboard names any tracked note of a private repo under "Note problems".
+notes/todo/blup.md
+notes/todo/blup *.md
+notes/todo/candr.space.md
+notes/todo/candr.space *.md
+notes/todo/Command-Center.md
+notes/todo/Command-Center *.md
+notes/todo/Helipad-to-Nostr-BoostBot.md
+notes/todo/Helipad-to-Nostr-BoostBot *.md
+notes/todo/obsidian-candr.md
+notes/todo/obsidian-candr *.md
+notes/todo/pc20-clips.md
+notes/todo/pc20-clips *.md
+notes/todo/pc20-timeline.md
+notes/todo/pc20-timeline *.md
 notes/todo/small-group-scoop.md
 notes/todo/small-group-scoop *.md
+notes/todo/thelounge-candr.md
+notes/todo/thelounge-candr *.md
+notes/todo/vibe-kit.md
+notes/todo/vibe-kit *.md

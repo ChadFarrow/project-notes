@@ -6,7 +6,7 @@ import {
   activeProjects, branchUrl, buildModel, groupByCategory, hasWork, IDLE_DAYS, issueGroups, STALE_DAYS,
 } from './model.mjs';
 import { parseHeader, spliceAutoBlock, stubNote } from './notes.mjs';
-import { renderSiteData } from './site.mjs';
+import { publicTodo, renderSiteData } from './site.mjs';
 
 const MD_SPECIAL = /[\\[\]<>*_`]/g;
 
@@ -324,6 +324,11 @@ export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degr
       const stub = stubNote({ name: p.name, description: escapeMd(p.description) });
       files.set(`projects/${p.name}.md`, spliceAutoBlock(stub, block).text);
     }
+  }
+
+  for (const file of publicTodo(todoFiles, model).privateFiles) {
+    problems.push(`\`${file}\` holds To do lines of a private repo, and this repo is public. The web page leaves them out. `
+      + 'Move them to that repo\'s git-ignored note in `notes/todo/` (CLAUDE.md, *Private To do notes*).');
   }
 
   const generatedAt = `${now.toISOString().slice(0, 10)} ${now.toISOString().slice(11, 16)} UTC`;

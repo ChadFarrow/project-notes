@@ -1,1 +1,0 @@
-- [ ] In development: End of the IRCCloud trial: The Lounge takes `ChadF` with NickServ, channel order, cancel IRCCloud. The after-show DMs (#84) go to `ChadF33,ChadF,Reed` now; when `ChadF33` is gone, Claude removes it from `NOTIFY_NICKS` in `/opt/bots/env/cbb.env` and recreates candr-boost.

@@ -365,6 +365,30 @@ test('site data carries the to-do list', () => {
   assert.deepEqual(entry.refs, [{ repo: 'ChadFarrow/app-one', number: 8 }]);
 });
 
+test('to-do lines of a private repo never reach the page, and their file is a note problem', () => {
+  const todoFiles = [
+    ...TODO_FILES.map((f) => (f.path === 'notes/TODO.md' ? { ...f, text: `${f.text}\n## secret-repo\n\n- [ ] Before merge: private words A\n` } : f)),
+    { path: 'notes/todo/secret-repo.md', text: '# Port 8010\n\n- [ ] Phone: private words B\n- plain private words C\n' },
+    { path: 'notes/todo/Secret-Repo - phone.md', text: '- [ ] private words D\n' },
+  ];
+  const out = buildOutputs({
+    owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], notes: NOTES,
+    auditFiles: [], degradedReason: null, watched: WATCHED, todoFiles,
+  });
+  assert.ok(!out.siteData.includes('private words'), 'private text in data.json');
+  assert.ok(!out.siteData.includes('Port 8010'), 'a private heading in data.json');
+  const data = JSON.parse(out.siteData);
+  assert.ok(data.todo.flatMap((s) => s.entries).every((e) => e.repo !== 'ChadFarrow/secret-repo'));
+  // The public lines are all still there.
+  assert.deepEqual(data.todo, parseTodoFiles(TODO_FILES, { owner: 'ChadFarrow', repos: data.repos }));
+  const named = out.problems.filter((p) => p.includes('private repo'));
+  assert.deepEqual(named.map((p) => p.match(/^`([^`]+)`/)[1]),
+    ['notes/TODO.md', 'notes/todo/Secret-Repo - phone.md', 'notes/todo/secret-repo.md']);
+  const latest = out.files.get('LATEST.md');
+  assert.ok(latest.includes('notes/todo/secret-repo.md'));
+  assert.ok(!latest.includes('private words'));
+});
+
 test('the to-do list stays out of the generated markdown', () => {
   const { files } = run();
   const markdown = [...files.values()].join('\n');
