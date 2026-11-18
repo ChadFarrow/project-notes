@@ -5,5 +5,5 @@
 - [ ] In development: SpencerPearson/small-group-scoop#25 waits for Spencer. When he decides what to do with it, tell Claude.
 - [ ] In development: Computer: On the Mac mini, read the scope that Claude wrote on 2026-11-17 for two todos of Scoop: `~/Vibe/agent-dispatcher/notes/scoop-scope-2026-11-17.md`. It has draft claim comments and questions for Spencer. Pick the todo to take first, and approve its claim comment. Then tell the dispatcher.
 - [ ] In development: ChadFarrow/small-group-scoop#5 and ChadFarrow/small-group-scoop#6 are on your fork for testing and building. They do not wait for Spencer. The second PR is stacked on the first. To test them on your iPhone, ask Claude to run the page on the Mac mini first. When you want them sent to Spencer, tell Claude.
-  - [ ] Phone: Play a video in Safari, switch channel, and try fullscreen. Chrome phone emulation cannot test iOS video or fullscreen. Tell Claude the result.
-  - [ ] Phone: Play a Jukebox song, then switch channel. Check that the static sound does not turn the song down. Chrome cannot test iOS audio. Tell Claude the result.
+  - [ ] Phone: Play a video in Safari, then tap the right half of the TV's dial. Check that the next part plays and that the knob turns. Then try fullscreen. Chrome phone emulation cannot test iOS video or fullscreen. Tell Claude the result.
+  - [ ] Phone: Play a Jukebox song, then tap the right half of the TV's dial. Check that the static sound does not turn the song down. Chrome cannot test iOS audio. Tell Claude the result.
