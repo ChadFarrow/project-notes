@@ -22,8 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 2026-11-19
-- [#28 Private repos: counts only on the dashboard, the notes and the page](https://github.com/ChadFarrow/project-notes/pull/28) — opened 2026-11-19
+- [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 2026-11-19 · merge conflict
 <!-- AUTO:END -->

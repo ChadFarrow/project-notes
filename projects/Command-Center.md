@@ -21,9 +21,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · Python · private
+- **Open work:** [2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft)
 
-### Pull requests (2)
-
-- [#49 Mic mute: cut your mic in Audio Hijack, keep the board in Riverside](https://github.com/ChadFarrow/Command-Center/pull/49) — opened 2026-11-19
-- [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 2026-11-17 · draft
+_A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->

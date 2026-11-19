@@ -22,7 +22,5 @@ Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, stat
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · JavaScript · private
 
-### Pull requests (1)
-
-- [#23 workspace: rule 15, roadmaps in project-notes](https://github.com/ChadFarrow/vibe-kit/pull/23) — opened 2026-11-19
+_No open work._
 <!-- AUTO:END -->

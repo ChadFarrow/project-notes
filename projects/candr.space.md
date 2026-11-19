@@ -23,9 +23,7 @@ Website for the Chad and Reeds Podcast at [candr.space](https://candr.space). On
 ## Live status
 
 - **Repo:** [ChadFarrow/candr.space](https://github.com/ChadFarrow/candr.space) · JavaScript · private
+- **Open work:** [2 branches with no PR](https://github.com/ChadFarrow/candr.space/branches)
 
-### Branches with no open PR (2)
-
-- [`chapterize-tool`](https://github.com/ChadFarrow/candr.space/tree/chapterize-tool)
-- [`todo-data`](https://github.com/ChadFarrow/candr.space/tree/todo-data)
+_A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
