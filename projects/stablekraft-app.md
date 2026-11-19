@@ -28,10 +28,9 @@ Stablekraft application
 
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 
-### Issues (2)
+### Issues (1)
 
 - [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 2026-11-16 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
-- [#286 Follow-up from #272: nightly reparse mostly fails, Feed seq scans, and other non-egress leads](https://github.com/ChadFarrow/stablekraft-app/issues/286) — opened 2026-10-18
 
 ### Branches with no open PR (2)
 

@@ -21,7 +21,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · private
-- **Open work:** [2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches)
+- **Open work:** [3 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft)
 
 _A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
