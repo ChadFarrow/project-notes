@@ -35,8 +35,13 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (15)
+### Pull requests (20)
 
+- [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2026-11-19
+- [#621 docs(claude): trim favorites, reads and UI conventions, and set the budget to 12,400 (4/4, merge last)](https://github.com/ChadFarrow/boostmebitch/pull/621) — opened 2026-11-19
+- [#620 docs(claude): trim security, money-rail, signer and publishing rules (3/4)](https://github.com/ChadFarrow/boostmebitch/pull/620) — opened 2026-11-19
+- [#619 docs(claude): trim boost, streaming and boundary rules, move the reasoning to docs (2/4)](https://github.com/ChadFarrow/boostmebitch/pull/619) — opened 2026-11-19
+- [#618 docs(claude): fix three drifts, keep them fixed, trim the Commands section (1/4)](https://github.com/ChadFarrow/boostmebitch/pull/618) — opened 2026-11-19
 - [#617 fix(history): desktop back — origin links step back, modals are entries, tabs leave Alt+←/⌘← alone](https://github.com/ChadFarrow/boostmebitch/pull/617) — opened 2026-11-19
 - [#616 fix(nwc): keep wallet state with the wallet it belongs to](https://github.com/ChadFarrow/boostmebitch/pull/616) — opened 2026-11-19
 - [#615 fix(spark): ask before overwriting the wallet backup when the read could not tell](https://github.com/ChadFarrow/boostmebitch/pull/615) — opened 2026-11-19
