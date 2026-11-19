@@ -22,11 +22,11 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 ## Live status
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
-- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 2 PRs, 6 issues · 3 opened by you)
+- **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
 
 ### Pull requests (10)
 
-- [#12 Boosts: 100-sat minimum, every payee gets at least 1 sat](https://github.com/ChadFarrow/small-group-scoop/pull/12) — opened 2026-11-18
+- [#12 Boosts: 100-sat minimum, 1-sat floor; streaming: 10 sats/min minimum, paid in 10-minute batches](https://github.com/ChadFarrow/small-group-scoop/pull/12) — opened 2026-11-18
 - [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2026-11-18
 - [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18 · merge conflict
 - [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2026-11-18
