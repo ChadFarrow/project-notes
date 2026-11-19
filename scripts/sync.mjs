@@ -49,6 +49,10 @@ const todoPaths = [
 const privateTodo = gitIgnored(root, todoPaths);
 const todoFiles = todoPaths.filter((rel) => !privateTodo.has(rel))
   .map((rel) => ({ path: rel, text: readFileSync(path.join(root, rel), 'utf8') }));
+// The roadmaps that git does not ignore. Only their names are read: a private repo's must be ignored.
+const roadmapPaths = listMd(path.join(root, 'roadmaps')).map((name) => `roadmaps/${name}`);
+const ignoredRoadmaps = gitIgnored(root, roadmapPaths);
+const roadmapFiles = roadmapPaths.filter((rel) => !ignoredRoadmaps.has(rel)).sort();
 
 // Fetch everything before writing anything: a failed fetch must leave the repo untouched.
 const repos = normalizeRepos(await fetchRepos(token, OWNER));
@@ -71,6 +75,7 @@ const { files, problems, siteData } = buildOutputs({
   watched,
   todoFiles,
   listedPrivate,
+  roadmapFiles,
 });
 
 let changed = 0;

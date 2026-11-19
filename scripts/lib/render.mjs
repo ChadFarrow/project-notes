@@ -361,8 +361,9 @@ export function renderAuditsReadme(files) {
 // watched: the `normalizeWatched` map for the notes' `**Watch:**` entries.
 // todoFiles: [{ path, text }] of notes/TODO.md and notes/todo/*.md. Only the web page shows it; no markdown file here repeats it.
 // listedPrivate: the repos whose To do note the .gitignore lists; they show counts only, as a private repo does.
+// roadmapFiles: the paths of the roadmaps/ notes that git does not ignore. No output shows them.
 export function buildOutputs({
-  owner, now, repos, stars, notes, auditFiles, degradedReason, watched, todoFiles, listedPrivate,
+  owner, now, repos, stars, notes, auditFiles, degradedReason, watched, todoFiles, listedPrivate, roadmapFiles = [],
 }) {
   const parsed = notes.map((n) => ({ ...n, header: parseHeader(n.text) }));
   const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason), watched, listedPrivate });
@@ -384,6 +385,15 @@ export function buildOutputs({
   for (const file of publicTodo(todoFiles, model).privateFiles) {
     problems.push(`\`${file}\` holds To do lines of a private repo, and this repo is public. The web page leaves them out. `
       + 'Move them to that repo\'s git-ignored note in `notes/todo/` (CLAUDE.md, *Private To do notes*).');
+  }
+
+  // The roadmap of a private repo must be git-ignored, as its To do note is (CLAUDE.md, *Roadmaps*).
+  // A tracked one is named by its file, never by its text. The repo is the name before the first space.
+  const secret = new Set(model.projects.filter((p) => p.countsOnly).map((p) => p.name.toLowerCase()));
+  for (const file of roadmapFiles) {
+    if (!secret.has(file.replace(/^roadmaps\//, '').replace(/\.md$/, '').split(' ')[0].toLowerCase())) continue;
+    problems.push(`\`${file}\` is the roadmap of a private repo, and this repo is public. `
+      + 'Add the repo to the roadmap lines of `.gitignore`, and `git rm --cached` the note (CLAUDE.md, *Roadmaps*).');
   }
 
   const generatedAt = `${now.toISOString().slice(0, 10)} ${now.toISOString().slice(11, 16)} UTC`;

@@ -246,6 +246,19 @@ test('no generated file and no site data carries a title, branch name or item li
   assert.match(files.get('projects/secret-repo.md'), /\[3 PRs\]\(https:\/\/github\.com\/ChadFarrow\/secret-repo\/pulls\)/);
 });
 
+test('a roadmap that git tracks for a private repo is a note problem, named by its file only', () => {
+  const { problems, files } = buildOutputs({
+    owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], auditFiles: [], degradedReason: null,
+    notes: Object.entries(NOTE_TEXTS).map(([file, text]) => ({ file, text })), listedPrivate: new Set(['svc-core']),
+    roadmapFiles: ['roadmaps/app-one.md', 'roadmaps/Secret-Repo plan.md', 'roadmaps/secret-repo.md', 'roadmaps/svc-core.md', 'roadmaps/nope.md'],
+  });
+  const named = problems.filter((p) => p.includes('roadmap of a private repo'));
+  assert.deepEqual(named.map((p) => p.match(/^`([^`]+)`/)[1]),
+    ['roadmaps/Secret-Repo plan.md', 'roadmaps/secret-repo.md', 'roadmaps/svc-core.md']);
+  assert.match(files.get('LATEST.md'), /## Note problems[\s\S]*`roadmaps\/secret-repo\.md` is the roadmap of a private repo/);
+  assert.equal(outputs().problems.filter((p) => p.includes('roadmap')).length, 0, 'no roadmap files, no problem');
+});
+
 test('a repo the .gitignore lists gets counts only in every output', () => {
   const { files, siteData } = buildOutputs({
     owner: 'ChadFarrow', now: NOW, repos: normalizeRepos(pages), stars: [], auditFiles: [], degradedReason: null,
