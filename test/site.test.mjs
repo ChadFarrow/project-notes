@@ -103,6 +103,14 @@ test('site data leaves out update times, which no markdown file publishes', () =
   assert.doesNotMatch(siteData, /updatedAt|lastActivity/);
 });
 
+test('site data carries no description and no language of a private repo', () => {
+  const { data, siteData } = run();
+  assert.equal(project(data, 'secret-repo').description, '');
+  assert.equal(project(data, 'secret-repo').language, null);
+  assert.doesNotMatch(siteData, /Private work|Rust/);
+  assert.equal(project(data, 'app-one').description, 'The main app');
+});
+
 test('site data points to the note file, including a stub made in the same run', () => {
   const { data } = run();
   assert.equal(project(data, 'app-one').noteFile, 'app-one.md');
