@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-19 16:55 UTC
+# Dashboard — 2026-11-19 17:03 UTC
 
 31 open PRs · 19 open issues · 21 branches with no PR · 41 tracked repos (14 not tracked)
 
@@ -95,9 +95,9 @@ _None._
 
 11 PRs · 6 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
 
-- PR [#606 feat(search): a glyph on every search type, and the words line up](https://github.com/ChadFarrow/boostmebitch/pull/606) — opened 1 hour ago · merge conflict
+- PR [#606 feat(search): a glyph on every search type, and the words line up](https://github.com/ChadFarrow/boostmebitch/pull/606) — opened 1 hour ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 6 days ago · draft
-- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 43 minutes ago · draft
+- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 52 minutes ago · draft
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 4 days ago · draft · merge conflict
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 4 days ago · draft
@@ -173,7 +173,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR
 
-- PR [#28 Private repos: counts only on the dashboard, the notes and the page](https://github.com/ChadFarrow/project-notes/pull/28) — opened 1 minute ago
+- PR [#28 Private repos: counts only on the dashboard, the notes and the page](https://github.com/ChadFarrow/project-notes/pull/28) — opened 10 minutes ago
 
 ### Websites
 

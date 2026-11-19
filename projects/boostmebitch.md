@@ -38,7 +38,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ### Pull requests (11)
 
 - [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 2026-11-19 · draft
-- [#606 feat(search): a glyph on every search type, and the words line up](https://github.com/ChadFarrow/boostmebitch/pull/606) — opened 2026-11-19 · merge conflict
+- [#606 feat(search): a glyph on every search type, and the words line up](https://github.com/ChadFarrow/boostmebitch/pull/606) — opened 2026-11-19
 - [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 2026-11-16 · merge conflict
 - [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 2026-11-16 · merge conflict
 - [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16 · draft
