@@ -22,7 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-### Branches with no open PR (1)
+### Pull requests (1)
 
-- [`private-counts-only`](https://github.com/ChadFarrow/project-notes/tree/private-counts-only)
+- [#28 Private repos: counts only on the dashboard, the notes and the page](https://github.com/ChadFarrow/project-notes/pull/28) — opened 2026-11-19
 <!-- AUTO:END -->
