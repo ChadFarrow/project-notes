@@ -8,7 +8,7 @@
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
 ## Description
-Shared ~/Vibe workspace setup for the Mac mini and the Linux laptop: hooks, status line, tools
+<!-- Add a description -->
 
 ## Notes
 <!-- Add your notes here -->

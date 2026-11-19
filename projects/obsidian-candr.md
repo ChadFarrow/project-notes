@@ -8,7 +8,7 @@
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
 ## Description
-Obsidian vault: candr
+<!-- Add a description -->
 
 ## Notes
 <!-- Add your notes here -->

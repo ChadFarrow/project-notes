@@ -8,7 +8,7 @@
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
 ## Description
-Local web app: phone screenshots + checklist marks → cut Podcasting 2.0 audio clips
+<!-- Add a description -->
 
 ## Notes
 <!-- Add your notes here -->

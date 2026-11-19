@@ -8,7 +8,7 @@
 <!-- The sync reads: Category (grouping), Uses (comma-separated repo names), Track (yes | no | upstream). -->
 
 ## Description
-Self-hosted The Lounge IRC instances for candr.space (ZeroNode #candr) - Docker + Caddy on Linode. irc.candr.space is the private bouncer (Chad, Reed); chat.candr.space is the public webchat. The same box runs the IRC→Nostr bots (LIT_Bot, BoostAfterBoost, LibreRelayBot) and candr-boost (Helipad boosts → IRC and Nostr) behind ZNC.
+irc.candr.space is the private bouncer (Chad, Reed); chat.candr.space is the public webchat. The same box runs the IRC→Nostr bots (LIT_Bot, BoostAfterBoost, LibreRelayBot) and candr-boost (Helipad boosts → IRC and Nostr) behind ZNC.
 
 ## Notes
 - Since 2026-10-25 the private Lounge runs our own build, `ghcr.io/chadfarrow/thelounge-candr` (now `4.5.2-candr.4`): The Lounge 4.5.2 plus patches, built by GitHub Actions. The public webchat stays on the official 4.5.2.
