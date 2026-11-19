@@ -10,6 +10,10 @@
 - [ ] After merge: #584 the boost screen stays on its track when the track changes. It is live on both production sites (merged 2026-11-19 with no test by you)
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
+- [ ] After merge: #609 the emu in the /demu title wears a holiday costume: feathers and a pilgrim hat in Thanksgiving week (23–29 Nov 2026), a Santa hat 1–26 Dec. It is live on both production sites (merged 2026-11-19)
+  - [ ] Phone: on the iPhone Home Screen app, open /demu?holiday=thanksgiving, then /demu?holiday=christmas. The emu wears its costume, its eye stays open, and the word DeMu does not move. Chrome and the Mac's WebKit were tested; iOS Safari was not
+  - [ ] Computer: on Mon 23 Nov, open /demu with no ?holiday=. The emu wears the feathers and the pilgrim hat. A faked clock tested this; the real date was not
+
 - [ ] Before merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It is on beta
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
   - [ ] Computer: decide the app name in a note for a playlist song. On beta the note says "via BoostMeBuddy", because the playlist feeds are on boostmebuddy.com, while the payment says BoostMeBitch. Tell Claude: keep it, or name BoostMeBitch as the payment does
