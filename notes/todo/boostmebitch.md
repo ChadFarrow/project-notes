@@ -11,7 +11,6 @@
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
 - [ ] Before merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It is on beta
-  - [ ] Phone: on beta, boost a song of a community playlist with "My feed". The note reads "… boosted N sats to <song> by <artist> from <playlist> via BoostMeBuddy", then "🎧 Heard on <playlist> by <maker>" and the playlist link. It says BoostMeBuddy because beta's playlists are on the Buddy feed origin (decision 17), while the payment still says BoostMeBitch
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
   - [ ] Computer: decide the app name in a note for a playlist song. On beta the note says "via BoostMeBuddy", because the playlist feeds are on boostmebuddy.com, while the payment says BoostMeBitch. Tell Claude: keep it, or name BoostMeBitch as the payment does
   - [ ] Phone: decide if the "Heard on" line stays. The sentence names the playlist too now, so the line says it twice. The line also gives the maker and the link
@@ -40,6 +39,7 @@
 
 ## Already works
 
+- #540 on beta (2026-11-19, phone, "My feed"): the note reads "… boosted 100 sats to Dusty Old Man by $2 Holla from Test playlist from my phone. via BoostMeBuddy", then "🎧 Heard on … by" the maker and the playlist link; its links name the song's own album. It quotes a summary receipt that Buddy's site key signed from your signed request: 99 of 100 sats settled (the 1-sat leg to ThunderRoad's node did not; StevenB 4 and Malachi 95 did)
 - Beta rebuilt with 6 branches, without `beta-demu-page` (2026-11-19, beta feca7d8; the branch is deleted, its commits are in #580 and #583). #538 (main through #604) is merged into #572 and #540, #572 into #574, #574 into #576, and #540 moves three lines so it merges with #576. Checks and builds pass on each branch: `e2e:deadtrack` 63/63 on #572, `e2e:boostnote` 47/47 and `e2e:communitynote` 88/88 and 39/39 on #540
 - #604 merged 2026-11-19 (7c5fa78): the copy job, run by hand, put both playlists and `index.json` on the branch `playlists` (9c81301). The copies are the same bytes as the live feeds, and Vercel made no deployment for that branch
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
