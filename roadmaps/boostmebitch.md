@@ -59,6 +59,7 @@ Questions for a design session with Chad.
 - Add songs rows with no art: fall back to the album art? The code is on the locked playlist branches. Answer `fav-art: fix` or `fav-art: wait`
 - iOS background play: the music does not continue after an interruption (a call, dictation) until BMB is in front again, and only a native wrapper fixes that fully. Make an iOS app, as there is an Android app ([#559](https://github.com/ChadFarrow/boostmebitch/pull/559))?
 - The Libre wallet embed ([#120](https://github.com/ChadFarrow/boostmebitch/pull/120)): keep it as an experiment, plan it, or close it?
+- Holiday logos, every year: a place on the site to design the emu's holiday looks and plan when each one changes (Chad, 2026-11-19: "there should be a part of the site set aside for designing and planning when these logos change, because I do want to have this be yearly"). Today the dates are code in `lib/demu-holiday.ts` ([#609](https://github.com/ChadFarrow/boostmebitch/pull/609), [#610](https://github.com/ChadFarrow/boostmebitch/pull/610)): each look leads up to its holiday and switches the day after. To plan with Chad: what "designing" on the site means, who may change it, and the New Year's look after 26 Dec
 
 ## Done
 
