@@ -53,6 +53,11 @@
   - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
   - [ ] Computer: on beta, open the playlist that goes to Podcast Index first and press SAVE. The `[community-pi]` line in the Vercel log of that request says "added", or "refused: 401" when the key has no write permission. Podcast Index keeps the playlist for good
 
+- [ ] Before merge: #622 each time a playlist goes to Podcast Index (publish, SAVE, delete), the site also sends a podping (medium musicL) through your msp-podping-service. It is on beta since 2026-11-19. Nothing is sent until you add the two values
+  - [ ] Computer: in Vercel, add `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` to the `boostmebitch` Preview environment, branch `beta`: the values `musicL-playlist-updater` uses (the token is the Railway `PODPING_SHARED_SECRET`; mark it sensitive and type it into Vercel yourself). `COMMUNITY_PI_NOTIFY=on` must be set there too. Then redeploy beta
+  - [ ] Computer: on beta, press SAVE on a test playlist. The `[community-podping]` line in the Vercel log of that request says "enqueued" (or "duplicate"). "pusher answered 401" means the token is wrong. Tell Claude what the line says
+  - [ ] Computer: decide about the feed cache. After a SAVE the feed can stay old for about a minute (`s-maxage=60`), so an app that reads the podping at once may get the old feed. Podcast Index has the same limit. Tell Claude: fix it, or leave it
+
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
 ## Already works
