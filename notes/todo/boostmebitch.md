@@ -13,9 +13,12 @@
 - [ ] Before merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It is on beta
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
   - [ ] Computer: decide the app name in a note for a playlist song. On beta the note says "via BoostMeBuddy", because the playlist feeds are on boostmebuddy.com, while the payment says BoostMeBitch. Tell Claude: keep it, or name BoostMeBitch as the payment does
-  - [ ] Phone: decide if the "Heard on" line stays. The sentence names the playlist too now, so the line says it twice. The line also gives the maker and the link
+  - [ ] Phone: decide if the "Heard on" line stays. The sentence names the playlist too now, so the line says it twice. The line also gives the maker. Its playlist link was removed on 2026-11-19
+  - [ ] Phone: on beta, boost one song of a playlist with "My feed". The note shows a blank line before "🎧 Heard on …", no playlist link under it, and no podcastindex.org link (#608 is on beta too). Tell Claude how the note looks in your Nostr app
   - [ ] Computer: decide who signs an Anonymous note for a song on a Buddy playlist. Now Buddy's site takes the stamp and signs the note, and a one-time key posts it when Buddy's site does not answer. Tell Claude: keep it, or let the site you boosted on sign it
   - [ ] Computer: decide if a note may quote a receipt from this site's own server with no check of its key. Now it may; only a receipt from the other brand's site must have that brand's key. Tell Claude: keep it, or check this site's key too (Claude then changes the stamp test, which uses a test key)
+
+- [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
 
 - [ ] After merge: #590 the note stamp in production
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
@@ -42,6 +45,7 @@
 ## Already works
 
 - #540 on beta (2026-11-19, phone, "My feed"): the note reads "… boosted 100 sats to Dusty Old Man by $2 Holla from Test playlist from my phone. via BoostMeBuddy", then "🎧 Heard on … by" the maker and the playlist link; its links name the song's own album. It quotes a summary receipt that Buddy's site key signed from your signed request: 99 of 100 sats settled (the 1-sat leg to ThunderRoad's node did not; StevenB 4 and Malachi 95 did)
+- Beta rebuilt with 7 branches (2026-11-19, beta e623bc7): main (#579, #584, #606) is merged into #538, then carried #572 → #574 → #576; #540's Heard-on line is now one line with no playlist link; #608 is added. Each step passed typecheck, the checks and the build; `e2e:communitynote` 90/90 and 40/40, `e2e:notewording` 44/44
 - Beta rebuilt with 6 branches, without `beta-demu-page` (2026-11-19, beta feca7d8; the branch is deleted, its commits are in #580 and #583). #538 (main through #604) is merged into #572 and #540, #572 into #574, #574 into #576, and #540 moves three lines so it merges with #576. Checks and builds pass on each branch: `e2e:deadtrack` 63/63 on #572, `e2e:boostnote` 47/47 and `e2e:communitynote` 88/88 and 39/39 on #540
 - #604 merged 2026-11-19 (7c5fa78): the copy job, run by hand, put both playlists and `index.json` on the branch `playlists` (9c81301). The copies are the same bytes as the live feeds, and Vercel made no deployment for that branch
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
