@@ -22,5 +22,7 @@
 
 - **Repo:** [ChadFarrow/project-notes](https://github.com/ChadFarrow/project-notes) · JavaScript
 
-_No open work._
+### Branches with no open PR (1)
+
+- [`private-counts-only`](https://github.com/ChadFarrow/project-notes/tree/private-counts-only)
 <!-- AUTO:END -->
