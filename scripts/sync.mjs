@@ -55,6 +55,10 @@ const repos = normalizeRepos(await fetchRepos(token, OWNER));
 const stars = await fetchStars(token, OWNER);
 const watchNames = [...new Map(notes.flatMap((n) => parseHeader(n.text).watch).map((w) => [w.toLowerCase(), w])).values()];
 const watched = watchNames.length ? normalizeWatched(await fetchWatched(token, watchNames, OWNER), watchNames) : new Map();
+// A repo whose To do note the .gitignore lists is private to the dashboard as well: counts
+// only, even if GitHub says public (the list is out of date, or the run is between the two).
+const listedPrivate = new Set([...gitIgnored(root, repos.map((r) => `notes/todo/${r.name}.md`))]
+  .map((rel) => rel.slice('notes/todo/'.length, -'.md'.length)));
 
 const { files, problems, siteData } = buildOutputs({
   owner: OWNER,
@@ -66,6 +70,7 @@ const { files, problems, siteData } = buildOutputs({
   degradedReason,
   watched,
   todoFiles,
+  listedPrivate,
 });
 
 let changed = 0;

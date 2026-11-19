@@ -18,7 +18,7 @@ const NEW_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?na
 // The second token only reads: PR and issue titles of every repo, public and private.
 const NEW_READ_TOKEN_URL = 'https://github.com/settings/personal-access-tokens/new?name=project-notes+titles'
   + '&description=Reads+PR+and+issue+titles+for+notes.podtards.com&target_name=ChadFarrow&expires_in=90&issues=read&pull_requests=read';
-const DATA_VERSION = 1;
+const DATA_VERSION = 2;
 // GitHub drops a scheduled run now and then, so warn only after two missed runs.
 const OLD_DATA_HOURS = 9;
 const MAX_LAMPS = 12;
@@ -99,8 +99,13 @@ function ago(iso) {
 const withCode = (text) => String(text).split('`').map((part, i) => (i % 2 ? h('code', { text: part }) : part));
 const slug = (name) => `p-${name.replace(/[^A-Za-z0-9_-]/g, '-')}`;
 const noteUrl = (p) => `${REPO_URL}/blob/main/projects/${encodeURIComponent(p.noteFile)}`;
+// A private repo (`countsOnly`) has counts only: no PR, issue or branch list, and for each PR
+// only its state (`prStates`), so no title or branch name of it reaches the page.
+const prList = (p) => (p.countsOnly ? p.prStates || [] : p.prs || []);
+const branchCount = (p) => p.orphanBranchesTotal ?? (p.orphanBranches || []).length;
+const COUNTS_ONLY = 'A private repo: this public page shows counts only. The titles are on GitHub.';
 const hasWork = (p) => p.track !== 'no'
-  && (p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+  && (p.prsTotal || p.issuesTotal || branchCount(p) || p.openedElsewhere.length
     || p.watch.some((w) => w.prsTotal || w.issuesTotal));
 // "1 PR and 4 issues", or '' for none. A watched repo has counts only: no title reaches the page.
 const workText = (o) => [o.prsTotal ? plural(o.prsTotal, 'PR') : '', o.issuesTotal ? plural(o.issuesTotal, 'issue') : '']
@@ -131,7 +136,7 @@ function prState(pr) {
   if (pending) badges.push(['wait', 'Checks running']);
   if (pr.isDraft) badges.push(['draft', 'Draft']);
   if (pr.checks === 'SUCCESS') badges.push(['good', 'Checks passing']);
-  if (pr.author !== data.owner) badges.push(['other', `By ${pr.author}`]);
+  if (pr.author && pr.author !== data.owner) badges.push(['other', `By ${pr.author}`]);
   const kinds = [];
   if (conflict) kinds.push('conflict');
   if (failing) kinds.push('failing');
@@ -281,7 +286,7 @@ function matches(p) {
       .join('\n').toLowerCase();
     if (!text.includes(q)) return false;
   }
-  if (view.status !== 'all') return (p.prs || []).some((pr) => prState(pr).kinds.includes(view.status));
+  if (view.status !== 'all') return prList(p).some((pr) => prState(pr).kinds.includes(view.status));
   return true;
 }
 
@@ -509,24 +514,33 @@ function todoSection() {
     h('div', { class: 'todo-filters' }, project, place), todoPanel());
 }
 
+// A private repo's ready PRs are one row: a count (`count`), and the idle days of the newest
+// (`minIdleDays`) and the oldest (`idleDays`).
+const idleText = (r) => (r.count > 1 && r.minIdleDays !== r.idleDays
+  ? `idle ${r.minIdleDays} to ${plural(r.idleDays, 'day')}` : `idle ${plural(r.idleDays, 'day')}`);
+
 function readySection(visible, byName) {
   const rows = data.readyIdle
     .map((r) => {
       const project = byName.get(r.repo);
-      return { ...r, project, pr: project && (project.prs || []).find((x) => x.number === r.number) };
+      return { ...r, project, pr: project && !r.count ? (project.prs || []).find((x) => x.number === r.number) : null };
     })
-    .filter((r) => r.pr && visible.has(r.project))
-    .filter((r) => view.status === 'all' || prState(r.pr).kinds.includes(view.status));
-  const title = h('h3', { text: `Ready to merge, idle ${data.thresholds.idleDays}+ days (${rows.length})` });
+    .filter((r) => (r.pr || r.count) && visible.has(r.project))
+    // Every PR in a count row is ready: not a draft, no conflict, checks passing or none.
+    .filter((r) => view.status === 'all' || (r.pr ? prState(r.pr).kinds : ['ready']).includes(view.status));
+  const total = rows.reduce((n, r) => n + (r.pr ? 1 : r.count), 0);
+  const title = h('h3', { text: `Ready to merge, idle ${data.thresholds.idleDays}+ days (${total})` });
   if (!rows.length) return h('section', {}, title, h('p', { class: 'empty', text: 'None.' }));
   return h('section', {}, title, h('div', { class: 'panel' }, h('ul', { class: 'list' }, rows.map((r) => h('li', { class: 'item' },
     lamp('good', 'ready'),
     h('div', {},
       h('div', { class: 'item-title' }, h('span', { class: 'repo-tag', text: r.repo }), ' ',
-        h('a', { href: r.pr.url }, `#${r.pr.number} ${r.pr.title}`)),
+        r.pr ? h('a', { href: r.pr.url }, `#${r.pr.number} ${r.pr.title}`)
+          : h('a', { href: `${r.project.url}/pulls` }, plural(r.count, 'PR'))),
       h('div', { class: 'item-meta' },
-        h('span', { text: `idle ${plural(r.idleDays, 'day')}` }),
-        badgeList(r.pr.checks === 'SUCCESS' ? [['good', 'Checks passing']] : [['draft', 'No checks']]))))))));
+        h('span', { text: idleText(r) }),
+        badgeList(!r.pr ? [['draft', 'Private repo: counts only']]
+          : r.pr.checks === 'SUCCESS' ? [['good', 'Checks passing']] : [['draft', 'No checks']]))))))));
 }
 
 function issueItem(issue, extra = []) {
@@ -544,8 +558,12 @@ function issuesSection(visible, byName) {
   const groups = data.issues.byProject
     .map((g) => ({ project: byName.get(g.repo), numbers: g.numbers }))
     .filter((g) => g.project && visible.has(g.project));
+  // A private repo's issues: a count, and a link to its list on GitHub.
+  const counted = (data.issues.counted || [])
+    .map((g) => ({ project: byName.get(g.repo), count: g.count }))
+    .filter((g) => g.project && visible.has(g.project));
   const count = shared.reduce((n, g) => n + g.items.length, 0)
-    + groups.reduce((n, g) => n + g.numbers.length, 0);
+    + groups.reduce((n, g) => n + g.numbers.length, 0) + counted.reduce((n, g) => n + g.count, 0);
   const title = h('h3', { text: `Open issues (${count})` });
   if (!count) return h('section', {}, title, h('p', { class: 'empty', text: 'None.' }));
 
@@ -560,6 +578,12 @@ function issuesSection(visible, byName) {
     const issues = g.numbers.map((n) => g.project.issues.find((i) => i.number === n)).filter(Boolean);
     panel.append(h('p', { class: 'group-title', text: g.project.name }), h('ul', { class: 'list' }, issues.map((i) => issueItem(i))));
   }
+  for (const g of counted) {
+    panel.append(h('p', { class: 'group-title', text: g.project.name }), h('ul', { class: 'list' }, h('li', { class: 'item' },
+      h('span', { class: 'dot', 'aria-hidden': 'true' }),
+      h('div', {}, h('div', { class: 'item-title' }, h('a', { href: `${g.project.url}/issues` }, plural(g.count, 'open issue'))),
+        h('div', { class: 'item-meta', text: COUNTS_ONLY })))));
+  }
   return h('section', {}, title, panel);
 }
 
@@ -567,7 +591,7 @@ function countsText(p) {
   const parts = [];
   if (p.prsTotal) parts.push(plural(p.prsTotal, 'PR'));
   if (p.issuesTotal) parts.push(plural(p.issuesTotal, 'issue'));
-  if (p.orphanBranches.length) parts.push(`${plural(p.orphanBranches.length, 'branch', 'branches')} with no PR`);
+  if (branchCount(p)) parts.push(`${plural(branchCount(p), 'branch', 'branches')} with no PR`);
   if (p.openedElsewhere.length) parts.push(`${p.openedElsewhere.length} opened elsewhere`);
   for (const w of p.watch) if (workText(w)) parts.push(`${workText(w)} in ${w.repo}`);
   return parts.join(', ');
@@ -580,12 +604,12 @@ function lampSummary(states) {
 }
 
 function projectRow(p) {
-  const states = p.prs.map((pr) => ({ pr, s: prState(pr) }));
+  const states = prList(p).map((pr) => ({ pr, s: prState(pr) }));
   const isOpen = opened.has(p.name) || filtering();
   const bodyId = slug(p.name);
 
   const lamps = states.length ? h('span', { class: 'lamps', 'aria-hidden': 'true' },
-    states.slice(0, MAX_LAMPS).map(({ pr, s }) => lamp(s.lamp, `#${pr.number}: ${LAMP_WORDS[s.lamp]}`)),
+    states.slice(0, MAX_LAMPS).map(({ pr, s }) => lamp(s.lamp, pr.number ? `#${pr.number}: ${LAMP_WORDS[s.lamp]}` : LAMP_WORDS[s.lamp])),
     states.length > MAX_LAMPS ? h('span', { class: 'more', text: `+${states.length - MAX_LAMPS}` }) : null) : null;
 
   const body = h('div', { class: 'project-body', id: bodyId, hidden: !isOpen }, projectDetails(p, states));
@@ -627,7 +651,20 @@ function projectDetails(p, states) {
   if (facts.length) parts.push(h('p', { class: 'facts' }, facts.map((f, i) => [i ? '. ' : '', f]), '.'));
 
   const items = [];
-  const shown = view.status === 'all' ? states : states.filter(({ s }) => s.kinds.includes(view.status));
+  if (p.countsOnly) {
+    // A private repo: its counts, each a link to its list on GitHub, and the PR states as counts.
+    const links = [];
+    if (p.prsTotal) links.push(h('a', { href: `${p.url}/pulls` }, plural(p.prsTotal, 'PR')));
+    if (p.issuesTotal) links.push(h('a', { href: `${p.url}/issues` }, plural(p.issuesTotal, 'issue')));
+    if (branchCount(p)) links.push(h('a', { href: `${p.url}/branches` }, `${plural(branchCount(p), 'branch', 'branches')} with no PR`));
+    if (links.length) {
+      items.push(h('li', { class: 'item counts-only' }, h('span', { class: 'dot', 'aria-hidden': 'true' }),
+        h('div', {}, h('div', { class: 'item-title' }, links.map((a, i) => [i ? ' · ' : '', a])),
+          h('div', { class: 'item-meta' }, states.length ? h('span', { text: `PRs: ${lampSummary(states)}.` }) : null,
+            h('span', { text: COUNTS_ONLY })))));
+    }
+  }
+  const shown = p.countsOnly ? [] : view.status === 'all' ? states : states.filter(({ s }) => s.kinds.includes(view.status));
   for (const { pr, s } of shown) {
     const meta = [badgeList(s.badges), h('span', { text: `opened ${ago(pr.createdAt)}` })];
     if (pr.for.length) meta.push(h('span', { text: `for ${pr.for.join(', ')}` }));
@@ -637,10 +674,22 @@ function projectDetails(p, states) {
   }
   if (view.status === 'all') {
     for (const issue of p.issues) items.push(issueItem(issue, [h('span', { class: 'badge', text: 'Issue' }), ' ']));
+    const counted = new Map();
     for (const e of p.openedElsewhere) {
+      if (e.countsOnly) {
+        // Opened in a private repo: counted by repo below, with no title.
+        if (!counted.has(e.repo)) counted.set(e.repo, { PR: 0, issue: 0 });
+        counted.get(e.repo)[e.kind]++;
+        continue;
+      }
       items.push(h('li', { class: 'item' }, h('span', { class: 'dot', 'aria-hidden': 'true' }),
         h('div', {}, h('div', { class: 'item-title' }, h('a', { href: e.url }, `${e.repo} #${e.number} ${e.title}`)),
           h('div', { class: 'item-meta' }, h('span', { text: `${e.kind} opened in ${e.repo} for this project, ${ago(e.createdAt)}` })))));
+    }
+    for (const [repo, n] of [...counted].sort(([a], [b]) => a.localeCompare(b))) {
+      items.push(h('li', { class: 'item' }, h('span', { class: 'dot', 'aria-hidden': 'true' }),
+        h('div', {}, h('div', { class: 'item-title', text: `${repo}: ${[n.PR ? plural(n.PR, 'PR') : '', n.issue ? plural(n.issue, 'issue') : ''].filter(Boolean).join(', ')}` }),
+          h('div', { class: 'item-meta', text: `Opened in ${repo} for this project. ${COUNTS_ONLY}` }))));
     }
     for (const b of p.orphanBranches.slice(0, MAX_BRANCHES)) {
       items.push(h('li', { class: 'item' }, h('span', { class: 'dot', 'aria-hidden': 'true' }),

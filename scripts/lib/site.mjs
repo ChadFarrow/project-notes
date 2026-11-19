@@ -1,7 +1,8 @@
 // Pure JSON output for the web dashboard: model → the data.json that site/app.js reads.
 // It carries only what LATEST.md, INDEX.md, the note AUTO blocks and the to-do files
 // (notes/TODO.md and notes/todo/) already publish: the site is public, and some of these repos
-// are private. Item bodies never get here.
+// are private. Item bodies never get here, and neither do the titles and branch names of a
+// private repo: `buildModel` strips them (counts only, see there).
 
 import { createHash } from 'node:crypto';
 import {
@@ -9,7 +10,7 @@ import {
 } from './model.mjs';
 import { TODO_FILE, todoNoteName } from './notes.mjs';
 
-export const SITE_DATA_VERSION = 1;
+export const SITE_DATA_VERSION = 2;
 
 // The files of the published site. `sources`: site/ as name → text. Every __BUILD__ in
 // them becomes one id derived from the code, so a browser never pairs a cached app.js
@@ -292,6 +293,7 @@ const INDEX_FACTS = ['name', 'url', 'description', 'language', 'isFork', 'parent
 const PR_FIELDS = ['number', 'title', 'url', 'isDraft', 'createdAt', 'mergeable', 'checks', 'author', 'for'];
 const ISSUE_FIELDS = ['number', 'title', 'url', 'createdAt', 'author', 'comments', 'for'];
 const ELSEWHERE_FIELDS = ['repo', 'kind', 'number', 'title', 'url', 'createdAt'];
+const COUNTED_FIELDS = ['repo', 'kind', 'countsOnly'];
 const WATCH_FIELDS = ['repo', 'url', 'isPrivate', 'prsTotal', 'issuesTotal', 'issuesMine'];
 
 const noteFileOf = (p) => p.noteFile ?? `${p.name}.md`;
@@ -304,11 +306,14 @@ function projectData(p, model) {
   return {
     ...facts,
     stale: p.stale,
+    // A private project: its lists are empty, and `prStates` holds each PR's state only.
+    ...(p.countsOnly && { countsOnly: true, prStates: p.prStates }),
     prsTotal: p.prsTotal,
     issuesTotal: p.issuesTotal,
+    orphanBranchesTotal: p.orphanBranchesTotal,
     prs: p.prs.map((pr) => pick(pr, PR_FIELDS)),
     issues: p.issues.map((i) => pick(i, ISSUE_FIELDS)),
-    openedElsewhere: p.openedElsewhere.map((e) => pick(e, ELSEWHERE_FIELDS)),
+    openedElsewhere: p.openedElsewhere.map((e) => pick(e, e.countsOnly ? COUNTED_FIELDS : ELSEWHERE_FIELDS)),
     orphanBranches: p.orphanBranches.map((b) => ({ name: b.name, url: branchUrl(p, b.name) })),
     uses: p.uses.map((name) => {
       const used = model.index.get(name);
@@ -337,7 +342,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     totals: {
       prs: sum((p) => p.prsTotal),
       issues: sum((p) => p.issuesTotal),
-      orphanBranches: sum((p) => p.orphanBranches.length),
+      orphanBranches: sum((p) => p.orphanBranchesTotal),
       tracked: tracked.length,
       untracked: model.projects.length - tracked.length,
       active: tracked.filter(hasWork).length,
@@ -346,7 +351,10 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
     repos: model.projects.map((p) => p.name),
     // Projects with open work in dashboard order, then the rest by name.
     projects: [...active, ...rest].map((p) => projectData(p, model)),
-    readyIdle: model.readyIdle.map(({ project, pr, idleDays }) => ({ repo: project.name, number: pr.number, idleDays })),
+    // A private repo's ready PRs are one entry with a count and no number.
+    readyIdle: model.readyIdle.map((r) => (r.pr
+      ? { repo: r.project.name, number: r.pr.number, idleDays: r.idleDays }
+      : { repo: r.project.name, count: r.count, idleDays: r.idleDays, minIdleDays: r.minIdleDays })),
     issues: {
       total: issues.total,
       shared: issues.shared.map((g) => ({
@@ -354,6 +362,7 @@ export function renderSiteData(model, { generatedAt, generatedAtIso, degradedRea
         items: g.issues.map((i) => ({ repo: i.repo, number: i.number, url: i.url })),
       })),
       byProject: issues.byProject.map((g) => ({ repo: g.project.name, numbers: g.issues.map((i) => i.number) })),
+      counted: issues.counted.map((g) => ({ repo: g.project.name, count: g.count })),
     },
     stale: model.stale.map((p) => ({ repo: p.name, pushedAt: p.pushedAt })),
     problems,
