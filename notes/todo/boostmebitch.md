@@ -16,6 +16,9 @@
 - [ ] After merge: #610 the turkey from 1 Nov through Thanksgiving Day, then the Santa hat from Black Friday through 26 Dec. The turkey is live on both production sites (merged 2026-11-19)
   - [ ] Computer: on Fri 27 Nov, open /demu with no ?holiday=. The emu wears the Santa hat. A faked clock tested this; the real date was not
 
+- [ ] Before merge: #611 the emu in the /demu title wears a look every day of the year: the nine new looks you picked, New Year's through Halloween. Merge it before 27 Dec, when the New Year's hat starts
+  - [ ] Phone: on the iPhone, open https://boostmebitch-git-demu-holiday-looks-chadfs-projects.vercel.app/demu?holiday=newyear, then change the end to valentines, stpatricks, easter, pizzaday, july4, summer, podcastday and halloween. Each look shows, and the word DeMu does not move. Chrome and phone emulation were tested; iOS Safari was not
+
 - [ ] Before merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It is on beta
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
   - [ ] Computer: decide the app name in a note for a playlist song. On beta the note says "via BoostMeBuddy", because the playlist feeds are on boostmebuddy.com, while the payment says BoostMeBitch. Tell Claude: keep it, or name BoostMeBitch as the payment does
