@@ -29,7 +29,7 @@
 
 - [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
 
-- [ ] Before merge: #617 back button: origin links step back, modals are history entries, tab keys
+- [ ] After merge: #617 back button: origin links step back, modals are history entries, tab keys. It is live on both production sites (merged 2026-11-19)
   - [ ] Phone: Android app: open BOOST on a show, then press back. The modal closes and the show stays. Emulation cannot press the system back.
   - [ ] Computer: in Chrome, click the Boosts tab on an episode, then press ⌘← (Alt+← on Windows). The page goes back.
 
@@ -62,6 +62,7 @@
 
 ## Already works
 
+- #617 merged 2026-11-19 (86378af): `e2e:history` passes 159/159 against both production sites, so the origin links, the modal entries and the tab keys are live. The branch and its worktree are deleted
 - #540 on beta (2026-11-19, phone, "My feed"): the note reads "… boosted 100 sats to Dusty Old Man by $2 Holla from Test playlist from my phone. via BoostMeBuddy", then "🎧 Heard on … by" the maker and the playlist link; its links name the song's own album. It quotes a summary receipt that Buddy's site key signed from your signed request: 99 of 100 sats settled (the 1-sat leg to ThunderRoad's node did not; StevenB 4 and Malachi 95 did)
 - Beta rebuilt with 7 branches (2026-11-19, beta e623bc7): main (#579, #584, #606) is merged into #538, then carried #572 → #574 → #576; #540's Heard-on line is now one line with no playlist link; #608 is added. Each step passed typecheck, the checks and the build; `e2e:communitynote` 90/90 and 40/40, `e2e:notewording` 44/44
 - Beta rebuilt with 6 branches, without `beta-demu-page` (2026-11-19, beta feca7d8; the branch is deleted, its commits are in #580 and #583). #538 (main through #604) is merged into #572 and #540, #572 into #574, #574 into #576, and #540 moves three lines so it merges with #576. Checks and builds pass on each branch: `e2e:deadtrack` 63/63 on #572, `e2e:boostnote` 47/47 and `e2e:communitynote` 88/88 and 39/39 on #540
