@@ -1,1 +1,2 @@
 - [ ] After merge: Make the read token with the link in the token sheet (choose All repositories), and paste it on the live page. Then tell Claude whether the sheet accepted it and whether titles show under a Command-Center item.
+- [ ] After merge: Computer: #28 After the next sync, open the live page. Check that each private repo shows counts only, with no PR title and no branch name.
