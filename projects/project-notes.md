@@ -24,5 +24,5 @@
 
 ### Pull requests (1)
 
-- [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 2026-11-19 · merge conflict
+- [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 2026-11-19
 <!-- AUTO:END -->
