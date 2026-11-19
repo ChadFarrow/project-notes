@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-19 18:00 UTC
+# Dashboard — 2026-11-19 18:05 UTC
 
-33 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+30 open PRs · 18 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -10,7 +10,7 @@
 
 _None._
 
-### Open issues (19)
+### Open issues (18)
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
@@ -36,7 +36,6 @@ _None._
 **[boostmebitch](projects/boostmebitch.md)**
 
 - [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 3 days ago
-- [#551 \[BMB\] I boosted a track from the player screen and the payments hadn't finished goi…](https://github.com/ChadFarrow/boostmebitch/issues/551) — opened 5 days ago · 1 comment
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 6 days ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 11 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 48 days ago
@@ -93,19 +92,16 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-11 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
+8 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
 
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 6 days ago
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 3 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 4 days ago · draft
-- PR [#579 feat(favorites): NEW MUSIC — new albums from favorited artists](https://github.com/ChadFarrow/boostmebitch/pull/579) — opened 3 days ago
-- PR [#584 fix(boost): keep the boost modal on the track it was opened for (#551)](https://github.com/ChadFarrow/boostmebitch/pull/584) — opened 3 days ago
-- PR [#606 feat(search): a glyph on every search type, and the words line up](https://github.com/ChadFarrow/boostmebitch/pull/606) — opened 2 hours ago
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 6 days ago · draft
 - PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 1 hour ago · draft
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 4 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
@@ -172,7 +168,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 2 PRs
 
-- PR [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 42 minutes ago
+- PR [#29 Private repos: no description in INDEX.md, and no private items in old audits](https://github.com/ChadFarrow/project-notes/pull/29) — opened 47 minutes ago
 - PR [#28 Private repos: counts only on the dashboard, the notes and the page](https://github.com/ChadFarrow/project-notes/pull/28) — opened 1 hour ago
 
 ### Websites
@@ -202,7 +198,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 1 PR
 
-- PR [#23 workspace: rule 15, roadmaps in project-notes](https://github.com/ChadFarrow/vibe-kit/pull/23) — opened 51 minutes ago
+- PR [#23 workspace: rule 15, roadmaps in project-notes](https://github.com/ChadFarrow/vibe-kit/pull/23) — opened 56 minutes ago
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
