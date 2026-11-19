@@ -31,13 +31,10 @@
 
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
-- [ ] Before merge: #604 the GitHub folder with a copy of every playlist feed (branch `playlists`). Merge it to `main`: the copy job runs only from `main`
+- [ ] After merge: #604 the copy job must also run by itself every 15 minutes. GitHub started no run from the schedule in the 73 minutes after the merge (2026-11-19). A run by hand worked
+  - [ ] Computer: on GitHub, open Actions, then "Playlist archive". Runs with the event "schedule" show there. If none show by 2026-11-20, tell Claude
 
-- [ ] After merge: #604 the first copy
-  - [ ] Computer: on GitHub, open Actions, then "playlist-archive", then Run workflow. Then open the branch `playlists`: `playlists/` has one `.xml` file for each playlist and an `index.json`
-  - [ ] Computer: in Vercel, check that no deployment started for the branch `playlists`
-
-- [ ] Before merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. Put it on beta: `npm run beta -- add 605`
+- [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It is merged into the #576 branch, so the next `npm run beta -- rebuild` puts it on beta. That rebuild stops now: every playlist branch conflicts with `main` (your open question about merging `main` into them). The new conflict in `docs/ops.md`: keep both sides
   - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
   - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
   - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
@@ -45,6 +42,7 @@
 
 ## Already works
 
+- #604 merged 2026-11-19 (7c5fa78): the copy job, run by hand, put both playlists and `index.json` on the branch `playlists` (9c81301). The copies are the same bytes as the live feeds, and Vercel made no deployment for that branch
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
 - #585 merged 2026-11-17 (bacfe81): on the Pixel 6 over adb (Vanadium, Chromium 157, 5 runs, the back key and the edge swipe), the first back closes the full-screen player and stays on /favorites, and each later back goes to the page before. `e2e:history` passes on both production sites (94 checks). Not tested on the phone: /live/<npub> and /stream/<naddr>
 - #584 merges main with #585 (2026-11-17): the one `components/player.tsx` line keeps #585's `closePlayer` and #584's `openBoost`, and `e2e:boosttrack` (90 checks) and `e2e:history` (94 checks) pass on it
