@@ -85,6 +85,7 @@ test('renderAutoBlock says so when there is no open work', () => {
   assert.match(renderAutoBlock(project(model(), 'upstream-fork'), model()), /_No open work\._/);
   assert.match(renderAutoBlock(project(model(), 'upstream-fork'), model()), /fork of someone\/upstream-fork/);
   assert.match(renderAutoBlock(project(model(), 'secret-repo'), model()), /· private/);
+  assert.doesNotMatch(renderAutoBlock(project(model(), 'secret-repo'), model()), /Rust/);
 });
 
 test('renderAutoBlock marks an untracked project', () => {
@@ -177,7 +178,9 @@ test('renderIndex groups every repo by category with flags', () => {
   assert.match(md, /## Apps\n\n- \[app-one\]\(projects\/app-one\.md\) - The main app \(`TypeScript`\)/);
   assert.match(md, /- \[fork-thing\]\(projects\/fork-thing\.md\) - No description · fork/);
   assert.match(md, /- \[hidden-repo\]\(projects\/hidden-repo\.md\) - Not wanted \(`Go`\) · not tracked/);
-  assert.match(md, /- \[secret-repo\]\(projects\/secret-repo\.md\) - Private work \(`Rust`\) · private/);
+  // A private repo keeps its name and its note link, and shows no description and no language.
+  assert.match(md, /\n- \[secret-repo\]\(projects\/secret-repo\.md\) · private\n/);
+  assert.doesNotMatch(md, /Private work|Rust/);
   assert.doesNotMatch(md, /ISSUES\.md|PULL_REQUESTS\.md|BRANCHES\.md|\d{2}:\d{2}/);
 });
 
@@ -256,8 +259,12 @@ test('buildOutputs creates a stub for a repo with no note', () => {
   const { files } = outputs();
   const stub = files.get('projects/secret-repo.md');
   assert.match(stub, /^# secret-repo\n/);
-  assert.match(stub, /## Description\nPrivate work\n/);
   assert.match(stub, /## Live status/);
+  // The stub of a private repo copies no description; the stub of a public repo does.
+  assert.match(stub, /## Description\n<!-- Add a description -->\n/);
+  assert.doesNotMatch(stub, /Private work|Rust/);
+  const { 'app-one.md': _, ...withoutApp } = NOTE_TEXTS;
+  assert.match(outputs(withoutApp).files.get('projects/app-one.md'), /## Description\nThe main app\n/);
 });
 
 test('buildOutputs leaves a note with broken markers alone and reports it', () => {

@@ -255,8 +255,9 @@ export function renderIndex(model) {
       if (p.isFork) flags.push('fork');
       if (p.isPrivate) flags.push('private');
       if (p.track === 'no') flags.push('not tracked');
-      const desc = p.description ? escapeMd(p.description) : 'No description';
-      out.push(`- ${noteLink(model, p.name, 'projects/')} - ${desc}${p.language ? ` (\`${p.language}\`)` : ''}`
+      // A private repo has no description or language here (normalizeRepos): its line is the name and the flags.
+      const desc = p.isPrivate ? '' : ` - ${p.description ? escapeMd(p.description) : 'No description'}`;
+      out.push(`- ${noteLink(model, p.name, 'projects/')}${desc}${p.language ? ` (\`${p.language}\`)` : ''}`
         + flags.map((f) => ` · ${f}`).join(''));
     }
   }

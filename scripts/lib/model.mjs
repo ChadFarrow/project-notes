@@ -23,16 +23,18 @@ export function parseForMarkers(body) {
 }
 
 // Flattens the paginated response. Bodies are read for markers and then dropped:
-// the repo is public and some of these repos are private.
+// the repo is public and some of these repos are private. A private repo also
+// keeps no description and no language, so INDEX.md, a note (its AUTO block, or
+// the stub the sync makes) and data.json cannot show them (Chad, 2026-11-19).
 export function normalizeRepos(pages) {
   return pages.flatMap((page) => page.data.user.repositories.nodes).map((r) => ({
     name: r.name,
     url: r.url,
-    description: r.description || '',
+    description: r.isPrivate ? '' : r.description || '',
     isFork: r.isFork,
     isPrivate: r.isPrivate,
     pushedAt: r.pushedAt,
-    language: r.primaryLanguage?.name ?? null,
+    language: r.isPrivate ? null : r.primaryLanguage?.name ?? null,
     parent: r.parent?.nameWithOwner ?? null,
     defaultBranch: r.defaultBranchRef?.name ?? null,
     prsTotal: r.pullRequests.totalCount,

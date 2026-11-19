@@ -31,6 +31,18 @@ test('normalizeRepos flattens the pages and keeps every repo', () => {
     ['app-one', 'fork-thing', 'hidden-repo', 'secret-repo', 'svc-core', 'upstream-fork']);
 });
 
+test('normalizeRepos keeps no description and no language of a private repo', () => {
+  const repos = normalizeRepos(pages);
+  const secret = repos.find((r) => r.name === 'secret-repo');
+  assert.equal(secret.isPrivate, true);
+  assert.equal(secret.description, '');
+  assert.equal(secret.language, null);
+  assert.ok(!JSON.stringify(repos).includes('Private work'));
+  const app = repos.find((r) => r.name === 'app-one');
+  assert.equal(app.description, 'The main app');
+  assert.equal(app.language, 'TypeScript');
+});
+
 test('normalizeRepos drops bodies and keeps the For: targets', () => {
   const svc = normalizeRepos(pages).find((r) => r.name === 'svc-core');
   const issue = svc.issues.find((i) => i.number === 7);
