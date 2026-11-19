@@ -23,17 +23,7 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · Python · fork of SpencerPearson/small-group-scoop · private
 - **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 6 issues · 3 opened by you)
+- **Open work:** [10 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) (3 merge conflicts)
 
-### Pull requests (10)
-
-- [#12 Boosts: 100-sat minimum, 1-sat floor; streaming: 10 sats/min minimum, paid in 10-minute batches](https://github.com/ChadFarrow/small-group-scoop/pull/12) — opened 2026-11-18
-- [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2026-11-18
-- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18 · merge conflict
-- [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2026-11-18
-- [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 2026-11-18
-- [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 2026-11-18
-- [#6 Thunder Road Media watch page: a CRT TV that surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 2026-11-18
-- [#5 Keep video enclosures out of the Jukebox](https://github.com/ChadFarrow/small-group-scoop/pull/5) — opened 2026-11-18
-- [#3 Keep every show on The Board, dashed until it has a pending live](https://github.com/ChadFarrow/small-group-scoop/pull/3) — opened 2026-11-04 · merge conflict
-- [#1 Add "which show should I start with?" quiz at /shows/quiz/](https://github.com/ChadFarrow/small-group-scoop/pull/1) — opened 2026-10-31 · merge conflict
+_A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->

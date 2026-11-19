@@ -1,19 +1,16 @@
 - [ ] After merge: #538. Tell Claude to delete the branch `home-playlists-section` (you approved it on 2026-11-17). Its only commit is in #538
 
-- [ ] Before merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). #579 is not on beta: test on the Vercel preview of the PR
+- [ ] After merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). It is live on both production sites (merged 2026-11-19 with no test by you)
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
   - [ ] Computer: open a NEW MUSIC row, and check that the album page opens
   - [ ] Computer: open a Wavlake album (for example Tinderbox by Nate Johnivan) and press ♡ ARTIST under the artist name. NEW MUSIC on Favorites then lists the artist under "Followed on this device", and the artist is not added to your favorites list
 
-- [ ] After merge: #583. Tell Claude to drop the branch `beta-demu-page` from beta (`npm run beta -- drop beta-demu-page`; a rebuild does not drop it, because it has no PR) and delete it
-
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
-- [ ] Before merge: #584 the boost screen stays on its track when the track changes. #584 is not on beta: test on the Vercel preview of the PR
+- [ ] After merge: #584 the boost screen stays on its track when the track changes. It is live on both production sites (merged 2026-11-19 with no test by you)
   - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
 - [ ] Before merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It is on beta
-  - [ ] Phone: on beta, boost a song of a community playlist with "My feed". The note reads "… boosted N sats to <song> by <artist> from <playlist> via BoostMeBuddy", then "🎧 Heard on <playlist> by <maker>" and the playlist link. It says BoostMeBuddy because beta's playlists are on the Buddy feed origin (decision 17), while the payment still says BoostMeBitch
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
   - [ ] Computer: decide the app name in a note for a playlist song. On beta the note says "via BoostMeBuddy", because the playlist feeds are on boostmebuddy.com, while the payment says BoostMeBitch. Tell Claude: keep it, or name BoostMeBitch as the payment does
   - [ ] Phone: decide if the "Heard on" line stays. The sentence names the playlist too now, so the line says it twice. The line also gives the maker and the link
@@ -34,7 +31,7 @@
 - [ ] After merge: #604 the copy job must also run by itself every 15 minutes. GitHub started no run from the schedule in the 73 minutes after the merge (2026-11-19). A run by hand worked
   - [ ] Computer: on GitHub, open Actions, then "Playlist archive". Runs with the event "schedule" show there. If none show by 2026-11-20, tell Claude
 
-- [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It is merged into the #576 branch, so the next `npm run beta -- rebuild` puts it on beta. That rebuild stops now: every playlist branch conflicts with `main` (your open question about merging `main` into them). The new conflict in `docs/ops.md`: keep both sides
+- [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It is in the #576 branch, and it is on beta since 2026-11-19
   - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
   - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
   - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
@@ -42,6 +39,8 @@
 
 ## Already works
 
+- #540 on beta (2026-11-19, phone, "My feed"): the note reads "… boosted 100 sats to Dusty Old Man by $2 Holla from Test playlist from my phone. via BoostMeBuddy", then "🎧 Heard on … by" the maker and the playlist link; its links name the song's own album. It quotes a summary receipt that Buddy's site key signed from your signed request: 99 of 100 sats settled (the 1-sat leg to ThunderRoad's node did not; StevenB 4 and Malachi 95 did)
+- Beta rebuilt with 6 branches, without `beta-demu-page` (2026-11-19, beta feca7d8; the branch is deleted, its commits are in #580 and #583). #538 (main through #604) is merged into #572 and #540, #572 into #574, #574 into #576, and #540 moves three lines so it merges with #576. Checks and builds pass on each branch: `e2e:deadtrack` 63/63 on #572, `e2e:boostnote` 47/47 and `e2e:communitynote` 88/88 and 39/39 on #540
 - #604 merged 2026-11-19 (7c5fa78): the copy job, run by hand, put both playlists and `index.json` on the branch `playlists` (9c81301). The copies are the same bytes as the live feeds, and Vercel made no deployment for that branch
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
 - #585 merged 2026-11-17 (bacfe81): on the Pixel 6 over adb (Vanadium, Chromium 157, 5 runs, the back key and the edge swipe), the first back closes the full-screen player and stays on /favorites, and each later back goes to the page before. `e2e:history` passes on both production sites (94 checks). Not tested on the phone: /live/<npub> and /stream/<naddr>

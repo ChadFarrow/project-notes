@@ -45,15 +45,53 @@ const watchText = (w) => `[${w.repo}](${w.url}) (${[
   ...(w.isPrivate ? ['private'] : []), workCounts(w), ...(w.issuesMine ? [`${w.issuesMine} opened by you`] : []),
 ].join(' · ')})`;
 
+// The state words of a PR, in this order, and how a private repo counts them.
+const PR_STATES = [
+  ['draft', (pr) => pr.isDraft, (n) => plural(n, 'draft')],
+  ['merge conflict', (pr) => pr.mergeable === 'CONFLICTING', (n) => plural(n, 'merge conflict')],
+  ['checks failing', (pr) => pr.checks === 'FAILURE' || pr.checks === 'ERROR', (n) => `${n} with checks failing`],
+  ['checks pending', (pr) => pr.checks === 'PENDING' || pr.checks === 'EXPECTED', (n) => `${n} with checks pending`],
+];
+
 function prTags(pr, owner) {
-  const tags = [];
-  if (pr.isDraft) tags.push('draft');
-  if (pr.mergeable === 'CONFLICTING') tags.push('merge conflict');
-  if (pr.checks === 'FAILURE' || pr.checks === 'ERROR') tags.push('checks failing');
-  if (pr.checks === 'PENDING' || pr.checks === 'EXPECTED') tags.push('checks pending');
+  const tags = PR_STATES.filter(([, has]) => has(pr)).map(([word]) => word);
   if (pr.author !== owner) tags.push(`by ${pr.author}`);
   return tags;
 }
+
+// ---------- private repos: counts only ----------
+
+const COUNTS_ONLY = 'private repo, counts only';
+
+// A private project's open work: each count links to its list on GitHub, and the PR count
+// says how many PRs are in each state. No title, no branch name. '' when there is none.
+function countsOnlyText(p) {
+  const parts = [];
+  if (p.prsTotal) {
+    const states = PR_STATES.map(([, has, count]) => [p.prStates.filter(has).length, count])
+      .filter(([n]) => n).map(([n, count]) => count(n));
+    parts.push(`[${plural(p.prsTotal, 'PR')}](${p.url}/pulls)${states.length ? ` (${states.join(', ')})` : ''}`);
+  }
+  if (p.issuesTotal) parts.push(`[${plural(p.issuesTotal, 'issue')}](${p.url}/issues)`);
+  if (p.orphanBranchesTotal) {
+    parts.push(`[${plural(p.orphanBranchesTotal, 'branch', 'branches')} with no PR](${p.url}/branches)`);
+  }
+  return parts.join(' · ');
+}
+
+// Items a private repo opened for this project: one line per repo, with counts, by name.
+function countedElsewhere(entries, model, prefix) {
+  const byRepo = new Map();
+  for (const e of entries.filter((x) => x.countsOnly)) {
+    if (!byRepo.has(e.repo)) byRepo.set(e.repo, { PR: 0, issue: 0 });
+    byRepo.get(e.repo)[e.kind]++;
+  }
+  return [...byRepo].sort(([a], [b]) => a.localeCompare(b)).map(([repo, n]) => `${noteLink(model, repo, prefix)} — ${
+    [n.PR ? plural(n.PR, 'PR') : '', n.issue ? plural(n.issue, 'issue') : ''].filter(Boolean).join(', ')} · ${COUNTS_ONLY}`);
+}
+
+const idleText = (r) => (r.count > 1 && r.minIdleDays !== r.idleDays
+  ? `idle ${r.minIdleDays} to ${plural(r.idleDays, 'day')}` : `idle ${plural(r.idleDays, 'day')}`);
 
 const forText = (item, model, prefix) =>
   item.for.length ? [`for ${item.for.map((n) => noteLink(model, n, prefix)).join(', ')}`] : [];
@@ -89,19 +127,24 @@ export function renderAutoBlock(p, model) {
   }
   if (p.usedBy.length) out.push(`- **Used by:** ${p.usedBy.map((n) => noteLink(model, n, '')).join(', ')}`);
   if (p.watch.length) out.push(`- **Watch:** ${p.watch.map(watchText).join(', ')}`);
+  const counts = p.countsOnly ? countsOnlyText(p) : '';
+  if (counts) {
+    out.push(`- **Open work:** ${counts}`, '',
+      '_A private repo: this public note shows counts only, never a title or a branch name._');
+  }
 
   const byNumber = (a, b) => b.number - a.number;
   const more = (shown, total, path) =>
     total > shown ? [`- [${total - shown} more on GitHub](${model.index.get(p.name).url}/${path})`] : [];
 
   const sections = [];
-  if (p.prsTotal) {
+  if (p.prsTotal && !p.countsOnly) {
     sections.push([`### Pull requests (${p.prsTotal})`, '',
       ...[...p.prs].sort(byNumber).map((pr) =>
         line(itemLink(pr), [`opened ${day(pr.createdAt)}`, ...prTags(pr, model.owner), ...forText(pr, model, '')])),
       ...more(p.prs.length, p.prsTotal, 'pulls')]);
   }
-  if (p.issuesTotal) {
+  if (p.issuesTotal && !p.countsOnly) {
     sections.push([`### Issues (${p.issuesTotal})`, '',
       ...[...p.issues].sort(byNumber).map((i) =>
         line(itemLink(i), [`opened ${day(i.createdAt)}`, ...(i.author !== model.owner ? [`by ${i.author}`] : []),
@@ -110,15 +153,16 @@ export function renderAutoBlock(p, model) {
   }
   if (p.openedElsewhere.length) {
     sections.push([`### Opened elsewhere for this project (${p.openedElsewhere.length})`, '',
-      ...[...p.openedElsewhere].sort((a, b) => a.repo.localeCompare(b.repo) || b.number - a.number)
-        .map((e) => line(itemLink(e, `${e.repo} #${e.number}`), [e.kind, `opened ${day(e.createdAt)}`]))]);
+      ...p.openedElsewhere.filter((e) => !e.countsOnly).sort((a, b) => a.repo.localeCompare(b.repo) || b.number - a.number)
+        .map((e) => line(itemLink(e, `${e.repo} #${e.number}`), [e.kind, `opened ${day(e.createdAt)}`])),
+      ...countedElsewhere(p.openedElsewhere, model, '').map((text) => `- ${text}`)]);
   }
   if (p.orphanBranches.length) {
     sections.push([`### Branches with no open PR (${p.orphanBranches.length})`, '',
       ...[...p.orphanBranches].sort((a, b) => a.name.localeCompare(b.name))
         .map((b) => `- [\`${b.name}\`](${branchUrl(p, b.name)})`)]);
   }
-  if (!sections.length) out.push('', '_No open work._');
+  if (!sections.length && !counts) out.push('', '_No open work._');
   for (const s of sections) out.push('', ...s);
   return out.join('\n');
 }
@@ -150,20 +194,22 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
 
   out.push(
     `${plural(sum((p) => p.prsTotal), 'open PR')} · ${plural(sum((p) => p.issuesTotal), 'open issue')} · `
-      + `${plural(sum((p) => p.orphanBranches.length), 'branch', 'branches')} with no PR · `
+      + `${plural(sum((p) => p.orphanBranchesTotal), 'branch', 'branches')} with no PR · `
       + `${plural(tracked.length, 'tracked repo')}${untracked ? ` (${untracked} not tracked)` : ''}`,
     '',
     `[Project index](${base}INDEX.md) · [Dashboard history](${base}audits/README.md)`,
     '',
     '## Needs you now',
     '',
-    `### Ready to merge — idle ${IDLE_DAYS}+ days (${model.readyIdle.length})`,
+    `### Ready to merge — idle ${IDLE_DAYS}+ days (${model.readyIdle.reduce((n, r) => n + (r.pr ? 1 : r.count), 0)})`,
     '',
   );
   if (model.readyIdle.length) {
-    for (const { project, pr, idleDays } of model.readyIdle) {
-      out.push(`- **${project.name}** ${itemLink(pr)} — idle ${plural(idleDays, 'day')} · `
-        + `${pr.checks === 'SUCCESS' ? 'checks passing' : 'no checks'}`);
+    for (const r of model.readyIdle) {
+      const { project, pr } = r;
+      out.push(pr
+        ? `- **${project.name}** ${itemLink(pr)} — ${idleText(r)} · ${pr.checks === 'SUCCESS' ? 'checks passing' : 'no checks'}`
+        : `- **${project.name}** [${plural(r.count, 'PR')}](${project.url}/pulls) — ${idleText(r)} · ${COUNTS_ONLY}`);
     }
   } else {
     out.push('_None._');
@@ -188,6 +234,9 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
       out.push(line(itemLink(i), [...details, ...forText(i, model, notes)]));
     }
   }
+  for (const { project: p, count } of issues.counted) {
+    out.push('', `**${noteLink(model, p.name, notes)}**`, '', `- [${plural(count, 'open issue')}](${p.url}/issues) — ${COUNTS_ONLY}`);
+  }
   if (!issues.total) out.push('', '_None._');
 
   // Projects with open work, by category.
@@ -197,9 +246,11 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
     out.push('', `### ${category}`);
     for (const p of projects) {
       const facts = [];
-      if (p.prsTotal) facts.push(plural(p.prsTotal, 'PR'));
-      if (p.issuesTotal) facts.push(plural(p.issuesTotal, 'issue'));
-      if (p.orphanBranches.length) facts.push(`${plural(p.orphanBranches.length, 'branch', 'branches')} with no PR`);
+      const counts = p.countsOnly ? countsOnlyText(p) : '';
+      if (counts) facts.push(counts, COUNTS_ONLY);
+      if (p.prsTotal && !p.countsOnly) facts.push(plural(p.prsTotal, 'PR'));
+      if (p.issuesTotal && !p.countsOnly) facts.push(plural(p.issuesTotal, 'issue'));
+      if (p.orphanBranchesTotal && !p.countsOnly) facts.push(`${plural(p.orphanBranchesTotal, 'branch', 'branches')} with no PR`);
       if (p.uses.length) {
         facts.push(`uses ${p.uses.map((n) => `${noteLink(model, n, notes)} (${workCounts(model.index.get(n))})`).join(', ')}`);
       }
@@ -211,9 +262,10 @@ export function renderDashboard(model, { generatedAt, degradedReason, base, prob
       for (const pr of p.prs) {
         items.push(line(`PR ${itemLink(pr)}`, [`opened ${ago(pr.createdAt, now)}`, ...prTags(pr, owner), ...forText(pr, model, notes)]));
       }
-      for (const e of p.openedElsewhere) {
+      for (const e of p.openedElsewhere.filter((x) => !x.countsOnly)) {
         items.push(line(`Opened elsewhere: ${itemLink(e, `${e.repo} #${e.number}`)}`, [e.kind, `opened ${ago(e.createdAt, now)}`]));
       }
+      for (const text of countedElsewhere(p.openedElsewhere, model, notes)) items.push(`- Opened elsewhere: ${text}`);
       for (const b of p.orphanBranches.slice(0, 10)) items.push(`- Branch [\`${b.name}\`](${branchUrl(p, b.name)}) — no PR`);
       if (p.orphanBranches.length > 10) {
         items.push(`- [${p.orphanBranches.length - 10} more branches with no PR](${notes}${noteFile(model, p.name)})`);
@@ -309,9 +361,13 @@ export function renderAuditsReadme(files) {
 // notes: [{ file, text }] from projects/. auditFiles: names already in audits/.
 // watched: the `normalizeWatched` map for the notes' `**Watch:**` entries.
 // todoFiles: [{ path, text }] of notes/TODO.md and notes/todo/*.md. Only the web page shows it; no markdown file here repeats it.
-export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degradedReason, watched, todoFiles }) {
+// listedPrivate: the repos whose To do note the .gitignore lists; they show counts only, as a private repo does.
+// roadmapFiles: the paths of the roadmaps/ notes that git does not ignore. No output shows them.
+export function buildOutputs({
+  owner, now, repos, stars, notes, auditFiles, degradedReason, watched, todoFiles, listedPrivate, roadmapFiles = [],
+}) {
   const parsed = notes.map((n) => ({ ...n, header: parseHeader(n.text) }));
-  const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason), watched });
+  const model = buildModel({ repos, notes: parsed, now, owner, degraded: Boolean(degradedReason), watched, listedPrivate });
   const problems = [...model.problems];
   const files = new Map();
 
@@ -330,6 +386,15 @@ export function buildOutputs({ owner, now, repos, stars, notes, auditFiles, degr
   for (const file of publicTodo(todoFiles, model).privateFiles) {
     problems.push(`\`${file}\` holds To do lines of a private repo, and this repo is public. The web page leaves them out. `
       + 'Move them to that repo\'s git-ignored note in `notes/todo/` (CLAUDE.md, *Private To do notes*).');
+  }
+
+  // The roadmap of a private repo must be git-ignored, as its To do note is (CLAUDE.md, *Roadmaps*).
+  // A tracked one is named by its file, never by its text. The repo is the name before the first space.
+  const secret = new Set(model.projects.filter((p) => p.countsOnly).map((p) => p.name.toLowerCase()));
+  for (const file of roadmapFiles) {
+    if (!secret.has(file.replace(/^roadmaps\//, '').replace(/\.md$/, '').split(' ')[0].toLowerCase())) continue;
+    problems.push(`\`${file}\` is the roadmap of a private repo, and this repo is public. `
+      + 'Add the repo to the roadmap lines of `.gitignore`, and `git rm --cached` the note (CLAUDE.md, *Roadmaps*).');
   }
 
   const generatedAt = `${now.toISOString().slice(0, 10)} ${now.toISOString().slice(11, 16)} UTC`;

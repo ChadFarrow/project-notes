@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { normalizeRepos, normalizeWatched, parseForMarkers, buildModel, hasWork } from '../scripts/lib/model.mjs';
+import { normalizeRepos, normalizeWatched, parseForMarkers, buildModel, hasWork, issueGroups } from '../scripts/lib/model.mjs';
 import { parseHeader } from '../scripts/lib/notes.mjs';
 
 const pages = JSON.parse(readFileSync(new URL('./fixtures/repos-pages.json', import.meta.url)));
@@ -81,11 +81,24 @@ test('parseForMarkers ignores prose that is not a marker', () => {
 
 // ---------- ready but idle ----------
 
+const readyNames = (m) => m.readyIdle.map((r) => (r.pr ? `${r.project.name}#${r.pr.number}` : `${r.project.name} ×${r.count}`));
+
 test('readyIdle keeps own, non-draft, green, non-conflicting PRs idle 7+ days', () => {
   const m = model();
-  assert.deepEqual(m.readyIdle.map((r) => `${r.project.name}#${r.pr.number}`), ['app-one#6', 'app-one#1']);
-  assert.equal(m.readyIdle[1].idleDays, 7);
+  assert.deepEqual(readyNames(m), ['secret-repo ×1', 'app-one#6', 'app-one#1']);
+  assert.equal(m.readyIdle[2].idleDays, 7);
   // #2 draft, #3 conflict, #5 only 6.9 days, #9 failing, #10 pending, #11 bot: all out.
+});
+
+test('readyIdle gives a private repo one entry: a count and the idle days, no PR', () => {
+  const idle = structuredClone(pages);
+  const secret = idle[1].data.user.repositories.nodes.find((r) => r.name === 'secret-repo');
+  secret.pullRequests.nodes.find((p) => p.number === 3).updatedAt = '2026-09-18T00:00:00Z';
+  const m = buildModel({ repos: normalizeRepos(idle), notes: [], now: NOW, owner: 'ChadFarrow' });
+  assert.deepEqual(readyNames(m), ['secret-repo ×2', 'app-one#6', 'app-one#1']);
+  assert.deepEqual(Object.keys(m.readyIdle[0]).sort(), ['count', 'idleDays', 'minIdleDays', 'project']);
+  assert.equal(m.readyIdle[0].idleDays, 19);
+  assert.equal(m.readyIdle[0].minIdleDays, 9);
 });
 
 test('readyIdle ignores PRs in untracked repos', () => {
@@ -94,7 +107,7 @@ test('readyIdle ignores PRs in untracked repos', () => {
     notes: [{ file: 'app-one.md', header: parseHeader('**Track:** no\n') }],
     now: NOW, owner: 'ChadFarrow',
   });
-  assert.deepEqual(m.readyIdle, []);
+  assert.deepEqual(readyNames(m), ['secret-repo ×1']);
 });
 
 // ---------- Uses, Used by, For ----------
@@ -111,14 +124,58 @@ test('openedElsewhere collects marked items from other repos, newest first', () 
   const m = model();
   const items = project(m, 'app-one').openedElsewhere;
   assert.deepEqual(items.map((i) => `${i.repo} ${i.kind} #${i.number}`),
-    ['secret-repo PR #3', 'svc-core issue #7']);
+    ['secret-repo PR #undefined', 'svc-core issue #7']);
+  // An item of a private repo carries no number, title or link.
+  assert.deepEqual(items[0], { repo: 'secret-repo', kind: 'PR', countsOnly: true, updatedAt: '2026-09-26T00:00:00Z' });
 });
 
 test('a For: marker naming its own repo is ignored, an unknown one is a problem', () => {
   const m = model();
-  assert.deepEqual(project(m, 'svc-core').openedElsewhere, []);
+  assert.ok(!project(m, 'svc-core').openedElsewhere.some((e) => e.repo === 'svc-core'));
   assert.ok(m.problems.some((p) => p.includes('svc-core #8') && p.includes('nope')));
   assert.equal(m.problems.filter((p) => p.includes('svc-core #8')).length, 1);
+});
+
+test('an unknown For: marker in a private repo is a problem that does not show the marker', () => {
+  const found = model().problems.filter((p) => p.includes('secret-repo #5'));
+  assert.equal(found.length, 1);
+  assert.match(found[0], /a `For:` marker names no non-archived repo \(the repo is private/);
+  assert.ok(!found[0].includes('secret-unknown-target'));
+});
+
+// ---------- private repos: counts only ----------
+
+test('a private project keeps counts and PR states, and no title or branch name', () => {
+  const p = project(model(), 'secret-repo');
+  assert.equal(p.countsOnly, true);
+  assert.deepEqual([p.prs, p.issues, p.orphanBranches], [[], [], []]);
+  assert.deepEqual([p.prsTotal, p.issuesTotal, p.orphanBranchesTotal], [3, 2, 1]);
+  assert.deepEqual(p.prStates, [
+    { isDraft: false, mergeable: 'MERGEABLE', checks: 'SUCCESS' },
+    { isDraft: false, mergeable: 'MERGEABLE', checks: 'SUCCESS' },
+    { isDraft: true, mergeable: 'CONFLICTING', checks: 'FAILURE' },
+  ]);
+  assert.ok(!JSON.stringify(p).match(/Secret|secret-(ready|draft|orphan)|Helper/), 'a title or branch name is left');
+  assert.equal(project(model(), 'app-one').countsOnly, false);
+});
+
+test('a repo whose To do note the .gitignore lists is counts only, even when GitHub says public', () => {
+  const m = buildModel({ repos: normalizeRepos(pages), notes: [], now: NOW, owner: 'ChadFarrow', listedPrivate: new Set(['svc-core']) });
+  const p = project(m, 'svc-core');
+  assert.equal(p.isPrivate, false);
+  assert.equal(p.countsOnly, true);
+  assert.deepEqual(p.issues, []);
+  assert.equal(p.issuesTotal, 5);
+  assert.ok(project(m, 'app-one').openedElsewhere.every((e) => e.countsOnly), 'svc-core #7 is a count now');
+});
+
+test('issueGroups counts a private repo\'s issues and keeps its titles out of the shared groups', () => {
+  const tracked = model().projects.filter((p) => p.track !== 'no');
+  const g = issueGroups(tracked);
+  assert.deepEqual(g.counted.map((c) => [c.project.name, c.count]), [['secret-repo', 2]]);
+  assert.deepEqual(g.shared[0].issues.map((i) => i.repo), ['app-one', 'svc-core']);
+  assert.ok(!g.byProject.some((b) => b.project.name === 'secret-repo'));
+  assert.equal(g.total, 2 + 3 + 2);
 });
 
 // ---------- branches, tracking, stale ----------

@@ -49,12 +49,20 @@ const todoPaths = [
 const privateTodo = gitIgnored(root, todoPaths);
 const todoFiles = todoPaths.filter((rel) => !privateTodo.has(rel))
   .map((rel) => ({ path: rel, text: readFileSync(path.join(root, rel), 'utf8') }));
+// The roadmaps that git does not ignore. Only their names are read: a private repo's must be ignored.
+const roadmapPaths = listMd(path.join(root, 'roadmaps')).map((name) => `roadmaps/${name}`);
+const ignoredRoadmaps = gitIgnored(root, roadmapPaths);
+const roadmapFiles = roadmapPaths.filter((rel) => !ignoredRoadmaps.has(rel)).sort();
 
 // Fetch everything before writing anything: a failed fetch must leave the repo untouched.
 const repos = normalizeRepos(await fetchRepos(token, OWNER));
 const stars = await fetchStars(token, OWNER);
 const watchNames = [...new Map(notes.flatMap((n) => parseHeader(n.text).watch).map((w) => [w.toLowerCase(), w])).values()];
 const watched = watchNames.length ? normalizeWatched(await fetchWatched(token, watchNames, OWNER), watchNames) : new Map();
+// A repo whose To do note the .gitignore lists is private to the dashboard as well: counts
+// only, even if GitHub says public (the list is out of date, or the run is between the two).
+const listedPrivate = new Set([...gitIgnored(root, repos.map((r) => `notes/todo/${r.name}.md`))]
+  .map((rel) => rel.slice('notes/todo/'.length, -'.md'.length)));
 
 const { files, problems, siteData } = buildOutputs({
   owner: OWNER,
@@ -66,6 +74,8 @@ const { files, problems, siteData } = buildOutputs({
   degradedReason,
   watched,
   todoFiles,
+  listedPrivate,
+  roadmapFiles,
 });
 
 let changed = 0;
