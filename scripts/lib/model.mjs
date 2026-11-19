@@ -89,10 +89,25 @@ export function normalizeWatched(response, names) {
 const byName = (a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' });
 const newest = (a, b) => (a.updatedAt < b.updatedAt ? 1 : a.updatedAt > b.updatedAt ? -1 : 0);
 
+// The state of a PR with nothing that names it: what a private repo keeps of each PR.
+const prState = (pr) => ({ isDraft: pr.isDraft, mergeable: pr.mergeable, checks: pr.checks });
+
 // notes: [{ file: 'repo.md', header }]. `degraded` means private repos are missing
 // from `repos`, so their notes must not be reported as orphans. watched: the
-// `normalizeWatched` map for every `**Watch:**` entry.
-export function buildModel({ repos, notes, now, owner, degraded = false, watched = new Map() }) {
+// `normalizeWatched` map for every `**Watch:**` entry. listedPrivate: the names of the
+// repos whose To do note the .gitignore lists (sync.mjs asks git).
+//
+// A private repo shows counts only (Chad's choice, 2026-11-19): this repo and the web page
+// are public, so its PR titles, issue titles and branch names never leave this function.
+// Private means that GitHub says so, or that the .gitignore lists its To do note, so a repo
+// that turns private is covered at once. Such a project gets `countsOnly: true`, empty
+// `prs`, `issues`, `branches` and `orphanBranches`, no `defaultBranch`, and `prStates`
+// (draft, merge and check state only).
+// An item it opened for another project is `{ repo, kind, countsOnly: true }` there, and its
+// ready PRs are one `readyIdle` entry with a count.
+export function buildModel({
+  repos, notes, now, owner, degraded = false, watched = new Map(), listedPrivate = new Set(),
+}) {
   const problems = [];
   const lookup = new Map(repos.map((r) => [r.name.toLowerCase(), r.name]));
   const noteFor = new Map();
@@ -143,6 +158,7 @@ export function buildModel({ repos, notes, now, owner, degraded = false, watched
 
     return {
       ...repo,
+      countsOnly: Boolean(repo.isPrivate || listedPrivate.has(repo.name)),
       prs: repo.prs.map((pr) => ({ ...pr, for: [] })),
       issues: repo.issues.map((issue) => ({ ...issue, for: [] })),
       noteFile: note ? note.file : null,
@@ -152,6 +168,7 @@ export function buildModel({ repos, notes, now, owner, degraded = false, watched
       usedBy: [],
       watch,
       orphanBranches,
+      orphanBranchesTotal: orphanBranches.length,
       openedElsewhere: [],
       stale: header.track === 'yes' && now - new Date(repo.pushedAt) > STALE_DAYS * DAY,
       lastActivity,
@@ -173,27 +190,59 @@ export function buildModel({ repos, notes, now, owner, degraded = false, watched
         const name = lookup.get(raw.toLowerCase());
         if (name === source.name) continue;
         if (!name) {
-          problems.push(`\`${source.name} #${item.number}\`: \`For: ChadFarrow/${raw}\` names no non-archived repo`);
+          // The marker is text from the item's body: a private repo's stays out.
+          problems.push(source.countsOnly
+            ? `\`${source.name} #${item.number}\`: a \`For:\` marker names no non-archived repo (the repo is private, so the marker is not shown)`
+            : `\`${source.name} #${item.number}\`: \`For: ChadFarrow/${raw}\` names no non-archived repo`);
           continue;
         }
         if (!item.for.includes(name)) item.for.push(name);
-        index.get(name).openedElsewhere.push({
-          repo: source.name, kind, number: item.number, title: item.title, url: item.url,
-          createdAt: item.createdAt, updatedAt: item.updatedAt,
-        });
+        index.get(name).openedElsewhere.push(source.countsOnly
+          ? { repo: source.name, kind, countsOnly: true, updatedAt: item.updatedAt }
+          : {
+            repo: source.name, kind, number: item.number, title: item.title, url: item.url,
+            createdAt: item.createdAt, updatedAt: item.updatedAt,
+          });
       }
     }
   }
   for (const p of projects) p.openedElsewhere.sort(newest);
 
   const tracked = projects.filter((p) => p.track !== 'no');
-  const readyIdle = tracked
-    .flatMap((project) => project.prs.map((pr) => ({ project, pr })))
+  // Longest idle first. A private repo's ready PRs are one entry: { project, count, idleDays
+  // (the longest), minIdleDays }, placed by its longest idle PR.
+  const readyIdle = [];
+  const readyCounts = new Map();
+  for (const { project, pr } of tracked
+    .flatMap((p) => p.prs.map((pr) => ({ project: p, pr })))
     .filter(({ pr }) => pr.author === owner && !pr.isDraft && pr.mergeable !== 'CONFLICTING'
       && (pr.checks === null || pr.checks === 'SUCCESS')
       && now - new Date(pr.updatedAt) >= IDLE_DAYS * DAY)
-    .map((r) => ({ ...r, idleDays: Math.floor((now - new Date(r.pr.updatedAt)) / DAY) }))
-    .sort((a, b) => a.pr.updatedAt.localeCompare(b.pr.updatedAt));
+    .sort((a, b) => a.pr.updatedAt.localeCompare(b.pr.updatedAt))) {
+    const idleDays = Math.floor((now - new Date(pr.updatedAt)) / DAY);
+    if (!project.countsOnly) {
+      readyIdle.push({ project, pr, idleDays });
+    } else if (readyCounts.has(project.name)) {
+      const entry = readyCounts.get(project.name);
+      entry.count++;
+      entry.minIdleDays = idleDays;
+    } else {
+      const entry = { project, count: 1, idleDays, minIdleDays: idleDays };
+      readyCounts.set(project.name, entry);
+      readyIdle.push(entry);
+    }
+  }
+
+  // Now that every list above is made, a private project keeps counts only.
+  for (const p of projects) {
+    if (!p.countsOnly) continue;
+    p.prStates = p.prs.map(prState);
+    p.prs = [];
+    p.issues = [];
+    p.orphanBranches = [];
+    p.branches = [];
+    p.defaultBranch = null;
+  }
 
   const stale = projects.filter((p) => p.stale).sort((a, b) => a.pushedAt.localeCompare(b.pushedAt));
 
@@ -202,7 +251,7 @@ export function buildModel({ repos, notes, now, owner, degraded = false, watched
 
 // ---------- shared by the dashboard and the site data ----------
 
-export const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+export const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranchesTotal || p.openedElsewhere.length
   || p.watch.some((w) => w.prsTotal || w.issuesTotal);
 
 export const branchUrl = (p, name) => `${p.url}/tree/${name.split('/').map(encodeURIComponent).join('/')}`;
@@ -228,7 +277,9 @@ const newestFirst = (a, b) => b.updatedAt.localeCompare(a.updatedAt);
 
 // The open issues of the tracked projects: issues whose title is open in several repos
 // (one group each, most recent activity first, items by repo), then the rest by
-// project (newest issue first, projects by their newest issue).
+// project (newest issue first, projects by their newest issue). A private project has no
+// issue list: its issues are a count in `counted` ({ project, count }, by name), and its
+// titles never join a group.
 export function issueGroups(tracked) {
   const issues = tracked.flatMap((p) => p.issues.map((i) => ({ ...i, repo: p.name })));
   const byTitle = new Map();
@@ -247,5 +298,6 @@ export function issueGroups(tracked) {
     .map((project) => ({ project, issues: project.issues.filter((i) => !sharedUrls.has(i.url)).sort(newestFirst) }))
     .filter((g) => g.issues.length)
     .sort((a, b) => newestFirst(a.issues[0], b.issues[0]));
-  return { total: issues.length, shared, byProject };
+  const counted = tracked.filter((p) => p.countsOnly && p.issuesTotal).map((project) => ({ project, count: project.issuesTotal }));
+  return { total: issues.length + counted.reduce((n, g) => n + g.count, 0), shared, byProject, counted };
 }

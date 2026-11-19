@@ -567,9 +567,11 @@ async function main() {
     })()`)) || ['(could not read the page)'];
 
     const tracked = data.projects.filter((p) => p.track !== 'no');
-    // `watch || []`: the live site's data may predate the field (--host).
-    const active = tracked.filter((p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
-      || (p.watch || []).some((w) => w.prsTotal || w.issuesTotal));
+    // `watch || []`, `?? orphanBranches.length`: the live site's data may predate the field (--host).
+    const active = tracked.filter((p) => p.prsTotal || p.issuesTotal || (p.orphanBranchesTotal ?? p.orphanBranches.length)
+      || p.openedElsewhere.length || (p.watch || []).some((w) => w.prsTotal || w.issuesTotal));
+    // A private project has PR states and no PR list.
+    const prsOf = (p) => (p.countsOnly ? p.prStates || [] : p.prs);
 
     // ---- the board ----
     await go();
@@ -580,7 +582,7 @@ async function main() {
     check('the summary sentence shows the totals',
       (await text('#summary'))?.includes(`${data.totals.prs} open PR`) && (await text('#summary'))?.includes(`${data.totals.tracked} tracked repo`));
     check('every project with open work has a row', (await count('article.project')) === active.length, `${active.length} rows`);
-    const lampsOk = await evaluate(`${js(active.map((p) => [p.name, Math.min(p.prs.length, 12)]))}
+    const lampsOk = await evaluate(`${js(active.map((p) => [p.name, Math.min(prsOf(p).length, 12)]))}
       .every(([name, n]) => document.querySelectorAll('article.project[data-project="' + name + '"] .disclose .lamp').length === n)`);
     check('each row has one lamp per PR', lampsOk);
     const strayOnLoad = await strayText();
@@ -713,10 +715,49 @@ async function main() {
         watchFact?.href === 'https://github.com/Upstream/thing'
           && watchFact.text === 'Watches Upstream/thing (private · 4 issues · 1 opened by you)', js(watchFact));
       await click(`${fork} .disclose`);
+
+      // A private repo: counts only (secret-repo in the fixture).
+      const secret = 'article.project[data-project="secret-repo"]';
+      const secretUrl = 'https://github.com/ChadFarrow/secret-repo';
+      check('a private repo row counts its work', (await evaluate(`document.querySelector('${secret} .counts')?.textContent`))
+        === '3 PRs, 2 issues, 1 branch with no PR');
+      check('a private repo row lights one lamp per PR state, with no PR number',
+        await evaluate(`(() => { const l = [...document.querySelectorAll('${secret} .disclose .lamp')];
+          return l.length === 3 && l.filter((x) => x.classList.contains('bad')).length === 1 && l.every((x) => !x.title.includes('#')); })()`));
+      await click(`${secret} .disclose`);
+      const secretFacts = await evaluate(`(() => {
+        const item = document.querySelector('${secret} .project-body .counts-only');
+        return item && { links: [...item.querySelectorAll('a')].map((a) => [a.textContent, a.getAttribute('href')]),
+          meta: item.querySelector('.item-meta').textContent, items: document.querySelectorAll('${secret} .project-body .item').length };
+      })()`);
+      check('an open private row links its counts to the lists on GitHub', js(secretFacts?.links) === js([
+        ['3 PRs', `${secretUrl}/pulls`], ['2 issues', `${secretUrl}/issues`], ['1 branch with no PR', `${secretUrl}/branches`]])
+        && secretFacts.items === 1, js(secretFacts));
+      check('an open private row counts the PR states and says why there are no titles',
+        secretFacts?.meta.startsWith('PRs: 2 ready, 1 needs a fix.') && secretFacts.meta.includes('counts only'), js(secretFacts?.meta));
+      check('a private repo\'s ready PRs are one row with a count', await evaluate(`[...document.querySelectorAll('#content .item')]
+        .some((li) => li.querySelector('.repo-tag')?.textContent === 'secret-repo'
+          && li.querySelector('a')?.getAttribute('href') === '${secretUrl}/pulls'
+          && li.querySelector('a').textContent === ${js(`${data.readyIdle.find((r) => r.repo === 'secret-repo')?.count} PRs`)})`));
+      check('a private repo\'s issues are a count with a link', await evaluate(`[...document.querySelectorAll('#content a[href="${secretUrl}/issues"]')]
+        .some((a) => a.textContent === '2 open issues')`));
+      await click('article.project[data-project="app-one"] .disclose');
+      check('an item a private repo opened for a project is a count', (await text('article.project[data-project="app-one"] .project-body'))
+        ?.includes('secret-repo: 1 PR'));
+      await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=false]")) b.click()`);
+      const leaks = await evaluate(`(() => {
+        const words = ${js(['Helper for app-one', 'Secret ready change', 'Secret draft change', 'Secret issue words',
+          'secret-ready-branch', 'secret-draft-branch', 'secret-orphan-branch', 'secret-unknown-target'])};
+        const page = document.body.innerText;
+        return [...words.filter((w) => page.includes(w)),
+          ...[...document.querySelectorAll('a')].map((a) => a.href).filter((h) => /secret-repo\\/(pull|issues|tree)\\//.test(h))];
+      })()`);
+      check('no title, branch name or item link of a private repo is on the board', leaks?.length === 0, js(leaks));
+      await evaluate(`for (const b of document.querySelectorAll(".disclose[aria-expanded=true]")) b.click()`);
     }
 
     // ---- filters ----
-    const conflicted = active.filter((p) => p.prs.some((pr) => pr.mergeable === 'CONFLICTING')).map((p) => p.name).sort();
+    const conflicted = active.filter((p) => prsOf(p).some((pr) => pr.mergeable === 'CONFLICTING')).map((p) => p.name).sort();
     await click('#status-filter input[value="conflict"]');
     await sleep(100);
     const shownConflicts = (await evaluate('[...document.querySelectorAll("article.project")].map((a) => a.dataset.project)')).sort();

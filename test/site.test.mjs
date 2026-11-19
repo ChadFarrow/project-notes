@@ -50,12 +50,12 @@ function run(degradedReason = null) {
   return { ...out, data: JSON.parse(out.siteData) };
 }
 const project = (data, name) => data.projects.find((p) => p.name === name);
-const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranches.length || p.openedElsewhere.length
+const hasWork = (p) => p.prsTotal || p.issuesTotal || p.orphanBranchesTotal || p.openedElsewhere.length
   || p.watch.some((w) => w.prsTotal || w.issuesTotal);
 
 test('site data carries the version, the times and the thresholds', () => {
   const { data } = run();
-  assert.equal(data.version, 1);
+  assert.equal(data.version, 2);
   assert.equal(data.owner, 'ChadFarrow');
   assert.equal(data.generatedAt, '2026-09-27 12:00 UTC');
   assert.equal(data.generatedAtIso, '2026-09-27T12:00:00.000Z');
@@ -112,12 +112,34 @@ test('site data points to the note file, including a stub made in the same run',
 test('site data lists ready-but-idle PRs, stale repos and shared issues in dashboard order', () => {
   const { data, files } = run();
   const latest = files.get('LATEST.md');
-  for (const r of data.readyIdle) assert.ok(latest.includes(`**${r.repo}** [#${r.number} `), `${r.repo} #${r.number}`);
+  for (const r of data.readyIdle) {
+    const link = r.number ? `[#${r.number} ` : `[${r.count} PR`;
+    assert.ok(latest.includes(`**${r.repo}** ${link}`), `${r.repo} ${link}`);
+  }
+  assert.deepEqual(data.readyIdle[0], { repo: 'secret-repo', count: 1, idleDays: 19, minIdleDays: 19 });
   assert.deepEqual(data.stale.map((s) => s.repo),
     [...latest.split('## Stale')[1].matchAll(/^- \[([^\]]+)\]/gm)].map((m) => m[1]));
   assert.equal(data.issues.shared[0].title, 'Bump nostr-tools');
   assert.deepEqual(data.issues.shared[0].items.map((i) => i.repo), ['app-one', 'svc-core']);
   assert.equal(data.issues.total, Number(/### Open issues \((\d+)\)/.exec(latest)[1]));
+  assert.deepEqual(data.issues.counted, [{ repo: 'secret-repo', count: 2 }]);
+  assert.ok(!data.issues.byProject.some((g) => g.repo === 'secret-repo'));
+});
+
+test('site data gives a private project counts and PR states, and no title, number or branch name', () => {
+  const { data } = run();
+  const p = project(data, 'secret-repo');
+  assert.equal(p.countsOnly, true);
+  assert.deepEqual([p.prsTotal, p.issuesTotal, p.orphanBranchesTotal], [3, 2, 1]);
+  assert.deepEqual([p.prs, p.issues, p.orphanBranches, p.openedElsewhere], [[], [], [], []]);
+  assert.deepEqual(p.prStates.map((s) => s.isDraft), [false, false, true]);
+  assert.deepEqual(Object.keys(p.prStates[0]).sort(), ['checks', 'isDraft', 'mergeable']);
+  // An item it opened for a public project: the repo and the kind, nothing more.
+  assert.deepEqual(project(data, 'app-one').openedElsewhere.find((e) => e.repo === 'secret-repo'),
+    { repo: 'secret-repo', kind: 'PR', countsOnly: true });
+  assert.equal(project(data, 'app-one').countsOnly, undefined);
+  assert.equal(project(data, 'app-one').orphanBranchesTotal, 2);
+  assert.equal(data.totals.orphanBranches, 4);
 });
 
 test('site data carries a watched repo as its link and counts, nothing more', () => {
