@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-19 20:52 UTC
+# Dashboard — 2026-11-19 22:14 UTC
 
-29 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+35 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -91,17 +91,23 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-9 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+15 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2 hours ago
+- PR [#617 fix(history): desktop back — origin links step back, modals are entries, tabs leave Alt+←/⌘← alone](https://github.com/ChadFarrow/boostmebitch/pull/617) — opened 2 minutes ago
+- PR [#616 fix(nwc): keep wallet state with the wallet it belongs to](https://github.com/ChadFarrow/boostmebitch/pull/616) — opened 1 hour ago
+- PR [#615 fix(spark): ask before overwriting the wallet backup when the read could not tell](https://github.com/ChadFarrow/boostmebitch/pull/615) — opened 1 hour ago
+- PR [#614 fix(v4v): never pay twice because a wallet did not answer](https://github.com/ChadFarrow/boostmebitch/pull/614) — opened 1 hour ago
+- PR [#613 fix(amber): refuse a stale clipboard answer, and a signed event that is not the one we asked for](https://github.com/ChadFarrow/boostmebitch/pull/613) — opened 1 hour ago
+- PR [#612 fix(feeds): readAttr is quote-aware, and a tag in a comment or CDATA is not a tag](https://github.com/ChadFarrow/boostmebitch/pull/612) — opened 1 hour ago
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 3 hours ago
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 4 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 4 days ago · draft
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 6 days ago · draft
+- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 6 days ago · draft · merge conflict
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 6 days ago
-- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 4 hours ago · draft
+- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 6 hours ago · draft
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 4 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR

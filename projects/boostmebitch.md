@@ -35,8 +35,14 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (9)
+### Pull requests (15)
 
+- [#617 fix(history): desktop back — origin links step back, modals are entries, tabs leave Alt+←/⌘← alone](https://github.com/ChadFarrow/boostmebitch/pull/617) — opened 2026-11-19
+- [#616 fix(nwc): keep wallet state with the wallet it belongs to](https://github.com/ChadFarrow/boostmebitch/pull/616) — opened 2026-11-19
+- [#615 fix(spark): ask before overwriting the wallet backup when the read could not tell](https://github.com/ChadFarrow/boostmebitch/pull/615) — opened 2026-11-19
+- [#614 fix(v4v): never pay twice because a wallet did not answer](https://github.com/ChadFarrow/boostmebitch/pull/614) — opened 2026-11-19
+- [#613 fix(amber): refuse a stale clipboard answer, and a signed event that is not the one we asked for](https://github.com/ChadFarrow/boostmebitch/pull/613) — opened 2026-11-19
+- [#612 fix(feeds): readAttr is quote-aware, and a tag in a comment or CDATA is not a tag](https://github.com/ChadFarrow/boostmebitch/pull/612) — opened 2026-11-19
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
 - [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 2026-11-19 · draft
 - [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16 · draft
@@ -44,8 +50,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15 · draft
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
-- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (5)
 
