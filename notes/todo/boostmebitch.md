@@ -31,6 +31,18 @@
 
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
+- [ ] Before merge: #604 the GitHub folder with a copy of every playlist feed (branch `playlists`). Merge it to `main`: the copy job runs only from `main`
+
+- [ ] After merge: #604 the first copy
+  - [ ] Computer: on GitHub, open Actions, then "playlist-archive", then Run workflow. Then open the branch `playlists`: `playlists/` has one `.xml` file for each playlist and an `index.json`
+  - [ ] Computer: in Vercel, check that no deployment started for the branch `playlists`
+
+- [ ] Before merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. Put it on beta: `npm run beta -- add 605`
+  - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
+  - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
+  - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
+  - [ ] Computer: on beta, open the playlist that goes to Podcast Index first and press SAVE. The `[community-pi]` line in the Vercel log of that request says "added", or "refused: 401" when the key has no write permission. Podcast Index keeps the playlist for good
+
 ## Already works
 
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
