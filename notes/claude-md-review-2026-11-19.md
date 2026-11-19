@@ -2,6 +2,8 @@
 
 Chad asked for a review of the CLAUDE.md files of the repos he keeps on his Mac mini. This note is the plan. It holds no rewrite. Chad picks what to do. Each change then goes to that repo's own agent as its own task.
 
+**Status (2026-11-19): Chad approved the suggested order. No rewrite has started.** Each rewrite goes to that repo's own agent as its own task. Still open for Chad: the Task Master question, the Auto-musicL-Maker CLAUDE.md, the default branch of helipad-startos, and the `.env` check in musicL-playlist-updater (see the end of this note).
+
 This note lists the **public** repos only. The rows of the private repos are in a git-ignored note on the Mac mini (`notes/private-claude-md-review-2026-11-19.md`).
 
 ## How it was checked
