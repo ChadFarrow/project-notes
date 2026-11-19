@@ -5,8 +5,6 @@
   - [ ] Computer: open a NEW MUSIC row, and check that the album page opens
   - [ ] Computer: open a Wavlake album (for example Tinderbox by Nate Johnivan) and press ♡ ARTIST under the artist name. NEW MUSIC on Favorites then lists the artist under "Followed on this device", and the artist is not added to your favorites list
 
-- [ ] After merge: #583. Tell Claude to drop the branch `beta-demu-page` from beta (`npm run beta -- drop beta-demu-page`; a rebuild does not drop it, because it has no PR) and delete it
-
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
 - [ ] Before merge: #584 the boost screen stays on its track when the track changes. #584 is not on beta: test on the Vercel preview of the PR
@@ -34,7 +32,7 @@
 - [ ] After merge: #604 the copy job must also run by itself every 15 minutes. GitHub started no run from the schedule in the 73 minutes after the merge (2026-11-19). A run by hand worked
   - [ ] Computer: on GitHub, open Actions, then "Playlist archive". Runs with the event "schedule" show there. If none show by 2026-11-20, tell Claude
 
-- [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It is merged into the #576 branch, so the next `npm run beta -- rebuild` puts it on beta. That rebuild stops now: every playlist branch conflicts with `main` (your open question about merging `main` into them). The new conflict in `docs/ops.md`: keep both sides
+- [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It is in the #576 branch, and it is on beta since 2026-11-19
   - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
   - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
   - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
@@ -42,6 +40,7 @@
 
 ## Already works
 
+- Beta rebuilt with 6 branches, without `beta-demu-page` (2026-11-19, beta feca7d8; the branch is deleted, its commits are in #580 and #583). #538 (main through #604) is merged into #572 and #540, #572 into #574, #574 into #576, and #540 moves three lines so it merges with #576. Checks and builds pass on each branch: `e2e:deadtrack` 63/63 on #572, `e2e:boostnote` 47/47 and `e2e:communitynote` 88/88 and 39/39 on #540
 - #604 merged 2026-11-19 (7c5fa78): the copy job, run by hand, put both playlists and `index.json` on the branch `playlists` (9c81301). The copies are the same bytes as the live feeds, and Vercel made no deployment for that branch
 - #592 merged 2026-11-17 (96b0cf9): your beta phone test passed, and on both production sites `muton` finds the Mutton, Mead & Music playlist and `homegrown hitz` finds the ChadF Homegrown Hits playlist
 - #585 merged 2026-11-17 (bacfe81): on the Pixel 6 over adb (Vanadium, Chromium 157, 5 runs, the back key and the edge swipe), the first back closes the full-screen player and stays on /favorites, and each later back goes to the page before. `e2e:history` passes on both production sites (94 checks). Not tested on the phone: /live/<npub> and /stream/<naddr>
