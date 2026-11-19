@@ -5,9 +5,9 @@
   - [ ] Computer: open a NEW MUSIC row, and check that the album page opens
   - [ ] Computer: open a Wavlake album (for example Tinderbox by Nate Johnivan) and press ♡ ARTIST under the artist name. NEW MUSIC on Favorites then lists the artist under "Followed on this device", and the artist is not added to your favorites list
 
-- [ ] Before merge: #580 DEMU search type and #583 /demu page. Merge #580 first, then change the base of #583 to `main`
+- [ ] Before merge: #583 the /demu page, the BROWSE DEMU button on the home page and "browse all DeMu →" under a DEMU search, on both brands. #580 is merged, and GitHub moved the base of #583 to `main`. Remove `hold`, press Ready for review, then merge
 
-- [ ] In development: #583 /demu is on beta through the beta-only branch `beta-demu-page` (#583 plus the five beta branches, conflicts resolved). When #583 changes, merge `feat/demu-page` into `beta-demu-page` and run `npm run beta -- rebuild`. Delete the branch and drop it from beta when #583 merges
+- [ ] After merge: #583. Tell Claude to drop the branch `beta-demu-page` from beta (`npm run beta -- drop beta-demu-page`; a rebuild does not drop it, because it has no PR) and delete it
 
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
