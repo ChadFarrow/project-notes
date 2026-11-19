@@ -50,3 +50,7 @@ roadmaps/thelounge-candr.md
 roadmaps/thelounge-candr *.md
 roadmaps/vibe-kit.md
 roadmaps/vibe-kit *.md
+
+# Private working notes (reviews and plans that name private repos): notes/private-*.md.
+# Same rule as above: this checkout and the vault only. Never `git add -f` them.
+notes/private-*.md
