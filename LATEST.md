@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-19 13:39 UTC
+# Dashboard — 2026-11-19 13:43 UTC
 
-29 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+28 open PRs · 19 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -93,10 +93,9 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-10 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
+9 PRs · 6 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 2 issues)
 
-- PR [#583 DeMu page: every self-hosted album, newest first](https://github.com/ChadFarrow/boostmebitch/pull/583) — opened 3 days ago · draft
-- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft · checks pending
+- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 3 days ago · draft
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 6 days ago · draft
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 3 days ago · draft
@@ -195,7 +194,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 - PR [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 22 hours ago
 - PR [#6 Thunder Road Media watch page: a CRT TV that surfs the shows](https://github.com/ChadFarrow/small-group-scoop/pull/6) — opened 1 day ago
 - PR [#12 Boosts: 100-sat minimum, 1-sat floor; streaming: 10 sats/min minimum, paid in 10-minute batches](https://github.com/ChadFarrow/small-group-scoop/pull/12) — opened 16 hours ago
-- PR [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 23 hours ago
+- PR [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 23 hours ago · merge conflict
 - PR [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 23 hours ago
 - PR [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 1 day ago
 - PR [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 1 day ago
@@ -207,7 +206,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 2 PRs
 
-- PR [#49 Mic mute: cut your mic in Audio Hijack, keep the board in Riverside](https://github.com/ChadFarrow/Command-Center/pull/49) — opened 7 hours ago
+- PR [#49 Mic mute: cut your mic in Audio Hijack, keep the board in Riverside](https://github.com/ChadFarrow/Command-Center/pull/49) — opened 8 hours ago
 - PR [#47 Full screen layout from Chad's approved mockup (merge after the 015 show)](https://github.com/ChadFarrow/Command-Center/pull/47) — opened 1 day ago · draft
 
 ### Quiet — no open work

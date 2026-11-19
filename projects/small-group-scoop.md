@@ -28,7 +28,7 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 - [#12 Boosts: 100-sat minimum, 1-sat floor; streaming: 10 sats/min minimum, paid in 10-minute batches](https://github.com/ChadFarrow/small-group-scoop/pull/12) — opened 2026-11-18
 - [#11 TRM takeover: the Thunder Road Media page becomes its own site inside the Scoop](https://github.com/ChadFarrow/small-group-scoop/pull/11) — opened 2026-11-18
-- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18
+- [#10 Let Thunder Road Media save as its own home-screen app](https://github.com/ChadFarrow/small-group-scoop/pull/10) — opened 2026-11-18 · merge conflict
 - [#9 Let the site save to a phone's home screen](https://github.com/ChadFarrow/small-group-scoop/pull/9) — opened 2026-11-18
 - [#8 Hide the login page's spam trap](https://github.com/ChadFarrow/small-group-scoop/pull/8) — opened 2026-11-18
 - [#7 Phone layout for iPhone and Android (fork test)](https://github.com/ChadFarrow/small-group-scoop/pull/7) — opened 2026-11-18
