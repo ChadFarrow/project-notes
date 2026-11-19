@@ -1,2 +1,3 @@
 - [ ] After merge: Make the read token with the link in the token sheet (choose All repositories), and paste it on the live page. Then tell Claude whether the sheet accepted it and whether titles show under a Command-Center item.
 - [ ] After merge: Computer: #28 After the next sync, open the live page. Check that each private repo shows counts only, with no PR title and no branch name.
+- [ ] After merge: Computer: #29 After the next sync, open INDEX.md on GitHub. Check that each private repo shows its name and "private", with no description and no language. When #28 and #29 have both merged, tell Claude, so an agent cleans the audit copies written before #28 merged.
