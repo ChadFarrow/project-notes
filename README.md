@@ -36,6 +36,8 @@ For: ChadFarrow/<project-repo>
 
 The iCloud vault `project-notes` holds a copy of this repo for Obsidian on the Mac and the phone. Notes that you write there reach GitHub within minutes: new notes go in `notes/`, and your text in a project note goes to its file in `projects/`. The dashboard and the live blocks flow the other way only. The Mac mini does the sync, so it must be on. The To do list is the folder `notes/todo/`, one note per repo: tick a box when it is done.
 
+The folder `roadmaps/` holds one roadmap per project: the goal, the work for now, next and later, the questions to plan, and what is done. You move the items between the sections. The roadmap of a private repo stays on the Mac mini and in the vault, as its To do note does.
+
 ## How it updates
 
 A GitHub Action runs `scripts/sync.mjs` every 4 hours and commits the result. To preview a run locally, use `node scripts/sync.mjs --dry-run`. [CLAUDE.md](CLAUDE.md) has the details.

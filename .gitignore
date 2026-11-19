@@ -27,3 +27,26 @@ notes/todo/thelounge-candr.md
 notes/todo/thelounge-candr *.md
 notes/todo/vibe-kit.md
 notes/todo/vibe-kit *.md
+
+# The roadmap notes of private repos, for the same reason (CLAUDE.md, "Roadmaps"). Keep this
+# list equal to the one above: a repo that turns private goes in both, two lines each.
+roadmaps/blup.md
+roadmaps/blup *.md
+roadmaps/candr.space.md
+roadmaps/candr.space *.md
+roadmaps/Command-Center.md
+roadmaps/Command-Center *.md
+roadmaps/Helipad-to-Nostr-BoostBot.md
+roadmaps/Helipad-to-Nostr-BoostBot *.md
+roadmaps/obsidian-candr.md
+roadmaps/obsidian-candr *.md
+roadmaps/pc20-clips.md
+roadmaps/pc20-clips *.md
+roadmaps/pc20-timeline.md
+roadmaps/pc20-timeline *.md
+roadmaps/small-group-scoop.md
+roadmaps/small-group-scoop *.md
+roadmaps/thelounge-candr.md
+roadmaps/thelounge-candr *.md
+roadmaps/vibe-kit.md
+roadmaps/vibe-kit *.md

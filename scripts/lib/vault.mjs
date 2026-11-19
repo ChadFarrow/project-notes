@@ -19,7 +19,7 @@ export function zoneOf(path) {
     || path === 'references/starred.md') return 'generated';
   if (/^projects\/[^/]+\.md$/.test(path)) return 'note';
   if (path === 'README.md' || path === 'PC2.0-SPECS.md'
-    || /^(references|notes|projects\/archived)\//.test(path)) return 'free';
+    || /^(references|notes|roadmaps|projects\/archived)\//.test(path)) return 'free';
   return null;
 }
 
