@@ -35,8 +35,10 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (13)
+### Pull requests (15)
 
+- [#632 feat(links): an album's app link says ?album=\<guid\>](https://github.com/ChadFarrow/boostmebitch/pull/632) — opened 2026-11-20
+- [#631 feat(links): a playlist's app link says ?playlist=\<guid\>](https://github.com/ChadFarrow/boostmebitch/pull/631) — opened 2026-11-20
 - [#630 fix(playlists): the community list is never cached, so a deleted playlist leaves /playlists at once](https://github.com/ChadFarrow/boostmebitch/pull/630) — opened 2026-11-20
 - [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
 - [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 2026-11-20 · draft
