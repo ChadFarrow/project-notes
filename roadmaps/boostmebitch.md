@@ -20,25 +20,25 @@ A year from now, boostmebitch.com and boostmebuddy.com are where a listener find
 
 November 2026.
 
-- Community playlists, the locked stack: on beta only, each PR has the `hold` label, and Chad releases each one. [Spec](https://github.com/ChadFarrow/boostmebitch/blob/main/docs/superpowers/specs/2026-11-12-community-playlists-design.md)
+- Community playlists: shipped to `main` in [#633](https://github.com/ChadFarrow/boostmebitch/pull/633) on 2026-11-20, the whole stack as one squash merge, and the stack PRs below are closed. The maker and the list show on beta only, until `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` is on for Production. [Spec](https://github.com/ChadFarrow/boostmebitch/blob/main/docs/superpowers/specs/2026-11-12-community-playlists-design.md)
   - [#538](https://github.com/ChadFarrow/boostmebitch/pull/538) make, list, edit and favorite a playlist; the admin page ([#539](https://github.com/ChadFarrow/boostmebitch/pull/539)) is inside it
   - [#540](https://github.com/ChadFarrow/boostmebitch/pull/540) a boost note names the playlist the song was heard on
   - [#572](https://github.com/ChadFarrow/boostmebitch/pull/572) art upload to Blossom, dead-song checks, fallback covers and phone fixes
   - [#573](https://github.com/ChadFarrow/boostmebitch/pull/573) a copy-RSS button on a playlist
   - [#574](https://github.com/ChadFarrow/boostmebitch/pull/574) PUBLISH lists what is missing, and the maker works signed out
   - [#576](https://github.com/ChadFarrow/boostmebitch/pull/576) MADE BY name, pubDate, and SHUFFLE and REPEAT on a playlist; deploy steps in [#575](https://github.com/ChadFarrow/boostmebitch/issues/575)
-  - [#605](https://github.com/ChadFarrow/boostmebitch/pull/605) after each publish, copy the feed to GitHub and send it to Podcast Index; merged into the #576 branch, so it ships with the stack
-  - [#607](https://github.com/ChadFarrow/boostmebitch/pull/607) the npub page lists the playlists that the npub made; ships with the stack
+  - [#605](https://github.com/ChadFarrow/boostmebitch/pull/605) after each publish, copy the feed to GitHub and send it to Podcast Index; merged into the #576 branch, so it shipped in [#633](https://github.com/ChadFarrow/boostmebitch/pull/633)
+  - [#607](https://github.com/ChadFarrow/boostmebitch/pull/607) the npub page lists the playlists that the npub made; shipped in [#633](https://github.com/ChadFarrow/boostmebitch/pull/633)
 - [#606](https://github.com/ChadFarrow/boostmebitch/pull/606) a glyph on every search type, and the words line up
-- [#579](https://github.com/ChadFarrow/boostmebitch/pull/579) NEW MUSIC on /favorites: new albums from favorited artists; waits for Chad's test on the PR preview
-- [#584](https://github.com/ChadFarrow/boostmebitch/pull/584) the boost screen stays on the track it was opened for (fixes [#551](https://github.com/ChadFarrow/boostmebitch/issues/551)); waits for Chad's test with a real NWC wallet
+- [#579](https://github.com/ChadFarrow/boostmebitch/pull/579) NEW MUSIC on /favorites: new albums from favorited artists; merged 2026-11-19, and Chad's test is in the To do note
+- [#584](https://github.com/ChadFarrow/boostmebitch/pull/584) the boost screen stays on the track it was opened for (fixes [#551](https://github.com/ChadFarrow/boostmebitch/issues/551)); merged 2026-11-19, and Chad's test with a real NWC wallet is in the To do note
 
 ## Next
 
 Builds on Now.
 
 - Song-suggestion playlists: design accepted; no spec in `docs/` yet (see To plan)
-- Community playlists in Podcast Index for real: turn on `COMMUNITY_PI_NOTIFY` in production after the stack ships; the Podcast Index key needs write permission ([#605](https://github.com/ChadFarrow/boostmebitch/pull/605))
+- Community playlists in Podcast Index for real: turn on `COMMUNITY_PI_NOTIFY` in production (the stack is on `main` since [#633](https://github.com/ChadFarrow/boostmebitch/pull/633)); the Podcast Index key needs write permission ([#605](https://github.com/ChadFarrow/boostmebitch/pull/605))
 - /demu hides spam feeds with the tags of v4vmusic.com, as well as its own hide list in `lib/demu-hide-list.ts` (after [#583](https://github.com/ChadFarrow/boostmebitch/pull/583))
 
 ## Later
@@ -54,9 +54,9 @@ Questions for a design session with Chad.
 
 - Goal: is the draft above right? What is boostmebitch for, a year from now?
 - Song-suggestion playlists: where is the accepted design, and does the work start before or after the playlist stack leaves beta?
-- The playlist stack: in what order do the locked PRs leave beta, and do the stack branches merge `main` now? (the open question in the To do note)
+- The playlist stack: in what order do its PRs leave beta? Answered on 2026-11-20: the whole stack shipped to `main` together in [#633](https://github.com/ChadFarrow/boostmebitch/pull/633), and its PRs are closed
 - Favorites with no medium: a song hearted from a playlist row, or from a track list whose feed has no medium, saves no medium, so it shows under MEDIUM UNKNOWN and SHUFFLE skips it. Show the album's medium from Podcast Index (display only, no list write)? Answer `fav-medium: fix` or `fav-medium: no`
-- Add songs rows with no art: fall back to the album art? The code is on the locked playlist branches. Answer `fav-art: fix` or `fav-art: wait`
+- Add songs rows with no art: fall back to the album art? The code is on `main` since [#633](https://github.com/ChadFarrow/boostmebitch/pull/633). Answer `fav-art: fix` or `fav-art: wait`
 - iOS background play: the music does not continue after an interruption (a call, dictation) until BMB is in front again, and only a native wrapper fixes that fully. Make an iOS app, as there is an Android app ([#559](https://github.com/ChadFarrow/boostmebitch/pull/559))?
 - The Libre wallet embed ([#120](https://github.com/ChadFarrow/boostmebitch/pull/120)): keep it as an experiment, plan it, or close it?
 - Holiday logos, every year: a place on the site to design the emu's holiday looks and plan when each one changes (Chad, 2026-11-19: "there should be a part of the site set aside for designing and planning when these logos change, because I do want to have this be yearly"). Today the eleven looks and their dates are code in `lib/demu-holiday.ts` and `components/demu-costumes.tsx` ([#609](https://github.com/ChadFarrow/boostmebitch/pull/609), [#610](https://github.com/ChadFarrow/boostmebitch/pull/610), [#611](https://github.com/ChadFarrow/boostmebitch/pull/611)): each look leads up to its day and switches the day after, so the emu wears one every day. To plan with Chad: what "designing" on the site means, and who may change it
@@ -71,10 +71,12 @@ Questions for a design session with Chad.
 
 Milestones, newest first. Older work is in the merged PRs.
 
+- 2026-11-20 [#633](https://github.com/ChadFarrow/boostmebitch/pull/633) community playlists, the whole stack in one squash merge: make, list, edit and favorite a playlist, the admin page, art upload to Blossom, dead-song checks, PUBLISH lists what is missing, a maker with no Nostr account, MADE BY, SHUFFLE and REPEAT, the copy-RSS button, boost notes that name the playlist, the playlists on the npub page, a Podcast Index notice and a podping after each publish, and no shared cache on a feed. The maker and the list stay hidden on the live sites until `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` is on for Production
 - 2026-11-20 [#632](https://github.com/ChadFarrow/boostmebitch/pull/632) an album's link says `?album=<guid>`; old `?podcast=` links still open it
 - 2026-11-20 [#630](https://github.com/ChadFarrow/boostmebitch/pull/630) a deleted community playlist leaves /playlists at once (the list is no longer cached), and [#631](https://github.com/ChadFarrow/boostmebitch/pull/631) a playlist's link says `?playlist=<guid>`, as its feed address does; old `?podcast=` links still open it
 - 2026-11-19 [#618](https://github.com/ChadFarrow/boostmebitch/pull/618), [#619](https://github.com/ChadFarrow/boostmebitch/pull/619), [#620](https://github.com/ChadFarrow/boostmebitch/pull/620) and [#621](https://github.com/ChadFarrow/boostmebitch/pull/621) a shorter `CLAUDE.md` (15,099 to 12,209 words; the reasons moved to `docs/`), and `check:claudemd` now finds a check script or a doc that the file does not name
 - 2026-11-19 [#612](https://github.com/ChadFarrow/boostmebitch/pull/612), [#613](https://github.com/ChadFarrow/boostmebitch/pull/613), [#614](https://github.com/ChadFarrow/boostmebitch/pull/614), [#615](https://github.com/ChadFarrow/boostmebitch/pull/615) and [#616](https://github.com/ChadFarrow/boostmebitch/pull/616) five fixes from the review of all the code: a quote-aware feed attribute reader, Amber's clipboard answers, no second payment when a wallet does not answer, no overwrite of the Spark backup after a read that could not tell, and the boost screen keeps the wallet you pick
+- 2026-11-19 [#579](https://github.com/ChadFarrow/boostmebitch/pull/579) NEW MUSIC on /favorites: new albums from favorited artists; [#584](https://github.com/ChadFarrow/boostmebitch/pull/584) the boost screen stays on the track it was opened for (fixes [#551](https://github.com/ChadFarrow/boostmebitch/issues/551)); [#606](https://github.com/ChadFarrow/boostmebitch/pull/606) a glyph on every search type, and the words line up
 - 2026-11-19 [#604](https://github.com/ChadFarrow/boostmebitch/pull/604) every community playlist feed is copied to the `playlists` branch on GitHub
 - 2026-11-19 [#603](https://github.com/ChadFarrow/boostmebitch/pull/603) favorites: check a backup before RESTORE, and tick each repair
 - 2026-11-19 [#580](https://github.com/ChadFarrow/boostmebitch/pull/580) and [#583](https://github.com/ChadFarrow/boostmebitch/pull/583) DeMu on the main sites: a DEMU search type and the /demu page of self-hosted albums

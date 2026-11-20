@@ -5,25 +5,25 @@ Community playlists, beta test list. Written 2026-11-14.
 - Test on: https://beta.boostmebitch.com
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) (the admin page, #539, is inside it)
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540)
-- Merge #538 first. Then #540 targets `main`.
+- Both shipped to `main` in #633 (2026-11-20), with the rest of the stack. The maker and the list show on beta only until `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` is on for Production, so test on beta.
 - Test playlist: "BMB test playlist", 10 songs. Feed: https://www.boostmebuddy.com/feeds/playlists/ed79e282-3d6e-4764-adb5-8702eaf77086.xml
 
 > [!warning] Beta is real
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
-## Before merge: Phone: 1. The playlist maker (#538), on a real phone
+## After merge: Phone: 1. The playlist maker (#538), on a real phone
 - [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
 - [ ] #572: on Android, ↑ UPLOAD PICTURE with Amber. The upload asks Amber for one extra signature, and the picture must then show as the art. Only the iPhone signer was tested
 
-## Before merge: Phone: 6. Playback (#538), on a real phone
+## After merge: Phone: 6. Playback (#538), on a real phone
 Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
-- [ ] #576, when it is on beta (step 2 of #575 above): press the new SHUFFLE button on the playlist. The first song starts at once, and every song plays once before any song plays again. #576 was not tested on a real iPhone
+- [ ] #576 (on beta, and on main since #633): press the new SHUFFLE button on the playlist. The first song starts at once, and every song plays once before any song plays again. #576 was not tested on a real iPhone
 
-## Before merge: 2. The list and the hearts (#538)
+## After merge: 2. The list and the hearts (#538)
 - [ ] Heart a playlist, and heart one song in it
 - [ ] Open your favorites in OnlyBoosts. The song must show under its own album, not under the playlist
 
-## Before merge: 3. The admin page (#539, inside #538)
+## After merge: 3. The admin page (#539, inside #538)
 - [ ] Open `/admin` with your account. You see every playlist, newest first
 - [ ] DELETE asks first
 - [ ] BAN MAKER asks first (BAN AND DELETE ALL / BAN ONLY / CANCEL)
@@ -34,12 +34,12 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [ ] Do not ban a real listener
 - [ ] Open `/admin` with a second account. It must say "This account is not an admin."
 
-## Before merge: 4. Boost notes (#540), with a real wallet
+## After merge: 4. Boost notes (#540), with a real wallet
 - [ ] Boost the same song as Anonymous. Buddy's site key must sign the note, in Buddy's words
 - [ ] Look at Helipad on the receiving side. The boostagram must not change: `app_name` BoostMeBitch, and the song's `remote_item_guid`
 - [ ] Open the note in Fountain. Fountain must show the quoted receipt
 
-## Before merge: 5. A podcast app
+## After merge: 5. A podcast app
 - [ ] Subscribe to the test playlist's feed address in a podcast app (for example Fountain). The app must list the 10 songs and play them
 
 ## Already works (checked on the live sites, 2026-11-14)
@@ -69,9 +69,7 @@ Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio ho
 - [x] Android and iPhone, beta (2026-11-15), #574: signed out, build a playlist, PUBLISH, then SIGN IN from the popup (Amber on Android, your iPhone signer): the playlist stays on the form, and PUBLISH publishes it
 - [x] Beta (2026-11-15), boost notes (#540): a boost as yourself from "BMB test playlist" names the song's own album as the show, has the `🎧 Heard on <playlist> by <maker>` line and the playlist link, and tags the maker; a boost from a ChadF playlist has the Heard-on line in BoostMeBitch words
 - Production (2026-11-16), #575 and #578: the `owner_name` column is in Neon; both test feeds on www.boostmebuddy.com carry `<itunes:author>ChadF</itunes:author>` and `<pubDate>`; beta is rebuilt on that `main`
-
-## Before merge: Fix before #540 merges
-- [ ] Two docs say a beta playlist keeps BoostMeBitch words: `docs/ops.md` ("The beta site") and the `noteBrandFor` paragraph in `docs/nostr.md`. Since #542, the feed origin on beta is boostmebuddy.com, so a beta playlist boost uses Buddy's words and Buddy's key. Correct the two paragraphs.
+- The two docs on the words of a beta playlist's note (2026-11-20): `docs/nostr.md` was already right, and #634 corrected `docs/ops.md` ("The beta site")
 
 ## In development: Before launch (not a beta test)
 - [ ] Find which method (GET or POST) Podcast Index `add/byfeedurl` uses, and confirm that the key can add feeds
