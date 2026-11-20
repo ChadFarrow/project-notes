@@ -27,11 +27,10 @@
   - [ ] Computer: decide who signs an Anonymous note for a song on a Buddy playlist. Now Buddy's site takes the stamp and signs the note, and a one-time key posts it when Buddy's site does not answer. Tell Claude: keep it, or let the site you boosted on sign it
   - [ ] Computer: decide if a note may quote a receipt from this site's own server with no check of its key. Now it may; only a receipt from the other brand's site must have that brand's key. Tell Claude: keep it, or check this site's key too (Claude then changes the stamp test, which uses a test key)
 
-- [ ] Before merge: #630 a deleted community playlist leaves /playlists at once: the list is no longer cached by the CDN. It is on beta since 2026-11-20
+- [ ] After merge: #630 a deleted community playlist leaves /playlists at once: the list is no longer cached by the CDN. It is live on both production sites (merged 2026-11-20), and on beta
   - [ ] Computer: on beta, delete a test playlist in the maker, then press ♫ BROWSE PLAYLISTS. The deleted playlist is not in the list. A local browser test passed, but only beta has the CDN that kept the old list
 
-- [ ] Before merge: #631 a playlist's link says `?playlist=<guid>`, and #632 an album's link says `?album=<guid>`. Old `?podcast=` links still open them. Neither is on beta
-  - [ ] Computer: merge #631 first. #632 is stacked on it: then tell Claude to move #632 onto main
+- [ ] Before merge: #632 an album's link says `?album=<guid>`. Old `?podcast=` links still open it. It is on top of main since 2026-11-20 and not on beta. #631 (a playlist's link says `?playlist=<guid>`) is live on both production sites (merged 2026-11-20)
   - [ ] Phone: after the merge, open an old boost note's link to an album in your Nostr app. The album opens, and the address bar then says `?album=`
 
 - [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
