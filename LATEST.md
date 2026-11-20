@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-20 21:57 UTC
+# Dashboard — 2026-11-20 22:25 UTC
 
-24 open PRs · 14 open issues · 22 branches with no PR · 42 tracked repos (14 not tracked)
+23 open PRs · 14 open issues · 19 branches with no PR · 42 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -23,7 +23,7 @@ _None._
 **[boostmebitch](projects/boostmebitch.md)**
 
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 2 comments
-- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 7 days ago · 1 comment
+- [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 8 days ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 12 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 49 days ago
 
@@ -81,9 +81,8 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 4 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+3 PRs · 4 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#636 fix(player): a resumed episode starts at its saved place on an iPhone](https://github.com/ChadFarrow/boostmebitch/pull/636) — opened 17 minutes ago · draft
 - PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 8 hours ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 1 day ago
@@ -115,7 +114,7 @@ _None._
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 17 days ago · draft
-- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 3 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 4 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
 
@@ -136,7 +135,7 @@ _None._
 
 used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 3 hours ago
+- Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 4 hours ago
 - Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 4 days ago
 - Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 4 days ago
 
@@ -174,10 +173,6 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
-#### [sovereign-feeds](projects/sovereign-feeds.md)
-
-[3 branches with no PR](https://github.com/ChadFarrow/sovereign-feeds/branches) · private repo, counts only
-
 #### [vibe-kit](projects/vibe-kit.md)
 
 [1 PR](https://github.com/ChadFarrow/vibe-kit/pulls) · private repo, counts only
@@ -192,7 +187,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
