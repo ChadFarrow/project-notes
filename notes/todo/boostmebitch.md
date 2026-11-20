@@ -58,6 +58,13 @@
   - [ ] Computer: on beta, press SAVE on a test playlist. The `[community-podping]` line in the Vercel log of that request says "enqueued" (or "duplicate"). "pusher answered 401" means the token is wrong. Tell Claude what the line says
   - [ ] Computer: decide about the feed cache. After a SAVE the feed can stay old for about a minute (`s-maxage=60`), so an app that reads the podping at once may get the old feed. Podcast Index has the same limit. Tell Claude: fix it, or leave it
 
+- [ ] After merge: #613 Amber's clipboard answers (NIP-55: Amber on the same phone, not a bunker link). The review fixed two faults in it on 2026-11-19: a repeat of one request waited 60 s, and a seed on the clipboard could answer an encrypt after a reload
+  - [ ] Phone: on the Pixel 6 BMB app, signed in with Amber on the same phone, with no Spark wallet connected and a Spark backup on Nostr. Caution: Amber's approval screen shows your OLD seed when you press CREATE NEW (main does this too). Press CREATE NEW, approve in Amber, then press Cancel on "Overwrite your Spark wallet backup?". Then press RESTORE FROM NOSTR and approve. The wallet comes back in a few seconds, not after 60 s. Emulation cannot run Amber. About 10 min, no sats
+  - [ ] Phone: in the same session, with NWC connected, press ↻ Back up again and approve in Amber. The page says the backup is saved. This is the encrypt check: the browser test used real ciphertexts, but no Amber
+
+- [ ] After merge: #616 the boost screen keeps the wallet you pick when another wallet sends an event
+  - [ ] Computer: in Chrome with the Alby extension and your NWC wallet both connected, open BOOST on a show with several splits, pick WebLN, and send 100 sats. The Alby extension pays every split, and no split shows in the NWC wallet. A stub wallet tested this; on main the screen went back to NWC after the first payment. About 5 min, 100 sats
+
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
 ## Already works
