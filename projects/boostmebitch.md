@@ -38,7 +38,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ### Pull requests (12)
 
 - [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 2026-11-20 · draft
-- [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 2026-11-20 · merge conflict
+- [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 2026-11-20
 - [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2026-11-19
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
 - [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 2026-11-19 · draft
@@ -48,7 +48,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
 - [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (5)
 
