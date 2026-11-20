@@ -80,3 +80,8 @@
 - #567 GIF picker (2026-11-14, iPhone, Safari, beta): the GIFs play after Play anyway (Reduce Motion is on); ten searches in a row with scrolling, no freeze; the lock-screen ⏮/⏭ stay with the picker open over a playing track; search and scroll feel faster.
 - #567 GIPHY grid on the boostmebuddy preview plays (2026-11-14).
 - #564 and #567 are merged and live (2026-11-14).
+
+- [ ] Before merge: #623 make, edit and delete a playlist with no Nostr account. The browser makes a random key at the first PUBLISH and keeps it. It is on beta since 2026-11-19. Only headless Chrome tested it
+  - [ ] Phone: on beta in iPhone Safari, signed out, make a playlist and press PUBLISH. The page says you can edit it again in this browser. Close Safari, then open the PLAYLISTS page. EDIT shows on that playlist, and SAVE works. Tell Claude what iOS does
+  - [ ] Phone: do the same in the iPhone Home Screen app. Safari deletes site data after 7 days of Safari use without a tap on the site. WebKit says a Home Screen app is counted apart, and no test showed it
+  - [ ] Computer: in Firefox, signed out, make a playlist, PUBLISH, reload, then SAVE. Firefox was not tested
