@@ -33,36 +33,25 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ## Live status
 
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
-- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
+- **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (2 PRs, 1 issue)
 
-### Pull requests (12)
+### Pull requests (3)
 
 - [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
-- [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 2026-11-20 · draft
-- [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2026-11-19
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
-- [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 2026-11-19 · draft · merge conflict
-- [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16 · draft
-- [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 2026-11-15 · draft
-- [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15 · draft
-- [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15 · draft
-- [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
-- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
-### Issues (5)
+### Issues (4)
 
-- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 2026-11-16
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2026-11-12
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2026-09-03
 
-### Branches with no open PR (5)
+### Branches with no open PR (4)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
-- [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section)
 - [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists)
 <!-- AUTO:END -->

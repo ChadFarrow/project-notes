@@ -21,5 +21,7 @@ HGH checker utility
 
 - **Repo:** [ChadFarrow/HGH-checker](https://github.com/ChadFarrow/HGH-checker) · JavaScript
 
-_No open work._
+### Pull requests (1)
+
+- [#3 Rebuild: PASS/FAIL check that chapters, splits, songs, and wallets line up](https://github.com/ChadFarrow/HGH-checker/pull/3) — opened 2026-11-20
 <!-- AUTO:END -->

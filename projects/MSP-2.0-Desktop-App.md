@@ -27,7 +27,11 @@ Desktop application for MSP-2.0
 ## Live status
 
 - **Repo:** [ChadFarrow/MSP-2.0-Desktop-App](https://github.com/ChadFarrow/MSP-2.0-Desktop-App) · TypeScript
-- **Uses:** [MSP-2.0](MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (no open work)
+- **Uses:** [MSP-2.0](MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](msp-podping-service.md) (no open work)
+
+### Pull requests (1)
+
+- [#106 Send the feed's own medium with a Podping](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/106) — opened 2026-11-20 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 
 ### Issues (1)
 

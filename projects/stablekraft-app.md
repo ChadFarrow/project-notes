@@ -24,8 +24,9 @@ Stablekraft application
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
-### Pull requests (1)
+### Pull requests (2)
 
+- [#316 Playlist maker and readers: valid XML, own stable guid, read remoteItems by name](https://github.com/ChadFarrow/stablekraft-app/pull/316) — opened 2026-11-20 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 
 ### Issues (1)

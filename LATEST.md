@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-20 16:15 UTC
+# Dashboard — 2026-11-20 20:16 UTC
 
-31 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+26 open PRs · 15 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -10,35 +10,30 @@
 
 _None._
 
-### Open issues (17)
+### Open issues (15)
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 3 days ago
-- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 3 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 3 days ago · 1 comment
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 4 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 14 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
-**[MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)**
-
-- [#100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — opened 3 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-
-**[stablekraft-app](projects/stablekraft-app.md)**
-
-- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 3 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-
-**[Auto-musicL-Maker](projects/Auto-musicL-Maker.md)**
-
-- [#14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — opened 3 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#575 Community playlists: add owner\_name in Neon, deploy the MADE BY branch, re-save the two test playlists](https://github.com/ChadFarrow/boostmebitch/issues/575) — opened 4 days ago
+- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 2 comments
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 7 days ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 12 days ago
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 49 days ago
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 1 comment
+
+**[MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)**
+
+- [#100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — opened 4 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+
+**[stablekraft-app](projects/stablekraft-app.md)**
+
+- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 4 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -57,6 +52,14 @@ _None._
 
 ### Boosts
 
+#### [boostbox](projects/boostbox.md)
+
+2 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
+
+- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2 months ago · draft
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 52 days ago · draft
+- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
+
 #### [helipad-startos](projects/helipad-startos.md)
 
 2 branches with no PR
@@ -69,14 +72,6 @@ _None._
 1 branch with no PR
 
 - Branch [`add-tardbox-metadata-support`](https://github.com/ChadFarrow/helipad/tree/add-tardbox-metadata-support) — no PR
-
-#### [boostbox](projects/boostbox.md)
-
-2 PRs · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
-
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 52 days ago · draft
-- PR [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2 months ago · draft · merge conflict
-- Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 ### Lightning & wallets
 
@@ -91,49 +86,42 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-12 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+3 PRs · 4 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
 
-- PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 7 days ago
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2 hours ago · draft
-- PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 4 days ago · draft
-- PR [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 16 hours ago
-- PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 4 days ago · draft
-- PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 4 days ago · draft
-- PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 5 days ago · draft
-- PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 7 days ago · draft
-- PR [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 14 hours ago · draft
-- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 1 day ago · draft · merge conflict
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 21 hours ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 hours ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 1 day ago
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
-- Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25) — no PR
 
 #### [stablekraft-app](projects/stablekraft-app.md)
 
-1 PR · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
+2 PRs · 1 issue · 2 branches with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work), [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](projects/lnurl-test-feed.md) (no open work) · used by [boostmebitch](projects/boostmebitch.md), [PC20-Nostr](projects/PC20-Nostr.md)
 
+- PR [#316 Playlist maker and readers: valid XML, own stable guid, read remoteItems by name](https://github.com/ChadFarrow/stablekraft-app/pull/316) — opened 2 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - PR [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2 months ago · draft
 - Branch [`feature/genre-and-v4v-tags`](https://github.com/ChadFarrow/stablekraft-app/tree/feature/genre-and-v4v-tags) — no PR
 - Branch [`archive/feature-genre-filter`](https://github.com/ChadFarrow/stablekraft-app/tree/archive/feature-genre-filter) — no PR
 
 ### Music publishing
 
-#### [MSP-2.0](projects/MSP-2.0.md)
-
-3 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
-
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 17 days ago · draft · merge conflict
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
-- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
-
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
+1 PR · 1 issue · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
+- PR [#106 Send the feed's own medium with a Podping](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/106) — opened 2 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
+
+#### [MSP-2.0](projects/MSP-2.0.md)
+
+4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+
+- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft
+- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 17 days ago · draft
+- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
 
@@ -143,27 +131,37 @@ _None._
 
 ### musicL playlists
 
+#### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
+
+2 branches with no PR
+
+- Branch [`wip/claude-md-2026-07-13`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/wip/claude-md-2026-07-13) — no PR
+- Branch [`claude/localbitcoiners-podcast-playlist-069mwk`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/claude/localbitcoiners-podcast-playlist-069mwk) — no PR
+
 #### [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 3 days ago
-- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 3 days ago
-- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 3 days ago
-- Opened elsewhere: [Auto-musicL-Maker #14 Generated playlists: wrong namespace, copied or changing guid, unescaped XML, no publisher back-link](https://github.com/ChadFarrow/Auto-musicL-Maker/issues/14) — issue · opened 3 days ago
-
-#### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
-
-1 issue · 2 branches with no PR
-
-- Branch [`wip/claude-md-2026-07-13`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/wip/claude-md-2026-07-13) — no PR
-- Branch [`claude/localbitcoiners-podcast-playlist-069mwk`](https://github.com/ChadFarrow/Auto-musicL-Maker/tree/claude/localbitcoiners-podcast-playlist-069mwk) — no PR
+- Opened elsewhere: [stablekraft-app #316 Playlist maker and readers: valid XML, own stable guid, read remoteItems by name](https://github.com/ChadFarrow/stablekraft-app/pull/316) — PR · opened 2 hours ago
+- Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 2 hours ago
+- Opened elsewhere: [MSP-2.0-Desktop-App #106 Send the feed's own medium with a Podping](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/106) — PR · opened 2 hours ago
+- Opened elsewhere: [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 4 days ago
+- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 4 days ago
+- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 4 days ago
 
 ### Nostr
 
 #### [PC20-Nostr](projects/PC20-Nostr.md)
 
-1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+1 issue · uses [stablekraft-app](projects/stablekraft-app.md) (2 PRs, 1 issue)
+
+### Tools & self-hosting
+
+#### [HGH-checker](projects/HGH-checker.md)
+
+1 PR
+
+- PR [#3 Rebuild: PASS/FAIL check that chapters, splits, songs, and wallets line up](https://github.com/ChadFarrow/HGH-checker/pull/3) — opened 2 hours ago
 
 ### Websites
 
@@ -185,6 +183,10 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
+#### [sovereign-feeds](projects/sovereign-feeds.md)
+
+[2 branches with no PR](https://github.com/ChadFarrow/sovereign-feeds/branches) · private repo, counts only
+
 #### [Command-Center](projects/Command-Center.md)
 
 [2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft, 2 merge conflicts) · private repo, counts only
@@ -195,14 +197,10 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
 - [v4v-toolkit](projects/v4v-toolkit.md) — last push 2026-04-07
 - [v4v-core-rs](projects/v4v-core-rs.md) — last push 2026-04-07
 - [podcast-namespace](projects/podcast-namespace.md) — last push 2026-04-11 · fork
-
-## Note problems
-
-- `projects/StableKraft-Nostr-Fix.md` matches no non-archived repo: archive or delete the note
