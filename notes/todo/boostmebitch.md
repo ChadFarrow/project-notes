@@ -27,6 +27,10 @@
   - [ ] Computer: decide who signs an Anonymous note for a song on a Buddy playlist. Now Buddy's site takes the stamp and signs the note, and a one-time key posts it when Buddy's site does not answer. Tell Claude: keep it, or let the site you boosted on sign it
   - [ ] Computer: decide if a note may quote a receipt from this site's own server with no check of its key. Now it may; only a receipt from the other brand's site must have that brand's key. Tell Claude: keep it, or check this site's key too (Claude then changes the stamp test, which uses a test key)
 
+- [ ] Before merge: #630 a deleted community playlist leaves /playlists at once: the list is no longer cached by the CDN. It is not on beta yet
+  - [ ] Computer: tell Claude to put #630 on beta (`npm run beta -- add 630`; the push asks you), or merge it and rebuild beta
+  - [ ] Computer: on beta, delete a test playlist in the maker, then press ♫ BROWSE PLAYLISTS. The deleted playlist is not in the list. A local browser test passed, but only beta has the CDN that kept the old list
+
 - [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
 
 - [ ] After merge: #617 back button: origin links step back, modals are history entries, tab keys. It is live on both production sites (merged 2026-11-19)
