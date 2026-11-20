@@ -35,8 +35,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (19)
+### Pull requests (20)
 
+- [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 2026-11-20
 - [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2026-11-19
 - [#621 docs(claude): trim favorites, reads and UI conventions, and set the budget to 12,400 (4/4, merge last)](https://github.com/ChadFarrow/boostmebitch/pull/621) — opened 2026-11-19
 - [#620 docs(claude): trim security, money-rail, signer and publishing rules (3/4)](https://github.com/ChadFarrow/boostmebitch/pull/620) — opened 2026-11-19
@@ -54,8 +55,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 2026-11-15 · draft
 - [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 2026-11-15 · draft
 - [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 2026-11-13
-- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 2026-11-13 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (5)
 
