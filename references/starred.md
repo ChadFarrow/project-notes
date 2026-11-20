@@ -44,6 +44,7 @@
 - [podcast-platform-links](https://github.com/nathangathright/podcast-platform-links) - No description
 
 ## Other
+- [HitIt](https://github.com/InTheMorning/HitIt) - Hit It! is a tool for discovering, curating, and broadcasting RSS-based music using a local audio file library.
 - [fsearch](https://github.com/cboxdoerfer/fsearch) - A fast file search utility for Unix-like systems based on GTK3
 - [luxe](https://github.com/evanwhittaker/luxe) - A  coding agent for your terminal. Write, review, and ship code with a single, intuitive workflow.
 - [musicindex-studio](https://github.com/InTheMorning/musicindex-studio) - No description
@@ -115,4 +116,4 @@
 - [podverse-rn](https://github.com/podverse/podverse-rn) - Podverse mobile app written in React Native for iOS, Android, and F-Droid
 
 ---
-*Last synced: 2026-11-20 02:06 UTC*
+*Last synced: 2026-11-20 12:18 UTC*

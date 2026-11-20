@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-20 02:06 UTC
+# Dashboard — 2026-11-20 12:18 UTC
 
-31 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+30 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -95,17 +95,17 @@ _None._
 
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 4 days ago · draft
 - PR [#540 Community playlists 4/4: boost notes name the playlist (Heard on)](https://github.com/ChadFarrow/boostmebitch/pull/540) — opened 7 days ago
-- PR [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2 hours ago
+- PR [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 12 hours ago
 - PR [#573 Add a copy-RSS button to community playlists (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/573) — opened 4 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 4 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 4 days ago · draft
 - PR [#538 Community playlists 2/4: make, list, edit and favorite](https://github.com/ChadFarrow/boostmebitch/pull/538) — opened 7 days ago · draft
-- PR [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 42 minutes ago · draft
-- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 9 hours ago · draft · merge conflict
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 7 hours ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
-- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
+- PR [#625 fix(feeds): no shared cache on a playlist or publisher feed, so the feed read after a SAVE is the new one](https://github.com/ChadFarrow/boostmebitch/pull/625) — opened 10 hours ago · draft
+- PR [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 20 hours ago · draft · merge conflict
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 17 hours ago
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
+- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
 - Branch [`home-playlists-section`](https://github.com/ChadFarrow/boostmebitch/tree/home-playlists-section) — no PR
 - Branch [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25) — no PR
@@ -124,7 +124,7 @@ _None._
 
 3 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 16 days ago · draft · merge conflict
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 17 days ago · draft · merge conflict
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 
@@ -186,7 +186,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [Command-Center](projects/Command-Center.md)
 
-[3 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · private repo, counts only
+[2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · private repo, counts only
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
