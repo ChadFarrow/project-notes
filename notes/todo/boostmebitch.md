@@ -30,8 +30,8 @@
 - [ ] After merge: #630 a deleted community playlist leaves /playlists at once: the list is no longer cached by the CDN. It is live on both production sites (merged 2026-11-20), and on beta
   - [ ] Computer: on beta, delete a test playlist in the maker, then press ♫ BROWSE PLAYLISTS. The deleted playlist is not in the list. A local browser test passed, but only beta has the CDN that kept the old list
 
-- [ ] Before merge: #632 an album's link says `?album=<guid>`. Old `?podcast=` links still open it. It is on top of main since 2026-11-20 and not on beta. #631 (a playlist's link says `?playlist=<guid>`) is live on both production sites (merged 2026-11-20)
-  - [ ] Phone: after the merge, open an old boost note's link to an album in your Nostr app. The album opens, and the address bar then says `?album=`
+- [ ] After merge: #632 an album's link says `?album=<guid>`, and #631 a playlist's link says `?playlist=<guid>`. Old `?podcast=` links still open both. They are live on both production sites (merged 2026-11-20), and on beta
+  - [ ] Phone: open an old boost note's link to an album in your Nostr app. The album opens, and the address bar then says `?album=`
 
 - [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
 
