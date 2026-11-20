@@ -21,7 +21,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/Command-Center](https://github.com/ChadFarrow/Command-Center) · private
-- **Open work:** [1 PR](https://github.com/ChadFarrow/Command-Center/pulls) (1 merge conflict)
+- **Open work:** [1 PR](https://github.com/ChadFarrow/Command-Center/pulls)
 
 _A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
