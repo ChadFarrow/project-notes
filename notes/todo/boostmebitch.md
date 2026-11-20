@@ -91,7 +91,7 @@
 - #567 GIPHY grid on the boostmebuddy preview plays (2026-11-14).
 - #564 and #567 are merged and live (2026-11-14).
 
-- [ ] Before merge: #623 make, edit and delete a playlist with no Nostr account. The browser makes a random key at the first PUBLISH and keeps it. It is on beta since 2026-11-19. Only headless Chrome tested it
-  - [ ] Phone: on beta in iPhone Safari, signed out, make a playlist and press PUBLISH. The page says you can edit it again in this browser. Close Safari, then open the PLAYLISTS page. EDIT shows on that playlist, and SAVE works. Tell Claude what iOS does
+- [ ] Before merge: #623 make, edit and delete a playlist with no Nostr account. The maker first shows a pop-up: SIGN IN WITH NOSTR, or I DON'T HAVE NOSTR (the browser then makes a key and keeps it). It is on beta since 2026-11-19 (pop-up since beta 5b6f686f). Only headless Chrome tested it
+  - [ ] Phone: on beta in iPhone Safari, signed out, tap + MAKE PLAYLIST. The pop-up shows, below the notch, and the × closes it. Open the maker again and tap I DON'T HAVE NOSTR. The pop-up closes. Make a playlist and press PUBLISH. The page says you can edit it again in this browser. Close Safari, then open the PLAYLISTS page. EDIT shows on that playlist, SAVE works, and the pop-up does not show again. Tell Claude what iOS does
   - [ ] Phone: do the same in the iPhone Home Screen app. Safari deletes site data after 7 days of Safari use without a tap on the site. WebKit says a Home Screen app is counted apart, and no test showed it
-  - [ ] Computer: in Firefox, signed out, make a playlist, PUBLISH, reload, then SAVE. Firefox was not tested
+  - [ ] Computer: in Firefox, signed out, open the maker and press I DON'T HAVE NOSTR in the pop-up. Make a playlist, PUBLISH, reload, then SAVE. Firefox was not tested
