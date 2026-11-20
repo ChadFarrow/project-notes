@@ -65,6 +65,7 @@ Questions for a design session with Chad.
 
 Milestones, newest first. Older work is in the merged PRs.
 
+- 2026-11-19 [#612](https://github.com/ChadFarrow/boostmebitch/pull/612), [#613](https://github.com/ChadFarrow/boostmebitch/pull/613), [#614](https://github.com/ChadFarrow/boostmebitch/pull/614), [#615](https://github.com/ChadFarrow/boostmebitch/pull/615) and [#616](https://github.com/ChadFarrow/boostmebitch/pull/616) five fixes from the review of all the code: a quote-aware feed attribute reader, Amber's clipboard answers, no second payment when a wallet does not answer, no overwrite of the Spark backup after a read that could not tell, and the boost screen keeps the wallet you pick
 - 2026-11-19 [#604](https://github.com/ChadFarrow/boostmebitch/pull/604) every community playlist feed is copied to the `playlists` branch on GitHub
 - 2026-11-19 [#603](https://github.com/ChadFarrow/boostmebitch/pull/603) favorites: check a backup before RESTORE, and tick each repair
 - 2026-11-19 [#580](https://github.com/ChadFarrow/boostmebitch/pull/580) and [#583](https://github.com/ChadFarrow/boostmebitch/pull/583) DeMu on the main sites: a DEMU search type and the /demu page of self-hosted albums
