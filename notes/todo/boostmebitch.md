@@ -26,7 +26,6 @@
   - [ ] Phone: on beta, boost one song of a playlist with "My feed". The note shows a blank line before "🎧 Heard on …", no playlist link under it, and no podcastindex.org link (#608 is on beta too). Tell Claude how the note looks in your Nostr app
   - [ ] Computer: decide who signs an Anonymous note for a song on a Buddy playlist. Now Buddy's site takes the stamp and signs the note, and a one-time key posts it when Buddy's site does not answer. Tell Claude: keep it, or let the site you boosted on sign it
   - [ ] Computer: decide if a note may quote a receipt from this site's own server with no check of its key. Now it may; only a receipt from the other brand's site must have that brand's key. Tell Claude: keep it, or check this site's key too (Claude then changes the stamp test, which uses a test key)
-  - [ ] Computer: beta cannot be rebuilt since #631 merged (2026-11-20): `community-playlists-notes` (#540) does not merge main in `components/boost-all-modal.tsx`, `components/boost-modal/index.tsx` and `lib/util.ts`. Beta still runs (02d38189). Tell Claude to merge main into #540 and rebuild beta. The fix: keep #540's `receiptRefUrls` in both modals, keep both new helper blocks in `lib/util.ts`, and pass `{ podcastGuid }` to the two `showShareUrl` calls #540 adds in `lib/nostr/boost-notes.ts`
 
 - [ ] After merge: #630 a deleted community playlist leaves /playlists at once: the list is no longer cached by the CDN. It is live on both production sites (merged 2026-11-20), and on beta
   - [ ] Computer: on beta, delete a test playlist in the maker, then press ♫ BROWSE PLAYLISTS. The deleted playlist is not in the list. A local browser test passed, but only beta has the CDN that kept the old list
@@ -81,6 +80,7 @@
 
 ## Already works
 
+- #540 merges main (#628, #630, #631), and beta is rebuilt with its 8 branches (2026-11-20, beta 257781b; #630 left the list as merged). The conflicts were #631's `showShareUrl` lines; a receipt's own-brand hints stay `?podcast=`. `e2e:communitynote` 41/41 (test origin) and 90/90 (Buddy), `e2e:notewording` 38/38, the beta tree's typecheck and 57 checks. On beta, an old `?podcast=` link to It's A Mood opens it and the bar says `?playlist=`
 - #617 merged 2026-11-19 (86378af): `e2e:history` passes 159/159 against both production sites, so the origin links, the modal entries and the tab keys are live. The branch and its worktree are deleted
 - #540 on beta (2026-11-19, phone, "My feed"): the note reads "… boosted 100 sats to Dusty Old Man by $2 Holla from Test playlist from my phone. via BoostMeBuddy", then "🎧 Heard on … by" the maker and the playlist link; its links name the song's own album. It quotes a summary receipt that Buddy's site key signed from your signed request: 99 of 100 sats settled (the 1-sat leg to ThunderRoad's node did not; StevenB 4 and Malachi 95 did)
 - Beta rebuilt with 7 branches (2026-11-19, beta e623bc7): main (#579, #584, #606) is merged into #538, then carried #572 → #574 → #576; #540's Heard-on line is now one line with no playlist link; #608 is added. Each step passed typecheck, the checks and the build; `e2e:communitynote` 90/90 and 40/40, `e2e:notewording` 44/44
