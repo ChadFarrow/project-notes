@@ -24,6 +24,6 @@ Helipad packaged for Start9's StartOS.
 
 ### Branches with no open PR (2)
 
-- [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master)
 - [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build)
+- [`master`](https://github.com/ChadFarrow/helipad-startos/tree/master)
 <!-- AUTO:END -->

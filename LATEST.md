@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-20 00:37 UTC
+# Dashboard — 2026-11-20 01:01 UTC
 
-34 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
+31 open PRs · 17 open issues · 20 branches with no PR · 41 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -61,8 +61,8 @@ _None._
 
 2 branches with no PR
 
-- Branch [`community-master`](https://github.com/ChadFarrow/helipad-startos/tree/community-master) — no PR
 - Branch [`custom-tardbox-build`](https://github.com/ChadFarrow/helipad-startos/tree/custom-tardbox-build) — no PR
+- Branch [`master`](https://github.com/ChadFarrow/helipad-startos/tree/master) — no PR
 
 #### [helipad](projects/helipad.md)
 
@@ -91,15 +91,12 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-15 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+12 PRs · 5 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (2 PRs), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 34 minutes ago
+- PR [#624 Playlists: the GitHub copy keeps a removed playlist in playlists/removed/, with the date](https://github.com/ChadFarrow/boostmebitch/pull/624) — opened 1 minute ago
+- PR [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 57 minutes ago · checks pending
 - PR [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 1 hour ago
-- PR [#620 docs(claude): trim security, money-rail, signer and publishing rules (3/4)](https://github.com/ChadFarrow/boostmebitch/pull/620) — opened 1 hour ago
-- PR [#619 docs(claude): trim boost, streaming and boundary rules, move the reasoning to docs (2/4)](https://github.com/ChadFarrow/boostmebitch/pull/619) — opened 1 hour ago
-- PR [#621 docs(claude): trim favorites, reads and UI conventions, and set the budget to 12,400 (4/4, merge last)](https://github.com/ChadFarrow/boostmebitch/pull/621) — opened 1 hour ago
-- PR [#618 docs(claude): fix three drifts, keep them fixed, trim the Commands section (1/4)](https://github.com/ChadFarrow/boostmebitch/pull/618) — opened 1 hour ago
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 5 hours ago
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 6 hours ago
 - PR [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 3 days ago · draft
 - PR [#574 Community playlists: PUBLISH lists what is missing, and the maker works signed out](https://github.com/ChadFarrow/boostmebitch/pull/574) — opened 4 days ago · draft
 - PR [#572 Community playlists: art upload to Blossom, dead-song checks, fallback covers, and phone fixes](https://github.com/ChadFarrow/boostmebitch/pull/572) — opened 4 days ago · draft
@@ -190,11 +187,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [Command-Center](projects/Command-Center.md)
 
-[1 PR](https://github.com/ChadFarrow/Command-Center/pulls) · private repo, counts only
-
-#### [vibe-kit](projects/vibe-kit.md)
-
-[1 PR](https://github.com/ChadFarrow/vibe-kit/pulls) · private repo, counts only
+[2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · private repo, counts only
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
@@ -202,7 +195,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-namespace](projects/podcast-namespace.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

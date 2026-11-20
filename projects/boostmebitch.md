@@ -35,14 +35,11 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (2 PRs), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (15)
+### Pull requests (12)
 
-- [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 2026-11-20
+- [#624 Playlists: the GitHub copy keeps a removed playlist in playlists/removed/, with the date](https://github.com/ChadFarrow/boostmebitch/pull/624) — opened 2026-11-20
+- [#623 Playlists: make and edit a playlist with no Nostr account, with a key the browser keeps (beta)](https://github.com/ChadFarrow/boostmebitch/pull/623) — opened 2026-11-20 · checks pending
 - [#622 Playlists: send a podping when a playlist goes to Podcast Index (beta)](https://github.com/ChadFarrow/boostmebitch/pull/622) — opened 2026-11-19
-- [#621 docs(claude): trim favorites, reads and UI conventions, and set the budget to 12,400 (4/4, merge last)](https://github.com/ChadFarrow/boostmebitch/pull/621) — opened 2026-11-19
-- [#620 docs(claude): trim security, money-rail, signer and publishing rules (3/4)](https://github.com/ChadFarrow/boostmebitch/pull/620) — opened 2026-11-19
-- [#619 docs(claude): trim boost, streaming and boundary rules, move the reasoning to docs (2/4)](https://github.com/ChadFarrow/boostmebitch/pull/619) — opened 2026-11-19
-- [#618 docs(claude): fix three drifts, keep them fixed, trim the Commands section (1/4)](https://github.com/ChadFarrow/boostmebitch/pull/618) — opened 2026-11-19
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
 - [#607 npub page: list the community playlists the npub made (ships with community playlists)](https://github.com/ChadFarrow/boostmebitch/pull/607) — opened 2026-11-19 · draft
 - [#576 Community playlists: MADE BY name, pubDate, and SHUFFLE / REPEAT on a playlist](https://github.com/ChadFarrow/boostmebitch/pull/576) — opened 2026-11-16 · draft
