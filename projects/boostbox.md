@@ -23,10 +23,9 @@ Simple self-hosted service for storing and serving Podcasting 2.0 boost metadata
 - **Repo:** [ChadFarrow/boostbox](https://github.com/ChadFarrow/boostbox) · Clojure · fork of noblepayne/boostbox
 - **Used by:** [boostmebitch](boostmebitch.md), [stablekraft-app](stablekraft-app.md)
 
-### Pull requests (2)
+### Pull requests (1)
 
 - [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 2026-09-29 · draft
-- [#26 feat(nostrbot): announce boosts on Mastodon as well as Nostr](https://github.com/ChadFarrow/boostbox/pull/26) — opened 2026-09-12 · draft
 
 ### Branches with no open PR (1)
 

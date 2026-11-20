@@ -25,12 +25,9 @@ MusicL playlists repository
 - **Repo:** [ChadFarrow/chadf-musicl-playlists](https://github.com/ChadFarrow/chadf-musicl-playlists) · Python
 - **Used by:** [boostmebitch](boostmebitch.md), [musicL-playlist-updater](musicL-playlist-updater.md), [stablekraft-app](stablekraft-app.md)
 
-### Opened elsewhere for this project (6)
+### Opened elsewhere for this project (3)
 
 - [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 2026-11-20
 - [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 2026-11-16
-- [MSP-2.0-Desktop-App #106 Send the feed's own medium with a Podping](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/106) — PR · opened 2026-11-20
-- [MSP-2.0-Desktop-App #100 Podping for a publisher feed is sent with no medium](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/issues/100) — issue · opened 2026-11-16
-- [stablekraft-app #316 Playlist maker and readers: valid XML, own stable guid, read remoteItems by name](https://github.com/ChadFarrow/stablekraft-app/pull/316) — PR · opened 2026-11-20
 - [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 2026-11-16
 <!-- AUTO:END -->

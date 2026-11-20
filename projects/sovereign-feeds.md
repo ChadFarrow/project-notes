@@ -21,7 +21,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/sovereign-feeds](https://github.com/ChadFarrow/sovereign-feeds) · private
-- **Open work:** [2 branches with no PR](https://github.com/ChadFarrow/sovereign-feeds/branches)
+- **Open work:** [3 branches with no PR](https://github.com/ChadFarrow/sovereign-feeds/branches)
 
 _A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
