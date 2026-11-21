@@ -8,8 +8,6 @@
 
 
 
-- [ ] After merge: #611 the emu in the /demu title wears a look every day of the year: the nine new looks you picked, New Year's through Halloween. It is live on both production sites (merged 2026-11-19)
-  - [ ] Phone: on the iPhone, open https://boostmebitch.com/demu?holiday=newyear, then change the end to valentines, stpatricks, easter, pizzaday, july4, summer, podcastday and halloween. Each look shows, and the word DeMu does not move. Chrome and phone emulation were tested; iOS Safari was not
 
 - [ ] After merge: #540 the boost note for a song from a playlist, now in the shared wording (#588) with the stamp (#590). It shipped to main in #633 (2026-11-20). The playlists show on beta only, so test on beta
   - [ ] Computer: decide the words of a note for a playlist song. Now it is the shared wording (#588): "… to <song> by <artist> from <playlist> via <app>", and the links name the song's own album. Tell Claude: keep it, or give the words you want
