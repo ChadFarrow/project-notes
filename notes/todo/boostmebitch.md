@@ -57,13 +57,9 @@
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
 - [ ] Before merge: #646 the IRC chat beside an opted-in live show (12 shows). Beta only: a draft with `hold`, so only you release it. It shows nothing until the gateway answers and its address is set
-    - [ ] In development: the gateway on your box (webircgateway with WEBIRC) is a task in thelounge-candr. The dispatcher has its text
+    - [ ] In development: add the DNS record for the gateway's Caddy site (thelounge-candr names it, for example `irc-ws.candr.space`)
     - [ ] In development: when the gateway answers, set `NEXT_PUBLIC_IRC_GATEWAY_URL` to its `wss://` address on Vercel Preview of boostmebitch, for the branch `beta` only, and rebuild beta. Put the beta address in the gateway's `[allowed_origins]`
-    - [ ] On air: on beta, open a listed show while it is live, JOIN with a nick, and check that your line shows in another IRC client in the same channel
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
-
-- [ ] Before merge: Phone pass on beta
-    - [ ] Phone: #646 the IRC chat's composer with the real keyboard, on the iPhone 11 (Safari and the Home Screen app) and the Pixel 6 (the Android app). Phone emulation has no phone keyboard
 
 ## Already works
 
