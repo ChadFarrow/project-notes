@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-21 15:42 UTC
+# Dashboard — 2026-11-21 15:47 UTC
 
 22 open PRs · 15 open issues · 20 branches with no PR · 42 tracked repos (14 not tracked)
 
@@ -168,7 +168,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [Command-Center](projects/Command-Center.md)
 
-[2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
+[2 PRs](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft, 1 merge conflict) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
