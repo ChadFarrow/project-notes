@@ -100,3 +100,18 @@
   - [ ] Phone: on beta on the Pixel 6, signed out (a private tab, or a browser with no key), open the maker and tap SIGN IN WITH NOSTR. The sign-in shows over the pop-up. Sign in with Amber. When you come back, the pop-up is gone and the footer names your account. Tell Claude if the pop-up or the sign-in closes by itself
   - [ ] Phone: do the same in the iPhone Home Screen app. Safari deletes site data after 7 days of Safari use without a tap on the site. WebKit says a Home Screen app is counted apart, and no test showed it
   - [ ] Computer: in Firefox, signed out, open the maker and press I DON'T HAVE NOSTR in the pop-up. Make a playlist, PUBLISH, reload, then SAVE. Firefox was not tested
+
+- [ ] After merge: #641 sign-in links pair over offchain.pub and relay.powr.build; the old relay.nostrconnect.com refused most connections. It is live on both production sites (merged 2026-11-20)
+  - [ ] Phone: in the iOS app, sign in with Clave on a weak cell signal. It signs in after you approve. The browser test used a stand-in signer; emulation cannot run Clave
+
+- [ ] After merge: #639 "Paste your nsec" in the iOS app only. It is live (merged 2026-11-20)
+  - [ ] Phone: in the iOS app, sign out, then sign in with "Paste your nsec" and a burner nsec. A like or a boost note signs at once, with no signer request. Then sign out: the warning names the nsec. Emulation cannot run the iOS app
+
+- [ ] After merge: #640 the iOS app's wallet button opens the NWC form with no picker. It is live (merged 2026-11-20)
+  - [ ] Phone: in the iOS app, with no wallet connected, press the wallet button. The NWC form opens, with no picker and no Back button. A Capacitor stub tested it in Chrome, not the real app
+
+- [ ] In development: #629 the iOS app. It stays a draft. It loads the live site, so a merge reaches it at the next fresh start. Xcode stays on the NAS until more native work is queued (docs/ios.md on the #629 branch, "Waiting for the next Xcode build")
+  - [ ] Phone: in the iOS app, send a small boost signed with your own key (Clave or the pasted nsec), not the site's key
+  - [ ] Phone: in the iOS app, play an episode for 2 minutes, close the app fully, open it again and press ▶. It starts at the saved place. #636 passed in Safari only
+  - [ ] Phone: in the iOS app, turn on streaming sats with a small budget, play, and lock the phone for 30 minutes. The wallet history shows payments in that time. If not, tell Claude: the native player may be needed after all
+  - [ ] Phone: watch the lock screen after a pause. Castamatic on an iPhone 17 also lost its card, so this is iOS. Tell Claude if the Control Center ▶ ever fails too
