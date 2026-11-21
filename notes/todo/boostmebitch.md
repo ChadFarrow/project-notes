@@ -19,9 +19,6 @@
 
 - [ ] Before merge: #608 a boost note has one listen link: no Podcast Index page beside the Boost Me link. It changes every new boost note. It is on beta since 2026-11-19, and the #540 phone test above tests it too
 
-- [ ] After merge: #617 back button: origin links step back, modals are history entries, tab keys. It is live on both production sites (merged 2026-11-19)
-  - [ ] Phone: Android app: open BOOST on a show, then press back. The modal closes and the show stays. Emulation cannot press the system back.
-  - [ ] Computer: in Chrome, click the Boosts tab on an episode, then press ⌘← (Alt+← on Windows). The page goes back.
 
 - [ ] After merge: #590 the note stamp in production
   - [ ] Computer: signed in with a Spark wallet, send one Anonymous boost. The note shows the site's name, and no line says "Posted from a one-time key … could not confirm". Spark was not tested
