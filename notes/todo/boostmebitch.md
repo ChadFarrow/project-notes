@@ -6,8 +6,6 @@
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
 
-- [ ] After merge: #609 the emu in the /demu title wears a holiday costume: feathers and a pilgrim hat, or a Santa hat. It is live on both production sites (merged 2026-11-19). #610 changes the dates
-  - [ ] Phone: on the iPhone Home Screen app, open /demu?holiday=thanksgiving, then /demu?holiday=christmas. The emu wears its costume, its eye stays open, and the word DeMu does not move. Chrome and the Mac's WebKit were tested; iOS Safari was not
 
 - [ ] After merge: #610 the turkey from 1 Nov through Thanksgiving Day, then the Santa hat from Black Friday through 26 Dec. The turkey is live on both production sites (merged 2026-11-19)
   - [ ] Computer: on Fri 27 Nov, open /demu with no ?holiday=. The emu wears the Santa hat. A faked clock tested this; the real date was not
