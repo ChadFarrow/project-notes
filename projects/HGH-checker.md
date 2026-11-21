@@ -21,7 +21,5 @@ HGH checker utility
 
 - **Repo:** [ChadFarrow/HGH-checker](https://github.com/ChadFarrow/HGH-checker) · JavaScript
 
-### Opened elsewhere for this project (1)
-
-- [vibe-kit](vibe-kit.md) — 1 PR · private repo, counts only
+_No open work._
 <!-- AUTO:END -->
