@@ -1,3 +1,7 @@
+- [ ] After merge: #645 a tap on + Add a GIF opens the GIF search with the keyboard up, so you can type a search at once (#644 did the same on a computer). Merged 2026-11-21
+  - [ ] Phone: on the iPhone Home Screen app, open BOOST on a show and tap + Add a GIF. The keyboard comes up, and typing searches. Do it in BOOST ALL too. Emulation cannot raise a keyboard; a browser test checked only that the box has focus inside the tap
+  - [ ] Phone: the same on the Pixel, in the Android app
+
 - [ ] After merge: #579 NEW MUSIC on /favorites (new albums from favorited artists). It is live on both production sites (merged 2026-11-19 with no test by you)
   - [ ] Computer: signed in, ♡ an artist's publisher feed (a search hit with ▸ ALBUMS), then open /favorites. NEW MUSIC shows that artist's newest album if it is less than 90 days old
   - [ ] Computer: open a NEW MUSIC row, and check that the album page opens
