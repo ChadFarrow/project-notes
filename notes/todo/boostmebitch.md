@@ -5,8 +5,6 @@
 
 - [ ] In development: #583 check which v4vmusic.com tags mark spam (it already hides feeds like The Board Game Design Lab), so /demu can use those tags to hide feeds as well as its own hide list in `lib/demu-hide-list.ts`
 
-- [ ] After merge: #584 the boost screen stays on its track when the track changes. It is live on both production sites (merged 2026-11-19 with no test by you)
-  - [ ] Computer: with a real NWC wallet, boost a song of a musicL playlist from the player when about 5 s are left. The boost screen stays on that song and shows ✓ or ✗ for each split until you close it. The browser test used a stub wallet, so no sats moved
 
 - [ ] After merge: #609 the emu in the /demu title wears a holiday costume: feathers and a pilgrim hat, or a Santa hat. It is live on both production sites (merged 2026-11-19). #610 changes the dates
   - [ ] Phone: on the iPhone Home Screen app, open /demu?holiday=thanksgiving, then /demu?holiday=christmas. The emu wears its costume, its eye stays open, and the word DeMu does not move. Chrome and the Mac's WebKit were tested; iOS Safari was not
