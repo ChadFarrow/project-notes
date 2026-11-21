@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-21 16:36 UTC
+# Dashboard — 2026-11-21 21:15 UTC
 
 22 open PRs · 15 open issues · 20 branches with no PR · 42 tracked repos (14 not tracked)
 
@@ -14,7 +14,7 @@ _None._
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#642 Listener report: music sounds like a low-quality MP3 compared to Fountain (watch)](https://github.com/ChadFarrow/boostmebitch/issues/642) — opened 12 hours ago
+- [#642 Listener report: music sounds like a low-quality MP3 compared to Fountain (watch)](https://github.com/ChadFarrow/boostmebitch/issues/642) — opened 17 hours ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 2 comments
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 8 days ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 13 days ago
@@ -23,14 +23,14 @@ _None._
 **[MSP-2.0](projects/MSP-2.0.md)**
 
 - [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 4 days ago · 1 comment
-- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 4 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 5 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 15 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 9 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 4 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 5 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -86,7 +86,7 @@ _None._
 
 - PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 1 day ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 1 day ago
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2 days ago
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
@@ -109,7 +109,7 @@ _None._
 - PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 18 days ago · draft
-- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 22 hours ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 1 day ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
@@ -129,9 +129,9 @@ _None._
 
 used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 22 hours ago
-- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 4 days ago
-- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 4 days ago
+- Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 1 day ago
+- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 5 days ago
+- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 5 days ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
