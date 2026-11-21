@@ -7,8 +7,6 @@
 
 
 
-- [ ] After merge: #610 the turkey from 1 Nov through Thanksgiving Day, then the Santa hat from Black Friday through 26 Dec. The turkey is live on both production sites (merged 2026-11-19)
-  - [ ] Computer: on Fri 27 Nov, open /demu with no ?holiday=. The emu wears the Santa hat. A faked clock tested this; the real date was not
 
 - [ ] After merge: #611 the emu in the /demu title wears a look every day of the year: the nine new looks you picked, New Year's through Halloween. It is live on both production sites (merged 2026-11-19)
   - [ ] Phone: on the iPhone, open https://boostmebitch.com/demu?holiday=newyear, then change the end to valentines, stpatricks, easter, pizzaday, july4, summer, podcastday and halloween. Each look shows, and the word DeMu does not move. Chrome and phone emulation were tested; iOS Safari was not
