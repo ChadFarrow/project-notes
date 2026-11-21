@@ -11,37 +11,6 @@ Community playlists, beta test list. Written 2026-11-14.
 > [!warning] Beta is real
 > Beta uses the real relays, your real npub and real sats. A heart on beta changes your real favorites list (kind:10333). A boost on beta pays real sats and publishes a public note.
 
-## After merge: Phone: 1. The playlist maker (#538), on a real phone
-- [ ] Publish with Amber on Android. Amber can come back in a new tab, and the draft must stay
-- [ ] #572: on Android, ↑ UPLOAD PICTURE with Amber. The upload asks Amber for one extra signature, and the picture must then show as the art. Only the iPhone signer was tested
-
-## After merge: Phone: 6. Playback (#538), on a real phone
-Use "Test playlist from my phone." on beta. All 10 songs resolve, their audio hosts answer, and each has its own value block (checked 2026-11-15). Songs 6 and 7 (disco girl, Pimped to the Grave) are WAV files: large, so they can start slowly on mobile data.
-- [ ] #576 (on beta, and on main since #633): press the new SHUFFLE button on the playlist. The first song starts at once, and every song plays once before any song plays again. #576 was not tested on a real iPhone
-
-## After merge: 2. The list and the hearts (#538)
-- [ ] Heart a playlist, and heart one song in it
-- [ ] Open your favorites in OnlyBoosts. The song must show under its own album, not under the playlist
-
-## After merge: 3. The admin page (#539, inside #538)
-- [ ] Open `/admin` with your account. You see every playlist, newest first
-- [ ] DELETE asks first
-- [ ] BAN MAKER asks first (BAN AND DELETE ALL / BAN ONLY / CANCEL)
-- [ ] UNBAN does not ask (your decision, 2026-11-14)
-- [ ] Make a throwaway key with two playlists. Test BAN ONLY: both playlists stay
-- [ ] Test BAN AND DELETE ALL on the throwaway key: both playlists go, and its next publish is refused
-- [ ] UNBAN the throwaway key: it can publish again
-- [ ] Do not ban a real listener
-- [ ] Open `/admin` with a second account. It must say "This account is not an admin."
-
-## After merge: 4. Boost notes (#540), with a real wallet
-- [ ] Boost the same song as Anonymous. Buddy's site key must sign the note, in Buddy's words
-- [ ] Look at Helipad on the receiving side. The boostagram must not change: `app_name` BoostMeBitch, and the song's `remote_item_guid`
-- [ ] Open the note in Fountain. Fountain must show the quoted receipt
-
-## After merge: 5. A podcast app
-- [ ] Subscribe to the test playlist's feed address in a podcast app (for example Fountain). The app must list the 10 songs and play them
-
 ## Already works (checked on the live sites, 2026-11-14)
 - [x] Publish through Vercel (NIP-98): the test playlist exists
 - [x] The feed on boostmebuddy.com: 200, `musicL`, the `<generator>` line, 10 songs, no `podcast:value`
