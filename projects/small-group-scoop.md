@@ -23,7 +23,7 @@ Chad's fork of SpencerPearson/small-group-scoop. There is no code work in the fo
 
 - **Repo:** [ChadFarrow/small-group-scoop](https://github.com/ChadFarrow/small-group-scoop) · fork of SpencerPearson/small-group-scoop · private
 - **Watch:** [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 5 issues · 3 opened by you)
-- **Open work:** [10 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) (3 merge conflicts)
+- **Open work:** [10 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) (2 merge conflicts)
 
 _A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
