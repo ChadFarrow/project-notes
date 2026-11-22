@@ -13,8 +13,8 @@
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
 - [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It shipped to main in #633 (2026-11-20), and it is on beta
-  - [ ] Phone or computer: put a playlist in Podcast Index yourself. Press ADD IT TO PODCAST INDEX → on the screen after PUBLISH or SAVE (#650), or paste the feed address at https://podcastindex.org/add. The site cannot add it: every Podcast Index key is read-only, as MSP's is (2026-11-22). Your phone playlist is not in the index yet
-  - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
+  - [ ] Computer: decide how playlists get into Podcast Index on their own (your words, 2026-11-22: "leave all of that like it is for now, until I come up with a solution"). Ideas: a key with write permission from Podcast Index, or musicindex (InTheMorning/musicindex-studio). Until then the maker adds a playlist by hand with ADD IT TO PODCAST INDEX → (#650). docs/feeds.md has the details (#654, #655)
+  - [ ] Computer: when the playlist maker launches on the live sites, put `GITHUB_ARCHIVE_TOKEN` on Production of both Vercel projects (`boostmebitch` and `boostmebuddy`) and redeploy both. Beta has it since 2026-11-22. Your token is named "Boost Me Buddy playlist copy"; only you have its value, so use it again or make a new one
 
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
@@ -23,6 +23,8 @@
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
 ## Already works
+
+- Playlists to GitHub and Podcast Index (2026-11-22): `GITHUB_ARCHIVE_TOKEN` is on beta, and your SAVE of "Test playlist from my phone" at 14:55:54Z started the GitHub copy at 14:55:55Z (commit `c3f4b227` on the `playlists` branch, equal to the live feed). You added "WrathfulTs Top Tracks" by Sir TJ The Wrathful to Podcast Index by hand: id 8125553, parsed as `musicL` one minute later. Docs: #654, #655, #656
 
 - #605 and #622 on beta (2026-11-22, as you approved): `COMMUNITY_PI_NOTIFY=on`, `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` (sensitive, piped from Railway) are on the `boostmebitch` Preview environment, branch `beta`, and beta is redeployed. Your SAVE of "Test playlist from my phone." sent a podping that is on Hive (10:54:36Z, `musicL`, `update`); the Podcast Index add gets 401 because the key is read-only, so #650 (merged 2026-11-22, on beta) links Podcast Index's add form on the screen after PUBLISH or SAVE. #649 makes the playlist e2e scripts refuse any server or database off this machine
 
