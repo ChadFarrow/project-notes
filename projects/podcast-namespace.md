@@ -22,5 +22,7 @@ A wholistic rss namespace for podcasting
 
 - **Repo:** [ChadFarrow/podcast-namespace](https://github.com/ChadFarrow/podcast-namespace) · fork of Podcastindex-org/podcast-namespace
 
-_No open work._
+### Branches with no open PR (1)
+
+- [`add-stablekraft-slug`](https://github.com/ChadFarrow/podcast-namespace/tree/add-stablekraft-slug)
 <!-- AUTO:END -->

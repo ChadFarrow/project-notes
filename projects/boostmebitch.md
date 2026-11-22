@@ -40,10 +40,12 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2026-11-21 · draft
 - [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
-### Issues (5)
+### Issues (7)
 
+- [#648 \[BMB\] Track not playing again](https://github.com/ChadFarrow/boostmebitch/issues/648) — opened 2026-11-22
+- [#647 \[BMB\] Next track not playing in background](https://github.com/ChadFarrow/boostmebitch/issues/647) — opened 2026-11-22
 - [#642 Listener report: music sounds like a low-quality MP3 compared to Fountain (watch)](https://github.com/ChadFarrow/boostmebitch/issues/642) — opened 2026-11-21
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 2026-11-12
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
