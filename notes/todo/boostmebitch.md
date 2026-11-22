@@ -15,10 +15,6 @@
 - [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It shipped to main in #633 (2026-11-20), and it is on beta
   - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
   - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
-  - [ ] Computer: add `COMMUNITY_PI_NOTIFY=on` in Vercel to the `boostmebitch` Preview environment, branch `beta`, then redeploy beta. Nothing goes to Podcast Index yet
-
-- [ ] After merge: #622 each time a playlist goes to Podcast Index (publish, SAVE, delete), the site also sends a podping (medium musicL) through your msp-podping-service. It shipped to main in #633 (2026-11-20), and it is on beta. Nothing is sent until you add the two values
-  - [ ] Computer: in Vercel, add `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` to the `boostmebitch` Preview environment, branch `beta`: the values `musicL-playlist-updater` uses (the token is the Railway `PODPING_SHARED_SECRET`; mark it sensitive and type it into Vercel yourself). `COMMUNITY_PI_NOTIFY=on` must be set there too. Then redeploy beta
 
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
@@ -27,6 +23,8 @@
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
 ## Already works
+
+- #605 and #622 on beta (2026-11-22, as you approved): `COMMUNITY_PI_NOTIFY=on`, `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` (sensitive, piped from Railway) are on the `boostmebitch` Preview environment, branch `beta`, and beta is redeployed. Each playlist goes to Podcast Index and gets a podping on its next publish or SAVE. #649 makes the playlist e2e scripts refuse any server or database off this machine
 
 - #646 (2026-11-21): the gateway answers at `wss://irc-ws.candr.space/webirc/websocket/`, and `NEXT_PUBLIC_IRC_GATEWAY_URL` is set on Preview for `beta`. On https://beta.boostmebitch.com the chat joined `#OffTopic` on Accidentally Interesting through the real gateway, with the visitor's own host (headless Chrome)
 
