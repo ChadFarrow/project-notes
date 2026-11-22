@@ -24,9 +24,8 @@ Stablekraft application
 - **Uses:** [msp-podping-service](msp-podping-service.md) (no open work), [boostbox](boostbox.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [lnurl-test-feed](lnurl-test-feed.md) (no open work)
 - **Used by:** [boostmebitch](boostmebitch.md), [PC20-Nostr](PC20-Nostr.md)
 
-### Pull requests (2)
+### Pull requests (1)
 
-- [#317 Honor \<podcast:block\>: a feed that blocks StableKraft is not shown](https://github.com/ChadFarrow/stablekraft-app/pull/317) — opened 2026-11-22 · checks pending
 - [#266 Hold back an adopted private item, not only an adopted private feed](https://github.com/ChadFarrow/stablekraft-app/pull/266) — opened 2026-09-19 · draft
 
 ### Issues (1)
