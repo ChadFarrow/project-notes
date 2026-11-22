@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-22 12:05 UTC
+# Dashboard — 2026-11-22 14:59 UTC
 
-23 open PRs · 16 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
+23 open PRs · 16 open issues · 22 branches with no PR · 42 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -14,7 +14,7 @@ _None._
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#648 \[BMB\] Track not playing again](https://github.com/ChadFarrow/boostmebitch/issues/648) — opened 1 hour ago · 1 comment
+- [#648 \[BMB\] Track not playing again](https://github.com/ChadFarrow/boostmebitch/issues/648) — opened 4 hours ago · 1 comment
 - [#642 Listener report: music sounds like a low-quality MP3 compared to Fountain (watch)](https://github.com/ChadFarrow/boostmebitch/issues/642) — opened 1 day ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 2 comments
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 9 days ago · 1 comment
@@ -85,12 +85,12 @@ _None._
 
 4 PRs · 6 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 12 hours ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 1 day ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 15 hours ago · draft
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2 days ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2 days ago
-- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
+- Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
 - Branch [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25) — no PR
 
@@ -176,6 +176,10 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
+#### [vibe-kit](projects/vibe-kit.md)
+
+[1 branch with no PR](https://github.com/ChadFarrow/vibe-kit/branches) · private repo, counts only
+
 #### [small-group-scoop](projects/small-group-scoop.md)
 
 [10 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) (4 merge conflicts) · private repo, counts only · watches [SpencerPearson/small-group-scoop](https://github.com/SpencerPearson/small-group-scoop) (private · 1 PR, 5 issues · 3 opened by you)
@@ -186,7 +190,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

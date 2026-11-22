@@ -21,6 +21,7 @@
 ## Live status
 
 - **Repo:** [ChadFarrow/vibe-kit](https://github.com/ChadFarrow/vibe-kit) · private
+- **Open work:** [1 branch with no PR](https://github.com/ChadFarrow/vibe-kit/branches)
 
-_No open work._
+_A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
