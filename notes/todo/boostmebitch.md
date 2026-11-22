@@ -13,7 +13,7 @@
 - [ ] In development: Phone: on iOS, the music does not continue after an interruption (dictation, a call, a Bluetooth speaker turned off) until BMB is in front again. The lock-screen ▶ then goes to Apple Music. Seen on beta, 2026-11-15, with a community playlist and with dictation in another app. An iOS limit for web apps: iOS stops the JavaScript of a background page that plays nothing, so no web code can answer the lock screen. Only a native wrapper can fix it fully. A possible partial try: `navigator.audioSession` `statechange`, for an interruption that ends while the page still runs
 
 - [ ] After merge: #605 each publish copies the feed to GitHub and sends it to Podcast Index, test playlists too. It shipped to main in #633 (2026-11-20), and it is on beta
-  - [ ] Computer: check that the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`) has write permission. Without it, Podcast Index refuses each playlist
+  - [ ] Computer: get write permission for the Podcast Index key that beta uses (`PODCAST_INDEX_KEY`, the pair that starts `BHCP6U`). On 2026-11-22 Podcast Index refused your phone playlist with 401 (`add/byfeedurl refused: 401`). PI's API docs say only: "the API Key must have write or publisher permissions". They do not say how to get it: look at the key at https://api.podcastindex.org/, or ask Podcast Index. Then press SAVE on the playlist again
   - [ ] Computer: optional: make `GITHUB_ARCHIVE_TOKEN` (docs/ops.md, "The GitHub copy of the playlists") and add it in Vercel to the `boostmebitch` Preview environment, branch `beta`. Without it, a copy can take 15 minutes
 
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
@@ -24,7 +24,7 @@
 
 ## Already works
 
-- #605 and #622 on beta (2026-11-22, as you approved): `COMMUNITY_PI_NOTIFY=on`, `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` (sensitive, piped from Railway) are on the `boostmebitch` Preview environment, branch `beta`, and beta is redeployed. Each playlist goes to Podcast Index and gets a podping on its next publish or SAVE. #649 makes the playlist e2e scripts refuse any server or database off this machine
+- #605 and #622 on beta (2026-11-22, as you approved): `COMMUNITY_PI_NOTIFY=on`, `PODPING_ENDPOINT_URL` and `PODPING_BEARER_TOKEN` (sensitive, piped from Railway) are on the `boostmebitch` Preview environment, branch `beta`, and beta is redeployed. Your SAVE of "Test playlist from my phone." sent a podping that is on Hive (10:54:36Z, `musicL`, `update`); the Podcast Index add waits for the key's write permission (see above). #649 makes the playlist e2e scripts refuse any server or database off this machine
 
 - #646 (2026-11-21): the gateway answers at `wss://irc-ws.candr.space/webirc/websocket/`, and `NEXT_PUBLIC_IRC_GATEWAY_URL` is set on Preview for `beta`. On https://beta.boostmebitch.com the chat joined `#OffTopic` on Accidentally Interesting through the real gateway, with the visitor's own host (headless Chrome)
 
