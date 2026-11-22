@@ -32,6 +32,7 @@ Chad's own items (the push-gap test, the end of the IRCCloud trial) moved to `no
 ## Live status
 
 - **Repo:** [ChadFarrow/thelounge-candr](https://github.com/ChadFarrow/thelounge-candr) · private
+- **Open work:** [1 PR](https://github.com/ChadFarrow/thelounge-candr/pulls)
 
-_No open work._
+_A private repo: this public note shows counts only, never a title or a branch name._
 <!-- AUTO:END -->
