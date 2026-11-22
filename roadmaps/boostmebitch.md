@@ -75,6 +75,7 @@ Questions for a design session with Chad.
 
 Milestones, newest first. Older work is in the merged PRs.
 
+- 2026-11-22 [#650](https://github.com/ChadFarrow/boostmebitch/pull/650) the screen after PUBLISH or SAVE links the playlist's Podcast Index page, or Podcast Index's add form. Every Podcast Index key is read-only, so the site's own add gets 401; the podping and `hub/pubnotify` go out, but they do not add a new feed. On beta since 2026-11-22
 - 2026-11-20 [#633](https://github.com/ChadFarrow/boostmebitch/pull/633) community playlists, the whole stack in one squash merge: make, list, edit and favorite a playlist, the admin page, art upload to Blossom, dead-song checks, PUBLISH lists what is missing, a maker with no Nostr account, MADE BY, SHUFFLE and REPEAT, the copy-RSS button, boost notes that name the playlist, the playlists on the npub page, a Podcast Index notice and a podping after each publish, and no shared cache on a feed. The maker and the list stay hidden on the live sites until `NEXT_PUBLIC_COMMUNITY_PLAYLISTS` is on for Production
 - 2026-11-20 [#632](https://github.com/ChadFarrow/boostmebitch/pull/632) an album's link says `?album=<guid>`; old `?podcast=` links still open it
 - 2026-11-20 [#630](https://github.com/ChadFarrow/boostmebitch/pull/630) a deleted community playlist leaves /playlists at once (the list is no longer cached), and [#631](https://github.com/ChadFarrow/boostmebitch/pull/631) a playlist's link says `?playlist=<guid>`, as its feed address does; old `?podcast=` links still open it
