@@ -22,12 +22,13 @@
 
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
-- [ ] Before merge: #646 the IRC chat beside an opted-in live show (12 shows). Beta only: a draft with `hold`, so only you release it. It shows nothing until the gateway answers and its address is set
-    - [ ] In development: add the DNS record for the gateway's Caddy site (thelounge-candr names it, for example `irc-ws.candr.space`)
-    - [ ] In development: when the gateway answers, set `NEXT_PUBLIC_IRC_GATEWAY_URL` to its `wss://` address on Vercel Preview of boostmebitch, for the branch `beta` only, and rebuild beta. Put the beta address in the gateway's `[allowed_origins]`
+- [ ] Before merge: #646 the IRC chat beside an opted-in live show (12 shows). Beta only: a draft with `hold`, so only you release it. It works on beta now; the hold service that keeps a dropped listener's session for 5 minutes is being built in thelounge-candr
+    - [ ] Computer: before you merge, set `NEXT_PUBLIC_IRC_GATEWAY_URL` to `wss://irc-ws.candr.space/webirc/websocket/` on Production in BOTH Vercel projects (`boostmebitch` and `boostmebuddy`), visibility "config". Without it production shows no chat
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
 ## Already works
+
+- #646 (2026-11-21): the gateway answers at `wss://irc-ws.candr.space/webirc/websocket/`, and `NEXT_PUBLIC_IRC_GATEWAY_URL` is set on Preview for `beta`. On https://beta.boostmebitch.com the chat joined `#OffTopic` on Accidentally Interesting through the real gateway, with the visitor's own host (headless Chrome)
 
 - The playlist stack shipped in #633 (2026-11-20): its nine PRs (#538, #540, #572, #573, #574, #576, #607, #622, #625) are closed and their branches deleted, beta is rebuilt as main plus #608 (0ace72d), and #575 is closed. On beta, /playlists shows both test playlists with ChadF under each title, and your npub page lists both (headless Chrome)
 - #625 (2026-11-20): both test feeds on www.boostmebuddy.com answer `cache-control: no-cache` and `x-vercel-cache: MISS` on two reads in a row (curl). The feed the old line named (d59b546e) is deleted and answers 410
