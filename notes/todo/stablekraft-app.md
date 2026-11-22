@@ -1,2 +1,0 @@
-- [ ] Before merge: #317 (`<podcast:block>` support) needs the new `Feed.blocked` column on production first. Then tell Claude, and Claude merges #317
-	- [ ] Computer: in a Terminal window, in `~/Vibe/stablekraft-app`, run `railway run --service StableKraft --environment production npm run db:migrate`
