@@ -40,7 +40,7 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2026-11-21 · draft
 - [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
 - [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2026-11-19
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
 
 ### Issues (6)
 
