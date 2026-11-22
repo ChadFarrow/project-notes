@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-22 10:57 UTC
+# Dashboard — 2026-11-22 11:49 UTC
 
-23 open PRs · 17 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
+23 open PRs · 16 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -10,12 +10,11 @@
 
 _None._
 
-### Open issues (17)
+### Open issues (16)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#648 \[BMB\] Track not playing again](https://github.com/ChadFarrow/boostmebitch/issues/648) — opened 6 minutes ago · 1 comment
-- [#647 \[BMB\] Next track not playing in background](https://github.com/ChadFarrow/boostmebitch/issues/647) — opened 11 minutes ago · 1 comment
+- [#648 \[BMB\] Track not playing again](https://github.com/ChadFarrow/boostmebitch/issues/648) — opened 58 minutes ago · 1 comment
 - [#642 Listener report: music sounds like a low-quality MP3 compared to Fountain (watch)](https://github.com/ChadFarrow/boostmebitch/issues/642) — opened 1 day ago
 - [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 2 comments
 - [#534 \[BMB\] I pressed the next button and it jumped to the next episode, but when I pushe…](https://github.com/ChadFarrow/boostmebitch/issues/534) — opened 9 days ago · 1 comment
@@ -84,11 +83,11 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 7 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+4 PRs · 6 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 11 hours ago · draft
+- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 12 hours ago · draft
 - PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 1 day ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 2 days ago
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
