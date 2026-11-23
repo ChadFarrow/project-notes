@@ -65,6 +65,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 
 - [HGH-checker](projects/HGH-checker.md) - No description (`JavaScript`)
 - [obsidian-candr](projects/obsidian-candr.md) · private
+- [podcast-index-notify](projects/podcast-index-notify.md) - Tell Podcast Index about a new or changed feed: keyless hub/pubnotify, podping, lookup and wait-until-indexed. Zero dependencies. (`TypeScript`)
 - [project-notes](projects/project-notes.md) - No description (`JavaScript`)
 - [square-my-art](projects/square-my-art.md) - Upload any image to make it square to use as art in a podcast (`HTML`)
 - [stacks](projects/stacks.md) - Modern full-stack framework. Develop powerful apps, clouds & framework-agnostic libraries—faster. (`TypeScript`) · fork · not tracked
