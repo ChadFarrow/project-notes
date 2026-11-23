@@ -23,7 +23,6 @@ Sends Helipad information to Nostr using webhooks
 ## Live status
 
 - **Repo:** [ChadFarrow/Helipad-to-Nostr-BoostBot](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot) · private
-- **Open work:** [1 PR](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pulls)
 
-_A private repo: this public note shows counts only, never a title or a branch name._
+_No open work._
 <!-- AUTO:END -->

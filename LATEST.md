@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-23 01:14 UTC
+# Dashboard — 2026-11-23 01:40 UTC
 
-24 open PRs · 13 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
+22 open PRs · 12 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -10,13 +10,12 @@
 
 _None._
 
-### Open issues (13)
+### Open issues (12)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#304 Spark rail will break in Firefox: flashnet sends Access-Control-Allow-Headers: \* which does not cover Authorization](https://github.com/ChadFarrow/boostmebitch/issues/304) — opened 2 months ago · 3 comments
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 14 days ago · 3 comments
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 51 days ago · 1 comment
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 15 days ago · 3 comments
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 52 days ago · 1 comment
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
@@ -46,10 +45,6 @@ _None._
 ## Projects
 
 ### Boosts
-
-#### [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md)
-
-[1 PR](https://github.com/ChadFarrow/Helipad-to-Nostr-BoostBot/pulls) · private repo, counts only
 
 #### [boostbox](projects/boostbox.md)
 
@@ -84,9 +79,8 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-5 PRs · 3 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+4 PRs · 2 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#661 feat(spark): update @buildonspark/spark-sdk 0.8.1 -\> 0.16.0](https://github.com/ChadFarrow/boostmebitch/pull/661) — opened 28 minutes ago
 - PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 1 day ago · draft
 - PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2 days ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
@@ -116,8 +110,8 @@ _None._
 
 4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft
-- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft
+- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
+- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 19 days ago · draft
 - PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
@@ -188,7 +182,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 

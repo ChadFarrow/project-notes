@@ -51,8 +51,8 @@ Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take id
 
 - [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2026-11-20 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 2026-11-03 · draft
-- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft
-- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft
+- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
+- [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
 
 ### Issues (5)
 
