@@ -2,7 +2,8 @@
 
 **Category:** Music apps & sites  
 **Track:** no  
-**Repo:** https://github.com/ChadFarrow/HPM-Lightning
+**Repo:** https://github.com/ChadFarrow/HPM-Lightning  
+**Archived:** 2026-11-23, at Chad's request. RSS Blue shut down (it is now part of Fountain; its feeds at feeds.rssblue.com answer 410), so 52 of the site's 53 album feeds are dead.
 
 ## Description
 Lightning implementation for HPM

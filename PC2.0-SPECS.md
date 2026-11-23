@@ -5,12 +5,12 @@
 ### `<podcast:value>`
 Enables streaming sats payments to content creators  
 **Docs:** [podcasting2.org](https://podcasting2.org/docs/podcast-namespace/tags/value) · [spec on GitHub](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/value.md)  
-**Used by:** MSP-2.0, ITDV-Lightning, TRM-Lightning, HPM-Lightning, lnaddress-music
+**Used by:** MSP-2.0, ITDV-Lightning, TRM-Lightning, HPM-Lightning (archived), lnaddress-music
 
 ### `<podcast:valueRecipient>`
 Defines payment split recipients and percentages  
 **Docs:** [podcasting2.org](https://podcasting2.org/docs/podcast-namespace/tags/value-recipient) · [spec on GitHub](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/tags/value-recipient.md)  
-**Used by:** MSP-2.0, ITDV-Lightning, TRM-Lightning, HPM-Lightning
+**Used by:** MSP-2.0, ITDV-Lightning, TRM-Lightning, HPM-Lightning (archived)
 
 ---
 

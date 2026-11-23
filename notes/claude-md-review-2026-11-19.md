@@ -68,6 +68,7 @@ Do one repo per task. Each task keeps the rules, moves the narrative and changes
 2. **stablekraft-app** (about 8k)
 3. **MSP-2.0-Desktop-App** (about 7k)
 4. **HPM-Lightning** and **ITDV-Lightning** (HPM gets its first real file; the Task Master import saves 2.5k tokens)
+   - HPM-Lightning is dropped: the repo was archived on GitHub on 2026-11-23, so it takes no rewrite. ITDV-Lightning stays.
 5. **pc20-wiki**, **PC20-Nostr**
 6. Small fixes, 10-40 minutes each: musicL-playlist-updater (**start with the `.env` check**), msp-podping-service, chadf-musicl-playlists, pc20-archive, localbitcoiners, square-my-art, project-notes
 7. Optional: na-archive, MSP-2.0, chadf-landing-page, Auto-musicL-Maker, helipad-startos
