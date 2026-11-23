@@ -474,6 +474,8 @@ async function main() {
 
   const browser = spawn(chrome, [
     '--headless=new', '--disable-gpu', '--no-first-run', '--no-default-browser-check',
+    // A test Chrome never makes a sound on the Mac mini's speakers.
+    '--mute-audio',
     // No 1.4 GB code-sign copy of Chrome under $TMPDIR/../X/ on macOS. Chrome makes one per
     // start and only CDP Browser.close removes it; the SIGTERM in `finally` leaves it
     // (measured 2026-11-11). Other platforms ignore the name. Chrome keeps only the LAST
