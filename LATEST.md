@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-23 01:40 UTC
+# Dashboard — 2026-11-23 04:25 UTC
 
-22 open PRs · 12 open issues · 21 branches with no PR · 42 tracked repos (14 not tracked)
+22 open PRs · 12 open issues · 21 branches with no PR · 42 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -100,20 +100,20 @@ _None._
 
 ### Music publishing
 
+#### [MSP-2.0](projects/MSP-2.0.md)
+
+4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+
+- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft
+- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 20 days ago · draft
+- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
-
-#### [MSP-2.0](projects/MSP-2.0.md)
-
-4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
-
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
-- PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 19 days ago · draft
-- PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
 
@@ -154,15 +154,15 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Websites
 
+#### [candr.space](projects/candr.space.md)
+
+[2 branches with no PR](https://github.com/ChadFarrow/candr.space/branches) · private repo, counts only
+
 #### [chadf-landing-page](projects/chadf-landing-page.md)
 
 1 branch with no PR
 
 - Branch [`wip/show-website-links-2026-09-27`](https://github.com/ChadFarrow/chadf-landing-page/tree/wip/show-website-links-2026-09-27) — no PR
-
-#### [candr.space](projects/candr.space.md)
-
-[2 branches with no PR](https://github.com/ChadFarrow/candr.space/branches) · private repo, counts only
 
 #### [localbitcoiners](projects/localbitcoiners.md)
 

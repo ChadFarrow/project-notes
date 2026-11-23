@@ -20,7 +20,6 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 ## Music apps & sites
 
 - [boostmebitch](projects/boostmebitch.md) - No description (`TypeScript`)
-- [HPM-Lightning](projects/HPM-Lightning.md) - No description (`TypeScript`) · not tracked
 - [ITDV-Lightning](projects/ITDV-Lightning.md) - No description (`TypeScript`)
 - [lnaddress-music](projects/lnaddress-music.md) - No description (`TypeScript`)
 - [lnbeats](projects/lnbeats.md) - No description (`Svelte`) · fork · not tracked
