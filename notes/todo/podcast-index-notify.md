@@ -1,0 +1,1 @@
+- [ ] After merge: Computer: Publish podcast-index-notify 0.1.0 to npm with your npm account (#1). In a Terminal window, run `cd ~/Vibe/podcast-index-notify && git pull && npm ci`, then `npm login`, then `npm publish --access public`. `npm publish` builds and runs the tests first. Then tell Claude, so the apps can move to the library.
