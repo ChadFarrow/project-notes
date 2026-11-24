@@ -4,5 +4,5 @@
 - [ ] After merge: Streams tab on /boosts (#21, ChadFarrow/Helipad-to-Nostr-BoostBot#26). The exact steps are in "Chad's steps" in #21.
   - [ ] Computer: Fix the database password (step 0). Put a new `POSTGRES_URL` from the Neon console in Vercel for Production only, Sensitive. Remove it from Preview and Development, then redeploy. Until then /boosts shows no Helipad cards.
   - [ ] Computer: Make the BoostBot token in a Terminal window (step 1). It goes into the Keychain as `shared/itdv-boostbot-webhook-token`, and into Vercel as `BOOSTBOT_WEBHOOK_TOKEN` (Production, Sensitive).
-  - [ ] Computer: Deploy BoostBot on the Ubuntu server (step 2; the commands are in ChadFarrow/Helipad-to-Nostr-BoostBot#26). Then fill in Forward streams on its dashboard.
+  - [ ] Computer: Deploy BoostBot on the Ubuntu server (step 2; the commands are in ChadFarrow/Helipad-to-Nostr-BoostBot#26). Check that the dashboard's Access field "Helipad webhook token" has a token: forwarding stays off without it. If it is blank, put a new token in the Helipad trigger's "Auth token" first, then in that field. Then fill in Forward streams on its dashboard.
   - [ ] Computer: In your Helipad, tick Stream and Auto on the trigger that sends to BoostBot, and turn on payment metadata fetching (step 3).
