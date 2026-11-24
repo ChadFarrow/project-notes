@@ -1,1 +1,2 @@
 - [ ] After merge: Computer: In the Helipad-to-Nostr-BoostBot settings on the node, check that the send rule for the action `auto` is off (#16). ITDV auto boosts now send `auto`, so this rule alone decides whether the BoostBot posts them.
+- [ ] After merge: Ask TJ to enter the /boosts webhook in his Helipad triggers again (#20). URL: `https://itdv.podtards.com/api/helipad-webhook`. Token: the value of `HELIPAD_AUTH_TOKEN` in Vercel. Helipad sends only new boosts. For the old boosts, ask TJ for a Helipad CSV export.
