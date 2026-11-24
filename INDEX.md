@@ -80,6 +80,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 
 ## Uncategorized
 
+- [alby-go](projects/alby-go.md) - Alby Go - The easiest mobile app to use bitcoin on the Go and that works great with Alby Hub. (`TypeScript`) · fork
 - [Command-Center](projects/Command-Center.md) · private
 - [IRL_QR](projects/IRL_QR.md) - No description (`JavaScript`) · not tracked
 - [is-this-thing-on](projects/is-this-thing-on.md) - No description (`JavaScript`) · not tracked

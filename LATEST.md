@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-24 04:29 UTC
+# Dashboard — 2026-11-24 16:47 UTC
 
-22 open PRs · 12 open issues · 21 branches with no PR · 43 tracked repos (13 not tracked)
+22 open PRs · 13 open issues · 121 branches with no PR · 44 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -10,10 +10,11 @@
 
 _None._
 
-### Open issues (12)
+### Open issues (13)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
+- [#669 \[BMB\] A little icon showing that you're playing a downloaded file or streaming woul…](https://github.com/ChadFarrow/boostmebitch/issues/669) — opened 10 hours ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 16 days ago · 4 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 53 days ago · 1 comment
 
@@ -50,7 +51,7 @@ _None._
 
 1 PR · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 55 days ago · draft
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 56 days ago · draft
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 #### [helipad-startos](projects/helipad-startos.md)
@@ -79,12 +80,12 @@ _None._
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 2 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+4 PRs · 3 issues · 4 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2 days ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 3 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
-- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 4 days ago
+- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2 days ago · draft · merge conflict
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 4 days ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#608 fix(notes): one listen link, not a Podcast Index page beside this site's link](https://github.com/ChadFarrow/boostmebitch/pull/608) — opened 4 days ago · merge conflict
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch) — no PR
@@ -172,9 +173,25 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
+#### [alby-go](projects/alby-go.md)
+
+100 branches with no PR
+
+- Branch [`feat/rss-payment-metadata`](https://github.com/ChadFarrow/alby-go/tree/feat/rss-payment-metadata) — no PR
+- Branch [`chore/expo-v57`](https://github.com/ChadFarrow/alby-go/tree/chore/expo-v57) — no PR
+- Branch [`fix/notif-intent`](https://github.com/ChadFarrow/alby-go/tree/fix/notif-intent) — no PR
+- Branch [`fix/connect-redirect-visibility`](https://github.com/ChadFarrow/alby-go/tree/fix/connect-redirect-visibility) — no PR
+- Branch [`chore/remove-unused-debug-logging`](https://github.com/ChadFarrow/alby-go/tree/chore/remove-unused-debug-logging) — no PR
+- Branch [`chore/v2.0.2`](https://github.com/ChadFarrow/alby-go/tree/chore/v2.0.2) — no PR
+- Branch [`feat/dualcurrencyinput-paste`](https://github.com/ChadFarrow/alby-go/tree/feat/dualcurrencyinput-paste) — no PR
+- Branch [`chore/clipboard-helpers`](https://github.com/ChadFarrow/alby-go/tree/chore/clipboard-helpers) — no PR
+- Branch [`fix/bip21-lightning-parsing`](https://github.com/ChadFarrow/alby-go/tree/fix/bip21-lightning-parsing) — no PR
+- Branch [`chore/update-alby-dependencies`](https://github.com/ChadFarrow/alby-go/tree/chore/update-alby-dependencies) — no PR
+- [90 more branches with no PR](projects/alby-go.md)
+
 #### [Command-Center](projects/Command-Center.md)
 
-[1 PR](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
+[1 PR](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft, 1 merge conflict) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
 
 #### [small-group-scoop](projects/small-group-scoop.md)
 
@@ -188,3 +205,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 - [v4v-toolkit](projects/v4v-toolkit.md) — last push 2026-04-07
 - [v4v-core-rs](projects/v4v-core-rs.md) — last push 2026-04-07
+
+## Note problems
+
+- `alby-go`: shows 100 of 170 open branches (list is truncated)
