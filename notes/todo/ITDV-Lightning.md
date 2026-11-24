@@ -1,2 +1,8 @@
 - [ ] After merge: Computer: In the Helipad-to-Nostr-BoostBot settings on the node, check that the send rule for the action `auto` is off (#16). ITDV auto boosts now send `auto`, so this rule alone decides whether the BoostBot posts them.
-- [ ] After merge: Ask TJ to enter the /boosts webhook in his Helipad triggers again (#20). URL: `https://itdv.podtards.com/api/helipad-webhook`. Token: the value of `HELIPAD_AUTH_TOKEN` in Vercel. Helipad sends only new boosts. For the old boosts, ask TJ for a Helipad CSV export.
+- [ ] After merge: Ask TJ to enter the /boosts webhook in his Helipad triggers again (#20). Wait until the database works (#21, step 0), then check first whether his boosts already arrive. URL: `https://itdv.podtards.com/api/helipad-webhook`. Token: the value of `HELIPAD_AUTH_TOKEN` in Vercel. On that trigger he also ticks Stream and Auto and turns on payment metadata fetching. Helipad sends only new boosts. For the old boosts, ask TJ for a Helipad CSV export.
+
+- [ ] After merge: Streams tab on /boosts (#21, ChadFarrow/Helipad-to-Nostr-BoostBot#26). The exact steps are in "Chad's steps" in #21.
+  - [ ] Computer: Fix the database password (step 0). Put a new `POSTGRES_URL` from the Neon console in Vercel for Production only, Sensitive. Remove it from Preview and Development, then redeploy. Until then /boosts shows no Helipad cards.
+  - [ ] Computer: Make the BoostBot token in a Terminal window (step 1). It goes into the Keychain as `shared/itdv-boostbot-webhook-token`, and into Vercel as `BOOSTBOT_WEBHOOK_TOKEN` (Production, Sensitive).
+  - [ ] Computer: Deploy BoostBot on the Ubuntu server (step 2; the commands are in ChadFarrow/Helipad-to-Nostr-BoostBot#26). Then fill in Forward streams on its dashboard.
+  - [ ] Computer: In your Helipad, tick Stream and Auto on the trigger that sends to BoostBot, and turn on payment metadata fetching (step 3).
