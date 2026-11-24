@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-24 19:02 UTC
+# Dashboard — 2026-11-24 19:10 UTC
 
-23 open PRs · 13 open issues · 121 branches with no PR · 44 tracked repos (13 not tracked)
+22 open PRs · 13 open issues · 121 branches with no PR · 44 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -14,7 +14,7 @@ _None._
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#669 \[BMB\] A little icon showing that you're playing a downloaded file or streaming woul…](https://github.com/ChadFarrow/boostmebitch/issues/669) — opened 12 hours ago · 1 comment
+- [#669 \[BMB\] A little icon showing that you're playing a downloaded file or streaming woul…](https://github.com/ChadFarrow/boostmebitch/issues/669) — opened 13 hours ago · 1 comment
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 16 days ago · 4 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 53 days ago · 1 comment
 
@@ -173,10 +173,6 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Uncategorized
 
-#### [vibe-kit](projects/vibe-kit.md)
-
-[1 PR](https://github.com/ChadFarrow/vibe-kit/pulls) (1 with checks pending) · private repo, counts only
-
 #### [alby-go](projects/alby-go.md)
 
 100 branches with no PR
@@ -203,7 +199,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 ### Quiet — no open work
 
-[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-index-notify](projects/podcast-index-notify.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [web-ui](projects/web-ui.md)
+[castr.me](projects/castr.me.md) · [Helipad-to-Nostr-BoostBot](projects/Helipad-to-Nostr-BoostBot.md) · [HGH-checker](projects/HGH-checker.md) · [ITDV-Lightning](projects/ITDV-Lightning.md) · [lnaddress-music](projects/lnaddress-music.md) · [lnurl-test-feed](projects/lnurl-test-feed.md) · [msp-podping-service](projects/msp-podping-service.md) · [musicL-playlist-updater](projects/musicL-playlist-updater.md) · [obsidian-candr](projects/obsidian-candr.md) · [onlyboosts](projects/onlyboosts.md) · [pc20-archive](projects/pc20-archive.md) · [pc20-clips](projects/pc20-clips.md) · [pc20-timeline](projects/pc20-timeline.md) · [pc20-wiki](projects/pc20-wiki.md) · [podcast-index-notify](projects/podcast-index-notify.md) · [project-notes](projects/project-notes.md) · [sidecar](projects/sidecar.md) · [sovereign-feeds](projects/sovereign-feeds.md) · [square-my-art](projects/square-my-art.md) · [thelounge-candr](projects/thelounge-candr.md) · [TRM-Lightning](projects/TRM-Lightning.md) · [v4v-core-rs](projects/v4v-core-rs.md) · [v4v-toolkit](projects/v4v-toolkit.md) · [vibe-kit](projects/vibe-kit.md) · [web-ui](projects/web-ui.md)
 
 ## Stale — no push in 180+ days
 
