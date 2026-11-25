@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-25 22:25 UTC
+# Dashboard — 2026-11-25 23:51 UTC
 
 23 open PRs · 13 open issues · 125 branches with no PR · 44 tracked repos (13 not tracked)
 
@@ -6,9 +6,9 @@
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (3)
+### Ready to merge — idle 7+ days (4)
 
-- **small-group-scoop** [3 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 7 days · private repo, counts only
+- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 7 days · private repo, counts only
 
 ### Open issues (13)
 
@@ -85,9 +85,9 @@
 
 5 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2 hours ago
-- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 5 hours ago · draft
-- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 3 days ago · draft
+- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 3 hours ago · draft
+- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 7 hours ago · draft
+- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 4 days ago · draft
 - PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 5 days ago · draft
 - PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
