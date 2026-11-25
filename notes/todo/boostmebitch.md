@@ -25,6 +25,9 @@
     - [ ] Computer: before you merge, set `NEXT_PUBLIC_IRC_GATEWAY_URL` to `wss://irc-ws.candr.space/webirc/websocket/` on Production in BOTH Vercel projects (`boostmebitch` and `boostmebuddy`), visibility "config". Without it production shows no chat
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
+- [ ] In development: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). It is on beta; until the column exists, ZAP works as before
+  - [ ] Computer: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
+
 ## Already works
 
 - Playlists to GitHub and Podcast Index (2026-11-22): `GITHUB_ARCHIVE_TOKEN` is on beta, and your SAVE of "Test playlist from my phone" at 14:55:54Z started the GitHub copy at 14:55:55Z (commit `c3f4b227` on the `playlists` branch, equal to the live feed). You added "WrathfulTs Top Tracks" by Sir TJ The Wrathful to Podcast Index by hand: id 8125553, parsed as `musicL` one minute later. Docs: #654, #655, #656
