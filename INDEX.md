@@ -47,7 +47,7 @@ One note per repository in [`projects/`](projects/). The [dashboard](LATEST.md) 
 - [blup](projects/blup.md) · private · not tracked
 - [castr.me](projects/castr.me.md) - Effortlessly turn your npub into a podcast feed. (`TypeScript`) · fork
 - [haven](projects/haven.md) - High Availability Vault for Events on Nostr (`Go`) · fork · not tracked
-- [PC20-Nostr](projects/PC20-Nostr.md) - Repo for code example for my apps (`TypeScript`)
+- [PC20-Nostr](projects/PC20-Nostr.md) - Working Podcasting 2.0 code from live apps, packaged as recipes a coding agent can install, plus draft specs for Podcasting 2.0 data on Nostr (`TypeScript`)
 - [podstr](projects/podstr.md) - A application that marries Nostr and Podcasting 2.0 (`TypeScript`) · fork · not tracked
 - [sidecar](projects/sidecar.md) - A classy Nostr keystore and signer that lives in your browser sidebar 🍸 (`JavaScript`) · fork
 
