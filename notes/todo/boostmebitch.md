@@ -25,6 +25,8 @@
     - [ ] Computer: before you merge, set `NEXT_PUBLIC_IRC_GATEWAY_URL` to `wss://irc-ws.candr.space/webirc/websocket/` on Production in BOTH Vercel projects (`boostmebitch` and `boostmebuddy`), visibility "config". Without it production shows no chat
     - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
+- [ ] Before merge: #673 + PLAYLIST beside the heart saves a song to a playlist draft while you listen, and the open maker keeps songs added from the player or another tab. Beta only: a draft with `hold`, so only you release it. Your test on beta (2026-11-25): four tracks to a new playlist while shuffling Homegrown Hits worked
+
 - [ ] In development: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). It is on beta; until the column exists, ZAP works as before
   - [ ] Computer: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
 
