@@ -16,8 +16,8 @@
   - [ ] Computer: decide how playlists get into Podcast Index on their own (your words, 2026-11-22: "leave all of that like it is for now, until I come up with a solution"). Ideas: ask the Podcast Index team, a key with write permission, or musicindex (InTheMorning/musicindex-studio). Two keyless `hub/pubnotify` calls for a new playlist answered 200 and added nothing in 34 minutes (2026-11-23); the add form added it at once. Until then you add each playlist by hand from /admin, "Not in Podcast Index" (#667). docs/feeds.md has the details
   - [ ] Computer: when the playlist maker launches on the live sites, put `GITHUB_ARCHIVE_TOKEN` on Production of both Vercel projects (`boostmebitch` and `boostmebuddy`) and redeploy both. Beta has it since 2026-11-22. Your token is named "Boost Me Buddy playlist copy"; only you have its value, so use it again or make a new one
 
-- [ ] After merge: #667 each PUBLISH and SAVE announces the playlist to Podcast Index with no button (two keyless `hub/pubnotify`, the podping, then a lookup of the PI id). It is on main, not on beta yet
-  - [ ] Computer: run `npm run community:schema` with the `COMMUNITY_DB_URL` of beta (beta and production use the same database). It adds 3 columns and 1 index. Then tell Claude to rebuild beta. If beta is rebuilt first, beta sends no pubnotify and no podping until the columns exist
+- [ ] After merge: #667 each PUBLISH and SAVE announces the playlist to Podcast Index with no button (two keyless `hub/pubnotify`, the podping, then a lookup of the PI id). It is on main and on beta
+  - [ ] Computer: run `npm run community:schema` with the `COMMUNITY_DB_URL` of beta (beta and production use the same database). It adds 3 columns and 1 index. Beta has #667 now, so until the columns exist beta sends no pubnotify and no podping
 
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
@@ -27,8 +27,8 @@
 
 - [ ] Before merge: #673 + PLAYLIST beside the heart saves a song to a playlist draft while you listen, and the open maker keeps songs added from the player or another tab. Beta only: a draft with `hold`, so only you release it. Your test on beta (2026-11-25): four tracks to a new playlist while shuffling Homegrown Hits worked
 
-- [ ] In development: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). It is on beta; until the column exists, ZAP works as before
-  - [ ] Computer: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
+- [ ] Before merge: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). Beta only: a draft with `hold`, so only you release it. It is on beta; until the column exists, ZAP works as before
+  - [ ] Computer: When playlists go live: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
 
 ## Already works
 
