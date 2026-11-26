@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-26 05:43 UTC
+# Dashboard — 2026-11-26 17:56 UTC
 
-23 open PRs · 12 open issues · 125 branches with no PR · 44 tracked repos (13 not tracked)
+23 open PRs · 12 open issues · 142 branches with no PR · 45 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 7 days · private repo, counts only
+- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 7 to 8 days · private repo, counts only
 
 ### Open issues (12)
 
@@ -20,14 +20,14 @@
 **[MSP-2.0](projects/MSP-2.0.md)**
 
 - [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 9 days ago · 1 comment
-- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 9 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 10 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 20 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 10 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
 **[stablekraft-app](projects/stablekraft-app.md)**
 
-- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 9 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- [#309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — opened 10 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 
 **[PC20-Nostr](projects/PC20-Nostr.md)**
 
@@ -40,7 +40,7 @@
 
 **[RSS-music-site-template](projects/RSS-music-site-template.md)**
 
-- [#1 Feed deletion](https://github.com/ChadFarrow/RSS-music-site-template/issues/1) — opened 11 months ago
+- [#1 Feed deletion](https://github.com/ChadFarrow/RSS-music-site-template/issues/1) — opened 12 months ago
 
 ## Projects
 
@@ -59,7 +59,7 @@
 
 1 PR · 1 branch with no PR · used by [boostmebitch](projects/boostmebitch.md), [stablekraft-app](projects/stablekraft-app.md)
 
-- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 57 days ago · draft
+- PR [#50 docs(spec): MSP 2.0 Nostr posts from a checkbox on the split](https://github.com/ChadFarrow/boostbox/pull/50) — opened 58 days ago · draft
 - Branch [`docs/msp-nostr-optin`](https://github.com/ChadFarrow/boostbox/tree/docs/msp-nostr-optin) — no PR
 
 #### [helipad-startos](projects/helipad-startos.md)
@@ -84,11 +84,11 @@
 
 5 PRs · 2 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 13 hours ago · draft
-- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 9 hours ago · draft
-- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 4 days ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 5 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 1 day ago · draft
+- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 21 hours ago · draft · merge conflict
+- PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 4 days ago · draft · merge conflict
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 days ago · draft · merge conflict
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link) — no PR
@@ -105,12 +105,6 @@
 
 ### Music publishing
 
-#### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
-
-1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
-
-- Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
-
 #### [MSP-2.0](projects/MSP-2.0.md)
 
 4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
@@ -119,6 +113,12 @@
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 23 days ago · draft
 - PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 5 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+
+#### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
+
+1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
+
+- Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [RSS-music-site-template](projects/RSS-music-site-template.md)
 
@@ -133,8 +133,8 @@
 used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](projects/musicL-playlist-updater.md), [stablekraft-app](projects/stablekraft-app.md)
 
 - Opened elsewhere: [MSP-2.0 #184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — PR · opened 5 days ago
-- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 9 days ago
-- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 9 days ago
+- Opened elsewhere: [MSP-2.0 #181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — issue · opened 10 days ago
+- Opened elsewhere: [stablekraft-app #309 Playlist maker: invalid XML from the description, wrong namespace, copied or changing guid; musicL children imported as albums](https://github.com/ChadFarrow/stablekraft-app/issues/309) — issue · opened 10 days ago
 
 #### [Auto-musicL-Maker](projects/Auto-musicL-Maker.md)
 
@@ -176,6 +176,22 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 - Branch [`docs/claude-local-dev`](https://github.com/ChadFarrow/localbitcoiners/tree/docs/claude-local-dev) — no PR
 
 ### Uncategorized
+
+#### [jumble](projects/jumble.md)
+
+17 branches with no PR
+
+- Branch [`beta`](https://github.com/ChadFarrow/jumble/tree/beta) — no PR
+- Branch [`feat/cod-93-mute-note-notifications`](https://github.com/ChadFarrow/jumble/tree/feat/cod-93-mute-note-notifications) — no PR
+- Branch [`feat/cod-6-follow-lists`](https://github.com/ChadFarrow/jumble/tree/feat/cod-6-follow-lists) — no PR
+- Branch [`feat/cod-92-distinguish-notification-types`](https://github.com/ChadFarrow/jumble/tree/feat/cod-92-distinguish-notification-types) — no PR
+- Branch [`feat/nip-cd-post-editor`](https://github.com/ChadFarrow/jumble/tree/feat/nip-cd-post-editor) — no PR
+- Branch [`fix/prevent-double-zaps`](https://github.com/ChadFarrow/jumble/tree/fix/prevent-double-zaps) — no PR
+- Branch [`feat/android`](https://github.com/ChadFarrow/jumble/tree/feat/android) — no PR
+- Branch [`chore/dependency-upgrades`](https://github.com/ChadFarrow/jumble/tree/chore/dependency-upgrades) — no PR
+- Branch [`bot/issue-68-profile-card-clicks`](https://github.com/ChadFarrow/jumble/tree/bot/issue-68-profile-card-clicks) — no PR
+- Branch [`bot/issue-59-navigation-restore`](https://github.com/ChadFarrow/jumble/tree/bot/issue-59-navigation-restore) — no PR
+- [7 more branches with no PR](projects/jumble.md)
 
 #### [alby-go](projects/alby-go.md)
 
