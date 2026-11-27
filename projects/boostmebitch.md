@@ -35,8 +35,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (5)
+### Pull requests (6)
 
+- [#683 feat(player): show a song's lyrics from its podcast:transcript (beta)](https://github.com/ChadFarrow/boostmebitch/pull/683) — opened 2026-11-27 · draft
 - [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2026-11-25 · draft
 - [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2026-11-25 · draft
 - [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2026-11-21 · draft
@@ -51,9 +52,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 ### Branches with no open PR (6)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
+- [`beta-only/track-lyrics-on-irc-chat`](https://github.com/ChadFarrow/boostmebitch/tree/beta-only/track-lyrics-on-irc-chat)
 - [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
-- [`feat/pi-video-play-time`](https://github.com/ChadFarrow/boostmebitch/tree/feat/pi-video-play-time)
 - [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link)
 - [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists)
 <!-- AUTO:END -->
