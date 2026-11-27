@@ -48,11 +48,12 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 
-### Branches with no open PR (5)
+### Branches with no open PR (6)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
 - [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
+- [`feat/live-video-switch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/live-video-switch)
 - [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link)
 - [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists)
 <!-- AUTO:END -->
