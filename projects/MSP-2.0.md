@@ -47,11 +47,10 @@ Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take id
 - **Used by:** [MSP-2.0-Desktop-App](MSP-2.0-Desktop-App.md)
 - **Watch:** [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-### Pull requests (4)
+### Pull requests (3)
 
 - [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 2026-11-20 · for [chadf-musicl-playlists](chadf-musicl-playlists.md)
 - [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 2026-11-03 · draft
-- [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 2026-06-15 · draft · merge conflict
 - [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 2026-06-04 · draft · merge conflict
 
 ### Issues (5)
@@ -61,4 +60,8 @@ Its `AGENTS.md` says it replaces MSP 2.0. It is AGPL-3.0 and MSP is MIT: take id
 - [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 2026-11-06
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 2026-01-27
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 2026-01-19 · by Kolomona
+
+### Branches with no open PR (1)
+
+- [`claude/feeds-demu-template-hf5tyk`](https://github.com/ChadFarrow/MSP-2.0/tree/claude/feeds-demu-template-hf5tyk)
 <!-- AUTO:END -->

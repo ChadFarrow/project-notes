@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-27 03:50 UTC
+# Dashboard — 2026-11-27 04:11 UTC
 
-24 open PRs · 12 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
+24 open PRs · 12 open issues · 144 branches with no PR · 45 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -82,14 +82,15 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-6 PRs · 2 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+7 PRs · 2 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#683 feat(player): show a song's lyrics from its podcast:transcript (beta)](https://github.com/ChadFarrow/boostmebitch/pull/683) — opened 41 minutes ago · draft
+- PR [#684 fix(site-sign): bound the whole imeta tag; drop an i tag the route would refuse](https://github.com/ChadFarrow/boostmebitch/pull/684) — opened 1 minute ago
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#683 feat(player): show a song's lyrics from its podcast:transcript (beta)](https://github.com/ChadFarrow/boostmebitch/pull/683) — opened 1 hour ago · draft
 - PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 5 days ago · draft
 - PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 1 day ago · draft
 - PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 1 day ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 days ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 days ago · draft · merge conflict
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-only/track-lyrics-on-irc-chat`](https://github.com/ChadFarrow/boostmebitch/tree/beta-only/track-lyrics-on-irc-chat) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
@@ -109,16 +110,16 @@
 
 #### [MSP-2.0](projects/MSP-2.0.md)
 
-4 PRs · 5 issues · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
+3 PRs · 5 issues · 1 branch with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
-- PR [#79 Add DeMu-style educational XML comments to generated feeds](https://github.com/ChadFarrow/MSP-2.0/pull/79) — opened 5 months ago · draft · merge conflict
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
 - PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 24 days ago · draft
 - PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 6 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
+- Branch [`claude/feeds-demu-template-hf5tyk`](https://github.com/ChadFarrow/MSP-2.0/tree/claude/feeds-demu-template-hf5tyk) — no PR
 
 #### [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md)
 
-1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (4 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
+1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
