@@ -30,6 +30,9 @@
 - [ ] Before merge: #683 lyrics for music tracks: a song's `podcast:transcript` shows as "Lyrics" in the player, synced for SRT. Beta only: a draft with `hold`, so only you release it. It is on beta through the branch `beta-only/track-lyrics-on-irc-chat`, because it conflicts with #646
   - [ ] Phone: decide where lyrics sit on a phone. Now a Lyrics tab, 1133 px down the player at 390×844. The other choice: a LYRICS button that swaps the cover for the lyrics. Tell Claude
 
+- [ ] After merge: #691 the read index (`services/nostr-index`) retries a failed event write, and caps the `p`-tags that one note adds to its tracked set. It merged to main on 2026-11-27 (ca2a90b2). Railway does not follow main, so the index runs the code of its last upload until you deploy it.
+  - [ ] Computer: deploy it. Export the merged commit with `git archive` to a folder outside every repo, run `railway up` from its `services/nostr-index`, and check that the DEPLOY log names `boostmebitch-nostr-index` (`docs/ops.md`).
+
 ## Already works
 
 - Playlists to GitHub and Podcast Index (2026-11-22): `GITHUB_ARCHIVE_TOKEN` is on beta, and your SAVE of "Test playlist from my phone" at 14:55:54Z started the GitHub copy at 14:55:55Z (commit `c3f4b227` on the `playlists` branch, equal to the live feed). You added "WrathfulTs Top Tracks" by Sir TJ The Wrathful to Podcast Index by hand: id 8125553, parsed as `musicL` one minute later. Docs: #654, #655, #656
