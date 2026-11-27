@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-27 19:50 UTC
+# Dashboard — 2026-11-27 23:47 UTC
 
 22 open PRs · 13 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
 
@@ -8,14 +8,14 @@
 
 ### Ready to merge — idle 7+ days (5)
 
-- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 8 to 9 days · private repo, counts only
+- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 9 days · private repo, counts only
 - **MSP-2.0** [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — idle 7 days · checks passing
 
 ### Open issues (13)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#708 Moved feeds: \`podcasts/byguid\` can return a stale duplicate entry](https://github.com/ChadFarrow/boostmebitch/issues/708) — opened 5 hours ago · by ReedBTC
+- [#708 Moved feeds: \`podcasts/byguid\` can return a stale duplicate entry](https://github.com/ChadFarrow/boostmebitch/issues/708) — opened 9 hours ago · by ReedBTC
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 19 days ago · 4 comments
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 56 days ago · 1 comment
 
@@ -86,10 +86,10 @@
 
 4 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
-- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 1 day ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2 days ago · draft
 - PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2 days ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 7 days ago · draft
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 7 days ago · draft · merge conflict
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link) — no PR
@@ -110,7 +110,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#111 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/111) — opened 1 hour ago
+- PR [#111 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/111) — opened 5 hours ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [MSP-2.0](projects/MSP-2.0.md)
@@ -181,7 +181,7 @@ used by [boostmebitch](projects/boostmebitch.md), [musicL-playlist-updater](proj
 
 #### [Command-Center](projects/Command-Center.md)
 
-[1 PR](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
+[1 PR](https://github.com/ChadFarrow/Command-Center/pulls) (1 draft, 1 merge conflict) · [1 branch with no PR](https://github.com/ChadFarrow/Command-Center/branches) · private repo, counts only
 
 #### [jumble](projects/jumble.md)
 
