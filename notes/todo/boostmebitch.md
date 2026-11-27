@@ -22,7 +22,6 @@
 - [ ] In development: check the Goal draft and answer the questions under "To plan" in the boostmebitch roadmap (`roadmaps/boostmebitch.md`, in the `roadmaps` folder of the vault). Write the answers in the roadmap, or tell Claude
 
 - [ ] Before merge: #646 the IRC chat beside an opted-in live show (12 shows). Beta only: a draft with `hold`, so only you release it. It works on beta now; the hold service that keeps a dropped listener's session for 5 minutes is being built in thelounge-candr
-    - [ ] After merge: tell the hosts of the other 11 shows that BMB shows their channel
 
 - [ ] Before merge: #673 + PLAYLIST beside the heart saves a song to a playlist draft while you listen, and the open maker keeps songs added from the player or another tab. Beta only: a draft with `hold`, so only you release it. Your test on beta (2026-11-25): four tracks to a new playlist while shuffling Homegrown Hits worked
 
