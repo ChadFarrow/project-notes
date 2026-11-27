@@ -1,4 +1,4 @@
-# Dashboard — 2026-11-27 04:11 UTC
+# Dashboard — 2026-11-27 13:15 UTC
 
 24 open PRs · 12 open issues · 144 branches with no PR · 45 tracked repos (13 not tracked)
 
@@ -8,7 +8,7 @@
 
 ### Ready to merge — idle 7+ days (4)
 
-- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 8 days · private repo, counts only
+- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 8 to 9 days · private repo, counts only
 
 ### Open issues (12)
 
@@ -84,13 +84,13 @@
 
 7 PRs · 2 issues · 6 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#684 fix(site-sign): bound the whole imeta tag; drop an i tag the route would refuse](https://github.com/ChadFarrow/boostmebitch/pull/684) — opened 1 minute ago
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
-- PR [#683 feat(player): show a song's lyrics from its podcast:transcript (beta)](https://github.com/ChadFarrow/boostmebitch/pull/683) — opened 1 hour ago · draft
+- PR [#697 fix(player): the Album panel lists the playing show's own list only](https://github.com/ChadFarrow/boostmebitch/pull/697) — opened 4 minutes ago
+- PR [#683 feat(player): show a song's lyrics from its podcast:transcript (beta)](https://github.com/ChadFarrow/boostmebitch/pull/683) — opened 10 hours ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 5 days ago · draft
 - PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 1 day ago · draft
 - PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 1 day ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 days ago · draft · merge conflict
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 6 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`beta-only/track-lyrics-on-irc-chat`](https://github.com/ChadFarrow/boostmebitch/tree/beta-only/track-lyrics-on-irc-chat) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
