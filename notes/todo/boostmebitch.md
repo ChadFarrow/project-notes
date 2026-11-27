@@ -23,7 +23,6 @@
 
 - [ ] Before merge: #646 the IRC chat beside an opted-in live show (12 shows). Beta only: a draft with `hold`, so only you release it. It works on beta now; the hold service that keeps a dropped listener's session for 5 minutes is being built in thelounge-candr
 
-- [ ] Before merge: #673 + PLAYLIST beside the heart saves a song to a playlist draft while you listen, and the open maker keeps songs added from the player or another tab. Beta only: a draft with `hold`, so only you release it. Your test on beta (2026-11-25): four tracks to a new playlist while shuffling Homegrown Hits worked
 
 - [ ] Before merge: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). Beta only: a draft with `hold`, so only you release it. It is on beta; until the column exists, ZAP works as before
   - [ ] Computer: When playlists go live: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
