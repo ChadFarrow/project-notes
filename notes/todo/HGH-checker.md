@@ -1,1 +1,0 @@
-- [ ] After merge: Computer: Revoke the old Podcast Index key pair at https://api.podcastindex.org. On 2026-11-20 every app that used it got the new pair (Vercel, Railway, the local `.env.local` files and the code), and each one was checked.
