@@ -27,6 +27,9 @@
 - [ ] Before merge: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). Beta only: a draft with `hold`, so only you release it. It is on beta; until the column exists, ZAP works as before
   - [ ] Computer: When playlists go live: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
 
+- [ ] Before merge: #683 lyrics for music tracks: a song's `podcast:transcript` shows as "Lyrics" in the player, synced for SRT. Beta only: a draft with `hold`, so only you release it. It is on beta through the branch `beta-only/track-lyrics-on-irc-chat`, because it conflicts with #646
+  - [ ] Phone: decide where lyrics sit on a phone. Now a Lyrics tab, 1133 px down the player at 390×844. The other choice: a LYRICS button that swaps the cover for the lyrics. Tell Claude
+
 ## Already works
 
 - Playlists to GitHub and Podcast Index (2026-11-22): `GITHUB_ARCHIVE_TOKEN` is on beta, and your SAVE of "Test playlist from my phone" at 14:55:54Z started the GitHub copy at 14:55:55Z (commit `c3f4b227` on the `playlists` branch, equal to the live feed). You added "WrathfulTs Top Tracks" by Sir TJ The Wrathful to Podcast Index by hand: id 8125553, parsed as `musicL` one minute later. Docs: #654, #655, #656
