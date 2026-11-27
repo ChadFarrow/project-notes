@@ -35,11 +35,10 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (5)
+### Pull requests (4)
 
 - [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2026-11-25 · draft
 - [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2026-11-25 · draft
-- [#646 feat(irc): IRC chat beside an opted-in RSS live stream (beta only)](https://github.com/ChadFarrow/boostmebitch/pull/646) — opened 2026-11-21 · draft · merge conflict
 - [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
 - [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
@@ -49,10 +48,9 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
 
-### Branches with no open PR (6)
+### Branches with no open PR (5)
 
 - [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta)
-- [`beta-only/irc-chat-on-main`](https://github.com/ChadFarrow/boostmebitch/tree/beta-only/irc-chat-on-main)
 - [`docs/week-review-2026-09-25`](https://github.com/ChadFarrow/boostmebitch/tree/docs/week-review-2026-09-25)
 - [`feat/beta-next-prefetch`](https://github.com/ChadFarrow/boostmebitch/tree/feat/beta-next-prefetch)
 - [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link)
