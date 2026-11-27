@@ -27,9 +27,6 @@
 - [ ] Before merge: #674 the playlist ZAP lights up at once on a first visit, from the maker's Lightning address saved with each playlist (column `maker_ln`). Beta only: a draft with `hold`, so only you release it. It is on beta; until the column exists, ZAP works as before
   - [ ] Computer: When playlists go live: add the `maker_ln` column. In a Terminal window, run `node ~/Vibe/agent-dispatcher/handoffs/bmb-maker-ln-column.mjs`. Paste the `COMMUNITY_DB_URL` (the input is hidden), and `COMMUNITY_DB_CA` if the database needs one. It shows the plan, and it changes nothing until you type `y`. It adds one empty column and no other change. Beta and production use the same database, so one run covers both. Vercel did not give the value back to Claude, so Claude could not run it
 
-- [ ] Before merge: #683 lyrics for music tracks: a song's `podcast:transcript` shows as "Lyrics" in the player, synced for SRT. Beta only: a draft with `hold`, so only you release it. It is on beta through the branch `beta-only/track-lyrics-on-irc-chat`, because it conflicts with #646
-  - [ ] Phone: decide where lyrics sit on a phone. Now a Lyrics tab, 1133 px down the player at 390×844. The other choice: a LYRICS button that swaps the cover for the lyrics. Tell Claude
-
 - [ ] After merge: #691 the read index (`services/nostr-index`) retries a failed event write, and caps the `p`-tags that one note adds to its tracked set. It merged to main on 2026-11-27 (ca2a90b2). Railway does not follow main, so the index runs the code of its last upload until you deploy it.
   - [ ] Computer: deploy it. Export the merged commit with `git archive` to a folder outside every repo, run `railway up` from its `services/nostr-index`, and check that the DEPLOY log names `boostmebitch-nostr-index` (`docs/ops.md`).
 
