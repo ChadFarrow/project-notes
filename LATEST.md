@@ -1,6 +1,6 @@
-# Dashboard — 2026-11-28 16:27 UTC
+# Dashboard — 2026-11-28 17:39 UTC
 
-33 open PRs · 13 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
+35 open PRs · 13 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
@@ -75,15 +75,16 @@
 
 #### [libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)
 
-8 PRs · 2 issues · 1 branch with no PR
+9 PRs · 2 issues · 1 branch with no PR
 
-- PR [#99 deps(zod): 3.25 → 4.6.7 for GHSA-mrhx-c7xc-m3w5 (stacked on #95)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/99) — opened 11 minutes ago
-- PR [#98 feat(embed): approvalMode "reject" — fail at once instead of opening an approval sheet (stacked on #97)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/98) — opened 16 minutes ago
-- PR [#97 feat(embed): dispose() reports the Drive save result, so a host never wipes unsaved state](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/97) — opened 21 minutes ago
-- PR [#96 fix(drive): refuse an OAuth redirect token whose state this origin did not store (login CSRF)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/96) — opened 29 minutes ago
-- PR [#95 chore(deps): vitest 4 + vite 6 (dev/build tools; audit critical 5 → 0) — stacked on #94](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/95) — opened 44 minutes ago
-- PR [#94 chore(deps): patch + minor updates and in-range audit fixes (audit 65 → 34, prod 10 → 1)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/94) — opened 13 hours ago
-- PR [#93 feat(servers): User-Agent on gateway and dev-LSP HTTP requests (rule 17)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/93) — opened 14 hours ago
+- PR [#99 deps(zod): 3.25 → 4.6.7 for GHSA-mrhx-c7xc-m3w5 (stacked on #95)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/99) — opened 1 hour ago
+- PR [#100 deps(ldk): lightningdevkit 0.1.0 → 0.1.1-2.0 (LDK 0.1.12), proven cross-version on regtest (stacked on #99)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/100) — opened 41 minutes ago
+- PR [#98 feat(embed): approvalMode "reject" — fail at once instead of opening an approval sheet (stacked on #97)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/98) — opened 1 hour ago
+- PR [#97 feat(embed): dispose() reports the Drive save result, so a host never wipes unsaved state](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/97) — opened 1 hour ago
+- PR [#96 fix(drive): refuse an OAuth redirect token whose state this origin did not store (login CSRF)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/96) — opened 1 hour ago
+- PR [#95 chore(deps): vitest 4 + vite 6 (dev/build tools; audit critical 5 → 0) — stacked on #94](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/95) — opened 1 hour ago
+- PR [#94 chore(deps): patch + minor updates and in-range audit fixes (audit 65 → 34, prod 10 → 1)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/94) — opened 15 hours ago
+- PR [#93 feat(servers): User-Agent on gateway and dev-LSP HTTP requests (rule 17)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/93) — opened 15 hours ago
 - PR [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 4 months ago · draft
 - Branch [`feat/lsps2-jit-m1`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/lsps2-jit-m1) — no PR
 
@@ -91,17 +92,18 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-9 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+10 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
+- PR [#720 feat(review-gate): checks.sh, review routes and hot spots for the agent review gate](https://github.com/ChadFarrow/boostmebitch/pull/720) — opened 8 minutes ago
 - PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2 days ago · draft
-- PR [#713 \[Libre stack L2/5\] The Libre wallet core, off unless its gate is open](https://github.com/ChadFarrow/boostmebitch/pull/713) — opened 14 hours ago · draft
-- PR [#714 \[Libre stack L3/5\] Streaming never waits on the Libre wallet's approval](https://github.com/ChadFarrow/boostmebitch/pull/714) — opened 14 hours ago · draft
-- PR [#716 \[Libre stack L5/5\] Sign out & remove the Libre wallet from this device](https://github.com/ChadFarrow/boostmebitch/pull/716) — opened 13 hours ago · draft
-- PR [#715 \[Libre stack L4/5\] Libre in the wallet screens: one live-WebLN answer, labels, the approval sheet](https://github.com/ChadFarrow/boostmebitch/pull/715) — opened 13 hours ago · draft
-- PR [#711 \[Libre stack L1/5\] A WebLN payment Libre says is still in flight is ?, not ✗](https://github.com/ChadFarrow/boostmebitch/pull/711) — opened 15 hours ago · draft
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
-- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2 days ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 8 days ago · draft
+- PR [#713 \[Libre stack L2/5\] The Libre wallet core, off unless its gate is open](https://github.com/ChadFarrow/boostmebitch/pull/713) — opened 15 hours ago · draft
+- PR [#714 \[Libre stack L3/5\] Streaming never waits on the Libre wallet's approval](https://github.com/ChadFarrow/boostmebitch/pull/714) — opened 15 hours ago · draft
+- PR [#716 \[Libre stack L5/5\] Sign out & remove the Libre wallet from this device](https://github.com/ChadFarrow/boostmebitch/pull/716) — opened 14 hours ago · draft
+- PR [#715 \[Libre stack L4/5\] Libre in the wallet screens: one live-WebLN answer, labels, the approval sheet](https://github.com/ChadFarrow/boostmebitch/pull/715) — opened 14 hours ago · draft
+- PR [#711 \[Libre stack L1/5\] A WebLN payment Libre says is still in flight is ?, not ✗](https://github.com/ChadFarrow/boostmebitch/pull/711) — opened 16 hours ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 3 days ago · draft
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 8 days ago · draft · merge conflict
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link) — no PR
