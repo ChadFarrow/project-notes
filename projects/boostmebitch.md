@@ -35,9 +35,8 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - **Repo:** [ChadFarrow/boostmebitch](https://github.com/ChadFarrow/boostmebitch) · TypeScript
 - **Uses:** [boostbox](boostbox.md) (1 PR), [chadf-musicl-playlists](chadf-musicl-playlists.md) (no open work), [stablekraft-app](stablekraft-app.md) (1 PR, 1 issue)
 
-### Pull requests (10)
+### Pull requests (9)
 
-- [#720 feat(review-gate): checks.sh, review routes and hot spots for the agent review gate](https://github.com/ChadFarrow/boostmebitch/pull/720) — opened 2026-11-28
 - [#716 \[Libre stack L5/5\] Sign out & remove the Libre wallet from this device](https://github.com/ChadFarrow/boostmebitch/pull/716) — opened 2026-11-28 · draft
 - [#715 \[Libre stack L4/5\] Libre in the wallet screens: one live-WebLN answer, labels, the approval sheet](https://github.com/ChadFarrow/boostmebitch/pull/715) — opened 2026-11-28 · draft
 - [#714 \[Libre stack L3/5\] Streaming never waits on the Libre wallet's approval](https://github.com/ChadFarrow/boostmebitch/pull/714) — opened 2026-11-28 · draft
@@ -45,14 +44,18 @@ V4V podcast/music player. Searches via Podcast Index, plays episodes, sends Ligh
 - [#711 \[Libre stack L1/5\] A WebLN payment Libre says is still in flight is ?, not ✗](https://github.com/ChadFarrow/boostmebitch/pull/711) — opened 2026-11-28 · draft
 - [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2026-11-25 · draft
 - [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2026-11-25 · draft
-- [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft · merge conflict
-- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft · merge conflict
+- [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 2026-11-20 · draft
+- [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 2026-07-16 · draft
 
 ### Issues (3)
 
 - [#708 Moved feeds: \`podcasts/byguid\` can return a stale duplicate entry](https://github.com/ChadFarrow/boostmebitch/issues/708) — opened 2026-11-27 · by ReedBTC
 - [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 2026-11-08
 - [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 2026-10-02
+
+### Opened elsewhere for this project (1)
+
+- [vibe-kit](vibe-kit.md) — 1 PR · private repo, counts only
 
 ### Branches with no open PR (5)
 
