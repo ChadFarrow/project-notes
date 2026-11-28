@@ -27,8 +27,13 @@ Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.
 
 - **Repo:** [ChadFarrow/libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) · TypeScript · fork of satsandsteel/libre-listener-wallet-monorepo
 
-### Pull requests (3)
+### Pull requests (8)
 
+- [#99 deps(zod): 3.25 → 4.6.7 for GHSA-mrhx-c7xc-m3w5 (stacked on #95)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/99) — opened 2026-11-28
+- [#98 feat(embed): approvalMode "reject" — fail at once instead of opening an approval sheet (stacked on #97)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/98) — opened 2026-11-28
+- [#97 feat(embed): dispose() reports the Drive save result, so a host never wipes unsaved state](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/97) — opened 2026-11-28
+- [#96 fix(drive): refuse an OAuth redirect token whose state this origin did not store (login CSRF)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/96) — opened 2026-11-28
+- [#95 chore(deps): vitest 4 + vite 6 (dev/build tools; audit critical 5 → 0) — stacked on #94](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/95) — opened 2026-11-28
 - [#94 chore(deps): patch + minor updates and in-range audit fixes (audit 65 → 34, prod 10 → 1)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/94) — opened 2026-11-28
 - [#93 feat(servers): User-Agent on gateway and dev-LSP HTTP requests (rule 17)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/93) — opened 2026-11-28
 - [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 2026-07-05 · draft
