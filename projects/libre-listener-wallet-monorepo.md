@@ -27,8 +27,10 @@ Experimental non-custodial Bitcoin Lightning wallet (LDK WASM) for Podcasting 2.
 
 - **Repo:** [ChadFarrow/libre-listener-wallet-monorepo](https://github.com/ChadFarrow/libre-listener-wallet-monorepo) · TypeScript · fork of satsandsteel/libre-listener-wallet-monorepo
 
-### Pull requests (1)
+### Pull requests (3)
 
+- [#94 chore(deps): patch + minor updates and in-range audit fixes (audit 65 → 34, prod 10 → 1)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/94) — opened 2026-11-28
+- [#93 feat(servers): User-Agent on gateway and dev-LSP HTTP requests (rule 17)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/93) — opened 2026-11-28
 - [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 2026-07-05 · draft
 
 ### Issues (2)

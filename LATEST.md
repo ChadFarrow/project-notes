@@ -1,29 +1,29 @@
-# Dashboard — 2026-11-27 23:47 UTC
+# Dashboard — 2026-11-28 05:16 UTC
 
-22 open PRs · 13 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
+29 open PRs · 13 open issues · 143 branches with no PR · 45 tracked repos (13 not tracked)
 
 [Project index](INDEX.md) · [Dashboard history](audits/README.md)
 
 ## Needs you now
 
-### Ready to merge — idle 7+ days (5)
+### Ready to merge — idle 7+ days (7)
 
-- **small-group-scoop** [4 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 9 days · private repo, counts only
+- **small-group-scoop** [6 PRs](https://github.com/ChadFarrow/small-group-scoop/pulls) — idle 7 to 9 days · private repo, counts only
 - **MSP-2.0** [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — idle 7 days · checks passing
 
 ### Open issues (13)
 
 **[boostmebitch](projects/boostmebitch.md)**
 
-- [#708 Moved feeds: \`podcasts/byguid\` can return a stale duplicate entry](https://github.com/ChadFarrow/boostmebitch/issues/708) — opened 9 hours ago · by ReedBTC
-- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 19 days ago · 4 comments
-- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 56 days ago · 1 comment
+- [#708 Moved feeds: \`podcasts/byguid\` can return a stale duplicate entry](https://github.com/ChadFarrow/boostmebitch/issues/708) — opened 14 hours ago · by ReedBTC
+- [#523 Sync the Up Next queue through Nostr, so another app (OnlyBoosts) can add to it](https://github.com/ChadFarrow/boostmebitch/issues/523) — opened 20 days ago · 4 comments
+- [#471 Look into syncing ✓ PLAYED (and maybe resume positions) across devices via Nostr](https://github.com/ChadFarrow/boostmebitch/issues/471) — opened 57 days ago · 1 comment
 
 **[MSP-2.0](projects/MSP-2.0.md)**
 
-- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 10 days ago · 1 comment
+- [#182 Publisher roles: add engineer, studio, songwriter, composer, musician and a custom role](https://github.com/ChadFarrow/MSP-2.0/issues/182) — opened 11 days ago · 1 comment
 - [#181 Publisher feeds: catalog rows forced to medium="music" (a musicL playlist reads as an album), rows with no feedGuid, control characters](https://github.com/ChadFarrow/MSP-2.0/issues/181) — opened 11 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
-- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 21 days ago
+- [#179 Podping: offer to send a feed URL with spaces as %20, or keep refusing it?](https://github.com/ChadFarrow/MSP-2.0/issues/179) — opened 22 days ago
 - [#21 Make feed layout match the DeMu template.](https://github.com/ChadFarrow/MSP-2.0/issues/21) — opened 10 months ago
 - [#13 Support \<podcast:category\> - RFC](https://github.com/ChadFarrow/MSP-2.0/issues/13) — opened 10 months ago · by Kolomona
 
@@ -75,8 +75,10 @@
 
 #### [libre-listener-wallet-monorepo](projects/libre-listener-wallet-monorepo.md)
 
-1 PR · 2 issues · 1 branch with no PR
+3 PRs · 2 issues · 1 branch with no PR
 
+- PR [#94 chore(deps): patch + minor updates and in-range audit fixes (audit 65 → 34, prod 10 → 1)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/94) — opened 2 hours ago
+- PR [#93 feat(servers): User-Agent on gateway and dev-LSP HTTP requests (rule 17)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/93) — opened 2 hours ago
 - PR [#9 \[Info\] Mobile browser extension feasibility note (not for merge)](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/pull/9) — opened 4 months ago · draft
 - Branch [`feat/lsps2-jit-m1`](https://github.com/ChadFarrow/libre-listener-wallet-monorepo/tree/feat/lsps2-jit-m1) — no PR
 
@@ -84,12 +86,17 @@
 
 #### [boostmebitch](projects/boostmebitch.md)
 
-4 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
+9 PRs · 3 issues · 5 branches with no PR · uses [boostbox](projects/boostbox.md) (1 PR), [chadf-musicl-playlists](projects/chadf-musicl-playlists.md) (no open work), [stablekraft-app](projects/stablekraft-app.md) (1 PR, 1 issue)
 
-- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft · merge conflict
+- PR [#713 \[Libre stack L2/5\] The Libre wallet core, off unless its gate is open](https://github.com/ChadFarrow/boostmebitch/pull/713) — opened 3 hours ago · draft
+- PR [#714 \[Libre stack L3/5\] Streaming never waits on the Libre wallet's approval](https://github.com/ChadFarrow/boostmebitch/pull/714) — opened 2 hours ago · draft
+- PR [#716 \[Libre stack L5/5\] Sign out & remove the Libre wallet from this device](https://github.com/ChadFarrow/boostmebitch/pull/716) — opened 2 hours ago · draft
+- PR [#715 \[Libre stack L4/5\] Libre in the wallet screens: one live-WebLN answer, labels, the approval sheet](https://github.com/ChadFarrow/boostmebitch/pull/715) — opened 2 hours ago · draft
+- PR [#711 \[Libre stack L1/5\] A WebLN payment Libre says is still in flight is ?, not ✗](https://github.com/ChadFarrow/boostmebitch/pull/711) — opened 3 hours ago · draft
+- PR [#120 Add Libre Wallet as an in-page roaming rail (wallet-embed) — EXPERIMENTAL, do not merge yet](https://github.com/ChadFarrow/boostmebitch/pull/120) — opened 4 months ago · draft
 - PR [#674 feat(playlists): ⚡ ZAP the maker of a community playlist](https://github.com/ChadFarrow/boostmebitch/pull/674) — opened 2 days ago · draft
 - PR [#673 feat(playlists): "+ PLAYLIST" saves the playing song to a playlist, not favorites](https://github.com/ChadFarrow/boostmebitch/pull/673) — opened 2 days ago · draft
-- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 7 days ago · draft · merge conflict
+- PR [#629 iOS test build: Capacitor shell for Boost Me Buddy](https://github.com/ChadFarrow/boostmebitch/pull/629) — opened 7 days ago · draft
 - Branch [`beta`](https://github.com/ChadFarrow/boostmebitch/tree/beta) — no PR
 - Branch [`playlists`](https://github.com/ChadFarrow/boostmebitch/tree/playlists) — no PR
 - Branch [`fix/note-no-show-fallback-link`](https://github.com/ChadFarrow/boostmebitch/tree/fix/note-no-show-fallback-link) — no PR
@@ -110,7 +117,7 @@
 
 1 PR · 1 branch with no PR · uses [MSP-2.0](projects/MSP-2.0.md) (3 PRs, 5 issues), [msp-podping-service](projects/msp-podping-service.md) (no open work)
 
-- PR [#111 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/111) — opened 5 hours ago
+- PR [#111 Sync updates from web repo](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/pull/111) — opened 11 hours ago
 - Branch [`claude/skip-duplicate-test-runs`](https://github.com/ChadFarrow/MSP-2.0-Desktop-App/tree/claude/skip-duplicate-test-runs) — no PR
 
 #### [MSP-2.0](projects/MSP-2.0.md)
@@ -118,7 +125,7 @@
 3 PRs · 5 issues · 1 branch with no PR · uses [msp-podping-service](projects/msp-podping-service.md) (no open work) · used by [MSP-2.0-Desktop-App](projects/MSP-2.0-Desktop-App.md) · watches [InTheMorning/musicindex-studio](https://github.com/InTheMorning/musicindex-studio) (no open work)
 
 - PR [#71 Add first-time artist setup flow for album + publisher feeds](https://github.com/ChadFarrow/MSP-2.0/pull/71) — opened 5 months ago · draft · merge conflict
-- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 24 days ago · draft
+- PR [#177 Add MSP Studio, a WordPress plugin built from this repo](https://github.com/ChadFarrow/MSP-2.0/pull/177) — opened 25 days ago · draft
 - PR [#184 Publisher catalog: keep each row's real medium, refuse rows with no feedGuid](https://github.com/ChadFarrow/MSP-2.0/pull/184) — opened 7 days ago · for [chadf-musicl-playlists](projects/chadf-musicl-playlists.md)
 - Branch [`claude/feeds-demu-template-hf5tyk`](https://github.com/ChadFarrow/MSP-2.0/tree/claude/feeds-demu-template-hf5tyk) — no PR
 
