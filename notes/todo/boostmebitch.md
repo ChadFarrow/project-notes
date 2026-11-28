@@ -28,6 +28,8 @@
 - [ ] After merge: #691 the read index (`services/nostr-index`) retries a failed event write, and caps the `p`-tags that one note adds to its tracked set. It merged to main on 2026-11-27 (ca2a90b2). Railway does not follow main, so the index runs the code of its last upload until you deploy it.
   - [ ] Computer: deploy it. Export the merged commit with `git archive` to a folder outside every repo, run `railway up` from its `services/nostr-index`, and check that the DEPLOY log names `boostmebitch-nostr-index` (`docs/ops.md`).
 
+- [ ] Before merge: Computer: #720 turns on the review gate for boostmebitch. After the merge, every boostmebitch agent runs `checks.sh` (typecheck, lint and the 62 `check:*` scripts, about 24 s) and the review agents before it merges its own PR, and a UI change waits in the branch `ui-batch` until you test and merge the batch PR. Merge it on GitHub yourself: the gate does not approve a change to its own `checks.sh` and review routes
+
 ## Already works
 
 - Playlists to GitHub and Podcast Index (2026-11-22): `GITHUB_ARCHIVE_TOKEN` is on beta, and your SAVE of "Test playlist from my phone" at 14:55:54Z started the GitHub copy at 14:55:55Z (commit `c3f4b227` on the `playlists` branch, equal to the live feed). You added "WrathfulTs Top Tracks" by Sir TJ The Wrathful to Podcast Index by hand: id 8125553, parsed as `musicL` one minute later. Docs: #654, #655, #656
